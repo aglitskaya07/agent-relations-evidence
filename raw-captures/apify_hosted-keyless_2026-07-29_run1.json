@@ -1,0 +1,38 @@
+{
+ "url": "https://mcp.apify.com",
+ "capture_utc": "2026-07-29T09:46:45.810707+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "date": "Wed, 29 Jul 2026 09:46:46 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "213",
+    "x-powered-by": "Express",
+    "vary": "Origin",
+    "www-authenticate": "Bearer realm=\"OAuth\", error=\"invalid_token\", error_description=\"Missing or invalid access token. Pass an Apify API token in the Authorization: Bearer <token> header. Manage tokens at https://console.apify.com/account/integrations\"",
+    "etag": "W/\"d5-+fAwosZD1y0HeqSnidSdpPG/RHo\""
+   },
+   "body_raw": "{\"error\":\"invalid_token\",\"error_description\":\"Missing or invalid access token. Pass an Apify API token in the Authorization: Bearer <token> header. Manage tokens at https://console.apify.com/account/integrations\"}"
+  }
+ ]
+}

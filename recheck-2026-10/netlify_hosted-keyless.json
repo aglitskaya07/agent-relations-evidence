@@ -1,0 +1,47 @@
+{
+ "url": "https://netlify-mcp.netlify.app/mcp",
+ "capture_utc": "2026-10-05T13:24:12.178799+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "Access-Control-Allow-Headers": "*",
+    "Access-Control-Allow-Methods": "*",
+    "Access-Control-Allow-Origin": "*",
+    "Age": "1",
+    "Cache-Control": "no-cache",
+    "Cache-Status": "\"Netlify Durable\"; fwd=bypass",
+    "Content-Type": "application/json",
+    "Date": "Mon, 05 Oct 2026 13:24:16 GMT",
+    "Netlify-Vary": "query",
+    "Server": "Netlify",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+    "Www-Authenticate": "Bearer realm=\"MCP Server\", resource_metadata=\"https://netlify-mcp.netlify.app/.well-known/oauth-protected-resource/mcp\"",
+    "X-Content-Type-Options": "nosniff",
+    "X-Nf-Request-Id": "01M463S1ANNKZQH948YVN03Y3B",
+    "Connection": "close",
+    "Transfer-Encoding": "chunked"
+   },
+   "body_raw": "{\"error\":\"unauthenticated\",\"error_description\":\"You must authenticate to use this tool\"}"
+  }
+ ]
+}

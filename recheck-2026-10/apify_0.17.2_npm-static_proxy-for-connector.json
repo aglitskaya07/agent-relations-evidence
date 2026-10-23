@@ -1,0 +1,1522 @@
+{
+ "unit_source": "npm @apify/actors-mcp-server@0.17.2 (open-source counterpart of claude.ai Apify connector)",
+ "capture_utc": "2026-10-06T09:53:42.452947+00:00",
+ "method": "static source read (no code executed)",
+ "auth": "none",
+ "server_info": {
+  "package": "@apify/actors-mcp-server",
+  "version": "0.17.2"
+ },
+ "tarball": "https://registry.npmjs.org/@apify/actors-mcp-server/-/actors-mcp-server-0.17.2.tgz",
+ "source_files_count": 268,
+ "source_files": [
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/instrument.d.ts",
+   "sha256": "2f9d512f026be2ffa98e59c4dc0730b62d70d7d5a5233bcc2158041724a97074"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/const.d.ts",
+   "sha256": "f9bdc3d5fa27416a5937398e2f778a5859837a9fc9dd17ef1e2829023b8b9fc6"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/state.d.ts",
+   "sha256": "83ac473ad77f5bd45a5c340516f5ee3b065edf8c7b7a2f582cd79b75df393db1"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/types.js",
+   "sha256": "0d690e103d180fb184a68cc178295a2b61c38e882055ee1ba64091f31b545f12"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/telemetry.js",
+   "sha256": "d8507225e3876dcba394da1ca63b2dcc581633e4d34339014879b44346de7dad"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/errors.d.ts",
+   "sha256": "dcdf54777a4782914da154866d4bcba73a49435d83de71f23bca843e99a4554f"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/index_internals.d.ts",
+   "sha256": "8e186fda5eade4df7b3a3071373e2fac08fad2d22fc6b88e11cd86365033f012"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/types.d.ts",
+   "sha256": "9f83473ff0745fe1f6410b3b6c4e3f91d109281101760d36309f7aea03d7cf2b"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/dev_server.js",
+   "sha256": "9af5e1f603c665e95a5fea4f26aee9638c697e5ff68806ad6b5e942c7af4e198"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/input.d.ts",
+   "sha256": "e8d46a353549bf2aa628713a8209e97e4fba680d5230cc013fd30e0d0bbeab5f"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/dev_server.d.ts",
+   "sha256": "acc1584198ec8978fab7ea975a5ecca380146fbf60047080e7bed46e6a0b08f0"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/index.js",
+   "sha256": "7a92fd510d475f6b0ec3d2508d47bfd7eb8f3d30358721297447594e1ed95c51"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/server_card.js",
+   "sha256": "55a1b8d1b7b244eccc497ed04d20c3bfcd5fb7238e575e09751ff7c31c81773d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/instrument.js",
+   "sha256": "583d4fc03148c08cc8ffb994605e6f648d4308f556bd020e4cc28dd86f03970f"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/stdio.js",
+   "sha256": "27d085fa0346533080095d6029d23562e20563cf335a9f91c6fc4100383e1305"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/errors.js",
+   "sha256": "7223c22fb61b49dcb9dfe5048ebe09e4d8e1981b8ac68a4e7398f8ca0b1ccd87"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/telemetry.d.ts",
+   "sha256": "30fdfa5385239756d61926190fc90f2c18c579cc89f6955b796249f4ddb8c9bc"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/state.js",
+   "sha256": "aa795b6419f7b3708d82953c85c048b50d751b97021e8c0c2362886f32623f1e"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/const.js",
+   "sha256": "c08c3a6a5f964d2b5590c4d0f4d0ab58a93955c36d2cd8ea2b17f7940e847c7b"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/apify_client.d.ts",
+   "sha256": "73e4dceea5c3689448832e2bff052579690646e397fe116bc58b68b86e844efb"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/stdio.d.ts",
+   "sha256": "ea8c285ef5a68f48e37dd5043d14c6b8f20af4cb8f5ccd8377295084e66363d4"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/server_card.d.ts",
+   "sha256": "deabdc11bacf7b243fada4b5b70f1b6bfa5dd618fd37cb9cfd682c9d5bd2af3a"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/index_internals_test_kit.d.ts",
+   "sha256": "556607b237f5f4671b42810326f80d0d5e128ab20ffda5b6ca32fd524fa25bb0"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/apify_client.js",
+   "sha256": "2df75a2e46aba123cb87242135174db0a71b4f5f36fadf26b715ba94c768f38c"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/index.d.ts",
+   "sha256": "e03d890d890cfcbec9cbccffaf3307d943840c3459e454b1fc85054a499f89e1"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/index_internals_test_kit.js",
+   "sha256": "e4e4358505a964bb2f3b9f7d9980300a6afa1de440409df26a4a928cec92d99a"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/input.js",
+   "sha256": "3aba1be925b5c60fc685f658043a111c74bcfa973b061f01885652c65caacb7b"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/index_internals.js",
+   "sha256": "b99f8e188c3dd27bca83d1f442f0c8ad3426f95b785d3ff84de0dcfde4abb358"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/payments/resolve.d.ts",
+   "sha256": "eb3ecae00f722dc176796bb532a2a513cefa49efd799a2496e669b04c5d6e55b"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/payments/const.d.ts",
+   "sha256": "98c85c3713e783bccaa54cb3541c378af6ea0aadaacbe0dd408cc8142ef533be"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/payments/types.js",
+   "sha256": "05aff739a2c9b7d54dea4807d2c8d533bd13dbae1ba64bb7ae1df6f3ae307654"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/payments/x402.js",
+   "sha256": "d1120264445c85c29ea7e59e2c5b402134a51e128f0898f7a61b1f0cbc170e1c"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/payments/types.d.ts",
+   "sha256": "7525fbebc25d79060b209ba96c6695f54c233f4019d8ea867be11440c0a22e2d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/payments/index.js",
+   "sha256": "66e6d3cb1ed1944800c2f38bf77ed6dbc9acdfbcb0ba28f6595cee4ce2904a67"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/payments/resolve.js",
+   "sha256": "8bd5cd0a99834a31ac7ab8a9f31271ee111fa0a81cd78f843871a0fdb751f818"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/payments/skyfire.js",
+   "sha256": "72f889d7e57f99596c1df1bc1a28c1c28d40f1be8264ec959bea43bb0719ed3c"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/payments/const.js",
+   "sha256": "9255660570b25d0d03547c81e473b956df56cb596259c5e031fff1098d0e18e2"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/payments/skyfire.d.ts",
+   "sha256": "2ef13792831a94f3e60f30e12c2829467902069498164002416127a92740ac83"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/payments/helpers.js",
+   "sha256": "379723dc1c18f1824c734159d4eb7aa542dd3c4c8e5fa951f2978e6cc630b8e7"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/payments/x402.d.ts",
+   "sha256": "08fa7173e200808c670db77d88ab196fc0d3c66e4bf2cd831854c310da69545c"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/payments/helpers.d.ts",
+   "sha256": "abbab8b3d6fbb769a7747a7df724c52728aaf1e9e21deba443e8490f12a6a9a6"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/payments/index.d.ts",
+   "sha256": "673d4b79037cd4ff3d8c53914a01118d0bccce225f24c4d0e5ec830741949eab"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/registry.js",
+   "sha256": "9276d70815bff1466176438bae5ebaeb66bf1de126390d73869f8299f3f669ed"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/registry.d.ts",
+   "sha256": "a21aae7bc847ac9ec9e4b66142c285549d26fd08cb1d967b31a637044f776c45"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/index.js",
+   "sha256": "c250925327fe9c028301631ca58612f238c25eb1787583e42c583b0fa77edcae"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actor_tool_naming.js",
+   "sha256": "8e1a78c33b197b253412add0b1ff93fdac6d2c89e3647e594fbe198bcc7b84aa"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actor_input_schema.js",
+   "sha256": "cadf9c1eeb9dd8cafe964044083f5725d51e58a4fed6516a11eeaf4b59e6b381"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/structured_output_schemas.js",
+   "sha256": "174d912fc7533134bd315ac4713bf71a6a4422f6b7fe6fb2f2f320a96b3e3ebb"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actor_tool_naming.d.ts",
+   "sha256": "7ce766521149cec51c7afff24ff31fc827bb27d644cfbc2d6d79004cada7f346"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/structured_output_schemas.d.ts",
+   "sha256": "4361689b00ea2f4bbc8658251c46869d4fcca1ed41c36f34188744af3e31ea86"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/index.d.ts",
+   "sha256": "aec4576277e02b7b59a75c4b3f6e2ce0c2624f3753b4818cbd815d49aa55c712"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actor_input_schema.d.ts",
+   "sha256": "6b7106510e70ebb57ff8d2f4d8e62eb1bf20bbea5c7d11196a221e4feb17e1a0"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/tasks/get_actor_task.d.ts",
+   "sha256": "81c1bea3cebfb3eed12eec246ba0591475efdebf7357351d9ae743a517637b1d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/tasks/task_helpers.d.ts",
+   "sha256": "3f4e113c9f99e07f352d2ed2d99862d88849c6769cccc930b6e63a7ae46dd891"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/tasks/publish_actor_task.d.ts",
+   "sha256": "7d865c79140953ca4eb73dffdea5528dbcf3ccfc43c12926a6c847a3e342022d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/tasks/create_actor_task.d.ts",
+   "sha256": "4b9cd3570f7129ae64b8e7edf417f7c78e4195c1320d82d20cc61c1b0dd23a55"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/tasks/update_actor_task.d.ts",
+   "sha256": "2d398e23b430acabb796c1b58b65c6de32ddc30b3280939841a8a77b2e6031a3"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/tasks/get_actor_task.js",
+   "sha256": "b0081e2943aed7467e7362c34acdd6438255ce7d2db060ac8f3c49a00c5443f9"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/tasks/unpublish_actor_task.d.ts",
+   "sha256": "c4d0a6644d668e67d6e2d7575d6b2395435199d5577ca3c65e406c84563f971a"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/tasks/update_actor_task.js",
+   "sha256": "04ca3d30cffc853bee2679a32d0cfa62e804d5bb8b68875162c9dd8394e59e07"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/tasks/create_actor_task.js",
+   "sha256": "2e1e876d7a31e46106d2a682531c96180c0fcb61902e94f35ceb1749ba658f56"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/tasks/publish_actor_task.js",
+   "sha256": "d539a4a1b70d46c5b9e0374898cf089366a97c2a2e8cd9735de91cfe1d24c9c3"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/tasks/unpublish_actor_task.js",
+   "sha256": "18e901ff2435a48ebdbb097b0b81b45ab0343d7325b43b1c61df823c2217c575"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/tasks/task_helpers.js",
+   "sha256": "0a587365505b8e38527bab5f4c9faec8f41e2a58965547500062c66593196cd2"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/source/get_actor_version.js",
+   "sha256": "340ca346729797317f9b33f45283f094417416c9e5694aaf9968763532d8b7e2"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/source/get_actor_version.d.ts",
+   "sha256": "64b473ecd9a8574a4e92c6f7eb33af890dc915d441edd048e74f06e4ad9dab3a"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/source/source_files.d.ts",
+   "sha256": "6b27f89cad937e03fa838147dfb9dd2a667d9fc84d6f7e4a67a02a8dee5d6d36"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/source/source_files.js",
+   "sha256": "601a219e9d9f2718a2057e2b63d60d9d6ba0843b20d1362b1405315511ed134a"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/schedules/get_schedule.js",
+   "sha256": "a6595a6aa5e3a720da786f36e6f2613929faafc1f7e9dab7a2e995e823cc06b8"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/schedules/create_schedule.d.ts",
+   "sha256": "3a2c483333f561fd92e1b30a1770c5b47f4ba8c48feb388238fd51f1bba67f18"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/schedules/schedule_helpers.d.ts",
+   "sha256": "ce840e1a7dd838df0725f5054b08a9068b75784fc786623aa2f299e9befbbabf"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/schedules/delete_schedule.d.ts",
+   "sha256": "1a24ba8ab47aeca11abf4cc782423ac20683808caaeeeef6d23eb15b78758124"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/schedules/update_schedule.js",
+   "sha256": "9395eb6a408faf425fe0c73eb97fb26aac5032b7c5e8e84c935e4d51306c8150"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/schedules/get_schedule.d.ts",
+   "sha256": "ec176dbe4d58f420f2f797e2f24e2bf0659aee6cdd7a44ee1fe8f775c33685dd"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/schedules/create_schedule.js",
+   "sha256": "efc015ab62d706951bf0d72f5cf8d704e45a2b71925a1b7ef03481937696c6db"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/schedules/delete_schedule.js",
+   "sha256": "d167182b3e0767204afe05c0f322751761fc496fc1fe48b8efef6babccacda42"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/schedules/schedule_helpers.js",
+   "sha256": "54ba8417e1344b9c7059258a3c545d2bd8e27a450fad483ccf5166a1903eb431"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/schedules/update_schedule.d.ts",
+   "sha256": "7df4ed0cbbb905234b5fd4539301c418711f223475cee2000c656732272efd13"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/docs/fetch_apify_docs.js",
+   "sha256": "29150281a310760faf22c46e174fe8a33012d5c5ba0993995de1289ea2c34892"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/docs/search_apify_docs.js",
+   "sha256": "29d9d398cc1be9f6651bc07852341cf133a21daa86565766a0d3ca5537a5d1f8"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/docs/search_apify_docs.d.ts",
+   "sha256": "655cb54603a170eebf1211707189bd983a79199aaea0598d1c81a1d46164e66d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/docs/fetch_apify_docs.d.ts",
+   "sha256": "d9b55c89f90ca9cedb889fa50ccd6af452112eddc76ba236ea57d68fc7f323f2"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/builds/build_actor.d.ts",
+   "sha256": "6375b02fb91fade15081d4cf08cafc7b53a98b9abd73156226b2c05d72cb033f"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/builds/get_actor_build_list.d.ts",
+   "sha256": "07b9f16419c6aae7b56070b2c4f69c912b5873212b3396a6555148a67a550b87"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/builds/get_actor_build_log.js",
+   "sha256": "9c2f5f1bb25a88d2d76d33d7c82267b826f12e37a3506194e80d77f49919d48b"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/builds/get_actor_build.js",
+   "sha256": "e63041a1a547f2590f7561fcbc8f13a0d07271b13465e60244741a178d4d77fc"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/builds/get_actor_build_list.js",
+   "sha256": "fd905e8554a4229315f9b304a1f2ec7bafe21e020b841f36128b49311f58616e"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/builds/get_actor_build.d.ts",
+   "sha256": "1af9b580c733008caf6b9c8d497ec6af53c3e1dfeeeb6bb76807821e96be45cc"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/builds/build_actor.js",
+   "sha256": "2cf57a798517fda6c8023ce9fe6922aac5be3206882c49804d3a2d2bfbe21392"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/builds/build_helpers.d.ts",
+   "sha256": "089f775e3aedb89659563b6f2735cfac61d2ff0126c1b15ca75c59b4347957cc"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/builds/get_actor_build_log.d.ts",
+   "sha256": "9226c12f51af29f56ae9d9bf43af4dd228c4204324143693be578cf0db0dc823"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/builds/build_helpers.js",
+   "sha256": "6a0e23b36b6a5c9d9831f9117ab6578982350248332158509547444871b81489"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/storage/get_dataset.d.ts",
+   "sha256": "470718cc44e76484ba0b56cb8851e70a7b8f10291a5847c0701f24e62a10d2ae"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/storage/get_dataset_items.d.ts",
+   "sha256": "03d10b70c89719da26ccb762cfbd4d7ba07cf5b4cf7454bb864ee5e1aa0b38c1"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/storage/get_key_value_store_record.js",
+   "sha256": "1f73071284dd8926912b4db97db5bfe1e524afa2355e8eef6de91944595b23af"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/storage/get_dataset_list.js",
+   "sha256": "38aef5ced2879f3c4e6d1d665147e37ff91e155595ee7521ee12da68e6c7591d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/storage/get_key_value_store_list.d.ts",
+   "sha256": "13dfb05fe3782b3b8bca1756e5b52416614d3da452a0eb756cd6bf744d023ee9"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/storage/storage_helpers.js",
+   "sha256": "ff82025e184dd4c73122b79f24445f2f3bec3bcb6fa902456a25f0791b9c454d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/storage/get_key_value_store_keys.d.ts",
+   "sha256": "f0b31f1ee527c6129d3cb6c6f33589e6c1aa6a780dc7f197dbbec639a179eedd"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/storage/get_key_value_store_record.d.ts",
+   "sha256": "0cf81d2f31dd804786fcc5b5a1ed0a294ea056102d38f55e8c14b8742d36c51d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/storage/get_dataset.js",
+   "sha256": "d468089c3c282f2efc1ca9dec920f2e926f5fc05496284ca7896d6250358d7ae"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/storage/storage_helpers.d.ts",
+   "sha256": "7dc76713b0ec0b823c6b28ccd6503a88bf92fed6871e9b3214c7d0d3e720b98f"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/storage/get_key_value_store.js",
+   "sha256": "0e998f46a8f44fc72575c6753e36e06af3e34ca3fef82b1ed6ef8e0166b26d58"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/storage/get_dataset_schema.d.ts",
+   "sha256": "d48aa0e6d2a1a6e25ee929110ba4c14788f5fdcfff90ae7af9fb47b4931344bb"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/storage/get_dataset_items.js",
+   "sha256": "7c791015791be941bd9ac850a7592c8a8ac7094139233461ba54697bd364577d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/storage/get_key_value_store_keys.js",
+   "sha256": "b9531f9c26fee94831b0bcd8c2242199005f52fd535383c6cd3c05951bb07467"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/storage/get_key_value_store.d.ts",
+   "sha256": "4937bf628644cf94467b80f3e3ef912c5298c552e65e4283d2192bd7bbc98142"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/storage/get_dataset_list.d.ts",
+   "sha256": "2a5cad410358134abba8dacf210e5f79d41a15734e97dad67738e1d243f51e52"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/storage/get_dataset_schema.js",
+   "sha256": "5214f2106249e39c750efe1ec45f5c577aeff4c53cbf90ed47a44a6ead37f5fb"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/storage/get_key_value_store_list.js",
+   "sha256": "1766bbbb9d4ca646ec4bbd19f07dc86d6bc4acd727b1a6200a0a2d37d6233f47"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actors/call_actor.js",
+   "sha256": "b8b440963eef417824e6cbd29d6d57cb866e73cd3f96e93add7cdbbb2d73eb59"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actors/actor_run_response.js",
+   "sha256": "93bc9623dcf7c5d00acb617a2575cd89c8a94e5bce228a06f640fd8fbae4ece6"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actors/actor_run_response.d.ts",
+   "sha256": "201b6df26271acaedd012841052db2749eaba7489cde743fd9498c4b8f332cd8"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actors/search_actors.js",
+   "sha256": "067ff0d3b1b4f9df58a03be11baf927f82eecd398698be956917b2fd0a2bc809"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actors/actor_tools_factory.js",
+   "sha256": "b0ae7c4aedfc9107215e9464ac59aa29e4efb12a0bce48c16c3504fba5e30de3"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actors/actor_executor.d.ts",
+   "sha256": "d111ffd5c3eacdb28b606749c826106c20fd465448d50f1a4d4f238f3a447b23"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actors/get_actor_list.js",
+   "sha256": "011eef2908e8f46da2352193be4ed4f4dc54eaa48809ebe9c951d3ccea3a878d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actors/actor_definition.js",
+   "sha256": "0fb2c934bd85d6fb91946f6d9909a792339db040912d70f3d49379d5707721a8"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actors/fetch_actor_details.d.ts",
+   "sha256": "b0844cd667a897836b9ae1da388c53d655de4e226006189656a77067cef132e7"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actors/call_actor.d.ts",
+   "sha256": "fbadb131cc707316d6043af788f0b5b67213a0311648eb8e3be2c4cfcc28b54a"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actors/actor_tools_factory.d.ts",
+   "sha256": "1a395bbc590a71dfc5c37f26b4440e5e68c79eb5b8f271a8fa2c94b4692c4539"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actors/actor_definition.d.ts",
+   "sha256": "41a43a733c8d7d5011995b17e90806b459950a625fc5897587ba42fc31261ccb"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actors/actor_executor.js",
+   "sha256": "c224df2f9e0a7bc934f630dc84bf8a11808000ee4888358a9519684e1c20441a"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actors/search_actors.d.ts",
+   "sha256": "0ce3efa76b37ffbc19171eeb23b497692f6f3b480c1d57e1767961046c5eda2a"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actors/get_actor_list.d.ts",
+   "sha256": "ede6610455c4b4dd8b4f469fa6a93c6f0b8af913e90990fce157b4369acbb887"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/actors/fetch_actor_details.js",
+   "sha256": "be83a5ceb7ea6a43d3714128f812b6bd707231ebdd09c90cc5fa5f6492ff0297"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/dev/report_problem.js",
+   "sha256": "0795141fb54e8cd7cde67a80260520c9e8f5ea72addd741602ab2d7047ba2d0d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/dev/report_problem.d.ts",
+   "sha256": "9b77e3d59f22fde8afbd8b99302234a4be3a298223577f99abbb123b538285b0"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/runs/get_actor_run_log.d.ts",
+   "sha256": "e830926777d3ff1dcc6c4d436c6526a955f377c8ab5a47c78cf01097c2ff74cf"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/runs/get_actor_run_list.d.ts",
+   "sha256": "b550d74ef665a38615b6c759b9c0d8cd678506389202389f1e289435df3ffa6d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/runs/abort_actor_run.d.ts",
+   "sha256": "217c3260f93b4d7a7b79d59e13685688012067f93d6a083201c2aec998de997c"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/runs/abort_actor_run.js",
+   "sha256": "7e188e8afc89d393f7dd307a513fa1f7da7e48476d9acf4638adbcb0f9a878dc"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/runs/get_actor_run.d.ts",
+   "sha256": "fb8fa49d7c2bf6eafd498e1b634dec90a9a63d8911588f21e990e5b962b34ec1"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/runs/get_actor_run_list.js",
+   "sha256": "71160e3a4d0917e1a660d4850f02c504257af1ed039c9bf5fbb2f045bd9a1f16"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/runs/get_actor_run.js",
+   "sha256": "4b92fb936a0f53039c89f083909c152649f65e7f01b4b08c5fd299680b9a2b4e"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/runs/get_actor_run_log.js",
+   "sha256": "59be62aae7282067f6539b5a848a36fc1bc697dac06c7d3b6298d1902ad394c5"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/widgets/fetch_actor_details_widget.js",
+   "sha256": "dfbaa270232a8d0950d0707abc61a61397b842ff1f729c4260fd0fa4c76af0c1"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/widgets/search_actors_widget.d.ts",
+   "sha256": "5d25309b0da3cae198690e8ae28ac32a147a49325df47c67322070568adb9c4a"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/widgets/get_actor_run_widget.d.ts",
+   "sha256": "5aa11a54123372a682e8a5272c6a45df652a7cc304e3b1b33d81053557201a15"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/widgets/fetch_actor_details_widget.d.ts",
+   "sha256": "c3580ba55c434fc9e7f2612f778a067099264e5cba1a660145ac0970d0f1e77e"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/widgets/call_actor_widget.d.ts",
+   "sha256": "a0a52b2142402ba7c35d411ef62ea5bff10dd665a679391ab36290bd290e0256"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/widgets/get_actor_run_widget.js",
+   "sha256": "ad9ed3153821268b5a58b90a6f7eb3e448bb63557567c0131c1e8a1cc03aa362"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/widgets/call_actor_widget.js",
+   "sha256": "fbf86b213015b2c846e68db842e45f94e208eb932229d57b78652562ab55adf8"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/tools/widgets/search_actors_widget.js",
+   "sha256": "6de2367e198f0e0ea4c61da2977cf02dbe5457c455a66f96dc2806bf8afa89b2"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/web/dist/search-actors-widget.js",
+   "sha256": "31908db5cec67db3e56458ddb3fe8e5f967c1d7129d9d85e467597b163f1eec2"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/web/dist/actor-run-widget.js",
+   "sha256": "d5c1bb5185bd53883d8f9e8c8af3cac0b39a50b800dfaa01e7e68e6ea0339ab5"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/resources/api_resources.d.ts",
+   "sha256": "2283d3bf27cfea67f9fc53c94e46fab06ddbd322534683cfafe99dda87f26e85"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/resources/resource_service.d.ts",
+   "sha256": "9ac006055838285909389e54a74e09e3d0122e707a50e63d42c554a57ef52a66"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/resources/resource_service.js",
+   "sha256": "f7474271018a413777c1afc55fd05b5d7849baf84d4a180d62309f93ddac447d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/resources/api_resources.js",
+   "sha256": "27db7ffa947e53b6afae5ccc29f7626a4e861a5881023dad4939a26c9ec5a8a6"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/resources/widgets.d.ts",
+   "sha256": "97afe66dcca4b8ab9fd0cb9e41d5ea8f3393daefd645eda7a65d37017ffa2304"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/resources/widgets.js",
+   "sha256": "c08e9714ddead048be5cd0923cabc29d61678c49aa4e44ad86f55d5bdb68bec3"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/types.js",
+   "sha256": "8e13703943f40773bc39b7ab6957c21eccb6be0dc2dafd04979e042a8b271470"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/types.d.ts",
+   "sha256": "08e44d8c355d830fbe71d0fa0f3096d1871de3d18bad50d722dd9df728f3e281"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/index.js",
+   "sha256": "643a87019259d2f19b4aef2c667d7b44f7b5c4c539c852ea4ab02300ebb919d1"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/register.js",
+   "sha256": "6b762858932afb00065c58f78de952f5ba1be43b886a191f903a43ec2204ecc0"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/register.d.ts",
+   "sha256": "8a5087b87d846dbb83740efdb49a676fb74a130d3436098350f15f65ee392680"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/mcp_client.d.ts",
+   "sha256": "bbe629f28f7abc4ea56e0e87437f91af3bcdaf65b7ec5a089abe35741d41f4ee"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/helpers.js",
+   "sha256": "809702d5a3b5e7c9793279f4ba6932e2933199990b8e425b8c948ff54f49d515"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/helpers.d.ts",
+   "sha256": "97c2e86a3cb93f6e0cf5be4c96c84792a7297cdf77f7cfb74923f9231a5e0a5f"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/index.d.ts",
+   "sha256": "191c4f7cfe3ef41ab00aec551e3ef2bbe223921e4488ae30f4da978c471d72a0"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/mcp_client.js",
+   "sha256": "e8a37ecd3f6f21f962e0ef072d7efdcd7d7efe08a5ae0914d1a4cb8ef712c6b1"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/cases/tools.cases.js",
+   "sha256": "559f2aa537a39aa41ab68a30981cc6044a56226fc21c41eb047a584d51e0421f"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/cases/apps.cases.d.ts",
+   "sha256": "314831e347a19a3d518f112dfc878b96622ab693cae047c436303487b86b94e8"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/cases/payments.cases.js",
+   "sha256": "796eb4549f317042afd6aa55860dbce8cac26ae286315e367b242677ceaf499f"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/cases/registration.cases.d.ts",
+   "sha256": "5dd0b2ccbf8a0f915c52aa75b9cd80ed5fd37e174ae201f2c2c0412930b851dc"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/cases/actors.cases.js",
+   "sha256": "0d3d6b01d036f6b7ff5d2b00aefeda918bb61c3c897dd90dd45bae30f80f307e"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/cases/apps.cases.js",
+   "sha256": "34fc328b9f49ec388c1dd164db700a52a67e28ba262f62d0c5b6d46cb8f25066"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/cases/tools.cases.d.ts",
+   "sha256": "6e10fc92db99b1a2a4ab998b3bfb238a34095c0edc13b9bf509f5ac16957ab86"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/cases/registration.cases.js",
+   "sha256": "45df685ca206721748a40367273df66846ed27b15a7c93de33170272844b224c"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/cases/storage.cases.d.ts",
+   "sha256": "448687f2838553202ef148cb60a94a39b37a3cfc599781f913980bbdba0b1c80"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/cases/storage.cases.js",
+   "sha256": "23273d5ef919817f15907dedc87cd2282cf80e1c533f5ce16cafc0e0c6cd9bd1"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/cases/payments.cases.d.ts",
+   "sha256": "22bf7d3c11428a41b8dd3c274307205a82480fe53eddd116153bb308b22155ae"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/cases/tasks.cases.js",
+   "sha256": "c62d3d129c48c4c0ad18cc8ca41b58cbdb5823e0d67318dcf6ccc5fc4b9c1ac7"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/cases/tasks.cases.d.ts",
+   "sha256": "a3fe64a5f5e25709b577fc064116019b730b74830e4d4efbea85b16bcbf0d499"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/test_kit/cases/actors.cases.d.ts",
+   "sha256": "0502cac6bdbc795e1e8ea9ed6dfbe70606e51fa8a3be8e950b26535afbb190f4"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/payment_errors.d.ts",
+   "sha256": "1389fece3534f5c7ecd46a68cb142fbc7399dac179c93533a6b3b900d7763e08"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/generic.js",
+   "sha256": "a1779d3951e2172ca7b3b559be1dfa16bb9f15e69cd191354c3a492fad137614"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/payment_errors.js",
+   "sha256": "0640752dc1787fab35cf81dfb107406e67058d7046849c89c987ddfe1053214d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/logging.d.ts",
+   "sha256": "122baed01c0714a4cf7edd323fff028190c6d76b31ceb00e30dfe4a2ceca867b"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/actor_search.js",
+   "sha256": "1a534995524b7dfbf086ca0647765d1020e9759d5b64e19d8d44cbe8a5e6d405"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/tools.js",
+   "sha256": "3e0230dbc1c2416771cc61395ae239f683d023a6b8d9121fdba31e286bea574f"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/version.d.ts",
+   "sha256": "5560ab24eda54234de54a6d4eb779091e2bc077c75769a7b54b8301cb6ea6798"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/tool_status.js",
+   "sha256": "a7dd3ab3586d1feda059b4905e9a71d414120a0bf301b4f668b1795d4953b2eb"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/mcp_clients.d.ts",
+   "sha256": "22317ae40d9a6834e35dade86b4b1d9240741615b04d2e17947bb2eabc1e3cf5"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/tool_categories_helpers.js",
+   "sha256": "4d2ad1ce4f571f0297915b98ddd7ce16d3094d6915ae51daa5aba31b00fdd0d2"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/ttl_lru.js",
+   "sha256": "4a0e986280d729c6e4bab84f823b5a1a3ab58ee263b24f53411511c2b67767df"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/generic.d.ts",
+   "sha256": "2e851774bffead2c047b2b12908295b8c7655f1d896bfd8b16315831b213a766"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/ajv.d.ts",
+   "sha256": "16d4625819740c03d914191df25900aa7fccaa9b51c031268c4f4026a7da2a32"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/schema_generation.d.ts",
+   "sha256": "3d242e560c496c8c8fd451eae3ed18cf6a7b90eb374a8eef36a0bee4b4879d10"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/userid_cache.d.ts",
+   "sha256": "5bcbf0fbd8b50dc6fca9b1205f44e482e4414ac998aea81f6c8327a50178dbf2"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/console_link.d.ts",
+   "sha256": "ea226dfe10cffb5c23e6aba34dc2b020769d383e004e06a3cea34edc78a32e72"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/apify_errors.js",
+   "sha256": "4cd86da02ec9b34c7a9313c931faa776890e82c9c54207266c218dedc757053a"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/actor_details.js",
+   "sha256": "7d51888f67a92ed55d136c878f1753ab7a519ba5136761d47a276abd33f81b02"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/encode_text.js",
+   "sha256": "27165730a80a11e27b1df80072240f3b3233ce6fc388e35b56d1bc8ae24f678d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/tools.d.ts",
+   "sha256": "f00c55d65217b87689aa4de8a967be3e1b9d5a5bf2770d8f3048cbb1d8e35ab7"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/actor_search.d.ts",
+   "sha256": "50552af83a7e148f9d12e41a8f2c79eb06865c437ef112ae3c92e81d331fa41f"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/auth.js",
+   "sha256": "c74ca60d6d4de658fd6a96d82f1e6139f7a3aed54d69839beb6794a8d67c7714"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/apify_properties.js",
+   "sha256": "2f64a23d827619913d9d485d6c253de651e9e5bb3ca8907b6e691cd688caeed3"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/logging.js",
+   "sha256": "177708cb85b0782507cd44d2760136d6e5045deca4c151913a97238a4b5d274b"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/actor.d.ts",
+   "sha256": "3c3970219e22f015fc0c8e2ede5b9c2fda1898afcae37a4ce14686cf0c03f1bf"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/encode_text.d.ts",
+   "sha256": "19d420a731f18117801a15014ab78c54e198f4efce82eb41940d86404f008682"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/pricing_info.js",
+   "sha256": "0d4acc087a8b050ec538f35fd0fb62fefc9f8bf4ead345b02f44bca8217ff5a9"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/tools_loader.js",
+   "sha256": "221b16a662ad7602e3374e06b79d679459de86ea2bb513f09e9156becc1a1806"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/console_link.js",
+   "sha256": "fec16223cd2d3bfc0a0274901d6e8f8cd9b60bfde7c8c48be44d8dab4b579d13"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/apify_errors.d.ts",
+   "sha256": "ce51a847059e20629d6d0a7b11c0c9df9c508a8df3b2ac9da86a83055b5b6b17"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/actor_card.d.ts",
+   "sha256": "d16f34fb910729eaa308a6c95a7a89197ee295f5c883449985e5dd5bf60ca4ea"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/version.js",
+   "sha256": "3c16c4c3eea39b3a81c782e29fbba10620a6d23bb0b7637798fd06c3d40c749a"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/schema_generation.js",
+   "sha256": "255fb6c251afb867295214199f6395f938ef28ad87eb8bf04cb4ebf0acfa9173"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/server_mode.js",
+   "sha256": "a821330034080650d4d9ca2506dc83d892703c3bb6e524153cbafd0eb214511b"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/apify_docs.js",
+   "sha256": "6808c5fb900fdb24b38f253c8dda8de52753db88484dc57d020dfeb6cf04092a"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/pricing_info.d.ts",
+   "sha256": "c803e403cffd62c5e5849e55622ee72306007b4a934b0bf77dbec1f538649fde"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/actor.js",
+   "sha256": "50070c69d8ff16d79fe5f70680aff96d766ef146840692a6c62a065cabae9f36"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/apify_properties.d.ts",
+   "sha256": "6077429adf5b513ced4ab49460ceee735b13bb11413fc13da30fd30073bd4619"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/progress.js",
+   "sha256": "697e1692c9da16341fdb11595a06a6f60abd50d61bb64e9ea4093f7dce68a062"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/tools_loader.d.ts",
+   "sha256": "14343395269f6e74de04137837d27c1670289220d2215957161d99a87241aa19"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/actor_details.d.ts",
+   "sha256": "4e57f4c844f9f94dfe54d971f9c921e0ba386389016f4fefd29cecb576fda076"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/actor_card.js",
+   "sha256": "fefc4041a11956db91ba96d5cfe34360f661719c93ff8a3ae87cc0faa3577c0b"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/userid_cache.js",
+   "sha256": "a2b61892d93744c87cf536a1e76e4a662dbe724433bf401bd253728dabd03337"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/progress.d.ts",
+   "sha256": "54279f96314913274e8c0e576afd59f0e2eef28ca41df8aebfcd28554f60cb53"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/mcp.js",
+   "sha256": "d9b368af6f8a808f474513697872aff1f633d73a2326b1945795784c5201c2d7"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/auth.d.ts",
+   "sha256": "f66ce177b9534bc58dd5742fbefbd826d1f2a5e7f1a4d7a470344c5ca6228208"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/ajv.js",
+   "sha256": "5c20fde10fa5ea79b22a2e1fef6c764e8152f7a608dc8e52a24d91c296efa0f6"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/ttl_lru.d.ts",
+   "sha256": "7237f202fe6a3ea20e1230bb55048e8511a4c440f611712328af4fb9cef0bdf2"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/server_mode.d.ts",
+   "sha256": "716971d5f6dcc481c6d3fd14d72ff463625e798c80ce59857ac4633c24e435db"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/mcp.d.ts",
+   "sha256": "0003d3ddddfe3d912b43a578cd7821f22ac7f7373d5a3915b865e1d22a66f01d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/apify_docs.d.ts",
+   "sha256": "ea4d2dcdd5ca91b0861e4e81ff062cb89706b7dbbbe17d710cb6c2fb815bb6e4"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/tool_status.d.ts",
+   "sha256": "e247a1a6044b0f125cfbd34e11bc2dd3498e01fd2dfea107a81c310f37265aab"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/mcp_clients.js",
+   "sha256": "1c04234772f446a3d63b42378f6f9524e0b954cce157bf1df1afec832bd5bc54"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/tool_categories_helpers.d.ts",
+   "sha256": "58d57b6ccc0e2d462f8b14203950f8d7167f11bf1e79b454417f42734e0f1074"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/server-instructions/index.js",
+   "sha256": "6923a4d7cf75616d8a3bade337262f048c91620d504eb638333a2aec31e5b42b"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/utils/server-instructions/index.d.ts",
+   "sha256": "7100cfe0dd3ef0f53e20d8978dd3399cdf0567bfea403d2a03a2ce61773fea81"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/remote_tool_call.d.ts",
+   "sha256": "61d925ec6bb45bfbee4b8832105e5d1964166b34525ea408635fcef3fcc15202"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/tool_dispatch.js",
+   "sha256": "59f23cbed1d6ba2042f2bf832fcc29fd805740dc3525b29bdebdbe9fe65b4a83"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/legacy_server.d.ts",
+   "sha256": "7f1518aec7c271e0239317694ccdcbcb45b1a9553cfdb74b2b4a4c958ec03c43"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/client.js",
+   "sha256": "a0d49f8c0980aaad8e67e90ddf56ee9aef30895e9ab5c0dfead0ea42f07b09cc"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/tool_call_engine.js",
+   "sha256": "eed7769e6272f7dd57918805d8defbbe40d68ec067d446747872ee5edbf4ae03"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/proxy.js",
+   "sha256": "648a64c8eced68e618e25a4ae19359a7b984e49ddd15b0bb8db602869fb6e0ef"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/const.d.ts",
+   "sha256": "aea87b3bb96d23ef87218e52181b61a2437e4cf6210cf0e31fcc5838e64c74f1"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/task_execution.d.ts",
+   "sha256": "8b1a0c1e4036f7479b777204f110a37ae8e4ff7f9188bfa39a5659a7796759d0"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/server.d.ts",
+   "sha256": "9c6734bfe41778f7115a3b3d94f8ff6c79a28f3245a185ae4ab8af08ba06db40"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/client_context.d.ts",
+   "sha256": "36fa72efd871f22db6296e0b521dbebd62b844b1a4bac753d58d4f9f18a173dc"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/errors.d.ts",
+   "sha256": "66cd7ece4adb0c78a53ca45531244f91bf4d789e18fb09f33dcac14997cde7f0"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/server.js",
+   "sha256": "c83ec3f74e041676b53c8e408cf313af363b2b00909b87c3b8912180472bc6b3"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/proxy.d.ts",
+   "sha256": "38f731acd071f39fc969d5d6f5746c3079e648364c416c5a986c9603304ac093"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/client_context.js",
+   "sha256": "c71f1df6043c3d41d7ca4825d21d3d0a5b5a4ffc0fd8998115112cb31690765d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/tool_call_telemetry.d.ts",
+   "sha256": "c1d5029fc8d456e531c4d4ce78bdff1a31e69bf7bb3e386185f43e30f28ac41e"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/tool_call_engine.d.ts",
+   "sha256": "949a34f4bb1f2e56253c497cde148762df08650e187eca75d6ca8bef9731ed32"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/task_execution.js",
+   "sha256": "2930c8f441c4fc23c78badd7ed6a7a5b61a4dd02728270831f146cc7e7dca3cd"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/legacy_server.js",
+   "sha256": "4da2a3842c0e3833980a55140d84b5ac6d0cdcd337ff504c1012ee953b0b30f3"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/actors.js",
+   "sha256": "ebf29ec42841605d6b767c3b2f97e850c7a3da4971ff150f3df0028ed1eab338"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/stateless_server.js",
+   "sha256": "776181fc155a0b6ef1a9450f0fec9a26af525f4e2f12496d7f4c04a433b0237b"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/utils.d.ts",
+   "sha256": "492d98c6939ad08acc6bc811939cd747cac3b11f1a7de5fc681d4ef6290078de"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/errors.js",
+   "sha256": "b7af03696a5d97c4a2633a287d2c63277b4c11f51ba18f4ec800603c95273515"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/tool_call_error_mapper.js",
+   "sha256": "3899997ac90262ade26162b795f175594c0846daf4a39a940768399bf58436b4"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/const.js",
+   "sha256": "02f48ca73f896366369f90644af4f11b8c06146f849a82f54c2e8d2b825660ba"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/tool_call_error_mapper.d.ts",
+   "sha256": "2b07eb24378222bf60ce0de58b8038e34975327c476f0049961417ec85e16594"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/remote_tool_call.js",
+   "sha256": "c978d9e2924dd6955302896de88efca82144b914928e2e44d4073fe99329c0f2"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/utils.js",
+   "sha256": "c4fec4b272e4723da504ec70bd0ab095d83bc827563177e23a084e325fe1f838"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/actors.d.ts",
+   "sha256": "0ce950e4fac4c0fee7bf167f405aa3b71dfc9fd1113d0149a9511ec382bc86f0"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/tool_dispatch.d.ts",
+   "sha256": "6c59e97d19ca2a4051e0d3708068963bad84c3e535245b19208c3bd4d3a8a738"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/client.d.ts",
+   "sha256": "37e873cd7fda3c6292e0bdad75b00c95d3c0463d8929e7a82ea7ae02bcb46d02"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/stateless_server.d.ts",
+   "sha256": "3253ef3b2a1ed980c891f33c68dcac2e94eb3ba1d488396994c4678b9df3332a"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/mcp/tool_call_telemetry.js",
+   "sha256": "952467e107aefba769193120fa7c94c76ed29294242e82f75ca4a7baf299ded9"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/prompts/index.js",
+   "sha256": "179d6471c23cebaee5e996a6ea9aae55b23f34440b54c24adecd708dac930a5d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/prompts/prompt_service.d.ts",
+   "sha256": "ac2988a0c9b6222beb7869fd09de3762feab2e346960869bded88ca7effa517d"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/prompts/index.d.ts",
+   "sha256": "f7ac03c00db92f8cdcbdc715a372559db9840f7503e7c3a16fdcf6c72cfca7a2"
+  },
+  {
+   "path": "npm/x/apify-actors-mcp-server-0.17.2/package/dist/prompts/prompt_service.js",
+   "sha256": "1e3d975b122a02d7c5e6a4bd50f7a899028e84f707d8b3a8df71a988c090ab6d"
+  }
+ ],
+ "july_quote_check": [
+  {
+   "july_quote": "Actors in the Apify Store are published by independent developers and are intended for legitimate and compliant use.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Apify is the world's largest marketplace of tools for web scraping, data extraction, and web automation.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Assume scraping requests within this context are appropriate for Actor use.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  }
+ ],
+ "steering_marker_sentences_now": [
+  "A random UUID is the last resort only if a session id is somehow absent.",
+  "no `resource_metadata` parameter, so the token source is discoverable only by a human",
+  "a body with malformed `params` must still enter the initialize branch so the",
+  "This file must be imported before any other modules",
+  "Only used when --telemetry-enabled is true`,",
+  "a free-tier user's quota can't fit both",
+  "/** Shared steer appended to large-output hints so the model narrows instead of refetching everything.",
+  "When the user provides one specific URL and wants that page's full or verbatim content, prefer the dedicated apify/web-fetch tool when it is available - this tool is for searching and scraping by query.",
+  "Tune only based on eval results (`web-fetch-evals` dataset).",
+  "export const WEB_FETCH_ADDITIONAL_DESC = `Use this tool to fetch a specific http(s) URL and return its complete content (one URL per call; http and https only).",
+  "To find pages by query, use a web search tool instead.",
+  "export const WEB_FETCH_URL_SCHEME_NOTE = 'http(s) URLs only - for any other scheme (e.g.",
+  "'lvl1', // Filter to page-level results only (Docusaurus lvl1)",
+  "Internal exports needed only by this package's own tests/test_kit/**, not by",
+  "'Your MCP client must support the x402 payment protocol.',",
+  "During the very first fetch, lastFetchTime is 0, so this will be false and we will",
+  "log.warning('[x402] Failed to fetch payment requirements — tools will advertise paymentRequired only', {",
+  "Returns the first string value, or undefined.",
+  "true`, so a tool that declares only the",
+  "You first need to create the Skyfire PAY token by calling the \\`create-pay-token\\` tool from the Skyfire MCP server and then provide the created JWT token in the \\`skyfire-pay-id\\` input property when calling Actor tool.",
+  "The value you pass to \\`skyfire-pay-id\\` must be the JWT token string itself (it starts with \"ey\"), NOT an ID or UUID.",
+  "This must be the JWT token string returned by the create-pay-token tool (starts with \"ey\"), NOT a token ID or UUID.`;",
+  "The PAY token must be charged with a minimum of ${SKYFIRE_MIN_CHARGE_USD} USD to be valid.${SKYFIRE_SELLER_ID ?",
+  "''} When running an Actor using the call-actor tool, you must provide the Skyfire PAY JWT token in the \\`skyfire-pay-id\\` input property.",
+  "The value for \\`skyfire-pay-id\\` must be the actual JWT token string (starting with \"ey\") returned by the create-pay-token tool, NOT a token ID or UUID.",
+  "Similarly, when retrieving Actor output using the get-dataset-items tool, you must also provide the same Skyfire PAY JWT token (starting with \"ey\") in the \\`skyfire-pay-id\\` input property.`;",
+  "never served by default or by a category, only when named in",
+  "selecting a widget alone never auto-brings its base.",
+  "Never duplicates `enum` here — a kept enum already carries its values in the",
+  "'Price per unit for this tier' },",
+  "\"The user's plan tier used to resolve pricing (always the user's tier, even if a different tier was used as fallback)\",",
+  "'Note naming the resolved tier; only emitted in simplified mode when the actor has multiple tiers and they resolve consistently',",
+  "'Compact JSON-Schema-shaped descriptor of the Actor input; only `type` is preserved per field.',",
+  "'Always `\"object\"`.' },",
+  "'Total number of input fields before truncation; present only when `inputFields` was truncated.',",
+  "'Markdown listing of MCP tools exposed by the Actor (only present when `output.mcpTools` is requested).',",
+  "'Widget-formatted Actor info (tier-aware pricing, widget display fields).',",
+  "\"The user's plan tier used to resolve the per-Actor pricing shown in the results\",",
+  "'Widget-formatted Actor (tier-aware pricing, widget display fields).',",
+  "'Always true; the problem report was submitted' },",
+  "'The stored task input, as the API returns it; fields the Actor declares as secret are encrypted placeholders, never plaintext.",
+  "'ID of the Actor this action runs (Actor actions only)' },",
+  "'ID of the task this action runs (task actions only)' },",
+  "'Actor build tag or number (Actor actions only)' },",
+  "'Run timeout in seconds (Actor actions only)' },",
+  "'Run memory limit in megabytes (Actor actions only)' },",
+  "'Restart the run when it fails (Actor actions only)' },",
+  "'Always true; the schedule no longer exists' },",
+  "'Personalized Apify Console link to the build; present only for Console sessions',",
+  "'First 16 hex characters of the SHA-256 of the bytes' },",
+  "'First returned line, counting from 1; set for a line range',",
+  "'Personalized Apify Console link to the dataset; present only for Console sessions',",
+  "'Personalized Apify Console link to the store; present only for Console sessions',",
+  "'Personalized Apify Console link to the run; present only for Console sessions',",
+  "'ISO timestamp when the run finished (terminal states only)' },",
+  "\"default\" is always the primary entry.',",
+  "Key \"default\" is always the run\\'s primary dataset.',",
+  "Key \"default\" is always the run\\'s primary store.',",
+  "'One primary follow-up action with identifiers interpolated' },",
+  "'JSON Schema for rows in the dataset at `storages.datasets.default.id` — describes row shape only; the rows themselves are NOT returned inline in this response.",
+  "/** One primary follow-up action; emitted by every non-terminal storage tool.",
+  "'ISO timestamp when the last run of the Actor started; null when it has never run.',",
+  "export const getActorBuildListToolOutputSchema = paginatedListOutputSchema(actorBuildItemSchema, 'Builds, newest first by default.');",
+  "Input fields the Actor declares as secret are returned as encrypted placeholders, never in plaintext.",
+  "3-63 characters, letters, digits and dashes only.'),",
+  "\\`publicConfig.datasetView\\`, and \\`publicConfig.seoDescription\\` must be set here first.",
+  "3-63 characters, letters, digits and dashes only (e.g.",
+  "- When the user's intent is clear, pick sensible values for unspecified input fields from the Actor's input schema, state the choices, and proceed instead of asking.${hasTool(HELPER_TOOLS.STORE_SEARCH)",
+  "\"the troubleshooter Actor from jane.doe\"), resolve it with ${HELPER_TOOLS.STORE_SEARCH} instead of asking for the exact ID or guessing one.`",
+  "Publish only tasks that represent a useful,",
+  "The task's Actor must be public and the task must have its public display configuration set up:",
+  "`; update these fields with ${HELPER_TOOLS.ACTOR_TASK_UPDATE} only when the reason identifies them` :",
+  ".regex(TASK_NAME_REGEX, 'Task name may contain only letters, digits and dashes, and cannot start or end with a dash');",
+  "At least one valid field is required to publish; the names must exist in the task input.'),",
+  "Defaults to the only version when the Actor has exactly one.'),",
+  "Omit for the listing only.`),",
+  ".describe('First line to return, counting from 1.",
+  "Only with exactly one path in paths.'),",
+  "/** The requested version, or the only one when none is requested; throws `UserInputError` otherwise.",
+  "return `${versionLabel} has source type ${sourceType}, which this tool cannot work on; only versions stored as files are supported.`;",
+  "throw new UserInputError(`${file.path} is returned as base64, and startLine and lineCount work only on text files.`);",
+  "the listing only.",
+  "- hash is the first 16 hex characters of the SHA-256 of the file's bytes, the same as sha256sum <file> | cut -c1-16 (shasum -a 256 on macOS).",
+  "Only versions stored as files can be read; a version built from a Git repository, a gist, or a zip is refused.",
+  "Omit versionNumber to read the only version; an Actor with several versions needs it.",
+  "The Actor GET returns every file of every version; read only the files asked for once the API can.",
+  "/** The first 16 hex characters of the SHA-256; for a file's bytes, the same as `sha256sum <file> | cut -c1-16`.",
+  "as secret are returned as encrypted placeholders, never in plaintext.",
+  "true\\` — never delete a schedule to pause it.",
+  "'read the schedule first'}, copy its \\`actions\\`, edit the copy, and send the whole array.",
+  "- Turn the user's wording into a 5-field cron expression plus their time zone; use @daily-style shortcuts only when no time is named, because they fire at a random offset within the period.${hasTool(HELPER_TOOLS.STORE_SEARCH)",
+  "- When the user names the Actor loosely, resolve it with ${HELPER_TOOLS.STORE_SEARCH} instead of guessing an ID.`",
+  "- To keep the configuration reusable outside the schedule, save it with ${HELPER_TOOLS.ACTOR_TASK_CREATE} first and schedule the task.`",
+  "- Use only when the user explicitly wants the schedule removed.",
+  "Checked here because a schedule is only rejected after every action's",
+  "The shortcuts @hourly, @daily, @weekly, @monthly and @yearly fire at a random offset inside their period (@daily somewhere between 00:05 and 06:00), so use them only when the user names no time.",
+  "Give either actorId or taskId, never both.'),",
+  "z.string().optional().describe('Actor actions only:",
+  ".describe('Actor actions only:",
+  "z.boolean().optional().describe('Actor actions only:",
+  "`getActorDefinition` maps only 404/400 to null, so that error surfaces to the user as a",
+  "The first problem is returned as `{ error }` so the tool can answer before any write.",
+  "/** Cadence and state for a summary; a disabled schedule has no next run, so it never prints \"null\".",
+  "Only documentation URLs from Apify and Crawlee are allowed \\",
+  "and Academy content (\\`docs.apify.com/academy\\`) on the same topic, prefer the platform documentation.`;",
+  "You must explicitly select which documentation source to search using the docSource parameter:",
+  "Use only keywords, do not use full sentences or questions.",
+  ".describe('Output the last NUM lines, instead of the last 10.",
+  ".describe('Only list builds of this Actor:",
+  ".describe('If true, the builds are sorted by startedAt, newest first; false sorts oldest first.",
+  "Sibling tools are named only when the session was served them.",
+  "return `List the Actor builds of the account, newest first by default.",
+  "Pass actorId to list only the builds of one Actor, for example to find why its latest build failed.",
+  ".describe('Version to build in MAJOR.MINOR form; defaults to the only version when the Actor has exactly one'),",
+  "the JSON first, then the summary with",
+  "Default is false (named datasets only).')",
+  "Returns summaries only, not their contents${hasTool(HELPER_TOOLS.DATASET_GET) ?",
+  "List my last 10 datasets (newest first)",
+  "Do not use when the user asks to retrieve, show, or get results/data/rows${hasTool(HELPER_TOOLS.DATASET_GET_ITEMS) ?",
+  "Apify's `flatten` recurses, so the first segment suffices.",
+  ".describe('If true, returns only non-empty items and skips hidden fields (starting with #).",
+  "Normally derived automatically from dot-notation in `fields`; specify only as a diagnostic override.'),",
+  "- Use when you need to read data from a dataset (all items or only selected fields).",
+  "Get only metadata.url and title from dataset username~my-dataset`,",
+  "List first 10 keys in store username~my-store",
+  ".describe('If true, uses only non-empty items and skips hidden fields (starting with #).",
+  "Do not use for metadata, stats, or fetching rows${alternatives ?",
+  "Show schema of username~my-dataset (clean items only)`;",
+  "Default is false (named key-value stores only).')",
+  "Returns summaries only, not their contents${hasTool(HELPER_TOOLS.KEY_VALUE_STORE_GET) ?",
+  "List my last 10 key-value stores (newest first)",
+  "export const CALL_ACTOR_MCP_MISSING_TOOL_NAME_MSG = `When calling an MCP server Actor, you must specify the tool name in the actor parameter as \"{actorName}:{toolName}\" in the \"actor\" input property.`;",
+  "- Always use dedicated tools when available${actorToolExample}",
+  "- Use the generic call-actor tool only if a dedicated tool does not exist for your Actor.`;",
+  "`If the actor name is not in \"username/name\" format, use ${HELPER_TOOLS.STORE_SEARCH} to resolve the correct Actor first.`,",
+  "the Actor was found fine, only its input wasn't.",
+  ".min(128, 'Memory must be at least 128 MB')",
+  "z.number().min(0, 'Timeout must be 0 or greater').optional().describe(dedent `",
+  "Pay-per-result Actors only — ignored otherwise.",
+  "Prefer the Actor's own input fields (e.g.",
+  "Pay-per-event Actors only — ignored otherwise.",
+  "Prefer the Actor's own input fields to bound work.",
+  ".min(0, 'waitSecs must be 0 or greater')",
+  "The caller routes here only",
+  "/** Mode-agnostic — the widget addendum renders only when call-actor-widget is actually in this session (`hasTool`), not from a mode check.",
+  "Cleans up its abort listener on either branch so callers never leak.",
+  "surface only the id (matches non-terminal shape) instead of `keys:",
+  "Mirrors `ActorRunStorageIds`, whose `default` key is always populated for a real run.",
+  "/** Fetch dataset metadata; a transient failure logs and yields null so the entry keeps its id only.",
+  "/** List KV store keys; a transient failure logs and yields null so the entry keeps its id only.",
+  "/** Fetch the run's tip; looks the key up separately only when the listed keys are truncated.",
+  "The byte size is always shown when known; the steer to",
+  "nextStep stays dataset-only (one primary action) but the summary mentions",
+  "The zero is unverified, so the summary must not state \"no items\" as a",
+  "The nextStep is the only place a conclusion may form.",
+  "Returns one primary action — never two.",
+  "Used only by `*-widget` tools.",
+  "KV listKeys stays terminal-only —",
+  "a single transient failure must",
+  "Pass empty string (\"\") whenever the user has NOT named a specific platform",
+  "sort order, which is popularity in practice (most-used Actors first).",
+  "Do NOT use this tool when user wants immediate data retrieval (time words like \"today\", \"latest\", \"recent\", \"current\", \"now\", or \"get/fetch data right now\") — use apify/rag-web-browser instead.",
+  "When the user is looking for scraping tools or Actors, prefer searching the Store first — a relevant Actor often already exists.",
+  "Do not use Store search as a substitute for immediate data retrieval.",
+  "`Do NOT use this tool to find the user's own Actors (e.g., \"find my weather scraper\", \"run my Actor\"):",
+  "the Store never returns private Actors.",
+  "- Prefer broad, generic keywords - use just the platform name (e.g.",
+  "\"Instagram\" instead of \"Instagram scraper\").",
+  "- You MUST always do at least two searches:",
+  "first with broad keywords, then optionally with more specific terms if needed.",
+  "Important limitations:",
+  "This tool does not return full Actor documentation or detailed usage instructions - only summary information.",
+  "You MUST retry with broader, more generic keywords - use just the platform name",
+  "(e.g., \"TikTok\" instead of \"TikTok posts\") before concluding no Actor exists.",
+  "/** Caveat for the whole result list — appended only when at least one result lacks a run path.",
+  "This session can run only Actors already exposed as dedicated tools.",
+  "You MUST always do a second search with broader, more generic keywords",
+  "(e.g., just the platform name like \"TikTok\" instead of \"TikTok posts\") to make sure",
+  "`Use this tool instead of the \"${HELPER_TOOLS.ACTOR_CALL}\" if user requests this specific Actor.",
+  ".describe('If true, the Actors are sorted by createdAt, newest first.",
+  "Default is true; false lists oldest first.')",
+  "Returns summaries only (id, fullName, title, dates)${hasTool(HELPER_TOOLS.ACTOR_GET_DETAILS) ?",
+  "` ${HELPER_TOOLS.STORE_SEARCH} searches Apify Store instead and never returns private Actors.` :",
+  "Sorted by createdAt (newest first by default); use limit (max 20), offset, and desc to paginate and sort.",
+  "with `my`, the API ignores it and always sorts by createdAt.",
+  "keep it as-is up to the limit, keep only headings",
+  "Only direct actor tools know the row shape up front.",
+  "only include sections with explicit true values",
+  "z.boolean().optional().describe('Include Actor description text only.'),",
+  "z.boolean().optional().describe('List available tools (only for MCP server Actors).'),",
+  "The `-widget` sibling has its own `actor`-only schema in",
+  "` If you only have a description, a partial name, or a name you have not seen in this conversation, \\",
+  "find it with ${HELPER_TOOLS.STORE_SEARCH} first.`",
+  "inputSchema only, description + readme, mcpTools for MCP Actors",
+  "The recovery tool is named only when the",
+  "a name the client never received in `tools/list` invites a call to a",
+  "inputSchema-only",
+  "In that case `userTier` is only used to fill the",
+  "'FREE', userTier }` in the structured card, where it's never",
+  ".describe('Only list runs of this Actor:",
+  ".describe('Return only runs with the provided status.'),",
+  "Pass actorId to list only the runs of one Actor, for example to find its latest run.",
+  "List my last 10 runs (newest first)",
+  "Show only SUCCEEDED runs",
+  "- nextStep prescribes one primary follow-up action with identifiers interpolated (e.g.",
+  "`content[1]` carries a short pointer instead of the",
+  "Used only by `*-widget` tools; does not apply console links.",
+  "Use this tool ONLY when the user explicitly wants to see or browse Actor details",
+  "the Actor ID or full name only.",
+  "The tool always returns immediately so the widget can render",
+  "The tool returns immediately after rendering the widget — it never blocks waiting for the run.",
+  "Use this tool ONLY when the user explicitly wants to see run progress visually",
+  "The widget is always async.",
+  "Use this tool ONLY when the user explicitly wants to browse or discover Actors visually",
+  "For silent name resolution before running an Actor (e.g., \"scrape google maps\" — you need to find the right Actor first, then fetch its schema and call it), use ${HELPER_TOOLS.STORE_SEARCH} instead — it returns the same data without rendering a widget.",
+  "`,uz=\"/\",lz=\"*\",Kl=\"\",Sde=\"comment\",Tde=\"declaration\";function Ade(e,t){if(typeof e!=\"string\")throw new TypeError(\"First argument must be a string\");if(!e)return[];t=t||{};var r=1,o=1;function n(y){var w=y.match(xde);w&&(r+=w.length);var D=y.lastIndexOf(_de);o=~D?y.length-D:o+y.length}function i(){var y={line:r,column:o};return function(w){return w.position=new a(y),d(),w}}function a(y){this.start=y,this.end={line:r,column:o},this.source=t.source}a.prototype.content=e;function s(y){var w=new Error(t.source+\":\"+r+\":\"+o+\":",
+  "must start with \"${i.prefix}\"`:i.format===\"ends_with\"?`Invalid string:",
+  "must end with \"${i.suffix}\"`:i.format===\"includes\"?`Invalid string:",
+  "must include \"${i.includes}\"`:i.format===\"regex\"?`Invalid string:",
+  "must match pattern ${i.pattern}`:`Invalid ${r[i.format]??n.format}`}case\"not_multiple_of\":return`Invalid number:",
+  "must be a multiple of ${n.divisor}`;case\"unrecognized_keys\":return`Unrecognized key${n.keys.length>1?\"s\":\"\"}:",
+  "${e}`)}function SJ(e,t){if(e.not!==void 0){if(typeof e.not==\"object\"&&Object.keys(e.not).length===0)return Ae.never();throw new Error(\"not is not supported in Zod (except { not:",
+  "--color-neutral-text-on-primary:",
+  "--color-neutral-icon-on-primary:",
+  "--color-primary-text:",
+  "--color-primary-text-interactive:",
+  "--color-primary-icon:",
+  "--color-primary-action:",
+  "--color-primary-action-hover:",
+  "--color-primary-action-active:",
+  "--color-primary-field-border-active:",
+  "--color-primary-border-subtle:",
+  "--color-primary-background:",
+  "--color-primary-background-subtle:",
+  "--color-primary-background-hover:",
+  "--color-primary-chip-background:",
+  "--color-primary-chip-background-subtle:",
+  "--color-primary-chip-background-hover:",
+  "--color-primary-chip-text:",
+  "--color-primary-shadow-active:",
+  "--color-primary-black-action:",
+  "--color-primary-black-action-hover:",
+  "--color-primary-black-action-active:",
+  "--color-primary-black-background:",
+  "--color-primary-black-background-hover:",
+  "--color-primary-black-chip-text:",
+  "${m.color.primary.actionHover};",
+  "${m.color.primary.actionActive};",
+  "/* Border is always defined, but it can be set to transparent */",
+  "${m.color.primary.textInteractive};",
+  "none !important;",
+  "transparent !important;",
+  "${m.color.primary.chipText};",
+  "${m.color.primary.background};",
+  "`,Aa=(0,W9.forwardRef)(({size:e=\"small\",type:t=\"body\",variant:r=\"neutral\",inline:o=!1,LeadingIcon:n,TrailingIcon:i,children:a,...s},l)=>(0,rf.jsxs)(qce,{ref:l,$size:e,$variant:r,$inline:o,forwardedAs:\"span\",...s,children:[n&&(0,rf.jsx)(n,{size:U9[e]}),a&&(0,rf.jsx)(tt,{size:Xce[e],type:t,weight:\"medium\",as:\"span\",children:a}),i&&(0,rf.jsx)(i,{size:U9[e]})]}));Aa.displayName=\"Badge\";var Kce=W(Ie).attrs({p:\"space8\"})`",
+  "${m.color.primary.text};",
+  "Received \"+JSON.stringify(e))}var UB={cwd:dme};function dme(){return\"/\"}function af(e){return!!(e!==null&&typeof e==\"object\"&&\"href\"in e&&e.href&&\"protocol\"in e&&e.protocol&&e.auth===void 0)}function WB(e){if(typeof e==\"string\")e=new URL(e);else if(!af(e)){let t=new TypeError('The \"path\" argument must be of type string or an instance of URL.",
+  "Create a new processor first, by calling it:",
+  "use `processor()` instead of `processor`.\")}function ZB(e){if(!bh(e)||typeof e.type!=\"string\")throw new TypeError(\"Expected node, got `\"+e+\"`\")}function XB(e,t,r){if(!r)throw new Error(\"`\"+e+\"` finished async.",
+  "])*')/,t=(e.languages.css={comment:/\\/\\*[\\s\\S]*?\\*\\//,atrule:{pattern:RegExp(\"@[\\\\w-](?:\"+/[^;{\\s\"']|\\s+(?!\\s)/.source+\"|\"+t.source+\")*?\"+/(?:;|(?=\\s*\\{))/.source),inside:{rule:/^@[\\w-]+/,\"selector-function-argument\":{pattern:/(\\bselector\\s*\\(\\s*(?![\\s)]))(?:[^()\\s]|\\s+(?![\\s)])|\\((?:[^()]|\\([^()]*\\))*\\))+(?=\\s*\\))/,lookbehind:!0,alias:\"selector\"},keyword:{pattern:/(^|[^\\w-])(?:and|not|only|or)(?![\\w-])/,lookbehind:!0}}},url:{pattern:RegExp(\"\\\\burl\\\\((?:\"+t.source+\"|\"+/(?:[^\\\\\\r",
+  "normal !important;",
+  "inherit !important;",
+  "${C4} !important;",
+  "6px solid ${m.color.neutral.border} !important;",
+  "${({$isOneLine:e})=>e?\"unset\":m.space.space16} !important;",
+  "${m.color.neutral.backgroundMuted} !important;",
+  "7px; /* only 7 due to transform translateY(1px) */",
+  "`;var wo=j(ue(),1),jh=j(he(),1);var Ba={gradientWrapper:\"OneLineCode-GradientWrapper\",scrollableWrapper:\"OneLineCode-ScrollableWrapper\",methodChip:\"OneLineCode-MethodChip\",gradient:\"OneLineCode-Gradient\",buttons:\"OneLineCode-Buttons\"},Jbe={GET:\"primary\",POST:\"success\",PUT:\"warning\",DELETE:\"danger\",HEAD:\"neutral\",PATCH:\"neutral\",OPTIONS:\"neutral\"};function qbe(e){let t=m.color[Jbe[e]];return J`",
+  "${m.space.space16} !important;",
+  "0 ${m.space.space8} !important;",
+  "${m.space.space8} !important;",
+  "${m.color.primary.text} !important;",
+  "${m.color.neutral.backgroundSubtle} !important;",
+  "& > :first-child {",
+  "400 !important; /* default for button is medium, force regular to all page selection buttons */",
+  "${m.color.primary.action};",
+  "`;var M4=j(ue(),1);var YU=j(he(),1);var Wh={EXTRA_SMALL:\"XS\",SMALL:\"S\",MEDIUM:\"M\",LARGE:\"L\"},ia={DEFAULT:\"DEFAULT\",PRIMARY:\"PRIMARY\",SUCCESS:\"SUCCESS\",WARNING:\"WARNING\",DANGER:\"DANGER\"},O3e={BODY:\"Chip-body\"},$3e={[Wh.EXTRA_SMALL]:J`",
+  "`,[ia.PRIMARY]:J`",
+  "${m.color.primary.chipBackground};",
+  "${m.color.primary.chipBackgroundHover};",
+  "`},U3e={primary:J`",
+  "${m.color.primary.backgroundHover};",
+  "`;function eW({as:e,size:t=\"small\",type:r=\"body\",variant:o=\"primary\",LeadingIcon:n,TrailingIcon:i,children:a,...s},l){let d=e===\"a\"?Sr:e??\"button\",f=t===\"regular\"?\"small\":t;return(0,Df.jsxs)(W3e,{as:d,ref:l,$variant:o,$size:t,...s,children:[n&&(0,Df.jsx)(n,{size:KU[t]}),a&&(0,Df.jsx)(tt,{size:f,type:r,weight:\"medium\",children:a}),i&&(0,Df.jsx)(i,{size:KU[t]})]})}eW.displayName=\"Tag\";var VWe=(0,QU.forwardRef)(eW);var G3e=j(he(),1),nW=j(ue(),1),z4=j(he(),1);var rW=j(ue(),1);var V3e={default:J`",
+  "&:first-of-type {",
+  "${m.color.primary.fieldBorderActive};",
+  "background-color 120ms ease-out !important;",
+  "${_2e} !important;",
+  "${S2e}px !important;",
+  "36px !important;",
+  "${m.color.neutral.fieldBackground} !important;",
+  "1px solid ${m.color.neutral.fieldBorder} !important;",
+  "${m.color.neutral.hover} !important;",
+  "${m.color.primary.fieldBorderActive} !important;",
+  "${m.color.neutral.background} !important;",
+  "var(--shadow-active) !important;",
+  "${m.color.neutral.disabled} !important;",
+  "${m.color.danger.backgroundSubtle} !important;",
+  "1px solid ${m.color.danger.fieldBorder} !important;",
+  "1px solid ${m.color.primary.chipText} !important;",
+  "2px solid ${m.color.primary.fieldBorderActive}!important;",
+  ".${vt.HEAD_CELL}:first-child {",
+  ".${vt.BODY_ROW}:not(:first-child) .${vt.BODY_CELL} {",
+  ".${vt.FOOT_ROW}:not(:first-child) .${vt.FOOT_CELL} {",
+  "- Empty or omitted \\u2192 only same origin allowed (`base-uri 'self'`)\")}),s8=P.object({camera:P.object({}).optional().describe(\"Request camera access.",
+  "Servers MUST consult host-specific documentation for the expected domain format.",
+  "Tool callable by the app from this server only`),csp:P.never().optional(),permissions:P.never().optional()}),gst=P.object({mimeTypes:P.array(P.string()).optional().describe('Array of supported MIME types for UI resources.",
+  "Must include `\"text/html;profile=mcp-app\"` for MCP Apps support.')}),bst=P.object({method:P.literal(\"ui/download-file\"),params:P.object({contents:P.array(P.union([J7,q7])).describe(\"Resource contents to download \\u2014 embedded (inline data) or linked (host fetches).",
+  "Reset links to optimize for opt-in styling instead of opt-out.",
+  "--color-text-primary:",
+  "`,j9=\"/\",H9=\"*\",Zl=\"\",lde=\"comment\",cde=\"declaration\";function dde(e,t){if(typeof e!=\"string\")throw new TypeError(\"First argument must be a string\");if(!e)return[];t=t||{};var r=1,o=1;function n(y){var w=y.match(tde);w&&(r+=w.length);var C=y.lastIndexOf(ude);o=~C?y.length-C:o+y.length}function i(){var y={line:r,column:o};return function(w){return w.position=new a(y),d(),w}}function a(y){this.start=y,this.end={line:r,column:o},this.source=t.source}a.prototype.content=e;function s(y){var w=new Error(t.source+\":\"+r+\":\"+o+\":",
+  "${e}`)}function sJ(e,t){if(e.not!==void 0){if(typeof e.not==\"object\"&&Object.keys(e.not).length===0)return Te.never();throw new Error(\"not is not supported in Zod (except { not:",
+  "`,Yi=(0,D9.forwardRef)(({size:e=\"small\",type:t=\"body\",variant:r=\"neutral\",inline:o=!1,LeadingIcon:n,TrailingIcon:i,children:a,...s},l)=>(0,Yd.jsxs)(Nce,{ref:l,$size:e,$variant:r,$inline:o,forwardedAs:\"span\",...s,children:[n&&(0,Yd.jsx)(n,{size:w9[e]}),a&&(0,Yd.jsx)(nt,{size:Tce[e],type:t,weight:\"medium\",as:\"span\",children:a}),i&&(0,Yd.jsx)(i,{size:w9[e]})]}));Yi.displayName=\"Badge\";var Lce=W(Be).attrs({p:\"space8\"})`",
+  "Received \"+JSON.stringify(e))}var wB={cwd:Gpe};function Gpe(){return\"/\"}function Kd(e){return!!(e!==null&&typeof e==\"object\"&&\"href\"in e&&e.href&&\"protocol\"in e&&e.protocol&&e.auth===void 0)}function DB(e){if(typeof e==\"string\")e=new URL(e);else if(!Kd(e)){let t=new TypeError('The \"path\" argument must be of type string or an instance of URL.",
+  "use `processor()` instead of `processor`.\")}function _B(e){if(!l0(e)||typeof e.type!=\"string\")throw new TypeError(\"Expected node, got `\"+e+\"`\")}function SB(e,t,r){if(!r)throw new Error(\"`\"+e+\"` finished async.",
+  "${d_} !important;",
+  "`;var go=j(me(),1),N0=j(ge(),1);var $a={gradientWrapper:\"OneLineCode-GradientWrapper\",scrollableWrapper:\"OneLineCode-ScrollableWrapper\",methodChip:\"OneLineCode-MethodChip\",gradient:\"OneLineCode-Gradient\",buttons:\"OneLineCode-Buttons\"},Rbe={GET:\"primary\",POST:\"success\",PUT:\"warning\",DELETE:\"danger\",HEAD:\"neutral\",PATCH:\"neutral\",OPTIONS:\"neutral\"};function Nbe(e){let t=m.color[Rbe[e]];return J`",
+  "`;var D_=j(me(),1);var SH=j(ge(),1);var P0={EXTRA_SMALL:\"XS\",SMALL:\"S\",MEDIUM:\"M\",LARGE:\"L\"},ra={DEFAULT:\"DEFAULT\",PRIMARY:\"PRIMARY\",SUCCESS:\"SUCCESS\",WARNING:\"WARNING\",DANGER:\"DANGER\"},b3e={BODY:\"Chip-body\"},v3e={[P0.EXTRA_SMALL]:J`",
+  "`,[ra.PRIMARY]:J`",
+  "`},C3e={primary:J`",
+  "`;function LH({as:e,size:t=\"small\",type:r=\"body\",variant:o=\"primary\",LeadingIcon:n,TrailingIcon:i,children:a,...s},l){let d=e===\"a\"?_r:e??\"button\",f=t===\"regular\"?\"small\":t;return(0,bf.jsxs)(I3e,{as:d,ref:l,$variant:o,$size:t,...s,children:[n&&(0,bf.jsx)(n,{size:RH[t]}),a&&(0,bf.jsx)(nt,{size:f,type:r,weight:\"medium\",children:a}),i&&(0,bf.jsx)(i,{size:RH[t]})]})}LH.displayName=\"Tag\";var xWe=(0,NH.forwardRef)(LH);var S3e=j(ge(),1),OH=j(me(),1),C_=j(ge(),1);var PH=j(me(),1);var _3e={default:J`",
+  "${l2e} !important;",
+  "${c2e}px !important;",
+  "- Empty or omitted \\u2192 only same origin allowed (`base-uri 'self'`)\")}),Z7=P.object({camera:P.object({}).optional().describe(\"Request camera access.",
+  "Tool callable by the app from this server only`),csp:P.never().optional(),permissions:P.never().optional()}),Vat=P.object({mimeTypes:P.array(P.string()).optional().describe('Array of supported MIME types for UI resources.",
+  "Must include `\"text/html;profile=mcp-app\"` for MCP Apps support.')}),Gat=P.object({method:P.literal(\"ui/download-file\"),params:P.object({contents:P.array(P.union([O7,$7])).describe(\"Resource contents to download \\u2014 embedded (inline data) or linked (host fetches).",
+  "Callers log the error first — the log source differs by site.",
+  "/** `decodeURIComponent` that returns the input unchanged on malformed percent-encoding instead of throwing.",
+  "The body is never parsed, so",
+  "only Apify API URLs (${getApifyAPIBaseUrl()}) are readable as resources.`, { uri });",
+  "Never return partial content.",
+  "null` on this axios instance resolves non-2xx responses instead of throwing,",
+  "base MIME type only (parameters are meaningless for a blob).",
+  "ApifyApiError.data (API response body) — only trust genuine Apify API errors",
+  "from call-actor after resolution) takes precedence.",
+  "prefer readmeSummary, fall back to full readme.",
+  "Anything else (401/403/5xx) must propagate:",
+  "Currently, the only supported directive is [RegExp], which defines a JavaScript-style regular expression to match against the URL.`,",
+  "If either [ or ] is part of the normal query string, it must be encoded as [\\\\x5B] or [\\\\x5D], respectively`,",
+  "'List of custom proxy URLs to be used instead of the Apify Proxy.',",
+  "Only one initialization request is allowed',",
+  "Client must accept text/event-stream',",
+  "Client must accept both application/json and text/event-stream',",
+  "Only one SSE stream is allowed per session',",
+  "It emits `pricingNote` only when",
+  "You are only charged for Apify platform usage.';",
+  "actor provides neither the user's tier nor FREE.",
+  "return (`Prices shown are for ${resolvedTier} tier.",
+  "const tierList = tierEntries.map(([tier, obj]) => `${tier}:",
+  ".map(([tier, price]) => `${tier}:",
+  "patch.tieredPricing = Object.entries(info.tieredPricing).map(([tier, obj]) => ({",
+  "Object.entries(event.eventTieredPricingUsd).map(([tier, price]) => ({",
+  "const { tier, value } = resolveTier(info.tieredPricing, userTier);",
+  "buildPricingNote(tier) :",
+  "const { tier, value:",
+  "const { tier, value } = resolveTier(tieredMap, userTier);",
+  "resolvedTiers.add(tier);",
+  "/** report-problem's only category — selecting it is the same opt-in as the literal name.",
+  "it can only list tools the session was already served.",
+  "export const VERBATIM_LINKS_NUDGE = 'IMPORTANT:",
+  "Never construct Apify URLs yourself.';",
+  "UI tokens are issued only to Console sessions",
+  "{@link cleanEmptyArrays} strips only empty arrays.",
+  "`content` isn't retrieved, so the snippet is the only source.",
+  "The only place `resolveActorToolMode`",
+  "function normalizePlanTier(tier) {",
+  "const upper = tier.toUpperCase();",
+  "log.info(`Unrecognized plan tier \"${tier}\", defaulting to FREE`);",
+  "Tool handlers must NOT use this — they return",
+  "undefined` must mean \"no default\" regardless of producer.",
+  "`- **After ${asCodeList(renderers)}, never call ${asCodeList(dontCallAgain)} for the same run.** ${pollsItself} — stop after the widget response and defer to it for run status.${hasRunsGetWidget ?",
+  "/** Every cross-tool mention gates on `ctx.hasTool(...)`, so a session missing a tool is never told to call it.",
+  "`Use \\`${HELPER_TOOLS.ACTOR_GET_DETAILS}\\` first to obtain the Actor's input schema.` :",
+  "`Check the Actor's input schema first.`}",
+  "waits up to that many seconds for the run to complete, then returns its current status and storage IDs (never the output rows — fetch those with \\`${HELPER_TOOLS.DATASET_GET_ITEMS}\\`).",
+  "`  - \\`${HELPER_TOOLS.STORE_SEARCH}\\` is a silent data lookup (Actor list for name resolution) with no UI; \\`${HELPER_TOOLS.STORE_SEARCH_WIDGET}\\` renders an interactive UI element (widget) with Actor search results for the user to browse — use it only when the user explicitly asks to search or discover Actors.",
+  "`  - \\`${HELPER_TOOLS.ACTOR_GET_DETAILS}\\` is a silent data lookup (input schema, README, metadata) with no UI; \\`${HELPER_TOOLS.ACTOR_GET_DETAILS_WIDGET}\\` renders an interactive UI element (widget) with Actor details — use it only when the user explicitly asks to see or browse the Actor.",
+  "`  - \\`${HELPER_TOOLS.ACTOR_CALL}\\` runs the Actor and returns its run status and storage IDs (no UI); \\`${HELPER_TOOLS.ACTOR_CALL_WIDGET}\\` renders an interactive UI element (widget) that tracks live Actor run progress — use it only when the user explicitly asks to see progress.",
+  "`  - \\`${HELPER_TOOLS.ACTOR_CALL_WIDGET}\\` renders an interactive UI element (widget) that starts an Actor run and tracks its live progress — use it only when the user explicitly asks to see progress.",
+  "`  - \\`${HELPER_TOOLS.ACTOR_RUNS_GET}\\` is a silent data lookup (run status, dataset IDs, stats) with no UI; \\`${HELPER_TOOLS.ACTOR_RUNS_GET_WIDGET}\\` renders an interactive UI element (widget) showing live run progress for the user — use it only when the user explicitly asks to see run progress.",
+  "`  - \\`${HELPER_TOOLS.ACTOR_RUNS_GET_WIDGET}\\` renders an interactive UI element (widget) showing live run progress for the user — use it only when the user explicitly asks to see run progress.",
+  "`  - When the next step is running an Actor, prefer silent lookups (\\`${HELPER_TOOLS.STORE_SEARCH}\\`, \\`${HELPER_TOOLS.ACTOR_GET_DETAILS}\\`) over widget-backed variants.",
+  "Prefer dedicated tools when available; use \\`${HELPER_TOOLS.ACTOR_CALL}\\` only when no specialized tool exists in the Apify store.",
+  "/** Renders only if a subsection survives gating, to avoid a bare heading; `###` subsections get a blank line before them, bullets stay contiguous.",
+  "- Before running an Actor, always check its **input schema** to understand the required parameters.",
+  "- Search the Apify Store first; a relevant Actor likely already exists.",
+  "- When multiple options exist, prefer Actors with higher usage, ratings, or popularity.",
+  "- Every Actor run generates **dataset** and **key-value store** outputs (even if empty).",
+  "- Publish only tasks that represent a useful, reliable, and specific use case.",
+  "- **Dataset:** Structured, append-only storage ideal for tabular or list data (e.g., scraped items).",
+  "payment-only x402/Skyfire) fails with a JSON-RPC error.",
+  "- Reads inline up to ~256 KB; a larger response is not downloaded — it returns a short notice with a download URL instead of the body, so page large datasets/lists with \\`limit\\` and \\`offset\\` to stay under the cap.",
+  "/** Builds the pre-flight result; standby rejection takes precedence over 402.",
+  "The array replacer filters keys at every depth — safe only",
+  "A stateless request never",
+  "Distinct from {@link clientKnown}, which only withholds client-gated tools.",
+  "a stateless-only facade never drains this queue, so a reload",
+  "a reload replaces its entry instead of appending, bounding the map by distinct",
+  "constructed here and never exposed on the public surface.",
+  "`report-problem` is always",
+  "Only client-gated tools wait for this so the per-client blocklist can be",
+  "Never without telemetry (submissions",
+  "Deliberately token-only:",
+  "The only writer of that",
+  "notifications/tasks/status MUST NOT carry _meta.related-task (task ID is in params).",
+  "The tool never ran and the task is",
+  "once a task is cancelled it MUST remain cancelled,",
+  "a new TOOL_CALL_ERROR_KIND makes `errorResult` non-`never` here and fails",
+  "One per serving unit, constructed only by `ActorsMcpServer`.",
+  "throw new Error('Task store must be provided for non-stdio transport types');",
+  "This should never happen.');",
+  "emitTaskStatusNotification never throws.",
+  "/** Whether an error must stay a JSON-RPC error response instead of becoming a tool result.",
+  "/** Discriminants of `ToolCallErrorResult` — reference these, never string literals.",
+  "never throws, logs, or touches the task store.",
+  "/** Connect, run the callback with the live client, always close.",
+  "Caller MUST invoke `dispose()` once the",
+  "The shared TaskStore is the only signal the executing pod can observe, so it must"
+ ]
+}

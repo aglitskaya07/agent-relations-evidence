@@ -1,0 +1,716 @@
+{
+ "mode": "full",
+ "units": 138,
+ "thresholds": [
+  {
+   "t": 0.5,
+   "exact": 0.572,
+   "kappa": 0.382,
+   "coarse_exact": 0.623,
+   "hard_jev": 69,
+   "hard_llm": 29,
+   "confusion": {
+    "C->C": 22,
+    "A->A": 47,
+    "D->D": 2,
+    "B->C": 10,
+    "A->B": 8,
+    "A->C": 23,
+    "B->B": 5,
+    "A+->A+": 3,
+    "C->D": 5,
+    "A->D": 3,
+    "B->A": 1,
+    "A+->D": 1,
+    "B->A+": 2,
+    "B->D": 1,
+    "A->A+": 2,
+    "A+->B": 1,
+    "A+->C": 2
+   }
+  },
+  {
+   "t": 0.6,
+   "exact": 0.623,
+   "kappa": 0.442,
+   "coarse_exact": 0.681,
+   "hard_jev": 63,
+   "hard_llm": 29,
+   "confusion": {
+    "C->C": 22,
+    "A->A": 53,
+    "D->D": 2,
+    "B->C": 9,
+    "A->A+": 3,
+    "A->B": 6,
+    "B->B": 6,
+    "A+->A+": 3,
+    "C->D": 5,
+    "A->C": 18,
+    "A->D": 3,
+    "B->A": 1,
+    "A+->D": 1,
+    "B->A+": 2,
+    "B->D": 1,
+    "A+->B": 1,
+    "A+->C": 2
+   }
+  },
+  {
+   "t": 0.7,
+   "exact": 0.674,
+   "kappa": 0.501,
+   "coarse_exact": 0.717,
+   "hard_jev": 57,
+   "hard_llm": 29,
+   "confusion": {
+    "C->C": 23,
+    "A->A": 58,
+    "D->D": 2,
+    "B->C": 8,
+    "A->B": 6,
+    "B->B": 5,
+    "A+->A+": 5,
+    "C->D": 4,
+    "A->C": 14,
+    "A->D": 3,
+    "B->A": 3,
+    "A+->D": 1,
+    "B->A+": 2,
+    "B->D": 1,
+    "A->A+": 2,
+    "A+->C": 1
+   }
+  },
+  {
+   "t": 0.8,
+   "exact": 0.775,
+   "kappa": 0.635,
+   "coarse_exact": 0.797,
+   "hard_jev": 45,
+   "hard_llm": 29,
+   "confusion": {
+    "C->C": 24,
+    "A->A": 67,
+    "D->D": 2,
+    "B->B": 8,
+    "A->B": 5,
+    "A+->A+": 6,
+    "A->C": 9,
+    "B->A": 4,
+    "C->D": 2,
+    "A->D": 1,
+    "A+->D": 1,
+    "C->A": 1,
+    "B->C": 5,
+    "B->A+": 1,
+    "B->D": 1,
+    "A->A+": 1
+   }
+  },
+  {
+   "t": 0.9,
+   "exact": 0.797,
+   "kappa": 0.656,
+   "coarse_exact": 0.826,
+   "hard_jev": 38,
+   "hard_llm": 29,
+   "confusion": {
+    "C->C": 24,
+    "A->A": 71,
+    "D->D": 2,
+    "B->B": 7,
+    "A->B": 3,
+    "A+->A+": 6,
+    "A->C": 5,
+    "B->A": 8,
+    "C->D": 1,
+    "A->D": 1,
+    "A+->D": 1,
+    "C->A": 1,
+    "B->C": 4,
+    "A->A+": 3,
+    "C->A+": 1
+   }
+  },
+  {
+   "t": 0.95,
+   "exact": 0.826,
+   "kappa": 0.699,
+   "coarse_exact": 0.855,
+   "hard_jev": 33,
+   "hard_llm": 29,
+   "confusion": {
+    "C->C": 24,
+    "A->A": 74,
+    "D->D": 2,
+    "B->B": 8,
+    "A->B": 3,
+    "A+->A+": 6,
+    "A->C": 3,
+    "B->A": 9,
+    "C->D": 1,
+    "A+->D": 1,
+    "C->A": 1,
+    "B->C": 2,
+    "A->A+": 3,
+    "C->A+": 1
+   }
+  }
+ ],
+ "best_t": 0.95,
+ "disagreements": [
+  {
+   "unit": "chrome-devtools-mcp",
+   "frame": "pilot",
+   "llm": "A",
+   "jev": "B",
+   "top_sentences": [
+    {
+     "choice": "SELF_PROMOTION",
+     "conf": 1.0,
+     "sentence": "It is significantly faster, more reliable, and reduces turn count."
+    },
+    {
+     "choice": "UNCONDITIONAL_ORDER",
+     "conf": 0.45,
+     "sentence": "Always use the latest snapshot."
+    },
+    {
+     "choice": "NEUTRAL",
+     "conf": 0.58,
+     "sentence": "execute_webmcp_tool (`webmcp.js`):"
+    }
+   ]
+  },
+  {
+   "unit": "claude-ai:Zoom_for_Claude",
+   "frame": "wave",
+   "llm": "A",
+   "jev": "C",
+   "top_sentences": [
+    {
+     "choice": "DISPLACEMENT",
+     "conf": 0.75,
+     "sentence": "Use `hub_create_file_from_content` as the direct replacement for all file creation with Markdown content tasks."
+    },
+    {
+     "choice": "DISPLACEMENT",
+     "conf": 0.72,
+     "sentence": "Please use `hub_get_file_content` instead for all future file content retrieval tasks."
+    },
+    {
+     "choice": "DISPLACEMENT",
+     "conf": 0.78,
+     "sentence": "Use `hub_get_file_content` as the replacement."
+    }
+   ]
+  },
+  {
+   "unit": "@cap-js/mcp-server",
+   "frame": "wave",
+   "llm": "B",
+   "jev": "A",
+   "top_sentences": [
+    {
+     "choice": "NEUTRAL",
+     "conf": 0.97,
+     "sentence": "title: `Search for CDS definitions"
+    },
+    {
+     "choice": "NEUTRAL",
+     "conf": 0.99,
+     "sentence": "title: `Search in CAP Documentation"
+    },
+    {
+     "choice": "NEUTRAL",
+     "conf": 0.87,
+     "sentence": "annotations: readOnlyHint: true, destructiveHint: false, idempotentHint: false"
+    }
+   ]
+  },
+  {
+   "unit": "@circleci/mcp-server-circleci",
+   "frame": "wave",
+   "llm": "C",
+   "jev": "D",
+   "top_sentences": [
+    {
+     "choice": "THREAT",
+     "conf": 1.0,
+     "sentence": "Repeated violations may be treated as a bug in the AI agent."
+    },
+    {
+     "choice": "SPEAKS_FOR_USER",
+     "conf": 0.65,
+     "sentence": "User selects a project from the list"
+    },
+    {
+     "choice": "UNCONDITIONAL_ORDER",
+     "conf": 0.55,
+     "sentence": "⚠️ MANDATORY OUTPUT DIRECTORY SELECTION FOR AI AGENTS:"
+    }
+   ]
+  },
+  {
+   "unit": "@drawio/mcp",
+   "frame": "wave",
+   "llm": "A",
+   "jev": "B",
+   "top_sentences": [
+    {
+     "choice": "SELF_PROMOTION",
+     "conf": 0.96,
+     "sentence": "Best for flowcharts, process/state diagrams, decision flows, pipelines, and other directional/hierarchical diagrams."
+    },
+    {
+     "choice": "SPEAKS_FOR_USER",
+     "conf": 0.71,
+     "sentence": "What you still choose: the edge style."
+    },
+    {
+     "choice": "DISPLACEMENT",
+     "conf": 0.48,
+     "sentence": "Pick ONE — they are essentially alternatives, not a stack:"
+    }
+   ]
+  },
+  {
+   "unit": "@n8n/mcp-browser",
+   "frame": "wave",
+   "llm": "A",
+   "jev": "C",
+   "top_sentences": [
+    {
+     "choice": "PRECEDENCE",
+     "conf": 0.86,
+     "sentence": "browser_snapshot — `Use this tool as your primary way to observe the page."
+    },
+    {
+     "choice": "SELF_PROMOTION",
+     "conf": 0.88,
+     "sentence": "Snapshots are small and fast."
+    },
+    {
+     "choice": "DISPLACEMENT",
+     "conf": 0.68,
+     "sentence": "Prefer this over browser_screenshot unless you specifically need visual/layout information."
+    }
+   ]
+  },
+  {
+   "unit": "@sap-ux/fiori-mcp-server",
+   "frame": "wave",
+   "llm": "A+",
+   "jev": "D",
+   "top_sentences": [
+    {
+     "choice": "THREAT",
+     "conf": 0.99,
+     "sentence": "❌ You are violating the MCP protocol"
+    },
+    {
+     "choice": "PRESUMPTION",
+     "conf": 0.52,
+     "sentence": "❌ Assume you know the schema from training data"
+    },
+    {
+     "choice": "THREAT",
+     "conf": 0.95,
+     "sentence": "❌ Your tool call will FAIL"
+    }
+   ]
+  },
+  {
+   "unit": "@sentry/mcp-server",
+   "frame": "wave",
+   "llm": "A",
+   "jev": "C",
+   "top_sentences": [
+    {
+     "choice": "UNCONDITIONAL_ORDER",
+     "conf": 0.83,
+     "sentence": "If user asks to 'use Sentry' for something, they always mean to call this tool"
+    },
+    {
+     "choice": "TRIGGER_EXPANSION",
+     "conf": 0.71,
+     "sentence": "Use this for any Sentry-related task when you do not see an obvious direct tool, including long-tail inspection, project management, documentation lookup, preprod snapshots, attachments, DSNs, releases, teams, and issue-"
+    },
+    {
+     "choice": "PRECEDENCE",
+     "conf": 0.39,
+     "sentence": "This is the primary tool for retrieving app screenshots — not search_events or search_issues."
+    }
+   ]
+  },
+  {
+   "unit": "@ui5/mcp-server",
+   "frame": "wave",
+   "llm": "C",
+   "jev": "A",
+   "top_sentences": [
+    {
+     "choice": "UNCONDITIONAL_ORDER",
+     "conf": 0.6,
+     "sentence": "get_guidelines — \"This tool MUST be called once to retrieve UI5 guidelines before working on any UI5 (SAPUI5/OpenUI5) related task or project or creating a UI5 project."
+    },
+    {
+     "choice": "TECHNICAL_REQUIREMENT",
+     "conf": 0.6,
+     "sentence": "get_integration_cards_guidelines — \"This tool MUST be called once to retrieve Integration Cards guidelines before working on any Integration Card related task or creating an Integration Card."
+    },
+    {
+     "choice": "TECHNICAL_REQUIREMENT",
+     "conf": 0.56,
+     "sentence": "The guidelines provided by this tool MUST be followed to ensure best practices and avoid common pitfalls in UI5 development."
+    }
+   ]
+  },
+  {
+   "unit": "brilliant-directories-mcp",
+   "frame": "wave",
+   "llm": "B",
+   "jev": "C",
+   "top_sentences": [
+    {
+     "choice": "PRECEDENCE",
+     "conf": 0.96,
+     "sentence": "The wrapper's table is the single source of truth."
+    },
+    {
+     "choice": "DISPLACEMENT",
+     "conf": 0.94,
+     "sentence": "If you reached for Wikimedia because the subject is a real entity (Juilliard, Harvard, a museum, a famous person), that's the wrong instinct - go to step 2 and pull from the subject's own website instead."
+    },
+    {
+     "choice": "DISPLACEMENT",
+     "conf": 0.69,
+     "sentence": "Wikimedia isn't a \"free alternative\" for real-entity writes; the subject's own domain is."
+    }
+   ]
+  },
+  {
+   "unit": "hostinger-api-mcp",
+   "frame": "wave",
+   "llm": "A",
+   "jev": "A+",
+   "top_sentences": [
+    {
+     "choice": "SELF_PROMOTION",
+     "conf": 0.86,
+     "sentence": "Enable it for faster page loads, reduced server load, and improved user experience; recommended for production websites."
+    },
+    {
+     "choice": "SELF_PROMOTION",
+     "conf": 0.42,
+     "sentence": "This is the recommended single-step approach for deploying a Node.js application."
+    },
+    {
+     "choice": "HONEST_CONDITION",
+     "conf": 0.52,
+     "sentence": "For plain PHP applications that should be extracted as-is, use agencyHosting_deployPhpApplication instead."
+    }
+   ]
+  },
+  {
+   "unit": "n8n-mcp",
+   "frame": "wave",
+   "llm": "B",
+   "jev": "A",
+   "top_sentences": [
+    {
+     "choice": "NEUTRAL",
+     "conf": 0.75,
+     "sentence": "Automatically fix common workflow validation errors."
+    },
+    {
+     "choice": "NEUTRAL",
+     "conf": 0.76,
+     "sentence": "Preview fixes or apply them."
+    },
+    {
+     "choice": "NEUTRAL",
+     "conf": 0.83,
+     "sentence": "Test/trigger workflow execution."
+    }
+   ]
+  },
+  {
+   "unit": "ai.agenticfabricationnetwork/ufp",
+   "frame": "wave",
+   "llm": "C",
+   "jev": "A+",
+   "top_sentences": [
+    {
+     "choice": "UNCONDITIONAL_ORDER",
+     "conf": 0.22,
+     "sentence": "Never block or hedge over this yourself; you can tell the user \"the price you see is the most you'll pay."
+    },
+    {
+     "choice": "DISPLACEMENT",
+     "conf": 0.43,
+     "sentence": "Present these as \"closest we have is X; we've noted your request for future vendors\" and still offer checkout."
+    },
+    {
+     "choice": "SELF_PROMOTION",
+     "conf": 0.76,
+     "sentence": "If the user checks out a \"reviewed\" offer, mention it in ONE light sentence as diligence, not risk (\"the shop double-checks every order before production — the rare rejection refunds automatically\")."
+    }
+   ]
+  },
+  {
+   "unit": "ai.agentrapay/agentra",
+   "frame": "wave",
+   "llm": "B",
+   "jev": "A",
+   "top_sentences": [
+    {
+     "choice": "REWARD_TO_AGENT",
+     "conf": 0.8,
+     "sentence": "Submit identity verification to upgrade your trust tier."
+    },
+    {
+     "choice": "SELF_PROMOTION",
+     "conf": 0.7,
+     "sentence": "This is Agentra's viral growth mechanism."
+    },
+    {
+     "choice": "REWARD_TO_AGENT",
+     "conf": 0.58,
+     "sentence": "Higher tiers unlock larger transaction limits."
+    }
+   ]
+  },
+  {
+   "unit": "ai.airshelf/catalog",
+   "frame": "wave",
+   "llm": "B",
+   "jev": "C",
+   "top_sentences": [
+    {
+     "choice": "PRECEDENCE",
+     "conf": 0.44,
+     "sentence": "Escalation without a search step is never correct — the catalog is grounded and the answer is nearly always in it."
+    },
+    {
+     "choice": "TRIGGER_EXPANSION",
+     "conf": 0.86,
+     "sentence": "Use this whenever the user wants to shop for, find, source, or purchase a physical product, in any vertical (e.g. flowers, jewelry, skincare, chocolate, apparel, keyboards, office printers)."
+    },
+    {
+     "choice": "DISPLACEMENT",
+     "conf": 0.43,
+     "sentence": "ALWAYS call search_products (or search_catalog) BEFORE escalate_to_human."
+    }
+   ]
+  },
+  {
+   "unit": "mcp-server-actor-critic-thinking",
+   "frame": "wave",
+   "llm": "B",
+   "jev": "A",
+   "top_sentences": [
+    {
+     "choice": "SELF_PROMOTION",
+     "conf": 0.83,
+     "sentence": "A sophisticated tool for dual-perspective performance analysis through actor-critic methodology."
+    },
+    {
+     "choice": "SELF_PROMOTION",
+     "conf": 0.71,
+     "sentence": "Generates nuanced, multi-dimensional assessments"
+    },
+    {
+     "choice": "NEUTRAL",
+     "conf": 0.6,
+     "sentence": "This tool enables comprehensive evaluation of performances, creative works, or decisions by embodying both the performer's mindset and the critic's analytical perspective."
+    }
+   ]
+  },
+  {
+   "unit": "notfair.co",
+   "frame": "wave",
+   "llm": "B",
+   "jev": "A",
+   "top_sentences": [
+    {
+     "choice": "DISPLACEMENT",
+     "conf": 0.43,
+     "sentence": "notfair://playbooks/run-mutation-script-routing` — use before any"
+    },
+    {
+     "choice": "DISPLACEMENT",
+     "conf": 0.5,
+     "sentence": "Do NOT silently give up, fabricate an answer, or substitute a different connected platform's data."
+    },
+    {
+     "choice": "MEMORY_SUPPRESSION",
+     "conf": 0.28,
+     "sentence": "DO NOT say the MCP lacks access until you have considered generic"
+    }
+   ]
+  },
+  {
+   "unit": "sentry",
+   "frame": "brands",
+   "llm": "A",
+   "jev": "A+",
+   "top_sentences": [
+    {
+     "choice": "TRIGGER_EXPANSION",
+     "conf": 0.42,
+     "sentence": "If a Sentry operation is not listed as a direct tool, search here before deciding it is unavailable."
+    },
+    {
+     "choice": "TRIGGER_EXPANSION",
+     "conf": 0.7,
+     "sentence": "Use this for any Sentry-related task when you do not see an obvious direct tool, including long-tail inspection, project management, documentation lookup, preprod snapshots, attachments, DSNs, releases, teams, and issue-"
+    },
+    {
+     "choice": "OWN_TOOLS_ROUTING",
+     "conf": 0.3,
+     "sentence": "This is the primary tool for retrieving app screenshots — not search_events or search_issues."
+    }
+   ]
+  },
+  {
+   "unit": "docker-hub",
+   "frame": "brands",
+   "llm": "A",
+   "jev": "A+",
+   "top_sentences": [
+    {
+     "choice": "PRECEDENCE",
+     "conf": 0.28,
+     "sentence": "If user asks for secure, production-ready images the \"dockerHardenedImages\" tool should be called first to get the list of DHI images available in the user organisations (if any) and fallback to search tool if no DHI ima"
+    },
+    {
+     "choice": "NEUTRAL",
+     "conf": 0.88,
+     "sentence": "Search for repositories in Docker Hub."
+    },
+    {
+     "choice": "NEUTRAL",
+     "conf": 0.89,
+     "sentence": "Create a new repository in the given namespace."
+    }
+   ]
+  },
+  {
+   "unit": "bright-data",
+   "frame": "brands",
+   "llm": "B",
+   "jev": "A",
+   "top_sentences": [
+    {
+     "choice": "SELF_PROMOTION",
+     "conf": 0.83,
+     "sentence": "Returns SERP results in JSON or Markdown (URL, title, description),Ideal forgathering current information, news, and detailed search results."
+    },
+    {
+     "choice": "SELF_PROMOTION",
+     "conf": 0.74,
+     "sentence": "This tool can unlock any webpage even if it uses bot detection or CAPTCHA."
+    },
+    {
+     "choice": "OWN_TOOLS_ROUTING",
+     "conf": 0.36,
+     "sentence": "Tries Web Unlocker first, then Browser API, then reports which succeeded."
+    }
+   ]
+  },
+  {
+   "unit": "meta-ads",
+   "frame": "brands",
+   "llm": "B",
+   "jev": "A",
+   "top_sentences": [
+    {
+     "choice": "SELF_PROMOTION",
+     "conf": 0.64,
+     "sentence": "This is a premium feature available with Pipeboard Pro."
+    },
+    {
+     "choice": "SELF_PROMOTION",
+     "conf": 0.58,
+     "sentence": "Recommended: Use this to run robust experiments."
+    },
+    {
+     "choice": "DISPLACEMENT",
+     "conf": 0.42,
+     "sentence": "For direct lookups by ID, use these tools instead:"
+    }
+   ]
+  },
+  {
+   "unit": "elevenlabs",
+   "frame": "brands",
+   "llm": "A",
+   "jev": "B",
+   "top_sentences": [
+    {
+     "choice": "SELF_PROMOTION",
+     "conf": 1.0,
+     "sentence": "eleven_v3: High quality model with most expressive voices"
+    },
+    {
+     "choice": "SELF_PROMOTION",
+     "conf": 0.98,
+     "sentence": "eleven_flash_v2_5: Fastest model with ultra-low latency (32 languages)"
+    },
+    {
+     "choice": "SELF_PROMOTION",
+     "conf": 0.67,
+     "sentence": "eleven_multilingual_v2: High quality multilingual model (29 languages)"
+    }
+   ]
+  },
+  {
+   "unit": "n8n",
+   "frame": "brands",
+   "llm": "B",
+   "jev": "A",
+   "top_sentences": [
+    {
+     "choice": "NEUTRAL",
+     "conf": 0.83,
+     "sentence": "Automatically fix common workflow validation errors."
+    },
+    {
+     "choice": "NEUTRAL",
+     "conf": 0.85,
+     "sentence": "Combines n8n's built-in audit API (credentials, database, nodes, instance, filesystem risks) with deep workflow scanning (hardcoded secrets via 50+ regex patterns, unauthenticated webhooks, error handling gaps, data rete"
+    },
+    {
+     "choice": "NEUTRAL",
+     "conf": 0.87,
+     "sentence": "Test/trigger workflow execution."
+    }
+   ]
+  },
+  {
+   "unit": "metabase",
+   "frame": "brands",
+   "llm": "B",
+   "jev": "A",
+   "top_sentences": [
+    {
+     "choice": "PRECEDENCE",
+     "conf": 0.66,
+     "sentence": "This is the authoritative source for field IDs needed in MBQL queries."
+    },
+    {
+     "choice": "NEUTRAL",
+     "conf": 0.3,
+     "sentence": "Essential for building MBQL queries."
+    },
+    {
+     "choice": "NEUTRAL",
+     "conf": 0.59,
+     "sentence": "Useful for auditing what data a dashboard queries."
+    }
+   ]
+  }
+ ]
+}

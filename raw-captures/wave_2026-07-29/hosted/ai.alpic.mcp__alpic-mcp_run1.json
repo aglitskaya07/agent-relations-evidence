@@ -1,0 +1,42 @@
+{
+ "url": "https://mcp.alpic.ai",
+ "capture_utc": "2026-07-29T12:05:49.264174+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "43",
+    "date": "Wed, 29 Jul 2026 12:05:49 GMT",
+    "etag": "W/\"2b-dGnJzt6gv1nJjX6DJ9RztDWptng\"",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "mcp-session-id,mcp-protocol-version",
+    "www-authenticate": "Bearer error=\"invalid_token\", error_description=\"Missing Authorization header\", resource_metadata=\"https://mcp.alpic.ai/.well-known/oauth-protected-resource\"",
+    "x-cache": "Error from cloudfront",
+    "via": "1.1 459fe136f0e9cdd56cd4a7c7facdf8ae.cloudfront.net (CloudFront)",
+    "x-amz-cf-pop": "MAD56-P5",
+    "x-amz-cf-id": "80DB-WRP07qI4nKVGElWGFietUjMtc0oq1LUsFO60_AE80fqc_PChA=="
+   },
+   "body_raw": "{\"message\":\"Unauthorized\",\"statusCode\":401}"
+  }
+ ]
+}

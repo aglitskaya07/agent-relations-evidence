@@ -1,0 +1,4 @@
+# hosted mcp.firecrawl.dev/v2/mcp — captured 2026-07-29
+# serverInfo: {'name': 'firecrawl-fastmcp', 'version': '3.23.0'}
+
+Without authentication, this endpoint exposes Search, Scrape, and Parse with usage limits. An OAuth connection or Authorization bearer API key exposes account tools; unavailable tools return connection guidance. Firecrawl provides web search, page retrieval, site URL discovery, multi-page collection, structured extraction, monitoring, and asynchronous research. Match the requested operation to the tool boundary: firecrawl_scrape retrieves one supplied page, firecrawl_map enumerates URLs under a site without retrieving their content, and firecrawl_agent starts multi-source research whose result is read with firecrawl_agent_status. Provide only the required inputs.

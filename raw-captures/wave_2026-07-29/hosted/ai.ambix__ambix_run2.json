@@ -1,0 +1,36 @@
+{
+ "url": "https://mcp.ambix.ai",
+ "capture_utc": "2026-07-29T12:37:16.409749+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "date": "Wed, 29 Jul 2026 12:37:16 GMT",
+    "content-type": "text/plain; charset=utf-8",
+    "content-length": "16",
+    "www-authenticate": "Bearer resource_metadata=\"https://mcp.ambix.ai/.well-known/oauth-protected-resource\", scope=\"read write\"",
+    "x-content-type-options": "nosniff"
+   },
+   "body_raw": "no bearer token\n"
+  }
+ ]
+}

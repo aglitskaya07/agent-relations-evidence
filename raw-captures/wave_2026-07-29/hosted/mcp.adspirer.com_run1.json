@@ -1,0 +1,38 @@
+{
+ "url": "https://mcp.adspirer.com/mcp",
+ "capture_utc": "2026-07-29T12:05:49.814038+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "date": "Wed, 29 Jul 2026 12:05:50 GMT",
+    "server": "uvicorn",
+    "www-authenticate": "Bearer realm=\"adspirer\", scope=\"openid profile email mcp.full campaigns:read campaigns:write performance:read accounts:read\"",
+    "content-length": "25",
+    "content-type": "application/json",
+    "via": "1.1 google",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+   },
+   "body_raw": "{\"detail\":\"Unauthorized\"}"
+  }
+ ]
+}

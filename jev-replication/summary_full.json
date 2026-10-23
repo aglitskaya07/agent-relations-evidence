@@ -1,0 +1,9 @@
+{
+ "mode": "full",
+ "units": 138,
+ "sentences": 12824,
+ "wall_s": 291.9,
+ "input_tokens": 23440363,
+ "cost_usd": 0.9845,
+ "model": "jev-1.13.0"
+}

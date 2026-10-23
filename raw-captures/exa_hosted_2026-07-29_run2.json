@@ -1,0 +1,176 @@
+{
+ "url": "https://mcp.exa.ai/mcp",
+ "capture_utc": "2026-07-29T10:18:07.993533+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 200,
+   "headers": {
+    "access-control-allow-headers": "Accept, Content-Type, Authorization, x-api-key, x-exa-source, Mcp-Session-Id, MCP-Protocol-Version, Last-Event-ID",
+    "access-control-allow-methods": "GET, POST, DELETE, OPTIONS",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "Mcp-Session-Id",
+    "access-control-max-age": "86400",
+    "cache-control": "no-cache",
+    "content-type": "text/event-stream",
+    "date": "Wed, 29 Jul 2026 10:18:08 GMT",
+    "mcp-session-id": "a0788831-c757-4606-909e-ec2df8a5217e",
+    "server": "Vercel",
+    "strict-transport-security": "max-age=63072000",
+    "vary": "Origin",
+    "x-vercel-cache": "MISS",
+    "x-vercel-id": "cdg1::iad1::cx8wl-1785320288315-e820b4a2af11"
+   },
+   "body_raw": "event: message\ndata: {\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{\"tools\":{\"listChanged\":true},\"prompts\":{\"listChanged\":true},\"resources\":{\"listChanged\":true}},\"serverInfo\":{\"name\":\"exa-search-server\",\"title\":\"Exa\",\"version\":\"3.2.1\",\"websiteUrl\":\"https://exa.ai\",\"icons\":[{\"src\":\"https://exa.ai/images/favicon-32x32.png\",\"mimeType\":\"image/png\",\"sizes\":[\"32x32\"]}]}},\"jsonrpc\":\"2.0\",\"id\":1}\n\n"
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "method": "notifications/initialized"
+   },
+   "status": 202,
+   "headers": {
+    "access-control-allow-headers": "Accept, Content-Type, Authorization, x-api-key, x-exa-source, Mcp-Session-Id, MCP-Protocol-Version, Last-Event-ID",
+    "access-control-allow-methods": "GET, POST, DELETE, OPTIONS",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "Mcp-Session-Id",
+    "access-control-max-age": "86400",
+    "cache-control": "public, max-age=0, must-revalidate",
+    "date": "Wed, 29 Jul 2026 10:18:08 GMT",
+    "server": "Vercel",
+    "strict-transport-security": "max-age=63072000",
+    "vary": "Origin",
+    "x-vercel-cache": "MISS",
+    "x-vercel-id": "cdg1::iad1::fhckj-1785320288606-153fe233cafb"
+   },
+   "body_raw": ""
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "method": "tools/list"
+   },
+   "status": 200,
+   "headers": {
+    "access-control-allow-headers": "Accept, Content-Type, Authorization, x-api-key, x-exa-source, Mcp-Session-Id, MCP-Protocol-Version, Last-Event-ID",
+    "access-control-allow-methods": "GET, POST, DELETE, OPTIONS",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "Mcp-Session-Id",
+    "access-control-max-age": "86400",
+    "cache-control": "no-cache",
+    "content-type": "text/event-stream",
+    "date": "Wed, 29 Jul 2026 10:18:08 GMT",
+    "server": "Vercel",
+    "strict-transport-security": "max-age=63072000",
+    "vary": "Origin",
+    "x-vercel-cache": "MISS",
+    "x-vercel-id": "cdg1::iad1::jn6rc-1785320288829-800b25a4f62d"
+   },
+   "body_raw": "event: message\ndata: {\"result\":{\"tools\":[{\"name\":\"web_search_exa\",\"description\":\"Search the web for any topic and get clean, ready-to-use content.\\n\\n      Best for: Finding current information, news, facts, people, companies, or answering questions about any topic.\\n      Returns: Clean text content from top search results.\\n\\n      Query tips:\\n      describe the ideal page, not keywords. \\\"blog post comparing React and Vue performance\\\" not \\\"React vs Vue\\\".\\n      Use category:people / category:company to search through Linkedin profiles / companies respectively.\\n      If highlights are insufficient, follow up with web_fetch_exa on the best URLs.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"query\":{\"type\":\"string\",\"minLength\":1,\"description\":\"Natural language search query. Should be a semantically rich description of the ideal page, not just keywords. Optionally include category:<type> (company, people) to focus results — e.g. 'category:people John Doe software engineer'.\"},\"numResults\":{\"type\":\"number\",\"description\":\"Number of search results to return (default: 10).\"}},\"required\":[\"query\"],\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"},\"annotations\":{\"readOnlyHint\":true,\"destructiveHint\":false,\"openWorldHint\":false,\"idempotentHint\":true},\"execution\":{\"taskSupport\":\"forbidden\"}},{\"name\":\"web_fetch_exa\",\"description\":\"Read a webpage's full content as clean markdown. Use after web_search_exa when highlights are insufficient or to read any URL.\\n\\nBest for: Extracting full content from known URLs. Batch multiple URLs in one call.\\nReturns: Clean text content and metadata from the page(s).\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"urls\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"URLs to read. Batch multiple URLs in one call.\"},\"maxCharacters\":{\"type\":\"number\",\"minimum\":1,\"description\":\"Maximum characters to extract per page (default: 3000)\"}},\"required\":[\"urls\"],\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"},\"annotations\":{\"readOnlyHint\":true,\"destructiveHint\":false,\"openWorldHint\":false,\"idempotentHint\":true},\"execution\":{\"taskSupport\":\"forbidden\"}}]},\"jsonrpc\":\"2.0\",\"id\":2}\n\n"
+  }
+ ],
+ "server_info": {
+  "name": "exa-search-server",
+  "title": "Exa",
+  "version": "3.2.1",
+  "websiteUrl": "https://exa.ai",
+  "icons": [
+   {
+    "src": "https://exa.ai/images/favicon-32x32.png",
+    "mimeType": "image/png",
+    "sizes": [
+     "32x32"
+    ]
+   }
+  ]
+ },
+ "instructions": null,
+ "tools": [
+  {
+   "name": "web_search_exa",
+   "description": "Search the web for any topic and get clean, ready-to-use content.\n\n      Best for: Finding current information, news, facts, people, companies, or answering questions about any topic.\n      Returns: Clean text content from top search results.\n\n      Query tips:\n      describe the ideal page, not keywords. \"blog post comparing React and Vue performance\" not \"React vs Vue\".\n      Use category:people / category:company to search through Linkedin profiles / companies respectively.\n      If highlights are insufficient, follow up with web_fetch_exa on the best URLs.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "query": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Natural language search query. Should be a semantically rich description of the ideal page, not just keywords. Optionally include category:<type> (company, people) to focus results — e.g. 'category:people John Doe software engineer'."
+     },
+     "numResults": {
+      "type": "number",
+      "description": "Number of search results to return (default: 10)."
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+   },
+   "annotations": {
+    "readOnlyHint": true,
+    "destructiveHint": false,
+    "openWorldHint": false,
+    "idempotentHint": true
+   },
+   "execution": {
+    "taskSupport": "forbidden"
+   }
+  },
+  {
+   "name": "web_fetch_exa",
+   "description": "Read a webpage's full content as clean markdown. Use after web_search_exa when highlights are insufficient or to read any URL.\n\nBest for: Extracting full content from known URLs. Batch multiple URLs in one call.\nReturns: Clean text content and metadata from the page(s).",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "urls": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      },
+      "description": "URLs to read. Batch multiple URLs in one call."
+     },
+     "maxCharacters": {
+      "type": "number",
+      "minimum": 1,
+      "description": "Maximum characters to extract per page (default: 3000)"
+     }
+    },
+    "required": [
+     "urls"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+   },
+   "annotations": {
+    "readOnlyHint": true,
+    "destructiveHint": false,
+    "openWorldHint": false,
+    "idempotentHint": true
+   },
+   "execution": {
+    "taskSupport": "forbidden"
+   }
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+Before I loaded it, long_tool was **only listed as a deferred name**, with no schema or description. I loaded it with `ToolSearch` (`select:mcp__lengthprobe__long_tool`).
+
+These are the markers I can actually see in its description:
+
+```
+[T-01-3S88P]
+[T-02-OL1GG]
+[T-03-60ZVQ]
+```
+
+**How the description ends:** it's cut off early. Right after `[T-03-60ZVQ]` it reads `This paragraph is neutral filler te… [truncated]`. The "… [truncated]" is part of the text I received, so the rest of the description, and any markers after T-03, never reached me. I haven't guessed any of them.
+
+The only parameter in the schema is `q` (string). I didn't call `long_tool` or `short_tool`.

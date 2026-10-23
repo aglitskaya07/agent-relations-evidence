@@ -1,0 +1,29 @@
+{
+ "url": "https://test.alpic.ai/",
+ "capture_utc": "2026-07-29T12:37:16.320324+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": null,
+   "error": "curl: (6) Could not resolve host: test.alpic.ai"
+  }
+ ]
+}

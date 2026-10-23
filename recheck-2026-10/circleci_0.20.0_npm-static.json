@@ -1,0 +1,488 @@
+{
+ "unit_source": "npm @circleci/mcp-server-circleci@0.20.0",
+ "capture_utc": "2026-10-06T09:53:39.565067+00:00",
+ "method": "static source read (no code executed)",
+ "auth": "none",
+ "server_info": {
+  "package": "@circleci/mcp-server-circleci",
+  "version": "0.20.0"
+ },
+ "tarball": "https://registry.npmjs.org/@circleci/mcp-server-circleci/-/mcp-server-circleci-0.20.0.tgz",
+ "source_files_count": 90,
+ "source_files": [
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/index.js",
+   "sha256": "8d2ff93fd00330c78a9f7f7a87005a7e98aba2be8bd4dc85167d84e5bc9cec97"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/circleci-tools.js",
+   "sha256": "bfd98ab4d9078c9f44a91308a2d876d689a5396d24cfef6df8e3211580a546f7"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/clients/client.js",
+   "sha256": "03435c1edee4f81f4b963a214f32379a49a41111528bc9ddee74a1ed1764a07e"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/clients/schemas.js",
+   "sha256": "0568fc290a7d27cd24bc43291251ae0139509e1e9dc244457c834490045a8f75"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/clients/circleci-private/index.js",
+   "sha256": "b443351e5a0380834bcc0356801812f67dc42a00b0c1dd8aeafd349ac3749b08"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/clients/circleci-private/me.js",
+   "sha256": "1b5308b63f324eaaaa10a6b212ec9b0003509f57e294e9b129152013276753f2"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/clients/circleci-private/jobsPrivate.js",
+   "sha256": "fa9dc677655491fa0a126ebb980c9d16bb1cb368e179f47d5bb5f620c928f140"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/clients/circleci/configValidate.js",
+   "sha256": "b0dc43c73976f046ab64bf3db367926802da072976ca1289ef02f1d21d845f9d"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/clients/circleci/deploys.js",
+   "sha256": "2532ac4197199a772cc38e789e3feaabd099fd9a4183ec6a24f08f303baac2c9"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/clients/circleci/jobsV1.js",
+   "sha256": "75d953c5dd15c617b78235bbb915797c637bd806084081a6186458f9e23afe6f"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/clients/circleci/index.js",
+   "sha256": "02351ab4270baf04b37af56c51a8618aca68a789cc28ee8f9ddafdd359332438"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/clients/circleci/httpClient.js",
+   "sha256": "9efc30778c4387e6eb14475a7fc9424a1ed8572abcaf50f675d2b60d665fe592"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/clients/circleci/insights.js",
+   "sha256": "504ea774a2dabd201cc046506127cd17d705dbb40907b9c736949dcfc4f3bfb4"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/clients/circleci/tests.js",
+   "sha256": "a1d0ae2c5ad9ebf4515858ee271032a14c4dfca4e341e2c62ef231362a11b4a4"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/clients/circleci/projects.js",
+   "sha256": "44f94aa2f6b48e3a53a4a69097684654b97dbe0bccb284dbee7c9146b0c7ab5c"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/clients/circleci/pipelines.js",
+   "sha256": "a4f9494c4426f9f9414b825e4277ea45db6823453a02e0f018be2e96bfbb4f48"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/clients/circleci/usage.js",
+   "sha256": "7d0c4ee652602786842a3391b491e61eb3178104729d042568596aa0ea9c1c65"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/clients/circleci/jobs.js",
+   "sha256": "9baf630b2076f8b3d18ede6cc427b79ef54cd05c00c83b2304355b7c671bf907"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/clients/circleci/workflows.js",
+   "sha256": "095b8d854a21082d52e0c3db26a439065a6a4f457f833c0af298676c80e25269"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/rerunWorkflow/handler.js",
+   "sha256": "406f12d945022dfe1000e627fd6eee10af2e7994246f314114bc505d370433ec"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/rerunWorkflow/tool.js",
+   "sha256": "13320213ad3fff6148917265785989f8280b9fe4d228b2b723e279cac1627d99"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/rerunWorkflow/inputSchema.js",
+   "sha256": "95508d75a2e88cb4a66b2f68a99ff65317e9e42e46baee43a8ec5f08f5ff2d82"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/runPipeline/handler.js",
+   "sha256": "e09f980a5761dec1fa75ec5710340a94c09b3444addc0d1c40bc48050ebbfc08"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/runPipeline/tool.js",
+   "sha256": "e0a3c5c4c61c170430571aed85ff42171449d94bb2ba36b9667ba40e290dca70"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/runPipeline/inputSchema.js",
+   "sha256": "834bd824921c857c86310b22b5f4cb76199e1a77f8619ea360a03a47943268a4"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/findUnderusedResourceClasses/handler.js",
+   "sha256": "da4f6c669cb443282f9275db1e3958b384bda13897e964bedb97884ab49d5d65"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/findUnderusedResourceClasses/tool.js",
+   "sha256": "c23697355fddc59a24c0b2599ad7c9b50d99a473612079b0cc0fd21de4c208b2"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/findUnderusedResourceClasses/inputSchema.js",
+   "sha256": "dcf0c3f940e8830aeb7524d344a50ba0eb9c6b96f754572aefa47a026493447a"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/getLatestPipelineStatus/handler.js",
+   "sha256": "64c13fb735ba0a1b53d3b51371b16a067f3f9c35a75250c2c5dbeecab00087d5"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/getLatestPipelineStatus/tool.js",
+   "sha256": "54e2e23196bf9e7750d1edbcb4676726e5b6865f9f6b335105cbb579ce513519"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/getLatestPipelineStatus/inputSchema.js",
+   "sha256": "247c55ffaaaf68f8acef0fb4e0acf97c9576761012d1a96eb418c98e1221c884"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/getBuildFailureLogs/handler.js",
+   "sha256": "d082d95a71608cc493aa8ebefe984295eb02f3d138a3c4358133c353c63573c8"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/getBuildFailureLogs/tool.js",
+   "sha256": "5b0c16e34260557db4b4cf79f96134f16b3fd30c25e81386be901be0e704cbcb"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/getBuildFailureLogs/inputSchema.js",
+   "sha256": "8dc4000f25e685f8c3e874bfb9bde58855084c04704472447fcb941b00251d93"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/downloadUsageApiData/handler.js",
+   "sha256": "13a05a1830ce27ec401d1d6d2a533b33b6979c441f33f04fea68dc2d484416e3"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/downloadUsageApiData/tool.js",
+   "sha256": "0609c79b937a49610f4d07eac25e2e62f30ae55c4b3e5f037360d640bcd78816"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/downloadUsageApiData/inputSchema.js",
+   "sha256": "b109c8ccbe4899b2659797d034530f64a57d20476af701a876a9611f05d0f9eb"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/listComponentVersions/handler.js",
+   "sha256": "f783635b78c9640c5a72c29346fc57a4c8f333891fe6f69fbe6ba7cf05411600"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/listComponentVersions/tool.js",
+   "sha256": "1e8c0317e141c66c00370359d3b1c1e2ca10879441d27e295072d3a66ccd4f90"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/listComponentVersions/inputSchema.js",
+   "sha256": "a55a6ed90384380af81f26d48333d3857a8bbae0e8a8e3a9f38ea98a18ef8847"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/shared/constants.js",
+   "sha256": "80ca8d617673f10dc753f4669d6a0a79da6daa0793c42bf12dcaeddbda0004e4"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/getJobTestResults/handler.js",
+   "sha256": "7cac1dfd33221f822304dc5b8872ebf31a1b9456a44e31e73af705ba82717a59"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/getJobTestResults/tool.js",
+   "sha256": "8daa7e36f1d36e3d2b0a5332a6452d6b555ac3e64dc18b2e2b9ef2ea95d0fa5a"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/getJobTestResults/inputSchema.js",
+   "sha256": "80435cb179b30201755ce28506b7bda047cc1aae3cb09d27aaa877e61aac15e2"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/listArtifacts/handler.js",
+   "sha256": "ba30b150d51f658ff225cf3f09c171200d70f99820628ac3f6b99bf1737ef825"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/listArtifacts/tool.js",
+   "sha256": "d7931a9f133043c4954b03ec7375056b9bca64acb3e58d8cd1106f9943e1977f"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/listArtifacts/inputSchema.js",
+   "sha256": "7774f44118f1f15b825468a2f742a9356c6e42a4296cb4aa3fabfa6fce44dd15"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/runRollbackPipeline/handler.js",
+   "sha256": "6c3429a00fc3956006d9deb3ace19326761d6bbe3677bffce1a9db5109112151"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/runRollbackPipeline/tool.js",
+   "sha256": "b77cace40b8a984965937ad07f804696653451702b85c0b0c8fc619145530792"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/runRollbackPipeline/inputSchema.js",
+   "sha256": "2e1e1fc81dafe7a58b06555f950dbe91c834b20ab5da7ac3784f3f5e90438520"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/listFollowedProjects/handler.js",
+   "sha256": "26447ea47b61d912edabd85d30e7b13f1559007bddce537b26c035bc9ee4e4f8"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/listFollowedProjects/tool.js",
+   "sha256": "334596aa08be514c7e8dbe085268ad316280e1e456b710623bfdbf9f42f97553"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/listFollowedProjects/inputSchema.js",
+   "sha256": "109b5145072aef0e78652728c75a6bb525793b22810b72d8fc9b8441d4803cf4"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/configHelper/handler.js",
+   "sha256": "97a9a05bb50686cc2f025a58181b05fe18ae95089dfc6e64cb46d18105ec605c"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/configHelper/tool.js",
+   "sha256": "35061fbd42956f6a10d22fead2918ca228d88418fbc62da60ac857dbb582ce6b"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/configHelper/inputSchema.js",
+   "sha256": "34fb01923a094290b43777eb4f35acac9d5e48f795b67cdcd9b05336d25479ae"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/getFlakyTests/handler.js",
+   "sha256": "2c0e773cc0fc829f4ee8948d3119863e466d357a8bd5472aa649cdbeb5920734"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/getFlakyTests/tool.js",
+   "sha256": "d105a22c15b6880112200638a62380babb73bc003648700adaaeedfec78b8791"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/tools/getFlakyTests/inputSchema.js",
+   "sha256": "144be05b9da96b3538fb7391faaeecfabc548286d8466d475a28ec7b64903d0a"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/transports/unified.js",
+   "sha256": "560f9a8a2edad27f3b328fb0bafb26f46866910f4036f38e5d179225e3ee247b"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/transports/stdio.js",
+   "sha256": "a7cdd9dc1c1dc7cf4bd601e8c702b43514e0e865e709376e1a89ab3d7b6f61ad"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/deprecation.js",
+   "sha256": "217d92d50234f34fc29fb8c1b1a535a3abfcd61fde7987c79385d78fc41ad531"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/mcpResponse.js",
+   "sha256": "47e0679d45c4623ce7486779d60d1793c81e0fb0582b00c6b9265b1924be82c7"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/outputTextTruncated.js",
+   "sha256": "064077689a0f408f422f61b955e22d173e267aeee8be18215022359e5655b14a"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/getWorkflowIdFromURL.js",
+   "sha256": "70e475b0a2783b2ac3f85ba4c5b84ac27358abe14dbeb54c0092bf725f23075e"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/mcpErrorOutput.js",
+   "sha256": "e71f774c26ba099d133b076416ae265c10b174d39c2a71fe4057a21348ea7e53"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/file-output/safePaths.js",
+   "sha256": "e418738d7f8cd923fb9a2bb961996b1eeb5b26cc04542bcb4f68e2659051dce5"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/auth/requestContext.js",
+   "sha256": "7ac3c8a80c871a2a0934bab0b9bd49101cbd079a3e8163ab3e14aec80a9dffa2"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/auth/originValidation.js",
+   "sha256": "deef3b2e5efcd2e083f5b5aefd5a28fba885756f497b44ca2c135dfee87676bf"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/auth/resolveToken.js",
+   "sha256": "17f0b6b8a2251580c0cce7ab03d7c7f3e09ad81b62f3e5464208555fb4b87023"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/auth/extractToken.js",
+   "sha256": "2ca76dbf8f673e89af6a2589cb251cd48a3ebfa1756c1dce3bf10c69e5cb6c0c"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/auth/networkExposure.js",
+   "sha256": "964cea61bc4df27cca4c3b5579f5b3a0add0e5d0d330a151675fdef2369ebeee"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/pipeline-job-tests/getJobTests.js",
+   "sha256": "53ff339dabc43a9171ee6647eec020127634ababc9647f0b9738e1ee4f8f9160"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/pipeline-job-tests/formatJobTests.js",
+   "sha256": "c4240b6d2861b2ea02ec9ac11f893b3d2c8d51944bc4b54c5689ce248d96034c"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/pipeline-job-logs/getJobLogs.js",
+   "sha256": "1ad2c8d17f86c4e421a8744238bf97a00cc3e10bc5e4deddb5acce5e6241fef2"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/pipeline-job-logs/getPipelineJobLogs.js",
+   "sha256": "fa1ab38fc0f8ccec46327fbdb0437dcd2c2b50c0e2abe3e1f8306da55667f877"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/flaky-tests/getFlakyTests.js",
+   "sha256": "08e2213b0a7313db988ce7afd9b9af87240b1bd14679b47a77c2c649f0fe12ec"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/project-detection/index.js",
+   "sha256": "4543aec388e1d332b9f978d5816784a71004dd378c490a8d19ebd7bea2268324"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/project-detection/vcsTool.js",
+   "sha256": "f26fb6bc004eee977d58cdc721b42071b1b759a584fdb5be9d39f252268f26d9"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/usage-api/getUsageApiData.js",
+   "sha256": "5e44dccafa59b7d5f35a9be0f4a7ecc19a1c6d3aa4e2a609649c9c7f23fec4b8"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/usage-api/capEndDate.js",
+   "sha256": "0cf88d985266c1567e14cb28cf80cf91fd1bb56db041e2fd77cba7631f7456ce"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/usage-api/parseDateTimeString.js",
+   "sha256": "d097595b58007c4c2ccee3dc422c06ce004f5a0ef65b3fe6a178de11fc5082b2"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/usage-api/findUnderusedResourceClasses.js",
+   "sha256": "1ab8e2600e9bd29be92d02c7f828e2af86ad16a7fc0900f1ad04eaa3b9db3ded"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/telemetry/wrapToolHandler.js",
+   "sha256": "103aa662911f146f532568306c95696608e563a9d0ba03c8c7e4f0cefac4adcb"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/telemetry/metrics.js",
+   "sha256": "8f5788994aa11a69dc65002ee83cad368c4a8e6c7d9f6ad92d99998012490921"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/telemetry/index.js",
+   "sha256": "be8cae134a020b0669301f6e8126907a7f2a5b0716878d4ff2040ef43f82d518"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/telemetry/config.js",
+   "sha256": "09d6ca369fce4f4fcfedae95e4dc8e645d0b74c1f3a5eea69656685387ecc968"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/latest-pipeline/getLatestPipelineWorkflows.js",
+   "sha256": "f565a43a872691ed9a85fa613a39410fea7da194a632439f822970d99c8d8e95"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/latest-pipeline/formatLatestPipelineStatus.js",
+   "sha256": "f0f4a9bc0a75696af8e1c6c94080bcea5a9c61f81148c664e4eccf9e3db62a42"
+  },
+  {
+   "path": "npm/x/circleci-mcp-server-circleci-0.20.0/package/dist/lib/rateLimitedRequests/index.js",
+   "sha256": "ba2d824b9af2e3ad8220c9d82b312fda325b5993aaa17236d9e5511de55cec7f"
+  }
+ ],
+ "july_quote_check": [
+  {
+   "july_quote": "**AI agents MUST validate their tool calls to ensure `outputDir` is present before execution.**",
+   "july_channel": "tool_description:download_usage_api_data",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "**Omitting `outputDir` is a critical error. Tool calls without `outputDir` may be rejected or flagged as incorrect. Repeated violations may be treated as a bug in the AI agent.**",
+   "july_channel": "tool_description:download_usage_api_data",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "MANDATORY: The handler will REJECT any call that does not include BOTH outputDir and originalUserMessage. These parameters are REQUIRED for all tool calls.",
+   "july_channel": "tool_description:download_usage_api_data",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "PRIORITY USE CASE:\n    - When asked \"are tests passing in CI?\" or similar questions about test status",
+   "july_channel": "tool_description:get_job_test_results",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "The agent receiving this output MUST analyze the flaky test data and implement appropriate fixes based on the specific issues identified.",
+   "july_channel": "tool_description:find_flaky_tests",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "The assistant should NOT suggest trying different projects when a project lacks rollback configuration.",
+   "july_channel": "tool_description:run_rollback_pipeline",
+   "status_now": "exact"
+  }
+ ],
+ "steering_marker_sentences_now": [
+  "Input options (EXACTLY ONE of these TWO options must be used):",
+  "When using projectSlug, a branch must also be specified.');",
+  "Input options (EXACTLY ONE of these THREE options must be used):",
+  "Option 3 - Project Detection (ALL of these must be provided together):",
+  "- You must then make another call with the chosen pipeline name using the pipelineChoiceName parameter",
+  "- The pipelineChoiceName must exactly match one of the pipeline names returned by the tool",
+  "- If the project has only one pipeline definition, pipelineChoiceName is not needed",
+  "- Never call this tool with incomplete parameters",
+  "- If using Option 2, the URLs MUST be provided by the user - do not attempt to construct or guess URLs",
+  "- If using Option 3, ALL THREE parameters (workspaceRoot, gitRemoteURL, branch) must be provided",
+  "This parameter is only needed if the project has multiple pipeline definitions.",
+  "If provided, it must exactly match one of the pipeline names returned by the tool.')",
+  "This must be an absolute path.",
+  "If you are given a relative path, you must resolve it to an absolute path before calling this tool.",
+  "Must be inside the current working directory, the user home directory, or a temp directory.",
+  "CRITICAL REQUIREMENTS:",
+  "When truncated, output will contain <MCPTruncationWarning> and you MUST acknowledge:",
+  "Only showing the most recent entries.\"",
+  "This tool is only available for CircleCI cloud users.');",
+  "The end date must be after or equal to the start date.');",
+  "⚠️ **MANDATORY OUTPUT DIRECTORY SELECTION FOR AI AGENTS:**",
+  "If the project root (workspace root) is available (e.g., via \\`workspaceRoot\\` or known repository context), you MUST pass it as the \\`outputDir\\` parameter.",
+  "If the project root is not available, you MUST use the user's Downloads folder (e.g., \\`~/Downloads\\` or \\`%USERPROFILE%\\\\Downloads\\`) as the \\`outputDir\\` parameter.",
+  "Only if neither is available, use the current working directory (\\`process.cwd()\\`).",
+  "Always make the output location explicit.**",
+  "- You MUST provide \\`outputDir\\` for every tool call.",
+  "- If the project root is available (e.g., via \\`workspaceRoot\\`, \\`outputDir\\`, or known repository context), always use it as the output directory for file outputs.",
+  "- Never place output files in a location that is hard to discover for the user.",
+  "- **Always double-check that \\`outputDir\\` is present in your tool call.**",
+  "- **Always double-check that \\`originalUserMessage\\` is present in your tool call.**",
+  "This ensures that downloaded usage data is always saved in a location that is relevant and easy for the user to find, and that the output is always copy-paste friendly for status checks, regardless of the environment in which the tool is run.",
+  "Always return all available values without categorizing them.",
+  "Either this or \\`projectID\\` must be provided.",
+  "Either this or \\`projectSlug\\` must be provided.",
+  "- Only when both \\`environmentID\\` and \\`componentID\\` are provided will it list the actual component versions.",
+  "- Either \\`projectSlug\\` or \\`projectID\\` must be provided; the tool will resolve the missing project information automatically.",
+  "- Always use the exact IDs returned by the tool in subsequent calls.",
+  "The LLM MUST NOT invoke other CircleCI tools until receiving clear instruction from the user about what to do next, even if the user selects an option.",
+  "\"Either projectSlug or projectID must be provided\",",
+  "When using this option, branch must also be provided.`;",
+  "- ALWAYS check for <MCPTruncationWarning> in the output",
+  "- When present, you MUST start your response with:",
+  "Only showing the most recent entries.",
+  "- Only proceed with test result analysis after acknowledging the truncation",
+  "'failure' - Show only failed tests",
+  "'success' - Show only successful tests",
+  "- When looking for failed tests, ALWAYS set filterByTestsResult to 'failure'",
+  "For simple test status checks (e.g., \"are tests passing in CI?\") or fixing failed tests, prefer Option 1 with a recent pipeline URL if available.",
+  "- If using Option 2, the URL MUST be provided by the user - do not attempt to construct or guess URLs",
+  "If \"failure\", only failed tests will be returned.",
+  "If \"success\", only successful tests will be returned.",
+  "return mcpErrorOutput('Either projectSlug or projectID must be provided');",
+  "You may need to configure a rollback pipeline first using https://circleci.com/docs/deploy/rollback-a-project-using-the-rollback-pipeline/ or you can trigger a rollback by workflow rerun.',",
+  "If there is only one version, proceed automatically and do not ask the user to select a version.",
+  "- Never attempt to guess or construct project slugs or URLs; always use values provided by the user or from \\`listFollowedProjects\\`.",
+  "- This tool is designed to work only with the specific project provided by the user.",
+  "- Each project must have its own rollback pipeline configuration to be eligible for rollback operations.",
+  "- When a project cannot be rolled back, provide only the configuration guidance for THAT specific project.",
+  "The LLM MUST NOT invoke any other CircleCI tools until receiving a clear instruction from the user about what to do next, even if the user selects a project.",
+  "The agent receiving this output MUST analyze the flaky test data and implement appropriate fixes based on the specific issues identified.",
+  "- Only proceed with log analysis after acknowledging the truncation",
+  "- If using Option 3, BOTH parameters (workspaceRoot, gitRemoteURL) must be provided",
+  "Validates Host (always required)",
+  "Its only job is to stop a browser being aimed at a",
+  "acknowledge only",
+  "Never write this to stdout:",
+  "- Showing only most recent entries",
+  "it holds even when the server",
+  "throw new UnsafePathError(`${label} must be a non-empty string.`);",
+  "throw new UnsafePathError(`${label} must not contain null bytes.`);",
+  "even if a filename component slips",
+  "Only consulted by the remote transport.",
+  "Listening on loopback (${bindHost}), so only processes on this host can reach /mcp — but any of them can act with the server's CIRCLECI_TOKEN without presenting a credential.',",
+  "The Host/Origin check does not prevent this — it only mitigates DNS rebinding by browsers, and a non-browser client can send any Host it likes.",
+  "If this port really is only reachable from a trusted network, set ${ACK_ENV_VAR}=true to accept the risk.',",
+  "throw new Error('Either jobNumber, pipelineNumber or branch must be provided');",
+  "this is returned to the client and must",
+  "Otherwise a rejected outputDir is only discovered on the",
+  "const first = records[0];",
+  "if (!first || !requiredCols.every((col) => col in first)) {"
+ ]
+}

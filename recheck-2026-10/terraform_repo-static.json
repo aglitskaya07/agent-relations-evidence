@@ -1,0 +1,1203 @@
+{
+ "unit_source": "hashicorp/terraform-mcp-server",
+ "capture_utc": "2026-10-06T09:53:43.699743+00:00",
+ "method": "static source read (no code executed)",
+ "auth": "none",
+ "server_info": {
+  "repo": "hashicorp/terraform-mcp-server",
+  "commit": "1d9a2e03a933e0fd00caffa1d4b8c18f9cec0a81 2026-10-02T11:24:47-05:00"
+ },
+ "source_files_count": 229,
+ "source_files": [
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/instructions/instructions.go",
+   "sha256": "9e9a333d5f15255624e72c3c931ffb698cd14581fde29103c20e43de7c8ff109"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/instructions/instructions.md",
+   "sha256": "6fb372191aa038afc2a9b1508100b96316ff2fba689edaa5319f0fdd7cfcf4f4"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/factories_test.go",
+   "sha256": "0467db0e2f554911592ebaa3250ad590bbe27549eddcb82de46b72e2bb41776a"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/dynamic_tool.go",
+   "sha256": "56f6c32dc6285e13d6b16ada747b804f95442ec6d7c2d1cb71ef8277166a4f61"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/factories.go",
+   "sha256": "acae0cde20074e368e349ad0f068c53debb01f636322d456242d111fe60a6a0d"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tools.go",
+   "sha256": "a39de984b6678f0e82ca996aa0ba6601daa212dbc014abe5292dd35288c04bac"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/dynamic_tool_test.go",
+   "sha256": "c952db2079530e742cc9c8fae873182f43b088da2acaabf21aeef1dbc2dd50f8"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/grant_team_access.go",
+   "sha256": "b08d27d38a629b74a21b9454c8ede620e58394a3bb20cd10b266b63041f99dae"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/list_state_versions.go",
+   "sha256": "8e26a33db3ff722c3f410963ed9d3b8c2e7ab51e89967b2ae571730e570565d0"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_state_version.go",
+   "sha256": "420826bb663afb173cbc871f1039c74b6768b210c2bb0c7262a90722e75fcb53"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_token_permissions.go",
+   "sha256": "60e334ff2f43226010a682562360d68a1a84459ac1ffb00c6e8c47d96f4651fe"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_sentinel_mock.go",
+   "sha256": "484f962698284b552fde75e3458118025b26926144c8b87f0fc93fcddd7cda1b"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/create_no_code_workspace_test.go",
+   "sha256": "3b68e0c9f649438e0e872dd956849af176cfda93972c9b5d568923c57605623b"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/search_private_modules.go",
+   "sha256": "bdb67f86f357324faea77300b8638f5df51c7906fef0525da8c6ac09299bf1b4"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/workspace_tags.go",
+   "sha256": "bec5fe1d75718b7454ca2c83f3df7338e8055f419d6a652f51b73f6c20605d53"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_apply_details_test.go",
+   "sha256": "c831d8afc09bba00a44c52289c7630810e8f0465379da0f62f72771380120311"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/list_stacks_test.go",
+   "sha256": "4b8de169462162298fe9c25097be634aa38e9635eb5af7111f8052646c8f656a"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/search_private_providers.go",
+   "sha256": "630411b538c64392013375ed2524c5408d17fb71788d4d1f0a08cb025328cd6f"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_workspace_details_test.go",
+   "sha256": "8b69be840d0f7d3aacc797c7bfff2cefce5b38932add734950cc6faf981ce81c"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_private_module_details.go",
+   "sha256": "9f080a89fe0abcfbad96c2f49c83f7ae5255aacda9b866ec04a0224d000643fb"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_team_test.go",
+   "sha256": "b1bc6ca36f9335d02c64a62137b7096fb20bf866110b1100fbf4a8656d313a45"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_stack_details_test.go",
+   "sha256": "7bca8c0855fe04e1eb8ce5717c34cc5a3ee052b63b5b6f61d28c8ee2dd36f0c5"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_plan_json_output_test.go",
+   "sha256": "698a84e77513290199a676fea2cbc306e1847e9e0a4e2e56ce12f768301cfbb1"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/grant_team_access_test.go",
+   "sha256": "4adbb489d67f66ea0ef010c387e03c366931d60ae9bfe227b933747b93f0aff3"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_run_comments.go",
+   "sha256": "5b7e440b13e6be491248080d78e79b14de6b33c41058fc27c19925a6c4200a7d"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/delete_team_test.go",
+   "sha256": "0c59c64a3eca976693f2c2f28863ca0b8663d8ce4cf13a2a06636b0eaee42e08"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/list_workspaces.go",
+   "sha256": "25cc1915d1ae6b5d4cee83a06dd05b05f7aadebfff36c205f88a1b9723e7215b"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/list_runs.go",
+   "sha256": "9adc938e2976ba815afa345f26f4f11e8f234bd6b4dee3d9dae6020bbb9dd9ad"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/action_run.go",
+   "sha256": "ce6f07776a46123d4a2d0c56f4d2dd3544ea2f37bab2e4a4e9a0316fe3ed203b"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/workspace_variables_test.go",
+   "sha256": "40bc5fc64503ff816a24731f8fb4fcd5d36832c19ce420abbef1dec5e6688a70"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_project_test.go",
+   "sha256": "4d18121883d455fef4f983062c1de75e2686d3dc0c19f2946006b3f267dddd3c"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_private_provider_details.go",
+   "sha256": "013c2760ec4642f98d3b62bbf9f2bb397a4cea5d562d797066cd347cafad2840"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/create_team.go",
+   "sha256": "d4b9e0f318429538a2daa9ab3385831bd7230aedfbed60ae98c77ed72b10eaa2"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/create_no_code_workspace.go",
+   "sha256": "9799a5a577e5db38fbb1193e5cd64b9aafab6a7dbe4a68a21ba19a3ef4c8dcb5"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/update_workspace_test.go",
+   "sha256": "38d4bfd71bcbaeb384b5e1e0e81ab694b76ee5d457ce8fbea7d6c43d32e54556"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/variable_sets.go",
+   "sha256": "16f79453ba54a847e26ebfcbc6b12d30246f27c593c6a51ab259e9e19f21446e"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_project.go",
+   "sha256": "2298a37b21ea4923703c54aaaa2f6f2aefddc0b304a4229010022dfa313ae184"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/delete_workspace_safely.go",
+   "sha256": "47e2cac8aad8d421f175f90b69cb603dc234910f4ede05ae5e6bfaeeb28d45e9"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/variable_sets_test.go",
+   "sha256": "a8797dd34f16251fb270e306d99b21f4a867924b3b712bbf6586e55dda4e8861"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/delete_project_test.go",
+   "sha256": "9670fe876f90b8abb035f0ea68db8ad747796373c21664dff520f0648763cef8"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/add_team_member.go",
+   "sha256": "562106e546cbf174b189327b6d69ae0b2f135a9318f8cda20f8e6563f8e8262b"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/list_stacks.go",
+   "sha256": "44b22a174e0f62ec4351265933a58a117dc70fd0fac7a0214075fd2b740b9586"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/list_terraform_orgs.go",
+   "sha256": "80300604c1f7e1e51c1412cd6060c06c2d9b238543586f47685b4e888c58c238"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/create_project_test.go",
+   "sha256": "8f57eb7f970d10f54d7724d545c7f85389d11448373e60c75506f7d16a4fd4d7"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_apply_details.go",
+   "sha256": "a47f9e50f59727a945d463dc4ccdbbc49ff1766574c6c1ce95dc6b52b47762ef"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/create_run.go",
+   "sha256": "37d296287d1748cfabcf733f1ae58eb041fb4c14373c0779f242da9ae69b4173"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_run_details.go",
+   "sha256": "0e7a4c632f827b75a6bc30d403e4047275bf45f534bd4b5be9302d2025566d20"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_plan_details.go",
+   "sha256": "abc9f766de34fbb0fe95348315b83e393de54dbeed8b814e8fb9543f7e709a9d"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/policy_sets.go",
+   "sha256": "82c246462fd52f89f01ac8ec2356578c099bbf6f8092a9456446890c7379232a"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/list_terraform_projects.go",
+   "sha256": "81c1436b0fbf97e7530db88653c1ec3acd1a602e552b059ac8e25c5418deb9a0"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_apply_logs_test.go",
+   "sha256": "e30c1c5a386ef82708d2a0882f3d3f8e62c07ace4085e5d73c507f2f791a9c95"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_plan_details_test.go",
+   "sha256": "b6c84fd4ba582b4238e2c8176073b11662c36cf607f718358971c6017d341111"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/list_state_versions_test.go",
+   "sha256": "6d26bfa52c03a9666a568f6783d76264a736c14be0776d084cb8934348d60b56"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/list_teams_test.go",
+   "sha256": "6a58e9b32f4d26dfad896ac4f5074750b666ace551d0cb58f49eedfda40d6c7c"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_run_comments_test.go",
+   "sha256": "7b18e150bc888fd531cce3abd88167412fbf2ec78ef911b95813a0f987cdd60a"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/list_teams.go",
+   "sha256": "256110a2d81db8b492c020cca0263d23f43775622a6dd10cae1be7094ee92070"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_plan_logs.go",
+   "sha256": "db0a5577a15d06a286a062de0fa66204f0de39c782b3c298b609fe32989558aa"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/add_team_member_test.go",
+   "sha256": "ec04c574448fa8b2ba4e910c1c50bd1ec03c566972d1736f4d6ea7e7d486ae09"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/whoami.go",
+   "sha256": "8e52f149bc5678d7fb822ab0158c5e06aa92098d6b366206c6e14b1b8f6bd90a"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_sentinel_mock_test.go",
+   "sha256": "0dc2a0685f6d532e102ecdf78635fc2e4fc90cf8bf661fe155fddbac346f281f"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/list_workspaces_test.go",
+   "sha256": "f0eeeb45c60777e04647921a0a92fdee654b0cc0982a547cf0f157f5981a18e4"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_plan_logs_test.go",
+   "sha256": "0e8894162bde57570d904a6f4775b9fd6a6a7f0d388ac458c16d57956c8db735"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/delete_workspace_safely_test.go",
+   "sha256": "b268b405f3c3dbd0b9a41d3fb5db6abce87578beb4df86ea16c5e0844e4f2833"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/workspace_variables.go",
+   "sha256": "8378cf9a11238a8912b477e76da1797d48b172743383e34ce3df9bde6e65e239"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/descriptions.go",
+   "sha256": "3a6c8a0ec26ab98e9a5f3f1ee4574819f72de7f4367995c273459438a75b7210"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_team.go",
+   "sha256": "ac9c82cc02bcd94d143b2abf1ae613c830057d89347f2eb823a23bc4473378c0"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_state_version_test.go",
+   "sha256": "db013e403fa4a33b3eecd649141a191b32aae1816f3432cbaf11f6e93c412b0e"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/create_team_test.go",
+   "sha256": "14b9ea2b08a02e70bcf39116da8461afec41f5c8bf177abbddb234a1f36a3415"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_apply_logs.go",
+   "sha256": "d4719598ce23e4a8956cc281e252ce60a161d5e5314d8c3e16784732b56b7591"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/strings.go",
+   "sha256": "9eb4265d3c46a9bcbc9e228c2eb47de18b52bd72eb85f04564f4473d0fe61149"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/update_workspace.go",
+   "sha256": "f45b1c0ef29bc7f8ed04afcaf144868ad5cc5039d94116292b98c8d3026148ae"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/delete_team.go",
+   "sha256": "07f81933cd309f6509ce69509cb51584695310261e68d60f2c939f9afbb5f79c"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/create_project.go",
+   "sha256": "4100e453cfe07994917f9b2bc9a71359f0d2e609cd6d8c7900269e90dea331e6"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/workspace_tags_test.go",
+   "sha256": "5b1823faa8a396c4858e59419cfe5b3a4b78e4eea22b7b9d74f7b64491113eae"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/delete_project.go",
+   "sha256": "1d86aace251232d30c426405bbe74ad6dceb9496a093a7fcdc32e889737dcc4e"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/create_run_test.go",
+   "sha256": "c944536652eecdedea460b36f24d5ae3380199460f71736490354fc24ab371d2"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/policy_sets_test.go",
+   "sha256": "0a294d145403a155fa0d4d757ae00fc4855790848d4800bbac56c51641befffd"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/force_unlock_workspace.go",
+   "sha256": "f9cab4bf09c5cbe67d5136fef42dc56f3900b74002e0bfd889ddb6e17089b29d"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_plan_json_output.go",
+   "sha256": "1ac1c2e047e117e9f81bda4c5e91b3e4f8ed19b6f128f64f923f5c8f0a1f2eed"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_workspace_details.go",
+   "sha256": "bb1a524e71a7e7a7a422c5215ea14ab8a13419eb2a4518876e9b9932560c8821"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_stack_details.go",
+   "sha256": "6342da8850fa1e1272c338ac369dff0866cf79ac82893015e328cca69750b3e0"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/create_workspace_test.go",
+   "sha256": "a5bbfd2967da73f7ebf380f500b62294def6908306f78004b8a17fe555821a77"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/create_workspace.go",
+   "sha256": "e00f9d8b2fe296075e62cdfc6884d83c3a9d2bc753c45eb415191ce01b2dd3a2"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/get_token_permissions_test.go",
+   "sha256": "d706167b1ed28d4f6101a694648a9ba843011fcf84f549db3f34fa1e4f7f4001"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/errors.go",
+   "sha256": "88c8ead28ea3e1ce67040cc369d22ca1e4e385b3c29f95f5bce6d3ff71ba97a5"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/tfe/static/default-cli-run.md",
+   "sha256": "1f6f847ba01e5ab8aa5c1bbc33d1596f1c386888a6c3306f08a26082fea12567"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/registry/search_providers.go",
+   "sha256": "e2c252bef8efa0844dbebfb74504cd8b0b1fa891b8db8ffe88c3346f4b2e4dd0"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/registry/get_latest_provider_version.go",
+   "sha256": "f1e7c313abb79d4f0a065b13e327b557eae1c4b428754471c69d145815abe850"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/registry/get_provider_details.go",
+   "sha256": "26a61c21a334f87c5d6b8999c7d9ac1ede67416b749dccb86857033939454685"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/registry/get_latest_module_version.go",
+   "sha256": "dc40f68a050f8ac6842fd8eb2a57c9a3985d220d6feb1c9bacbce3f218cc4543"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/registry/get_module_details.go",
+   "sha256": "dc0eb0448c69c5113785ee2b3f774ad478195a39ceef75bd3bfb7156014c88b3"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/registry/search_modules.go",
+   "sha256": "f8b0f14942211effa7bfa5f33670ec59799e82a0a11e40900bdf7b469aaae363"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/registry/get_provider_capabilities.go",
+   "sha256": "42fe5c6e0b187dac51e856467e2991c42fc43e27f6280ba6b8f34f4acaef3b01"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/registry/get_policy_details.go",
+   "sha256": "d29d3a605186e4ede3fa822083ddc2b0f4911a73c267438b27fe2ba18202bdd8"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/registry/get_provider_capabilities_test.go",
+   "sha256": "f49803c5d26b3956d09dec7daa042bcad40d2ea717b6181821a9d5f8594381b2"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/registry/get_module_details_test.go",
+   "sha256": "90acb3b9c05cbdc5c87ed04782973c69a891c3665334623858e08e7495a1c8be"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/registry/search_policies.go",
+   "sha256": "cb29bb67b032b34b42510f3bd4201e4aee90070d643d341435d36decaec035ac"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/tools/registry/errors.go",
+   "sha256": "88c8ead28ea3e1ce67040cc369d22ca1e4e385b3c29f95f5bce6d3ff71ba97a5"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/instana/instana_test.go",
+   "sha256": "5a314abf99d89e3048bfb80a0df1311917704df1c2f32c9d349c4429c446eb4a"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/instana/instana.go",
+   "sha256": "18a407d18535996efe8a3d82efa4524336269991cad14d859d7c03326c271ef0"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/resources/resource_templates.go",
+   "sha256": "faf12efba2280726867f4126e4712027f4194ced4ee194778c4a46438354dc48"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/resources/resources.go",
+   "sha256": "4c20be4dbc69bf1f32560abd3d0db4538c5e6578f54abdb2841a9316707b0ad8"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/utils/utils_test.go",
+   "sha256": "adc409958d2c95317f2d56dbc3e69d6fbfb201cd6d3f5759d1b25c966a599e9b"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/utils/pagination_test.go",
+   "sha256": "0c520a38de965a50cba82ea2009cc4b74e904ba0ef8501559d75e26ce1c8c377"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/utils/utils.go",
+   "sha256": "862bb934300247f88a8035e7f37574b0832de7a4b7088060369d4e1152a82253"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/utils/pagination.go",
+   "sha256": "85529e29c70096481b0d8e54676dcb2457b43214998df70e68dcf3d513152d36"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/cli/flags_test.go",
+   "sha256": "9a7bd929a8ebef6006aa4b80de794f783babc3bdf555b9e16cea7461628f6fdc"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/cli/flags.go",
+   "sha256": "a8d52ed130731772b3dd5394b3798567f31a11e78d6c38030fa412fc5098ac7d"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/cli/commands.go",
+   "sha256": "c54640a3ab1ecf1d99b6bea47e9c6cf130ff29e5a300ed97cea9301a51f39fa0"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/cli/toolsets_conflict_test.go",
+   "sha256": "c5004aceb63d2b4371b2d3b534e30cea0e72d8527061dae43362f6c02c46a0ed"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-mark3labs/session_lifecycle_test.go",
+   "sha256": "890cc312218cd59fa09bc1f3899322d3d63e0a4ec5f21dfa21d1c0907c3ca8e4"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-mark3labs/server.go",
+   "sha256": "fa0734850cffc73264dc9a5bc2366718ceece23cede228e09f1216ffe10f6ce0"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-mark3labs/http_test.go",
+   "sha256": "fea1f9fbf10a0e29ce2c331569d9670f105672a629abe23748c8514340d011eb"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-mark3labs/metrics_test.go",
+   "sha256": "63dcf82d5f1707e8feb6a1d7dad0d02588f446b48115fbd19ebb57d97cbe6695"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-mark3labs/http.go",
+   "sha256": "9231df6400d893e8dddb443c60711881d93e17f4c578d458bdea09e02a6b90da"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-mark3labs/official_bridge.go",
+   "sha256": "359cc13bedaa564bf12479eb7e904a085c82e03b82588a057773fd88e1e352f6"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-mark3labs/stdio.go",
+   "sha256": "eacaf7577c1ba1e6cb10cfb847ead1072f96754ee395d8a0883184d2438f68fe"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/server.go",
+   "sha256": "6eb915b993df6855175e52fd7b0d222142b7176716d901780a0d1b12573c1d6a"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tools.go",
+   "sha256": "b4819e2c7bb1ac5e731c61b3605ec0fb838dbeb8162c1fb3fd70fa43d7926248"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/middleware/tool_logging_test.go",
+   "sha256": "bc5c272412ab7202d5fe9e6e92401b323fa1ee1833ca7bd0c4a4167da4096190"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/middleware/metrics.go",
+   "sha256": "80efc10a6fe447d8b7a1af56420cfd80f3bb82dadda9b943a3bc154a62617fab"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/middleware/org_allowlist_test.go",
+   "sha256": "242c8e1c972b81ad09cd9a913f5f089e70e8e8cf625efd55aff02b03c297badb"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/middleware/metrics_test.go",
+   "sha256": "b1adeb08f75c5f9603710bc6e873bf2dd773ef0dedc89b96e512240cb33faa3b"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/middleware/rate_limit.go",
+   "sha256": "1d28b023e2f4d1484285102bbbd97f01edd08fdfb7c561d640c78cddb78368d1"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/middleware/org_allowlist.go",
+   "sha256": "01f886634c90e3451b894a7e4a5e8cfe7f76c0987a60d6eba550e3702f99be3c"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/middleware/rate_limit_test.go",
+   "sha256": "060f342f2baf04221a9f1a6765a72daaca0a41e216ef0cd8e7e17f42b823316e"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/middleware/tool_logging.go",
+   "sha256": "1f4391d816cd3a34bad5b1f7d9ab6d262f1da7e52afd3dbbcc80d25745ed7682"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/mapping_test.go",
+   "sha256": "d28146f3e584e2411683d345c50b8b72a7ed16a2f3959cfed24dd905f9977cab"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/results.go",
+   "sha256": "41cda2148cd03cecb42d21cd73f1b559151d9f7c779df8e308de513ca8b8bcb7"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/variable_sets_attach_tool_test.go",
+   "sha256": "e0ff07fa0b17b90e6579ed52a0d0589571466f54fba0ba25d2d4802fbe06b97e"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/user_whoami_tool.go",
+   "sha256": "0afa220d258be7b2818da135768fb4e1cf52698380d96d306b4649e6637b76a3"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/teams_create_tool.go",
+   "sha256": "6833b95767164191e607b0fe4c7c415daff00533e3f1ef48b8f7a439e24889a8"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/teams_grant_access_tool_test.go",
+   "sha256": "bfa4a34fdee470c2f5ac02888e5f87b43d9d7f2d398530425efd6af1b5721b0b"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/variable_set_variables_create_tool.go",
+   "sha256": "309996d7590668f4e55edd984a98a5573e12fe48541d9e4e70f5b8d9dadf07f0"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/variable_set_variables_create_tool_test.go",
+   "sha256": "3cb09b593b2da26789b2cbde1892b81790701e05c309e967e07b17e4c8dc38d2"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/teams_add_member_tool_test.go",
+   "sha256": "e5a2ec80a2f97b9651a5c3254c3544d290db0167065c2c8054f25c2f20e29dbb"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/teams_get_tool.go",
+   "sha256": "091df99c4cc9e79de9358fcc8bca0cb0defd55df41b08c4ce816ce7fb7ba4f96"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/variable_sets_attach_tool.go",
+   "sha256": "b953fe529be1bc4d89abfb35fa354436166ca2cfee9e3ad38b532dd759dee1db"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/user_whoami_tool_test.go",
+   "sha256": "d6385f018d31c06c506b004fef5b6db93a22edda711229e5aafef7932e609508"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/workspaces_list_tool.go",
+   "sha256": "df7c0e478f4a6e2a6b874e0fc52de90c653329d9ae1474088d7231c8404970b2"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/stacks_list_tool.go",
+   "sha256": "fab8b194e2bd29920cddfd6869be8eeac5d0bd741ebe6f6dc732b94895741997"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/variable_sets_detach_tool.go",
+   "sha256": "394f3d54136421bb2614f41e6f00f8c2dad987873a10079c191b6ebf85bca020"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/workspaces_list_tool_test.go",
+   "sha256": "5f5439395b055a6adcc9930d7ee1dd11f002e1363e597a132a33114fc68557a0"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/pagination_test.go",
+   "sha256": "a82ee4e7e98c0bd6021592b9634d39d5a70b15b2c7e6caa8416d19257554abfa"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/variable_sets_detach_tool_test.go",
+   "sha256": "041bc45a2846dcfb681c8885dca0c76ccd274f06935f698f549420ade2fd857d"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/projects_create_tool.go",
+   "sha256": "ef159c876e443bde0fda10e4ae9bb3fc9f55b5b657cd8b7b65e858c08f49b6b5"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/stacks_get_tool_test.go",
+   "sha256": "197a0d53c9ddf75373c4368cf0b70590a6f6cdfa9cb4a90e7f099695cb5f5e4c"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/variable_sets_list_tool.go",
+   "sha256": "2efe40ed1c3525288bd7a9a5dd3b4e0706ce7651bef5816534be62ad087c3793"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/teams_create_tool_test.go",
+   "sha256": "a0c8d4197cbf45fa1386c5e847b019525e5d4a265b043b305f38c32d85343aee"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/projects_create_tool_test.go",
+   "sha256": "c548122196eab8e30f877e46e83444322274728dc5143c63a637ed63a39cbe07"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/user_get_token_permissions_tool.go",
+   "sha256": "ab41fc12c6921dd62b4134360942c36dda8bd7ce80513e1b14592b3b6428ca77"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/teams_list_tool.go",
+   "sha256": "7f5c199184208bdb1061702d3f9db3074a470f0ff955134b8ca98d51654febcc"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/teams_get_tool_test.go",
+   "sha256": "67ee3dca671d0fe9ef7a33b987689be43fee4b0e125f087142c393bb5ce4e7e1"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/teams_grant_access_tool.go",
+   "sha256": "596b6c8b8539ea8430df087bd6e91036b0fcd867d0aaed70d7dd0d282334d460"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/organizations_list_tool.go",
+   "sha256": "1b7d2e8cbc3fee53d6f46806a05920af14b76036e2ebcebf5ceaae3467f525bc"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/variable_set_variables_delete_tool.go",
+   "sha256": "e5a2853cac32c18c8dc7468daa0725353ef5e81dbf4555c2e05498534f98693c"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/projects_list_tool.go",
+   "sha256": "c03fadc40cfb6d6b045524eae26925c91e745b3fd635ef3377bb4fea50642796"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/teams_delete_tool.go",
+   "sha256": "73da9423126d62f7cfe69ec9f69866d8d5a87996949e8bad4cfde5d89ef51d8c"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/projects_list_tool_test.go",
+   "sha256": "95e23d338aefd2939b8606f563d6f663a8d84a44d6ef68021ecd4d7c5e5a8cc5"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/projects_get_tool_test.go",
+   "sha256": "3279f7a37b3d9521ec930d8e5d2b9df6e6ecdb9330239ebc8cd1d6668993c523"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/user_get_token_permissions_tool_test.go",
+   "sha256": "abebf55426c6fa6b66947c96c6ab138a02b041255991cc78020b3751c46a7a7f"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/variable_set_variables_delete_tool_test.go",
+   "sha256": "a5961fce5dfd6de16c392e4bb5655b1dddb35d9f0f04524b990b760220f604df"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/teams_add_member_tool.go",
+   "sha256": "119c671b93230c4256acea2eeb83a86e41e7f74f5551ba8b641a84bbede13a4b"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/teams_list_tool_test.go",
+   "sha256": "d986ec90794913a5daf8ce356942cfb9f60de1f2f4eb896c06a2dfdae1359a0f"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/variable_sets_list_tool_test.go",
+   "sha256": "f2582f9c32786e934989a94914b54a82e168d975e82d136c73731e28507a8f5c"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/variable_sets_create_tool_test.go",
+   "sha256": "20bf491863ce7ec7dcf055a89a2208b31a0560159cddcdb0a7758475e0064a2e"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/stacks_list_tool_test.go",
+   "sha256": "e84b2c1695d071f5cc3ba54f416835d760fff73966524b7fac424a41845393c9"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/projects_get_tool.go",
+   "sha256": "72f1b548efcc7b32e9567037d7abfe32d0c833e61dee701b7852ebd07c27812e"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/projects_delete_tool_test.go",
+   "sha256": "e47be09fcde9543f3d0b9e1fa898388f45c40aec91956c01875628ede2f08839"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/teams_delete_tool_test.go",
+   "sha256": "c94062cd2fe1b57d3beaa3d30d8305793d2b11ea84f6398bca5b76f3430771f4"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/organizations_list_tool_test.go",
+   "sha256": "7b929ed952ea9ff9e3798c7b17f5d0d236ad56c437534cf71f453a1e440cf4b9"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/stacks_get_tool.go",
+   "sha256": "566e8f8744bc50af9006bf91283dd7b4ef5770800fc4d55bac941718dfa9d227"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/projects_delete_tool.go",
+   "sha256": "6335f8d1bde32131385e7d77e9239b319040813d2f19a33904f1884a0a6f6513"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/pagination.go",
+   "sha256": "79388fbda59e36f4d3645430cfb2b9aa850e5e0bf012dd04c437b9a6c5467da8"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/tfe/variable_sets_create_tool.go",
+   "sha256": "32ce793a087ad10422290b7e1f9d67e8fcf694571a491469aef7c0fdda0cc73d"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/registry/search_providers.go",
+   "sha256": "b1472fdff6f9476ae9c4694fcc30ec5df96a10340341bb8fc427897b91c89dc1"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/registry/get_latest_provider_version.go",
+   "sha256": "a7594f4103d93fb03c99bc13c94c90414f403f65f5bb19c3fe0aba1f82cec0d3"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/registry/get_provider_details.go",
+   "sha256": "38bda2de6b955f5569943dd00ad58944fd45927d3efbc22a1f2fffe0f1a58126"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/registry/get_provider_details_test.go",
+   "sha256": "bb138025dbc810e4e5b4275d749acfcf57bc07086fb8e8ef2703764807926fcb"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/registry/get_provider_capabilities.go",
+   "sha256": "128e5d5e5bd33dfe66e24d9e33674ec5c406ede1e5743e9cec72c16e6238424d"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/registry/search_providers_test.go",
+   "sha256": "ed6fac77000a36b8c1ae2c91a10139fb7170127d2244e8b3e265a2ac48ac9f3a"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/registry/get_latest_provider_version_test.go",
+   "sha256": "c4ad62cf314839e132c67ac0208c1f6864727c8ef5606daf1e91142dcb603b56"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/tools/registry/get_provider_capabilities_test.go",
+   "sha256": "7df487d6ecf1ec00f926de4b107b32840afe587aa81e3e5ada2770b15e01f08a"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/client/http_client.go",
+   "sha256": "80417f8f560e2b155ea4626f08533e827bf332fdb1d6c2581a96792cc9ca4248"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/client/tfe_client_test.go",
+   "sha256": "b83a799d2c1681f4b273ff23575c1ea792a05e9d9167faf19d1d188594de4c76"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/client/session.go",
+   "sha256": "3fe45b5b20dd20b1a7776b83c7f8c91514e43b74f99ff915dffb2e2dff66c6ac"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/mcp-official/client/tfe_client.go",
+   "sha256": "48d3c16fcbbd5dd9126473dc885c8115b3bb4e548b658e93c284b2f2d90ba2f0"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/credentials.go",
+   "sha256": "ffc92e643e08c7f198add80519708d904ed9d8d42ebc3de88560d530b3f68fda"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/config.go",
+   "sha256": "48ff9b49326be1ee3ea71e3a6f6e78e1e7e0a547bb4f6a5a667e67cb5c470559"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/ratelimit_test.go",
+   "sha256": "098e34898a4419e5e01eb4542541ff4c801eab3ca228dcfee92e6da3e77bbd96"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/metrics.go",
+   "sha256": "f71b235d798791de6249fc5e182b70dc59765dbb4db1d4bd90318a9b230d9cca"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/tfe_client_test.go",
+   "sha256": "b1d1be534ceb22fa8e1c0e0c9115d06fa4b2e2aa8231e181427973e1c8f6cbd1"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/config_windows.go",
+   "sha256": "23618678ffa3ddc40530cb8072e3c904394d1525b16369ffb703e66dd729155a"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/tool_logging_middleware.go",
+   "sha256": "9a1c0746393beaa886bb51a9f8ba9b36dbe6eebd82506b0e3e60cee9a899238c"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/middleware_test.go",
+   "sha256": "66234c2ca393392e197b3f396c119afbe93f5917cc6812e511cd6cd23ab64808"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/org_allowlist_tool_middleware_test.go",
+   "sha256": "b56c36ba94c2424d80f336c24c8f8e3e2abf9c1957197c83c901909687a1fc86"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/types.go",
+   "sha256": "e382f8fea04b970bc83992a0c6f3166a4c65ec44056ff639d570c76a02825a34"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/metrics_test.go",
+   "sha256": "cc2e8fdcbb17649c0d5c7a7d691fafb9ad801e6392a1e2d7d026ee23fe6e4299"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/ratelimit.go",
+   "sha256": "c5fd6883750699608e7a7495913a2b9d8ae2bf1ddca871193428ff08b00c9da7"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/tool_logging_middleware_test.go",
+   "sha256": "e0649702d01919964ca99d7bafc00ecb1820b5df7eb0dd104785543d692e2978"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/session.go",
+   "sha256": "00fa562c305eea4834acc764307a4df847ddd9a0e68d7f3e71af5ca090f7171a"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/registry.go",
+   "sha256": "f8e981c0d62ed40b25681a8603873a33ce1c7452209967337dd9c4b3720205a7"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/config_unix.go",
+   "sha256": "abd513fb3729f705eff41c2e4d99a19f176ad961a20520b3ddb7531d487c92c1"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/registry_test.go",
+   "sha256": "acea1f3d6a37977c665eee084dc339b79354c1e4814dca9e4e80159d33fc88d2"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/common.go",
+   "sha256": "2d57b60c111af854f11cfad126f5ffba8f42103dd2654e71eae48378bed2ee37"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/tls.go",
+   "sha256": "2a47559e5b2d07e04891a4f2849723aa474c3a3a41c692330f180dec90286941"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/credentials_test.go",
+   "sha256": "011b0e432c4c1545a91e250b66c15835cf4306b4bcab427a7585346bb85445ae"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/middleware.go",
+   "sha256": "a23b7bd08729ea7063ecb116b4fedccaa959e311f7c4908beaf0aff05c7ac975"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/registry_client_test.go",
+   "sha256": "4f6f437663349f864795c192cf1d08e4847efb9bce7b7e0df30cd5a12411661d"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/tls_test.go",
+   "sha256": "29d444a227676322b63bcfc68f6d65d2e6034b89ea188a83e73fc8d44511ebde"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/org_allowlist_tool_middleware.go",
+   "sha256": "ba9f27938a9fda9774f6ab7d441f68012b99eba7ed044ce0cef58702097db3fc"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/registry_client.go",
+   "sha256": "7459eb8cd97eb3baefab104ea9b1fdac1fa745d5817cb23fd40d80fe30264592"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/client/tfe_client.go",
+   "sha256": "17d3fb61b9fbe4e0d9f0cdbf5c4e65d36227521689b995d53cd3faee0013c921"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/logging/logging.go",
+   "sha256": "967dfab1643d3036c6a51397b0299acf795f20a4b83814172bda5598b98bef3f"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/logging/logging_test.go",
+   "sha256": "439ec49769c0f367e266406a0fdd1785cfd77bcada5dc9aaa7516eeb6bc7e836"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/logging/logrus_adapter.go",
+   "sha256": "1f60f9f5e1b079cb028c37b71234d781e88dd8df105025ce89787ef5eae7a67c"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/logging/slog_adapter.go",
+   "sha256": "8da62919b026b5d1800bc2256255d852568a8100c5454d1e1d26302f6cbda789"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/toolsets/filter_test.go",
+   "sha256": "03c9089cc945e7239b5db05e3c17bad1eeaf8cec9bc7b06b6361514c2e1d4150"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/toolsets/toolsets.go",
+   "sha256": "a0f975033abe9a1ccbe16fa6ac22ac2fd8ccaed58cb032b00a03da05af3b1eae"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/toolsets/registry.go",
+   "sha256": "27c657218b4dae886c1125c71a203f726d7cb912efa61e652b823c443563ebc5"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/toolsets/filter.go",
+   "sha256": "46e8bc5ecfa5de933d7e3592d5b9099f7cdb69e7cd2247439bac45c4ecb1cac0"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/toolsets/toolsets_test.go",
+   "sha256": "b5e181d1e4b358669693e5a51575a7662861890f4a4c9d1949f414e86a85664c"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/toolsets/mapping.go",
+   "sha256": "dfb15bae375acf0a35598f5cc3f7fe642a6117a01197cc17562db592cd43d867"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/otelmetrics/otelmetrics.go",
+   "sha256": "69a4987c08da7f85518ce7744b621e9ad740fadbc75538a31d2bad02c3d08e69"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/pkg/otelmetrics/otelmetrics_test.go",
+   "sha256": "98efdf7fea638534dbab907f23f5a6e5d874330b584d5b83762fed31a39b07f7"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/cmd/loadtest/main.go",
+   "sha256": "7d8ce7c156bc0fc1a8ef692e929817ad6062b1e4ba75ace55e062c28eee288b4"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/cmd/terraform-mcp-server/main.go",
+   "sha256": "6d3756f29bb94b7786bccc4c878fd9e7d54bcaec470a2c970296586f0c10ed83"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/instructions/example-AGENTS.md",
+   "sha256": "483215d91aa67f842d3e2e4db324267e60b6f81c903a47f326fcfe87beb7264d"
+  },
+  {
+   "path": "gh/hashicorp_terraform-mcp-server/instructions/example-mcp-instructions.md",
+   "sha256": "bdf1e8f50b32623ec63de713c8774b8707c0b38a3e830a7e84f115c053524134"
+  }
+ ],
+ "july_quote_check": [
+  {
+   "july_quote": "**BEFORE generating any Terraform code**: Query registries for latest provider/module versions and styling guidelines.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "**Provider Consistency**: All modules in a project must use compatible provider versions. Verify with get_provider_details before generating code.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "All modules in a project must use compatible provider versions. Verify with get_provider_details before generating code.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Always check run status before attempting operations",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "If the project ID isn't already known, call list_terraform_projects first to look it up rather than asking the user to find it themselves.",
+   "july_channel": "tool_description:delete_project",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "If there are multiple good matches, mention this but proceed with the most relevant one.",
+   "july_channel": "tool_description:search_modules",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Prefer using the action_run tool with \"discard\" or \"cancel\" before force-unlocking a workspace.",
+   "july_channel": "tool_description:force_unlock_workspace",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Priority: Check private registries first when token present, public as fallback",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "The Terraform MCP server provides tools for generating better Terraform code through registry integration and automating workflows via HCP Terraform/Enterprise APIs.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "This is more structured and easier to parse than plain logs.",
+   "july_channel": "tool_description:get_plan_json_output",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "To get the run's status, plan, and apply details instead, use get_run_details.",
+   "july_channel": "tool_description:get_run_comments",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "You MUST call this function before 'get_module_details' to obtain a valid and compatible module_id.",
+   "july_channel": "tool_description:search_modules",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "`get_latest_provider_version` if no version available in existing code",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "call list_terraform_projects first to look it up rather than asking the user to find it themselves",
+   "july_channel": "tool_description:delete_project",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "provides tools for generating better Terraform code through registry integration",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  }
+ ],
+ "steering_marker_sentences_now": [
+  "When enterprise tools are enabled AND a Terraform token is provided, search private registries first, then fall back to public.",
+  "All modules in a project must use compatible provider versions.",
+  "Run terraform validate immediately after generation, then terraform plan only if validation passes.",
+  "ALWAYS get explicit yes/no confirmation before:",
+  "Check private registries first when token present, public as fallback",
+  "- `delete_workspace_safely` only works if workspace has no managed resources",
+  "- Always check run status before attempting operations",
+  "Try private first (if token), fallback to public",
+  "`search_workspace_variables` first to avoid duplicates",
+  "- Never expose TFE_TOKEN or other sensitive values in outputs",
+  "r.logger.Info(\"Registering TFE tools - first session with valid TFE client detected\")",
+  "\"read\" (view only), \"plan\" (can queue plans), \"write\" (apply runs), \"admin\" (full control).",
+  "\"plan\" is only valid for workspaces; \"maintain\" is only valid for projects.`),",
+  "return ToolError(logger, \"One of workspace_id or project_id must be provided\", nil)",
+  "return ToolError(logger, \"Only one of workspace_id or project_id may be provided, not both\", nil)",
+  "return ToolErrorf(logger, \"Invalid Team access level %q - must be one of:",
+  "return ToolErrorf(logger, \"Invalid Team Project access level %q - must be one of:",
+  "One of state_version_id or workspace_id must be provided\"),",
+  "return ToolError(logger, \"One of state_version_id or workspace_id must be provided\", nil)",
+  "return ToolError(logger, \"page_size must be between 1 and 100\", nil)",
+  "return ToolError(logger, \"page_number must be at least 1\", nil)",
+  "This can be obtained by calling 'search_private_modules' first to obtain the exact private_module_id required to use this tool.",
+  "return ToolError(logger, \"private_module_id must be in format 'module-namespace/module-name/module-provider-name'\", nil)",
+  "read-only, not destructive, calls external TFE API",
+  "mcp.Description(\"If specified, lists the runs in the given workspace instead of the organization based on filters\"),",
+  "%s - must be 'apply', 'discard', or 'cancel'\", runAction)",
+  "return ToolErrorf(logger, \"invalid visibility %q - must be one of:",
+  "return ToolError(logger, \"no_code_module_id must start with 'nocode-'\", nil)",
+  "return \"\", fmt.Errorf(\"variable '%s' must be a string, got %T\", varName, valueRaw)",
+  "return \"\", fmt.Errorf(\"variable '%s' must be a boolean, got %T\", varName, valueRaw)",
+  "return \"\", fmt.Errorf(\"variable '%s' must be a number, got %T\", varName, valueRaw)",
+  "If the project ID isn't already known, call \"list_terraform_projects\" first.`),",
+  "mcp.WithDescription(`Safely deletes a Terraform workspace by ID only if it is not managing any resources.",
+  "Provide either a username (accepted invites only) or an organization membership ID (accepted and pending invites), not both.\"),",
+  "Only works for users who have accepted the organization invite.\"),",
+  "Prefer this over 'username' when the invitee has not yet accepted.\"),",
+  "return ToolError(logger, \"One of 'username' or 'organization_membership_id' must be provided\", nil)",
+  "return ToolError(logger, \"Provide only one of 'username' or 'organization_membership_id', not both\", nil)",
+  "Use the force_unlock_workspace tool to unlock first\"",
+  "Only teams whose name exactly matches one of the provided values are returned.",
+  "{\"only prefix\", \"ws-\", false},",
+  "return ToolErrorf(logger, \"invalid execution_mode '%s' - must be 'remote', 'local', or 'agent'\", executionModeStr)",
+  "If only a team name is known, use the list_teams tool first to look up the team_id.`),",
+  "Must be 3-40 characters and may contain letters, numbers, spaces, hyphens, and underscores.",
+  "Must be no more than 256 characters\"),",
+  "return ToolErrorf(logger, \"invalid default_execution_mode %q - must be one of:",
+  "If the project ID isn't already known, call list_terraform_projects first to look it up rather than asking the user to find it themselves.`),",
+  "Prefer using the action_run tool with \"discard\" or \"cancel\" before force-unlocking a workspace.",
+  "Run terraform apply to start the first run for this workspace.",
+  "You MUST call this function before 'get_provider_details' to obtain a valid tfprovider-compatible 'provider_doc_id'.",
+  "mcp.Description(\"The slug of the service you want to deploy or read using the Terraform provider, prefer using a single word, use underscores for multiple words and if unsure about the service_slug, use the provider_name for its value\"),",
+  "You must call 'search_providers' tool first to obtain the exact tfprovider-compatible provider_doc_id required to use this tool.`),",
+  "return ToolError(logger, \"provider_doc_id must be a valid number - use search_providers first to find valid IDs\", err)",
+  "%s - use search_providers first to find valid provider_doc_id values\", providerDocID)",
+  "You must call 'search_modules' first to obtain the exact valid and compatible module_id required to use this tool.`),",
+  "%s - use search_modules first to find valid module IDs\", moduleID)",
+  "You MUST call this function before 'get_module_details' to obtain a valid and compatible module_id.",
+  "Read-only data sources for querying existing infrastructure",
+  "You must call 'search_policies' first to obtain the exact terraform_policy_id required to use this tool.`),",
+  "terraform_policy_id - use search_policies first to find valid policy IDs\", err)",
+  "return ToolError(logger, \"terraform_policy_id cannot be empty - use search_policies first to find valid policy IDs\", nil)",
+  "t := template.Must(template.New(\"module\").Parse(tmpl))",
+  "t := template.Must(template.New(\"hclPolicy\").Parse(hclTmpl))",
+  "You MUST call this function before 'get_policy_details' to obtain a valid terraform_policy_id.",
+  "\"only page provided\",",
+  "\"only pageSize provided\",",
+  "\"only after provided\",",
+  "\"env var takes precedence over flag\",",
+  "It only returns after the",
+  "\"passing only --tools (with --toolsets at its declared 'all' default) must not trigger the --tools/--toolsets conflict Fatal\")",
+  "\"passing both --tools and --toolsets explicitly must still trigger the conflict Fatal\")",
+  "assert.Equal(t, toolsets.NewToolsetFilter(toolsets.DefaultToolsets()), result, \"invalid --tools names must fall back to DefaultToolsets()\")",
+  "It's only used to prove EndSessionHandler",
+  "nil, // disables the SDK's built-in cross-origin protection entirely.",
+  "assert.True(t, nextCalled, \"non-tools/call methods should always pass through\")",
+  "assert.True(t, nextCalled, \"next should still run even when metrics are disabled\")",
+  "if !strings.HasPrefix(tag, \"attr,\") && !strings.HasPrefix(tag, \"primary,\") {",
+  "\"variable_set_id must not be blank\"},",
+  "\"workspace_ids must not be blank\"},",
+  "\"workspace_ids must contain at least one workspace ID\"},",
+  "return nil, nil, fmt.Errorf(\"terraform_org_name must not be blank\")",
+  "return nil, nil, fmt.Errorf(\"team_name must not be blank\")",
+  "return nil, nil, fmt.Errorf(\"invalid visibility %q, must be one of:",
+  "\"team_id must not be blank\"},",
+  "\"access_level must not be blank\"},",
+  "\"must be provided\"},",
+  "return nil, nil, fmt.Errorf(\"variable_set_id must not be blank\")",
+  "return nil, nil, fmt.Errorf(\"key must not be blank\")",
+  "return nil, nil, fmt.Errorf(\"category must be one of:",
+  "\"key must not be blank\"},",
+  "\"category must be one of:",
+  "tfe.Team only has jsonapi tags so",
+  "Teams.Read has no include options, so the users relation only",
+  "If the team ID isn't already known, call \"list_teams\" first.`,",
+  "return nil, nil, fmt.Errorf(\"team_id must not be blank\")",
+  "return nil, nil, fmt.Errorf(\"workspace_ids must not be blank\")",
+  "return nil, nil, fmt.Errorf(\"workspace_ids must contain at least one workspace ID\")",
+  "\"whitespace only\", orgName:",
+  "assert.Contains(t, err.Error(), \"terraform_org_name must not be blank\")",
+  "\"whitespace only\", value:",
+  "Must be no more than 256 characters\",",
+  "return nil, nil, fmt.Errorf(\"project_name must not be blank\")",
+  "\"whitespace only\", stackID:",
+  "assert.Contains(t, err.Error(), \"stack_id must not be blank\")",
+  "require.NotNil(t, details.TriggerPatterns, \"trigger_patterns must marshal as [] not null\")",
+  "\"terraform_org_name must not be blank\"},",
+  "\"team_name must not be blank\"},",
+  "\"terraform_org_name must not be blank\",",
+  "\"project_name must not be blank\",",
+  "\"whitespace only\", teamID:",
+  "assert.Contains(t, err.Error(), \"team_id must not be blank\")",
+  "require.NotNil(t, details.Users, \"users must marshal as [] not null\")",
+  "plan is only valid for workspaces and maintain is only valid for projects\",",
+  "return nil, nil, fmt.Errorf(\"access_level must not be blank\")",
+  "return nil, nil, fmt.Errorf(\"one of workspace_id or project_id must be provided\")",
+  "return nil, nil, fmt.Errorf(\"only one of workspace_id or project_id may be provided, not both\")",
+  "return nil, nil, fmt.Errorf(\"invalid workspace access level %q, must be one of:",
+  "return nil, nil, fmt.Errorf(\"invalid project access level %q, must be one of:",
+  "return nil, nil, fmt.Errorf(\"variable_id must not be blank\")",
+  "If only a team name is known, use the list_teams tool first to look up the team_id.`,",
+  "\"whitespace only\", projectID:",
+  "assert.Contains(t, err.Error(), \"project_id must not be blank\")",
+  "assert.ErrorContains(t, err, \"terraform_org_name must not be blank\")",
+  "\"variable_id must not be blank\"},",
+  "Provide either a username (accepted invites only) or an organization membership ID (accepted and pending invites), not both.\",",
+  "Only works for users who have accepted the organization invite\",",
+  "Prefer this over username when the invitee has not yet accepted\",",
+  "return nil, nil, fmt.Errorf(\"one of username or organization_membership_id must be provided\")",
+  "return nil, nil, fmt.Errorf(\"provide only one of username or organization_membership_id, not both\")",
+  "require.EqualError(t, err, \"terraform_org_name must not be blank\")",
+  "\"name must not be blank\"},",
+  "If the project ID isn't already known, call \"list_terraform_projects\" first.`,",
+  "return nil, nil, fmt.Errorf(\"project_id must not be blank\")",
+  "tfe.Stack only has jsonapi",
+  "If the stack ID isn't already known, call \"list_stacks\" first.`,",
+  "return nil, nil, fmt.Errorf(\"stack_id must not be blank\")",
+  "If the project ID isn't already known, call list_terraform_projects first to look it up rather than asking the user to find it themselves.`,",
+  "return nil, nil, fmt.Errorf(\"name must not be blank\")",
+  "ServiceSlug          string `json:\"service_slug\" jsonschema:\"The slug of the service you want to deploy or read using the Terraform provider, prefer using a single word, use underscores for multiple words and if unsure about the service_slug, use the provider_name for its value\"`",
+  "You must call 'search_providers' tool first to obtain the exact tfprovider-compatible provider_doc_id required to use this tool.`,",
+  "return nil, nil, fmt.Errorf(\"provider_doc_id must be a valid number - use search_providers first to find valid IDs\")",
+  "distinct sessionIDs must not collide, and the same",
+  "assert.NotSame(t, clientA, clientB, \"different sessionIDs must get independently cached TFE clients\")",
+  "assert.Same(t, clientA, clientAAgain, \"the same sessionID must return the client cached by pkg/client\")",
+  "assert.NotSame(t, clientA, clientB, \"different sessionIDs must get independently cached HTTP clients\")",
+  "t.Fatalf(\"First request should succeed, got error:",
+  "assert.NotSame(t, clientA, clientB, \"different sessions must not share a cached client\")",
+  "assert.NotSame(t, original, rotated, \"a token change must invalidate the previously cached client\")",
+  "assert.Same(t, rotated, v.(cachedTfeClient).client, \"the cache must hold the newest client after rotation\")",
+  "\"blank fields only are malformed\",",
+  "\"\", // Case sensitive - must be \"Bearer\"",
+  "CurrentOffset int    `json:\"current_offset\"` // always starts at 0",
+  "NextOffset    int    `json:\"next_offset\"`    // always starts at 15",
+  "PrevOffset    int    `json:\"prev_offset\"`    // always starts at nil",
+  "Tier        string    `json:\"tier\"`",
+  "Tier        string        `json:\"tier\"`",
+  "Tier          string `json:\"tier\"`",
+  "First string `json:\"first\"`",
+  "Type        string          `jsonapi:\"primary,tool\"`",
+  "ver = callOptions[0] // API version will be the first optional arg to this function",
+  "Only used with the X-Forwarded-For method.",
+  "We Reject those attempts and source the address via server-side only.",
+  "Only used when the selected method is X-Forwarded-For.",
+  "assert.NotSame(t, clientA, clientB, \"different sessions must not share a cached HTTP client\")",
+  "empty key must not already be cached\")",
+  "assert.NotSame(t, clientOne, clientTwo, \"stateless requests must always build a fresh client, never share one\")",
+  "assert.False(t, ok, \"an empty sessionID must never be used as a cache key\")",
+  "{\"cert only\", \"cert.pem\", \"\", false, true},",
+  "{\"key only\", \"\", \"key.pem\", false, true},",
+  "token  [32]byte // Store the hash of the token instead of raw value",
+  "\"env var takes precedence\",",
+  "\"valid LOG_LEVEL should be used even if flag is invalid\",",
+  "\"when both are set, LOG_LEVEL=debug should take precedence over --log-level=error\",",
+  "\"valid LOG_FORMAT should be used even if flag is invalid\",",
+  "t.Errorf(\"EnabledTools(nil) returned %q from toolset %q, want only %q\", td.Name, td.Toolset, Registry)",
+  "When specified, only these tools will be available.",
+  "\"only tools that need a",
+  "\"default keyword only\",",
+  "- `main.tf` – Primary resource and data source definitions.",
+  "Must exist in every module, even if empty.",
+  "(only needed for root modules)",
+  "- For nested modules, include a `README.md` if the module is intended for external use; omit for internal-only modules.",
+  "- Put meta-arguments (count, for_each) first, followed by other arguments, then nested blocks",
+  "- Write self-documenting code; use comments only to clarify complexity",
+  "- Define at the top of a file if specific to that file only",
+  "- Use meta-arguments sparingly and add comments whenever applicable",
+  "- Always include a default provider configuration",
+  "- Define the default provider first, then aliased providers",
+  "- Use `alias` as the first parameter in non-default provider blocks",
+  "- Prefer the pessimistic constraint operator (`~>`) for modules and providers to allow safe updates within a compatible version range.",
+  "- Avoid using only the equals (`=`) operator unless you must lock to a single version for reproducibility or known issues.",
+  "- Never commit `terraform.tfstate` files or `.terraform` directories",
+  "- Use provider-specific data sources instead of sharing full state files",
+  "Only execute after successful validation",
+  "- Never expose Terraform tokens in outputs"
+ ]
+}

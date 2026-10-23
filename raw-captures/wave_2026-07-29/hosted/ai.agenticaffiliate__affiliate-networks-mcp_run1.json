@@ -1,0 +1,40 @@
+{
+ "url": "https://mcp.agenticaffiliate.ai/mcp",
+ "capture_utc": "2026-07-29T12:05:46.684787+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "date": "Wed, 29 Jul 2026 12:05:50 GMT",
+    "content-type": "application/json",
+    "content-length": "27",
+    "www-authenticate": "Bearer resource_metadata=\"https://mcp.agenticaffiliate.ai/.well-known/oauth-protected-resource\"",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ssNOlu6YhMVPtOTIypKEwGs5Wjem4Q7M4JUmBEZyIHca4vjIZWyfeHPxlIwT44j%2FmwTC7uMFCL5CdTADDZFP0rkYx7PFtS%2Fj%2FtgLDdlfW95odSGE2aBZB6QqDcDQ3umh7UZ3lps5fwzHDw%3D%3D\"}]}",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "server": "cloudflare",
+    "cf-ray": "a22bfe685924d872-MAD",
+    "alt-svc": "h3=\":443\"; ma=86400"
+   },
+   "body_raw": "{\"error\":\"missing_session\"}"
+  }
+ ]
+}

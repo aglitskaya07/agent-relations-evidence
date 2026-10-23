@@ -1,0 +1,133 @@
+{
+ "unit_source": "npm @upstash/context7-mcp@4.1.1",
+ "capture_utc": "2026-10-06T09:53:42.752442+00:00",
+ "method": "static source read (no code executed)",
+ "auth": "none",
+ "server_info": {
+  "package": "@upstash/context7-mcp",
+  "version": "4.1.1"
+ },
+ "tarball": "https://registry.npmjs.org/@upstash/context7-mcp/-/context7-mcp-4.1.1.tgz",
+ "source_files_count": 21,
+ "source_files": [
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/index.js",
+   "sha256": "941edb79d783f95cf1fe835c1d84c3d9c8066da99067e9066ead8a5b021b37a7"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/subscriptions.js",
+   "sha256": "f3674a4a88c45839aa31a5b52f4e1c936b4cdc81fe842e6f89162dac6e7cc135"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/constants.js",
+   "sha256": "0c1db5dac21d3e4d97b6aa1c1e0e1e362575d807afd0a4b4705a4a05ddc3c384"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/mcp-subscription-telemetry.js",
+   "sha256": "20ea86db2329e4bf6a84f7e7581ea512d24679cf1770b9db757743af4697f8fe"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/mcp-operation-scope.js",
+   "sha256": "2e760473829e37d412cdc14ad94474bee1f1b56a66e6e78c59d4afd340899cbc"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/types.js",
+   "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/telemetry.js",
+   "sha256": "847be7d9e9466575d4cdb33eedebca8fcd679c9b8033eaa0afd9059e697cce28"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/tool-names.js",
+   "sha256": "57422b59138db769769f92b902c854d131d0a513b4fb0cb8b7fbf5c9fd229b82"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/vercelMarketplaceJwt.js",
+   "sha256": "a26a5e5e88de60ff3ac9b00c7726a4bfdb26417e89386f4968b7236998841063"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/mcp-telemetry.js",
+   "sha256": "3a0d81beac47a40b1ce78f947a39096172d2e696f7651ded9d56abad453d2e41"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/telemetry-contracts.js",
+   "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/encryption.js",
+   "sha256": "8e949eb881dbcecca19c1cf88fa18ca0d2d991823361f1471d5e9143ac4fcd10"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/process-shutdown.js",
+   "sha256": "59688a21a4b5b3ba548b01a381dc9ad622c80937079f390c74e84a663d84fb43"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/jwt.js",
+   "sha256": "23c3e4aa5411992de69297068a17b1467aaaf9b5709f0661f186ce224a3bec8a"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/telemetry-runtime.js",
+   "sha256": "2a715bcb32cee1f27c9c60b36fd82e18916e95105248bc31af8f59ee4a3f1151"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/telemetry-config.js",
+   "sha256": "c1d4f2346fd3e7e911dbbe15c3de531f37dea0b570c3ec4a0f55a86856fa5e87"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/utils.js",
+   "sha256": "edeb5a9e74a8e4c81e6072b4830c31d050c5bca2045aa6b84c140778d8c0dd77"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/api.js",
+   "sha256": "2f15eeb5d1ba04094f9727bde11a9f3bf84b085e6a75a357fe3fa2d40f648c62"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/mcp-body-error-handler.js",
+   "sha256": "c7f9fdea91bbab6c88789de35a34a962b3d4e8bd914f7719e64cbcc1bbbad7d0"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/telemetry-provider.js",
+   "sha256": "7e5b740b3b266fea10f0cfcb2379bbf8e8b5ba0a161fe9b17fb7b86cd9129df5"
+  },
+  {
+   "path": "npm/x/upstash-context7-mcp-4.1.1/package/dist/lib/auth/auth-prompt.js",
+   "sha256": "9d6ef90e4a7cb750b6502dba7eb1ba4bd7236379d724bbd164ef70982e696460"
+  }
+ ],
+ "july_quote_check": [
+  {
+   "july_quote": "Prefer this over web search for library docs.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Use even when you think you know the answer — your training data may not reflect recent changes.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Use this server to fetch current documentation whenever the user asks about a library, framework, SDK, API, CLI tool, or cloud service — even well-known ones like React, Next.js, Prisma, Express, Tailwind, Django, or Spring Boot.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  }
+ ],
+ "steering_marker_sentences_now": [
+  "`Use this server to fetch current documentation whenever the user asks about a library, framework, SDK, API, CLI tool, or cloud service — even well-known ones like React, Next.js, Prisma, Express, Tailwind, Django, or Spring Boot.",
+  "Use even when you think you know the answer — your training data may not reflect recent changes.",
+  "Prefer this over web search for library docs.",
+  "You MUST call this function before 'Query Documentation' tool to obtain a valid Context7-compatible library ID UNLESS the user explicitly provides a library ID in the format '/org/project' or '/org/project/version' in their query.",
+  "- Source Reputation:",
+  "For best results, select libraries based on name match, source reputation, snippet coverage, benchmark score, and relevance to your use case.",
+  "- Source reputation (consider libraries with High or Medium reputation more authoritative)",
+  "Use the official library name with proper punctuation — e.g., 'Next.js' instead of 'nextjs', 'Customer.io' instead of 'customerio', 'Three.js' instead of 'threejs'.\"),",
+  "You must call 'Resolve Context7 Library ID' tool first to obtain the exact Context7-compatible library ID required to use this tool, UNLESS the user explicitly provides a library ID in the format '/org/project' or '/org/project/version' in their query.",
+  "Be specific and include relevant details, but keep each query to one topic — if the user's question spans multiple distinct concepts, make a separate call per concept instead of combining them, unless the question is about how the concepts interact.",
+  "/** Owns the entry-handled listen/cancel state that never reaches an MCP server transport.",
+  "The semantic operation therefore ends here; only the custom",
+  "formattedResult.push(`- Source Reputation:",
+  "parts.push(\"**Note:** Your results only include libraries matching your teamspace's library filters.",
+  "Once a response has started, only Express can wind it down.",
+  "This module is dynamically imported only when the embedded"
+ ]
+}

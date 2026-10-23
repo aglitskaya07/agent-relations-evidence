@@ -1,0 +1,43 @@
+{
+ "url": "https://mcp.vercel.com",
+ "capture_utc": "2026-10-05T13:24:31.005426+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Content-Type": "application/json",
+    "Date": "Mon, 05 Oct 2026 13:24:34 GMT",
+    "Server": "Vercel",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "Www-Authenticate": "Bearer error=\"invalid_token\", error_description=\"No authorization provided\", resource_metadata=\"https://mcp.vercel.com/.well-known/oauth-protected-resource\"",
+    "X-Matched-Path": "/",
+    "X-Vercel-Cache": "MISS",
+    "X-Vercel-Id": "sfo1::iad1::wk4gz-1791206674881-312749a80118",
+    "Connection": "close",
+    "Transfer-Encoding": "chunked"
+   },
+   "body_raw": "{\"error\":\"invalid_token\",\"error_description\":\"No authorization provided\"}"
+  }
+ ]
+}

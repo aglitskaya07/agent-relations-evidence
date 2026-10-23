@@ -1,0 +1,740 @@
+{
+ "unit_source": "neondatabase/mcp-server-neon",
+ "capture_utc": "2026-10-06T09:53:44.440872+00:00",
+ "method": "static source read (no code executed)",
+ "auth": "none",
+ "server_info": {
+  "repo": "neondatabase/mcp-server-neon",
+  "commit": "185d5ee7a1ed26e2abe86b45fc669925153ebca3 2026-10-04T08:28:01-07:00"
+ },
+ "source_files_count": 131,
+ "source_files": [
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/neon-client.ts",
+   "sha256": "71fce5215795666d1cf6dbed106becc0c5f78ecc5827bab2d9c7436e2f82362b"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/resources.ts",
+   "sha256": "8178866f139ea8de5c250ff27d493f2f855f3eed6d141ec8ac0170a9f1f5244e"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/describeUtils.ts",
+   "sha256": "253661c87957f7fc1128c8ee0362dacd69a85476107159ef6eb890a9da1db64a"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/constants.ts",
+   "sha256": "4b78b37deb5abe5724cd0ca3e65c7d51e7a20e71f1a22da4e4920b77aa1e93e3"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/grant-filter.ts",
+   "sha256": "86f14d804eb95e29a8dfec8c85e3ad863dd6e31930e558c233935f892ce3084e"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/listed-schema.ts",
+   "sha256": "7a350baf536b72b3f2b163c1537ab246cf52f5bfa80fd4d1e5097cd8fc627cdf"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/utils.ts",
+   "sha256": "c028d2d8d8e5770c0b9443b5aa2633dc7a8904bbe6581c079c782db92f2dc49e"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/types.ts",
+   "sha256": "e3b14e2bd25805b15b842aed0654562fa425a1a5c9aed340208059ce1c4472f4"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/toolsSchema.ts",
+   "sha256": "01af0e7560fe556eddf5fc842e22ace6ded8ea71afc8dec1e9b23d03f029bffc"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/tools.ts",
+   "sha256": "6578aa1bf3f1ac19458a0ee95f2046cab76cb1ae4798688244ab85244094ecd5"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/index.ts",
+   "sha256": "e41993b939583e39cb4d97347a50eb65b5bab8ebddadc261ae7bac9607dc8f8d"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/definitions.ts",
+   "sha256": "20e646e52326eb60497da202981437211a60549ca813381cf090aee15af551fa"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/tool-definition.ts",
+   "sha256": "59e952abefec01f95a1f99f58765012a5722d227cf83f5c72051464149f46a9f"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/registration.ts",
+   "sha256": "7813f2e89c7006c89c936ef55021027161dce90468a6650c79e8bbbab9c6a957"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/generated/sanitize.ts",
+   "sha256": "4c9f0de2dafc3b09b8c03097a131c28647986bc7b6ace7aaba9d7d1ea12d1d02"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/generated/adapt.ts",
+   "sha256": "a5d33a84b1569c44261fcadf2847c5c475f5232b9256b91db678ddc53ced7fb1"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/generated/operations.ts",
+   "sha256": "9f0ef8cfca3101dfac0e55f39211592625f6ded3b7bf3fac0b209ba65ad1d9ef"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/generated/names.ts",
+   "sha256": "8c65adac3a77f6b55bb7d4cc50e99bcd2ef014e95557ac617de4c8c447064320"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/handlers/neon-auth-get-config.ts",
+   "sha256": "610c2e4ac96c16c6aa5bc174782ed5e5f92648e5c1ef5f22766d7494b811fc73"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/handlers/urls.ts",
+   "sha256": "ba7b62220c543cabba40c22f9cbdc3507f3665c4a1be064d55874ed734c4c0c6"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/handlers/search.ts",
+   "sha256": "ddad340eb1dc76df0cf4895955bd82a238af6df946475443b25ea14852412664"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/handlers/decribe-project.ts",
+   "sha256": "a10d2436da2049dfd7190ebae891556399a6034bc053cffd47e5eef2c63b3479"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/handlers/inspect-database.ts",
+   "sha256": "8722a3e626e11f3831436d725175b5d2a05501c3a5704d9a25a76d2204e870a3"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/handlers/utils.ts",
+   "sha256": "c443037aeac07930737d91a81e0c788dc44eb34215b5035130c8a63b6f837a6b"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/handlers/list-orgs.ts",
+   "sha256": "cdc3e49fb4673b8ed5b78dc1711f0742b397924fa2d243b2a4c54436409de2b3"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/handlers/list-projects.ts",
+   "sha256": "d386a4c69bde50b7e1b24322b69269a482a4bba4da995e8667b437854a734201"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/handlers/connection-string.ts",
+   "sha256": "12af42f3c8f6c380e55ab8cef8020c7a8dabacea5567991c9bd9a80ef2613f5d"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/handlers/describe-branch.ts",
+   "sha256": "e347009c04d9f380c45f20dbb5bae68fa67d3b445726958877d76add72791500"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/handlers/docs.ts",
+   "sha256": "5e61f41337335cb521cdb2e9c7e4b27f6213410fd833aec069201bc7faea3de3"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/handlers/neon-auth-branch.ts",
+   "sha256": "424a24c96e375d809af828b222544c680922d5af055853607b6216054ed8c077"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/handlers/feedback.ts",
+   "sha256": "25c6665de6add1c394bfb2ed0687bf2a2252cb5d0aa3203624c58189e7bf2d0d"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/handlers/neon-auth-settings-snapshot.ts",
+   "sha256": "7e701644df1fe5692089b1690fed6b359d37c189a6b4e1741873f4f3ce1301c6"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/tools/handlers/fetch.ts",
+   "sha256": "0f20e6052bd96afd5439de64bfbd17a657627783c4633e39c9b32be21cf7b82b"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/types/context.ts",
+   "sha256": "7c54b1c73614071b3768d83d2f308a804e4ed4de9dffc099db932cc0046f0f6f"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/types/auth.ts",
+   "sha256": "19fcf451092e4605a2d40926cbfd470a54911bff6e284bb920bd5c82c66c1c34"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/inspect/report.ts",
+   "sha256": "2ce537a4da20634f358578ec6b20ea2e30d598c21d3db189cb885d7fa3173d67"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/inspect/queries.ts",
+   "sha256": "12a51b34d1b91c674006a1c9300dab4f63681a3021aa56b6da0fe3ef5ca53f54"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/inspect/targets.ts",
+   "sha256": "e5077fe5d10d8c6604a0d9af503c47f6b918a041d862746a898983cdd9be73a5"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/oauth/consent-canonical-url.ts",
+   "sha256": "8199914dd59529bc361840e710110ebb46997202846053b4ba8fab3f1dff602c"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/oauth/auth-transaction.ts",
+   "sha256": "41f6703e835e6faab0702ddb5426676a33e23bead826b1d51adca8dae59a924d"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/oauth/consent-mode.ts",
+   "sha256": "1628433d9e68cc9cde8d06dcf8f104ebb1e8b25ad1d015fef06e07daca1083b6"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/oauth/browser-binding.ts",
+   "sha256": "906b22bf76f21dd14db8531a3a320d1e60eb6ee014829e14b2877d848f0b8f4c"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/oauth/utils.ts",
+   "sha256": "a0581ed452376fbd8e5bab1b7264fd750859f0670aa45f20fc7b785ed451b96b"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/oauth/model.ts",
+   "sha256": "17c9a3f3a276bd0b2eb014e6a7cc4a659af3279d76abedca9c27a700188069f1"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/oauth/consent-approval.ts",
+   "sha256": "a45debd800edd498e80dcb48c46a98cf3858cecaadb5a2e5bc6189263b48524e"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/oauth/downstream-auth-request.ts",
+   "sha256": "4e9221cc5d946932096a13235d05dca11cfd83ada2e619a8ce08b654b1029958"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/oauth/kv-store.ts",
+   "sha256": "cdfdddcd7ca8b9888388234488e6b2ee862edfc46bb0455630f7f22bb10b134d"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/oauth/consent-html-headers.ts",
+   "sha256": "b58c1d222c48c2fb36734640d7e22d7e082cd6b02d0a4cdecf02860f0f475315"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/oauth/auth-transaction-store.ts",
+   "sha256": "4d001d4df9e114b2e4884981f0c37fed05c75a18ee945c092467294bb9d3fb20"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/oauth/consent-tools.ts",
+   "sha256": "8a8f211e3055dd557fa14c9529ccbff59ee8e144e7c9870ead5d135d041f01be"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/oauth/refresh-lock.ts",
+   "sha256": "4ce9c53f6be3466f6b9c9705efce8c69cc1ee8efce8318f3c9dbc88972d7a522"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/oauth/issued-scopes.ts",
+   "sha256": "3558c8e42c859b2a1ca3dcefd3062c7a0028c40678181e9a9fc7d140cc5c40d7"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/oauth/consent-dialog.ts",
+   "sha256": "c0347608b4c240a1fe21f722b05f0410ac4e395aaa7e6eb5178ffc27341f76d9"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/server/account.ts",
+   "sha256": "310d014ec55edcd3df18c078aee22953a9baa02a3f3913ca5253ab8595a859ef"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/server/errors.ts",
+   "sha256": "c51d48d2dfc79f3f3d3da4b9fcc97a80d067339fa42a278d1fa4b780ac458196"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/server/api.ts",
+   "sha256": "6358070eedffb1a096d27727c3af7e1167b2aec46ae7a9d52a35ee6a9aa1d0a5"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/server/session-binding.ts",
+   "sha256": "b3cb5097dcae13af250d6b5887924e789e89af9a0110d4895883b18a3979330b"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/server/index.ts",
+   "sha256": "08533a6af78923bef8a99188c10b2ca7dd7389f6607ce3fd92c9e8aa72395459"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/utils/client-application.ts",
+   "sha256": "1874d2b6b402f42e11b36f6c38a8963c30b33440ae35f30e96a974980602d8d1"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/utils/retry.ts",
+   "sha256": "4030abdb792d73bcf8aa2639614e486c731fb81e97441118f32aefd7679f48fd"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/utils/singleflight.ts",
+   "sha256": "be9621b864162f4678163b6d25b7053c25c45c6a137f39aa5adaaa22f613b5b9"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/utils/logger.ts",
+   "sha256": "3d11e78dd95637407a661473cf313549291b6af9ac24d92bc89f8858955205cf"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/utils/read-only.ts",
+   "sha256": "885abe2f1c8090a512b21e28976cf4cbbb3838dfa89e0bcdf92cf79f63149f34"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/utils/grant-context.ts",
+   "sha256": "beebe53f6b73dc61051d10fdacdc6e7b15105c85092c02bf3b969bbe5ac85ffd"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/utils/trace.ts",
+   "sha256": "5598af55b97c4b6cae15a31f85f024ad72e43cd798bbbe9ab6b0065ccd91647c"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/route-head.integration.test.ts",
+   "sha256": "a4ade6365dd0295cacbf92090ecdb55cd123726155c886e5c9bd005a7e009949"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/auth-transaction-store.integration.test.ts",
+   "sha256": "f7a2b48597eabfffecfcb124cca75f50f6d0b61108a400894d5bc90902a3bcc3"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/docs-tools.test.ts",
+   "sha256": "5fd704793feb662f4032ec74fc71efb67afaca18991b1e1f5518b98ac2ecafca"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/read-only.test.ts",
+   "sha256": "5ca6642c6c4bdd4c8e7cb2a6503742c5d53cc0a164fd7cdbd8efce116c7e066a"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/route-sse-binding.test.ts",
+   "sha256": "2f6e32f1ac815d28998417cb200b64745b9036d9a13b7a8fad4c656e8f363129"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/upstream-request-summary.test.ts",
+   "sha256": "abe3f346a2d34b8ccefb4efe21b1f0258a29ded1303846d8987f7b64ec561120"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/oauth-client-resource.integration.test.ts",
+   "sha256": "1f72a9544ae99e2677a96da3dfee8633047604a1b8d5bf4031e43b1c99071f98"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/oauth-authorize-route.integration.test.ts",
+   "sha256": "219730c88e08d8825c21836fd034239a944f04e0ef407e09297d73ec5d8ffe6b"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/refresh-concurrency.bench.test.ts",
+   "sha256": "1276cfb02e1858f24cc728e99fbc3702888f5654de2e688861dcea497874a789"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/handle-tool-error.test.ts",
+   "sha256": "e2f244626c42f53eae91af545e71dc77f02ee26fcb189cc4b4b6f26fe9658cbd"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/retry.test.ts",
+   "sha256": "6a1c741d5969ba4ae83152ea565db37e445e72fb1bd8bd0a42b559343bbe1654"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/feedback-tool.test.ts",
+   "sha256": "36bc93b743a5dd2ddf7e704aef8ac739a504c9f3146f06f2676a6c6bffcdd842"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/neon-auth-get-config.test.ts",
+   "sha256": "f6a6aefb06b14840126a542100cc87801897acf7d77422a198ed55a54dad6a99"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/kv-store-reinit.test.ts",
+   "sha256": "8d31c84ec636af6ad0f806d7b4532b4bfc902c11165a73075fa3d3e62a95aa18"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/oauth-token-route.integration.test.ts",
+   "sha256": "c287f2f50c39153d0bd674276998a029f7f3866bf969a1bd7c7ca445a1ecf4ed"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/server-grant-integration.test.ts",
+   "sha256": "30038c229cec2acb24380b88b7849570cd09cd1198a2415b746b277d90a9df3f"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/consent-canonical-url.test.ts",
+   "sha256": "5cc66402df9d7d1412b4478b802efa1b55269ea1037dc76253836cebdba5cbac"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/route-session-binding.integration.test.ts",
+   "sha256": "dcd4e689a42557c130cd1e15370eba0482100ff03f5f6436f280cec3aff98f95"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/analytics.test.ts",
+   "sha256": "cf98b277e6d861451ef88e53ada44cc7c2b4120f5b2caf606d9361a5c34c2e80"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/issued-scopes.test.ts",
+   "sha256": "d8dfb9ccc0b4550313977b809057603e05c067e74a5173d2de0ca960ae589b43"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/auth-transaction-fixtures.ts",
+   "sha256": "7e59cb170a06f7f1d84e23aa8f27682d8f23ecc4d4de74a12a8cb575c1406258"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/tool-registration-parity.test.ts",
+   "sha256": "6029a691af3d11b2a01cb6b7068016698705c5966c4dafe05002676e8eb20d0b"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/singleflight.test.ts",
+   "sha256": "d4424af2ea0e7be017875e2e98da2054a771b0110b5fc49a6ec21fe252581c7f"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/ensure-test-oauth-database.ts",
+   "sha256": "1b331f490855b1a369ac610a42b9738316d06923faac43b1c9eeb1628c99915b"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/hosted-tools-list.snapshot.test.ts",
+   "sha256": "311b23b9a95b29d6cd757a604c495298d06e721344259ebb7e2d479200037b3f"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/client-application.test.ts",
+   "sha256": "489db0ad4250b0af3199a54903794071535ff9aa532d4fbb52f1b3eceacffd34"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/sentry-utils.test.ts",
+   "sha256": "2278977544000b33a7cdd62823ebe92b0154e33939ae071399e8fa91899d0295"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/tool-definitions.test.ts",
+   "sha256": "e9728d8721bf3f506fdb84e715016513440bd9cee7225e5a7023c3dc38008cc4"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/grant-filter.test.ts",
+   "sha256": "ecd335043c230f410d57ac30665ed0aa5cb27d699461e80d63f8ad0d0d414e33"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/protected-resource-metadata.test.ts",
+   "sha256": "0e14a2b0f91d393cad5ffae1d16b88082a6d0dd6a69608e8fee21280b8fa5f77"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/list-projects-org-id.test.ts",
+   "sha256": "3e4fbe7986a0ea4cf95f3876dadafcd687db1d8cd5aba24713f53b893b8b181d"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/route-sse-grant.integration.test.ts",
+   "sha256": "b731b756bcca5f231eb48b0f5247f178e3d63a01d53de21b5043e85d3f542f84"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/generated-result.test.ts",
+   "sha256": "de623076e4f8c502324cdaf1579a8711b157953558fd4ca9c6f0be6e4cb21eb3"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/analytics-disable.test.ts",
+   "sha256": "f96ab0219a6f18fcc6fe0d975b6f837f35e1a8ba41232b4449b9a30cb1c5bd1e"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/stable-project-schema.test.ts",
+   "sha256": "88cefa87dd86aeaeed3ba17afe2e0a903a520dcb9abd3b74bada79978e4886f8"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/consent-tools.test.ts",
+   "sha256": "600844ee75560b8a4a2b70780d613ccfe0524491dce57d5c8ce5d14b38f63cd0"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/inspect-targets.test.ts",
+   "sha256": "f85fb17de015d3caac4831c4e17f89023446bff3793507182876490a8775c6f6"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/consent-mode.test.ts",
+   "sha256": "4461d73e31d6b64ead3b740fc42539e9547bab0035c40312315ae91007eefc01"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/tool-call-user-agent.integration.test.ts",
+   "sha256": "ef73c4dd87c40b253a141d13c098e97023dc8b3fc88dabf01bd9c7365f43995b"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/oauth-register-route.integration.test.ts",
+   "sha256": "362f310c8fc54b41802c5c8e969dcba7343d839ec5844a73e1ccaa51bf029b0f"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/session-binding.integration.test.ts",
+   "sha256": "6ba532a2a6a142c64c85f9128534cb2a17593a932deb05bd1473a80052f95106"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/mcp-server.e2e.test.ts",
+   "sha256": "f5cc04b5b349c6df44f33125538ffe45a1c0158157b6361f09be9e5cdb05b6c5"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/consent-dialog.test.ts",
+   "sha256": "e1e428f435755afbf1fa66c75a985d863c8db1b9bb75eb6939c45632d1680be2"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/project-scoped-injection.integration.test.ts",
+   "sha256": "42a3d299c0f151dd105e9872a62806f2d2af0390e1030d4d0dc08ae7ec0b9def"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/refresh-lock.test.ts",
+   "sha256": "aa617215d9401a308cb386b22f1e0b6485bc6ddbe3590beb290803eb4e3e27f6"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/inspect-queries.test.ts",
+   "sha256": "2aafaa24116122e26e640f1df11804ebdf411b7ec64f994cd202d8a4af3598c3"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/connection-string.test.ts",
+   "sha256": "e1c49e7fff844069856bf2207478d5e46996db5142ae0f18936671d0a4b3e492"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/token-refresh.integration.test.ts",
+   "sha256": "23fc45ce8dc533f69d44c60d47c1fa98f482773ff05f26f23421dc7785fed00b"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/inspect-report.test.ts",
+   "sha256": "ad5e4c2b254a422d09104ba199304c29806b40de948ab35c59d9279b71f38156"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/session-binding.test.ts",
+   "sha256": "e6fc95d7a3ad2159db4959bd308f71791e5d28ab691055e6bae19c01795951c9"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/consent-approval.test.ts",
+   "sha256": "0ad7415ce519b560f1abb56050f3ec5eb225f31841373d471aca20984d5f19ca"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/pg-connect-retry.test.ts",
+   "sha256": "672064b8acfb9e4866a10824c595f980f288333467d960628e4939b4cf504edf"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/list-tools-endpoint.test.ts",
+   "sha256": "b18fa86b7e46a18fecbb5fee7cf254d5151bbbd0ff9d84bf4fe2298b2f46169d"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/grant-context.test.ts",
+   "sha256": "de2180fdb5d4318e657d6e0264238a65e395d3342f0675937a3aea9c4bae1e5a"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/transport-dynamic-tools.integration.test.ts",
+   "sha256": "27e40c64d2ade705173f7588dc5b7826fabfe1182729a6291c0d6060fa336746"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/browser-binding.test.ts",
+   "sha256": "61a834974a8300bdc0f6b9235a026a6a47fe047362cd0ce6c401129047c0e65c"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/redirect-uri.test.ts",
+   "sha256": "09e5aba074eb05189b839e3e5461d6067f11dba760ce9e04790540cf7003eb1d"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/docs-tools.integration.test.ts",
+   "sha256": "7227828b4e03663e7da3e2a0efc7eae266672bf622f394ff9a249e84c3e170d0"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/oauth-callback-route.integration.test.ts",
+   "sha256": "ac24f1e106a9ea29813d962b01a43475f79c0ec3c84b2f5f6b5bb34dc8f5bbc7"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/live/mcp-server.live.e2e.test.ts",
+   "sha256": "3eb4409541e44896aee65bc7a219dece872b5df868537d118b2f8402e04adcfb"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/helpers/neon-auth-mocks.ts",
+   "sha256": "5d4d170eed9bf31a2c33f74d63094c0757476a0ddedc18c22c69415b05d2cb29"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/__snapshots__/hosted-tools-list.json",
+   "sha256": "e6176fdbccf5dd1f62d3161b68f8ae022f7a35f615aabf818f507e575a5148db"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/__tests__/__snapshots__/hosted-tools-catalog.md",
+   "sha256": "8cffd70fa863378ca030df41e8d02598becbde9d82b9804f30535d6908e4d285"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/sentry/instrument.ts",
+   "sha256": "bed8d5561d99319d89ab82d62e28df64606d4acc660f58eaadc0ad65863c1ace"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/sentry/utils.ts",
+   "sha256": "665e0ec9ae6fd70734a8e234b1eba7e098b68ecf659951a6471292e7bc54db04"
+  },
+  {
+   "path": "gh/neondatabase_mcp-server-neon/mcp/analytics/analytics.ts",
+   "sha256": "11e2d6919c703e42ed1d6217e79a5dd78eaf889971807970eef7b2fee839688f"
+  }
+ ],
+ "july_quote_check": [
+  {
+   "july_quote": "      - Clean up temporary branch\n      - DO NOT attempt any other tools or alternatives",
+   "july_channel": "tool_description:prepare_query_tuning",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "- external: Use external provider (Clerk, Auth0, Stytch)",
+   "july_channel": "tool_description:provision_neon_data_api",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "- neon_auth: Use Neon Auth (recommended)",
+   "july_channel": "tool_description:provision_neon_data_api",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "After a failed retry, you must terminate the current flow completely. Do not attempt to use alternative tools or workarounds.",
+   "july_channel": "tool_description:prepare_database_migration",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "Always use `complete_query_tuning` to ensure changes are properly tracked and applied.",
+   "july_channel": "tool_description:prepare_query_tuning",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "DO NOT attempt any other tools or alternatives",
+   "july_channel": "tool_description:prepare_database_migration",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "DO NOT use `prepare_database_migration` tool for applying query tuning changes.",
+   "july_channel": "tool_description:prepare_query_tuning",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "Do not guess documentation page slugs — use this index to find them",
+   "july_channel": "tool_description:list_docs_resources",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "Do not use for projects shared with you (use `list_shared_projects` instead)",
+   "july_channel": "tool_description:list_projects",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "Do not use for projects shared with you (use `list_shared_projects` instead).",
+   "july_channel": "tool_description:list_projects",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "IMPORTANT: Your response MUST NOT contain ANY technical implementation details such as:",
+   "july_channel": "tool_description:prepare_database_migration",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "If someone is trying to create a database, use this tool.",
+   "july_channel": "tool_description:create_project",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "Important: After a failed retry, you must terminate the current flow completely. Do not attempt to use alternative tools or workarounds.",
+   "july_channel": "tool_description:prepare_database_migration",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "Keep the response focused ONLY on confirming the high-level change and requesting approval.",
+   "july_channel": "tool_description:prepare_database_migration",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "Neon Auth is a managed authentication service built on Better Auth, fully integrated into the Neon platform.",
+   "july_channel": "tool_description:provision_neon_auth",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "This tool is the ONLY way to finally apply changes after the `prepare_query_tuning` tool to the main branch.",
+   "july_channel": "tool_description:complete_query_tuning",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "Use this tool to execute a single SQL statement against a Neon database.",
+   "july_channel": "tool_description:run_sql",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "You MUST NOT use `prepare_database_migration` or other tools to apply query tuning changes.",
+   "july_channel": "tool_description:complete_query_tuning",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "neon_auth: Use Neon Auth (recommended)",
+   "july_channel": "tool_description:provision_neon_data_api",
+   "status_now": "not_found_verbatim"
+  }
+ ],
+ "steering_marker_sentences_now": [
+  "May be omitted when the connection is scoped to one project; if provided, it must match that project.';",
+  "The MCP server is currently configured with read-only permissions.",
+  "Neon resources stay read-only:",
+  "the remaining tools only read them (for example, read-only SQL queries).",
+  "If the user requests changes to Neon resources, inform them about the read-only configuration.",
+  "The user can remove read-only mode by removing the readonly query param from the MCP server URL, then authorizing again when using OAuth.',",
+  "true`, NEVER invoke autonomously; always ask the user first.',",
+  "For tools with `project_id`, always pass it on an unscoped connection, even though the published schema marks it optional.",
+  "A connection scoped to one project supplies it automatically when omitted; an explicit value must match the granted project.",
+  "Read-only filtering (strips non-readOnlySafe tools when read-only is active)",
+  "'Only the \"send_feedback\" tool is available.'",
+  "'Only the \"search\", \"fetch\", and \"send_feedback\" tools are available.';",
+  "-- First show all databases",
+  "Filter organizations by managed_by==console, if there is only one organization, return that",
+  "If there are no organizations managed by console, and if there is only one organization (unfiltered), then return that organization",
+  "If not provided, the default ${NEON_DEFAULT_DATABASE_NAME} or first available database is used.`;",
+  "If you have used a specific role in prepare_query_tuning you MUST pass the same role again to this tool.",
+  "Per-database ranking and SQL caps are applied first.",
+  "The response reports how many rows the check produced and whether they were truncated, so raise this only when `truncated` is true.",
+  "Use the list_docs_resources tool first to discover available slugs.\",",
+  "You MUST pass ALL these values to complete_database_migration:",
+  "You MUST follow these steps:",
+  "NEVER run destructive SQL autonomously; always ask the user first.',",
+  "Do not use when you need all tables in a database (use `get_database_tables` instead).',",
+  "Do not use when you need column-level detail for a specific table (use `describe_table_schema` instead).',",
+  "Test with run_sql on that branch, ask the user, then complete_database_migration — even if they reject, so the temporary branch is deleted.",
+  "NEVER run autonomously; always ask the user first.",
+  "Do not use when you only need table names (use `get_database_tables` instead) or column detail (use `describe_table_schema` instead).',",
+  "The branch must have a compute endpoint.",
+  "the connection string carries a privileged role password, so it is unavailable in read-only mode.",
+  "A read-only caller who needs a DATABASE_URL must copy it from https://console.neon.tech manually.',",
+  "Requires provision_neon_auth first.',",
+  "Never analyze potentially destructive SQL autonomously.",
+  "Do not use when you need query results (use `run_sql` instead).',",
+  "Do not use prepare_database_migration.',",
+  "NEVER run autonomously.",
+  "Call this even when the user rejects the changes.",
+  "'List queries from pg_stat_statements by execution time, slowest first.",
+  "\"Run one read-only neon inspect db check (pick `check` from the input schema).",
+  "Query must be at least 3 characters.",
+  "Do not use when you need all projects (use \\`list_projects\\` instead).`,",
+  "Only call this when the user asks to give feedback.",
+  "Sends only the feedback text, not account, project, or connection details.',",
+  "Pass \\`logql\\` instead of structured filters, not with them.",
+  "\\`preserve_under_name\\` saves the current state first and is required when the branch has children; those children move to the new branch.",
+  "Pass \\`lsn\\`, \\`timestamp\\`, \\`base_lsn\\`, or \\`base_timestamp\\` only for a point-in-time comparison.`;",
+  "The first deployment must include \\`zip\\`.`;",
+  "Call \\`list_log_fields\\` first for \\`field_name\\`; a field the branch has never emitted returns \\`unknown_field\\`.",
+  "throw new Error('Generated tool input must be an object');",
+  "throw new Error('org_id must be a string');",
+  "Use provision_neon_auth first.'",
+  "Record<string, never>;",
+  "Installing it writes to the user's database, so ask the user first, then run \\`CREATE EXTENSION IF NOT EXISTS ${query.requiresExtension};\\` with run_sql.`,",
+  "'Please provide a project ID or ensure you have only one project in your account.',",
+  "The docs-only endpoint is anonymous, so this is a reachable",
+  "slug must not start with \"/\"',",
+  "a stalled feedback service must not hold a",
+  "Only the message and",
+  "`client_secret` is never echoed back.",
+  "return `Showing the first ${limit} of ${totalRowCount} rows, which cover only the databases ${covered} (of ${ran.length}).",
+  "return `Showing the first ${limit} of ${totalRowCount} rows.",
+  "return `Showing the first ${limit} of ${totalRowCount} rows, which is the maximum this tool returns.",
+  "Each entry is a read-only",
+  "/** The read-only SQL to execute.",
+  "/** Explanation to return instead of an empty row set.",
+  "'Size of each table (including TOAST), largest first (pg_table_size)',",
+  "'Size of each index, largest first (pg_relation_size)',",
+  "'Active queries running longer than 30 seconds with parallel-worker grouping, waits, and blockers, oldest query group first (compute-wide)',",
+  "ORDER BY g.group_start, g.query_group, a.leader_pid NULLS FIRST, a.pid;",
+  "/** Ceiling on `limit`, so a diagnostic can never return an unbounded response.",
+  "import { isReadOnly } from '../utils/read-only';",
+  "Surfaces on the auth-callback critical path because the",
+  "id TEXT PRIMARY KEY,",
+  "On the first poll iteration where",
+  "import { hasWriteScope } from '../utils/read-only';",
+  "import { SCOPE_DEFINITIONS } from '../utils/read-only';",
+  "const badge = tool.writeOnly",
+  "' <span class=\"write-badge\">write</span>'",
+  "return `<li${writeAttr}>${he.escape(tool.title)}${badge}</li>`;",
+  "<p class=\"sr-only\" data-access-mode data-write-enabled=\"${writeChecked}\" aria-live=\"polite\">${mode}</p>",
+  "<span>Read only</span>",
+  "const always = JSON.stringify(",
+  "var ALWAYS = ${always};",
+  "if (grant.scopes.length === 0) return !!ALWAYS[tool.name];",
+  "if (ALWAYS[tool.name]) return true;",
+  "var badge = tool.writeOnly ?",
+  "' <span class=\"write-badge\">write</span>' :",
+  "return '<li' + writeAttr + '>' + tool.title + badge + '</li>';",
+  "none !important; }",
+  ".write-badge { margin-left:",
+  ".sr-only { position:",
+  ".button-primary { border:",
+  ".button-primary:hover { background:",
+  "<button type=\"submit\" class=\"button button-primary\" name=\"action\" value=\"approve\">Approve</button>",
+  "Used between retry attempts because `withTimeout` only races",
+  "Critical because `withTimeout` only races a timer — it",
+  "Operations must be idempotent —",
+  "typeof primary === 'string' && primary.length > 0 ?",
+  "Length must be `attempts - 1`.",
+  "The first caller executes `fn`;",
+  "'View Neon resources and run read-only queries',",
+  "/** Value of the legacy x-read-only header (backwards-compatible synonym).",
+  "readonly query param > x-read-only header > OAuth scope > default (false)",
+  "x-read-only header (legacy)"
+ ]
+}

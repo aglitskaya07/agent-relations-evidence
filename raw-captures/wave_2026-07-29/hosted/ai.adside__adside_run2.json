@@ -1,0 +1,39 @@
+{
+ "url": "https://api.adside.ai/mcp",
+ "capture_utc": "2026-07-29T12:37:11.586522+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "content-type": "application/json",
+    "date": "Wed, 29 Jul 2026 12:37:12 GMT",
+    "server": "railway-hikari",
+    "www-authenticate": "Bearer error=\"invalid_token\", resource_metadata=\"https://api.adside.ai/.well-known/oauth-protected-resource\"",
+    "x-railway-request-id": "25A9mL4RQKmb5fH9Cx5-qw",
+    "content-length": "54",
+    "x-hikari-trace": "otp1.xryw",
+    "x-railway-edge": "otp1"
+   },
+   "body_raw": "{\"error\":\"missing bearer token\",\"code\":\"UNAUTHORIZED\"}"
+  }
+ ]
+}

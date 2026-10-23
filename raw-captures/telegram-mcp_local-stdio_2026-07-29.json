@@ -1,0 +1,11 @@
+{
+ "server": "telegram-mcp (local, uv run main.py)",
+ "capture_utc": "2026-07-29T09:48:39.580506+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "responses_raw": [],
+ "server_info": null,
+ "instructions": null
+}

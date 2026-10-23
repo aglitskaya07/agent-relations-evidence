@@ -1,0 +1,42 @@
+{
+ "url": "https://mcp.adweave.ai/meta-ads-mcp",
+ "capture_utc": "2026-07-29T12:05:46.345819+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "access-control-allow-origin": "*",
+    "access-control-allow-methods": "GET, POST, DELETE, OPTIONS",
+    "access-control-allow-headers": "Content-Type, Authorization, Mcp-Session-Id, Last-Event-ID, Mcp-Protocol-Version",
+    "access-control-expose-headers": "WWW-Authenticate, Mcp-Session-Id",
+    "access-control-max-age": "86400",
+    "www-authenticate": "Bearer realm=\"mcp\", resource_metadata=\"https://mcp.adweave.ai/.well-known/oauth-protected-resource\"",
+    "content-type": "application/json",
+    "x-cloud-trace-context": "90d449ed7a5d773413196e6ac9d28e0a",
+    "date": "Wed, 29 Jul 2026 12:05:46 GMT",
+    "server": "Google Frontend",
+    "content-length": "34"
+   },
+   "body_raw": "{\"error\":\"Authorization required\"}"
+  }
+ ]
+}

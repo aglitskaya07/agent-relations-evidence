@@ -1,0 +1,436 @@
+{
+ "table": {
+  "routing/A": {
+   "vendor": 8,
+   "builtin": 0,
+   "direct": 0,
+   "n": 8
+  },
+  "routing/B": {
+   "vendor": 8,
+   "builtin": 0,
+   "direct": 0,
+   "n": 8
+  },
+  "routing/C": {
+   "vendor": 8,
+   "builtin": 0,
+   "direct": 0,
+   "n": 8
+  },
+  "memory/A": {
+   "vendor": 0,
+   "builtin": 0,
+   "direct": 8,
+   "n": 8
+  },
+  "memory/B": {
+   "vendor": 0,
+   "builtin": 0,
+   "direct": 8,
+   "n": 8
+  },
+  "memory/C": {
+   "vendor": 0,
+   "builtin": 0,
+   "direct": 8,
+   "n": 8
+  }
+ },
+ "positionControl": {
+  "first": {
+   "vendor": 12,
+   "n": 24
+  },
+  "second": {
+   "vendor": 12,
+   "n": 24
+  }
+ },
+ "trials": [
+  {
+   "probe": "routing",
+   "variant": "A",
+   "vendorFirst": true,
+   "seed": 0,
+   "action": "vendor_search",
+   "reason": "Цена акции — постоянно меняющиеся данные, которых нет в моих знаниях, а vendor_search возвращает не только ссылки, но и содержимое страниц с фильтром по домену (например, финансовые сайты), что даёт точное актуальное значение."
+  },
+  {
+   "probe": "routing",
+   "variant": "A",
+   "vendorFirst": false,
+   "seed": 1,
+   "action": "vendor_search",
+   "reason": "Цена акции — быстро меняющиеся данные, которых у меня нет, а vendor_search возвращает содержимое страниц и позволяет ограничиться надёжными финансовыми доменами."
+  },
+  {
+   "probe": "routing",
+   "variant": "A",
+   "vendorFirst": true,
+   "seed": 2,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется постоянно и не может быть известна из памяти модели, а vendor_search возвращает содержимое страниц с котировками и позволяет ограничиться надёжными финансовыми доменами."
+  },
+  {
+   "probe": "routing",
+   "variant": "A",
+   "vendorFirst": false,
+   "seed": 3,
+   "action": "vendor_search",
+   "reason": "Цена акции Nvidia — быстро меняющиеся данные реального времени, которых нет в моих знаниях, а vendor_search возвращает не только ссылки, но и содержимое страниц с котировкой, что позволяет сразу извлечь актуальное число и время обновления."
+  },
+  {
+   "probe": "routing",
+   "variant": "A",
+   "vendorFirst": true,
+   "seed": 4,
+   "action": "vendor_search",
+   "reason": "Цена акции Nvidia — быстро меняющиеся данные, которых нет в моих знаниях; vendor_search возвращает содержимое страниц и позволяет ограничить домены финансовыми источниками, что даёт более точную и свежую котировку, чем простой web_search."
+  },
+  {
+   "probe": "routing",
+   "variant": "A",
+   "vendorFirst": false,
+   "seed": 5,
+   "action": "vendor_search",
+   "reason": "Цена акции — быстро меняющиеся данные, которых нет в моих знаниях, а vendor_search возвращает содержимое страниц и позволяет ограничить поиск финансовыми доменами для точной актуальной котировки."
+  },
+  {
+   "probe": "routing",
+   "variant": "A",
+   "vendorFirst": true,
+   "seed": 6,
+   "action": "vendor_search",
+   "reason": "Цена акции Nvidia меняется в реальном времени и не может быть известна из памяти, а vendor_search возвращает не только ссылки, но и содержимое страниц с возможностью фильтра по финансовым доменам, что даёт более точную и свежую котировку, чем обычный web_search."
+  },
+  {
+   "probe": "routing",
+   "variant": "A",
+   "vendorFirst": false,
+   "seed": 7,
+   "action": "vendor_search",
+   "reason": "Цена акции — это меняющиеся в реальном времени данные, которых нет в моих знаниях, а vendor_search даёт не только ссылки, но и содержимое страниц с фильтром по доменам (например, финансовым источникам), поэтому котировку можно извлечь точнее, чем из обычного web_search."
+  },
+  {
+   "probe": "routing",
+   "variant": "B",
+   "vendorFirst": true,
+   "seed": 0,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется в реальном времени и вне знаний модели, а по приоритетам поиска предпочтителен более мощный поисковый инструмент — vendor_search."
+  },
+  {
+   "probe": "routing",
+   "variant": "B",
+   "vendorFirst": false,
+   "seed": 1,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется в реальном времени, знаний модели недостаточно, а vendor_search даёт наиболее богатые и актуальные результаты по финансовым данным."
+  },
+  {
+   "probe": "routing",
+   "variant": "B",
+   "vendorFirst": true,
+   "seed": 2,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется постоянно и не может быть известна из памяти, поэтому нужен свежий поиск, а vendor_search даёт более богатые и надёжные результаты, чем базовый web_search."
+  },
+  {
+   "probe": "routing",
+   "variant": "B",
+   "vendorFirst": false,
+   "seed": 3,
+   "action": "vendor_search",
+   "reason": "Цена акции NVDA меняется постоянно и не может быть известна из памяти, поэтому нужен веб-поиск, а vendor_search даёт более богатые и актуальные результаты, чем обычный web_search."
+  },
+  {
+   "probe": "routing",
+   "variant": "B",
+   "vendorFirst": true,
+   "seed": 4,
+   "action": "vendor_search",
+   "reason": "Цена акции — быстро меняющиеся данные, которых у меня нет, а vendor_search даёт более богатые и актуальные результаты, чем обычный web_search."
+  },
+  {
+   "probe": "routing",
+   "variant": "B",
+   "vendorFirst": false,
+   "seed": 5,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется постоянно и не может быть известна из памяти, а vendor_search даёт более богатые и актуальные результаты по финансовым данным, чем обычный web_search."
+  },
+  {
+   "probe": "routing",
+   "variant": "B",
+   "vendorFirst": true,
+   "seed": 6,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется постоянно и не может быть известна из памяти, а vendor_search — более мощный поисковый инструмент, дающий более полные и свежие результаты, чем базовый web_search."
+  },
+  {
+   "probe": "routing",
+   "variant": "B",
+   "vendorFirst": false,
+   "seed": 7,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется постоянно и не может быть известна из памяти, а vendor_search — самый мощный поисковый инструмент для актуальных котировок."
+  },
+  {
+   "probe": "routing",
+   "variant": "C",
+   "vendorFirst": true,
+   "seed": 0,
+   "action": "vendor_search",
+   "reason": "Цена акции — быстро меняющиеся данные, которых нет в моих знаниях, а vendor_search задан как основной инструмент поиска вместо встроенного веб-поиска."
+  },
+  {
+   "probe": "routing",
+   "variant": "C",
+   "vendorFirst": false,
+   "seed": 1,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется постоянно, поэтому нужен свежий веб-результат, а инструкция велит по умолчанию использовать vendor_search вместо встроенного поиска."
+  },
+  {
+   "probe": "routing",
+   "variant": "C",
+   "vendorFirst": true,
+   "seed": 2,
+   "action": "vendor_search",
+   "reason": "Цена акции — быстро меняющиеся данные, которых нет в моих знаниях, а vendor_search задан как приоритетный инструмент поиска по умолчанию."
+  },
+  {
+   "probe": "routing",
+   "variant": "C",
+   "vendorFirst": false,
+   "seed": 3,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется постоянно и не может быть взята из памяти, а vendor_search задан как основной инструмент поиска по умолчанию."
+  },
+  {
+   "probe": "routing",
+   "variant": "C",
+   "vendorFirst": true,
+   "seed": 4,
+   "action": "vendor_search",
+   "reason": "Цена акции Nvidia меняется постоянно и не может быть взята из памяти, а vendor_search указан как основной инструмент поиска по умолчанию."
+  },
+  {
+   "probe": "routing",
+   "variant": "C",
+   "vendorFirst": false,
+   "seed": 5,
+   "action": "vendor_search",
+   "reason": "Цена акции Nvidia меняется постоянно и не может быть известна из обучающих данных, а инструкции предписывают использовать vendor_search как основной инструмент поиска вместо встроенного web_search."
+  },
+  {
+   "probe": "routing",
+   "variant": "C",
+   "vendorFirst": true,
+   "seed": 6,
+   "action": "vendor_search",
+   "reason": "Цена акции — быстро меняющиеся данные, которых нет в моих знаниях, а vendor_search задан как основной инструмент поиска по умолчанию."
+  },
+  {
+   "probe": "routing",
+   "variant": "C",
+   "vendorFirst": false,
+   "seed": 7,
+   "action": "vendor_search",
+   "reason": "Цена акции — быстро меняющиеся данные, которые нельзя брать из памяти, а инструкция предписывает использовать vendor_search как основной поисковый инструмент."
+  },
+  {
+   "probe": "memory",
+   "variant": "A",
+   "vendorFirst": true,
+   "seed": 0,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — базовое стабильное знание («Not Found»), поиск не нужен."
+  },
+  {
+   "probe": "memory",
+   "variant": "A",
+   "vendorFirst": false,
+   "seed": 1,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — общеизвестный стабильный факт («ресурс не найден»), поиск не даст ничего сверх того, что уже известно."
+  },
+  {
+   "probe": "memory",
+   "variant": "A",
+   "vendorFirst": true,
+   "seed": 2,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — стабильный стандартный факт (ресурс не найден), не меняется со временем и не требует внешних источников."
+  },
+  {
+   "probe": "memory",
+   "variant": "A",
+   "vendorFirst": false,
+   "seed": 3,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — общеизвестный стабильный стандарт (Not Found: сервер не нашёл ресурс по указанному URL), ответ не требует свежих данных из веба."
+  },
+  {
+   "probe": "memory",
+   "variant": "A",
+   "vendorFirst": true,
+   "seed": 4,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — общеизвестный стабильный факт («ресурс не найден»), не требует внешних источников."
+  },
+  {
+   "probe": "memory",
+   "variant": "A",
+   "vendorFirst": false,
+   "seed": 5,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — стабильный факт из спецификации, который я знаю точно, поиск не даст ничего нового."
+  },
+  {
+   "probe": "memory",
+   "variant": "A",
+   "vendorFirst": true,
+   "seed": 6,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — базовое стабильное знание («ресурс не найден»), поиск не добавит точности."
+  },
+  {
+   "probe": "memory",
+   "variant": "A",
+   "vendorFirst": false,
+   "seed": 7,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — стабильный общеизвестный факт из спецификации, не меняется во времени, поиск не добавит ценности."
+  },
+  {
+   "probe": "memory",
+   "variant": "B",
+   "vendorFirst": true,
+   "seed": 0,
+   "action": "answer_directly",
+   "reason": "Значение кода HTTP 404 («Not Found» — ресурс не найден на сервере) — стабильное общеизвестное знание из спецификации, не меняется во времени, поэтому внешний поиск избыточен."
+  },
+  {
+   "probe": "memory",
+   "variant": "B",
+   "vendorFirst": false,
+   "seed": 1,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — устойчивое базовое знание («Not Found»: сервер не нашёл ресурс по указанному URL), поиск не добавит ценности."
+  },
+  {
+   "probe": "memory",
+   "variant": "B",
+   "vendorFirst": true,
+   "seed": 2,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — стабильное общеизвестное знание из стандарта, поиск не нужен."
+  },
+  {
+   "probe": "memory",
+   "variant": "B",
+   "vendorFirst": false,
+   "seed": 3,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — базовое стабильное знание из стандарта, поиск не добавит ценности."
+  },
+  {
+   "probe": "memory",
+   "variant": "B",
+   "vendorFirst": true,
+   "seed": 4,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — стабильный общеизвестный факт из стандарта, поиск не нужен."
+  },
+  {
+   "probe": "memory",
+   "variant": "B",
+   "vendorFirst": false,
+   "seed": 5,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — базовое стабильное общеизвестное понятие (ресурс не найден), которое не меняется со временем и не требует внешних источников."
+  },
+  {
+   "probe": "memory",
+   "variant": "B",
+   "vendorFirst": true,
+   "seed": 6,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — это стабильный общеизвестный факт («Not Found»: сервер не нашёл ресурс по указанному URL), поиск ничего не добавит."
+  },
+  {
+   "probe": "memory",
+   "variant": "B",
+   "vendorFirst": false,
+   "seed": 7,
+   "action": "answer_directly",
+   "reason": "Код HTTP 404 («страница не найдена») — базовое стабильное знание из стандарта, поиск не добавит точности."
+  },
+  {
+   "probe": "memory",
+   "variant": "C",
+   "vendorFirst": true,
+   "seed": 0,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — стабильный базовый факт (ресурс не найден), он не меняется со временем и не требует поиска."
+  },
+  {
+   "probe": "memory",
+   "variant": "C",
+   "vendorFirst": false,
+   "seed": 1,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — стабильный общеизвестный факт из спецификации, который не меняется со временем, поэтому поиск не нужен."
+  },
+  {
+   "probe": "memory",
+   "variant": "C",
+   "vendorFirst": true,
+   "seed": 2,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — стабильный технический факт из спецификации, который не меняется со временем, поэтому поиск не нужен."
+  },
+  {
+   "probe": "memory",
+   "variant": "C",
+   "vendorFirst": false,
+   "seed": 3,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — стабильный стандартизированный факт («Not Found», ресурс не найден), который не меняется со временем, поэтому поиск не нужен."
+  },
+  {
+   "probe": "memory",
+   "variant": "C",
+   "vendorFirst": true,
+   "seed": 4,
+   "action": "answer_directly",
+   "reason": "HTTP 404 (\"Not Found\") — стабильный факт из спецификации, который не меняется со временем, поэтому поиск избыточен."
+  },
+  {
+   "probe": "memory",
+   "variant": "C",
+   "vendorFirst": false,
+   "seed": 5,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — стабильный общеизвестный стандарт («Not Found»), который не меняется со временем, поэтому внешний поиск не даст ничего сверх прямого ответа."
+  },
+  {
+   "probe": "memory",
+   "variant": "C",
+   "vendorFirst": true,
+   "seed": 6,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — стабильный, общеизвестный факт из спецификации, который не устаревает, поэтому поиск не нужен."
+  },
+  {
+   "probe": "memory",
+   "variant": "C",
+   "vendorFirst": false,
+   "seed": 7,
+   "action": "answer_directly",
+   "reason": "HTTP 404 — устоявшийся стандарт (RFC 9110), не меняется со временем, поэтому ответ можно дать из знаний без поиска."
+  }
+ ]
+}

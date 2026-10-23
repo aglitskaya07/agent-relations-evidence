@@ -1,0 +1,37 @@
+{
+ "url": "https://mcp.anysite.io/mcp",
+ "capture_utc": "2026-07-29T09:46:47.022535+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "date": "Wed, 29 Jul 2026 09:46:47 GMT",
+    "content-type": "application/json",
+    "content-length": "110",
+    "set-cookie": "mcp_session=1785318408.469.2059.373693|4a3f002375cd66d7137cd7f2672fb645; Max-Age=86400; Path=/; Secure; HttpOnly; SameSite=Lax",
+    "www-authenticate": "Bearer",
+    "strict-transport-security": "max-age=31536000; includeSubDomains"
+   },
+   "body_raw": "{\"error\": \"unauthorized\", \"message\": \"Authentication required. Include Authorization: Bearer <token> header.\"}"
+  }
+ ]
+}

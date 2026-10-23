@@ -1,0 +1,54 @@
+{
+ "url": "https://mcp.postman.com/mcp",
+ "capture_utc": "2026-10-05T13:24:27.125297+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "Date": "Mon, 05 Oct 2026 13:24:30 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Content-Length": "97",
+    "Connection": "close",
+    "access-control-allow-origin": "*",
+    "content-security-policy": "default-src 'self';style-src 'self' https://fonts.googleapis.com 'unsafe-inline';font-src 'self' https://fonts.gstatic.com;connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;script-src 'self';img-src 'self' data:;frame-ancestors 'none';base-uri 'self';object-src 'none';script-src-attr 'none';upgrade-insecure-requests",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "origin-agent-cluster": "?1",
+    "referrer-policy": "no-referrer",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-content-type-options": "nosniff",
+    "x-dns-prefetch-control": "off",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-permitted-cross-domain-policies": "none",
+    "x-xss-protection": "0",
+    "www-authenticate": "Bearer resource_metadata=\"https://mcp.postman.com/.well-known/oauth-protected-resource/mcp\"",
+    "etag": "W/\"61-c1gmVVSumCmbYKMBS/0Fs4Y4Xe4\"",
+    "set-cookie": "__cf_bm=y_tmw1XpU2BeZetyAZIXbxl_TOprlFjTJhsfGfkXltQ-1791206670.533916-1.0.1.1-n4eXFiDXo1JT0ZoHVokUK.oMN0GMaiHob2rbstD78kEhHORy6bkMa8WWRBtbOthmKsmj7o3jwMsXo0MyhRuFc3pF0k_HV_dM.bn0Y8Zf7PdGml4tyWrFquCA5OEqPpyd; HttpOnly; SameSite=None; Secure; Path=/; Domain=postman.com; Expires=Mon, 05 Oct 2026 13:54:30 GMT",
+    "cf-cache-status": "DYNAMIC",
+    "Server": "cloudflare",
+    "CF-RAY": "a45cbf3ad8949e1f-LAX"
+   },
+   "body_raw": "{\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32600,\"message\":\"Invalid Request: API key required\"},\"id\":null}"
+  }
+ ]
+}

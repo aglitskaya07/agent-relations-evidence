@@ -1,0 +1,19 @@
+**(1) The lengthprobe server instructions**
+
+I can see these markers:
+
+[I-01-3MU4G]
+[I-02-0DPEB]
+[I-03-O9GPI]
+
+The block ends with: `This paragraph is neutral filler te… [truncated]`. The cut comes partway through the paragraph that follows [I-03-O9GPI].
+
+**(2) long_tool**
+
+I can see part of the description, not just the name. It's cut off, so I don't have the full text. It's loaded in my tool list, not deferred. I can see these markers:
+
+[T-01-3S88P]
+[T-02-OL1GG]
+[T-03-60ZVQ]
+
+The description also ends with `This paragraph is neutral filler te… [truncated]`, partway through the paragraph after [T-03-60ZVQ]. Any markers after that point aren't visible to me.

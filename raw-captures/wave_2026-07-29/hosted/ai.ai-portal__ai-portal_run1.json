@@ -1,0 +1,219 @@
+{
+ "url": "https://www.ai-portal.ai/mcp",
+ "capture_utc": "2026-07-29T12:05:48.390219+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 200,
+   "headers": {
+    "access-control-allow-headers": "Content-Type, Accept, Mcp-Protocol-Version, Mcp-Session-Id",
+    "access-control-allow-methods": "GET, POST, OPTIONS",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "Mcp-Session-Id, Mcp-Protocol-Version",
+    "cache-control": "public, max-age=0, must-revalidate",
+    "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://i.ytimg.com https://img.youtube.com; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://www.google-analytics.com https://analytics.google.com; frame-src https://www.youtube.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests",
+    "content-type": "application/json",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Wed, 29 Jul 2026 12:05:48 GMT",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "server": "Vercel",
+    "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+    "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-matched-path": "/mcp",
+    "x-vercel-cache": "MISS",
+    "x-vercel-id": "cdg1::iad1::rnlsg-1785326748573-e4e0001f9a40"
+   },
+   "body_raw": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{\"tools\":{\"listChanged\":false}},\"serverInfo\":{\"name\":\"ai-portal\",\"title\":\"AI-Portal — Enterprise GenAI Briefing\",\"version\":\"1.0.0\"},\"instructions\":\"Read-only tools over AI-Portal data (https://www.ai-portal.ai): AI model releases, AI regulations, a GenAI glossary, and daily curated GenAI news. Use list_releases for \\\"when did model X ship / what did provider Y release\\\", list_regulations for AI compliance status, search_glossary for term definitions, and get_latest_news for current GenAI headlines.\"}}"
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "method": "notifications/initialized"
+   },
+   "status": 202,
+   "headers": {
+    "access-control-allow-headers": "Content-Type, Accept, Mcp-Protocol-Version, Mcp-Session-Id",
+    "access-control-allow-methods": "GET, POST, OPTIONS",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "Mcp-Session-Id, Mcp-Protocol-Version",
+    "cache-control": "public, max-age=0, must-revalidate",
+    "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://i.ytimg.com https://img.youtube.com; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://www.google-analytics.com https://analytics.google.com; frame-src https://www.youtube.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Wed, 29 Jul 2026 12:05:49 GMT",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "server": "Vercel",
+    "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+    "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-matched-path": "/mcp",
+    "x-vercel-cache": "MISS",
+    "x-vercel-id": "cdg1::iad1::p9kdf-1785326749078-b7141231aa1e",
+    "content-length": "0"
+   },
+   "body_raw": ""
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "method": "tools/list"
+   },
+   "status": 200,
+   "headers": {
+    "access-control-allow-headers": "Content-Type, Accept, Mcp-Protocol-Version, Mcp-Session-Id",
+    "access-control-allow-methods": "GET, POST, OPTIONS",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "Mcp-Session-Id, Mcp-Protocol-Version",
+    "cache-control": "public, max-age=0, must-revalidate",
+    "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://i.ytimg.com https://img.youtube.com; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://www.google-analytics.com https://analytics.google.com; frame-src https://www.youtube.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests",
+    "content-type": "application/json",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Wed, 29 Jul 2026 12:05:49 GMT",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "server": "Vercel",
+    "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+    "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-matched-path": "/mcp",
+    "x-vercel-cache": "MISS",
+    "x-vercel-id": "cdg1::iad1::8cbkz-1785326749376-60613e4cc344"
+   },
+   "body_raw": "{\"jsonrpc\":\"2.0\",\"id\":2,\"result\":{\"tools\":[{\"name\":\"list_releases\",\"title\":\"List AI model releases\",\"description\":\"List AI model and product releases tracked by AI-Portal, newest first. Filter by category, provider, year, or landmark releases only.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"category\":{\"type\":\"string\",\"enum\":[\"llm\",\"multimodal\",\"image\",\"video\",\"tool\",\"framework\"],\"description\":\"Release category\"},\"provider\":{\"type\":\"string\",\"description\":\"Provider name substring, e.g. \\\"anthropic\\\", \\\"google\\\"\"},\"year\":{\"type\":\"string\",\"description\":\"Four-digit year, e.g. \\\"2026\\\"\"},\"landmark_only\":{\"type\":\"boolean\",\"description\":\"Only landmark (major) releases\"},\"limit\":{\"type\":\"number\",\"description\":\"Max items to return (default 25, max 100)\"}}}},{\"name\":\"list_regulations\",\"title\":\"List AI regulations\",\"description\":\"List AI regulations and their compliance status (EU AI Act, ISO 42001, and more), including jurisdiction, effective dates, key requirements, and fines.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"status\":{\"type\":\"string\",\"enum\":[\"In Force\",\"Transitional\",\"Draft\",\"Proposed\"],\"description\":\"Filter by status\"},\"jurisdiction\":{\"type\":\"string\",\"description\":\"Jurisdiction substring, e.g. \\\"european\\\", \\\"israel\\\"\"}}}},{\"name\":\"search_glossary\",\"title\":\"Search the AI glossary\",\"description\":\"Search AI-Portal's glossary of AI/GenAI terms. Returns term, definition, category, and a usage example.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"query\":{\"type\":\"string\",\"description\":\"Search text, matched against term, abbreviation, and definition\"},\"category\":{\"type\":\"string\",\"enum\":[\"fundamentals\",\"architecture\",\"training\",\"deployment\",\"safety\",\"agents\",\"evaluation\"]}},\"required\":[\"query\"]}},{\"name\":\"get_latest_news\",\"title\":\"Get latest GenAI news\",\"description\":\"Latest curated GenAI news items from AI-Portal, refreshed every weekday morning.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"limit\":{\"type\":\"number\",\"description\":\"Max items to return (default 10, max 30)\"}}}}]}}"
+  }
+ ],
+ "server_info": {
+  "name": "ai-portal",
+  "title": "AI-Portal — Enterprise GenAI Briefing",
+  "version": "1.0.0"
+ },
+ "instructions": "Read-only tools over AI-Portal data (https://www.ai-portal.ai): AI model releases, AI regulations, a GenAI glossary, and daily curated GenAI news. Use list_releases for \"when did model X ship / what did provider Y release\", list_regulations for AI compliance status, search_glossary for term definitions, and get_latest_news for current GenAI headlines.",
+ "tools": [
+  {
+   "name": "list_releases",
+   "title": "List AI model releases",
+   "description": "List AI model and product releases tracked by AI-Portal, newest first. Filter by category, provider, year, or landmark releases only.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "category": {
+      "type": "string",
+      "enum": [
+       "llm",
+       "multimodal",
+       "image",
+       "video",
+       "tool",
+       "framework"
+      ],
+      "description": "Release category"
+     },
+     "provider": {
+      "type": "string",
+      "description": "Provider name substring, e.g. \"anthropic\", \"google\""
+     },
+     "year": {
+      "type": "string",
+      "description": "Four-digit year, e.g. \"2026\""
+     },
+     "landmark_only": {
+      "type": "boolean",
+      "description": "Only landmark (major) releases"
+     },
+     "limit": {
+      "type": "number",
+      "description": "Max items to return (default 25, max 100)"
+     }
+    }
+   }
+  },
+  {
+   "name": "list_regulations",
+   "title": "List AI regulations",
+   "description": "List AI regulations and their compliance status (EU AI Act, ISO 42001, and more), including jurisdiction, effective dates, key requirements, and fines.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "status": {
+      "type": "string",
+      "enum": [
+       "In Force",
+       "Transitional",
+       "Draft",
+       "Proposed"
+      ],
+      "description": "Filter by status"
+     },
+     "jurisdiction": {
+      "type": "string",
+      "description": "Jurisdiction substring, e.g. \"european\", \"israel\""
+     }
+    }
+   }
+  },
+  {
+   "name": "search_glossary",
+   "title": "Search the AI glossary",
+   "description": "Search AI-Portal's glossary of AI/GenAI terms. Returns term, definition, category, and a usage example.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "query": {
+      "type": "string",
+      "description": "Search text, matched against term, abbreviation, and definition"
+     },
+     "category": {
+      "type": "string",
+      "enum": [
+       "fundamentals",
+       "architecture",
+       "training",
+       "deployment",
+       "safety",
+       "agents",
+       "evaluation"
+      ]
+     }
+    },
+    "required": [
+     "query"
+    ]
+   }
+  },
+  {
+   "name": "get_latest_news",
+   "title": "Get latest GenAI news",
+   "description": "Latest curated GenAI news items from AI-Portal, refreshed every weekday morning.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "limit": {
+      "type": "number",
+      "description": "Max items to return (default 10, max 30)"
+     }
+    }
+   }
+  }
+ ]
+}

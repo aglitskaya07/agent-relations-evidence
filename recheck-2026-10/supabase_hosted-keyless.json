@@ -1,0 +1,46 @@
+{
+ "url": "https://mcp.supabase.com/mcp",
+ "capture_utc": "2026-10-05T13:24:16.780473+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "Date": "Mon, 05 Oct 2026 13:24:20 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Content-Length": "26",
+    "Connection": "close",
+    "x-powered-by": "Express",
+    "vary": "Origin",
+    "access-control-allow-credentials": "true",
+    "access-control-expose-headers": "x-connection-encrypted,x-forwarded-for,user-agent,CF-Connecting-IP,Retry-After,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset",
+    "www-authenticate": "Bearer error=\"invalid_request\", error_description=\"No access token was provided in this request\", resource_metadata=\"https://mcp.supabase.com/.well-known/oauth-protected-resource/mcp\"",
+    "etag": "W/\"1a-pljHtlo127JYJR4E/RYOPb6ucbw\"",
+    "cf-cache-status": "DYNAMIC",
+    "set-cookie": "__cf_bm=H2r1puKcY4.ccvISazo82N8jt9r0DsAUyEMlS_xn7Fo-1791206660.268902-1.0.1.1-QpZChRAwOup8g.l5DoHqDCq5Ll863ArAwV4CewBTqBDks.osCbAvsexPFYvHXN3q4NNEPaojDN7sVqJ01FP1vWKkCmXM9w6RI8WiTcxM_YCTKhpAWnQxWRSVMeT8VTB0; HttpOnly; SameSite=None; Secure; Path=/; Domain=supabase.com; Expires=Mon, 05 Oct 2026 13:54:20 GMT",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+    "Server": "cloudflare",
+    "CF-RAY": "a45cbefaac03862c-LAX"
+   },
+   "body_raw": "{\"message\":\"Unauthorized\"}"
+  }
+ ]
+}

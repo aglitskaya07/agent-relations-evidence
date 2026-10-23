@@ -1,0 +1,766 @@
+{
+ "unit_source": "wonderwhy-er/DesktopCommanderMCP",
+ "capture_utc": "2026-10-06T09:53:48.356988+00:00",
+ "method": "static source read (no code executed)",
+ "auth": "none",
+ "server_info": {
+  "repo": "wonderwhy-er/DesktopCommanderMCP",
+  "commit": "c774c3b505de990219637ecdc9a830c8772fae9d 2026-09-29T13:57:37Z"
+ },
+ "source_files_count": 118,
+ "source_files": [
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/command-manager.ts",
+   "sha256": "43d8badc0218b8da1ceb73de02ad99158bdce8cd1ae21d46ea1aef1af922f3ba"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/terminal-manager.ts",
+   "sha256": "c829e4d61bfa801ea702fb38161aa8e48f94acf68259d4cbd880b06a877459e4"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/config-field-definitions.ts",
+   "sha256": "d705dd5bd35fa2bee7129918dc4c44714db4f1cfd3b989e8bf9d3d68b7f2c843"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/custom-stdio.ts",
+   "sha256": "c3b5944ca2e090a5339b02812a934cecd94667768df50c94e174fc2306d47139"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/types.ts",
+   "sha256": "232b3a0e99a9ff6b51f39a3307f7e0a7f760bc728a9f234065185b3b90398c5e"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/search-manager.ts",
+   "sha256": "fd6bd598bfb7feb9693c22345f37cb4b7718a596f170f90f64aa2d37ec860ccf"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/index.ts",
+   "sha256": "854a91a41cf355c18c7d2caf857db2881a3622a0a54e4849d6bc62682907cd6a"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/version.ts",
+   "sha256": "f358b492de5b3b9a70ef2ebfd633a36746775c6fb5c096784211be0d298eedb2"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/config.ts",
+   "sha256": "c5b97f659fddc5068283d047a9614566ce8d9df429cbe75a247eb92b3fbe97a3"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/error-handlers.ts",
+   "sha256": "a2dca6254940d30d5cff61ae81b95a2eebd92e961d28d07f44d25f02228bce52"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/config-manager.ts",
+   "sha256": "8df19817a85c6001d1fa6f19dc493954cdd97b9516250c0e17fbc4ccefe0f95a"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/server.ts",
+   "sha256": "41353b16a5f5936035573c63d91637c26eca7d54e70c9526cf67770435cf3401"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/bootstrap.ts",
+   "sha256": "6e4d002e5c76552250f714d92f4d99227152c49cf641065023ef0324b5966a2e"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/resources.ts",
+   "sha256": "3c4d38d1c7952cc07cdab2220bc956426f5fc9e50d82172e3057f87deafdbaa8"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/contracts.ts",
+   "sha256": "3d5294d3406198ffaf488628614febe7beb19163ffbdef776aa0bd215efaf2fb"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/config-editor/src/main.ts",
+   "sha256": "e6418e0e988fef9b739c14dec1451c98f45519f41fcb20eeec7e718d7f107c1c"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/config-editor/src/app.ts",
+   "sha256": "3658f2c34715229583aecc21f79c57052dded4e1395aa8a7b62690edbd0984d9"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/config-editor/src/array-modal.ts",
+   "sha256": "bef3931a63f0dd32b0585f0d0e8d1adb408c000892ce83842163703b630a1161"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/shared/tool-bridge.ts",
+   "sha256": "04de28f53a3b887b30dd8585199d9675ea8ed3ca829abeab9dc5a1fb97513551"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/shared/tool-shell.ts",
+   "sha256": "e2beaf656f133c21bf66f16821127df130ab26177307b155230dc68110951074"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/shared/compact-row.ts",
+   "sha256": "7179ebf2383ae7756eb91532fea201918d4521d120a580780db39026585f49ae"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/shared/escape-html.ts",
+   "sha256": "29b9b6b73bf7c516897d396ddbb03af9a22653bdd5f63ed83c517cb6b73cb728"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/shared/host-context.ts",
+   "sha256": "753574af084b65dc2737664a559c0bf054b7a6c11723b1f3796b2da47a144716"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/shared/ui-event-tracker.ts",
+   "sha256": "f9fa9116f93f575ebbba453314da1d859077fd1070075e5785a0ed7c596653a4"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/shared/widget-state.ts",
+   "sha256": "dc802f40a9cafb735c13206c2057598710e9820baee59901724693324b96214f"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/shared/preview-file-types.ts",
+   "sha256": "a0113b51fde37d5d203d5410e7128f4af17473e4dac6388a0749ef3c751beb11"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/payload-utils.ts",
+   "sha256": "b8b13464faf5aea80b3aa07abd8feae1d0f52eb502078f1f7e47768a14791fc0"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/main.ts",
+   "sha256": "96b618533530fdf4040bf896a1843dbb45d189ab6267c8e38d37b0f77b72c0fd"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/image-preview.ts",
+   "sha256": "e9b1b052cd11fd9087798f72c45f0b3c3c28ce578ce9187872aa77b1e5b982af"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/app.ts",
+   "sha256": "064a9e63a3eb32a624cc7fdc78316c4f20678a26e26ef4eb6b5c114717be1c15"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/document-outline.ts",
+   "sha256": "3586d02eddfb39a1afe21c71044a5d49e58e1f2975052cadd6eae933cda1e83c"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/model.ts",
+   "sha256": "6922a89ecd9baff2677fea0e1a9b912f45bb199b33084908afcfedaae72f07a5"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/path-utils.ts",
+   "sha256": "456554f4a6538b9d88fae9a39eca5202a68e26010c5d70184f4c6a2e265d59ec"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/types.ts",
+   "sha256": "39aa05d4970bd81d59ef75189eee33f5024f12fab3944002f1f2c28bc7afb605"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/file-type-handlers.ts",
+   "sha256": "d093e1591010f5ddd84440c00d9d96feb2f11304a2a0009d73cda200b9d8a0d9"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/directory-controller.ts",
+   "sha256": "ec41f62adab3c38e61fc16c71afab95d9777b75b4ed2cebcc42af87a850c9c73"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/panel-actions.ts",
+   "sha256": "67502ce565aefdb4d07331d32a883524244b2845cb1a3fbcbdb4a0f5ab0a5e88"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/document-workspace.ts",
+   "sha256": "3c8b4fc1a21592cdf0906d0f9e24f8e4c5b5ff3cbe4297d800d6a283a5cbe136"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/document-layout.ts",
+   "sha256": "0d25ae690c95fbcce06ddbd5612a9e4e670a6b4fe16c9b5645a4ff348226e4d0"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/host/external-actions.ts",
+   "sha256": "a3245e71de1b9a8539928dba9c2760ba01c335ca19ec430e2adb32a172647197"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/host/selection-context.ts",
+   "sha256": "77c64df7eb9ea216c60556281f489b61877e96cd07726e1cb07cf7dab5ba0595"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/markdown/editor.ts",
+   "sha256": "6f496f881c42dc17fb9188e4444b1218f98f5230d20e4075a45c77bd6c749460"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/markdown/linking.ts",
+   "sha256": "2c8c775a8f1dbb4b6686ad4b69f1fa343bdfa90c069d0334d7865f3332a842a6"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/markdown/utils.ts",
+   "sha256": "a4fbc7956719f5c28d7052d729a55b4727046b9b0b2894454cfde3d2b0f31dfd"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/markdown/outline.ts",
+   "sha256": "86fa6a351628d008f6416da2f86e4a35a3eb9f63724bf492f205b6410538e254"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/markdown/parser.ts",
+   "sha256": "454ed500dc380665f5dd5b7a243dbb2eedd2dafa68bb9d6e4d25305469a1d708"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/markdown/conflict-dialog.ts",
+   "sha256": "9bfa4be1c90037442c9922bce3a409311373f3271e0756dcfc875d129e75c7d4"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/markdown/slugify.ts",
+   "sha256": "3a1a1226e0ea36ffd0f0c9dd023376b3888c4bc60b8806007022e82da0e5938a"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/markdown/controller.ts",
+   "sha256": "18c5750f4188009d589a9083d283ddf12d095966c3bbadbc2608bb4b87d0239d"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/markdown/preview.ts",
+   "sha256": "9886c9914f795ec6b7dd704891ab5ab3747d5a63cbf13347fd4f6bf98b54284d"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/components/highlighting.ts",
+   "sha256": "c85346131741b504f2c41b143cc6ce31ec9911022aee5e7e47a398182754d2a8"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/components/html-renderer.ts",
+   "sha256": "26f104091fb602ebd9958295bfd661bff647425bd1d15655caac3c611e5ac1e2"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/components/code-viewer.ts",
+   "sha256": "1b9b17170b782a05a6b9c3267cccf15764e28f9643e0ea9d5b768fb8e6de9faa"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/ui/file-preview/src/components/markdown-renderer.ts",
+   "sha256": "73246ddc9c5f38d3deae6ae90c4f4a8dd78ac07cfd2adbdcd2d6064979d53e00"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/tools/usage.ts",
+   "sha256": "8e89b804ddf93d3afa2a4bdc006ab8ed397ff0e750773191a4f7b0a6da7be28c"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/tools/process.ts",
+   "sha256": "dd40c406b2b5eb738e31f047689bb5de208f3314dac602ae6c71af892b384778"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/tools/schemas.ts",
+   "sha256": "d33547e24df350a1162ef25a92414a09eca709abe292d7a0b00ea0eb55237b7f"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/tools/fuzzySearchCore.ts",
+   "sha256": "db9d8b9d088de324d831a27f9937099d43cceb85ddbd2eea8b0491ee99d173de"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/tools/prompts.ts",
+   "sha256": "d5862f066d47a78854d63f47a8b0a516048eff5c726c8f2683faba8c5ccf82c3"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/tools/fuzzySearch.ts",
+   "sha256": "ca38c25a24bbd563a40009212e1322bf064d828a36ab574e108a928cc67a89bf"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/tools/edit.ts",
+   "sha256": "e39442d1478c3ef0d3e18a0da085a7c734ba00aa06495d89d8a8e8e1af12f5b6"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/tools/filesystem.ts",
+   "sha256": "d9ccdbffc9a58def48b511df6bc6ee4d52ca23b0beff6a70c99186d04a1a1f30"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/tools/mime-types.ts",
+   "sha256": "22e4fbd14c287a94915365f16b8d9ccc7139736d3c8e7716481c50c5156f0ceb"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/tools/feedback.ts",
+   "sha256": "53858f9a057a1d4a8152a8bb5397e2ffd5f1806bb961c6639e5100a193788218"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/tools/config.ts",
+   "sha256": "540d963760e5e4766bf78ca60545a3e3df80638ffd25d282cf0ecba7b0184e7c"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/tools/improved-process-tools.ts",
+   "sha256": "c8d24fd59d0b4a6e64b41796ef07463ccf1c8064b4dbde3f553618c482ac66d7"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/tools/pdf/markdown.ts",
+   "sha256": "187c5bbd9ff599143094a90978bc1c7fba9c8180f10af7e98e2c43a17682d9b8"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/tools/pdf/utils.ts",
+   "sha256": "1a432a56c2d61c2f5882b5e1c3f3f74c778857e62763a1bad1baaabd24a71e9c"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/tools/pdf/extract-images.ts",
+   "sha256": "fe0389b922c5c57823cc8b7a7ba971c143403a89c4a3c38bbd6adef64563556b"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/tools/pdf/index.ts",
+   "sha256": "904a2bd12d3755eccf7fb9bd39d4f4a57f64282543c524bc9a547e4c87e6e980"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/tools/pdf/manipulations.ts",
+   "sha256": "c242a48c3e9a21f896e9182d5c3c1eb2cc95aafc30dfdeb07096cce86cf8df02"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/tools/pdf/lib/pdf2md.ts",
+   "sha256": "69fe45a0c237bd4506af40ee91843fdf72f5b517890faf7f4c45e0b896332106"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/types/caffeinate.d.ts",
+   "sha256": "471a4ee3aff5324ade8e94ccbccdaa7b8e0f1d34281c3a7068755d7f6f758580"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/npm-scripts/uninstall.ts",
+   "sha256": "186a38104b56724eb1c38f118156b396e20f1cb2e0e8db94abfd91ce2cd4758b"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/npm-scripts/setup.ts",
+   "sha256": "9379ea64ca51848f2d13ecfc1966314c5058b6d679fc71456f1cf7a7631fa4d2"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/npm-scripts/verify-ripgrep.ts",
+   "sha256": "58973506da535147c73ae35e02241252d94835d69aa868f6dff59dc04efcd73c"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/npm-scripts/remote.ts",
+   "sha256": "ebc1784506b9726f619386425d28fe6e3a79d7f4314d575c7d523a1cf25f1ccb"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/feature-flags.ts",
+   "sha256": "566b6b2b6d309e307f66cf59baa221cdee6b69c4145fbfefbcc9781f5f815ff0"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/ripgrep-resolver.ts",
+   "sha256": "1eeb4a5a304f6902c607b9f50d7ee4014a709b3a512f129f626dda50dc5a3e40"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/fuzzySearchLogger.ts",
+   "sha256": "93b6f04d684a681ff7dd3e9cfee055a1f5542d8645fa9413efb635e96fcf5d89"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/ab-test.ts",
+   "sha256": "0dd99bc7f6bc350eed8e2ddb2d4b46c6f9ebd4f52c5bb45c62c2a4ed7f8d586a"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/toolHistory.ts",
+   "sha256": "471d0915e5beda353bf01ffe3281004f0c0fd7343b113f7875895df78bc19cc1"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/lineEndingHandler.ts",
+   "sha256": "181f79d6ee9cdcc76f35ee9128f3a91a1dda268ba5ad67e19f2db4cfbed5f1a0"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/capture.ts",
+   "sha256": "5fb60ad26822b18d2b6b3dd5b5c6371919a4b048f31202ba42b0b7a772643584"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/mcp-ui-ab-test.ts",
+   "sha256": "cf10f3ef80aa7e2a966b0ff084353e0820733e4d364e5914443b3a314a62395f"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/logger.ts",
+   "sha256": "51c1c02e776a1ee09417fa0931fec5a779db11e1a93f7dda876c3ecd11cd8e85"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/trackTools.ts",
+   "sha256": "84a9992cca8f256b02f898fbe74759660c4265d2802e560f3ad4d23b8bcdd053"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/process-detection.ts",
+   "sha256": "abec269e3876f45fdacd2e0bbd6cdc33cce27e9535f7754989038750f3fb5de3"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/unsupportedParams.ts",
+   "sha256": "722378e4a6ee9529a029e684aae92c40f0abbe3091bba4a12ae491297e6623fc"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/withTimeout.ts",
+   "sha256": "ab130dcc063f5e9c85c87f0487e03b93413e811e0a004675bbe61deefebc6d79"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/open-browser.ts",
+   "sha256": "cf6cbf776ac3dca63f551917aac38d6437e7c37e2b001f851b7aa15bec236977"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/welcome-onboarding.ts",
+   "sha256": "490f94dbbff1e6ff879c00342d6735af9f1eba1a51a4633f3dca71c73e54b230"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/dockerPrompt.ts",
+   "sha256": "6b667fc12b40e0fdb1a067c93294d91974290e38bfa60560448a64d9f410cedc"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/usageTracker.ts",
+   "sha256": "28c5cca51157ec3bef46ec81c374973b615ce4012b97df2d68cbbb1f0a6fbab4"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/system-info.ts",
+   "sha256": "96bb6ac508c1300620170a3d07c3235c0de3b251744a8991d5b8bac2c0dd7335"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/files/base.ts",
+   "sha256": "b2f711f44ad21c51893842333727919cc4c2d9b0f32a8908a4cb13cd3bee72f2"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/files/image.ts",
+   "sha256": "edcf0c9d84a429b285cb0aae1c2752435468738ef24fa80ddbeb6c33cb70e1cb"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/files/text.ts",
+   "sha256": "6b603846026daede265afbe604200f32c7e968adb19f4661ae23401096dd2672"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/files/factory.ts",
+   "sha256": "ea66460cc300021062b2c99c619b80d8ea954713d6c10ed41c00cef8197f71e5"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/files/excel.ts",
+   "sha256": "31e100f99d32cf0002368a0b47b5f727124548cf87af14ded9a194cce9341a39"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/files/pdf.ts",
+   "sha256": "5bac801534f197b93d606a9f7907eeaa77c2b891386aa38aeeb63e75bc897f2b"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/files/index.ts",
+   "sha256": "08da34f96ae5dd66855bf7ddeaffdafbc049bc518fcbdd8e6721bc5ed232379d"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/files/docx.ts",
+   "sha256": "66a906a491a3570203b8d415765079814195a6461ca573fbb759621100afd41f"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/utils/files/binary.ts",
+   "sha256": "e43c89b88b14e3a91b99e1cafa745c781fdf9ffff4ce683b203bd2434ab4fed2"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/remote-device/desktop-commander-integration.ts",
+   "sha256": "28594143647e7ace9bf5234bdc332a0877cf5ce89287d0ff7fa63a2e19e9e50c"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/remote-device/README.md",
+   "sha256": "be0ef1e0c137d9ebac76e00ce1f3d3889f675dc3dc6f20f0022955ad5e24c037"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/remote-device/remote-channel.ts",
+   "sha256": "433b164f7dcd2de63dff0739664f82c4e4e1494fe21b33bd0efc1660dbadb1a7"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/remote-device/device.ts",
+   "sha256": "e07be0eec820e388df72f0882506b8bb2eb9bf57d23bce429d9be111b8217c39"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/remote-device/device-authenticator.ts",
+   "sha256": "2eb94d3b848d028a1ebfeae2d1ecf5e3b18453541fbed664ce12961ac6afb92c"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/remote-device/scripts/blocking-offline-update.js",
+   "sha256": "fcec23e7bcfc15cf22e104d968f4f206d0959b09c31df05e9ef039f7115fed0c"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/data/onboarding-prompts.json",
+   "sha256": "53aadecf2cee9a9053c3ea6fca5e4a2b8c43df84e1df9f826884f334725d282f"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/handlers/process-handlers.ts",
+   "sha256": "f4430ea1ba9a892bb79148be4f64c2f7a72f9e4ede90d981e55db4980338aa4e"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/handlers/search-handlers.ts",
+   "sha256": "e9bb05f77c7a2f7976a2998fa1c1100c16737ae56a52859b7a74097c11cbfc40"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/handlers/terminal-handlers.ts",
+   "sha256": "848ad424b2b6dd3f3c9cb93d6622573cdf0b009d395bfba45ab5f10cb34aa079"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/handlers/filesystem-handlers.ts",
+   "sha256": "813ea5cca7a68368b2a71f0bc7430d6c566c3eec2fbe49945f1735233aee6d03"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/handlers/edit-search-handlers.ts",
+   "sha256": "1199e7e2cd99a558a341deea1a9a4c9d116cd8cb4ca46a42c811409fea6adc98"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/handlers/history-handlers.ts",
+   "sha256": "e6971ee1bc5246658f5a013dca4cf9ad18c502125c9a2aadf971e73edd29df31"
+  },
+  {
+   "path": "gh/wonderwhy-er_DesktopCommanderMCP/src/handlers/index.ts",
+   "sha256": "0830582e4a5f202ed60ff3b6cc81f9978306d75fb64ed0affa99f880aa1a58a3"
+  }
+ ],
+ "july_quote_check": [
+  {
+   "july_quote": "1. ALWAYS FIRST: Use this tool (start_process + interact_with_process) for local data analysis",
+   "july_channel": "tool_description:interact_with_process",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "1. When user agrees to give feedback, just call this tool immediately",
+   "july_channel": "tool_description:give_feedback_to_desktop_commander",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "3. NEVER EVER: Use analysis tool for local file access (IT WILL FAIL)",
+   "july_channel": "tool_description:interact_with_process",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "ALWAYS USE FOR: CSV analysis, JSON processing, file statistics, data visualization prep, ANY local file work",
+   "july_channel": "tool_description:interact_with_process",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "ALWAYS USE FOR: Local file analysis, CSV processing, data exploration, system commands",
+   "july_channel": "tool_description:start_process",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "CRITICAL RULE: For ANY local file work, ALWAYS use this tool + interact_with_process, NEVER use analysis/REPL tool.",
+   "july_channel": "tool_description:start_process",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "CRITICAL: THIS IS THE PRIMARY TOOL FOR ALL LOCAL FILE ANALYSIS",
+   "july_channel": "tool_description:interact_with_process",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "FILE ANALYSIS PRIORITY ORDER (MANDATORY):",
+   "july_channel": "tool_description:interact_with_process",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "For ANY local file analysis (CSV, JSON, data processing), ALWAYS use this instead of the analysis tool.",
+   "july_channel": "tool_description:interact_with_process",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "IMPORTANT: DO NOT use this tool to create PDF files. Use 'write_pdf' for all PDF creation tasks.",
+   "july_channel": "tool_description:write_file",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "NEVER USE ANALYSIS TOOL FOR: Local file access (analysis tool is browser-only and WILL FAIL)",
+   "july_channel": "tool_description:start_process",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "NEVER USE ANALYSIS TOOL FOR: Local file access (it cannot read files from disk and WILL FAIL)",
+   "july_channel": "tool_description:interact_with_process",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "PRIMARY TOOL FOR FILE ANALYSIS AND DATA PROCESSING",
+   "july_channel": "tool_description:start_process",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "Perfect for large directories where you want to see results immediately",
+   "july_channel": "tool_description:start_search",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Perfect for large directories where you want to see results immediately and",
+   "july_channel": "tool_description:start_search",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Prefer this over 'execute_command' with cat/type for viewing files.",
+   "july_channel": "tool_description:read_file",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "THIS IS THE ONLY TOOL FOR CREATING AND MODIFYING PDF FILES.",
+   "july_channel": "tool_description:write_pdf",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "The analysis tool CANNOT access local files and WILL FAIL - always use processes for file-based work.",
+   "july_channel": "tool_description:start_process",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "The prompt content will be injected and execution begins immediately.",
+   "july_channel": "tool_description:get_prompts",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+   "july_channel": "tool_description:CMD_PREFIX_DESCRIPTION (все 24 инструмента)",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "This is the ONLY correct tool for analyzing local files (CSV, JSON, logs, etc.).",
+   "july_channel": "tool_description:start_process",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "Unlike regular search tools, this starts a background search process",
+   "july_channel": "tool_description:start_search",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Unlike regular search tools, this starts a background search process and returns",
+   "july_channel": "tool_description:start_search",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Use this instead of 'execute_command' with ls/dir commands.",
+   "july_channel": "tool_description:list_directory",
+   "status_now": "exact"
+  }
+ ],
+ "steering_marker_sentences_now": [
+  "export const MAX_BUFFERED_OUTPUT_CHARS = 50 * 1024 * 1024;  // per session; oldest lines evicted first",
+  "Scoped to shells that set windowsVerbatim (cmd only)",
+  "If a command appears here, Desktop Commander will refuse to run it even if a prompt asks for it.",
+  "Add risky commands you never want executed by mistake.',",
+  "Only change this if you know your environment requires a specific shell.',",
+  "\"emergency\" | \"alert\" | \"critical\" | \"error\" | \"warning\" | \"notice\" | \"info\" | \"debug\";",
+  "\"emergency\" | \"alert\" | \"critical\" | \"error\" | \"warning\" | \"notice\" | \"info\" | \"debug\", args:",
+  "\"emergency\" | \"alert\" | \"critical\" | \"error\" | \"warning\" | \"notice\" | \"info\" | \"debug\", message:",
+  "boolean;     // Force literal string matching (-F flag) instead of regex",
+  "setTimeout(resolve, 40); // cap at 40ms instead of 50-100ms",
+  "session.totalMatches, // Actual matches only",
+  "session.isError && !!session.error?.trim(), // Only error if we have actual errors",
+  "false, // Tail always returns what's available",
+  "deferLog('warning', 'Continuing with in-memory configuration only');",
+  "private _isFirstRun = false; // Track if this is the first run (config was just created)",
+  "const PATH_GUIDANCE = `IMPORTANT:",
+  "10     → First 10 lines",
+  "When reading from the file system, only works within allowed directories.",
+  "(URLs are always read in full regardless of offset/length).",
+  "ALWAYS use FROM:TO format (e.g., \"A1:D100\", \"C1:C1\", \"B2:B50\")",
+  "offset MUST be non-zero to get raw XML (use offset=1 to start from line 1).",
+  "offset=0 always returns the outline regardless of length.",
+  "Only works within allowed directories.",
+  "DO NOT use this tool to create PDF files.",
+  "DO NOT use this tool to edit DOCX files.",
+  "Always write files in chunks of 25-30 lines maximum.",
+  "FIRST → write_file(filePath, firstChunk, {mode:",
+  "ALWAYS CHUNK PROACTIVELY - don't wait for performance warnings!",
+  "WHEN TO CHUNK (always be proactive):",
+  "Continue writing ONLY the remaining content using {mode:",
+  "THIS IS THE ONLY TOOL FOR CREATING AND MODIFYING PDF FILES.",
+  "- When creating a new PDF, 'outputPath' MUST be provided and MUST use a new unique filename (e.g., \"result_01.pdf\", \"analysis_2025_01.pdf\", etc.).",
+  "- NEVER overwrite the original file.",
+  "- ALWAYS provide a new filename in 'outputPath'.",
+  "always;\\\\\"></div>\\",
+  "Use this instead of 'execute_command' with ls/dir commands.",
+  "Only direct contents of the directory",
+  "500 items hidden (showing first 100 of 600 total)",
+  "Both source and destination must be within allowed directories.",
+  "IMPORTANT PARAMETERS:",
+  "Use exact string matching instead of regex (default:",
+  "100     → First 100 results",
+  "Returns only results in the specified range, along with search status.",
+  "Each edit_block call should change only what needs to be changed - include just enough",
+  "ALWAYS use FROM:TO format - \"SheetName!A1:C10\" or \"SheetName!C1:C1\"",
+  "By default, replaces only ONE occurrence of the search text.",
+  "- Total duration and time to first output",
+  "100     → First 100 NEW lines since last read",
+  "Tool opens form with only usage statistics pre-filled automatically:",
+  "This tool only supports direct prompt retrieval.",
+  "Set to true only when",
+  "Only missed if a tool never returns or throws (a true hang).",
+  "MUST be the first import in index.ts.",
+  "libuv reads UV_THREADPOOL_SIZE only when the pool is",
+  "'Markdown-first preview surface for read_file structured content.',",
+  "'Boolean values must be true or false.' };",
+  "'Null values must be exactly null.' };",
+  "'Array values must be valid JSON arrays.' };",
+  "'Array values must contain only strings.' };",
+  "`The selected key (${selected.key}) is read-only.`,",
+  "A real success always carries",
+  "new Promise<never>((_resolve, reject) => {",
+  "/** Newlines between frontmatter end and first body line.",
+  "if the user actually had `First line.",
+  "The source authored them as separate lines so we must",
+  "only undo an escape if the SAME escape was not",
+  "We undo the escape only when the",
+  "it doesn't try to rewrite content, only",
+  "<button type=\"button\" class=\"md-conflict-btn md-conflict-btn--primary\" id=\"md-conflict-save-mine\">",
+  "CSV instead of the",
+  "z.string().optional(),  // String only for MCP client compatibility (Cursor doesn't support union types in JSON Schema)",
+  "\"Must provide either (old_string + new_string) or (range + content)\" }",
+  "z.boolean().optional().default(false), // Force literal string matching (-F flag) instead of regex",
+  "Only 'get_prompt' action is supported.",
+  "'Curated prompts perfect for first-time Desktop Commander users',",
+  "When listing prompts, do not show prompt IDs to users - they are for your reference only",
+  "Its important so user can choose an options by entering number only.",
+  "The closest match was \"${fuzzyResult.value}\" with only ${Math.round(similarity * 100)}% similarity, which is below the ${Math.round(FUZZY_THRESHOLD * 100)}% threshold.",
+  "Must be within one of these directories:",
+  "Always return the resolved path (with symlinks resolved) so that",
+  "Use the list_directory tool instead of read_file for directories.",
+  "For internal operations (especially edit operations), we must",
+  "results.push(`[DENIED] ${displayPath} — not accessible (permission denied, cloud-only file, or Full Disk Access not granted)`);",
+  "${filteredCount} items hidden (showing first ${MAX_NESTED_ITEMS} of ${totalEntries} total)`);",
+  "`Value for ${parsed.data.key} must be boolean true/false.`",
+  "msg += `  Time to First Output:",
+  "Line numbers and totals refer to the retained buffer only]`;",
+  "Check puppeteer cache first (exact compatible version)",
+  "Install Chrome as last resort",
+  "--logout removes local credentials only.",
+  "const hardTimeout = new Promise<never>((_, reject) =>",
+  "export type LogLevel = 'emergency' | 'alert' | 'critical' | 'error' | 'warning' | 'notice' | 'info' | 'debug';",
+  "any) => log('critical', message, data),",
+  "an operation wedged inside a single un-interruptible syscall only",
+  "const timeout = new Promise<never>((_, reject) => {",
+  "/** Consume a pending welcome page when this client must never receive it.",
+  "Only configs created with the",
+  "Check if this is their first or second command (0 or 1 total calls)",
+  "0,  // Start at 0, incremented on first command",
+  "YOU MUST COMPLETE BOTH STEPS BELOW - THIS IS NOT OPTIONAL:",
+  "After answering the user's question, you MUST copy and paste this EXACT text into your response including line before and after for formatting so that it stands out:",
+  "You must include the text above in your response.",
+  "Check environment variables first (most reliable when set)",
+  "Check /proc/1/cgroup for container indicators (Linux only)",
+  "Parse /proc/mounts (Linux only)",
+  "When users ask about files, FIRST check mounted directories above.",
+  "Always suggest using mounted directories for file operations.",
+  "choco, winget, scoop instead of apt/brew",
+  "$env:VAR instead of $VAR",
+  "- Some GNU tools have different names (e.g., gsed instead of sed)",
+  "- File permissions and ownership important for many operations",
+  "Primary package manager for development tools",
+  "let guidance = `Always use absolute paths for reliability.",
+  "Prefer paths within mounted directories:",
+  "When users ask about file locations, check these mounted paths first.`;",
+  "throw new Error('Content must be a 2D array for range editing');",
+  "skip first N rows",
+  "The read_file tool only handles text files, images, and Excel files.`;",
+  "/** True only while the local stdio child is actually reachable.",
+  "connect() only exchanges `initialize`, which says the process",
+  "On first run, Desktop Commander starts an OAuth device-authorization flow:",
+  "On POSIX systems, the file is created with mode `0600` (read/write for the owning user only).",
+  "On Windows, this code does not set a custom owner-only ACL; access is governed by the Windows filesystem permissions for the user profile.",
+  "The local process must be running for remote tool calls to reach your computer.",
+  "Show the built-in help:",
+  "Do not revoke and reauthorize the device as a generic first troubleshooting step when the device is online and ordinary calls work.",
+  "- **Explicit availability:** remote calls can reach the computer only while the Remote Device is running and connected.",
+  "/** Last capability value written (null = never), to avoid redundant writes.",
+  "/** Monotonic start of a Presence-only degradation while broadcast remains joined.",
+  "createChannel() resolves only",
+  "if (this.isTrackingPresence) return; // never stack pushes on a wedged socket",
+  "`online` may be claimed only",
+  "The only open question is the local executor, so ask",
+  "Only true while genuinely",
+  "'channel joined but presence was never acknowledged, so no command can be delivered'",
+  "Only still-live pending rows for this device are considered.",
+  "It carries ids only; one conditional update",
+  "This claim is the only way we learn about a call,",
+  "Reads realtime-js internals defensively; never throws.",
+  "Log current channel state (only if changed)",
+  "a never-settling await (e.g.",
+  "a subscribe that only",
+  "True only when THIS update flipped the row pending ->",
+  "the size is only knowable by serializing, and results reach",
+  "Guard against infinite recursion (only for result writes).",
+  "The server needs the first two before it will dispatch, and a",
+  "/** Arm (or re-arm) the last_seen timer at the current tier's cadence.",
+  "this.scheduleHeartbeat(); // re-read the tier every tick",
+  "revocation must require a fresh browser authorization.",
+  "registerDevice() resolves only once the",
+  "Returns the queued write, so a caller that must not",
+  "a device that never",
+  "This only confirms the OS accepted",
+  "the machine just woke) is refreshed first.",
+  "\"Desktop Commander onboarding prompts - V2 simplified (5 prompts only)\",",
+  "First, let me check what we're working with.",
+  "return the base64 in a TEXT block, never"
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "url": "https://api.agentic-news.ai/mcp",
+ "capture_utc": "2026-07-29T12:37:13.387291+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "date": "Wed, 29 Jul 2026 12:37:14 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "access-control-allow-credentials": "true",
+    "access-control-expose-headers": "Mcp-Session-Id",
+    "permissions-policy": "camera=(), microphone=(self), geolocation=(), payment=()",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "rndr-id": "4292b1ca-8be4-4b45",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000",
+    "vary": "Accept-Encoding",
+    "www-authenticate": "Bearer resource_metadata=\"https://api.agentic-news.ai/.well-known/oauth-protected-resource\"",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-ratelimit-limit": "60",
+    "x-ratelimit-remaining": "59",
+    "x-ratelimit-reset": "60",
+    "x-render-origin-server": "Render",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a22c2c77dbe90c21-BCN",
+    "alt-svc": "h3=\":443\"; ma=86400"
+   },
+   "body_raw": "{\"error\":\"Unauthorized\",\"message\":\"Authentication required. Use an API key (Bearer ak_...) or connect via OAuth.\"}"
+  }
+ ]
+}

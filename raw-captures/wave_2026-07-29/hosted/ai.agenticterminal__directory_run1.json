@@ -1,0 +1,240 @@
+{
+ "url": "https://mcp.agenticterminal.ai/mcp",
+ "capture_utc": "2026-07-29T12:05:47.432048+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 200,
+   "headers": {
+    "date": "Wed, 29 Jul 2026 12:05:47 GMT",
+    "content-type": "text/event-stream",
+    "content-length": "190",
+    "cache-control": "no-cache",
+    "cf-cache-status": "DYNAMIC",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=63IwWY2dNsn23G8tZ%2BHmwpxPkNwSrSc9dipy8UYdhhKtjtzZq15Aprnu2uOFQFyohKZQvgJmBGtJJBsCLCATe1XRzWd3kYdIm8sJPaXY2iFOUcNElV89IMbqI%2Bj4fSQjWeCN71akjezS\"}]}",
+    "server": "cloudflare",
+    "cf-ray": "a22bfe6c9de134c7-MAD",
+    "alt-svc": "h3=\":443\"; ma=86400"
+   },
+   "body_raw": "event: message\ndata: {\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{\"tools\":{\"listChanged\":true}},\"serverInfo\":{\"name\":\"at-directory\",\"version\":\"0.0.1\"}},\"jsonrpc\":\"2.0\",\"id\":1}\n\n"
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "method": "notifications/initialized"
+   },
+   "status": 202,
+   "headers": {
+    "date": "Wed, 29 Jul 2026 12:05:48 GMT",
+    "content-type": "text/plain; charset=UTF-8",
+    "content-length": "0",
+    "cf-cache-status": "DYNAMIC",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=hcHWdaxY7tnTHtVnnZqPBDEMusuglVCLiH6uZw2N2K0N1h%2Bj5gp4x36dXBwue4Mh7QfOSlKyZOuCFrGNQ%2Flag6iwRPjNjJSCasgrHmRH47%2FPqQwIN1Jt7VsjCN9LEcF1%2F0FcDCxauisd\"}]}",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "server": "cloudflare",
+    "cf-ray": "a22bfe6f3d0d3ba5-MAD",
+    "alt-svc": "h3=\":443\"; ma=86400"
+   },
+   "body_raw": ""
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "method": "tools/list"
+   },
+   "status": 200,
+   "headers": {
+    "date": "Wed, 29 Jul 2026 12:05:48 GMT",
+    "content-type": "text/event-stream",
+    "content-length": "2496",
+    "cache-control": "no-cache",
+    "cf-cache-status": "DYNAMIC",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Dtmh6cjP7qLk%2B2JsTAxgfopyGPqVIYanqJz02AqfIX%2BVK8wZ6pqsMLn%2BYzgGDRnoTFFIUCrsVQfuUvZSLmeo%2Fg7ip%2FBb5S7AvQJNpbBfIpCk9oVBBpS36jcpQPpdM61qsKOdUYhwzB6Z\"}]}",
+    "server": "cloudflare",
+    "cf-ray": "a22bfe71f8d2cfc6-MAD",
+    "alt-svc": "h3=\":443\"; ma=86400"
+   },
+   "body_raw": "event: message\ndata: {\"result\":{\"tools\":[{\"name\":\"search_merchants\",\"description\":\"Search OP-verified merchants by rail, chain, category, agent-callable tier, trust tier, and free text. Ranked by trust tier then verification recency.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"query\":{\"type\":\"string\"},\"rail\":{\"type\":\"string\",\"enum\":[\"lightning\",\"bolt12\",\"l402\",\"usdt\"]},\"chain\":{\"type\":\"string\",\"enum\":[\"tron\",\"ethereum\",\"solana\",\"bsc\",\"polygon\",\"arbitrum\",\"base\"]},\"category\":{\"type\":\"string\"},\"agent_callable_tier\":{\"type\":\"string\",\"enum\":[\"full-api\",\"structured-handoff\",\"human-checkout\"]},\"trust_tier_min\":{\"type\":\"number\",\"enum\":[1,2,3]},\"accepts_usdc\":{\"type\":\"boolean\"},\"limit\":{\"type\":\"integer\",\"exclusiveMinimum\":0}},\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"},\"execution\":{\"taskSupport\":\"forbidden\"}},{\"name\":\"get_merchant\",\"description\":\"Get the full record for one merchant including all rails, payment endpoints, and OP attestation. Tier 2+ requires an AT credential.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"minLength\":1}},\"required\":[\"id\"],\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"},\"execution\":{\"taskSupport\":\"forbidden\"}},{\"name\":\"verify_payment_endpoint\",\"description\":\"Run a live check against a merchant's declared payment endpoint for a rail. Returns health, detail, and rail-specific evidence.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"merchant_id\":{\"type\":\"string\",\"minLength\":1},\"rail\":{\"type\":\"string\",\"enum\":[\"lightning\",\"bolt12\",\"l402\",\"usdt\"]}},\"required\":[\"merchant_id\",\"rail\"],\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"},\"execution\":{\"taskSupport\":\"forbidden\"}},{\"name\":\"list_categories\",\"description\":\"List the category taxonomy with merchant counts.\",\"inputSchema\":{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"properties\":{}},\"execution\":{\"taskSupport\":\"forbidden\"}},{\"name\":\"list_rails\",\"description\":\"List supported payment rails and their current merchant counts.\",\"inputSchema\":{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"properties\":{}},\"execution\":{\"taskSupport\":\"forbidden\"}},{\"name\":\"whoami\",\"description\":\"Report the resolved credential state and rate limits for the calling agent.\",\"inputSchema\":{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"properties\":{}},\"execution\":{\"taskSupport\":\"forbidden\"}}]},\"jsonrpc\":\"2.0\",\"id\":2}\n\n"
+  }
+ ],
+ "server_info": {
+  "name": "at-directory",
+  "version": "0.0.1"
+ },
+ "instructions": null,
+ "tools": [
+  {
+   "name": "search_merchants",
+   "description": "Search OP-verified merchants by rail, chain, category, agent-callable tier, trust tier, and free text. Ranked by trust tier then verification recency.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "query": {
+      "type": "string"
+     },
+     "rail": {
+      "type": "string",
+      "enum": [
+       "lightning",
+       "bolt12",
+       "l402",
+       "usdt"
+      ]
+     },
+     "chain": {
+      "type": "string",
+      "enum": [
+       "tron",
+       "ethereum",
+       "solana",
+       "bsc",
+       "polygon",
+       "arbitrum",
+       "base"
+      ]
+     },
+     "category": {
+      "type": "string"
+     },
+     "agent_callable_tier": {
+      "type": "string",
+      "enum": [
+       "full-api",
+       "structured-handoff",
+       "human-checkout"
+      ]
+     },
+     "trust_tier_min": {
+      "type": "number",
+      "enum": [
+       1,
+       2,
+       3
+      ]
+     },
+     "accepts_usdc": {
+      "type": "boolean"
+     },
+     "limit": {
+      "type": "integer",
+      "exclusiveMinimum": 0
+     }
+    },
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+   },
+   "execution": {
+    "taskSupport": "forbidden"
+   }
+  },
+  {
+   "name": "get_merchant",
+   "description": "Get the full record for one merchant including all rails, payment endpoints, and OP attestation. Tier 2+ requires an AT credential.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "required": [
+     "id"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+   },
+   "execution": {
+    "taskSupport": "forbidden"
+   }
+  },
+  {
+   "name": "verify_payment_endpoint",
+   "description": "Run a live check against a merchant's declared payment endpoint for a rail. Returns health, detail, and rail-specific evidence.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "merchant_id": {
+      "type": "string",
+      "minLength": 1
+     },
+     "rail": {
+      "type": "string",
+      "enum": [
+       "lightning",
+       "bolt12",
+       "l402",
+       "usdt"
+      ]
+     }
+    },
+    "required": [
+     "merchant_id",
+     "rail"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+   },
+   "execution": {
+    "taskSupport": "forbidden"
+   }
+  },
+  {
+   "name": "list_categories",
+   "description": "List the category taxonomy with merchant counts.",
+   "inputSchema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {}
+   },
+   "execution": {
+    "taskSupport": "forbidden"
+   }
+  },
+  {
+   "name": "list_rails",
+   "description": "List supported payment rails and their current merchant counts.",
+   "inputSchema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {}
+   },
+   "execution": {
+    "taskSupport": "forbidden"
+   }
+  },
+  {
+   "name": "whoami",
+   "description": "Report the resolved credential state and rate limits for the calling agent.",
+   "inputSchema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {}
+   },
+   "execution": {
+    "taskSupport": "forbidden"
+   }
+  }
+ ]
+}

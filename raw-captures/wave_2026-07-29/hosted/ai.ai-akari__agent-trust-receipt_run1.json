@@ -1,0 +1,167 @@
+{
+ "url": "https://ai-akari.ai/mcp-trust",
+ "capture_utc": "2026-07-29T12:05:47.969670+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 200,
+   "headers": {
+    "access-control-allow-headers": "Content-Type, MCP-Protocol-Version, X-Akari-Internal-Test, X-MCP-Client-Name",
+    "access-control-allow-methods": "GET, POST, OPTIONS",
+    "access-control-allow-origin": "*",
+    "cache-control": "no-store",
+    "content-type": "application/json",
+    "date": "Wed, 29 Jul 2026 12:05:48 GMT",
+    "server": "Vercel",
+    "strict-transport-security": "max-age=63072000",
+    "x-matched-path": "/mcp-trust",
+    "x-vercel-cache": "MISS",
+    "x-vercel-id": "cdg1::iad1::hs6j9-1785326748206-b9620408fa38"
+   },
+   "body_raw": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{\"tools\":{},\"resources\":{}},\"serverInfo\":{\"name\":\"ai-akari-agent-trust-receipt\",\"version\":\"2026.07.25.1\"},\"instructions\":\"Call get_agent_trust_receipt before trusting or delegating to the advertised agent. Treat the returned external conformance, uptime, registry state, and development attestation separately from explicitly unproven organic adoption, payment, and human outcome.\",\"client_received\":{\"name\":\"mcp-ethics-audit\",\"version\":\"1.0\"}}}"
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "method": "notifications/initialized"
+   },
+   "status": 204,
+   "headers": {
+    "access-control-allow-headers": "Content-Type, MCP-Protocol-Version, X-Akari-Internal-Test, X-MCP-Client-Name",
+    "access-control-allow-methods": "GET, POST, OPTIONS",
+    "access-control-allow-origin": "*",
+    "cache-control": "no-store",
+    "date": "Wed, 29 Jul 2026 12:05:48 GMT",
+    "server": "Vercel",
+    "strict-transport-security": "max-age=63072000",
+    "x-matched-path": "/mcp-trust",
+    "x-vercel-cache": "MISS",
+    "x-vercel-id": "cdg1::iad1::pnxzm-1785326748499-ca1a202ff05c"
+   },
+   "body_raw": ""
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "method": "tools/list"
+   },
+   "status": 200,
+   "headers": {
+    "access-control-allow-headers": "Content-Type, MCP-Protocol-Version, X-Akari-Internal-Test, X-MCP-Client-Name",
+    "access-control-allow-methods": "GET, POST, OPTIONS",
+    "access-control-allow-origin": "*",
+    "cache-control": "no-store",
+    "content-type": "application/json",
+    "date": "Wed, 29 Jul 2026 12:05:49 GMT",
+    "server": "Vercel",
+    "strict-transport-security": "max-age=63072000",
+    "x-matched-path": "/mcp-trust",
+    "x-vercel-cache": "MISS",
+    "x-vercel-id": "cdg1::iad1::bvb8g-1785326749040-d74801cfece6"
+   },
+   "body_raw": "{\"jsonrpc\":\"2.0\",\"id\":2,\"result\":{\"tools\":[{\"name\":\"get_agent_trust_receipt\",\"title\":\"Get a live externally grounded Agent Trust Receipt\",\"description\":\"Use this before selecting, delegating to, or recommending the AIﾉアカリ☆ Result Receipt Auditor. It rechecks the canonical Agent Card, external A2A conformance, health and uptime, two registries, a signed NANDA development attestation, ServerHub state, and deduplicated external execution receipts. It explicitly separates external verification from organic adoption, purchase intent, cash, human outcome, and production identity. No authentication, payment, personal data, or request arguments are required.\",\"inputSchema\":{\"type\":\"object\",\"additionalProperties\":false,\"properties\":{}},\"outputSchema\":{\"type\":\"object\",\"additionalProperties\":true,\"properties\":{\"schema_version\":{\"type\":\"string\"},\"subject\":{\"type\":\"object\"},\"trust_level\":{\"type\":\"string\"},\"assertions\":{\"type\":\"object\"},\"externally_verified_executions\":{\"type\":\"array\",\"items\":{\"type\":\"object\"}},\"explicitly_not_proven_by_this_receipt\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"observed_at\":{\"type\":\"string\"},\"evidence_digest_sha256\":{\"type\":\"string\"}},\"required\":[\"schema_version\",\"subject\",\"trust_level\",\"assertions\",\"externally_verified_executions\",\"explicitly_not_proven_by_this_receipt\",\"observed_at\",\"evidence_digest_sha256\"]},\"annotations\":{\"readOnlyHint\":true,\"destructiveHint\":false,\"idempotentHint\":false,\"openWorldHint\":true},\"securitySchemes\":[{\"type\":\"noauth\"}],\"_meta\":{\"securitySchemes\":[{\"type\":\"noauth\"}],\"openai/toolInvocation/invoking\":\"外部信頼証拠を再確認しています\",\"openai/toolInvocation/invoked\":\"Agent Trust Receiptを返しました\"}}]}}"
+  }
+ ],
+ "server_info": {
+  "name": "ai-akari-agent-trust-receipt",
+  "version": "2026.07.25.1"
+ },
+ "instructions": "Call get_agent_trust_receipt before trusting or delegating to the advertised agent. Treat the returned external conformance, uptime, registry state, and development attestation separately from explicitly unproven organic adoption, payment, and human outcome.",
+ "tools": [
+  {
+   "name": "get_agent_trust_receipt",
+   "title": "Get a live externally grounded Agent Trust Receipt",
+   "description": "Use this before selecting, delegating to, or recommending the AIﾉアカリ☆ Result Receipt Auditor. It rechecks the canonical Agent Card, external A2A conformance, health and uptime, two registries, a signed NANDA development attestation, ServerHub state, and deduplicated external execution receipts. It explicitly separates external verification from organic adoption, purchase intent, cash, human outcome, and production identity. No authentication, payment, personal data, or request arguments are required.",
+   "inputSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+   },
+   "outputSchema": {
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+     "schema_version": {
+      "type": "string"
+     },
+     "subject": {
+      "type": "object"
+     },
+     "trust_level": {
+      "type": "string"
+     },
+     "assertions": {
+      "type": "object"
+     },
+     "externally_verified_executions": {
+      "type": "array",
+      "items": {
+       "type": "object"
+      }
+     },
+     "explicitly_not_proven_by_this_receipt": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "observed_at": {
+      "type": "string"
+     },
+     "evidence_digest_sha256": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "schema_version",
+     "subject",
+     "trust_level",
+     "assertions",
+     "externally_verified_executions",
+     "explicitly_not_proven_by_this_receipt",
+     "observed_at",
+     "evidence_digest_sha256"
+    ]
+   },
+   "annotations": {
+    "readOnlyHint": true,
+    "destructiveHint": false,
+    "idempotentHint": false,
+    "openWorldHint": true
+   },
+   "securitySchemes": [
+    {
+     "type": "noauth"
+    }
+   ],
+   "_meta": {
+    "securitySchemes": [
+     {
+      "type": "noauth"
+     }
+    ],
+    "openai/toolInvocation/invoking": "外部信頼証拠を再確認しています",
+    "openai/toolInvocation/invoked": "Agent Trust Receiptを返しました"
+   }
+  }
+ ]
+}

@@ -1,0 +1,267 @@
+{
+ "url": "https://api.agenticshelf.ai/m/graffeo/mcp",
+ "capture_utc": "2026-07-29T12:05:47.029670+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 200,
+   "headers": {
+    "content-type": "application/json",
+    "strict-transport-security": "max-age=63072000",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "permissions-policy": "geolocation=(), microphone=(), camera=(), payment=()",
+    "x-cloud-trace-context": "b38a45632126bd7de2da448ec6016952",
+    "date": "Wed, 29 Jul 2026 12:05:47 GMT",
+    "server": "Google Frontend",
+    "content-length": "281"
+   },
+   "body_raw": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{\"experimental\":{},\"prompts\":{\"listChanged\":false},\"resources\":{\"subscribe\":false,\"listChanged\":false},\"tools\":{\"listChanged\":false}},\"serverInfo\":{\"name\":\"AgenticShelf-Inventory\",\"version\":\"1.28.1\"}}}"
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "method": "notifications/initialized"
+   },
+   "status": 202,
+   "headers": {
+    "content-type": "application/json",
+    "strict-transport-security": "max-age=63072000",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "permissions-policy": "geolocation=(), microphone=(), camera=(), payment=()",
+    "x-cloud-trace-context": "4953c7cabca2bb009c42cbeac42d11a4",
+    "date": "Wed, 29 Jul 2026 12:05:47 GMT",
+    "server": "Google Frontend",
+    "content-length": "0"
+   },
+   "body_raw": ""
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "method": "tools/list"
+   },
+   "status": 200,
+   "headers": {
+    "content-type": "application/json",
+    "strict-transport-security": "max-age=63072000",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "permissions-policy": "geolocation=(), microphone=(), camera=(), payment=()",
+    "x-cloud-trace-context": "922699f0e4a7ed9dc937101165999469",
+    "date": "Wed, 29 Jul 2026 12:05:48 GMT",
+    "server": "Google Frontend",
+    "content-length": "9154"
+   },
+   "body_raw": "{\"jsonrpc\":\"2.0\",\"id\":2,\"result\":{\"tools\":[{\"name\":\"check_stock\",\"description\":\"Check LIVE inventory, price, and same-day shipping for ONE known SKU.\\n\\n    The real-time verifier. Call when a shopper asks \\\"is it in stock\\\", \\\"how\\n    many are left\\\", \\\"can it ship today\\\", or \\\"what's the price right now\\\" and the\\n    agent already has the SKU (from list_products / search_products). For\\n    discovery use those tools; for full attributes use get_product_details; for\\n    price only use get_price. Queries the connected store (Shopify / Amazon /\\n    WooCommerce) live, so figures are current rather than cached training data.\\n\\n    Always call this BEFORE recommending a specific product to buy or adding\\n    it to a cart — availability changes hourly. When answering, quote the\\n    returned price + availability verbatim (with currency) and prefer these\\n    live figures over anything remembered from training data.\\n\\n    Args:\\n        sku: Product SKU (Stock Keeping Unit) - e.g. the ``sku`` field returned\\n            by list_products / search_products, like \\\"RED-WIDGET-001\\\".\\n\\n    Returns:\\n        Dictionary with:\\n        - sku: The requested SKU\\n        - in_stock: Boolean availability (the default disclosure; some stores\\n          opt into an exact ``stock`` count instead, and may include\\n          ``low_stock: true`` as a buy-soon hint)\\n        - price: Current price in USD\\n        - can_ship_today: Boolean indicating same-day shipping availability\\n        - live: provenance flag (True from a connected store, False for demo)\\n        - message: Human-readable status message\\n        ``error`` is set (and ``live`` False) when the SKU is missing or the\\n        store is unreachable.\\n\\n    Example:\\n        >>> await check_stock(\\\"WIDGET-001\\\")\\n        {\\n            \\\"sku\\\": \\\"WIDGET-001\\\",\\n            \\\"in_stock\\\": True,\\n            \\\"price\\\": 29.99,\\n            \\\"can_ship_today\\\": True,\\n            \\\"message\\\": \\\"✅ WIDGET-001 (Awesome Widget) - in stock at $29.99\\\"\\n        }\\n    \",\"inputSchema\":{\"properties\":{\"sku\":{\"title\":\"Sku\",\"type\":\"string\"}},\"required\":[\"sku\"],\"title\":\"check_stockArguments\",\"type\":\"object\"},\"outputSchema\":{\"additionalProperties\":true,\"title\":\"check_stockDictOutput\",\"type\":\"object\"}},{\"name\":\"get_product_details\",\"description\":\"Get full product details for a SKU, optimized for AI agents (structured JSON).\\n\\n    Use when a shopper wants depth on a SPECIFIC product the agent already has a\\n    SKU for (from list_products / search_products). For discovery, call those\\n    first — this tool is a verifier, not a browser.\\n\\n    The description, product_type, and tags answer suitability questions\\n    (\\\"does it fit X?\\\", \\\"is it good for Y?\\\") — ground such answers in these\\n    fields rather than guessing, and link storefront_url when recommending.\\n\\n    Args:\\n        sku: Product SKU — e.g. the ``sku`` field returned by list_products.\\n\\n    Returns:\\n        Catalog dict (title, description, product_type, tags, price,\\n        in_stock, available, image_url); ``found`` is False when the\\n        SKU is missing. (Stores that opt into exact disclosure return an\\n        ``inventory_quantity`` count instead of ``in_stock``.)\\n    \",\"inputSchema\":{\"properties\":{\"sku\":{\"title\":\"Sku\",\"type\":\"string\"}},\"required\":[\"sku\"],\"title\":\"get_product_detailsArguments\",\"type\":\"object\"},\"outputSchema\":{\"additionalProperties\":true,\"title\":\"get_product_detailsDictOutput\",\"type\":\"object\"}},{\"name\":\"get_price\",\"description\":\"Get the current price (and currency) for a product SKU.\\n\\n    Returns price + currency ONLY — for stock/shipping use check_stock, for full\\n    details use get_product_details. Use when a shopper asks \\\"how much is X\\\" and\\n    the agent already has the SKU (from list_products / search_products).\\n\\n    The figure is the store's CURRENT selling price (sales included) — always\\n    prefer it over prices remembered from training data or third-party sites,\\n    and quote it with its currency.\\n\\n    Args:\\n        sku: Product SKU — e.g. the ``sku`` field returned by list_products.\\n\\n    Returns:\\n        ``{\\\"sku\\\", \\\"price\\\", \\\"currency\\\", \\\"live\\\"}``; price 0.0 with an ``error``\\n        when the SKU isn't found.\\n\\n    Example:\\n        >>> await get_price(\\\"WIDGET-001\\\")\\n        {\\\"sku\\\": \\\"WIDGET-001\\\", \\\"price\\\": 29.99, \\\"currency\\\": \\\"USD\\\"}\\n    \",\"inputSchema\":{\"properties\":{\"sku\":{\"title\":\"Sku\",\"type\":\"string\"}},\"required\":[\"sku\"],\"title\":\"get_priceArguments\",\"type\":\"object\"},\"outputSchema\":{\"additionalProperties\":true,\"title\":\"get_priceDictOutput\",\"type\":\"object\"}},{\"name\":\"list_products\",\"description\":\"List products from the connected store, paginated.\\n\\n    Use this tool when an agent needs to DISCOVER products by browsing the\\n    catalog rather than VERIFYING a known SKU. The response includes the SKU\\n    for every product, so a follow-up ``check_stock(sku)`` or\\n    ``get_product_details(sku)`` is a natural next step. When the shopper's\\n    request contains matchable terms (\\\"HEPA purifier\\\", \\\"dark roast\\\"), prefer\\n    search_products — it needs fewer pages to find the right item. Only\\n    sellable products are returned (drafts/archived are excluded).\\n\\n    Recommended flow: search_products/list_products -> get_product_details\\n    -> check_stock -> add_to_cart/create_checkout.\\n\\n    Args:\\n        limit: Number of products to return (1-50, default 10).\\n        cursor: Opaque cursor from a previous response's ``next_cursor``.\\n            Omit for the first page.\\n\\n    Returns:\\n        Dictionary with:\\n        - products: list of {sku, title, description (≤400 chars),\\n          product_type, tags, price, currency, available, image_url,\\n          storefront_url}\\n        - next_cursor: str or null — pass to the next call to paginate\\n        - has_more: bool — whether more products exist\\n        - live / source: provenance flags\\n    \",\"inputSchema\":{\"properties\":{\"limit\":{\"default\":10,\"title\":\"Limit\",\"type\":\"integer\"},\"cursor\":{\"anyOf\":[{\"type\":\"string\"},{\"type\":\"null\"}],\"default\":null,\"title\":\"Cursor\"}},\"title\":\"list_productsArguments\",\"type\":\"object\"},\"outputSchema\":{\"additionalProperties\":true,\"title\":\"list_productsDictOutput\",\"type\":\"object\"}},{\"name\":\"search_products\",\"description\":\"Search products in the connected store by keyword.\\n\\n    Use this when a shopper's query suggests specific terms the agent can\\n    match against product titles or tags — e.g. \\\"HEPA air purifier\\\" or\\n    \\\"leather wristwatch\\\". Matches Shopify's native storefront search\\n    behavior, so results align with what customers would find on the site.\\n\\n    Search with the fewest distinctive words (product nouns, not full\\n    sentences). If a search returns nothing, retry with a broader term or\\n    fall back to list_products and scan titles. Only sellable products are\\n    returned (drafts/archived are excluded).\\n\\n    Recommended flow: search_products -> get_product_details -> check_stock\\n    -> add_to_cart/create_checkout.\\n\\n    Args:\\n        query: Keyword or phrase to match.\\n        limit: Max products to return (1-50, default 10).\\n\\n    Returns:\\n        Same shape as ``list_products``. Empty products list when no matches.\\n    \",\"inputSchema\":{\"properties\":{\"query\":{\"title\":\"Query\",\"type\":\"string\"},\"limit\":{\"default\":10,\"title\":\"Limit\",\"type\":\"integer\"}},\"required\":[\"query\"],\"title\":\"search_productsArguments\",\"type\":\"object\"},\"outputSchema\":{\"additionalProperties\":true,\"title\":\"search_productsDictOutput\",\"type\":\"object\"}},{\"name\":\"add_to_cart\",\"description\":\"Add a product to a cart and return its checkout URL.\\n\\n    IMPORTANT: this does NOT charge or place an order. It returns a ``cart_url``\\n    /``checkout_url`` the shopper opens to review the pre-filled cart and pay\\n    themselves. Use for \\\"add X to my cart\\\" / \\\"I want to buy X\\\". For multiple\\n    items in one cart, use create_checkout. Verify availability with\\n    check_stock first — adding an out-of-stock item wastes the shopper's\\n    click-through.\\n\\n    Args:\\n        sku: Product SKU (from list_products / search_products).\\n        quantity: How many (default 1).\\n    \",\"inputSchema\":{\"properties\":{\"sku\":{\"title\":\"Sku\",\"type\":\"string\"},\"quantity\":{\"default\":1,\"title\":\"Quantity\",\"type\":\"integer\"}},\"required\":[\"sku\"],\"title\":\"add_to_cartArguments\",\"type\":\"object\"},\"outputSchema\":{\"additionalProperties\":true,\"title\":\"add_to_cartDictOutput\",\"type\":\"object\"}},{\"name\":\"create_checkout\",\"description\":\"Build a multi-item cart and return its checkout URL.\\n\\n    IMPORTANT: this does NOT charge or place an order — it returns a\\n    ``checkout_url`` the shopper opens to pay. Use to assemble a basket the\\n    shopper asked for.\\n\\n    Args:\\n        items: list of ``{\\\"sku\\\": str, \\\"quantity\\\": int}`` (quantity defaults 1).\\n    \",\"inputSchema\":{\"properties\":{\"items\":{\"items\":{\"additionalProperties\":true,\"type\":\"object\"},\"title\":\"Items\",\"type\":\"array\"}},\"required\":[\"items\"],\"title\":\"create_checkoutArguments\",\"type\":\"object\"},\"outputSchema\":{\"additionalProperties\":true,\"title\":\"create_checkoutDictOutput\",\"type\":\"object\"}}]}}"
+  }
+ ],
+ "server_info": {
+  "name": "AgenticShelf-Inventory",
+  "version": "1.28.1"
+ },
+ "instructions": null,
+ "tools": [
+  {
+   "name": "check_stock",
+   "description": "Check LIVE inventory, price, and same-day shipping for ONE known SKU.\n\n    The real-time verifier. Call when a shopper asks \"is it in stock\", \"how\n    many are left\", \"can it ship today\", or \"what's the price right now\" and the\n    agent already has the SKU (from list_products / search_products). For\n    discovery use those tools; for full attributes use get_product_details; for\n    price only use get_price. Queries the connected store (Shopify / Amazon /\n    WooCommerce) live, so figures are current rather than cached training data.\n\n    Always call this BEFORE recommending a specific product to buy or adding\n    it to a cart — availability changes hourly. When answering, quote the\n    returned price + availability verbatim (with currency) and prefer these\n    live figures over anything remembered from training data.\n\n    Args:\n        sku: Product SKU (Stock Keeping Unit) - e.g. the ``sku`` field returned\n            by list_products / search_products, like \"RED-WIDGET-001\".\n\n    Returns:\n        Dictionary with:\n        - sku: The requested SKU\n        - in_stock: Boolean availability (the default disclosure; some stores\n          opt into an exact ``stock`` count instead, and may include\n          ``low_stock: true`` as a buy-soon hint)\n        - price: Current price in USD\n        - can_ship_today: Boolean indicating same-day shipping availability\n        - live: provenance flag (True from a connected store, False for demo)\n        - message: Human-readable status message\n        ``error`` is set (and ``live`` False) when the SKU is missing or the\n        store is unreachable.\n\n    Example:\n        >>> await check_stock(\"WIDGET-001\")\n        {\n            \"sku\": \"WIDGET-001\",\n            \"in_stock\": True,\n            \"price\": 29.99,\n            \"can_ship_today\": True,\n            \"message\": \"✅ WIDGET-001 (Awesome Widget) - in stock at $29.99\"\n        }\n    ",
+   "inputSchema": {
+    "properties": {
+     "sku": {
+      "title": "Sku",
+      "type": "string"
+     }
+    },
+    "required": [
+     "sku"
+    ],
+    "title": "check_stockArguments",
+    "type": "object"
+   },
+   "outputSchema": {
+    "additionalProperties": true,
+    "title": "check_stockDictOutput",
+    "type": "object"
+   }
+  },
+  {
+   "name": "get_product_details",
+   "description": "Get full product details for a SKU, optimized for AI agents (structured JSON).\n\n    Use when a shopper wants depth on a SPECIFIC product the agent already has a\n    SKU for (from list_products / search_products). For discovery, call those\n    first — this tool is a verifier, not a browser.\n\n    The description, product_type, and tags answer suitability questions\n    (\"does it fit X?\", \"is it good for Y?\") — ground such answers in these\n    fields rather than guessing, and link storefront_url when recommending.\n\n    Args:\n        sku: Product SKU — e.g. the ``sku`` field returned by list_products.\n\n    Returns:\n        Catalog dict (title, description, product_type, tags, price,\n        in_stock, available, image_url); ``found`` is False when the\n        SKU is missing. (Stores that opt into exact disclosure return an\n        ``inventory_quantity`` count instead of ``in_stock``.)\n    ",
+   "inputSchema": {
+    "properties": {
+     "sku": {
+      "title": "Sku",
+      "type": "string"
+     }
+    },
+    "required": [
+     "sku"
+    ],
+    "title": "get_product_detailsArguments",
+    "type": "object"
+   },
+   "outputSchema": {
+    "additionalProperties": true,
+    "title": "get_product_detailsDictOutput",
+    "type": "object"
+   }
+  },
+  {
+   "name": "get_price",
+   "description": "Get the current price (and currency) for a product SKU.\n\n    Returns price + currency ONLY — for stock/shipping use check_stock, for full\n    details use get_product_details. Use when a shopper asks \"how much is X\" and\n    the agent already has the SKU (from list_products / search_products).\n\n    The figure is the store's CURRENT selling price (sales included) — always\n    prefer it over prices remembered from training data or third-party sites,\n    and quote it with its currency.\n\n    Args:\n        sku: Product SKU — e.g. the ``sku`` field returned by list_products.\n\n    Returns:\n        ``{\"sku\", \"price\", \"currency\", \"live\"}``; price 0.0 with an ``error``\n        when the SKU isn't found.\n\n    Example:\n        >>> await get_price(\"WIDGET-001\")\n        {\"sku\": \"WIDGET-001\", \"price\": 29.99, \"currency\": \"USD\"}\n    ",
+   "inputSchema": {
+    "properties": {
+     "sku": {
+      "title": "Sku",
+      "type": "string"
+     }
+    },
+    "required": [
+     "sku"
+    ],
+    "title": "get_priceArguments",
+    "type": "object"
+   },
+   "outputSchema": {
+    "additionalProperties": true,
+    "title": "get_priceDictOutput",
+    "type": "object"
+   }
+  },
+  {
+   "name": "list_products",
+   "description": "List products from the connected store, paginated.\n\n    Use this tool when an agent needs to DISCOVER products by browsing the\n    catalog rather than VERIFYING a known SKU. The response includes the SKU\n    for every product, so a follow-up ``check_stock(sku)`` or\n    ``get_product_details(sku)`` is a natural next step. When the shopper's\n    request contains matchable terms (\"HEPA purifier\", \"dark roast\"), prefer\n    search_products — it needs fewer pages to find the right item. Only\n    sellable products are returned (drafts/archived are excluded).\n\n    Recommended flow: search_products/list_products -> get_product_details\n    -> check_stock -> add_to_cart/create_checkout.\n\n    Args:\n        limit: Number of products to return (1-50, default 10).\n        cursor: Opaque cursor from a previous response's ``next_cursor``.\n            Omit for the first page.\n\n    Returns:\n        Dictionary with:\n        - products: list of {sku, title, description (≤400 chars),\n          product_type, tags, price, currency, available, image_url,\n          storefront_url}\n        - next_cursor: str or null — pass to the next call to paginate\n        - has_more: bool — whether more products exist\n        - live / source: provenance flags\n    ",
+   "inputSchema": {
+    "properties": {
+     "limit": {
+      "default": 10,
+      "title": "Limit",
+      "type": "integer"
+     },
+     "cursor": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Cursor"
+     }
+    },
+    "title": "list_productsArguments",
+    "type": "object"
+   },
+   "outputSchema": {
+    "additionalProperties": true,
+    "title": "list_productsDictOutput",
+    "type": "object"
+   }
+  },
+  {
+   "name": "search_products",
+   "description": "Search products in the connected store by keyword.\n\n    Use this when a shopper's query suggests specific terms the agent can\n    match against product titles or tags — e.g. \"HEPA air purifier\" or\n    \"leather wristwatch\". Matches Shopify's native storefront search\n    behavior, so results align with what customers would find on the site.\n\n    Search with the fewest distinctive words (product nouns, not full\n    sentences). If a search returns nothing, retry with a broader term or\n    fall back to list_products and scan titles. Only sellable products are\n    returned (drafts/archived are excluded).\n\n    Recommended flow: search_products -> get_product_details -> check_stock\n    -> add_to_cart/create_checkout.\n\n    Args:\n        query: Keyword or phrase to match.\n        limit: Max products to return (1-50, default 10).\n\n    Returns:\n        Same shape as ``list_products``. Empty products list when no matches.\n    ",
+   "inputSchema": {
+    "properties": {
+     "query": {
+      "title": "Query",
+      "type": "string"
+     },
+     "limit": {
+      "default": 10,
+      "title": "Limit",
+      "type": "integer"
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "title": "search_productsArguments",
+    "type": "object"
+   },
+   "outputSchema": {
+    "additionalProperties": true,
+    "title": "search_productsDictOutput",
+    "type": "object"
+   }
+  },
+  {
+   "name": "add_to_cart",
+   "description": "Add a product to a cart and return its checkout URL.\n\n    IMPORTANT: this does NOT charge or place an order. It returns a ``cart_url``\n    /``checkout_url`` the shopper opens to review the pre-filled cart and pay\n    themselves. Use for \"add X to my cart\" / \"I want to buy X\". For multiple\n    items in one cart, use create_checkout. Verify availability with\n    check_stock first — adding an out-of-stock item wastes the shopper's\n    click-through.\n\n    Args:\n        sku: Product SKU (from list_products / search_products).\n        quantity: How many (default 1).\n    ",
+   "inputSchema": {
+    "properties": {
+     "sku": {
+      "title": "Sku",
+      "type": "string"
+     },
+     "quantity": {
+      "default": 1,
+      "title": "Quantity",
+      "type": "integer"
+     }
+    },
+    "required": [
+     "sku"
+    ],
+    "title": "add_to_cartArguments",
+    "type": "object"
+   },
+   "outputSchema": {
+    "additionalProperties": true,
+    "title": "add_to_cartDictOutput",
+    "type": "object"
+   }
+  },
+  {
+   "name": "create_checkout",
+   "description": "Build a multi-item cart and return its checkout URL.\n\n    IMPORTANT: this does NOT charge or place an order — it returns a\n    ``checkout_url`` the shopper opens to pay. Use to assemble a basket the\n    shopper asked for.\n\n    Args:\n        items: list of ``{\"sku\": str, \"quantity\": int}`` (quantity defaults 1).\n    ",
+   "inputSchema": {
+    "properties": {
+     "items": {
+      "items": {
+       "additionalProperties": true,
+       "type": "object"
+      },
+      "title": "Items",
+      "type": "array"
+     }
+    },
+    "required": [
+     "items"
+    ],
+    "title": "create_checkoutArguments",
+    "type": "object"
+   },
+   "outputSchema": {
+    "additionalProperties": true,
+    "title": "create_checkoutDictOutput",
+    "type": "object"
+   }
+  }
+ ]
+}

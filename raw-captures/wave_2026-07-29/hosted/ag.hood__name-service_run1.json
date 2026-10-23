@@ -1,0 +1,180 @@
+{
+ "url": "https://www.hood.ag/api/mcp",
+ "capture_utc": "2026-07-29T12:05:45.326069+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 200,
+   "headers": {
+    "access-control-allow-headers": "Content-Type, Mcp-Session-Id, MCP-Protocol-Version, Authorization",
+    "access-control-allow-methods": "GET, POST, DELETE, OPTIONS",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "Mcp-Session-Id",
+    "cache-control": "no-store",
+    "content-type": "application/json",
+    "date": "Wed, 29 Jul 2026 12:05:45 GMT",
+    "server": "Vercel",
+    "strict-transport-security": "max-age=63072000",
+    "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch",
+    "x-matched-path": "/api/mcp",
+    "x-vercel-cache": "MISS",
+    "x-vercel-id": "cdg1::iad1::ks65c-1785326745554-ef5857a3194d"
+   },
+   "body_raw": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{\"tools\":{}},\"serverInfo\":{\"name\":\"hood\",\"version\":\"0.1.0\"}}}"
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "method": "notifications/initialized"
+   },
+   "status": 202,
+   "headers": {
+    "access-control-allow-headers": "Content-Type, Mcp-Session-Id, MCP-Protocol-Version, Authorization",
+    "access-control-allow-methods": "GET, POST, DELETE, OPTIONS",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "Mcp-Session-Id",
+    "cache-control": "public, max-age=0, must-revalidate",
+    "date": "Wed, 29 Jul 2026 12:05:45 GMT",
+    "server": "Vercel",
+    "strict-transport-security": "max-age=63072000",
+    "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch",
+    "x-matched-path": "/api/mcp",
+    "x-vercel-cache": "MISS",
+    "x-vercel-id": "cdg1::iad1::n2t54-1785326745913-2e146f41e143",
+    "content-length": "0"
+   },
+   "body_raw": ""
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "method": "tools/list"
+   },
+   "status": 200,
+   "headers": {
+    "access-control-allow-headers": "Content-Type, Mcp-Session-Id, MCP-Protocol-Version, Authorization",
+    "access-control-allow-methods": "GET, POST, DELETE, OPTIONS",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "Mcp-Session-Id",
+    "cache-control": "no-store",
+    "content-type": "application/json",
+    "date": "Wed, 29 Jul 2026 12:05:46 GMT",
+    "server": "Vercel",
+    "strict-transport-security": "max-age=63072000",
+    "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch",
+    "x-matched-path": "/api/mcp",
+    "x-vercel-cache": "MISS",
+    "x-vercel-id": "cdg1::iad1::l2vhl-1785326746158-0d12d429739f"
+   },
+   "body_raw": "{\"jsonrpc\":\"2.0\",\"id\":2,\"result\":{\"tools\":[{\"name\":\"resolve_name\",\"description\":\"Forward-resolve a .hood name to the address it points to. Returns null if unset.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\",\"description\":\"A .hood name, e.g. \\\"robin.hood\\\" (suffix optional).\"}},\"required\":[\"name\"]}},{\"name\":\"reverse_resolve\",\"description\":\"Reverse-resolve an address to its primary .hood name. `verified` is true only when the name's forward record points back to the address.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"address\":{\"type\":\"string\",\"description\":\"A 0x wallet address.\"}},\"required\":[\"address\"]}},{\"name\":\"resolve_text\",\"description\":\"Read a text record (e.g. \\\"avatar\\\", \\\"url\\\", \\\"com.twitter\\\") set on a .hood name.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"key\":{\"type\":\"string\",\"description\":\"Text record key, e.g. \\\"com.twitter\\\".\"}},\"required\":[\"name\",\"key\"]}},{\"name\":\"check_availability\",\"description\":\"Check whether a .hood name is available to register, and its yearly price.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"}},\"required\":[\"name\"]}},{\"name\":\"name_info\",\"description\":\"Full snapshot of a .hood name: resolved address, NFT owner, expiry, and availability.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"}},\"required\":[\"name\"]}}]}}"
+  }
+ ],
+ "server_info": {
+  "name": "hood",
+  "version": "0.1.0"
+ },
+ "instructions": null,
+ "tools": [
+  {
+   "name": "resolve_name",
+   "description": "Forward-resolve a .hood name to the address it points to. Returns null if unset.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "name": {
+      "type": "string",
+      "description": "A .hood name, e.g. \"robin.hood\" (suffix optional)."
+     }
+    },
+    "required": [
+     "name"
+    ]
+   }
+  },
+  {
+   "name": "reverse_resolve",
+   "description": "Reverse-resolve an address to its primary .hood name. `verified` is true only when the name's forward record points back to the address.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "address": {
+      "type": "string",
+      "description": "A 0x wallet address."
+     }
+    },
+    "required": [
+     "address"
+    ]
+   }
+  },
+  {
+   "name": "resolve_text",
+   "description": "Read a text record (e.g. \"avatar\", \"url\", \"com.twitter\") set on a .hood name.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "name": {
+      "type": "string"
+     },
+     "key": {
+      "type": "string",
+      "description": "Text record key, e.g. \"com.twitter\"."
+     }
+    },
+    "required": [
+     "name",
+     "key"
+    ]
+   }
+  },
+  {
+   "name": "check_availability",
+   "description": "Check whether a .hood name is available to register, and its yearly price.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "name": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "name"
+    ]
+   }
+  },
+  {
+   "name": "name_info",
+   "description": "Full snapshot of a .hood name: resolved address, NFT owner, expiry, and availability.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "name": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "name"
+    ]
+   }
+  }
+ ]
+}

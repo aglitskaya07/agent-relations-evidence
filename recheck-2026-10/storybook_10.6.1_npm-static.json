@@ -1,0 +1,100 @@
+{
+ "unit_source": "npm @storybook/mcp@10.6.1",
+ "capture_utc": "2026-10-06T09:53:39.670437+00:00",
+ "method": "static source read (no code executed)",
+ "auth": "none",
+ "server_info": {
+  "package": "@storybook/mcp",
+  "version": "10.6.1"
+ },
+ "tarball": "https://registry.npmjs.org/@storybook/mcp/-/mcp-10.6.1.tgz",
+ "source_files_count": 2,
+ "source_files": [
+  {
+   "path": "npm/x/mcp-10.6.1/package/dist/index.js",
+   "sha256": "646a1d8fee670da45520d65cc3cd28a097e80afdbd2512708426f8870bbbc629"
+  },
+  {
+   "path": "npm/x/mcp-10.6.1/package/dist/index.d.ts",
+   "sha256": "76e736bbcf7feac0f3a405f78323790e5a9968ec18013aad8ad8411c076a6443"
+  }
+ ],
+ "july_quote_check": [
+  {
+   "july_quote": "Before using ANY property on a component (even common-sounding ones like `shadow`), you MUST verify it is documented via these tools.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Call **list-all-documentation** once at the start of the task to discover available component and docs IDs.",
+   "july_channel": "instructions",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "Call this first for any UI task",
+   "july_channel": "tool_description:list-all-documentation",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Call this first for any UI task — before writing a new component, check what the design system already provides and build on it instead of hand-rolling a duplicate",
+   "july_channel": "tool_description:list-all-documentation",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "If it is not documented, it does not exist — never assume props from naming conventions or other libraries",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "If it is not documented, it does not exist — never assume props from naming conventions or other libraries; report it to the user instead.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Only use properties explicitly documented or shown in example stories.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Only use properties explicitly documented or shown in example stories. Only reference IDs returned by these tools; never guess IDs.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Use this to discover IDs for downstream story-focused workflows without filesystem lookup.",
+   "july_channel": "tool_description:list-all-documentation",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "and to answer any question about a component's props, API, or usage — reading or grepping the component source is not a substitute",
+   "july_channel": "tool_description:get-documentation",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "before answering any question about props, API, or usage, discover the relevant IDs here rather than reading component source",
+   "july_channel": "tool_description:list-all-documentation",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "reading or grepping the component source is not a substitute",
+   "july_channel": "tool_description:get-documentation",
+   "status_now": "exact"
+  }
+ ],
+ "steering_marker_sentences_now": [
+  "Never hallucinate component properties!** Before using ANY property on a component (even common-sounding ones like \\`shadow\\`), you MUST verify it is documented via these tools.",
+  "If it is not documented, it does not exist \\u2014 never assume props from naming conventions or other libraries; report it to the user instead.",
+  "Only use properties explicitly documented or shown in example stories.",
+  "Only reference IDs returned by these tools; never guess IDs.",
+  "You must either pass the original request forward to the server context, or set a custom manifestProvider that doesn't need the request.\"",
+  "Call this first for any UI task \\u2014 before writing a new component, check what the design system already provides and build on it instead of hand-rolling a duplicate; before answering any question about props, API, or usage, discover the relevant IDs here rather than reading component source.",
+  "Then fetch the entries with ${getToolName(ctx2)(DOCS_METHOD_REFS.show)}, referencing only IDs returned here \\u2014 never guess IDs.",
+  "Returns the first ${MAX_STORIES_TO_SHOW} stories (including story IDs) with code snippets showing how props are used, plus TypeScript prop definitions.",
+  "Call this before using a component to avoid hallucinating prop names, types, or valid combinations, and to answer any question about a component's props, API, or usage \\u2014 reading or grepping the component source is not a substitute.",
+  "id=\"button\" returns Primary, Secondary, Large stories with code like <Button variant=\"primary\" size=\"large\"> showing actual prop combinations.`;",
+  "true and shown next to each story in the component documentation (e.g., \"button--primary\").",
+  "Prefer this over componentId + storyName whenever you have a story ID.'",
+  "Use together with storyName, and only when you have no story ID.'",
+  "'The human-readable story name (e.g., \"Primary\")."
+ ]
+}

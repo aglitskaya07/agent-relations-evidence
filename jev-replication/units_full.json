@@ -1,0 +1,1106 @@
+[
+ {
+  "frame": "pilot",
+  "unit": "anysite",
+  "label": "C",
+  "dossier": "raw-captures/dossiers_2026-07-29/anysite.md",
+  "vendor_type": "vendor-official",
+  "category": "data-scraping-aggregator"
+ },
+ {
+  "frame": "pilot",
+  "unit": "apify-connector",
+  "label": "C",
+  "dossier": "raw-captures/dossiers_2026-07-29/apify.md",
+  "vendor_type": "aggregator",
+  "category": "scraping-marketplace"
+ },
+ {
+  "frame": "pilot",
+  "unit": "firecrawl-3.23.0",
+  "label": "A",
+  "dossier": "raw-captures/dossiers_2026-07-29/firecrawl-3.23.0.md",
+  "vendor_type": "vendor-official",
+  "category": "search-scraping"
+ },
+ {
+  "frame": "pilot",
+  "unit": "firecrawl-3.22.4",
+  "label": "D",
+  "dossier": "raw-captures/dossiers_2026-07-29/firecrawl-3.22.4.md",
+  "vendor_type": "vendor-official",
+  "category": "search-scraping"
+ },
+ {
+  "frame": "pilot",
+  "unit": "exa",
+  "label": "B",
+  "dossier": "raw-captures/dossiers_2026-07-29/exa.md",
+  "vendor_type": "vendor-official",
+  "category": "search"
+ },
+ {
+  "frame": "pilot",
+  "unit": "context7",
+  "label": "C",
+  "dossier": "raw-captures/dossiers_2026-07-29/context7.md",
+  "vendor_type": "vendor-official",
+  "category": "docs-data"
+ },
+ {
+  "frame": "pilot",
+  "unit": "playwright-mcp",
+  "label": "A",
+  "dossier": "raw-captures/dossiers_2026-07-29/playwright.md",
+  "vendor_type": "vendor-official",
+  "category": "browser-utility"
+ },
+ {
+  "frame": "pilot",
+  "unit": "chrome-devtools-mcp",
+  "label": "A",
+  "dossier": "raw-captures/dossiers_2026-07-29/chrome-devtools.md",
+  "vendor_type": "vendor-official",
+  "category": "browser-utility"
+ },
+ {
+  "frame": "pilot",
+  "unit": "server-filesystem",
+  "label": "B",
+  "dossier": "raw-captures/dossiers_2026-07-29/server-filesystem.md",
+  "vendor_type": "foundation-reference",
+  "category": "files-utility"
+ },
+ {
+  "frame": "pilot",
+  "unit": "telegram-mcp",
+  "label": "A+",
+  "dossier": "raw-captures/dossiers_2026-07-29/telegram-mcp.md",
+  "vendor_type": "community",
+  "category": "messaging"
+ },
+ {
+  "frame": "pilot",
+  "unit": "telegram-plugin",
+  "label": "A+",
+  "dossier": "raw-captures/dossiers_2026-07-29/telegram-plugin.md",
+  "vendor_type": "platform-official",
+  "category": "messaging"
+ },
+ {
+  "frame": "wave",
+  "unit": "claude-ai:Figma",
+  "label": "C",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/claude-ai_Figma.md",
+  "vendor_type": "platform-connector",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "claude-ai:Fireflies",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/claude-ai_Fireflies.md",
+  "vendor_type": "platform-connector",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "claude-ai:Gmail",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/claude-ai_Gmail.md",
+  "vendor_type": "platform-connector",
+  "category": "messaging-comm"
+ },
+ {
+  "frame": "wave",
+  "unit": "claude-ai:Google_Calendar",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/claude-ai_Google_Calendar.md",
+  "vendor_type": "platform-connector",
+  "category": "messaging-comm"
+ },
+ {
+  "frame": "wave",
+  "unit": "claude-ai:Google_Drive",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/claude-ai_Google_Drive.md",
+  "vendor_type": "platform-connector",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "claude-ai:Granola",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/claude-ai_Granola.md",
+  "vendor_type": "platform-connector",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "claude-ai:Netlify",
+  "label": "C",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/claude-ai_Netlify.md",
+  "vendor_type": "platform-connector",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "claude-ai:Notion",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/claude-ai_Notion.md",
+  "vendor_type": "platform-connector",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "claude-ai:Zoom_for_Claude",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/claude-ai_Zoom_for_Claude.md",
+  "vendor_type": "platform-connector",
+  "category": "messaging-comm"
+ },
+ {
+  "frame": "wave",
+  "unit": "@azure-devops/mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/azure-devops__mcp.md",
+  "vendor_type": "vendor-official",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "@azure/mcp-linux-x64",
+  "label": "C",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/azure__mcp-linux-x64.md",
+  "vendor_type": "vendor-official",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "@azure/mcp-win32-x64",
+  "label": "C",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/azure__mcp-win32-x64.md",
+  "vendor_type": "vendor-official",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "@cap-js/mcp-server",
+  "label": "B",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/cap-js__mcp-server.md",
+  "vendor_type": "vendor-official",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "@circleci/mcp-server-circleci",
+  "label": "C",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/circleci__mcp-server-circleci.md",
+  "vendor_type": "vendor-official",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "@claude-flow/mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/claude-flow__mcp.md",
+  "vendor_type": "community-or-unknown",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "@drawio/mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/drawio__mcp.md",
+  "vendor_type": "vendor-official",
+  "category": "files-utility"
+ },
+ {
+  "frame": "wave",
+  "unit": "@ericthered926/duckduckgo-mcp-server",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/ericthered926__duckduckgo-mcp-server.md",
+  "vendor_type": "community-or-unknown",
+  "category": "search-scraping"
+ },
+ {
+  "frame": "wave",
+  "unit": "@eslint/mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/eslint__mcp.md",
+  "vendor_type": "vendor-official",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "@gongrzhe/server-gmail-autoauth-mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/gongrzhe__server-gmail-autoauth-mcp.md",
+  "vendor_type": "community-or-unknown",
+  "category": "messaging-comm"
+ },
+ {
+  "frame": "wave",
+  "unit": "@mastra/mcp-docs-server",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/mastra__mcp-docs-server.md",
+  "vendor_type": "vendor-official",
+  "category": "data-docs"
+ },
+ {
+  "frame": "wave",
+  "unit": "@modelcontextprotocol/server-everything",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/modelcontextprotocol__server-everything.md",
+  "vendor_type": "community-or-unknown",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "@modelcontextprotocol/server-sequential-thinking",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/modelcontextprotocol__server-sequential-thinking.md",
+  "vendor_type": "community-or-unknown",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "@n8n/mcp-browser",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/n8n__mcp-browser.md",
+  "vendor_type": "community-or-unknown",
+  "category": "search-scraping"
+ },
+ {
+  "frame": "wave",
+  "unit": "@notionhq/notion-mcp-server",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/notionhq__notion-mcp-server.md",
+  "vendor_type": "vendor-official",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "@pandacss/mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/pandacss__mcp.md",
+  "vendor_type": "vendor-official",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "@payloadcms/plugin-mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/payloadcms__plugin-mcp.md",
+  "vendor_type": "community-or-unknown",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "@salesforce/mcp",
+  "label": "C",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/salesforce__mcp.md",
+  "vendor_type": "vendor-official",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "@salesforce/mcp-provider-aura-experts",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/salesforce__mcp-provider-aura-experts.md",
+  "vendor_type": "vendor-official",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "@salesforce/mcp-provider-code-analyzer",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/salesforce__mcp-provider-code-analyzer.md",
+  "vendor_type": "vendor-official",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "@sap-ux/fiori-mcp-server",
+  "label": "A+",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/sap-ux__fiori-mcp-server.md",
+  "vendor_type": "vendor-official",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "@sentry/mcp-server",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/sentry__mcp-server.md",
+  "vendor_type": "vendor-official",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "@serdnaley/metabase-mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/serdnaley__metabase-mcp.md",
+  "vendor_type": "community-or-unknown",
+  "category": "data-docs"
+ },
+ {
+  "frame": "wave",
+  "unit": "@softeria/ms-365-mcp-server",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/softeria__ms-365-mcp-server.md",
+  "vendor_type": "community-or-unknown",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "@storybook/mcp",
+  "label": "C",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/storybook__mcp.md",
+  "vendor_type": "vendor-official",
+  "category": "data-docs"
+ },
+ {
+  "frame": "wave",
+  "unit": "@supabase/mcp-server-supabase",
+  "label": "C",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/supabase__mcp-server-supabase.md",
+  "vendor_type": "vendor-official",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "@ui5/mcp-server",
+  "label": "C",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/ui5__mcp-server.md",
+  "vendor_type": "vendor-official",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "@wonderwhy-er/desktop-commander",
+  "label": "C",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/wonderwhy-er__desktop-commander.md",
+  "vendor_type": "vendor-official",
+  "category": "browser-automation"
+ },
+ {
+  "frame": "wave",
+  "unit": "@zereight/mcp-gitlab",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/zereight__mcp-gitlab.md",
+  "vendor_type": "community-or-unknown",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "agentation-mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/agentation-mcp.md",
+  "vendor_type": "community-or-unknown",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "brilliant-directories-mcp",
+  "label": "B",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/brilliant-directories-mcp.md",
+  "vendor_type": "community-or-unknown",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "expo-mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/expo-mcp.md",
+  "vendor_type": "vendor-official",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "hostinger-api-mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/hostinger-api-mcp.md",
+  "vendor_type": "vendor-official",
+  "category": "commerce-finance"
+ },
+ {
+  "frame": "wave",
+  "unit": "n8n-mcp",
+  "label": "B",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/n8n-mcp.md",
+  "vendor_type": "community-or-unknown",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "next-devtools-mcp",
+  "label": "C",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/next-devtools-mcp.md",
+  "vendor_type": "vendor-official",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "tavily-mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/tavily-mcp.md",
+  "vendor_type": "vendor-official",
+  "category": "search-scraping"
+ },
+ {
+  "frame": "wave",
+  "unit": "ac.tandem/docs-mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/ac.tandem__docs-mcp.md",
+  "vendor_type": "vendor-hosted-startup",
+  "category": "data-docs"
+ },
+ {
+  "frame": "wave",
+  "unit": "ag.hood/name-service",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/ag.hood__name-service.md",
+  "vendor_type": "vendor-hosted-startup",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "ai.aarna/atars-mcp",
+  "label": "C",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/ai.aarna__atars-mcp.md",
+  "vendor_type": "vendor-hosted-startup",
+  "category": "commerce-finance"
+ },
+ {
+  "frame": "wave",
+  "unit": "ai.abmeter/abmeter",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/ai.abmeter__abmeter.md",
+  "vendor_type": "vendor-hosted-startup",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "ai.agentberg/agentberg",
+  "label": "D",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/ai.agentberg__agentberg.md",
+  "vendor_type": "vendor-hosted-startup",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "ai.agenticfabricationnetwork/ufp",
+  "label": "C",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/ai.agenticfabricationnetwork__ufp.md",
+  "vendor_type": "vendor-hosted-startup",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "ai.agenticshelf/graffeo",
+  "label": "C",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/ai.agenticshelf__graffeo.md",
+  "vendor_type": "vendor-hosted-startup",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "ai.agenticterminal/directory",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/ai.agenticterminal__directory.md",
+  "vendor_type": "vendor-hosted-startup",
+  "category": "search-scraping"
+ },
+ {
+  "frame": "wave",
+  "unit": "ai.agentrapay/agentra",
+  "label": "B",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/ai.agentrapay__agentra.md",
+  "vendor_type": "vendor-hosted-startup",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "ai.ai-akari/agent-trust-receipt",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/ai.ai-akari__agent-trust-receipt.md",
+  "vendor_type": "vendor-hosted-startup",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "ai.ai-portal/ai-portal",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/ai.ai-portal__ai-portal.md",
+  "vendor_type": "vendor-hosted-startup",
+  "category": "data-docs"
+ },
+ {
+  "frame": "wave",
+  "unit": "ai.airshelf/catalog",
+  "label": "B",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/ai.airshelf__catalog.md",
+  "vendor_type": "vendor-hosted-startup",
+  "category": "search-scraping"
+ },
+ {
+  "frame": "wave",
+  "unit": "ai.alphacreek/alphacreek-mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/ai.alphacreek__alphacreek-mcp.md",
+  "vendor_type": "vendor-hosted-startup",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "@1claw/mcp",
+  "label": "A+",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/1claw__mcp.md",
+  "vendor_type": "community-or-unknown",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "@1mcp/agent",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/1mcp__agent.md",
+  "vendor_type": "community-or-unknown",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "@aaronsb/google-workspace-mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/aaronsb__google-workspace-mcp.md",
+  "vendor_type": "community-or-unknown",
+  "category": "browser-automation"
+ },
+ {
+  "frame": "wave",
+  "unit": "@aashari/mcp-server-atlassian-bitbucket",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/aashari__mcp-server-atlassian-bitbucket.md",
+  "vendor_type": "community-or-unknown",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "@abhaybabbar/retellai-mcp-server",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/abhaybabbar__retellai-mcp-server.md",
+  "vendor_type": "community-or-unknown",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "@abhiz123/todoist-mcp-server",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/abhiz123__todoist-mcp-server.md",
+  "vendor_type": "community-or-unknown",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "@adeu/mcp-server",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/adeu__mcp-server.md",
+  "vendor_type": "community-or-unknown",
+  "category": "browser-automation"
+ },
+ {
+  "frame": "wave",
+  "unit": "@adeze/raindrop-mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/adeze__raindrop-mcp.md",
+  "vendor_type": "community-or-unknown",
+  "category": "data-docs"
+ },
+ {
+  "frame": "wave",
+  "unit": "actual-mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/actual-mcp.md",
+  "vendor_type": "community-or-unknown",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "agentloopkit",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/agentloopkit.md",
+  "vendor_type": "community-or-unknown",
+  "category": "other"
+ },
+ {
+  "frame": "wave",
+  "unit": "mcp-code-context",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/mcp-code-context.md",
+  "vendor_type": "community-or-unknown",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "mcp-server-actor-critic-thinking",
+  "label": "B",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/mcp-server-actor-critic-thinking.md",
+  "vendor_type": "community-or-unknown",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "neuromcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/neuromcp.md",
+  "vendor_type": "community-or-unknown",
+  "category": "search-scraping"
+ },
+ {
+  "frame": "wave",
+  "unit": "nexus-mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/nexus-mcp.md",
+  "vendor_type": "community-or-unknown",
+  "category": "search-scraping"
+ },
+ {
+  "frame": "wave",
+  "unit": "opendia",
+  "label": "B",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/opendia.md",
+  "vendor_type": "community-or-unknown",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "projscan",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/projscan.md",
+  "vendor_type": "community-or-unknown",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "roam-research-mcp",
+  "label": "B",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/roam-research-mcp.md",
+  "vendor_type": "community-or-unknown",
+  "category": "search-scraping"
+ },
+ {
+  "frame": "wave",
+  "unit": "safari-mcp",
+  "label": "B",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/safari-mcp.md",
+  "vendor_type": "community-or-unknown",
+  "category": "search-scraping"
+ },
+ {
+  "frame": "wave",
+  "unit": "sonic-pi-mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/sonic-pi-mcp.md",
+  "vendor_type": "community-or-unknown",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "think-tool-mcp",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/think-tool-mcp.md",
+  "vendor_type": "community-or-unknown",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "touchdesigner-mcp-server",
+  "label": "A",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/touchdesigner-mcp-server.md",
+  "vendor_type": "community-or-unknown",
+  "category": "dev-tools"
+ },
+ {
+  "frame": "wave",
+  "unit": "notfair.co",
+  "label": "B",
+  "dossier": "raw-captures/wave_2026-07-29/dossiers/notfair.co.md",
+  "vendor_type": "vendor-hosted-startup",
+  "category": "ads-marketing"
+ },
+ {
+  "frame": "brands",
+  "unit": "github",
+  "label": "C",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/github.md",
+  "vendor_type": "official",
+  "category": "big-name"
+ },
+ {
+  "frame": "brands",
+  "unit": "playwright",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/playwright.md",
+  "vendor_type": "official",
+  "category": "big-name"
+ },
+ {
+  "frame": "brands",
+  "unit": "notion",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/notion.md",
+  "vendor_type": "official",
+  "category": "content"
+ },
+ {
+  "frame": "brands",
+  "unit": "slack",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/slack.md",
+  "vendor_type": "reference",
+  "category": "communications"
+ },
+ {
+  "frame": "brands",
+  "unit": "atlassian",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/atlassian.md",
+  "vendor_type": "community",
+  "category": "productivity"
+ },
+ {
+  "frame": "brands",
+  "unit": "mongodb",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/mongodb.md",
+  "vendor_type": "official",
+  "category": "big-name"
+ },
+ {
+  "frame": "brands",
+  "unit": "redis",
+  "label": "C",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/redis.md",
+  "vendor_type": "official",
+  "category": "big-name"
+ },
+ {
+  "frame": "brands",
+  "unit": "sentry",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/sentry.md",
+  "vendor_type": "official",
+  "category": "big-name"
+ },
+ {
+  "frame": "brands",
+  "unit": "grafana",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/grafana.md",
+  "vendor_type": "official",
+  "category": "analytics"
+ },
+ {
+  "frame": "brands",
+  "unit": "elastic",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/elastic.md",
+  "vendor_type": "official",
+  "category": "big-name"
+ },
+ {
+  "frame": "brands",
+  "unit": "terraform",
+  "label": "A+",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/terraform.md",
+  "vendor_type": "official",
+  "category": "big-name"
+ },
+ {
+  "frame": "brands",
+  "unit": "heroku",
+  "label": "C",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/heroku.md",
+  "vendor_type": "official",
+  "category": "big-name"
+ },
+ {
+  "frame": "brands",
+  "unit": "postman",
+  "label": "C",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/postman.md",
+  "vendor_type": "official",
+  "category": "big-name"
+ },
+ {
+  "frame": "brands",
+  "unit": "supabase",
+  "label": "C",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/supabase.md",
+  "vendor_type": "official",
+  "category": "big-name"
+ },
+ {
+  "frame": "brands",
+  "unit": "neon",
+  "label": "C",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/neon.md",
+  "vendor_type": "official",
+  "category": "big-name"
+ },
+ {
+  "frame": "brands",
+  "unit": "clickhouse",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/clickhouse.md",
+  "vendor_type": "official",
+  "category": "analytics"
+ },
+ {
+  "frame": "brands",
+  "unit": "azure",
+  "label": "C",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/azure.md",
+  "vendor_type": "official",
+  "category": "big-name"
+ },
+ {
+  "frame": "brands",
+  "unit": "docker-hub",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/docker-hub.md",
+  "vendor_type": "official",
+  "category": "big-name"
+ },
+ {
+  "frame": "brands",
+  "unit": "firecrawl",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/firecrawl.md",
+  "vendor_type": "official",
+  "category": "web-data"
+ },
+ {
+  "frame": "brands",
+  "unit": "exa",
+  "label": "B",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/exa.md",
+  "vendor_type": "official",
+  "category": "web-data"
+ },
+ {
+  "frame": "brands",
+  "unit": "tavily",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/tavily.md",
+  "vendor_type": "official",
+  "category": "web-data"
+ },
+ {
+  "frame": "brands",
+  "unit": "brave",
+  "label": "B",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/brave.md",
+  "vendor_type": "official",
+  "category": "web-data"
+ },
+ {
+  "frame": "brands",
+  "unit": "kagi",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/kagi.md",
+  "vendor_type": "official",
+  "category": "web-data"
+ },
+ {
+  "frame": "brands",
+  "unit": "oxylabs",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/oxylabs.md",
+  "vendor_type": "official",
+  "category": "web-data"
+ },
+ {
+  "frame": "brands",
+  "unit": "browserbase",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/browserbase.md",
+  "vendor_type": "official",
+  "category": "web-data"
+ },
+ {
+  "frame": "brands",
+  "unit": "duckduckgo",
+  "label": "A+",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/duckduckgo.md",
+  "vendor_type": "community",
+  "category": "web-data"
+ },
+ {
+  "frame": "brands",
+  "unit": "chrome-mcp",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/chrome-mcp.md",
+  "vendor_type": "community",
+  "category": "web-data"
+ },
+ {
+  "frame": "brands",
+  "unit": "bright-data",
+  "label": "B",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/bright-data.md",
+  "vendor_type": "official",
+  "category": "web-data"
+ },
+ {
+  "frame": "brands",
+  "unit": "linkedin",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/linkedin.md",
+  "vendor_type": "community",
+  "category": "social-media"
+ },
+ {
+  "frame": "brands",
+  "unit": "meta-ads",
+  "label": "B",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/meta-ads.md",
+  "vendor_type": "community",
+  "category": "social-media"
+ },
+ {
+  "frame": "brands",
+  "unit": "reddit",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/reddit.md",
+  "vendor_type": "community",
+  "category": "social-media"
+ },
+ {
+  "frame": "brands",
+  "unit": "telegram",
+  "label": "A+",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/telegram.md",
+  "vendor_type": "community",
+  "category": "social-media"
+ },
+ {
+  "frame": "brands",
+  "unit": "whatsapp",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/whatsapp.md",
+  "vendor_type": "community",
+  "category": "social-media"
+ },
+ {
+  "frame": "brands",
+  "unit": "instagram-dm",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/instagram-dm.md",
+  "vendor_type": "community",
+  "category": "social-media"
+ },
+ {
+  "frame": "brands",
+  "unit": "youtube",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/youtube.md",
+  "vendor_type": "community",
+  "category": "social-media"
+ },
+ {
+  "frame": "brands",
+  "unit": "discord",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/discord.md",
+  "vendor_type": "community",
+  "category": "social-media"
+ },
+ {
+  "frame": "brands",
+  "unit": "figma-context",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/figma-context.md",
+  "vendor_type": "community",
+  "category": "design-content"
+ },
+ {
+  "frame": "brands",
+  "unit": "elevenlabs",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/elevenlabs.md",
+  "vendor_type": "official",
+  "category": "design-content"
+ },
+ {
+  "frame": "brands",
+  "unit": "obsidian",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/obsidian.md",
+  "vendor_type": "community",
+  "category": "content"
+ },
+ {
+  "frame": "brands",
+  "unit": "airtable",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/airtable.md",
+  "vendor_type": "community",
+  "category": "content"
+ },
+ {
+  "frame": "brands",
+  "unit": "n8n",
+  "label": "B",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/n8n.md",
+  "vendor_type": "community",
+  "category": "automation"
+ },
+ {
+  "frame": "brands",
+  "unit": "hubspot",
+  "label": "A",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/hubspot.md",
+  "vendor_type": "community",
+  "category": "marketing-CRM"
+ },
+ {
+  "frame": "brands",
+  "unit": "metabase",
+  "label": "B",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/metabase.md",
+  "vendor_type": "community",
+  "category": "analytics"
+ },
+ {
+  "frame": "brands",
+  "unit": "vercel",
+  "label": "C",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/vercel.md",
+  "vendor_type": "official",
+  "category": "big-name"
+ },
+ {
+  "frame": "brands",
+  "unit": "perplexity",
+  "label": "B",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/perplexity.md",
+  "vendor_type": "official",
+  "category": "web-data"
+ },
+ {
+  "frame": "brands",
+  "unit": "desktop-cmd",
+  "label": "C",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/desktop-cmd.md",
+  "vendor_type": "community",
+  "category": "big-name"
+ },
+ {
+  "frame": "brands",
+  "unit": "git-mcp",
+  "label": "C",
+  "dossier": "raw-captures/brands_2026-07-30/dossiers/git-mcp.md",
+  "vendor_type": "community",
+  "category": "big-name"
+ }
+]

@@ -1,0 +1,41 @@
+{
+ "url": "https://mcp.adramp.ai/sse",
+ "capture_utc": "2026-07-29T12:37:11.566263+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "date": "Wed, 29 Jul 2026 12:37:11 GMT",
+    "content-type": "application/json",
+    "content-length": "51",
+    "x-cloud-trace-context": "7e583a70a0abdc252fb2d3df5da5b046",
+    "server": "cloudflare",
+    "cf-cache-status": "DYNAMIC",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=uMkEAV6N%2Fw8j2ccCSRlSoYipFeru4k04u3khpRp3sShvQoq9staZeDjmRgXwQiMUXAWoU%2FzmZcx7tEfVGNJjb7ThYDkQXU8UYCIqpl3CTLz5zHeDe%2BIsXKBAFP4%2FfEAT\"}]}",
+    "cf-ray": "a22c2c6c382beca2-MAD",
+    "alt-svc": "h3=\":443\"; ma=86400"
+   },
+   "body_raw": "{\"error\":\"Missing or invalid Authorization header\"}"
+  }
+ ]
+}

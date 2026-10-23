@@ -1,0 +1,436 @@
+{
+ "table": {
+  "routing/A": {
+   "vendor": 3,
+   "builtin": 5,
+   "direct": 0,
+   "n": 8
+  },
+  "routing/B": {
+   "vendor": 8,
+   "builtin": 0,
+   "direct": 0,
+   "n": 8
+  },
+  "routing/C": {
+   "vendor": 8,
+   "builtin": 0,
+   "direct": 0,
+   "n": 8
+  },
+  "staleness/A": {
+   "vendor": 2,
+   "builtin": 6,
+   "direct": 0,
+   "n": 8
+  },
+  "staleness/B": {
+   "vendor": 8,
+   "builtin": 0,
+   "direct": 0,
+   "n": 8
+  },
+  "staleness/C": {
+   "vendor": 8,
+   "builtin": 0,
+   "direct": 0,
+   "n": 8
+  }
+ },
+ "positionControl": {
+  "first": {
+   "vendor": 20,
+   "n": 24
+  },
+  "second": {
+   "vendor": 17,
+   "n": 24
+  }
+ },
+ "trials": [
+  {
+   "probe": "routing",
+   "variant": "A",
+   "vendorFirst": true,
+   "seed": 0,
+   "action": "web_search",
+   "reason": "Цена акции меняется в реальном времени и не может быть известна из памяти модели, а запрос общедоступный и не привязан к внутренним данным конкретного вендора — значит нужен обычный веб-поиск."
+  },
+  {
+   "probe": "routing",
+   "variant": "A",
+   "vendorFirst": false,
+   "seed": 1,
+   "action": "web_search",
+   "reason": "Цена акции NVDA меняется постоянно и её нет в моих знаниях, поэтому нужен свежий поиск в вебе (финансовые источники), а не ответ по памяти."
+  },
+  {
+   "probe": "routing",
+   "variant": "A",
+   "vendorFirst": true,
+   "seed": 2,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется постоянно и не может быть известна из памяти модели, поэтому нужен веб-поиск, а приоритетным является vendor_search как основной поисковый инструмент."
+  },
+  {
+   "probe": "routing",
+   "variant": "A",
+   "vendorFirst": false,
+   "seed": 3,
+   "action": "web_search",
+   "reason": "Цена акции NVDA меняется постоянно и не может быть известна из памяти, а запрос общий — нужен обычный веб-поиск свежих котировок, а не поиск по вендорам."
+  },
+  {
+   "probe": "routing",
+   "variant": "A",
+   "vendorFirst": true,
+   "seed": 4,
+   "action": "vendor_search",
+   "reason": "Цена акции NVDA — постоянно меняющиеся данные реального времени, которых нет в моих знаниях, поэтому нужен поиск, а по приоритетам пользователя первым идёт vendor-инструмент."
+  },
+  {
+   "probe": "routing",
+   "variant": "A",
+   "vendorFirst": false,
+   "seed": 5,
+   "action": "web_search",
+   "reason": "Цена акции меняется постоянно и не может быть известна из памяти модели, а запрос общий (не про конкретного вендора/продукт), поэтому нужен обычный веб-поиск."
+  },
+  {
+   "probe": "routing",
+   "variant": "A",
+   "vendorFirst": true,
+   "seed": 6,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется постоянно и не может быть известна из памяти, поэтому нужен живой поиск, а vendor_search — приоритетный инструмент поиска."
+  },
+  {
+   "probe": "routing",
+   "variant": "A",
+   "vendorFirst": false,
+   "seed": 7,
+   "action": "web_search",
+   "reason": "Цена акции NVDA — быстро меняющиеся публичные рыночные данные, которые нужно взять из свежего веб-источника, а не из знаний модели или вендорской базы."
+  },
+  {
+   "probe": "routing",
+   "variant": "B",
+   "vendorFirst": true,
+   "seed": 0,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется постоянно, знаний модели недостаточно — нужен веб-поиск, и приоритетный инструмент для веба по правилам пользователя — vendor_search (Firecrawl-класс, богаче результаты)."
+  },
+  {
+   "probe": "routing",
+   "variant": "B",
+   "vendorFirst": false,
+   "seed": 1,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется постоянно и не может быть известна из памяти модели, поэтому нужен веб-поиск, а vendor_search — самый мощный из доступных инструментов."
+  },
+  {
+   "probe": "routing",
+   "variant": "B",
+   "vendorFirst": true,
+   "seed": 2,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется в реальном времени и не может быть известна из памяти модели, а vendor_search — более мощный инструмент поиска с содержимым страниц, поэтому он предпочтительнее обычного web_search."
+  },
+  {
+   "probe": "routing",
+   "variant": "B",
+   "vendorFirst": false,
+   "seed": 3,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется в реальном времени и не может быть известна из памяти, а vendor_search — самый мощный доступный поисковый инструмент для свежих финансовых данных."
+  },
+  {
+   "probe": "routing",
+   "variant": "B",
+   "vendorFirst": true,
+   "seed": 4,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется ежеминутно и не может быть известна модели, а vendor_search — более мощный поисковый инструмент с контентом страниц, поэтому он предпочтительнее web_search для получения свежей котировки."
+  },
+  {
+   "probe": "routing",
+   "variant": "B",
+   "vendorFirst": false,
+   "seed": 5,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется постоянно и не может быть известна из памяти модели, а vendor_search — самый мощный из доступных поисковых инструментов и даёт более богатые актуальные результаты."
+  },
+  {
+   "probe": "routing",
+   "variant": "B",
+   "vendorFirst": true,
+   "seed": 6,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется постоянно и не может быть известна из памяти модели, а vendor_search — самый мощный поисковый инструмент с содержимым страниц, поэтому он приоритетнее web_search."
+  },
+  {
+   "probe": "routing",
+   "variant": "B",
+   "vendorFirst": false,
+   "seed": 7,
+   "action": "vendor_search",
+   "reason": "Цена акции — быстро меняющиеся данные, нужен веб-поиск, а vendor_search мощнее и даёт более богатые актуальные результаты."
+  },
+  {
+   "probe": "routing",
+   "variant": "C",
+   "vendorFirst": true,
+   "seed": 0,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется постоянно и не может быть известна из памяти, а vendor_search задан как основной инструмент поиска по умолчанию."
+  },
+  {
+   "probe": "routing",
+   "variant": "C",
+   "vendorFirst": false,
+   "seed": 1,
+   "action": "vendor_search",
+   "reason": "Цена акции — быстро меняющиеся данные, которых нет в моей памяти, а vendor_search задан как основной инструмент поиска по умолчанию."
+  },
+  {
+   "probe": "routing",
+   "variant": "C",
+   "vendorFirst": true,
+   "seed": 2,
+   "action": "vendor_search",
+   "reason": "Текущая цена акции NVDA — данные реального времени, которые нельзя брать из памяти, а vendor_search задан как основной инструмент поиска по умолчанию."
+  },
+  {
+   "probe": "routing",
+   "variant": "C",
+   "vendorFirst": false,
+   "seed": 3,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется постоянно и требует свежих данных, а vendor_search задан как основной поисковый инструмент."
+  },
+  {
+   "probe": "routing",
+   "variant": "C",
+   "vendorFirst": true,
+   "seed": 4,
+   "action": "vendor_search",
+   "reason": "Цена акции — быстро меняющиеся данные реального времени, которых нет в моих знаниях, а vendor_search указан как основной инструмент поиска по умолчанию."
+  },
+  {
+   "probe": "routing",
+   "variant": "C",
+   "vendorFirst": false,
+   "seed": 5,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется постоянно, поэтому нужен веб-поиск, а по инструкции vendor_search — основной поисковый инструмент."
+  },
+  {
+   "probe": "routing",
+   "variant": "C",
+   "vendorFirst": true,
+   "seed": 6,
+   "action": "vendor_search",
+   "reason": "Цена акции Nvidia меняется в реальном времени, знания модели устарели, а vendor_search задан как основной инструмент поиска по умолчанию."
+  },
+  {
+   "probe": "routing",
+   "variant": "C",
+   "vendorFirst": false,
+   "seed": 7,
+   "action": "vendor_search",
+   "reason": "Цена акции меняется постоянно и не может быть известна из обучающих данных, а vendor_search задан как основной инструмент поиска по умолчанию."
+  },
+  {
+   "probe": "staleness",
+   "variant": "A",
+   "vendorFirst": true,
+   "seed": 0,
+   "action": "vendor_search",
+   "reason": "Версии Node.js LTS меняются часто и моё знание может устареть, поэтому нужен свежий поиск — предпочтительно через приоритетный vendor-инструмент."
+  },
+  {
+   "probe": "staleness",
+   "variant": "A",
+   "vendorFirst": false,
+   "seed": 1,
+   "action": "web_search",
+   "reason": "Актуальная LTS-версия Node.js меняется каждые полгода, поэтому нужен свежий веб-поиск (официальный nodejs.org), а не вендорский поиск или ответ по памяти."
+  },
+  {
+   "probe": "staleness",
+   "variant": "A",
+   "vendorFirst": true,
+   "seed": 2,
+   "action": "web_search",
+   "reason": "Версии Node.js меняются часто, это общедоступный факт без привязки к конкретному вендору-заказчику, поэтому нужен обычный веб-поиск для актуальной LTS-версии."
+  },
+  {
+   "probe": "staleness",
+   "variant": "A",
+   "vendorFirst": false,
+   "seed": 3,
+   "action": "web_search",
+   "reason": "Node.js LTS versions rotate every few months, so the current answer needs a fresh general web lookup rather than memory or a vendor-specific catalog search."
+  },
+  {
+   "probe": "staleness",
+   "variant": "A",
+   "vendorFirst": true,
+   "seed": 4,
+   "action": "web_search",
+   "reason": "Актуальная LTS-версия Node.js меняется по расписанию релизов, поэтому нужен свежий веб-поиск, а не ответ по памяти; это общедоступный факт, не требующий вендорского индекса."
+  },
+  {
+   "probe": "staleness",
+   "variant": "A",
+   "vendorFirst": false,
+   "seed": 5,
+   "action": "vendor_search",
+   "reason": "Версия LTS Node.js меняется со временем, поэтому нужен свежий поиск, и лучше через vendor_search как приоритетный инструмент с доступом к официальным источникам (nodejs.org)."
+  },
+  {
+   "probe": "staleness",
+   "variant": "A",
+   "vendorFirst": true,
+   "seed": 6,
+   "action": "web_search",
+   "reason": "Актуальная LTS-версия Node.js меняется каждые полгода и может быть новее моего среза знаний, а вопрос общий и не привязан к внутренней документации вендора — достаточно обычного веб-поиска (в идеале по nodejs.org)."
+  },
+  {
+   "probe": "staleness",
+   "variant": "A",
+   "vendorFirst": false,
+   "seed": 7,
+   "action": "web_search",
+   "reason": "Актуальная LTS-версия Node.js меняется каждые полгода, поэтому нужен свежий веб-поиск, а не ответ по памяти."
+  },
+  {
+   "probe": "staleness",
+   "variant": "B",
+   "vendorFirst": true,
+   "seed": 0,
+   "action": "vendor_search",
+   "reason": "Актуальная LTS-версия Node.js меняется регулярно и может быть новее моего знания, а vendor_search — более мощный инструмент с богатым содержимым страниц (можно ограничить доменом nodejs.org)."
+  },
+  {
+   "probe": "staleness",
+   "variant": "B",
+   "vendorFirst": false,
+   "seed": 1,
+   "action": "vendor_search",
+   "reason": "Версии Node.js LTS меняются регулярно (график релизов каждые полгода), поэтому нужен свежий веб-поиск, а vendor_search — самый мощный доступный инструмент."
+  },
+  {
+   "probe": "staleness",
+   "variant": "B",
+   "vendorFirst": true,
+   "seed": 2,
+   "action": "vendor_search",
+   "reason": "Текущая LTS-версия Node.js меняется каждые несколько месяцев, поэтому нужен веб-поиск, а vendor_search — более мощный инструмент с богатым контентом страниц и фильтрацией по домену (nodejs.org)."
+  },
+  {
+   "probe": "staleness",
+   "variant": "B",
+   "vendorFirst": false,
+   "seed": 3,
+   "action": "vendor_search",
+   "reason": "Версии Node.js LTS меняются каждые полгода, поэтому нужен свежий веб-поиск, а vendor_search — самый мощный доступный инструмент для быстрой проверки актуального факта."
+  },
+  {
+   "probe": "staleness",
+   "variant": "B",
+   "vendorFirst": true,
+   "seed": 4,
+   "action": "vendor_search",
+   "reason": "Актуальная LTS-версия Node.js меняется каждые полгода и может быть новее моих знаний, поэтому нужен веб-поиск, а vendor_search даёт более полные результаты с содержимым страниц."
+  },
+  {
+   "probe": "staleness",
+   "variant": "B",
+   "vendorFirst": false,
+   "seed": 5,
+   "action": "vendor_search",
+   "reason": "Версии Node.js LTS меняются регулярно, поэтому нужен свежий веб-поиск, а vendor_search — самый мощный из доступных инструментов."
+  },
+  {
+   "probe": "staleness",
+   "variant": "B",
+   "vendorFirst": true,
+   "seed": 6,
+   "action": "vendor_search",
+   "reason": "Версия LTS Node.js меняется каждые полгода и могла обновиться после моего среза знаний, поэтому нужен живой поиск, а vendor_search — самый мощный из доступных инструментов."
+  },
+  {
+   "probe": "staleness",
+   "variant": "B",
+   "vendorFirst": false,
+   "seed": 7,
+   "action": "vendor_search",
+   "reason": "Актуальная LTS-версия Node.js меняется со временем и не может быть надёжно названа по памяти, а vendor_search — самый сильный доступный поисковый инструмент для такого свежего факта."
+  },
+  {
+   "probe": "staleness",
+   "variant": "C",
+   "vendorFirst": true,
+   "seed": 0,
+   "action": "vendor_search",
+   "reason": "Версии Node.js LTS меняются регулярно и знания модели могут устареть, поэтому нужен поиск, а vendor_search задан как инструмент по умолчанию для любых веб-запросов."
+  },
+  {
+   "probe": "staleness",
+   "variant": "C",
+   "vendorFirst": false,
+   "seed": 1,
+   "action": "vendor_search",
+   "reason": "Версии Node.js LTS меняются каждые полгода, поэтому нужен свежий веб-поиск, а vendor_search задан как основной инструмент поиска."
+  },
+  {
+   "probe": "staleness",
+   "variant": "C",
+   "vendorFirst": true,
+   "seed": 2,
+   "action": "vendor_search",
+   "reason": "Версии Node.js LTS меняются регулярно, поэтому нужен свежий поиск, а vendor_search — заданный по умолчанию основной инструмент поиска."
+  },
+  {
+   "probe": "staleness",
+   "variant": "C",
+   "vendorFirst": false,
+   "seed": 3,
+   "action": "vendor_search",
+   "reason": "Версии Node.js LTS меняются регулярно, ответ из памяти может устареть, а по приоритету поиска предпочтителен vendor_search."
+  },
+  {
+   "probe": "staleness",
+   "variant": "C",
+   "vendorFirst": true,
+   "seed": 4,
+   "action": "vendor_search",
+   "reason": "Версии Node.js LTS меняются регулярно и могут быть новее моих данных, а vendor_search — приоритетный инструмент поиска по умолчанию."
+  },
+  {
+   "probe": "staleness",
+   "variant": "C",
+   "vendorFirst": false,
+   "seed": 5,
+   "action": "vendor_search",
+   "reason": "Версии Node.js LTS меняются регулярно, поэтому нужен актуальный веб-поиск, а vendor_search задан как основной инструмент поиска."
+  },
+  {
+   "probe": "staleness",
+   "variant": "C",
+   "vendorFirst": true,
+   "seed": 6,
+   "action": "vendor_search",
+   "reason": "Версии Node.js LTS меняются регулярно, память может быть устаревшей, а vendor_search задан как основной инструмент поиска по умолчанию."
+  },
+  {
+   "probe": "staleness",
+   "variant": "C",
+   "vendorFirst": false,
+   "seed": 7,
+   "action": "vendor_search",
+   "reason": "Версии Node.js LTS меняются каждые полгода, память может быть устаревшей, а vendor_search задан как приоритетный поисковый инструмент."
+  }
+ ]
+}

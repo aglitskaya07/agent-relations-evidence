@@ -1,0 +1,718 @@
+{
+ "url": "https://mcp.firecrawl.dev/v2/mcp",
+ "capture_utc": "2026-07-29T09:46:44.695923+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 200,
+   "headers": {
+    "cache-control": "no-cache",
+    "content-type": "text/event-stream",
+    "date": "Wed, 29 Jul 2026 09:46:45 GMT",
+    "server": "nginx/1.30.3",
+    "content-length": "961"
+   },
+   "body_raw": "event: message\nid: fdc162da-ab43-4363-a45d-b6608d4c8e26_1785318405083_0000_sj8\ndata: {\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{\"tools\":{},\"logging\":{},\"completions\":{}},\"serverInfo\":{\"name\":\"firecrawl-fastmcp\",\"version\":\"3.23.0\"},\"instructions\":\"Without authentication, this endpoint exposes Search, Scrape, and Parse with usage limits. An OAuth connection or Authorization bearer API key exposes account tools; unavailable tools return connection guidance. Firecrawl provides web search, page retrieval, site URL discovery, multi-page collection, structured extraction, monitoring, and asynchronous research. Match the requested operation to the tool boundary: firecrawl_scrape retrieves one supplied page, firecrawl_map enumerates URLs under a site without retrieving their content, and firecrawl_agent starts multi-source research whose result is read with firecrawl_agent_status. Provide only the required inputs.\"},\"jsonrpc\":\"2.0\",\"id\":1}\n\n"
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "method": "notifications/initialized"
+   },
+   "status": 202,
+   "headers": {
+    "content-type": "text/plain; charset=UTF-8",
+    "date": "Wed, 29 Jul 2026 09:46:45 GMT",
+    "server": "nginx/1.30.3"
+   },
+   "body_raw": ""
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "method": "tools/list"
+   },
+   "status": 200,
+   "headers": {
+    "cache-control": "no-cache",
+    "content-type": "text/event-stream",
+    "date": "Wed, 29 Jul 2026 09:46:45 GMT",
+    "server": "nginx/1.30.3"
+   },
+   "body_raw": "event: message\nid: 9b117c27-7cd5-4dfa-813f-578e45839206_1785318405723_0000_ud1\ndata: {\"result\":{\"tools\":[{\"annotations\":{\"title\":\"Scrape a URL\",\"readOnlyHint\":true,\"openWorldHint\":true,\"destructiveHint\":false},\"description\":\"\\nRetrieve and extract content from one supplied URL through Firecrawl. Use this when the request identifies a page and needs its content or defined fields. It can return markdown, HTML, links, screenshots, branding data, a targeted answer, or JSON matching a supplied schema; JSON is useful when the requested result has defined fields, while markdown preserves readable page content.\\n\\nThis tool operates on a known page. For a set of pages use `firecrawl_crawl`, and to discover page URLs use `firecrawl_map` or `firecrawl_search`. Options include JavaScript render delay, cache age, main-content filtering, PII redaction, and lockdown cache-only retrieval. Browser actions may change the live page when interactive actions are enabled.\\n\\nReturns the selected content formats and page metadata.\\n\",\"inputSchema\":{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\",\"format\":\"uri\"},\"formats\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"enum\":[\"markdown\",\"html\",\"rawHtml\",\"screenshot\",\"links\",\"summary\",\"changeTracking\",\"branding\",\"json\",\"query\",\"audio\"]}},\"jsonOptions\":{\"type\":\"object\",\"properties\":{\"prompt\":{\"type\":\"string\"},\"schema\":{\"type\":\"object\",\"propertyNames\":{\"type\":\"string\"},\"additionalProperties\":false}},\"additionalProperties\":false},\"queryOptions\":{\"type\":\"object\",\"properties\":{\"prompt\":{\"type\":\"string\",\"maxLength\":10000},\"mode\":{\"default\":\"freeform\",\"type\":\"string\",\"enum\":[\"directQuote\",\"freeform\"]}},\"required\":[\"prompt\",\"mode\"],\"additionalProperties\":false},\"screenshotOptions\":{\"type\":\"object\",\"properties\":{\"fullPage\":{\"type\":\"boolean\"},\"quality\":{\"type\":\"number\"},\"viewport\":{\"type\":\"object\",\"properties\":{\"width\":{\"type\":\"number\"},\"height\":{\"type\":\"number\"}},\"required\":[\"width\",\"height\"],\"additionalProperties\":false}},\"additionalProperties\":false},\"parsers\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"enum\":[\"pdf\"]}},\"pdfOptions\":{\"type\":\"object\",\"properties\":{\"maxPages\":{\"type\":\"integer\",\"minimum\":1,\"maximum\":10000}},\"additionalProperties\":false},\"onlyMainContent\":{\"type\":\"boolean\"},\"redactPII\":{\"type\":\"boolean\"},\"includeTags\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"excludeTags\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"waitFor\":{\"type\":\"number\"},\"mobile\":{\"type\":\"boolean\"},\"skipTlsVerification\":{\"type\":\"boolean\"},\"removeBase64Images\":{\"type\":\"boolean\"},\"location\":{\"type\":\"object\",\"properties\":{\"country\":{\"type\":\"string\"},\"languages\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"additionalProperties\":false},\"storeInCache\":{\"type\":\"boolean\"},\"zeroDataRetention\":{\"type\":\"boolean\"},\"maxAge\":{\"type\":\"number\"},\"lockdown\":{\"type\":\"boolean\"},\"proxy\":{\"type\":\"string\",\"enum\":[\"basic\",\"stealth\",\"enhanced\",\"auto\"]},\"profile\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"saveChanges\":{\"type\":\"boolean\"}},\"required\":[\"name\"],\"additionalProperties\":false}},\"required\":[\"url\"],\"additionalProperties\":false},\"name\":\"firecrawl_scrape\"},{\"annotations\":{\"title\":\"Search the web\",\"readOnlyHint\":true,\"openWorldHint\":true,\"destructiveHint\":false},\"description\":\"\\nSearch web, news, or image sources and return ranked results. Operators include quoted phrases, `-term`, `site:host`, `inurl:term`, `intitle:term`, and `related:host`; the set is non-exhaustive. `includeDomains` and `excludeDomains` are mutually exclusive hostname filters; categories limit results to GitHub, research, or PDF sources.\\n\\n`scrapeOptions` can attach extracted page content. Returns source-type result groups, an `id` for optional search feedback, and usage metadata.\\n\",\"inputSchema\":{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"properties\":{\"query\":{\"type\":\"string\",\"minLength\":1},\"highlights\":{\"type\":\"boolean\"},\"limit\":{\"type\":\"number\"},\"tbs\":{\"type\":\"string\"},\"filter\":{\"type\":\"string\"},\"location\":{\"type\":\"string\"},\"includeDomains\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":253,\"pattern\":\"^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\\\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$\"}},\"excludeDomains\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":253,\"pattern\":\"^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\\\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$\"}},\"sources\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"string\",\"enum\":[\"web\",\"images\",\"news\"]}},\"required\":[\"type\"],\"additionalProperties\":false}},\"categories\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"enum\":[\"github\",\"research\",\"pdf\"]}},\"enterprise\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"enum\":[\"default\",\"anon\",\"zdr\"]}},\"scrapeOptions\":{\"type\":\"object\",\"properties\":{\"formats\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"enum\":[\"markdown\",\"html\",\"rawHtml\",\"screenshot\",\"links\",\"summary\",\"changeTracking\",\"branding\",\"json\",\"query\",\"audio\"]}},\"jsonOptions\":{\"type\":\"object\",\"properties\":{\"prompt\":{\"type\":\"string\"},\"schema\":{\"type\":\"object\",\"propertyNames\":{\"type\":\"string\"},\"additionalProperties\":false}},\"additionalProperties\":false},\"queryOptions\":{\"type\":\"object\",\"properties\":{\"prompt\":{\"type\":\"string\",\"maxLength\":10000},\"mode\":{\"default\":\"freeform\",\"type\":\"string\",\"enum\":[\"directQuote\",\"freeform\"]}},\"required\":[\"prompt\",\"mode\"],\"additionalProperties\":false},\"screenshotOptions\":{\"type\":\"object\",\"properties\":{\"fullPage\":{\"type\":\"boolean\"},\"quality\":{\"type\":\"number\"},\"viewport\":{\"type\":\"object\",\"properties\":{\"width\":{\"type\":\"number\"},\"height\":{\"type\":\"number\"}},\"required\":[\"width\",\"height\"],\"additionalProperties\":false}},\"additionalProperties\":false},\"parsers\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"enum\":[\"pdf\"]}},\"pdfOptions\":{\"type\":\"object\",\"properties\":{\"maxPages\":{\"type\":\"integer\",\"minimum\":1,\"maximum\":10000}},\"additionalProperties\":false},\"onlyMainContent\":{\"type\":\"boolean\"},\"redactPII\":{\"type\":\"boolean\"},\"includeTags\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"excludeTags\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"waitFor\":{\"type\":\"number\"},\"mobile\":{\"type\":\"boolean\"},\"skipTlsVerification\":{\"type\":\"boolean\"},\"removeBase64Images\":{\"type\":\"boolean\"},\"location\":{\"type\":\"object\",\"properties\":{\"country\":{\"type\":\"string\"},\"languages\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"additionalProperties\":false},\"storeInCache\":{\"type\":\"boolean\"},\"zeroDataRetention\":{\"type\":\"boolean\"},\"maxAge\":{\"type\":\"number\"},\"lockdown\":{\"type\":\"boolean\"},\"proxy\":{\"type\":\"string\",\"enum\":[\"basic\",\"stealth\",\"enhanced\",\"auto\"]},\"profile\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"saveChanges\":{\"type\":\"boolean\"}},\"required\":[\"name\"],\"additionalProperties\":false}},\"additionalProperties\":false}},\"required\":[\"query\"],\"additionalProperties\":false},\"name\":\"firecrawl_search\"},{\"annotations\":{\"title\":\"Parse a local file\",\"readOnlyHint\":true,\"openWorldHint\":false,\"destructiveHint\":false},\"description\":\"\\nParse one supported document into markdown, HTML, links, summary, targeted answers, or JSON matching a schema. Supported inputs include common HTML, PDF, Word, RTF, OpenDocument, and spreadsheet files; PDF parsing can be bounded with `pdfOptions.maxPages`.\\n\\nLocal MCP reads `filePath` from the server filesystem. Hosted MCP uses two calls: first provide `filePath` to receive upload instructions, upload locally, then call again with the returned `uploadRef`; do not send both fields together. Remote web URLs belong in `firecrawl_scrape`.\\n\\nSet `redactPII` to request redaction of personally identifiable information in the returned content. `zeroDataRetention` requires an eligible authenticated account; omit it for anonymous keyless use. Returns upload instructions for hosted phase one or parsed document content for the final call.\\n\",\"inputSchema\":{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"properties\":{\"formats\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"enum\":[\"markdown\",\"html\",\"rawHtml\",\"links\",\"summary\",\"json\",\"query\"]}},\"jsonOptions\":{\"type\":\"object\",\"properties\":{\"prompt\":{\"type\":\"string\"},\"schema\":{\"type\":\"object\",\"propertyNames\":{\"type\":\"string\"},\"additionalProperties\":false}},\"additionalProperties\":false},\"queryOptions\":{\"type\":\"object\",\"properties\":{\"prompt\":{\"type\":\"string\",\"maxLength\":10000},\"mode\":{\"default\":\"freeform\",\"type\":\"string\",\"enum\":[\"directQuote\",\"freeform\"]}},\"required\":[\"prompt\",\"mode\"],\"additionalProperties\":false},\"parsers\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"enum\":[\"pdf\"]}},\"pdfOptions\":{\"type\":\"object\",\"properties\":{\"maxPages\":{\"type\":\"integer\",\"minimum\":1,\"maximum\":10000}},\"additionalProperties\":false},\"onlyMainContent\":{\"type\":\"boolean\"},\"redactPII\":{\"type\":\"boolean\"},\"includeTags\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"excludeTags\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"removeBase64Images\":{\"type\":\"boolean\"},\"skipTlsVerification\":{\"type\":\"boolean\"},\"storeInCache\":{\"type\":\"boolean\"},\"zeroDataRetention\":{\"type\":\"boolean\"},\"maxAge\":{\"type\":\"number\"},\"proxy\":{\"type\":\"string\",\"enum\":[\"basic\",\"auto\"]},\"filePath\":{\"type\":\"string\",\"minLength\":1},\"uploadRef\":{\"type\":\"string\",\"minLength\":1},\"contentType\":{\"type\":\"string\"},\"declaredSizeBytes\":{\"type\":\"integer\",\"exclusiveMinimum\":0,\"maximum\":9007199254740991}},\"additionalProperties\":false},\"name\":\"firecrawl_parse\"}]},\"jsonrpc\":\"2.0\",\"id\":2}\n\n"
+  }
+ ],
+ "server_info": {
+  "name": "firecrawl-fastmcp",
+  "version": "3.23.0"
+ },
+ "instructions": "Without authentication, this endpoint exposes Search, Scrape, and Parse with usage limits. An OAuth connection or Authorization bearer API key exposes account tools; unavailable tools return connection guidance. Firecrawl provides web search, page retrieval, site URL discovery, multi-page collection, structured extraction, monitoring, and asynchronous research. Match the requested operation to the tool boundary: firecrawl_scrape retrieves one supplied page, firecrawl_map enumerates URLs under a site without retrieving their content, and firecrawl_agent starts multi-source research whose result is read with firecrawl_agent_status. Provide only the required inputs.",
+ "tools": [
+  {
+   "annotations": {
+    "title": "Scrape a URL",
+    "readOnlyHint": true,
+    "openWorldHint": true,
+    "destructiveHint": false
+   },
+   "description": "\nRetrieve and extract content from one supplied URL through Firecrawl. Use this when the request identifies a page and needs its content or defined fields. It can return markdown, HTML, links, screenshots, branding data, a targeted answer, or JSON matching a supplied schema; JSON is useful when the requested result has defined fields, while markdown preserves readable page content.\n\nThis tool operates on a known page. For a set of pages use `firecrawl_crawl`, and to discover page URLs use `firecrawl_map` or `firecrawl_search`. Options include JavaScript render delay, cache age, main-content filtering, PII redaction, and lockdown cache-only retrieval. Browser actions may change the live page when interactive actions are enabled.\n\nReturns the selected content formats and page metadata.\n",
+   "inputSchema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+     "url": {
+      "type": "string",
+      "format": "uri"
+     },
+     "formats": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "enum": [
+        "markdown",
+        "html",
+        "rawHtml",
+        "screenshot",
+        "links",
+        "summary",
+        "changeTracking",
+        "branding",
+        "json",
+        "query",
+        "audio"
+       ]
+      }
+     },
+     "jsonOptions": {
+      "type": "object",
+      "properties": {
+       "prompt": {
+        "type": "string"
+       },
+       "schema": {
+        "type": "object",
+        "propertyNames": {
+         "type": "string"
+        },
+        "additionalProperties": false
+       }
+      },
+      "additionalProperties": false
+     },
+     "queryOptions": {
+      "type": "object",
+      "properties": {
+       "prompt": {
+        "type": "string",
+        "maxLength": 10000
+       },
+       "mode": {
+        "default": "freeform",
+        "type": "string",
+        "enum": [
+         "directQuote",
+         "freeform"
+        ]
+       }
+      },
+      "required": [
+       "prompt",
+       "mode"
+      ],
+      "additionalProperties": false
+     },
+     "screenshotOptions": {
+      "type": "object",
+      "properties": {
+       "fullPage": {
+        "type": "boolean"
+       },
+       "quality": {
+        "type": "number"
+       },
+       "viewport": {
+        "type": "object",
+        "properties": {
+         "width": {
+          "type": "number"
+         },
+         "height": {
+          "type": "number"
+         }
+        },
+        "required": [
+         "width",
+         "height"
+        ],
+        "additionalProperties": false
+       }
+      },
+      "additionalProperties": false
+     },
+     "parsers": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "enum": [
+        "pdf"
+       ]
+      }
+     },
+     "pdfOptions": {
+      "type": "object",
+      "properties": {
+       "maxPages": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 10000
+       }
+      },
+      "additionalProperties": false
+     },
+     "onlyMainContent": {
+      "type": "boolean"
+     },
+     "redactPII": {
+      "type": "boolean"
+     },
+     "includeTags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "excludeTags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "waitFor": {
+      "type": "number"
+     },
+     "mobile": {
+      "type": "boolean"
+     },
+     "skipTlsVerification": {
+      "type": "boolean"
+     },
+     "removeBase64Images": {
+      "type": "boolean"
+     },
+     "location": {
+      "type": "object",
+      "properties": {
+       "country": {
+        "type": "string"
+       },
+       "languages": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       }
+      },
+      "additionalProperties": false
+     },
+     "storeInCache": {
+      "type": "boolean"
+     },
+     "zeroDataRetention": {
+      "type": "boolean"
+     },
+     "maxAge": {
+      "type": "number"
+     },
+     "lockdown": {
+      "type": "boolean"
+     },
+     "proxy": {
+      "type": "string",
+      "enum": [
+       "basic",
+       "stealth",
+       "enhanced",
+       "auto"
+      ]
+     },
+     "profile": {
+      "type": "object",
+      "properties": {
+       "name": {
+        "type": "string"
+       },
+       "saveChanges": {
+        "type": "boolean"
+       }
+      },
+      "required": [
+       "name"
+      ],
+      "additionalProperties": false
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "additionalProperties": false
+   },
+   "name": "firecrawl_scrape"
+  },
+  {
+   "annotations": {
+    "title": "Search the web",
+    "readOnlyHint": true,
+    "openWorldHint": true,
+    "destructiveHint": false
+   },
+   "description": "\nSearch web, news, or image sources and return ranked results. Operators include quoted phrases, `-term`, `site:host`, `inurl:term`, `intitle:term`, and `related:host`; the set is non-exhaustive. `includeDomains` and `excludeDomains` are mutually exclusive hostname filters; categories limit results to GitHub, research, or PDF sources.\n\n`scrapeOptions` can attach extracted page content. Returns source-type result groups, an `id` for optional search feedback, and usage metadata.\n",
+   "inputSchema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+     "query": {
+      "type": "string",
+      "minLength": 1
+     },
+     "highlights": {
+      "type": "boolean"
+     },
+     "limit": {
+      "type": "number"
+     },
+     "tbs": {
+      "type": "string"
+     },
+     "filter": {
+      "type": "string"
+     },
+     "location": {
+      "type": "string"
+     },
+     "includeDomains": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1,
+       "maxLength": 253,
+       "pattern": "^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$"
+      }
+     },
+     "excludeDomains": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1,
+       "maxLength": 253,
+       "pattern": "^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$"
+      }
+     },
+     "sources": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "enum": [
+          "web",
+          "images",
+          "news"
+         ]
+        }
+       },
+       "required": [
+        "type"
+       ],
+       "additionalProperties": false
+      }
+     },
+     "categories": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "enum": [
+        "github",
+        "research",
+        "pdf"
+       ]
+      }
+     },
+     "enterprise": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "enum": [
+        "default",
+        "anon",
+        "zdr"
+       ]
+      }
+     },
+     "scrapeOptions": {
+      "type": "object",
+      "properties": {
+       "formats": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "enum": [
+          "markdown",
+          "html",
+          "rawHtml",
+          "screenshot",
+          "links",
+          "summary",
+          "changeTracking",
+          "branding",
+          "json",
+          "query",
+          "audio"
+         ]
+        }
+       },
+       "jsonOptions": {
+        "type": "object",
+        "properties": {
+         "prompt": {
+          "type": "string"
+         },
+         "schema": {
+          "type": "object",
+          "propertyNames": {
+           "type": "string"
+          },
+          "additionalProperties": false
+         }
+        },
+        "additionalProperties": false
+       },
+       "queryOptions": {
+        "type": "object",
+        "properties": {
+         "prompt": {
+          "type": "string",
+          "maxLength": 10000
+         },
+         "mode": {
+          "default": "freeform",
+          "type": "string",
+          "enum": [
+           "directQuote",
+           "freeform"
+          ]
+         }
+        },
+        "required": [
+         "prompt",
+         "mode"
+        ],
+        "additionalProperties": false
+       },
+       "screenshotOptions": {
+        "type": "object",
+        "properties": {
+         "fullPage": {
+          "type": "boolean"
+         },
+         "quality": {
+          "type": "number"
+         },
+         "viewport": {
+          "type": "object",
+          "properties": {
+           "width": {
+            "type": "number"
+           },
+           "height": {
+            "type": "number"
+           }
+          },
+          "required": [
+           "width",
+           "height"
+          ],
+          "additionalProperties": false
+         }
+        },
+        "additionalProperties": false
+       },
+       "parsers": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "enum": [
+          "pdf"
+         ]
+        }
+       },
+       "pdfOptions": {
+        "type": "object",
+        "properties": {
+         "maxPages": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10000
+         }
+        },
+        "additionalProperties": false
+       },
+       "onlyMainContent": {
+        "type": "boolean"
+       },
+       "redactPII": {
+        "type": "boolean"
+       },
+       "includeTags": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "excludeTags": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "waitFor": {
+        "type": "number"
+       },
+       "mobile": {
+        "type": "boolean"
+       },
+       "skipTlsVerification": {
+        "type": "boolean"
+       },
+       "removeBase64Images": {
+        "type": "boolean"
+       },
+       "location": {
+        "type": "object",
+        "properties": {
+         "country": {
+          "type": "string"
+         },
+         "languages": {
+          "type": "array",
+          "items": {
+           "type": "string"
+          }
+         }
+        },
+        "additionalProperties": false
+       },
+       "storeInCache": {
+        "type": "boolean"
+       },
+       "zeroDataRetention": {
+        "type": "boolean"
+       },
+       "maxAge": {
+        "type": "number"
+       },
+       "lockdown": {
+        "type": "boolean"
+       },
+       "proxy": {
+        "type": "string",
+        "enum": [
+         "basic",
+         "stealth",
+         "enhanced",
+         "auto"
+        ]
+       },
+       "profile": {
+        "type": "object",
+        "properties": {
+         "name": {
+          "type": "string"
+         },
+         "saveChanges": {
+          "type": "boolean"
+         }
+        },
+        "required": [
+         "name"
+        ],
+        "additionalProperties": false
+       }
+      },
+      "additionalProperties": false
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "additionalProperties": false
+   },
+   "name": "firecrawl_search"
+  },
+  {
+   "annotations": {
+    "title": "Parse a local file",
+    "readOnlyHint": true,
+    "openWorldHint": false,
+    "destructiveHint": false
+   },
+   "description": "\nParse one supported document into markdown, HTML, links, summary, targeted answers, or JSON matching a schema. Supported inputs include common HTML, PDF, Word, RTF, OpenDocument, and spreadsheet files; PDF parsing can be bounded with `pdfOptions.maxPages`.\n\nLocal MCP reads `filePath` from the server filesystem. Hosted MCP uses two calls: first provide `filePath` to receive upload instructions, upload locally, then call again with the returned `uploadRef`; do not send both fields together. Remote web URLs belong in `firecrawl_scrape`.\n\nSet `redactPII` to request redaction of personally identifiable information in the returned content. `zeroDataRetention` requires an eligible authenticated account; omit it for anonymous keyless use. Returns upload instructions for hosted phase one or parsed document content for the final call.\n",
+   "inputSchema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+     "formats": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "enum": [
+        "markdown",
+        "html",
+        "rawHtml",
+        "links",
+        "summary",
+        "json",
+        "query"
+       ]
+      }
+     },
+     "jsonOptions": {
+      "type": "object",
+      "properties": {
+       "prompt": {
+        "type": "string"
+       },
+       "schema": {
+        "type": "object",
+        "propertyNames": {
+         "type": "string"
+        },
+        "additionalProperties": false
+       }
+      },
+      "additionalProperties": false
+     },
+     "queryOptions": {
+      "type": "object",
+      "properties": {
+       "prompt": {
+        "type": "string",
+        "maxLength": 10000
+       },
+       "mode": {
+        "default": "freeform",
+        "type": "string",
+        "enum": [
+         "directQuote",
+         "freeform"
+        ]
+       }
+      },
+      "required": [
+       "prompt",
+       "mode"
+      ],
+      "additionalProperties": false
+     },
+     "parsers": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "enum": [
+        "pdf"
+       ]
+      }
+     },
+     "pdfOptions": {
+      "type": "object",
+      "properties": {
+       "maxPages": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 10000
+       }
+      },
+      "additionalProperties": false
+     },
+     "onlyMainContent": {
+      "type": "boolean"
+     },
+     "redactPII": {
+      "type": "boolean"
+     },
+     "includeTags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "excludeTags": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "removeBase64Images": {
+      "type": "boolean"
+     },
+     "skipTlsVerification": {
+      "type": "boolean"
+     },
+     "storeInCache": {
+      "type": "boolean"
+     },
+     "zeroDataRetention": {
+      "type": "boolean"
+     },
+     "maxAge": {
+      "type": "number"
+     },
+     "proxy": {
+      "type": "string",
+      "enum": [
+       "basic",
+       "auto"
+      ]
+     },
+     "filePath": {
+      "type": "string",
+      "minLength": 1
+     },
+     "uploadRef": {
+      "type": "string",
+      "minLength": 1
+     },
+     "contentType": {
+      "type": "string"
+     },
+     "declaredSizeBytes": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991
+     }
+    },
+    "additionalProperties": false
+   },
+   "name": "firecrawl_parse"
+  }
+ ]
+}

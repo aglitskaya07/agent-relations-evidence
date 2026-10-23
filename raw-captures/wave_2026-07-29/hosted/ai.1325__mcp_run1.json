@@ -1,0 +1,51 @@
+{
+ "url": "https://agoclnqfyinwjxdmjnns.supabase.co/functions/v1/mcp",
+ "capture_utc": "2026-07-29T12:05:45.340196+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "date": "Wed, 29 Jul 2026 12:05:46 GMT",
+    "content-type": "application/json",
+    "cf-ray": "a22bfe5f0eb19a49-BCN",
+    "cf-cache-status": "DYNAMIC",
+    "access-control-allow-origin": "*",
+    "cache-control": "no-store",
+    "set-cookie": "__cf_bm=7ThDDZMOANzn4vtQ1n2zriRV5D.uQqkNQliD9CGHAYI-1785326745.4496214-1.0.1.1-nD8QJ918zX8xshjXhbTDqGov8LLgOlY_WP74HNpFooeireLa.TYta1_WSWrvk6jF_ok3gbnNByLq9v7WeKXkBDi68FcAplPPIAGr1uICJYueCzduoY4b6DB_lWw84nRv; HttpOnly; SameSite=None; Secure; Path=/; Domain=supabase.co; Expires=Wed, 29 Jul 2026 12:35:46 GMT",
+    "server": "cloudflare",
+    "vary": "Accept-Encoding",
+    "www-authenticate": "Bearer realm=\"mcp\", resource_metadata=\"https://agoclnqfyinwjxdmjnns.supabase.co/functions/v1/mcp/.well-known/oauth-protected-resource\"",
+    "access-control-expose-headers": "WWW-Authenticate, Mcp-Session-Id, Mcp-Protocol-Version",
+    "endpoint-load-metrics": "application_utilization:6,named_metrics.queue_depth:6",
+    "sb-gateway-version": "1",
+    "sb-project-ref": "agoclnqfyinwjxdmjnns",
+    "sb-request-id": "019fadc4-376d-77bf-8ca2-b9ddca2ba08a",
+    "x-deno-execution-id": "35181010-15e9-46f7-880c-26d54f809eaa",
+    "x-sb-edge-region": "eu-west-3",
+    "x-served-by": "supabase-edge-runtime",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "alt-svc": "h3=\":443\"; ma=86400"
+   },
+   "body_raw": "{\"error\":\"unauthorized\"}"
+  }
+ ]
+}

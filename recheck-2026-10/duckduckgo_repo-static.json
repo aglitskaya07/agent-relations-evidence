@@ -1,0 +1,129 @@
+{
+ "unit_source": "nickclyde/duckduckgo-mcp-server",
+ "capture_utc": "2026-10-06T09:53:47.988748+00:00",
+ "method": "static source read (no code executed)",
+ "auth": "none",
+ "server_info": {
+  "repo": "nickclyde/duckduckgo-mcp-server",
+  "commit": "8182af3f2295017ca90527a924f48147fbf18d5b 2026-09-04T11:27:57-07:00"
+ },
+ "source_files_count": 4,
+ "source_files": [
+  {
+   "path": "gh/nickclyde_duckduckgo-mcp-server/src/duckduckgo_mcp_server/server.py",
+   "sha256": "4db91326193eb05074a89a7f228a720ec00eae6e940291d9af87609453f95b54"
+  },
+  {
+   "path": "gh/nickclyde_duckduckgo-mcp-server/src/duckduckgo_mcp_server/__init__.py",
+   "sha256": "ae739b3e3b817044ada923b44ba82c752fe8b7c2133908d58fff8fd4b5146298"
+  },
+  {
+   "path": "gh/nickclyde_duckduckgo-mcp-server/src/duckduckgo_mcp_server/test_server.py",
+   "sha256": "3fccf622ec9e8591e55052237f60573e58d06e27aaf270c1fc8b08f0594c71cd"
+  },
+  {
+   "path": "gh/nickclyde_duckduckgo-mcp-server/src/duckduckgo_mcp_server/test_e2e.py",
+   "sha256": "9461d27e6488c9fc99cfa6c3afdfb27aee2ae46e74bd3c69923d608909d21c66"
+  }
+ ],
+ "july_quote_check": [
+  {
+   "july_quote": "Fetch and extract the main text content from a webpage. Strips out navigation, headers, footers, scripts, and styles to return clean readable text. Use this after searching to read the full content of a specific result.",
+   "july_channel": "tool_description:fetch_content",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Please try rephrasing your search or try again in a few minutes.",
+   "july_channel": "tool_output_text:search (format_results_for_llm)",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Search the web using DuckDuckGo. Returns a list of results with titles, URLs, and snippets. Use this to find current information, research topics, or locate specific websites. For best results, use specific and descriptive search queries.",
+   "july_channel": "tool_description:search",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Use this after searching to read the full content of a specific result.",
+   "july_channel": "tool_description:fetch_content",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "installing the optional browser backend (pip install 'duckduckgo-mcp-server[browser]') enables Chrome TLS impersonation, which typically resolves it.",
+   "july_channel": "tool_output_text:search (format_results_for_llm)",
+   "status_now": "not_found_verbatim"
+  },
+  {
+   "july_quote": "max_results: Maximum number of results to return, between 1 and 20 (default: 10).",
+   "july_channel": "tool_description:search",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "url: The full URL of the webpage to fetch (must start with http:// or https://).",
+   "july_channel": "tool_description:fetch_content",
+   "status_now": "not_found_verbatim"
+  }
+ ],
+ "steering_marker_sentences_now": [
+  "The id is the sha256 prefix of the URL (8 hex chars), extended only if",
+  "that prefix is already taken by a different URL, so the same URL always",
+  "Only ref:// tokens returned by this server's search results can be expanded, and they are forgotten when the server restarts.",
+  "Compared with the sliding window, this spreads waits instead of blocking",
+  "\"auto\" tries httpx first and",
+  "a 2xx status, ``raise_for_status()`` never fires and the empty page silently",
+  "\"auto\" tries httpx first and falls back",
+  "Under \"auto\", tries httpx first and transparently retries with curl when",
+  "httpx first, fall back to curl on a block signal.",
+  "f\"unsupported URL scheme '{parsed.scheme}://' (only http and https are allowed)\"",
+  "First match with enough",
+  "\"\"\"Return the primary content node, or the soup itself if none is obvious.\"\"\"",
+  "\"\"\"Allow only http(s) targets with no markdown breakout characters.\"\"\"",
+  "keep only the primary article/main content, then collapse.",
+  "primary content as lightweight markdown (headings, lists, links).",
+  "try httpx first; if the response looks like a 403 or a",
+  "Set True only for trusted local deployments that intentionally fetch",
+  "(default, historical), \"main\" (primary article), or \"markdown\".",
+  "Try httpx first.",
+  "an entry only exists after",
+  "{name} must be >= {minimum}, using {default}\", file=sys.stderr)",
+  "entirely (less safe; prefer an allow-list).",
+  "'text' (default, flattened page text), 'main' (primary article/main content only), or 'markdown' (headings, lists, and links preserved).",
+  "The full URL of the webpage to fetch (must start with http:// or https://), or a ref://<id> token exactly as shown in search results.",
+  "One of 'text' (flattened page), 'main' (article/main only), or 'markdown' (structured).",
+  "fetch_content accepts those tokens directly, so only call this when you need the real URL, for example to show or cite a link to the user.",
+  "Never present a ref:// token to the user as if it were a URL.",
+  "\"'auto' tries httpx first and falls back to curl on 403 / Cloudflare challenge.",
+  "Enable only for trusted local deployments.",
+  "'auto' tries httpx first and falls back to curl (curl_cffi Chrome TLS impersonation) when DuckDuckGo returns a fingerprint-based block (HTTP 202/403).",
+  "Insecure; prefer --ca-certs with your proxy's CA bundle.",
+  "'main' keeps the primary article.",
+  "Set 0 to always show full URLs.\"",
+  "Only affects HTTP transports.\"",
+  "Less safe than an allow-list; prefer --allowed-hosts / --allowed-origins.",
+  "parser.error(\"--host / --port are only valid with --transport sse or streamable-http\")",
+  "parser.error(\"--search-rpm must be >= 1\")",
+  "parser.error(\"--fetch-rpm must be >= 1\")",
+  "parser.error(\"--fetch-host-rpm must be >= 0\")",
+  "parser.error(\"--cache-ttl must be >= 0\")",
+  "parser.error(\"--cache-max-entries must be >= 0\")",
+  "parser.error(\"--ref-url-threshold must be >= 0\")",
+  "By default the SDK only allows",
+  "title=\"First Result\",",
+  "link=\"https://example.com/first\",",
+  "First Result\", formatted)",
+  "https://example.com/first\", formatted)",
+  "\"\"\"A 202 fingerprint-block on httpx must transparently retry with curl.\"\"\"",
+  "curl is only included",
+  "first = asyncio.run(",
+  "self.assertIn(\"cache=miss\", first)",
+  "self.assertIn(\"start_index=50 to see more\", first)",
+  "first = asyncio.run(fetcher.fetch_and_parse(\"https://example.com/page\", DummyCtx()))",
+  "self.assertTrue(first.startswith(\"Error\"))",
+  "<h1>Primary Title</h1>",
+  "<li>First item</li>",
+  "self.assertIn(\"Primary Title\", text)",
+  "self.assertIn(\"# Primary Title\", md)",
+  "self.assertIn(\"- First item\", md)",
+  "\"\"\"A 500 under auto should NOT trigger curl fallback — only 403/CF signals do.\"\"\"",
+  "asyncio.run(_validate_public_url(url))  # must not raise"
+ ]
+}

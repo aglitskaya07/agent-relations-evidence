@@ -1,0 +1,50 @@
+{
+ "url": "https://mcp.figma.com/mcp",
+ "capture_utc": "2026-10-05T13:24:09.304863+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "Content-Type": "text/plain; charset=utf-8",
+    "Content-Length": "12",
+    "Connection": "close",
+    "Date": "Mon, 05 Oct 2026 13:24:11 GMT",
+    "server-timing": "proxy;dur=6",
+    "x-figma-rest-api-request-id": "b1e7f075-72bc-449c-b796-b06b819c9c7c",
+    "access-control-allow-origin": "*",
+    "access-control-allow-headers": "Content-Type, X-Figma-Token, Authorization",
+    "access-control-expose-headers": "Retry-After, X-Figma-Plan-Tier, X-Figma-Rate-Limit-Type, X-Figma-Upgrade-Link",
+    "vary": "X-Figma-Token, Authorization",
+    "cache-control": "no-cache, no-store",
+    "www-authenticate": "Bearer resource_metadata=\"https://mcp.figma.com/.well-known/oauth-protected-resource\",scope=\"mcp:connect\",authorization_uri=\"https://api.figma.com/.well-known/oauth-authorization-server\"",
+    "x-content-type-options": "nosniff",
+    "X-Cache": "Error from cloudfront",
+    "Via": "1.1 1ddd3ba3dd9b9f41f86c2ea1807f3f4e.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Pop": "LAX53-P5",
+    "Alt-Svc": "h3=\":443\"; ma=86400",
+    "X-Amz-Cf-Id": "kvGwWmM7_9LpNCj2Q8CJuid6G_PwrxIXQJ3bPapnv-ohVGUklET5QA==",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+   },
+   "body_raw": "Unauthorized"
+  }
+ ]
+}

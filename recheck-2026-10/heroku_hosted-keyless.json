@@ -1,0 +1,54 @@
+{
+ "url": "https://mcp.heroku.com/mcp",
+ "capture_utc": "2026-10-05T13:24:35.449460+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "Content-Length": "76",
+    "Content-Security-Policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+    "Content-Type": "application/json; charset=utf-8",
+    "Cross-Origin-Opener-Policy": "same-origin",
+    "Cross-Origin-Resource-Policy": "same-origin",
+    "Date": "Mon, 05 Oct 2026 13:24:39 GMT",
+    "Etag": "W/\"4c-ptrIdu+3yjAtarglCEu6XVLnz2c\"",
+    "Origin-Agent-Cluster": "?1",
+    "Ratelimit-Limit": "60",
+    "Ratelimit-Policy": "60;w=60",
+    "Ratelimit-Remaining": "59",
+    "Ratelimit-Reset": "60",
+    "Referrer-Policy": "no-referrer",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "Via": "1.1 spaces-router (fcf88487e179)",
+    "Www-Authenticate": "Bearer error=\"invalid_token\", error_description=\"Missing Authorization header\"",
+    "X-Content-Type-Options": "nosniff",
+    "X-Dns-Prefetch-Control": "off",
+    "X-Download-Options": "noopen",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-Permitted-Cross-Domain-Policies": "none",
+    "X-Xss-Protection": "0",
+    "Connection": "close"
+   },
+   "body_raw": "{\"error\":\"invalid_token\",\"error_description\":\"Missing Authorization header\"}"
+  }
+ ]
+}

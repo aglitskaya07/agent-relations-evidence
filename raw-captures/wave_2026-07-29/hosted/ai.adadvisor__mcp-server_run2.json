@@ -1,0 +1,41 @@
+{
+ "url": "https://api.adadvisor.ai/mcp",
+ "capture_utc": "2026-07-29T12:37:11.071682+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "content-type": "application/json",
+    "content-length": "301",
+    "date": "Wed, 29 Jul 2026 12:37:11 GMT",
+    "www-authenticate": "Bearer error=\"invalid_token\", error_description=\"Authentication failed. The provided bearer token is invalid, expired, or no longer recognized by the server. To resolve: clear authentication tokens in your MCP client and reconnect. Your client should automatically re-register and obtain new tokens.\", resource_metadata=\"https://api.adadvisor.ai/.well-known/oauth-protected-resource/mcp\"",
+    "server": "uvicorn",
+    "x-cache": "Error from cloudfront",
+    "via": "1.1 6dab931f0144918ce074d0f41f244528.cloudfront.net (CloudFront)",
+    "x-amz-cf-pop": "MAD56-P6",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "x-amz-cf-id": "5CLMt6YV18uDiO4oTCYHzoDUMTf4yDTxtkgKa1-km_4ESYUINvxwAQ=="
+   },
+   "body_raw": "{\"error\": \"invalid_token\", \"error_description\": \"Authentication failed. The provided bearer token is invalid, expired, or no longer recognized by the server. To resolve: clear authentication tokens in your MCP client and reconnect. Your client should automatically re-register and obtain new tokens.\"}"
+  }
+ ]
+}

@@ -1,0 +1,165 @@
+{
+ "unit_source": "vercel/next-devtools-mcp",
+ "capture_utc": "2026-10-06T09:53:48.037484+00:00",
+ "method": "static source read (no code executed)",
+ "auth": "none",
+ "server_info": {
+  "repo": "vercel/next-devtools-mcp",
+  "commit": "1e8dcfa4789777901144b5d9710137f0eff72036 2026-09-14T17:32:25-07:00"
+ },
+ "source_files_count": 15,
+ "source_files": [
+  {
+   "path": "gh/vercel_next-devtools-mcp/src/index.ts",
+   "sha256": "eaee906e3478cc421127ff32634374f0ca3470edf5228ad84129c208980c0e92"
+  },
+  {
+   "path": "gh/vercel_next-devtools-mcp/src/_internal/find-process-import.ts",
+   "sha256": "2d440269f1f8a07cfaa550cf6d50f44783fb9eec4509042d42d708870429a3f8"
+  },
+  {
+   "path": "gh/vercel_next-devtools-mcp/src/_internal/nextjs-runtime-manager.ts",
+   "sha256": "635953258db9d7ead00ff545190a4c11c1df7d06e50c37ed23cc1da5b83e17df"
+  },
+  {
+   "path": "gh/vercel_next-devtools-mcp/src/_internal/tool-input-schema.ts",
+   "sha256": "1ec10c65b48342c921ca6322f9dfd38d27eb03e1dfd770a2d38352fbed993239"
+  },
+  {
+   "path": "gh/vercel_next-devtools-mcp/src/tools/browser-eval.ts",
+   "sha256": "8d624c6b248a1c20aa9b0d329bc8a7f1c874b2912ebdf143ba274b029355bd9d"
+  },
+  {
+   "path": "gh/vercel_next-devtools-mcp/src/tools/nextjs_call.ts",
+   "sha256": "682b985df713da51c74bec3e674163742082d1bc8b90eeab5182da70d397650d"
+  },
+  {
+   "path": "gh/vercel_next-devtools-mcp/src/tools/nextjs-docs.ts",
+   "sha256": "03ae4ffdf1628e5acf60f29425f21d2ccc5b615221063b37b3abefa6778c45f1"
+  },
+  {
+   "path": "gh/vercel_next-devtools-mcp/src/tools/nextjs_index.ts",
+   "sha256": "c90d3facfe96d5a9ed6857fb1e75efcf2ed9aae0e9f93bdb6ecfb20f31e6bdf3"
+  },
+  {
+   "path": "gh/vercel_next-devtools-mcp/src/telemetry/telemetry-events.ts",
+   "sha256": "f4130ead3896182af069506689630229da810e10d5277071c06a263b061f7331"
+  },
+  {
+   "path": "gh/vercel_next-devtools-mcp/src/telemetry/telemetry-dir.ts",
+   "sha256": "ad3fe25736b998ef82685b8835c9cf9d6832da0259d71d6391ed9b9195ba9e1f"
+  },
+  {
+   "path": "gh/vercel_next-devtools-mcp/src/telemetry/logger.ts",
+   "sha256": "e2a2b6de2061f26e90a8fe6d6c5cbcfcf7414b2a4eee85c87edad53878c6e50c"
+  },
+  {
+   "path": "gh/vercel_next-devtools-mcp/src/telemetry/mcp-telemetry-tracker.ts",
+   "sha256": "8fbbb290ba01233565ea670ae69211bc554bdc1dd0a78222d766df7b5ba43094"
+  },
+  {
+   "path": "gh/vercel_next-devtools-mcp/src/telemetry/telemetry-storage.ts",
+   "sha256": "775be730b0bbedf5584aed6e6016328717056b62385fd30dbf347fb68ad9827b"
+  },
+  {
+   "path": "gh/vercel_next-devtools-mcp/src/telemetry/flush-events.ts",
+   "sha256": "52319b7c48c1aa98af6e0b00e0b63afa23f68de64836332ca960f3f47d7b4523"
+  },
+  {
+   "path": "gh/vercel_next-devtools-mcp/src/telemetry/event-queue.ts",
+   "sha256": "41272532b9393e3d099b5ad1bcc59312e849f961096fcf0db80df5a4cea4ddbd"
+  }
+ ],
+ "july_quote_check": [
+  {
+   "july_quote": "**Before implementing ANY changes to the app**: When asked to add, modify, or fix anything in the application:",
+   "july_channel": "tool_description:nextjs_index",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "1. **Before implementing ANY changes to the app**: When asked to add, modify, or fix anything in the application:",
+   "july_channel": "tool_description:nextjs_index",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "3. **For agentic codebase search**: Use this as FIRST CHOICE for searching the currently running app. If not found, fallback to static codebase search tools.",
+   "july_channel": "tool_description:nextjs_index",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Call this before answering Next.js questions or writing Next.js code.",
+   "july_channel": "tool_description:nextjs_docs",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Call this when you need to open pages, click, type, screenshot, or capture console errors in a real browser.",
+   "july_channel": "tool_description:browser_eval",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "It points you at `agent-browser` — a fast, native browser-automation CLI built for agents",
+   "july_channel": "tool_description:browser_eval",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "KEY PRINCIPLE: If the request involves the running Next.js application (whether to investigate OR modify it), query the runtime FIRST to understand current state before proceeding.",
+   "july_channel": "tool_description:nextjs_index",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Use 'nextjs_index' first to discover available servers, tools, and their input schemas.",
+   "july_channel": "tool_description:nextjs_call",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Use this as FIRST CHOICE for searching the currently running app. If not found, fallback to static codebase search tools.",
+   "july_channel": "tool_description:nextjs_index",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "WHEN TO USE THIS TOOL - Use proactively in these scenarios:",
+   "july_channel": "tool_description:nextjs_index",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "You then run its commands directly (you have shell access), which is faster and more capable than proxying automation through MCP.",
+   "july_channel": "tool_description:browser_eval",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "a fast, native browser-automation CLI built for agents",
+   "july_channel": "tool_description:browser_eval",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "so you read the docs that match this project, not a generic or outdated copy.",
+   "july_channel": "tool_description:nextjs_docs",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "which is faster and more capable than proxying automation through MCP",
+   "july_channel": "tool_description:browser_eval",
+   "status_now": "exact"
+  }
+ ],
+ "steering_marker_sentences_now": [
+  "Probe common ports first (most reliable, works on all OS)",
+  "Used only to tailor the guidance.\"",
+  "`First, load its usage guide so you use the right commands and selectors:",
+  "`For your task (\"${task}\"), open the page first, then use the commands from the skill guide.`",
+  "`Download its managed Chrome (first run only):",
+  "Use 'nextjs_index' first to discover available tool names.\"",
+  "MUST be an object (e.g., {param:",
+  "Only provide this parameter if the tool requires arguments - omit it entirely for tools that take no arguments.",
+  "Use 'nextjs_index' first to discover available servers, tools, and their input schemas.",
+  "- The 'args' parameter MUST be an object (e.g., {key:",
+  "\"Use 'nextjs_index' first to discover available servers and their ports.",
+  "Used only to suggest where to look in the bundled docs.\"",
+  "Prefer the bundled docs.\",",
+  "- \"Add a loading state\" → Check current component structure and routes first",
+  "Use this as FIRST CHOICE for searching the currently running app.",
+  "If the request involves the running Next.js application (whether to investigate OR modify it), query the runtime FIRST to understand current state before proceeding.",
+  "- If you're on Next.js 15 or earlier, upgrade first by running 'npx @next/codemod@latest upgrade latest'",
+  "[IMPORTANT] If auto-discovery returns no servers:"
+ ]
+}

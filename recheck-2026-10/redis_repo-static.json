@@ -1,0 +1,135 @@
+{
+ "unit_source": "redis/mcp-redis",
+ "capture_utc": "2026-10-06T09:53:43.528874+00:00",
+ "method": "static source read (no code executed)",
+ "auth": "none",
+ "server_info": {
+  "repo": "redis/mcp-redis",
+  "commit": "e89cff93d139e74295a2d18adee6a717e0add80b 2026-10-02T18:06:12+03:00"
+ },
+ "source_files_count": 22,
+ "source_files": [
+  {
+   "path": "gh/redis_mcp-redis/src/version.py",
+   "sha256": "799d5b3ae9f50c3555d182ce056e308f614fd5a8d178b8db22b1a6ccdec0481c"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/main.py",
+   "sha256": "dfda0d32b9e2fde0ecd4a15c6e1f08bc958340924b5f00881d41bd2c89d9e0dd"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/tools/misc.py",
+   "sha256": "b049d7fca7fb7ce341291a176d5f0fecc4ed75594563df14e1a89b9921cee6a6"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/tools/list.py",
+   "sha256": "20976703c7e68b2446cd9b3562b55e6a3faa8ddec86c168458a122abc09ee342"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/tools/redis_query_engine.py",
+   "sha256": "4b298d61c3c84d5ec373c0130d3273756fe3d14846e30a02b97ad76ff653be9c"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/tools/server_management.py",
+   "sha256": "3ad9ced6ef118a8180882b605d5ef32cf571d6fb6c974be7359f575bab8cd9dd"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/tools/sorted_set.py",
+   "sha256": "248f5a879a140596a229f9c6bcfa8094cddcd3b16745a3db71af3648215f7bfd"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/tools/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/tools/stream.py",
+   "sha256": "d27a75227d8710252569aef9ccba2b8d0594b035ad9fff2441cb305da19dc6b8"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/tools/hash.py",
+   "sha256": "668fafe1fce3085eb96dcc90a04c616b4a94bcc3fbceab776abec3d6aa3fd806"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/tools/pub_sub.py",
+   "sha256": "9903fcf12f40a814abb92a175bbbe59496bc3ad840867666f2f9d9e6b94b3a85"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/tools/string.py",
+   "sha256": "b78efbbc894392676e5530d3c5f36e60dbef8664f9d5ae08dd3a5a61387833c8"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/tools/set.py",
+   "sha256": "72638e276372f7ad4df929828f5d3d861d872ce07883115ce8ba6e0d7c1733ca"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/tools/json.py",
+   "sha256": "618364732b0e6fe348e50ff00aa08afac122614d9bcea52bd5023947de361557"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/common/server.py",
+   "sha256": "b6df38f9f9996152e3a8b10665563b16c857b3290d12af901d81bc65c7e84bd8"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/common/config.py",
+   "sha256": "869c377ab62866fce748e09bbe0b4450511bffe1822b3644a0d5f08fe2f81306"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/common/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/common/entraid_auth.py",
+   "sha256": "dd228ebc25114f2f363bacf60841564d20fce5542fe2b1dd82e6270111e659ed"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/common/connection.py",
+   "sha256": "6a1a0890e882fc8e8b2252f54307b8e17540c87401bdf1948b7bba069204155b"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/common/subscription_manager.py",
+   "sha256": "b19968844a0eb552ba7b42b721e23eefd8ce7725caa64b1fe4f1c7de1f0c66b2"
+  },
+  {
+   "path": "gh/redis_mcp-redis/src/common/logging_utils.py",
+   "sha256": "95480f4956c60935cd3ef53179d112a64052f1883eba7a61e70388b361bf47fb"
+  }
+ ],
+ "july_quote_check": [
+  {
+   "july_quote": "**Common Use Cases:**\n- Session Management: User session storage and management\n- Caching: Application-level and database query caching\n- Rate Limiting: API throttling and request limiting",
+   "july_channel": "tool_description:search_redis_documents",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "This returns PARTIAL results from one iteration. Use scan_all_keys()",
+   "july_channel": "tool_description:scan_keys",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "This tool exposes updated and curated documentation",
+   "july_channel": "tool_description:search_redis_documents",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "This tool exposes updated and curated documentation, and must be invoked every time the user wants to learn more in areas including:",
+   "july_channel": "tool_description:search_redis_documents",
+   "status_now": "exact"
+  }
+ ],
+ "steering_marker_sentences_now": [
+  "This tool exposes updated and curated documentation, and must be invoked every time the user wants to learn more in areas including:",
+  "\"\"\"Remove and return the first element from a Redis list.\"\"\"",
+  "return \"count must be greater than 0\"",
+  "return \"block_ms must be greater than 0 milliseconds when provided\"",
+  "return \"block_ms must be less than or equal to 5000 milliseconds\"",
+  "\"timeout_ms must be greater than or equal to 0\"}",
+  "\"timeout_ms must be less than or equal to 5000\"}",
+  "\"max_messages must be greater than 0\"}",
+  "\"max_messages must be less than or equal to 100\"}",
+  "ERROR, CRITICAL, NOTSET) including aliases WARN and FATAL."
+ ]
+}

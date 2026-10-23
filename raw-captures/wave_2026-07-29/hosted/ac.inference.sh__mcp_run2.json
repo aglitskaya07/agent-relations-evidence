@@ -1,0 +1,38 @@
+{
+ "url": "https://sh.inference.ac",
+ "capture_utc": "2026-07-29T12:37:10.556527+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 301,
+   "headers": {
+    "date": "Wed, 29 Jul 2026 12:37:10 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "location": "https://api.inference.sh/mcp",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=aLC2MScaGaTPve%2BuKFV4hPMDeJn%2FGSCLg3nkKWFs5UzPnBFjxZcwOHANJ2e%2BiA3y2tqsE812cUFMlgVHJG7hoLGiBndsaOdppXcNC50mdXfqqEsaCi3tg1mtBFO24CEmRwM%3D\"}]}",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "server": "cloudflare",
+    "cf-ray": "a22c2c677a07d943-MAD"
+   },
+   "body_raw": "<html>\n<head><title>301 Moved Permanently</title></head>\n<body>\n<center><h1>301 Moved Permanently</h1></center>\n<hr><center>cloudflare</center>\n</body>\n</html>\n"
+  }
+ ]
+}

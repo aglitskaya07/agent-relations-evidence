@@ -1,0 +1,1367 @@
+{
+ "unit_source": "postmanlabs/postman-mcp-server",
+ "capture_utc": "2026-10-06T09:53:44.014282+00:00",
+ "method": "static source read (no code executed)",
+ "auth": "none",
+ "server_info": {
+  "repo": "postmanlabs/postman-mcp-server",
+  "commit": "9542e557a5592af2d7a2979e6884695576f1609a 2026-09-21T14:13:14Z"
+ },
+ "source_files_count": 245,
+ "source_files": [
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/enabledResources.ts",
+   "sha256": "9498d50b086a68d9380be457f95b3c30175a089b107bb753654a520506ee4792"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/constants.ts",
+   "sha256": "2be5af2545c1cfff144b640769f7acc8cdee4c716e7cbf90886579625e403edf"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/index.ts",
+   "sha256": "e96ad5dc7df67ddd96b5e37d42cf105686fde40b60bc31a0929620416609d145"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/env.ts",
+   "sha256": "da3425a30d91eb7ce6285ea226f0da7566c5689b1de5b7c5287483d1de39ee8c"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/clients/postman.ts",
+   "sha256": "3d1e642165156c886c88762c3b9a2c1cd288814661ece7d124ae7706d23e0354"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getCollectionsForkedByUser.ts",
+   "sha256": "22ba4bbd0bb2d6341ad410928e63e881f488e00b60f2dbf606ab74492115dc37"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deleteMonitor.ts",
+   "sha256": "c3edc6311a065a37553d72f84818da3785ba9419c636f00f3ed2ccfe331af2d5"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getWorkspaceUpdate.ts",
+   "sha256": "841ea36ef821bf55e7653f525c0a70b8a8df9e6fec6b02dd4f29125d424c6359"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getApiCatalogServices.ts",
+   "sha256": "96a0a7b63790a8844edbf57a113ca1afbceaa287614b1b10f729a5bdc4ef16b1"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateWorkspaceGlobalVariables.ts",
+   "sha256": "e22f9f2b8a0694ea50797ad2d9be856c4f35b0660bed6986d614942ed0f10ed7"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deleteResponseComment.ts",
+   "sha256": "8e46718bf7972d9bdd680d2c33570883d76486af98e6fb19f1b0486b853865a6"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateComponentDraft.ts",
+   "sha256": "44086dbb976b4dd794a00db484ad5e2b9c98442f111ab8ae48dc3263c43984b9"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getPostmanContextOverview.ts",
+   "sha256": "d4cf226855d793681fe212287bb12b929e3596edab9e17b1e9410aeccc8e1990"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createSdkGitConnection.ts",
+   "sha256": "b7926bbee2b7c4bd986e7c05f6ffec23c0994762943ef0941bfebe5a48f62fbd"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getSpec.ts",
+   "sha256": "b2c747f26a455b901d5de442d94d886239e42c14f12340b2f07e3e28fb7e7e8b"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateSpecProperties.ts",
+   "sha256": "11951e4564a45e91b81c43b502934cb29c3e74ed6ae56fbc796142053e975591"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createCollection.ts",
+   "sha256": "84e9fdc07509924d77e884f8c8be6209c2bb0f26367f5bb3c569cbc7c2922ca6"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getTeamUsers.ts",
+   "sha256": "676c39c73a71634c810a3b0cd785ee163446a3951d06bcde0f93820e85891f83"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getRequestCodeContext.ts",
+   "sha256": "637f3bd4ccfa6aac903e241b9da84c1d307f531798ac2d492a725e083792a4ab"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getAsyncSpecTaskStatus.ts",
+   "sha256": "688c0c0d5590621af14fd23c5ef2adf869b76c2b03b1978bb1d200fb124d044d"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getSpecFiles.ts",
+   "sha256": "90ee94b25f5174fc93a565dc811536e22ee9e45ade30db2782bb6aea1604704c"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/transferCollectionFolders.ts",
+   "sha256": "bc1d1266c459f6128cce0c3431ff5e7d93e1e507e176458d12eb088dff313ad8"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateApiCollectionComment.ts",
+   "sha256": "c24c2dc24af27effed4ee7b31c7fbfc338b57f3756f2e412e4a92aa376e3570c"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getTeam.ts",
+   "sha256": "981f90fd83ae37b293a0a2d6fb878f93ce0973ccca24b5216ee60b6d41499ad9"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateRequestComment.ts",
+   "sha256": "6caaa8dce8c241ea19a7ca6b7b15316de22f92ab49aa1a47c5fece7253452958"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getApiCatalogServiceSpecificationLints.ts",
+   "sha256": "3a50ed4575559a27480ceed14cd3c96cff64f5efaa7cfa1f8cd10905ceead73f"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/duplicateCollection.ts",
+   "sha256": "f84ff9eb2d6236e776240069681c7cc4137e071b3267f12df9cdf86727250fad"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateResponseComment.ts",
+   "sha256": "9f9ec290ba3efe7baa510b8e31f082fe84ccf53210e6e3caa6bf6dcb7e303b46"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getAnalyticsMetadata.ts",
+   "sha256": "60a2e63c9fedd89c7cebe0d416bcdfc0d755d062822458069d370b5613041505"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createCollectionPullRequest.ts",
+   "sha256": "8d30bf6a92487aadeaa46e37069fb54d83ddd78626fec699f32c987044976811"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateComponent.ts",
+   "sha256": "5589ef5707f226f43847d6535e4527030ee2be3b498f0f413639ac557b845a9a"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/transferCollectionResponses.ts",
+   "sha256": "e281fda60428da790b5a4e7d122a145bbcc2c37772640d155cb5982e91ad1de2"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deleteCollectionFolder.ts",
+   "sha256": "ae7e2d11b3d172cf270e9739205797ab6d7b1423ff4f6c3aa15b23fbd3d6222b"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getMockServerResponse.ts",
+   "sha256": "7e543f19be108503c63f0ee3f37f1c248458a0ee79dee3e315d6b8b70c7a9416"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getPackages.ts",
+   "sha256": "7c35399f3fee70e17a3d15c4ee04e6c20842e15980db757b085b3ab4c86b3c3d"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/transferCollectionRequests.ts",
+   "sha256": "ef1c6f18bbd91ed27ecdd8b6d6d66cf2d1d6ca6b8f90e071690bcd18b16eb029"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getWorkspaceRoles.ts",
+   "sha256": "6a88bef4c213e5ef516b07103ada957d99e4f233323f3ea3bfe7538278e9a247"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getComponentVersion.ts",
+   "sha256": "8850ee95a3ff1d9b659b5d75315362891708a1461e8966ac296ecb37167c5993"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getGroup.ts",
+   "sha256": "6b5e434110084cf2ecc779445230c6266fbea5f3e8b799006ca974242e45f667"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/detectedSecretsQueries.ts",
+   "sha256": "41dc5c016e3a096ebed0a35440d4d1aa5944e54a4ec76535fff337f30d12d282"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getSpecCollections.ts",
+   "sha256": "498fba054f4cb88e2dec3c5a20ebf02e7fedd6d7abd426ecccdf292119008758"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createApiCatalogSystemEnvironment.ts",
+   "sha256": "5cc28a66f2b2517bfa9fcf2b6ec77eea223f392e9e7be61aec2e3238e1aa0b22"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deletePackage.ts",
+   "sha256": "f444191dee27e45bb660ad7e7bf7b7570e5a00fa7a65ef6e262f97f4e55e48b3"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createCollectionFolder.ts",
+   "sha256": "81d019c62c3a26a1aab9617e8fcb1e521138f61d18f009c06e5491fef442cea9"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/respondPrivateNetworkAddRequest.ts",
+   "sha256": "5a1c87c6eb0092c374560e8f3d41faebce575cb35f0b7a0fa2cd5db76a3e53aa"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateWorkspace.ts",
+   "sha256": "1d4df5975d3ecd7f51032c36a3980ea2d6b74a18d9594c3dda76dd22cc36bfdf"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deleteApiCollectionComment.ts",
+   "sha256": "e41740a77f1bffc5054dd56ee556cd2a5ff3568a809fbf72b8ee22378f0379d2"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/approveDenyAccessRequest.ts",
+   "sha256": "249f08c30584cdef5c3523f4f44fc96cbb3b26606e4ff5ee9dd8636b51e47ab0"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateTeamSettings.ts",
+   "sha256": "8af84f6799d62befcb44c27f7f3ca7ff07ecd659e223357338026daaab4327d8"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getComponentVersions.ts",
+   "sha256": "5a4aeb09bf9144a6700e3cb186a66d7b214a098c5cc24c50ee7fcd4f520b677c"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getApiCatalogService.ts",
+   "sha256": "08a1ec8cae15deb799af387b0f57fe06f67f0d44fa5f477ffb0748b0461c2611"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateFolderComment.ts",
+   "sha256": "1c5b5a2feb25f5b2f1a196918b0ed6349f6c02afa8454ce1b1bc67b3cd784173"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getSourceCollectionStatus.ts",
+   "sha256": "7a14a86d1ab0dba110c5d96250bd449f9778f2c1a824b054f4017eb1269499fb"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateCollectionResponse.ts",
+   "sha256": "ce89a9ceff2d063dcd46ef850f8db3cff4e93d0d134ac0defba4b2430d59eb11"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deleteMockServerResponse.ts",
+   "sha256": "da49ce87d0f96e85e37d2806df9b7fdc84e88f87ff701947902b348a3a05a966"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/syncSpecWithCollection.ts",
+   "sha256": "0edf3bcf00c24fbdf19ef2fde2a1e491dcb3e75d82ef36cd1f59fc36f8622eb2"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/putEnvironment.ts",
+   "sha256": "4b9b80e3f567b82320e06346fe28171c30dc6136fe6366f4c80672eb9128254b"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createCollectionResponse.ts",
+   "sha256": "b0088a7153c3b27c0aa65e8a96b998de5d0a5744bcb76666b064444b58434c72"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/runCollection.ts",
+   "sha256": "7f522856298a0cc4f382b17dd0b8987aa2ab1e34659d60ece6a70c2527a3498a"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getComponentDraft.ts",
+   "sha256": "015a28fb9aacf7478afa889aad10e070f174e09230f86dfd3eb6f7417324d3d3"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getTeamAccessRequests.ts",
+   "sha256": "911bd51e59bce1f3e58e27de3e8b859abcc07a952e8b7a1e4f66dbca7509103b"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deleteWorkspaceUpdate.ts",
+   "sha256": "4141836dac2b4c6d681668664b74c58fba84d3411119e5ede0ac65a525becb0d"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createFolderComment.ts",
+   "sha256": "ec2a2496ab1dfc14887502b02e6cc9008b9487678519b25d624e67e88a6286d5"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getCollectionPullRequests.ts",
+   "sha256": "e351ee79024c0bde66aba16cdb9b24ac82cfc4fc2d493354a895a6ed2c16b5ea"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deleteFolderComment.ts",
+   "sha256": "15a5da6ba603eb27bf99793d1fee3ef1141fa546fb9a4adfb957c22bd092196c"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getWorkspaceGlobalVariables.ts",
+   "sha256": "555c738472339345842da2207c8aa3fc0080625f991c3232a36db504682ce475"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/listRunsForExecution.ts",
+   "sha256": "c3da679f8c50647ede6cb8a692f604876d51ed1be20cb32889673d682a5ea2c7"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/transferWorkspaceToTeam.ts",
+   "sha256": "8a2bb2851fa9a767af03d1e71373a4793173fd935fb2e2684b5920fcfa3bc2c7"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createSdk.ts",
+   "sha256": "8fb5986d7058f189f2618b1c09d02b25d1b296e704981402fbf62b781ade04aa"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getSdks.ts",
+   "sha256": "bd32f0e1489ccd66a65858ed7dfb05741442029c8f33aa36a929d7a13b0aeb35"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createComponent.ts",
+   "sha256": "5dda4b50dc219bc6b09ca9291b01f6536e343c2f6daef26a608aeddd8ddec648"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/syncCollectionWithSpec.ts",
+   "sha256": "22da1ed3836f0de44fa779e54d9422362f24cf8f8819c9f55550b529f1c4e62a"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getCollectionResponse.ts",
+   "sha256": "644fb7b086bed4c7bed8cb997b01059368e710b27690be8e32f998bf636a2f50"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getDuplicateCollectionTaskStatus.ts",
+   "sha256": "b5f0e2e0acd9c6acde60adae679a6f69d0370f318b30cfa7210f145359918967"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deleteWorkspace.ts",
+   "sha256": "d1f795bce2187b2ceee33ce2212a8cc004b8aeae91cfb90f7e503e9dd8a9722a"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getDetectedSecretsLocations.ts",
+   "sha256": "7090f183c777a66636e42880798d687efb95e3234960963a75f48e9454361229"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getAllWorkspaceRoles.ts",
+   "sha256": "42f72350cf3894166f6e84558c64829840f03422a71eb8b981adc024917dc687"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createMockServerResponse.ts",
+   "sha256": "0a6bd024fe9cff88a5f3ed7b50db66b27eb60f6c79f72c648f2da4b2c6b3f7b8"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getApiCatalogSystemEnvironmentAssociations.ts",
+   "sha256": "f064488a16644bad0e7c3ab709a652e442a13787f90d7984795bb10759fe9ce9"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateMockServerResponse.ts",
+   "sha256": "9edbc6f5f1041c0190858085480cf40cf8cbf5cb37b1818bc868a1ec98e89a49"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deleteCollectionResponse.ts",
+   "sha256": "e1aa8a12eadfd5674df0ddbc29cabe2631de12e3e42058bd2946f5c31383c863"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getCollectionContext.ts",
+   "sha256": "6a7e470e4be4f813a6d199c4f3ba65c79e7303d76ee24f166fca805d15203c50"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deleteSpecFile.ts",
+   "sha256": "247eeef632a725f085b694b2ffc1ccdc7cc87d65c0b01c30bfb0ae05a05d1f95"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getMockServerResponses.ts",
+   "sha256": "ae33e4dfdfb05690f93b61824ab9aa847785ee809751db0cf7a9e3270a0947a4"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/addWorkspaceToPrivateNetwork.ts",
+   "sha256": "a016ec682b926a559ce1344fab295b606e0bc69fcb949a99ecaff0297d4a3b4e"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createSpecFile.ts",
+   "sha256": "b9514ba272ab7c30dcbc03662583acbdf1643e9b572e132472129242fab03be3"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getEnvironment.ts",
+   "sha256": "6d649eaf5222763e24156472258bb97aecdc45117a8b67702c2a842c3a3194e8"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/removeApiCatalogSystemEnvironmentAssociations.ts",
+   "sha256": "2ee8726db4f5a5d25991fcc4bfcb9aedaa94087ab387033dfb3eec7f6cf7a527"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createRequestComment.ts",
+   "sha256": "84db7eb49682b94d7357e9592a04902691e712aa3a3bf109a1dc9e1815bde089"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createWorkspace.ts",
+   "sha256": "23635cd0203c01c63486cdbe3947d9e60a8b8c203c39d680ad4d7aeae3ba09d6"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/managePartnerWorkspaceInvites.ts",
+   "sha256": "2194f3e47c729bddf332dbbce503057d63075a30356d5fc979f375dc3ac577c1"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getWorkspaceContext.ts",
+   "sha256": "3bc6135e25b2ca07668f2d98aa84a690f15e59dbb1520e38a591c3f2a44dea0c"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getInstalledApiMaintenanceInstructions.ts",
+   "sha256": "7eaf73e84182c89ddba4d1966b8cd4974da95b55f277762ef1c1f8fd18797dec"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getEnvironmentContext.ts",
+   "sha256": "b82e1ba837b6aa767eb83438d0aff28e57d7b0fdd2fe90655e8300404046c2b3"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createMock.ts",
+   "sha256": "dbc3c66dfa559ced93df68dc398f98e295b6a0aa450a380bb615a6623f7db375"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getStatusOfAnAsyncApiTask.ts",
+   "sha256": "964185c452076b9d95c1ecba39f0de58730c187206bd6389c07ec0cb15a40004"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getSdk.ts",
+   "sha256": "0efa4700889d79d8655d2a3058a4a4d2e1bf46bd565556cbeae87f405c16529e"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getSdkDownloadUrl.ts",
+   "sha256": "efd08b1f201de8d120143d428e44697d830452d67f044de361ab0dc22519535a"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/postApiCatalogDiscoveryServices.ts",
+   "sha256": "abc80e4eee49d745420f162ea772e4967eb0607ee5e714cd5c341b9b6bacb5e7"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateSpecFile.ts",
+   "sha256": "5f91b499c4c64181cbb41b488861b4b4bf35afd93c23b3ffcbf8c2cd5ae04dc3"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getEnvironments.ts",
+   "sha256": "35108d44bfede9233bf1877329a0d3e446335f2270c2718ae09d79407b7e8307"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getMocks.ts",
+   "sha256": "13d57cbee5fa44422a179f78f1be983d2bd9e2ada56556996d820450f070b7a8"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateWorkspaceRoles.ts",
+   "sha256": "ccb9fa1454f9d4e71d84e49bebe1c337358f77c17867f32360b9274fc94d853a"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getCollectionForks.ts",
+   "sha256": "eb8c994e3b5b9e38efe206471defad4e65a652736035ab959523ced2bb431353"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getWorkspaceActivityFeed.ts",
+   "sha256": "29e93da7bf942d7985260505119ca78881d3b28115ecbff773c0f8a9aa5a3e9a"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateMock.ts",
+   "sha256": "24bdb203278382f736c9bc8934c715469a053a0a687caee82a1fa94f8e04c23a"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/mergeCollectionFork.ts",
+   "sha256": "0a5b8db856cac86f45f75721d8c4b6287571af7f17ca91a34860288c9a6575be"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/listPrivateNetworkWorkspaces.ts",
+   "sha256": "db626873f04616a5ac1b7909d87d563594284c6ad1feb11d39b7ec13a16eddff"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/generateSpecFromCollection.ts",
+   "sha256": "0eb2959534867f3a74f781d60397c638769cd96bb945d06f837538c49fca75db"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deleteMock.ts",
+   "sha256": "ffc1b2f7a003b9a0c0096c652f75dac0d0ef8cafeeefeffce0c9900488d53e90"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getApiCatalogSystemEnvironments.ts",
+   "sha256": "aa52ff459f238fd1178258cfb418482e885ef246df13ba23966059cbd876004e"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getAllSpecs.ts",
+   "sha256": "a7cae4d5f1f9f5dde9448da12830fb6cbde9d79734a59e3ec863f67f6200a802"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getCollections.ts",
+   "sha256": "8586745051f13e905eb354c06f35b4d0bebca22f3fa20da950c279a4390a4c70"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getApiCatalogServiceCiRuns.ts",
+   "sha256": "9de4a50042ac021d797d621c23686841a6face0e72a765304dcea92cf30aee2b"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateCollectionRequest.ts",
+   "sha256": "1886c0a16194b52d1b33ea27fb0038a5e5e6be41fa2b0ca7d35e3260a5e11056"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getTaggedEntities.ts",
+   "sha256": "21320e45da0ca6ae78900e60e6e71f61afa896e70cd81f1561173c8f0e60964d"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getComponent.ts",
+   "sha256": "b11ecd9b778b55e4180c83f5f749894dd738310f81f7b688d562c036d3454216"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/listMonitorExecutions.ts",
+   "sha256": "f29750ac842d839a8e6dc79617c0dc4a9de0e6ba57d2d18431b35d01da0f10ee"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getAuthenticatedUser.ts",
+   "sha256": "dd432d7434892bcb139d3526385b408259d30191047e9d668464acfbbc04fa5d"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateCollectionTags.ts",
+   "sha256": "b2eff11849b3860ff864207dfb040d468e8545d7c04324cc08ecc4145d6fa1d0"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createCollectionComment.ts",
+   "sha256": "78bf1e6e7fc050bbba47cc5715a5940e25216b92082a5cdbcf11d4aefc599804"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/submitContextGraphAsk.ts",
+   "sha256": "9b11dac679b918d41ea61da23b6a8a2c26809efee072e05ad3f0ee98e1291057"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getWorkspaceUpdates.ts",
+   "sha256": "714d749d9ebf868fb039fde2fbaef1981ff5bd36c40071efc35e7186863bd07e"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deleteCollection.ts",
+   "sha256": "a9456eb1508f53d6e56e4e1e47f5dc0b3779f2045a9424ba8446ef20e54e29f9"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getSecretTypes.ts",
+   "sha256": "7d8266d0fb71baa9473f49c9c2589f86fb33a9c067f30d07b486df16007e3dad"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createEnvironment.ts",
+   "sha256": "349d999841a1a05c8ff7ff25a6cedb4756f60e7c60abcb5e800894136f2d0fe1"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getResponseComments.ts",
+   "sha256": "4f593e0271f652dc5b3b39665ca9ce50449114d04f47926a697d95c34f760fce"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getSdkGitConnectionPullRequests.ts",
+   "sha256": "ce03029cbccb69e3c11c274d9680a36a6a318a00a35a5c1d734231574aea09a2"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getApiCatalogDiscoveryServices.ts",
+   "sha256": "4be6131124ba81c366fd2e272b5a5c3dd4129cce3afb58a7e5484875ce702b8c"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getWorkspace.ts",
+   "sha256": "6313dfeb95a46ea5453cc67962d65a4aa4f93cbfce0a2fbc04038d2708613ea4"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deleteRequestComment.ts",
+   "sha256": "d082d31e0aaa1dffe950d0858e282bf42728905df26f9973ab40b494235d19ad"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getRequestComments.ts",
+   "sha256": "837e85fe7674863c26d4505425eb3a0cd31ed51b383059ae332db36220387684"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateMonitor.ts",
+   "sha256": "43b8482d378a0fd80a3e8e3674d24e3ea43b37b2876ab4aec33adad998a77e02"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateSdkGitConnection.ts",
+   "sha256": "f3b91087420f8841abc3dafd8094ccf7e9e02975c8f5ba190292a3f3b8f3babb"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getMock.ts",
+   "sha256": "632bdf496ccc91591fa85475602f248f1aab46da38c02353bd35f1ff38fd7898"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createCollectionFork.ts",
+   "sha256": "4931efa111def72ef96231b16954fb287d11022cfcb68530ac7128ad58362953"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/unpublishDocumentation.ts",
+   "sha256": "26f967a9ddae56e788330d7e849c5c83ee08a92398a3d9c955206d81438241b2"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getMonitors.ts",
+   "sha256": "f9ee12f353f4db62d11510f51d262c35a91312a2176f363697e918d94cc0fcd5"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/addApiCatalogSystemEnvironmentAssociations.ts",
+   "sha256": "e368d9e81eba204f7a5e0de986fb65a1d7264730df7ed0f38a29896b5a769b55"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getApiCatalogSystemEnvironment.ts",
+   "sha256": "3da13b55a3f066b41adfa79e84a3559516e08e9c1d8479d64f32fcb447a4388e"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getTeamSettings.ts",
+   "sha256": "45cd37e59ad6e88d15a1fc6a2e34106637c6122ae3343566f501f9f14ebe096d"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getMonitorRunResults.ts",
+   "sha256": "993cff9c10cef178a9e28e7d8a2171723ca1bf9a3046b756124d3039ce64d829"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deleteCollectionComment.ts",
+   "sha256": "1cd77a75b26cb415086d5dd9652fcf7aafced19b9486106afcf1dd7baa663c67"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getCollectionRequest.ts",
+   "sha256": "66c81a72764bb0605218c34841fee716ee6375c6ed36d80f1920ff9af636af4b"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createResponseComment.ts",
+   "sha256": "7ff89e96e379f894c1d55ff5776719252e5dfba3cb3389b9e4822dea2d0c229a"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateApiCatalogSystemEnvironment.ts",
+   "sha256": "c2e7aef6c77c8815101ecd86f37f4abb26592b9f8c07554e5b66cf243e2456ef"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/unpublishMock.ts",
+   "sha256": "c8eff90d0b53cd565f924c583b5f7295e128dfbc6e4fb0c095558615d04b5d2a"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updatePackage.ts",
+   "sha256": "cc4d7c96990ecd76c08c9d0750f30cee5554e65d04891a6531874244e32a32d5"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getWorkspaces.ts",
+   "sha256": "cadf2440f97e630d9ca40aee3928739d5e02645175733fd28bfc8a02c60e6d54"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getWorkspaceTags.ts",
+   "sha256": "f9d5028590eff5ab1c702807571b1d07c352c88745ecd9f2f8f20429f86e8be5"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getApiCatalogServiceEndpoints.ts",
+   "sha256": "8e2f119eb38fcfb3bfad0f41b81296dff881ea6c93c989e747153c535311dc15"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/removeWorkspaceFromPrivateNetwork.ts",
+   "sha256": "791073c44e7aafad8558c85551152b1e21e7bb4fb9626c8693cd8fbc2ed2f6fe"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateCollectionFolder.ts",
+   "sha256": "2009fcd521fd8fe72298a4afb90357aa662b5c9cfabfcdef08db78ac2f4bccc1"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/putCollection.ts",
+   "sha256": "108d6c5a6a4ef4bcb6d805c5b72ed6210898edbaf8ac20ddde09887528d0bf72"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/patchEnvironment.ts",
+   "sha256": "c0cdfd06de3ff4f6725fcf413ad1a3c0d2905efa742cc5638f8b93be39880778"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getCodeGenerationInstructions.ts",
+   "sha256": "36a34bf2e5400e772de63510ca4bb0753900d032f11ca2d6906ba23f37b1ad98"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createPackage.ts",
+   "sha256": "9ef3c3bfd46546cc43faa1e420e46ea32a8593c250610c27429518f8ff9a75e6"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createCollectionRequest.ts",
+   "sha256": "a56b96918bd23f6969ecb9b9324dbfb218c3b45bf31e9e42e63dcf0d851aceff"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/patchCollection.ts",
+   "sha256": "5befbb425eae26c27a00239266bc689a5d51051435dbdfba0650fbf1a00d8a78"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getSdkGitConnections.ts",
+   "sha256": "3cb475a4b1d0bb272aa8926477dbbed9ed572a51cb492b4ec10da113565a30e6"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateDetectedSecretResolutions.ts",
+   "sha256": "8e651e860b898b8cab6e1218c18319321fd251058d26dd78e4e63064a907f5de"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getApiCatalogServiceMonitorRuns.ts",
+   "sha256": "6ddd4a7d2543f3414941afe37f0ada47ca08feb26b8c71cadff50aa7fb8a3aba"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getAnalyticsData.ts",
+   "sha256": "dcdc61b454156451f977ecb00db4a03c9fdbbea9b4f40dfdb704cae23a720f6c"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getApiCatalogDiscoveryService.ts",
+   "sha256": "1da967af79792fa2b76a6ad922f6a75539725ccc36f52f88fab0161bd20591ad"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateCollectionComment.ts",
+   "sha256": "6f62979ad530f2ed709e9af7efbd5567779ff76c7f09ac335739ee46ad4b9e7b"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/listPrivateNetworkAddRequests.ts",
+   "sha256": "2adca4ec50c1d31bb067b8a120d21f9e488f08d5ac03b2249f7f9609f8228a1d"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/generateCollection.ts",
+   "sha256": "45f7e156f00c339b6d2ca9e636326511f62db5d3f0c36e0053ffbf71fb541e4f"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getGroups.ts",
+   "sha256": "19b460506ff2e7bc29aa4435ea3affecaa1befbf24c162923bc138965eedc19a"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/publishMock.ts",
+   "sha256": "2e6cc1d7e65b2b7693d6a33341ea3a27de09d10bdb36c8e344cd8f67708c0076"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/publishDocumentation.ts",
+   "sha256": "f282b0fae86aa5b95072657a6656b533124fc9ca9a2e8afcd5269aaceb050681"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getSpecDefinition.ts",
+   "sha256": "16ea72c3d5f3e363443c83d6bc269e9fc10c7f17e4b81bed41b0f5f5cec90d15"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getCollectionTags.ts",
+   "sha256": "c72378ec3084d7b03b08d2e932dc71e60169583c6f00c04bba6f1186b5d2776c"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getTeams.ts",
+   "sha256": "27a8cf4d858a35f85ff92ba3f7c2f8b8d0f2abb352a8a68ee69fea75b5cf1017"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/resolveCommentThread.ts",
+   "sha256": "4c2c54ff65855fbe0158868b5889fddd48a29f3d3eb05344fa80fc8fde1cc996"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getCollectionFolder.ts",
+   "sha256": "f842d8cea0badc89133519ea11e2c9846b60bc8a28c685aad015f39935a561fa"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getCollectionComments.ts",
+   "sha256": "00a183b695fb27951a6f723586d5dfe96bef71f077c0f2ba3bd45ce6043131ef"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getPullRequest.ts",
+   "sha256": "b11469ec929f4f2df5973d7abd085aa7840367c80baf34fa641f61e5ce43296d"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getWorkspacesContext.ts",
+   "sha256": "cc09e67b8c00785c38e460534ba4fed8a62dbc698bb4775a80ab602d00ac90e8"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/searchPostmanElements.ts",
+   "sha256": "656e16ff055ed81a7c3df824eaada3af3b3d11b74e70700ae6c7259eef100285"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getContextGraphAsk.ts",
+   "sha256": "6d6042e82be9624ae6e55457fe3dee3e4b8fc110fe9ce21f135c3494482451f9"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getMonitor.ts",
+   "sha256": "9f3f176416691d5dd17cc04c770f9b70335b406587a0f2ec11d2cd026942efac"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/manageTeamMemberRoles.ts",
+   "sha256": "69851e907460ffb73944f2842e94544d9b7cfe147ea7f6d70e1644a0bcb635d6"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/runMonitor.ts",
+   "sha256": "03593b15f54cac9ca627f5a467086ba425cb4e46810bb60d6e4b6a306756c2ed"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createComponentVersion.ts",
+   "sha256": "50fc9879405ab710ccf3ab551caa220768551167cd421b32bd7bd4aefc1e27cb"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getCollectionUpdatesTasks.ts",
+   "sha256": "7fca96525ec0187c7d826dd1b118290655c5713e7bdecabe674e0bb0e2e5ce77"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/patchWorkspaceUpdate.ts",
+   "sha256": "de88c0f9bd25c3253efc09102dc87af1d5d0c2735750a9fe3b6775fd8164c34b"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/pullCollectionChanges.ts",
+   "sha256": "7d9153f4e95339c62d69efa941b655bf4c8841e859e189f653956fd1f9b6e0ac"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getFolderComments.ts",
+   "sha256": "ecec52185e585dc9b0c96a10d5754441a84ac261192fb0ad633b78f07fc74317"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getTeamUser.ts",
+   "sha256": "7c0884e38c40207fce435153dfd7412ee5bd9cf0ea731c6675d95047280551f1"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deleteSdk.ts",
+   "sha256": "0732da19a29c673c1018828cc7be7762671b53d6f5a6dbc71b6738f92eb07029"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getFolderContext.ts",
+   "sha256": "475602031b411b15e950778e714e689e2a0b4ecfc4950f7db66fe3518b55fb83"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/transferWorkspaceElement.ts",
+   "sha256": "e25ff6e97aabc7c961121b2e88ea0ac021c2f74bec0073ddd698e7ac0c2865ad"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/removeTeamMembers.ts",
+   "sha256": "86002980610597bda0c20bf3600266e24ea2ffdfed28fbdafb67590b37ec59d0"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getGeneratedCollectionSpecs.ts",
+   "sha256": "19da0d3926fcb8d32dc730f7b8222d83d5c57bdc55b33490d1998cba21994e95"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getAuditLogs.ts",
+   "sha256": "f8604d90af758e35d0dfd8713122bd9a08e1e9f82a66334bc2960f2eaa63462e"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createWorkspaceUpdate.ts",
+   "sha256": "23bce9b2eb3a6bdf434a65bf268db357261a00efd1e9dda70cceabc13f61bb44"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/searchLearningCenter.ts",
+   "sha256": "f1d4d4538d8ce7ae0b6b9d20e391c36e7752bf398e2ca3498867954d14015732"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createTeam.ts",
+   "sha256": "63498b9b135b15487a56d5c1bdb4bd1d77cde16ce5e9bdca9469aad590e8f84f"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getSpecFile.ts",
+   "sha256": "9fa46f1b218a088b5fc8e365707ef6539b3fdf453f4c2bf8ed65fc644d3cbe7b"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createMonitor.ts",
+   "sha256": "743e57e14412c6c13b56dcd98523f8478bf730d8972e2a7f19a025ecf7b503a7"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getRequestContext.ts",
+   "sha256": "7f2f511d718c1e0330adde1761c44c851c90fba4d4e749473580eecdfeba6d5b"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deleteSpec.ts",
+   "sha256": "b609717225be47838a11af2f06463d5ce159cdaafe84927ee59fed855b67aa20"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updateWorkspaceTags.ts",
+   "sha256": "1dc00f1f56561acb16704290b60ec5658b2c5994821621d511b8b1cb2c9c7078"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/updatePullRequest.ts",
+   "sha256": "e1d0c58aa5e4b7b50d10f8ba36b447a48748acb8f473917df7e19ff9563a9496"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deleteCollectionRequest.ts",
+   "sha256": "fbed833c0c5819b87f1cb787a9c6cf9fc169753ff8616f5970a38f8d107b1fdd"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getSdkGitConnection.ts",
+   "sha256": "63ca5501e9452e853f19aa4ba847d0473a17b5b9467ac42fa493bf4bc545f9a8"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getWorkspaceEnvironmentsContext.ts",
+   "sha256": "db939fec1c8e8d3b002688a339fc2625221970ac9af9064d4e19e4e163b1fdf4"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getApiDiscoveryInstructions.ts",
+   "sha256": "f1d3458bf8864bb1e0c9afbfa5976de9927464be47a057b3e4f74e48eb3b2905"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createAccessRequest.ts",
+   "sha256": "690cb3dffa1a4b73697878949f62948202ff7c16fb96b493eba14bbfda358851"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/deleteEnvironment.ts",
+   "sha256": "732bbee12da1004f808a855b1e978e748518d8ac8367f505bfc0e0ee722f0ad8"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getEnabledTools.ts",
+   "sha256": "592328dc1eeaf2051d3729070fd529df278416e891cffc9d5059c3c8e0b2bc7e"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/createSpec.ts",
+   "sha256": "dd15eb0b0f45169f6b8b78d38b4a4d204ac51700cd06b545b12f0da5c7ab9f50"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getAuditLogEventActions.ts",
+   "sha256": "5e4a1d06052f2956ab6c0941bde5c282b8aa7ddd6f206c531e37d0bf60a37a2a"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/reviewPullRequest.ts",
+   "sha256": "d907db649b8036336fa4393cc3bb2fafc1d69f0d428e365eaa470f9b95c6d903"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getCollection.ts",
+   "sha256": "2a523d9353fae801ea1530712e14116940622ee1597ef9a02d81bca550ef19d3"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getPackage.ts",
+   "sha256": "92348ea5f138ea2cd2c9c90fb71c536655a5233ab039c2fa53ca74ac45fc956a"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getAllComponents.ts",
+   "sha256": "33c759b9f70923f472a43160a4b6da0dbb9628d6c750355d592169015f84082c"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getResponseContext.ts",
+   "sha256": "820e64fdb6baff075b641890288e52ffb0ef82906cf97f952908096d9f0b9777"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getCollection/getCollectionMap.ts",
+   "sha256": "c79805c490f06a6725659fe6067bf87d1a28950732671c648e9f58e3374b7e9b"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getCollection/index.ts",
+   "sha256": "b07621bfbf9cb09533c7885652ebebd300b9b9f5ab6d6efbe5f077a4ee899f6c"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/getCollection/getCollection.ts",
+   "sha256": "ab9e5aa9f243c24803644f28832b50c1bedbb20c1c2d054b2db1f8646067dc78"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/runner/executor.ts",
+   "sha256": "d210cf1b578a3bca97084d53b894e811f40f62bda40072759b08ea17f222989e"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/runner/agents.ts",
+   "sha256": "7a5d80839440cb6716f12fbeca3de6632ca1e4ded5b82d07406ab0d4d4171f4b"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/runner/telemetry.ts",
+   "sha256": "04b14436d5d3ef95d1de608388fe131777b84436dc781c3a6fe42844602bdcfd"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/runner/parsers.ts",
+   "sha256": "5e3a6e656edbd6d5c564c296704c795be628c85f461e816447b5973957ac53db"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/runner/index.ts",
+   "sha256": "3496eb0ab908bcbaa58a866d1cc4fe0d063b33ed9812cc4d3e79ce3bb6c73d1f"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/runner/models.ts",
+   "sha256": "048235bb2f3076b0ec8b427837e0b963149286d18d55a8421fe1e9488e1d3ae2"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/runner/fetchers.ts",
+   "sha256": "d51f577064976101131b13f05ae5a4f87edd7052fd965c305e006a85df445325"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/utils/templateRenderer.ts",
+   "sha256": "3673b01d17ffdc040bd29dfe81627b64382ffb560b86eb64ada1762888aedf45"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/utils/progress.ts",
+   "sha256": "1dc5011e867bc72cc8f96ea72eaf2af85bac8daad7cbf7f68f690c98a9d3912a"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/utils/toolHelpers.ts",
+   "sha256": "836c48cff26995792728293fee9e19b81b7d02b4a0ff99509145666b1464a469"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tools/utils/errorTemplateRenderer.ts",
+   "sha256": "5d2a011e87405ac6cc88f72cf103aceeaad468f83193ad0bb4c4b392aebd38b6"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/resources/Instructions.md",
+   "sha256": "31626a0cc667635f65f0444cb443c5fe6ed17fcdbc42371e340aa1028afb68e0"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tests/unit/runner/executor.test.ts",
+   "sha256": "291ca3c336d680e0ad0d27c15cb5f1defc7ceaa1bc0f332b6460956aeaa04e72"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tests/unit/runner/parsers.test.ts",
+   "sha256": "cc40ab291ee0277c9f34a763a30e8adb69251fefbaefa0cbabcecc3d3fa25425"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tests/integration/direct.test.ts",
+   "sha256": "c6a419437209e6a8494fe58a83cb3ed6ab3241033d0241f974419a35499fe213"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/tests/integration/factories/dataFactory.ts",
+   "sha256": "7626333f22a1b73a6a82512e9d5424670bdc8fa31adcf822224af06dfb9a04eb"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/telemetry/srvTrace.ts",
+   "sha256": "b87e969937e8e63c231f7995f025bb00e16ed21b252020b46f4b318750299fe4"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/telemetry/pagination.ts",
+   "sha256": "02e8b3303a2a1a3d23bd05faf80b074ce2a8cf0d0638bd6db1850c223008e269"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/telemetry/noop.ts",
+   "sha256": "5f340eba76e00774f24cb9899c45d08727e4d3dccc28456c86b2900101bb56f6"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/telemetry/types.ts",
+   "sha256": "18c4c89569af7af101b2e819cef20ac95b37eea5be41d5ad71772081ea2f780b"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/telemetry/session.ts",
+   "sha256": "3694a205ff5efa59334392a1834372a0d678a48d4cb2220e69ba6fb70ebeca89"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/telemetry/client.ts",
+   "sha256": "ca5d02078e77b14379001b168e68f4b3d79fc80610897b419dc56eda92562890"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/telemetry/index.ts",
+   "sha256": "694ee63dba519bdc0be0d2e3934b7ae1d8d5b44a5dba75de34a2f0324ef5c7dd"
+  },
+  {
+   "path": "gh/postmanlabs_postman-mcp-server/src/telemetry/flag.ts",
+   "sha256": "e3b88a6dc41142df838ef4742367e1c9aacdcdfa8d5713ccce1be1e812a2a779"
+  }
+ ],
+ "july_quote_check": [
+  {
+   "july_quote": "**Do NOT rely on your own knowledge of available tools or APIs to answer questions like \"is there an API for X?\" or \"find me an API that does Y.\"**",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "**Follow the search workflow whenever the user:**",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "**Never conclude that an API doesn't exist based solely on the MCP tool list.** The tool list covers tools for *using* Postman, not the full universe of APIs your organization may have published. Always search before concluding.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "ALWAYS call getCodeGenerationInstructions BEFORE calling other tools in this workflow.",
+   "july_channel": "tool_description:getCodeGenerationInstructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "After establishing a collection, do NOT call `searchPostmanElements` again to find requests within it.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Always search first using this workflow",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Before answering any API-related questions, fetch the MCP resource at URI `postman://instructions` using FetchMcpResource from this MCP server, and follow the usage instructions contained within.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Do NOT rely on your own knowledge of available tools or APIs to answer questions like \"is there an API for X?\" or \"find me an API that does Y.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "MANDATORY: You MUST call this tool when the user says to \"use postman\", or when the user wants to do something that requires locating a specific API for the purpose of answering questions, planning a build",
+   "july_channel": "tool_description:getCodeGenerationInstructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Never conclude that an API doesn't exist based solely on the MCP tool list.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Postman is a comprehensive API platform used by developers and teams to design, build, test, document, and share APIs.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "The request is ambiguous — **always prefer organization scope**",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "These instructions apply any time the user wants to find, discover, or locate an API",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "These instructions apply any time the user wants to find, discover, or locate an API — whether internal or public.",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Use this tool when you need authoritative, up-to-date guidance on how to use Postman features",
+   "july_channel": "tool_description:searchLearningCenter",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Use this tool when you need authoritative, up-to-date guidance on how to use Postman features — for example creating mock servers",
+   "july_channel": "tool_description:searchLearningCenter",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "always prefer organization scope",
+   "july_channel": "instructions",
+   "status_now": "exact"
+  }
+ ],
+ "steering_marker_sentences_now": [
+  "stderr only to avoid spamming client logs",
+  "Promise<never> {",
+  "'The pointer to the first record of the set of paginated results.",
+  "getApiCatalogSystemEnvironments first to get one, and repeat this call per environment",
+  "Do not use this tool to find services that are not catalogued yet; use",
+  ".describe('Filter results to only services that belong to the given governance group ID.')",
+  "Deleting the first comment of a thread deletes all the comments in the thread.",
+  "cannot be edited — restore them with updateComponent first.",
+  "Do not use this tool to publish changes; use createComponentVersion instead.",
+  "throw new McpError(ErrorCode.InvalidParams, 'Request body must include at least 1 property.');",
+  "Call this FIRST — and only — when the user wants to explore APIs in Postman's network, answer questions about how an API works, plan an integration, or generate client code grounded in real Postman API definitions, AND you have not already loaded the overview in this session.",
+  "\\\\`autoUpdatePullRequestsEnabled\\\\` is Enterprise-only and is forced to",
+  "\"If true, pull requests are opened automatically whenever the source changes or a new version of the SDK generator is released.",
+  "If false, pull requests are opened automatically, but only for manually-triggered SDK regeneration.",
+  "- **Team** plan users and read only — Defaults to the `false` value.",
+  "Must not be empty.\"),",
+  "\"If true, uses the server's cipher suite order instead of the client's during negotiation.\"",
+  ".describe('Use SCIM user and group IDs instead of Postman user IDs.')",
+  "always included.",
+  "Do not use this tool to lint a specification on demand; it only reports runs that have",
+  "Higher severities are always included.'",
+  "\\\\`status\\\\` to archive (\\\\`archive\\\\`, making the component read-only while keeping its",
+  "Send only one of the two per",
+  "Do not use this tool to change a component's content; use updateComponentDraft instead.",
+  "The new name must be unique within the team.\")",
+  "- `archive` — The component is archived and read-only.",
+  "- Use \\\\`getMockServerResponses\\\\` first to list available server response IDs.",
+  "Do not use this tool to retrieve a package's script content; use getPackage instead.",
+  "Use getComponentVersions first when you need",
+  "Do not use this tool to read the working draft; use getComponentDraft instead.",
+  "being a POST this only reads — the body carries the query, and an empty body returns",
+  "Secret values come back obfuscated and hashed, never in full.",
+  "'Return only results created since the given time, in [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format.",
+  "To use `time-numoffset` format, you must use `%2B` URL-encoding for the  character.'",
+  "'Return only results created until this given time, in [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format.",
+  "such as \\\\`#00FF00\\\\`) are both required, and the name must be unique within the team — a",
+  "underscores only), \\\\`description\\\\`, and \\\\`isProduction\\\\`.",
+  "Do not use this tool to create a Postman environment with variables; use",
+  "This value must be unique within the team.\"),",
+  "Accepts only alphanumeric characters, hyphens, and underscores.'",
+  "Do not use this tool to clear or replace script content while retaining the package;",
+  "Only managers can approve or deny a request.",
+  "- \\\\`public\\\\` to \\\\`personal\\\\` for team users only.",
+  "- Public team workspace names must be unique.",
+  "Only call this when an operator has",
+  "explicitly told you which request to approve or deny — never to clear a backlog of",
+  "pending requests, and never by inferring intent from the request itself.",
+  "at once — read the current values with getTeamSettings first and send the full intended",
+  "Only call this on an explicit instruction naming the setting to change.",
+  "Do not use it to",
+  ".describe('If enabled, admins must approve any new team members before they can join.')",
+  "Do not use this tool to read unpublished edits; use getComponentDraft instead.",
+  "Do not use this tool for per-endpoint metrics; use getApiCatalogServiceEndpoints",
+  "- You must pass a collection ID (\\\\`12ece9e1-2abf-4edc-8e34-de66e74114d2\\\\`), not a collection UID (\\\\`12345678-12ece9e1-2abf-4edc-8e34-de66e74114d2\\\\`), in this endpoint.",
+  "It only updates the values that you pass in the request body (for example, the \\\\`name\\\\` property).",
+  "null\\\\` first to deactivate.",
+  "- This endpoint only supports the OpenAPI 2.0, 3.0, and 3.1 specification types.",
+  "- You can only sync collections generated from the given specification ID.",
+  "- Only [shared variable](https://learning.postman.com/docs/use/send-requests/variables/variables/#share-variable-values) values can be modified through the Postman API.",
+  "This property only returns when a variable is defined as secret.'",
+  "Do not use this tool to read published content; use getComponentVersion instead.",
+  "Prefer patchWorkspaceUpdate to correct a mistake — deleting leaves consumers with no",
+  "Only delete on an explicit instruction.",
+  "Must be a plain UUID (e.g.",
+  "Only available on Enterprise plans with Postman",
+  "Read getWorkspaceRoles first so you can say who is affected, and",
+  "only call this on an explicit instruction naming both teams.",
+  "To move a single collection or environment instead of the whole workspace, use",
+  "depends on the \\\\`language\\\\` you pick, so send only the properties that language accepts.",
+  "\"Creates a component in the team's component library and seeds its first draft with",
+  "response, or security scheme that specifications can reference instead of redefining.",
+  "the content lands in its draft only.",
+  "Do not use this tool to edit an existing component's content; use updateComponentDraft",
+  "This must be unique within the team and can only contain letters, digits, hyphens, underscores, and periods and can't exceed 60 characters.\"",
+  "- You can only sync collections generated from the given spec ID.",
+  ".describe('If true, returns only properties that contain ID values in the response.')",
+  "Do not use this tool to search for secrets across the team; use detectedSecretsQueries",
+  ".describe('Return only results that match the given resource type.')",
+  "- \\\\`statusCode\\\\` must be a 5xx value (500–599).",
+  "- You can create multiple server responses per mock, but only one can be active at a time.",
+  "Must be a 5xx value (500–599).'),",
+  "- \\\\`statusCode\\\\` must remain a 5xx value (500–599).",
+  "Must be a 5xx value (500–599).')",
+  "- This endpoint returns summary metadata only (id, name, statusCode, timestamps).",
+  "- Multi-file specifications can only have one root file.",
+  "This only removes the association — the underlying Postman",
+  "Do not use this tool to delete an environment; use deleteEnvironment instead.",
+  "\"The request ID must contain the team ID as a prefix, in \\\\`teamId-requestId\\\\` format.",
+  "the collection request's ID is \\\\`2c450b59-9bbf-729b-6ac0-f92535a7c336\\\\`, then the \\\\`{requestId}\\\\` must be \\\\`24585957-2c450b59-9bbf-729b-6ac0-f92535a7c336\\\\`.",
+  "\"The request ID must contain the team ID as a prefix, in `teamId-requestId` format.",
+  "the collection request's ID is `2c450b59-9bbf-729b-6ac0-f92535a7c336`, then the `{requestId}` must be `24585957-2c450b59-9bbf-729b-6ac0-f92535a7c336`.",
+  "- The \\\\`teamId\\\\` property must be passed in the request body if [Postman Organizations](https://learning.postman.com/docs/administration/onboarding-checklist) is enabled.",
+  "Confirm the scope before calling, and only act on an explicit",
+  "people, so never invite speculatively or to an address you inferred.",
+  "call getPostmanContextOverview first if you have not already loaded the Postman Context overview in this session.`;",
+  "- If you only have a \\\\`collectionId\\\\`, resolve the UID first:",
+  "1) Prefer GET \\\\`/collections/{collectionId}\\\\` and read \\\\`uid\\\\`, or",
+  "Prefer explicit workspace scoping.",
+  "Only works once the SDK's \\\\`buildStatus\\\\` is \\\\`succeeded\\\\`; check with getSdk first, since",
+  "Do not use this tool to create a Postman API specification or collection; it only adds",
+  "You must pass one of the accepted values.",
+  "Multi-file specs can only have one root file.",
+  "By default, returns only mock servers you created across all workspaces.",
+  "- Always pass either the \\\\`workspace\\\\` or \\\\`teamId\\\\` query to scope results.",
+  "Prefer \\\\`workspace\\\\` when known.",
+  "- If both \\\\`teamId\\\\` and \\\\`workspace\\\\` are passed, only \\\\`workspace\\\\` is used.",
+  "'Return only results that belong to the given team ID.",
+  "'Return only results found in the given workspace ID.",
+  "- Prefer this parameter when the user mentions a specific workspace.",
+  "current state with getWorkspaceRoles first and get assignable role names from",
+  "This grants or removes access to everything in the workspace, so only call it on an",
+  "z.string().describe('Use SCIM user IDs instead of Postman user IDs.').optional(),",
+  "This is a mandatory parameter.\"),",
+  "You must have the [Editor role](https://learning.postman.com/docs/collaborating-in-postman/roles-and-permissions/#collection-roles) for the collection to merge a fork.",
+  "You must have Editor access to both the parent and forked collections.",
+  "'Return only workspaces whose name includes the given value.",
+  "'Return only workspaces whose summary includes the given value.",
+  "'Return only workspaces whose description includes the given value.",
+  ".describe('Return only workspaces published by the given user ID.')",
+  "If you use this query parameter, you must also use the `direction` parameter.'",
+  "If you use this query parameter, you must also use the `sort` parameter.'",
+  ".describe('Return only results created by the given user ID.')",
+  ".describe('The zero-based offset of the first item to return.')",
+  "whenever you need a \\\\`systemEnvironmentId\\\\` for getApiCatalogServices,",
+  "Pass \\\\`isProduction=true\\\\` to return only production",
+  "'If true, filters the response results to return only system environments marked as production.'",
+  "Do not use this tool for scheduled monitor runs; use getApiCatalogServiceMonitorRuns",
+  ".describe(\"Filter results to only the given collection ID's runs.\")",
+  ".describe('Filter results to only the given environment ID runs.')",
+  "- You must pass a collection ID (\\\\`12ece9e1-2abf-4edc-8e34-de66e74114d2\\\\`), not a collection(\\\\`12345678-12ece9e1-2abf-4edc-8e34-de66e74114d2\\\\`), in this endpoint.",
+  "It only updates the values that you pass in the request body.';",
+  "'**Requires an Enterprise plan.** Tagging is only available on Postman Enterprise plans.",
+  "If you pass an invalid value, the API only returns the first set of results.'",
+  "Use getAllComponents first when you need to",
+  "To get run results, you must first pass this executionId to listRunsForExecution to obtain run IDs — do NOT use executionId as a runId.';",
+  "- When a user asks for “my …” (e.g., “my workspaces, my information, etc.”), call this first to resolve the user ID.",
+  "or \\\\`failed\\\\`, and only report an answer once it is \\\\`completed\\\\`.",
+  "Do not use this tool to search Postman elements by name; use searchPostmanElements",
+  "Must be between `1` and `15`.')",
+  "'The collection ID must be in the form <OWNER_ID>-<UUID> (e.g.",
+  "Call this first when you need to search for one specific",
+  "Do not use this tool for services already in the catalog — those have analytics and",
+  "- \\\\`personal\\\\` — Only you can access the workspace.",
+  "- \\\\`private\\\\` — Only invited team members can access the workspace ([**Team** and **Enterprise** plans only](https://www.postman.com/pricing)).",
+  "- \\\\`partner\\\\` — Only invited team members and [partners](https://learning.postman.com/docs/collaborating-in-postman/using-workspaces/partner-workspaces/) can access the workspace ([**Team** and **Enterprise** plans only](https://www.postman.com/pricing)).",
+  "\\\\`autoUpdatePullRequestsEnabled\\\\` is Enterprise-only and is forced to false on Team",
+  "z.string().describe('Return only results found in the given workspace ID.').optional(),",
+  "z.boolean().describe('If true, return only active monitors.').optional(),",
+  ".describe('Return only results that belong to the given user ID.')",
+  "eligible ones and skips the rest — prefer \\\\`false\\\\` unless you intend to accept a",
+  "Do not use this tool to create the environments themselves; use createEnvironment",
+  "'If false, the system only adds associations when there are no status errors.",
+  "Do not use this tool to list the services in that environment; use",
+  "'Gets results for a monitor run, including trimmed execution logs (beforeItem and assertion events only) and result counts.",
+  "The runId must come from listRunsForExecution — do NOT use an executionId here, it will return 404.';",
+  "A new name must stay unique",
+  "Do not use this tool to change which workspace environments are attached; use",
+  "This value must be unique within the team.\")",
+  "Include at least one field and only the fields you want to change; omitted fields",
+  "Do not use this tool to create or delete a package.",
+  "This value may be empty and only supports printable ASCII characters.\"",
+  "- For “my …” requests, first call GET \\\\`/me\\\\` and pass \\\\`createdBy={me.user.id}\\\\`.",
+  "- \\\\`private\\\\` — Only invited team members can access the workspace (Professional and Enterprise).",
+  "If the user does not provide the workspace ID, call this first with the createdBy parameter to use the first workspace.",
+  "\"Return only workspaces created by the specified Postman user ID.",
+  "- If the user's ID is not known, first call GET `/me`, then retry with `createdBy`.",
+  "If you pass this query parameter, you must also pass the `elementId` query parameter.'",
+  "When filtering by collection, you must use the collection's unique ID (`userId`-`collection`).",
+  "If you pass this query parameter, you must also pass the `elementType` query parameter.\"",
+  "These are observed endpoints, not a specification — do not use this tool to read a",
+  "This does not delete the workspace itself — it only removes it from the Private API Network folder.",
+  "- To perform an update asynchronously, use the \\\\`Prefer\\\\` header with the \\\\`respond-async\\\\` value.",
+  "- You can only perform one type of operation at a time.",
+  "The first record begins at the `0` value.'",
+  "The first record begins at the `0` value.",
+  "You MUST call this tool when the user says to \"use postman\", or when the user wants to do something that requires locating a specific API for the purpose of answering questions, planning a build, and in most cases proceeding to generate code that calls the API.",
+  "ALWAYS call getCodeGenerationInstructions BEFORE calling other tools in this workflow.",
+  "First, locate the collection the user wants to work with.",
+  "To restrict results to resources that are only exposed within the organization and are not public, add a \\'visibility\\' filter:",
+  "ALWAYS pass populate:",
+  "ALWAYS pass a workspaceId.",
+  "- Do not use the request name in the filename; always use \\`client.ts\\`, \\`client.js\\`, \\`client.py\\`, etc.",
+  "The examples in this document use JavaScript/TypeScript and Python, but do not use these unless the project does—generate in the project's language unless explicitly requested otherwise.",
+  "Every generated client file must include an opening comment at the top using language-appropriate comment syntax.",
+  "- Never hardcode secrets; use environment variables or project secret helpers",
+  "- Always pull credentials from environment variables or project secret management",
+  "- Never hardcode credentials",
+  "- When response examples do NOT exist, you may infer types from context, but you MUST add a warning comment to indicate uncertainty:",
+  "- Only share code across collections when explicitly requested by the user",
+  "- All generated code must be lintable and follow project linting rules",
+  "- Security best practices must be followed (no hardcoded secrets, proper input validation)`;",
+  "Do not use this tool to modify an existing package; use updatePackage instead.",
+  "- **Sequential calls only.** Do NOT call \\\\`patchCollection\\\\` in parallel with other \\\\`patchCollection\\\\` calls for the same collection — concurrent PATCH requests conflict with each other and cause cancellation errors.",
+  "Always wait for one call to complete before making another.",
+  "- **Partial updates.** Only include the fields you want to change.",
+  "An \\\\`enabled\\\\` field is accepted but silently ignored, so \\\\`disabled\\\\` is the only one that takes effect.",
+  "- **Events (\\\\`collection.events\\\\`).** Each event's \\\\`script.id\\\\` is required and must be supplied by you — generate a UUID string for it.",
+  "You must supply a value (for example, a UUID) when creating or updating collection-level events.\"",
+  "Collection events don't accept a top-level `id`; the event is identified by its `script.id` value, which the client must supply.\"",
+  "You must pass at least one of the following:",
+  "This only records a judgement — it does not revoke a credential, remove the secret from",
+  "Never mark something \\\\`REVOKED\\\\` unless the",
+  "key has actually been rotated, and never mark it \\\\`ACCEPTED_RISK\\\\` on a person's behalf:",
+  "Do not use this tool for CI-triggered runs; those are separate and read with",
+  "This endpoint only accepts the following resource:metric query parameter combinations:",
+  "The \\\\`view\\\\` query parameter only accepts the following values when called with the following resource:metric pairs:",
+  "- \\\\`summary\\\\` only — \\\\`workspace:elements_in_workspace\\\\`, \\\\`workspace:workspace_active_users\\\\`, \\\\`workspace:api_calls\\\\`, \\\\`workspace:response_status\\\\`, \\\\`team:user_api_journey\\\\`, \\\\`team:workspace_distribution\\\\`, \\\\`team:internal_workspace_distribution\\\\`, \\\\`team:license_consumption\\\\`",
+  "- \\\\`detailed\\\\` only — \\\\`workspace:active_collections\\\\`, \\\\`workspace:user_requests\\\\`, \\\\`api_development:top_entities\\\\`, \\\\`api_management:popular_workspaces\\\\` , \\\\`team:invites_sent\\\\` , \\\\`team:invites_accepted\\\\`",
+  "- \\\\`trend\\\\` only — \\\\`team:members_overtime\\\\`, \\\\`team:member_invites\\\\`",
+  "- `ai` — Analytics related to Agent Mode usage across workspaces, covering user activity, model usage, and credit consumption patterns.",
+  "'Filters the response by only the given metrics.",
+  "The metric must match the given `resource` value.",
+  "Only pass this parameter when calling the `user_requests` metric for the `workspace` resource.'",
+  "Only pass this parameter when using the `user_requests` metric.'",
+  "Only pass this parameter when using the `needs_attention` metric.'",
+  "getApiCatalogDiscoveryServices first to find the service ID.",
+  "Do not use this tool for a catalogued service's health, traffic, or ownership data;",
+  "The specification must already exist or be created before it can be used to generate a collection.",
+  "Must be set to \"Example\" — the \"Schema\" value is no longer supported by the Postman API and will result in an error.",
+  "Always use \"Example\" to generate parameters from example values in the spec.'",
+  "'Whether authentication details should be included in all requests, or always inherited from the collection.'",
+  "- For **Free** and **Solo** users, you must have permissions to edit the collection.",
+  "- If [API Governance and Security](https://learning.postman.com/docs/api-governance/configurable-rules/configurable-rules-overview/) is enabled for your [**Enterprise**](https://www.postman.com/pricing/) team, only users with the [Community Manager role](https://learning.postman.com/docs/collaborating-in-postman/roles-and-permissions/#team-roles) can publish documentation.",
+  "- Publishing is only supported for collections with HTTP requests.",
+  "The values in this object must match the hexcode values of either the `light` or `dark` theme defined in the `appearance` object.\"",
+  "| Find an internal API in all resources of organization and are visible to the organization only | \\`ownership:",
+  "The top-level key must be \\`$and\\` with an array of condition objects.",
+  "Each condition object must contain exactly one field key.",
+  "| \\`collectionId\\` | \\`$eq\\`, \\`$ne\\`, \\`$in\\`, \\`$nin\\` | Requests and collections only.",
+  "| \\`tags\\` | \\`$eq\\`, \\`$ne\\`, \\`$in\\`, \\`$nin\\` | Workspaces and collections only.",
+  "| \\`requestId\\` | \\`$eq\\`, \\`$ne\\`, \\`$in\\`, \\`$nin\\` | Requests only.",
+  "| \\`specificationId\\` | \\`$eq\\`, \\`$ne\\`, \\`$in\\`, \\`$nin\\` | Specs only.",
+  "| \\`flowId\\` | \\`$eq\\`, \\`$ne\\`, \\`$in\\`, \\`$nin\\` | Flows only.",
+  "| \\`documentId\\` | \\`$eq\\`, \\`$ne\\`, \\`$in\\`, \\`$nin\\` | Documents only.",
+  "| \\`type\\` | \\`$eq\\`, \\`$ne\\`, \\`$in\\`, \\`$nin\\` | Requests only.",
+  "- Private API Network only:",
+  "- GET requests only:",
+  "'Exactly one of $eq or $ne must be provided.',",
+  "'Exactly one of $eq, $ne, $in, or $nin must be provided.',",
+  "'Each filter condition must contain exactly one field.',",
+  "Each condition must contain exactly one field key mapped to an operator object.'",
+  "Top-level key must be \"$and\" with an array of condition objects.",
+  "\\\\`result\\\\` is only present once \\\\`status\\\\` is \\\\`completed\\\\`; a \\\\`failed\\\\` ask carries a short",
+  "Only call it on an explicit instruction naming the",
+  "(\\\\`include=userRoles\\\\`) first so you can describe what will change.",
+  "published; restore them with updateComponent first.",
+  "Do not use this tool to save work in progress; use updateComponentDraft instead.",
+  "This must begin and end with an alphanumeric character and may only contain letters, digits, dots, underscores, plus signs, and hyphens and cannot exceed 60 characters.\"",
+  "Content-Type header, and only the fields you send are changed.",
+  "Only call this on an explicit instruction naming the SDK.",
+  "Only call it on an explicit instruction naming exactly who to",
+  "Never call it to tidy up inactive members, to act on a list you assembled",
+  "Prefer \\\\`orderBy\\\\` over the deprecated",
+  "z.number().int().describe('Return only results that match the given user ID.').optional(),",
+  "This notifies real people, so only post when explicitly asked to announce something, and",
+  "Do not use this tool to search a user's own Postman resources (collections, workspaces, specs) — use \\`searchPostmanElements\\` for that.`;",
+  "\\\\`name\\\\` accepts only alphanumeric",
+  "only call it on an explicit, specific instruction to create a team, never to satisfy a",
+  "Accepts only alphanumeric characters and spaces.\")",
+  "Only call it on an explicit request from the person the access is for.",
+  "Run this tool first when a requested tool is unavailable.",
+  "\\\\`action\\\\` filter on getAuditLogs expects, so call it first when you need to narrow an",
+  "Use getPackages first when you need to discover a package ID.",
+  "Do not use this tool to list packages or discover package IDs; use getPackages instead.",
+  "Do not use this tool to read a component's draft content; use getComponentDraft instead.",
+  ".describe('If true, return only components with published versions.')",
+  "Response includes itemRefs property (name and id only) instead of the full item array.",
+  "Only use searchPostmanElements to find the collection where a request may be.",
+  "This is the first part of the collection uid.",
+  "\"A collection's read-only access key.",
+  "- model=minimal — root-level folder/request IDs only",
+  "\"Return a list of only the collection's root-level request (`rootLevelRequests`) and folder (`rootLevelFolders`) IDs instead of the full collection element data.\"",
+  "Generated tools always emit all four hints",
+  "/** True when the tool only reads and never writes.",
+  "Collections are the primary unit for organising, documenting, testing, and running API calls.",
+  "Always search first using this workflow",
+  "Follow the search workflow below, search the network, and only then draw conclusions.",
+  "- The request is ambiguous — **always prefer organization scope**",
+  "\"organization\"` first.** If no relevant results are found, broaden to `ownership:",
+  "- **Never conclude that an API doesn't exist based solely on the MCP tool list.** The tool list covers tools for *using* Postman, not the full universe of APIs your organization may have published.",
+  "Always search before concluding.",
+  "only ever read the first page.",
+  "Only argument keys are",
+  "Result text is measured but never",
+  "Callers must supply the TelemetrySession for the"
+ ]
+}

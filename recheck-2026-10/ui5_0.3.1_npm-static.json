@@ -1,0 +1,509 @@
+{
+ "unit_source": "npm @ui5/mcp-server@0.3.1",
+ "capture_utc": "2026-10-06T09:53:39.610161+00:00",
+ "method": "static source read (no code executed)",
+ "auth": "none",
+ "server_info": {
+  "package": "@ui5/mcp-server",
+  "version": "0.3.1"
+ },
+ "tarball": "https://registry.npmjs.org/@ui5/mcp-server/-/mcp-server-0.3.1.tgz",
+ "source_files_count": 104,
+ "source_files": [
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/api.d.ts",
+   "sha256": "59a6cf5b8cd1bdb84d3b2d03eff25aed29211d0c9acf1fd2bf690214bda0cec0"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/server.d.ts",
+   "sha256": "70c870ef21c31d13ca6610971950c068a9a793bcb05aea3048fe6bd4e973bf78"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/server.js",
+   "sha256": "f1f95a63a5aa546635719ea5eae897dc952dc5438ff2ce5b6fcf81ad1afcda0d"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/cli.d.ts",
+   "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/registerTools.d.ts",
+   "sha256": "d4dd483781fbe561c62648127f702c29bac4c117fc1c8b590ee9e03afd2c8f0b"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/utils.d.ts",
+   "sha256": "41ec488ced758b92d267eaaf0709dfa466ed029d6cfffca39ae1a07dbcb1d9ab"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/Context.d.ts",
+   "sha256": "ad9050d3a71151db34e46a9263b16a426f5e90a5773a86cc8a5c060cd8604485"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/Context.js",
+   "sha256": "68bc222a1704cb1c14ddac9c47e46fa6cb4feb139c558ab975f8dcd7f853b572"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/cli.js",
+   "sha256": "b649208b1a3efe529bb9b7fbef9fa93f4e917410d8be7d81803fb8bc3d8f80d0"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/utils.js",
+   "sha256": "c2c6b3db0b7a47872c98cbe9d5912b58f525eac28c5b77b4d270466fc3913dc4"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/api.js",
+   "sha256": "d4b5aa3dad06ecf2680bc910febe9123ca07c0f32a9e5bd6ab6de7ffc71d75e3"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/registerTools.js",
+   "sha256": "b4fa3118d51809b4950c3c920b520e46996c309ac662c9656479a33386219f53"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_ui5_app/ODataMetadata.js",
+   "sha256": "2ebbc2f498ea53a4b0d5281598dbb36e946dc283730696a123f27723f118e3dd"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_ui5_app/index.js",
+   "sha256": "f94b5038f4c25d8f6d92732c74fc68de0a23cacd9b82f3f5afc710128facd97d"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_ui5_app/ui5Version.d.ts",
+   "sha256": "7146f800b7988512b7e71693b95a5095e7fde1391eabb9e52cec0d05c3d834ea"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_ui5_app/createSuccessMessage.js",
+   "sha256": "9b70f4c62575e363c3a4f40acd9822d00baccd91bd41d13b34513cb9eb4bb262"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_ui5_app/templateProcessor.js",
+   "sha256": "7b66ea9f2f2abb116ade3c99d967ab5ff0b39d4ea9dc6e046709b234b245ec4a"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_ui5_app/ui5Version.js",
+   "sha256": "d9db6d258010434f58030d8f2b980cbb82615604877374609213697cdee8372f"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_ui5_app/schema.js",
+   "sha256": "97744b13aefef2e544f345fd45d8f2f70c7e8f1d424312830e3a16f599a76cb3"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_ui5_app/ODataMetadata.d.ts",
+   "sha256": "d192d99f9facda5daf0f50483ecbfba504c796a04d20d012fe20a0e985b64549"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_ui5_app/schema.d.ts",
+   "sha256": "85e2211ca7b77c70cf22b3806cdafecba057092ff9bf19d1e723e868508d2171"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_ui5_app/templateProcessor.d.ts",
+   "sha256": "59616dab396a52f28ae060b0f653f9cf34101f619388006317f4857e6b32b8ed"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_ui5_app/create_ui5_app.d.ts",
+   "sha256": "3f872097a36d7f3f24d8233e1d01067d330faf14a4a35149a5e3ed4c2eb0cbac"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_ui5_app/index.d.ts",
+   "sha256": "6ce81d7c70b8c1805e346fe9930dd6feca86b6c625699418870bab72d66d6edd"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_ui5_app/create_ui5_app.js",
+   "sha256": "626bec4513154ca66a4b57905b0d71f0946664f71ce1c48bb35f67f995302d1e"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_ui5_app/createSuccessMessage.d.ts",
+   "sha256": "5f3f299018565728a98def3d134ff7bf4fbf33f3eb4809ea3cd3c8969be8ac86"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_api_reference/getApiReference.js",
+   "sha256": "bf436838604ad787fe48959f4fa14f50b44d626e73db581899526c62f8afe0ac"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_api_reference/createUriForSymbol.js",
+   "sha256": "b629c8f539acf84f5ea5c223e9acf7bf9c37bbae03fb246a12dd500a18836ee5"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_api_reference/index.js",
+   "sha256": "737899fbed541b247f069e183240fbae9823b0195dfe12a5478ebe9f2d4dd509"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_api_reference/createUriForSymbol.d.ts",
+   "sha256": "e3e2b6703086db9bce538681eb52788326757b378c1941976d1e0e7cc33f2916"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_api_reference/getApiReference.d.ts",
+   "sha256": "bffa23cf92a245cc1f0ce908dc0436bb63287a11cbea4be90ee9e16bd9d472fd"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_api_reference/schema.js",
+   "sha256": "0444e1520e2ae03cba90b55d556a273ce736e35e84e01cf42c887ff117b821ac"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_api_reference/schema.d.ts",
+   "sha256": "22f0ce74fa2ff1fe61903810ea4f59552c1680a60b366c4b97c8a9481128a91d"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_api_reference/index.d.ts",
+   "sha256": "6ce81d7c70b8c1805e346fe9930dd6feca86b6c625699418870bab72d66d6edd"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_api_reference/lib/apiReferenceResources.js",
+   "sha256": "ddcf50c4d3e063dcd7d5a65370d475c0d883658f60d3b5056130915f1a9d9065"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_api_reference/lib/ApiReferenceProvider.d.ts",
+   "sha256": "19f99a5310572c10a7ce42fed61168fc28deddaa5ac0843bbf9a57aee99e19d3"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_api_reference/lib/ApiReferenceProvider.js",
+   "sha256": "68f5b50cd556aa84d32addaf5a5e912661621779b9a2c1b236c9ecb4f50e6bd9"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_api_reference/lib/apiReferenceResources.d.ts",
+   "sha256": "7ec6ee8f1768e1fef55e5c749ee68658cf1fbec6d19a2b1ad89b8e4e5de52761"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_api_reference/lib/formatSymbol.js",
+   "sha256": "dcb8e3834e03b14c859630ef7a9caa85d5b52ad22c9f23958413dd452a44a164"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_api_reference/lib/formatSymbol.d.ts",
+   "sha256": "d200159d2a1a4b6a5741e6f64b5202fa4ddc88afa3551bd6716f1443301f179b"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/run_manifest_validation/index.js",
+   "sha256": "2959ef098f10f798ecd75f6f3f4810ed639a5fda715ddfee3e37c338bc8dbc9c"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/run_manifest_validation/createValidationFunction.js",
+   "sha256": "0a60d52e93eb7c56eb903bf55a7c7781d49af9d576a7de28c5625157ee50fd70"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/run_manifest_validation/createValidationFunction.d.ts",
+   "sha256": "18ff7227a5c017f4aace3442045fa16c4697826b92ba256337de65b602fc34e9"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/run_manifest_validation/schema.js",
+   "sha256": "5eb73da36ddec018a7c91eaa725fcceac72a89bcaed1bcaeff974429727d4b85"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/run_manifest_validation/schema.d.ts",
+   "sha256": "c835607b951d0f207cec443e453812f49ba853888c829c5c1cf3cde9f85fea6b"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/run_manifest_validation/runValidation.js",
+   "sha256": "2e6cad7440c3bbc838dbef2c9ec271e4f5a130e9080aafd0dc9f841fe5dea504"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/run_manifest_validation/index.d.ts",
+   "sha256": "6ce81d7c70b8c1805e346fe9930dd6feca86b6c625699418870bab72d66d6edd"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/run_manifest_validation/runValidation.d.ts",
+   "sha256": "f770841252d4bc2f9be489e857c087551fd2ff4845e17833513d036afb85e196"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/run_ui5_linter/migrationGuides.js",
+   "sha256": "cba92585e5f6dc009f879fcb489b97a1de895b9e5816fd41789cddf310eaa757"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/run_ui5_linter/runUi5Linter.js",
+   "sha256": "3246c70f63d036db7e893ff1d21a41b38fc69f00c209d0daf54bedc2755853d2"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/run_ui5_linter/migrationGuides.d.ts",
+   "sha256": "36cb9b7eb27894cb01cdc8db7065580e92c7b987627ffaf756923d13391fab8a"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/run_ui5_linter/index.js",
+   "sha256": "934072f7e821d1fd8c9b21fb751bdacf7b6f9be9315c0c2377e7769e0ee3c50a"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/run_ui5_linter/runUi5Linter.d.ts",
+   "sha256": "43a3dd05274d16b1729e767edddb70a9f754f99e7a5f482194c07169e6fe425e"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/run_ui5_linter/schema.js",
+   "sha256": "7ad9e3c9e4fb9bee3b286f04c2fbe117d7908881d0259493594c281248869a55"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/run_ui5_linter/resultContext.js",
+   "sha256": "3af470f35f6b3f704b57df6dc734c1621b858257a2f2613aec0d96c8aaa02153"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/run_ui5_linter/schema.d.ts",
+   "sha256": "10948af476f24ac4f39e0916c461f5d38aa27e63d848706b5d074a2afdb4ce7c"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/run_ui5_linter/index.d.ts",
+   "sha256": "6ce81d7c70b8c1805e346fe9930dd6feca86b6c625699418870bab72d66d6edd"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/run_ui5_linter/resultContext.d.ts",
+   "sha256": "a8a499decca21bffe6d0e6b9c292749de65f5d1ba43fbecbc9df3099b66055ca"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_guidelines/guidelines.d.ts",
+   "sha256": "592018468e3148bb64d76ead21a0b58272c366ad9bee3ad06ba8da853fa42268"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_guidelines/index.js",
+   "sha256": "b725b73f383509dfb1bac4cdea85fbafc2cf7ea44d4863f2526d1e7c2789355a"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_guidelines/guidelines.js",
+   "sha256": "819617fe248f1a0bc441e57edac0a29f59a2f494fe89cb4415e9482fa01ae5ca"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_guidelines/index.d.ts",
+   "sha256": "5b7a7c37ac1d6024bd6352a5fb1e4b3aafa32be9ea2a4e164ce08e1ff239dc04"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_typescript_conversion_guidelines/typescriptConversionGuidelines.d.ts",
+   "sha256": "8c931eef33aea7a14fe41ac65011d7197e335e2eccfefe8611856a510772e2a3"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_typescript_conversion_guidelines/typescriptConversionGuidelines.js",
+   "sha256": "d3789b3ddc949136904f7942ed40c4075169e59800dd09f0935e4e6bdd770ac4"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_typescript_conversion_guidelines/index.js",
+   "sha256": "154685425a760b02bd70807b7ac640ab50d7e6ca8326bc941206120a286ab78d"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_typescript_conversion_guidelines/index.d.ts",
+   "sha256": "5b7a7c37ac1d6024bd6352a5fb1e4b3aafa32be9ea2a4e164ce08e1ff239dc04"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_integration_cards_guidelines/guidelines.d.ts",
+   "sha256": "592018468e3148bb64d76ead21a0b58272c366ad9bee3ad06ba8da853fa42268"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_integration_cards_guidelines/index.js",
+   "sha256": "743c2cf90352ce63e8ba55bdbf57b08680b3a543c88ceab852e9687e293e521c"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_integration_cards_guidelines/guidelines.js",
+   "sha256": "47606a9737354951c67525ed4b3fd6ad20059f9342f58297d38aa42bbea9e537"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_integration_cards_guidelines/index.d.ts",
+   "sha256": "5b7a7c37ac1d6024bd6352a5fb1e4b3aafa32be9ea2a4e164ce08e1ff239dc04"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_version_info/types.js",
+   "sha256": "01ae2a5b120382f9a648ced7ee8507493a134f216d100fc61600c6c9738235d2"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_version_info/types.d.ts",
+   "sha256": "b91ba67d8afda3dd48b894ee2bc8a40ff8823819f50019a158b806998b39cedc"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_version_info/getVersionInfo.d.ts",
+   "sha256": "d42266971fc312ad7f341be2da6a558f97288508560aaa9c71e9d9326703d37e"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_version_info/index.js",
+   "sha256": "84369c49047e04391785d5a3b10efaec5f0ff7e5fffad6c643d5f58c3a20d808"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_version_info/schema.js",
+   "sha256": "b27085f9127d2ce67c1c92cbc64b7cae20679f31bfd4b31d5a2369b828c29d8f"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_version_info/schema.d.ts",
+   "sha256": "cd2951126e3f258e07fae112fe156af3a0d3dba5b1f617d65d5461e8634faad5"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_version_info/index.d.ts",
+   "sha256": "0e7f589df96f8b56354ca951d33c59a452ee777f74e9c6b04be4d93717819296"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_version_info/getVersionInfo.js",
+   "sha256": "06d922498a40f4b4bce17cba184f24e72596b879d2f7353b8df055dde60f662b"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_project_info/getProjectInfo.d.ts",
+   "sha256": "7fbcbc05675fafc13c2623c4e482ad5e5c077f17307daeec14c9587810ae03fe"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_project_info/index.js",
+   "sha256": "c8a5805c50ab89bf3adb802dcf243c4057f89109e278ad3e364961943c2889c0"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_project_info/getProjectInfo.js",
+   "sha256": "06b17cae0cc03bf65ef364dedeed756c22d866635c1d70bff8ae5ba718c43d1f"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_project_info/schema.js",
+   "sha256": "4d81130a58ed429dad630dd1532df4f82c73b6058b1a6fc8510e6d267e26047f"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_project_info/schema.d.ts",
+   "sha256": "c21d1d579fcc5a1e594f10cee1713c6bc8f40ce107f13d48c52b82543f18dc1a"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/get_project_info/index.d.ts",
+   "sha256": "6ce81d7c70b8c1805e346fe9930dd6feca86b6c625699418870bab72d66d6edd"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_integration_card/create_integration_card.d.ts",
+   "sha256": "79e96944823aa6ecfc9ece8e12d1102f781f488aa6ade10c0d4101f95d97a9ad"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_integration_card/index.js",
+   "sha256": "b6c701d408b2f406da44149699dd47d1a769cdea645cb0302ee63e0973a71f30"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_integration_card/create_integration_card.js",
+   "sha256": "4dac5b772227d2577119ee9c2b43a5b7de5ec4f4b0db0016cd36cfaf6d7640ad"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_integration_card/schema.js",
+   "sha256": "355fef987eeec62f88cd280e91e989b635b3c7fa286f84b97810b857a2ad3c06"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_integration_card/schema.d.ts",
+   "sha256": "23ea10c914aacb566281951d9c608c5b5ee68a46fb2d52b8fd3339fec8764689"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/tools/create_integration_card/index.d.ts",
+   "sha256": "7436356617dd9229977190cc63b6db22dbcfe4ded0dffceed9ee56cf5cd5235e"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/resources/documentation/getDocumentation.js",
+   "sha256": "91a7095db1e1122cbaa83fae4924d3d2c42227a4dfd6c8dc81ac6f9a5b4e362d"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/resources/documentation/getDocumentation.d.ts",
+   "sha256": "49581401bc2f15fc77cedf51ce55bf5379076f26ddda6a6e45a30157bb1bfceb"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/utils/ui5Manifest.js",
+   "sha256": "24bf07340cf62017254189353842e55110e57b7ed1518b8b48de735aadcae83a"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/utils/isValidUrl.js",
+   "sha256": "c04d7cb6de5b65d31dac5dd13b33130ddca41baf74bf4270695e666a3408365e"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/utils/getAllowedDomains.d.ts",
+   "sha256": "4766727af8eef9cc748a83a082c6c13474bb0665cee00401f7157863fa5c394a"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/utils/cdnHelper.js",
+   "sha256": "0d5ccfb10ef6d05e91cffa02f1550b562ba2b2a77f85c7c75130a35b0f18d56d"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/utils/cdnHelper.d.ts",
+   "sha256": "dd24bbebc1a509791364f831643ae090535faf43e0c981cd9294688c39902091"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/utils/isValidUrl.d.ts",
+   "sha256": "c5f20202a4d1da55842c1f5cbf9bcce3d56be2e05c1b0b1695ed387d02385943"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/utils/ui5Framework.js",
+   "sha256": "3c236bdd66b071f10c7b2c44c4da9ad5804014421faf719eb3d479c1842c5fda"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/utils/ui5Framework.d.ts",
+   "sha256": "de91440f873c6bc0f45274a8635068895721a0f5e26d5b42de4f946b1c25131f"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/utils/ui5Manifest.d.ts",
+   "sha256": "397c05910f2f689ddf5054033e5411a64946c5294c6690e8f6913fb93114383d"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/utils/dataStorageHelper.d.ts",
+   "sha256": "1fdca5a01a4d493521a8282ec85e10ffaafd850f59e1115f5b3fc8cca5c70d68"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/utils/dataStorageHelper.js",
+   "sha256": "178fc0b980dd0b552778453a7caaad54e4f4e304ffd642e8ec9343f70073e8d8"
+  },
+  {
+   "path": "npm/x/ui5-mcp-server-0.3.1/package/lib/utils/getAllowedDomains.js",
+   "sha256": "09a0775af5e063caa8bd05b204610382c2bb118d9926b1cd7a62dc165109f557"
+  }
+ ],
+ "july_quote_check": [
+  {
+   "july_quote": "After making changes, you should always run the linter again to verify that no new problems have been introduced.",
+   "july_channel": "tool_description:run_ui5_linter",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "After making changes, you should always run the validation again to verify that no new problems have been introduced.",
+   "july_channel": "tool_description:run_manifest_validation",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "The guidelines provided by this tool MUST be followed to ensure best practices and avoid common pitfalls in UI5 development.",
+   "july_channel": "tool_description:get_guidelines",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "This tool MUST be called once before converting a UI5 (SAPUI5/OpenUI5) project from JavaScript to TypeScript. The instructions provided by this tool MUST be followed to ensure that the project setup and code is correctly converted.",
+   "july_channel": "tool_description:get_typescript_conversion_guidelines",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "This tool MUST be called once to retrieve Integration Cards guidelines before working on any Integration Card related task or creating an Integration Card.",
+   "july_channel": "tool_description:get_integration_cards_guidelines",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "This tool MUST be called once to retrieve UI5 guidelines before working on any UI5 (SAPUI5/OpenUI5) related task or project or creating a UI5 project.",
+   "july_channel": "tool_description:get_guidelines",
+   "status_now": "exact"
+  }
+ ],
+ "steering_marker_sentences_now": [
+  "throw new InvalidInputError(`Path must be absolute:",
+  "\"Note that in CAP projects you **MUST NOT** use 'npm start' of this UI5 app, as doing this and opening it on port 8080 will not allow the app to load any data.",
+  "Instead, you **MUST** use 'cds watch' in the  project root to start the server.",
+  "`Only alphanumeric characters, underscores and dots are allowed.` })",
+  "Only lowercase alpha-numeric characters, underscores and dots are allowed.\"),",
+  "This base path must be absolute, not just 'app' or '.' or './something'!\"),",
+  "\"Version must be in format X.Y.Z, e.g.",
+  "When provided, it must be a concrete semantic version, like e.g.",
+  "\"Only alphanumeric characters, space, and .,'-@_ are allowed.\" })",
+  "Only works for OData V4 services, not for OData V2.",
+  "The URL must be either a valid complete URL starting with http:// or https:// or a server-root-relative URL like '/odata/v4/serviceName' when the OData service is running on the same server.",
+  "When the port is not 4004, a complete 'http://localhost:<port>...' URL must be provided.",
+  "when the project is a SAP CAP project and CAP/CDS tools are available, you **MUST** use them to search for OData services and entities and properties **BEFORE** calling this tool.",
+  "\"Only alphanumeric characters and underscore are allowed.\" })",
+  "Only has an effect when 'oDataV4Url' is set as well.",
+  "\"Only alphanumeric characters and underscore are allowed.\" })).optional()",
+  "Only has an effect when 'oDataV4Url' and'oDataEntitySet' are set.",
+  "Although the default is preferred, the user MUST know about this option before generation, but you should not require an active decision.",
+  "`As per the MCP server configuration, only the following domains are currently allowed:",
+  "It must be either an absolute URLstarting with http:// or https:// or pathname like '/odata/v4/serviceName' in case the OData service is exposed on the same server as the application.",
+  "If the symbol is found in the index, it must be in the referenced JSON",
+  "After making changes, you should always run the validation again to verify that no new problems have been introduced.\",",
+  "throw new InvalidInputError(`The manifest path must be absolute:",
+  "After making changes, you should always run the linter again to verify that no new problems have been introduced.\",",
+  "Must be an absolute path.",
+  "Only the remaining findings will be returned.\"),",
+  "`Components must be configured for asynchronous loading via the \\`sap.ui.core.IAsyncContentCreation\\` interface in the Component metadata or via \\`async\\` flags in the \\`manifest.json\\``,",
+  "`Inline scripts in HTML files must not be used in accordance with Content Security Policy (CSP) best practices`,",
+  "`Deprecated UI5 API must not be used.",
+  "`There must be no dependencies to deprecated components in the project's \\`manifest.json\\``,",
+  "`Global variables must not be used for accessing UI5 framework APIs and should be avoided in application code.",
+  "\"prefer-test-starter\":",
+  "This rule only applies to TypeScript code where built-in ECMAScript classes are used instead of an \\`.extend()\\` call`,",
+  "`The \\`manifest.json\\` or \\`Component.js\\` file must declare the latest supported manifest version`,",
+  "`The \\`manifest.json\\` file must not declare a UI5 version that is older than 1.136.0`,",
+  "`The \\`manifest.json\\` file must not contain properties that have been removed from the manifest specification`,",
+  "\"This tool MUST be called once to retrieve UI5 guidelines before working on any UI5 (SAPUI5/OpenUI5) related task or project or creating a UI5 project.",
+  "The guidelines provided by this tool MUST be followed to ensure best practices and avoid common pitfalls in UI5 development.\",",
+  "\"This tool MUST be called once before converting a UI5 (SAPUI5/OpenUI5) project from JavaScript to TypeScript.",
+  "The instructions provided by this tool MUST be followed to ensure that the project setup and code is correctly converted.\",",
+  "\"This tool MUST be called once to retrieve Integration Cards guidelines before working on any Integration Card related task or creating an Integration Card.",
+  "The guidelines provided by this tool MUST be followed to ensure best practices and avoid common pitfalls in Integration Cards development.Integration Cards are also called 'UI Integration Cards' or 'UI5 Integration Cards'.\",",
+  "throw new InvalidInputError(`The provided destination 'defaultUrl' service URL is not valid.It must be either an absolute URLstarting with http:// or https:// or pathname like '/api/v1/serviceName' in case the service is exposed on the same server as the application.",
+  "The value must be a valid URL (e.g., \"https://my-cdn.example.com\")`);",
+  "Only alphanumeric characters, dashes, and underscores are allowed.`);"
+ ]
+}

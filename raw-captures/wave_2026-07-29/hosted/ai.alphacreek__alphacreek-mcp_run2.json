@@ -1,0 +1,306 @@
+{
+ "url": "https://mcp.alphacreek.ai/mcp",
+ "capture_utc": "2026-07-29T12:37:15.828151+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 200,
+   "headers": {
+    "date": "Wed, 29 Jul 2026 12:37:16 GMT",
+    "content-type": "application/json",
+    "content-length": "2552",
+    "server": "cloudflare",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "cf-cache-status": "DYNAMIC",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2Bclq3TbHUG%2FKnFaFE458r%2BGP072L43Ey3gvkeLUZ6JRI2RJwOQqJ5tqVSwy9ASD2O3rMmOdAD%2BlZL0vjseAFq%2BS5hwikoTJ9p0a8B3t9EVo5w78IK4dHmZZvYc8Ob1UYckMQRA%3D%3D\"}]}",
+    "cf-ray": "a22c2c876e28f76f-MAD",
+    "alt-svc": "h3=\":443\"; ma=86400"
+   },
+   "body_raw": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"protocolVersion\":\"2025-03-26\",\"serverInfo\":{\"name\":\"alphacreek-mcp\",\"version\":\"1.0.1\"},\"instructions\":\"AlphaCreek MCP provides SEC and UK FCA filing navigation and source text.\\nUse filing_registry=sec_edgar (default) for US SEC filings. Use filing_registry=fca_nsm for UK FCA NSM annual reports.\\n1. Choose the filing period first. Multiple fiscal periods may be available per ticker (several 10-K/20-F and 10-Q/6-K filings). Call list_filings when you need a specific reporting period, then use the returned artifact_document_id for get_filing_toc and other navigation tools. If artifact_document_id is omitted, get_filing_toc and similar locators resolve the latest filing only.\\n2. Read filings navigation-first. Start with get_filing_toc using the chosen artifact_document_id, then read targeted nodes via read_node_content. Use the node id from each TOC line; these are the same values shown as NODE_ID lines in read_node_content output. Pass one node via node_id or several via node_ids.\\n3. Prefer source tables for exact financial values. Narrative nodes often explain year-over-year changes, while absolute reported values are usually in nearby sibling or child tables under headings like 'Revenues', 'By type', 'By geography', or 'Segment results'. When text says 'The following table presents...', inspect the adjacent TableElement before answering.\\n4. Batch reads from the same filing. When reading several nodes from one filing, pass them in one read_node_content call via node_ids to save round-trips. read_node_content returns full node text as plain MCP text only.\\nFor FCA filings (filing_registry=fca_nsm), TOC node ids are HTML page element ids (for example pf2a, page12, or pageView1). Use those ids with read_node_content. CITATION_URL links open the FCA reader scrolled to that page id.\\n<important>5. Cite every material claim. read_node_content output pairs NODE_ID lines with CITATION_URL lines. For every material claim or logical paragraph in your answer, place one or more relevant CITATION_URL links immediately next to the claim, using the URL paired with each supporting NODE_ID. A TOC node may expand into more granular child NODE_ID blocks; cite those child NODE_ID/CITATION_URL pairs when they are the closest supporting source.</important>\\n6. If an AlphaCreek MCP tool fails with a quota or 403 limit message, tell the user their monthly limit is reached and share https://www.alphacreek.ai/dashboard#usage for usage and upgrade.\",\"capabilities\":{\"tools\":{\"listChanged\":false}}}}"
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "method": "notifications/initialized"
+   },
+   "status": 202,
+   "headers": {
+    "date": "Wed, 29 Jul 2026 12:37:16 GMT",
+    "content-length": "0",
+    "server": "cloudflare",
+    "cf-cache-status": "DYNAMIC",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=CYMATXgN%2FpGcVD9ZFROMxaY1QLlT1R2Rbxv%2FrxPBmq0TUs94WYVHX76Sk3S%2B%2BQY2Rfw8m1xjphAKr2x0BMb89BomQcNa1kZ2IyprfAKXfc88ifCwqnCnZAWuBVoe7pVNCj92uw%3D%3D\"}]}",
+    "cf-ray": "a22c2c8a19bf8c07-MAD",
+    "alt-svc": "h3=\":443\"; ma=86400"
+   },
+   "body_raw": ""
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "method": "tools/list"
+   },
+   "status": 200,
+   "headers": {
+    "date": "Wed, 29 Jul 2026 12:37:17 GMT",
+    "content-type": "application/json",
+    "content-length": "4457",
+    "server": "cloudflare",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "cf-cache-status": "DYNAMIC",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Hhku0kKQhm0VSKXe1uNx%2FZciYr8MXRV7szPFEtKjTV1J%2BfxM%2BQnNT9%2BFh1lgcbyr1zcjvQU7Itd482dttQz%2BSqLFoHPxWw8E4ofZJy2aGUB%2FO2tFN5C%2FAVH1%2BUIoRHUCusc%2FUw%3D%3D\"}]}",
+    "cf-ray": "a22c2c8d2b168c88-MAD",
+    "alt-svc": "h3=\":443\"; ma=86400"
+   },
+   "body_raw": "{\"jsonrpc\":\"2.0\",\"id\":2,\"result\":{\"tools\":[{\"name\":\"get_latest_filing\",\"description\":\"Return latest filing metadata for a company or ticker.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"ticker\":{\"type\":\"string\"},\"company\":{\"type\":\"string\"},\"filing_registry\":{\"type\":\"string\",\"enum\":[\"sec_edgar\",\"fca_nsm\"],\"default\":\"sec_edgar\",\"description\":\"Filing source registry. Use sec_edgar (default) for US SEC filings or fca_nsm for UK FCA NSM annual reports.\"},\"document_type\":{\"description\":\"Optional filing type filter. SEC: 10-K, 10-Q, 20-F, 6-K, 8-K. FCA: Annual Report.\",\"oneOf\":[{\"type\":\"string\",\"enum\":[\"10-K\",\"10-Q\",\"20-F\",\"6-K\",\"8-K\",\"Annual Report\"]},{\"type\":\"array\",\"items\":{\"type\":\"string\",\"enum\":[\"10-K\",\"10-Q\",\"20-F\",\"6-K\",\"8-K\",\"Annual Report\"]}}]}},\"additionalProperties\":false},\"annotations\":{\"title\":\"Get latest filing\",\"readOnlyHint\":true,\"destructiveHint\":false}},{\"name\":\"list_filings\",\"description\":\"List available filings for a ticker (newest first) with artifact_document_id and dates. Use filing_registry=fca_nsm for UK FCA annual reports. Use this first when you need a specific reporting period.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"ticker\":{\"type\":\"string\"},\"company\":{\"type\":\"string\"},\"filing_registry\":{\"type\":\"string\",\"enum\":[\"sec_edgar\",\"fca_nsm\"],\"default\":\"sec_edgar\",\"description\":\"Filing source registry. Use sec_edgar (default) for US SEC filings or fca_nsm for UK FCA NSM annual reports.\"},\"document_type\":{\"description\":\"Optional filing type filter. SEC: 10-K, 10-Q, 20-F, 6-K, 8-K. FCA: Annual Report.\",\"oneOf\":[{\"type\":\"string\",\"enum\":[\"10-K\",\"10-Q\",\"20-F\",\"6-K\",\"8-K\",\"Annual Report\"]},{\"type\":\"array\",\"items\":{\"type\":\"string\",\"enum\":[\"10-K\",\"10-Q\",\"20-F\",\"6-K\",\"8-K\",\"Annual Report\"]}}]},\"limit\":{\"type\":\"integer\",\"minimum\":1,\"maximum\":50,\"default\":25}},\"additionalProperties\":false},\"annotations\":{\"title\":\"List available filings\",\"readOnlyHint\":true,\"destructiveHint\":false}},{\"name\":\"get_filing_toc\",\"description\":\"Return the full filing table of contents for one filing. If artifact_document_id is omitted, resolves the single latest filing for ticker/company (and optional document_type) only. Use list_filings first to discover a specific reporting period. For FCA filings, pass filing_registry=fca_nsm; TOC node ids are HTML page element ids (e.g. pf2a, page12, pageView1).\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"artifact_document_id\":{\"type\":\"string\"},\"ticker\":{\"type\":\"string\"},\"company\":{\"type\":\"string\"},\"filing_registry\":{\"type\":\"string\",\"enum\":[\"sec_edgar\",\"fca_nsm\"],\"default\":\"sec_edgar\",\"description\":\"Filing source registry. Use sec_edgar (default) for US SEC filings or fca_nsm for UK FCA NSM annual reports.\"},\"document_type\":{\"description\":\"Optional filing type filter. SEC: 10-K, 10-Q, 20-F, 6-K, 8-K. FCA: Annual Report.\",\"oneOf\":[{\"type\":\"string\",\"enum\":[\"10-K\",\"10-Q\",\"20-F\",\"6-K\",\"8-K\",\"Annual Report\"]},{\"type\":\"array\",\"items\":{\"type\":\"string\",\"enum\":[\"10-K\",\"10-Q\",\"20-F\",\"6-K\",\"8-K\",\"Annual Report\"]}}]}},\"additionalProperties\":false},\"annotations\":{\"title\":\"Get filing table of contents\",\"readOnlyHint\":true,\"destructiveHint\":false}},{\"name\":\"read_node_content\",\"description\":\"Return content for one or more navigation nodes in a filing. Pass one node via node_id or several via node_ids, using the node ids from TOC lines. These are the same values shown as NODE_ID lines in read_node_content output. The authoritative node content is returned as plain MCP text only: an ARTIFACT_DOCUMENT_ID header, then per-node blocks with NODE_ID, TITLE, CITATION_URL, CONTENT_START … CONTENT_END. A TOC node may expand into more granular child NODE_ID blocks; cite those granular NODE_ID/CITATION_URL pairs when they support the claim. For every material claim or logical paragraph in your answer, place one or more relevant CITATION_URL links immediately next to the claim, using the URL paired with each supporting NODE_ID.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"artifact_document_id\":{\"type\":\"string\"},\"node_id\":{\"type\":\"string\",\"description\":\"Single node id from TOC / NODE_ID lines. For FCA filings this is the HTML page id (e.g. pf2a, page12, pageView1).\"},\"node_ids\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"Batch read: multiple node ids for one filing (same identifiers as NODE_ID / TOC).\"}},\"required\":[\"artifact_document_id\"],\"additionalProperties\":false},\"annotations\":{\"title\":\"Read node content\",\"readOnlyHint\":true,\"destructiveHint\":false}}]}}"
+  }
+ ],
+ "server_info": {
+  "name": "alphacreek-mcp",
+  "version": "1.0.1"
+ },
+ "instructions": "AlphaCreek MCP provides SEC and UK FCA filing navigation and source text.\nUse filing_registry=sec_edgar (default) for US SEC filings. Use filing_registry=fca_nsm for UK FCA NSM annual reports.\n1. Choose the filing period first. Multiple fiscal periods may be available per ticker (several 10-K/20-F and 10-Q/6-K filings). Call list_filings when you need a specific reporting period, then use the returned artifact_document_id for get_filing_toc and other navigation tools. If artifact_document_id is omitted, get_filing_toc and similar locators resolve the latest filing only.\n2. Read filings navigation-first. Start with get_filing_toc using the chosen artifact_document_id, then read targeted nodes via read_node_content. Use the node id from each TOC line; these are the same values shown as NODE_ID lines in read_node_content output. Pass one node via node_id or several via node_ids.\n3. Prefer source tables for exact financial values. Narrative nodes often explain year-over-year changes, while absolute reported values are usually in nearby sibling or child tables under headings like 'Revenues', 'By type', 'By geography', or 'Segment results'. When text says 'The following table presents...', inspect the adjacent TableElement before answering.\n4. Batch reads from the same filing. When reading several nodes from one filing, pass them in one read_node_content call via node_ids to save round-trips. read_node_content returns full node text as plain MCP text only.\nFor FCA filings (filing_registry=fca_nsm), TOC node ids are HTML page element ids (for example pf2a, page12, or pageView1). Use those ids with read_node_content. CITATION_URL links open the FCA reader scrolled to that page id.\n<important>5. Cite every material claim. read_node_content output pairs NODE_ID lines with CITATION_URL lines. For every material claim or logical paragraph in your answer, place one or more relevant CITATION_URL links immediately next to the claim, using the URL paired with each supporting NODE_ID. A TOC node may expand into more granular child NODE_ID blocks; cite those child NODE_ID/CITATION_URL pairs when they are the closest supporting source.</important>\n6. If an AlphaCreek MCP tool fails with a quota or 403 limit message, tell the user their monthly limit is reached and share https://www.alphacreek.ai/dashboard#usage for usage and upgrade.",
+ "tools": [
+  {
+   "name": "get_latest_filing",
+   "description": "Return latest filing metadata for a company or ticker.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "ticker": {
+      "type": "string"
+     },
+     "company": {
+      "type": "string"
+     },
+     "filing_registry": {
+      "type": "string",
+      "enum": [
+       "sec_edgar",
+       "fca_nsm"
+      ],
+      "default": "sec_edgar",
+      "description": "Filing source registry. Use sec_edgar (default) for US SEC filings or fca_nsm for UK FCA NSM annual reports."
+     },
+     "document_type": {
+      "description": "Optional filing type filter. SEC: 10-K, 10-Q, 20-F, 6-K, 8-K. FCA: Annual Report.",
+      "oneOf": [
+       {
+        "type": "string",
+        "enum": [
+         "10-K",
+         "10-Q",
+         "20-F",
+         "6-K",
+         "8-K",
+         "Annual Report"
+        ]
+       },
+       {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "enum": [
+          "10-K",
+          "10-Q",
+          "20-F",
+          "6-K",
+          "8-K",
+          "Annual Report"
+         ]
+        }
+       }
+      ]
+     }
+    },
+    "additionalProperties": false
+   },
+   "annotations": {
+    "title": "Get latest filing",
+    "readOnlyHint": true,
+    "destructiveHint": false
+   }
+  },
+  {
+   "name": "list_filings",
+   "description": "List available filings for a ticker (newest first) with artifact_document_id and dates. Use filing_registry=fca_nsm for UK FCA annual reports. Use this first when you need a specific reporting period.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "ticker": {
+      "type": "string"
+     },
+     "company": {
+      "type": "string"
+     },
+     "filing_registry": {
+      "type": "string",
+      "enum": [
+       "sec_edgar",
+       "fca_nsm"
+      ],
+      "default": "sec_edgar",
+      "description": "Filing source registry. Use sec_edgar (default) for US SEC filings or fca_nsm for UK FCA NSM annual reports."
+     },
+     "document_type": {
+      "description": "Optional filing type filter. SEC: 10-K, 10-Q, 20-F, 6-K, 8-K. FCA: Annual Report.",
+      "oneOf": [
+       {
+        "type": "string",
+        "enum": [
+         "10-K",
+         "10-Q",
+         "20-F",
+         "6-K",
+         "8-K",
+         "Annual Report"
+        ]
+       },
+       {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "enum": [
+          "10-K",
+          "10-Q",
+          "20-F",
+          "6-K",
+          "8-K",
+          "Annual Report"
+         ]
+        }
+       }
+      ]
+     },
+     "limit": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 50,
+      "default": 25
+     }
+    },
+    "additionalProperties": false
+   },
+   "annotations": {
+    "title": "List available filings",
+    "readOnlyHint": true,
+    "destructiveHint": false
+   }
+  },
+  {
+   "name": "get_filing_toc",
+   "description": "Return the full filing table of contents for one filing. If artifact_document_id is omitted, resolves the single latest filing for ticker/company (and optional document_type) only. Use list_filings first to discover a specific reporting period. For FCA filings, pass filing_registry=fca_nsm; TOC node ids are HTML page element ids (e.g. pf2a, page12, pageView1).",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "artifact_document_id": {
+      "type": "string"
+     },
+     "ticker": {
+      "type": "string"
+     },
+     "company": {
+      "type": "string"
+     },
+     "filing_registry": {
+      "type": "string",
+      "enum": [
+       "sec_edgar",
+       "fca_nsm"
+      ],
+      "default": "sec_edgar",
+      "description": "Filing source registry. Use sec_edgar (default) for US SEC filings or fca_nsm for UK FCA NSM annual reports."
+     },
+     "document_type": {
+      "description": "Optional filing type filter. SEC: 10-K, 10-Q, 20-F, 6-K, 8-K. FCA: Annual Report.",
+      "oneOf": [
+       {
+        "type": "string",
+        "enum": [
+         "10-K",
+         "10-Q",
+         "20-F",
+         "6-K",
+         "8-K",
+         "Annual Report"
+        ]
+       },
+       {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "enum": [
+          "10-K",
+          "10-Q",
+          "20-F",
+          "6-K",
+          "8-K",
+          "Annual Report"
+         ]
+        }
+       }
+      ]
+     }
+    },
+    "additionalProperties": false
+   },
+   "annotations": {
+    "title": "Get filing table of contents",
+    "readOnlyHint": true,
+    "destructiveHint": false
+   }
+  },
+  {
+   "name": "read_node_content",
+   "description": "Return content for one or more navigation nodes in a filing. Pass one node via node_id or several via node_ids, using the node ids from TOC lines. These are the same values shown as NODE_ID lines in read_node_content output. The authoritative node content is returned as plain MCP text only: an ARTIFACT_DOCUMENT_ID header, then per-node blocks with NODE_ID, TITLE, CITATION_URL, CONTENT_START … CONTENT_END. A TOC node may expand into more granular child NODE_ID blocks; cite those granular NODE_ID/CITATION_URL pairs when they support the claim. For every material claim or logical paragraph in your answer, place one or more relevant CITATION_URL links immediately next to the claim, using the URL paired with each supporting NODE_ID.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "artifact_document_id": {
+      "type": "string"
+     },
+     "node_id": {
+      "type": "string",
+      "description": "Single node id from TOC / NODE_ID lines. For FCA filings this is the HTML page id (e.g. pf2a, page12, pageView1)."
+     },
+     "node_ids": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      },
+      "description": "Batch read: multiple node ids for one filing (same identifiers as NODE_ID / TOC)."
+     }
+    },
+    "required": [
+     "artifact_document_id"
+    ],
+    "additionalProperties": false
+   },
+   "annotations": {
+    "title": "Read node content",
+    "readOnlyHint": true,
+    "destructiveHint": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "url": "https://api.githubcopilot.com/mcp/",
+ "capture_utc": "2026-10-05T13:24:20.711127+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "Content-Security-Policy": "default-src 'none'; sandbox",
+    "Content-Type": "text/plain; charset=utf-8",
+    "Strict-Transport-Security": "max-age=31536000",
+    "www-authenticate": "Bearer error=\"invalid_request\", error_description=\"No access token was provided in this request\", resource_metadata=\"https://api.githubcopilot.com/.well-known/oauth-protected-resource/mcp/\"",
+    "X-Content-Type-Options": "nosniff",
+    "x-copilot-service-request-id": "fbbeebf0-f72f-4b29-ab6a-656622c11a9d",
+    "Date": "Mon, 05 Oct 2026 13:24:23 GMT",
+    "Content-Length": "51",
+    "x-github-backend": "Kubernetes",
+    "X-GitHub-Request-Id": "9231:54931:99AC5D:B27924:6AC3A506",
+    "x-github-edge-region": "iad",
+    "connection": "close"
+   },
+   "body_raw": "bad request: missing required Authorization header\n"
+  }
+ ]
+}

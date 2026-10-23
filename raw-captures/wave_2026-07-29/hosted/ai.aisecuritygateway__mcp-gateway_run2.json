@@ -1,0 +1,39 @@
+{
+ "url": "https://api.aisecuritygateway.ai/mcp",
+ "capture_utc": "2026-07-29T12:37:15.339059+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "content-type": "application/json",
+    "content-length": "83",
+    "date": "Wed, 29 Jul 2026 12:37:15 GMT",
+    "x-cache": "Error from cloudfront",
+    "via": "1.1 03e4dc380e86299f6a158e92aaaf09b2.cloudfront.net (CloudFront)",
+    "x-amz-cf-pop": "MAD53-P4",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "x-amz-cf-id": "isQnB2Vo2vCvHn1QJkkZ7ZUBmRmoLNs62kyvbH8org7RIeBhhyxW2A=="
+   },
+   "body_raw": "{\"error\":\"missing or malformed Authorization header (expected 'Bearer <api key>')\"}"
+  }
+ ]
+}

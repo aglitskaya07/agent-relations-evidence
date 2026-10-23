@@ -1,0 +1,114 @@
+{
+ "url": "https://mcp.abmeter.ai",
+ "capture_utc": "2026-07-29T12:05:45.612579+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 200,
+   "headers": {
+    "date": "Wed, 29 Jul 2026 12:05:46 GMT",
+    "content-type": "application/json",
+    "content-length": "243",
+    "mcp-protocol-version": "2025-06-18",
+    "mcp-session-id": "61da6a609634",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "server": "cloudflare",
+    "vary": "Accept, Origin",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-permitted-cross-domain-policies": "none",
+    "x-railway-request-id": "cUMxjOvuTTimsneJYqVb7A",
+    "x-xss-protection": "0",
+    "x-hikari-trace": "bcn1.jwax",
+    "x-railway-edge": "bcn1",
+    "cf-cache-status": "DYNAMIC",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Rmg%2BaOrMfjbZ%2F%2FJiSNDXs0hrmsEnMHi%2BGDgWVf0Y4axlupfqsf3gz3lozls7Ir9RIaIPbISPHJFJr9cLjEbs06JHNPDDduTq3NjNwqcV1ttKZimiHRnII1LA%2Bu3tkCAqpQ%3D%3D\"}]}",
+    "cf-ray": "a22bfe618cc2d943-MAD",
+    "alt-svc": "h3=\":443\"; ma=86400"
+   },
+   "body_raw": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"protocolVersion\":\"2025-06-18\",\"serverInfo\":{\"name\":\"mcp\",\"version\":\"0.0.1\"},\"capabilities\":{\"tools\":{\"listChanged\":false},\"prompts\":{\"listChanged\":false},\"resources\":{\"subscribe\":false,\"listChanged\":false}}}}"
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "method": "notifications/initialized"
+   },
+   "status": 202,
+   "headers": {
+    "date": "Wed, 29 Jul 2026 12:05:46 GMT",
+    "content-type": "application/json",
+    "content-length": "0",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-permitted-cross-domain-policies": "none",
+    "x-railway-request-id": "9NP21Xt2TFmMxYvOjq4OvQ",
+    "x-xss-protection": "0",
+    "x-hikari-trace": "bcn1.jwax",
+    "x-railway-edge": "bcn1",
+    "cf-cache-status": "DYNAMIC",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=8FRLwT%2BkKMh8Vesi4na5wkrdMVtFAmHYkFCFILRqUOQuwfPPxvAVswhj6M7OxNqkm5HGMeaTPeTHHN9oOs7hkwTiH7%2Bpyxtxr9W5w1zehNlu7iEkFDVAqW2C2gO4sb1Aag%3D%3D\"}]}",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "cf-ray": "a22bfe655d42807e-MAD",
+    "alt-svc": "h3=\":443\"; ma=86400"
+   },
+   "body_raw": ""
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "method": "tools/list"
+   },
+   "status": 401,
+   "headers": {
+    "date": "Wed, 29 Jul 2026 12:05:47 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "89",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "server": "cloudflare",
+    "vary": "Accept, Origin",
+    "www-authenticate": "Bearer resource_metadata=\"https://mcp.abmeter.ai/.well-known/oauth-protected-resource\"",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-permitted-cross-domain-policies": "none",
+    "x-railway-request-id": "7zDnWALDSeeDRJINWUN5dQ",
+    "x-xss-protection": "0",
+    "x-hikari-trace": "bcn1.jwax",
+    "x-railway-edge": "bcn1",
+    "cf-cache-status": "DYNAMIC",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=i2FPQajbC2CRVAmlyQfYA8Dh1UmhMNtXJ05P4FEcdQm75vfSf5pGu67kFOiJH%2F3q8fPoyQVNZl%2F5wc0V%2F694RcmL23WgEvvTaF3YYpGXq%2BqftHoig7zgGx4KGEkb%2FZox4w%3D%3D\"}]}",
+    "cf-ray": "a22bfe685e71031c-MAD",
+    "alt-svc": "h3=\":443\"; ma=86400"
+   },
+   "body_raw": "{\"jsonrpc\":\"2.0\",\"id\":2,\"error\":{\"code\":-32000,\"message\":\"Missing authentication token\"}}"
+  }
+ ],
+ "server_info": {
+  "name": "mcp",
+  "version": "0.0.1"
+ },
+ "instructions": null
+}

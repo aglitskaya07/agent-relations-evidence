@@ -1,0 +1,218 @@
+{
+ "unit_source": "npm next-devtools-mcp@0.4.0 (same version as July)",
+ "capture_utc": "2026-10-06T09:53:42.726966+00:00",
+ "method": "static source read (no code executed)",
+ "auth": "none",
+ "server_info": {
+  "package": "next-devtools-mcp",
+  "version": "0.4.0"
+ },
+ "tarball": "https://registry.npmjs.org/next-devtools-mcp/-/next-devtools-mcp-0.4.0.tgz",
+ "source_files_count": 28,
+ "source_files": [
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/index.js",
+   "sha256": "e1c3d5bdcc58665b39a75fc41916ab9b84403a268eabb3efa1c3a7ad762f0eb9"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/index.d.ts",
+   "sha256": "43e818adf60173644896298637f47b01d5819b17eda46eaa32d0c7d64724d012"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/_internal/find-process-import.js",
+   "sha256": "142b85eb4a8c11d97e9175b889f37eec4ff76d710fa44b05723b8e8c30fb3b7e"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/_internal/nextjs-runtime-manager.d.ts",
+   "sha256": "9478da9b26c35d04a63515ed37111e4e0838fa1499846fed79ecf3c336de85ad"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/_internal/nextjs-runtime-manager.js",
+   "sha256": "c880ff5989e63792f4e2a529c74ca8385528948e7b56d9f7bd50e1b2f999c644"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/_internal/find-process-import.d.ts",
+   "sha256": "593ff05ce66dbefa09269064fcce6297a86c6211d35495ca68f8c85ff40343ad"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/tools/nextjs-docs.js",
+   "sha256": "de48eb6e7c4c9a028b6ba6e08fdcc0fa3248b0794807fc583a51af6a3189a3ce"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/tools/nextjs-docs.d.ts",
+   "sha256": "a14c091daafd1375ba759f79445dd7fb235f924afcbd59396a1c3532fdeada38"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/tools/nextjs_call.d.ts",
+   "sha256": "2c82aad6e7450986a641678bc66b40cc327980787d8641386bc3557533f951d4"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/tools/nextjs_index.js",
+   "sha256": "2e2c8f089a841d0d5c1d817340cbece780442ff46d5491794610da1a0c9dc17a"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/tools/browser-eval.js",
+   "sha256": "4da66d8a727fb3a014a0d4fa557d5cc14b916d768d76a8ea831dc1805aefa9c1"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/tools/browser-eval.d.ts",
+   "sha256": "687952332e9aa601a17c115de6b9f63a1de0b8fd93fb1f38e9010089e0650328"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/tools/nextjs_call.js",
+   "sha256": "84b493b0ded04ab7e2348b5e54462f2daadae5a8d48d6a175ce2984e87a8fe24"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/tools/nextjs_index.d.ts",
+   "sha256": "5cb10fd446d95acc08ef12a3e05b5fab2ca64da0d91f54ee3a33fee2719d34ed"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/telemetry/telemetry-storage.js",
+   "sha256": "2846810c0c2dd688f82144db9745ab7abc49169b4170ef5070f29138a72fb9c8"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/telemetry/flush-events.js",
+   "sha256": "ef889a48e1df796d6e0fd4aab4eaae61fa48fe1801d035e4e5b7ab6636f20b22"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/telemetry/logger.js",
+   "sha256": "b005a1c2de9e7c512abb7829bed0cf157c97cffa9ffd35220bd6c599e1be99a7"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/telemetry/telemetry-dir.js",
+   "sha256": "c9a2008a52ea692cdef857c3ef87521c4fc028836d34e120ef30de51a19467cb"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/telemetry/telemetry-dir.d.ts",
+   "sha256": "130310bc32b999467166e3a26c86a0a32be1e967d1ea0c91acb46abec8fcb14d"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/telemetry/mcp-telemetry-tracker.js",
+   "sha256": "0e7242670a02ea8b266ee71d03e8a0ee0e6146300bb4635430914249d84eac8c"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/telemetry/event-queue.js",
+   "sha256": "9eb77768bae64cd9d8b158c9efe3f0ac30da328e4a2b39d9da0dc58466825225"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/telemetry/telemetry-storage.d.ts",
+   "sha256": "31815a7b79caa0ea0961365c3a19e4b9240b1bc9b6c64dafde3c6b324b9376b2"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/telemetry/mcp-telemetry-tracker.d.ts",
+   "sha256": "d739ed7bec24b6c20612563f3ff0f354bdec5d0c6caedaacf6952c2583585898"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/telemetry/flush-events.d.ts",
+   "sha256": "43e818adf60173644896298637f47b01d5819b17eda46eaa32d0c7d64724d012"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/telemetry/event-queue.d.ts",
+   "sha256": "8b92a80f15b0691e093c15ea3e9452a681ffd62d1a864b8e895cd0eb5fa41461"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/telemetry/telemetry-events.js",
+   "sha256": "6a24f21a1531f94058dd751b54859bbb1fbba4bdb8c2c418f140ce2ff0b22b9a"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/telemetry/logger.d.ts",
+   "sha256": "09194187c1db9782fa5af7d2b60193f19503ab2ae28bed1b208c4d1f7d37ac17"
+  },
+  {
+   "path": "npm/x/next-devtools-mcp-0.4.0/package/dist/telemetry/telemetry-events.d.ts",
+   "sha256": "3d73b5653c9256063104dc237beacc080af6be1c7663e914766911bd29ddb9ae"
+  }
+ ],
+ "july_quote_check": [
+  {
+   "july_quote": "**Before implementing ANY changes to the app**: When asked to add, modify, or fix anything in the application:",
+   "july_channel": "tool_description:nextjs_index",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "1. **Before implementing ANY changes to the app**: When asked to add, modify, or fix anything in the application:",
+   "july_channel": "tool_description:nextjs_index",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Call this before answering Next.js questions or writing Next.js code.",
+   "july_channel": "tool_description:nextjs_docs",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Do not rely on training-data knowledge of Next.js APIs — this version may differ. Prefer the bundled docs.",
+   "july_channel": "tool_description:nextjs_docs",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "It points you at `agent-browser` — a fast, native browser-automation CLI built for agents",
+   "july_channel": "tool_description:browser_eval",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "It points you at `agent-browser` — a fast, native browser-automation CLI built for agents (https://github.com/vercel-labs/agent-browser)",
+   "july_channel": "tool_description:browser_eval",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "KEY PRINCIPLE: If the request involves the running Next.js application (whether to investigate OR modify it), query the runtime FIRST to understand current state before proceeding.",
+   "july_channel": "tool_description:nextjs_index",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Use this as FIRST CHOICE for searching the currently running app. If not found, fallback to static codebase search tools.",
+   "july_channel": "tool_description:nextjs_index",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "WHEN TO USE THIS TOOL - Use proactively in these scenarios:",
+   "july_channel": "tool_description:nextjs_index",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "You then run its commands directly (you have shell access), which is faster and more capable than proxying automation through MCP.",
+   "july_channel": "tool_description:browser_eval",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "a fast, native browser-automation CLI built for agents",
+   "july_channel": "tool_description:browser_eval",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "so you read the docs that match this project, not a generic or outdated copy",
+   "july_channel": "tool_description:nextjs_docs",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "so you read the docs that match this project, not a generic or outdated copy.",
+   "july_channel": "tool_description:nextjs_docs",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "which is faster and more capable than proxying automation through MCP.",
+   "july_channel": "tool_description:browser_eval",
+   "status_now": "exact"
+  }
+ ],
+ "steering_marker_sentences_now": [
+  "Probe common ports first (most reliable, works on all OS)",
+  "Used only to suggest where to look in the bundled docs.\"),",
+  "Prefer the bundled docs.\",",
+  "- \"Add a loading state\" → Check current component structure and routes first",
+  "Use this as FIRST CHOICE for searching the currently running app.",
+  "If the request involves the running Next.js application (whether to investigate OR modify it), query the runtime FIRST to understand current state before proceeding.",
+  "- If you're on Next.js 15 or earlier, upgrade first by running 'npx @next/codemod@latest upgrade latest'",
+  "[IMPORTANT] If auto-discovery returns no servers:",
+  "Used only to tailor the guidance.\"),",
+  "`First, load its usage guide so you use the right commands and selectors:",
+  "`For your task (\"${task}\"), open the page first, then use the commands from the skill guide.`",
+  "`Download its managed Chrome (first run only):",
+  "Use 'nextjs_index' first to discover available tool names.\"),",
+  "MUST be an object (e.g., {param:",
+  "Only provide this parameter if the tool requires arguments - omit it entirely for tools that take no arguments.",
+  "Use 'nextjs_index' first to discover available servers, tools, and their input schemas.",
+  "- The 'args' parameter MUST be an object (e.g., {key:",
+  "\"Use 'nextjs_index' first to discover available servers and their ports."
+ ]
+}

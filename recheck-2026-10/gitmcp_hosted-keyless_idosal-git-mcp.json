@@ -1,0 +1,210 @@
+{
+ "url": "https://gitmcp.io/idosal/git-mcp",
+ "capture_utc": "2026-10-05T13:23:38.505533+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 200,
+   "headers": {
+    "Date": "Mon, 05 Oct 2026 13:23:42 GMT",
+    "Content-Type": "text/event-stream",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Access-Control-Allow-Origin": "*",
+    "Cache-Control": "no-cache",
+    "Access-Control-Allow-Headers": "Content-Type, mcp-session-id",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    "Access-Control-Expose-Headers": "mcp-session-id",
+    "Access-Control-Max-Age": "86400",
+    "mcp-session-id": "d7e154fcbaf38e5bd21ecb763b1b9b80c7f73c16061478b74766bd2eea5f8e4f",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=cLzbdesDj9OJZKBST1lSYNOyosNcrCgp25sZnE4ovDpobfuObjmG%2FibR21cPtE8yrtKZ9s0evjVNdPdm2%2FfPxewNa1FqvZjftcIwBVPXkAyMULt5GsyOuJLmVcw%3D\"}]}",
+    "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "Server": "cloudflare",
+    "CF-RAY": "a45cbe0cce1a4e41-LAX",
+    "alt-svc": "h3=\":443\"; ma=86400"
+   },
+   "body_raw": "event: message\ndata: {\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"protocolVersion\":\"2025-03-26\",\"capabilities\":{\"tools\":{\"listChanged\":true}},\"serverInfo\":{\"name\":\"GitMCP\",\"version\":\"1.1.0\"}}}\n\n"
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "method": "notifications/initialized"
+   },
+   "status": 202,
+   "headers": {
+    "Date": "Mon, 05 Oct 2026 13:23:55 GMT",
+    "Content-Length": "0",
+    "Connection": "close",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "Content-Type, mcp-session-id",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    "Access-Control-Expose-Headers": "mcp-session-id",
+    "Access-Control-Max-Age": "86400",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=MkzgskLUTmplGi0WH1FKFCnw2RSmUf9LTqXdQiw%2BGY377pflMwNjkDe%2FujiQPlABeAfbm4GuTUqObQVl3h%2FL6pBzFgAnJkYzSASXR7WOafeYcC2laC%2FopSc1W84%3D\"}]}",
+    "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "Server": "cloudflare",
+    "CF-RAY": "a45cbe5fa94191e9-LAX",
+    "alt-svc": "h3=\":443\"; ma=86400"
+   },
+   "body_raw": ""
+  },
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "method": "tools/list",
+    "params": {}
+   },
+   "status": 200,
+   "headers": {
+    "Date": "Mon, 05 Oct 2026 13:23:58 GMT",
+    "Content-Type": "text/event-stream",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Access-Control-Allow-Origin": "*",
+    "Cache-Control": "no-cache",
+    "Access-Control-Allow-Headers": "Content-Type, mcp-session-id",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    "Access-Control-Expose-Headers": "mcp-session-id",
+    "Access-Control-Max-Age": "86400",
+    "mcp-session-id": "d7e154fcbaf38e5bd21ecb763b1b9b80c7f73c16061478b74766bd2eea5f8e4f",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=h3i6rL%2F3ZSih9QksQMbWjct57A0VNYf6rs6ppFCzRczXd0DuHYdoz9NXAK7U72cMPHY8UyG7ZvR0ACeqawCWBjGopu%2FFdyFvIMXop%2Fy5rKY9JmhidH3TxW0DeII%3D\"}]}",
+    "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "Server": "cloudflare",
+    "CF-RAY": "a45cbe74d8d629a5-LAX",
+    "alt-svc": "h3=\":443\"; ma=86400"
+   },
+   "body_raw": "event: message\ndata: {\"jsonrpc\":\"2.0\",\"id\":2,\"result\":{\"tools\":[{\"name\":\"fetch_git_mcp_documentation\",\"description\":\"Fetch entire documentation file from GitHub repository: idosal/git-mcp. Useful for general questions. Always call this tool first if asked about idosal/git-mcp.\",\"inputSchema\":{\"type\":\"object\"},\"annotations\":{\"_def\":{\"options\":[{\"_def\":{\"unknownKeys\":\"strip\",\"catchall\":{\"_def\":{\"typeName\":\"ZodNever\"},\"~standard\":{\"version\":1,\"vendor\":\"zod\"}},\"typeName\":\"ZodObject\"},\"~standard\":{\"version\":1,\"vendor\":\"zod\"},\"_cached\":null},{\"_def\":{\"typeName\":\"ZodNull\"},\"~standard\":{\"version\":1,\"vendor\":\"zod\"}}],\"typeName\":\"ZodUnion\"},\"~standard\":{\"version\":1,\"vendor\":\"zod\"}}},{\"name\":\"search_git_mcp_documentation\",\"description\":\"Semantically search within the fetched documentation from GitHub repository: idosal/git-mcp. Useful for specific queries.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"query\":{\"type\":\"string\",\"description\":\"The search query to find relevant documentation\"}},\"required\":[\"query\"],\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}},{\"name\":\"search_git_mcp_code\",\"description\":\"Search for code within the GitHub repository: \\\"idosal/git-mcp\\\" using the GitHub Search API (exact match). Returns matching files for you to query further if relevant.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"query\":{\"type\":\"string\",\"description\":\"The search query to find relevant code files\"},\"page\":{\"type\":\"number\",\"description\":\"Page number to retrieve (starting from 1). Each page contains 30 results.\"}},\"required\":[\"query\"],\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}},{\"name\":\"fetch_generic_url_content\",\"description\":\"Generic tool to fetch content from any absolute URL, respecting robots.txt rules. Use this to retrieve referenced urls (absolute urls) that were mentioned in previously fetched documentation.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\",\"description\":\"The URL of the document or page to fetch\"}},\"required\":[\"url\"],\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}}]}}\n\n"
+  }
+ ],
+ "server_info": {
+  "name": "GitMCP",
+  "version": "1.1.0"
+ },
+ "instructions": null,
+ "tools": [
+  {
+   "name": "fetch_git_mcp_documentation",
+   "description": "Fetch entire documentation file from GitHub repository: idosal/git-mcp. Useful for general questions. Always call this tool first if asked about idosal/git-mcp.",
+   "inputSchema": {
+    "type": "object"
+   },
+   "annotations": {
+    "_def": {
+     "options": [
+      {
+       "_def": {
+        "unknownKeys": "strip",
+        "catchall": {
+         "_def": {
+          "typeName": "ZodNever"
+         },
+         "~standard": {
+          "version": 1,
+          "vendor": "zod"
+         }
+        },
+        "typeName": "ZodObject"
+       },
+       "~standard": {
+        "version": 1,
+        "vendor": "zod"
+       },
+       "_cached": null
+      },
+      {
+       "_def": {
+        "typeName": "ZodNull"
+       },
+       "~standard": {
+        "version": 1,
+        "vendor": "zod"
+       }
+      }
+     ],
+     "typeName": "ZodUnion"
+    },
+    "~standard": {
+     "version": 1,
+     "vendor": "zod"
+    }
+   }
+  },
+  {
+   "name": "search_git_mcp_documentation",
+   "description": "Semantically search within the fetched documentation from GitHub repository: idosal/git-mcp. Useful for specific queries.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "query": {
+      "type": "string",
+      "description": "The search query to find relevant documentation"
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+   }
+  },
+  {
+   "name": "search_git_mcp_code",
+   "description": "Search for code within the GitHub repository: \"idosal/git-mcp\" using the GitHub Search API (exact match). Returns matching files for you to query further if relevant.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "query": {
+      "type": "string",
+      "description": "The search query to find relevant code files"
+     },
+     "page": {
+      "type": "number",
+      "description": "Page number to retrieve (starting from 1). Each page contains 30 results."
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+   }
+  },
+  {
+   "name": "fetch_generic_url_content",
+   "description": "Generic tool to fetch content from any absolute URL, respecting robots.txt rules. Use this to retrieve referenced urls (absolute urls) that were mentioned in previously fetched documentation.",
+   "inputSchema": {
+    "type": "object",
+    "properties": {
+     "url": {
+      "type": "string",
+      "description": "The URL of the document or page to fetch"
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+   }
+  }
+ ]
+}

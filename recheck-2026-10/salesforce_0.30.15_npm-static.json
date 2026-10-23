@@ -1,0 +1,166 @@
+{
+ "unit_source": "npm @salesforce/mcp@0.30.15 (same version as July)",
+ "capture_utc": "2026-10-06T09:53:42.698038+00:00",
+ "method": "static source read (no code executed)",
+ "auth": "none",
+ "server_info": {
+  "package": "@salesforce/mcp",
+  "version": "0.30.15"
+ },
+ "tarball": "https://registry.npmjs.org/@salesforce/mcp/-/mcp-0.30.15.tgz",
+ "source_files_count": 30,
+ "source_files": [
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/registry.js",
+   "sha256": "564c636bb1f079b3d6f3d054ad3a0ed9c7554e07b22b1baef495d04ce7b1b375"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/registry.d.ts",
+   "sha256": "1c7278692d0a38be0d3137ab93f006d2da94d1baa85b2338180202791672f590"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/telemetry.js",
+   "sha256": "c8c1030e78ca3b362513908665825e61ae76db62326a7709b01e7ceb4461b3c7"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/services.d.ts",
+   "sha256": "c69b6311fd5a43fb36385abc3307b8dc1c608f6bf1eda6aa9de697fbc70bac77"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/main-server-provider.d.ts",
+   "sha256": "cba29e4957717fd25b98f7132964d97b73acac6ca8e1d1a1c9b5a7a48159132c"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/sf-mcp-server.js",
+   "sha256": "45aa763a8a1e65f870bdcf7b7bd4278c4a1c1341f8c7c3d36216265b5670132e"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/guessCI.js",
+   "sha256": "e4bf82d62cd3f63b10bb081ad1cbda1f5ef0465fb08315e91b8155b64e6cf64d"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/services.js",
+   "sha256": "7b1e917ade03ce64c3b2b0b3fec13d26923b8d2f5d9cefd40363952dcdfdc260"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/index.js",
+   "sha256": "28d45b04fcf2dd4216f8137d593294d616e4416465830219390a118919481a37"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/main-server-provider.js",
+   "sha256": "018c2b563dfbae2fe0da21c8a3235ffe1e002bbe381bb90e00e46a24786b1bbe"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/guessCI.d.ts",
+   "sha256": "41585a31a4c9e2475231424a348a9a81a5eb6af7b2aad90b88cfc508557cf722"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/sf-mcp-server.d.ts",
+   "sha256": "6403aa2b6ffd3e056f1e096fd7a0a7361d23a72603b4ec417b9a8cefd0e54e6e"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/telemetry.d.ts",
+   "sha256": "9987a4c0ea399be326e58c550a3c07246989456ef600be2f490482890f6a9821"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/index.d.ts",
+   "sha256": "39060929ccf88aee0f9c44354282026e56c9ad47c50ab54d0716920279405e40"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/tools/enable_tools.js",
+   "sha256": "723ac78be68c4d0d51624d47e0c9a961d1636e66d939512c74d1c666bc151d60"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/tools/list_tools.d.ts",
+   "sha256": "58e6c46800e197fbfc76a09a2b8e3b5b36ab8ad9b9ac7b36eee1385d62d904a2"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/tools/enable_tools.d.ts",
+   "sha256": "2a0f61ff9370f0720998af30188717f88aefb72f5def4b29cb8d0b2908f09bba"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/tools/list_tools.js",
+   "sha256": "b17dec11af3d25e840e151ca1f53a9990840b2ab48e046d0311e358da0195d01"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/utils/registry-utils.d.ts",
+   "sha256": "c7693bbb94732f2106a6b41f8d9669f4a90cbbc18e4d1ded27dbdbfa74515d70"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/utils/tools.js",
+   "sha256": "40c4f3db0ef44725e7e706bf7010a144f5e11f76b6af2301b7fd42fd12e4ee28"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/utils/rate-limiter.d.ts",
+   "sha256": "3a05740eabf0b4ede2a656f72ac61a9db18af8e89bef8a654c5ee2abd49408cf"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/utils/types.js",
+   "sha256": "516265d5d02c1331240c6bfc79163254b01e50412edf01471041fcdc467f30a6"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/utils/rate-limiter.js",
+   "sha256": "d8f787d4fae92d69534cb46b8748feb5cf7bea6d512adf7d048260fd31bc184b"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/utils/cache.js",
+   "sha256": "5f63ab03db3f0315f223eec602324d02b5d61d79c9a91f383a7d1518606766d5"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/utils/types.d.ts",
+   "sha256": "c44e20092c80d9b9c8996447970d3c73bbd136ce1062feb1d85fcff8a7f61648"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/utils/tools.d.ts",
+   "sha256": "af24716db2bd3df21565ca7166e35c26f89915d036e96cec16f05fbee1147d4b"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/utils/auth.js",
+   "sha256": "1235fae9d82448119982fbb62c6ae6017155cf00f288d95822d92b68012ccc5c"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/utils/cache.d.ts",
+   "sha256": "f201e614ec5a5e834a13e2901f38edbb9a9c3857513e8c9176aa96f20a4fdfdd"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/utils/auth.d.ts",
+   "sha256": "3504619a3e1c635fd00cbdebbab4a0c71b8f80dc2b3182e2b2b166d5c36876a3"
+  },
+  {
+   "path": "npm/x/salesforce-mcp-0.30.15/package/lib/utils/registry-utils.js",
+   "sha256": "55df6aa73f1d0f0aadcd779a0aaa9bcda80cea2c22472f3c81dfd0db126ab1e0"
+  }
+ ],
+ "july_quote_check": [
+  {
+   "july_quote": "DO NOT USE THIS TOOL if you already know what tool you need - try to call the tool directly first.",
+   "july_channel": "tool_description:list_tools",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Once you have enabled a tool, you MUST invoke the tool to accomplish the user's original request - DO NOT USE A DIFFERENT TOOL OR THE COMMAND LINE.",
+   "july_channel": "tool_description:list_tools",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Once you have enabled the tool, you MUST invoke that tool to accomplish the user's original request - DO NOT USE A DIFFERENT TOOL OR THE COMMAND LINE.",
+   "july_channel": "tool_description:enable_tools",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Use list_tools first to learn what tools are available for enabling.",
+   "july_channel": "tool_description:enable_tools",
+   "status_now": "exact"
+  }
+ ],
+ "steering_marker_sentences_now": [
+  "'Start the server with all toolsets enabled and access only to the default org in the project',",
+  "'Allow access to the default target org and \"my-alias\" with only the \"data\" toolset',",
+  "Never pass the 'orgs' flag here.",
+  "Use list_tools first to learn what tools are available for enabling.",
+  "Once you have enabled the tool, you MUST invoke that tool to accomplish the user's original request - DO NOT USE A DIFFERENT TOOL OR THE COMMAND LINE.`,",
+  "DO NOT USE THIS TOOL if you already know what tool you need - try to call the tool directly first.",
+  "ONLY use this tool if:",
+  "Once you have enabled a tool, you MUST invoke the tool to accomplish the user's original request - DO NOT USE A DIFFERENT TOOL OR THE COMMAND LINE."
+ ]
+}

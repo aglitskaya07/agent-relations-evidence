@@ -1,0 +1,270 @@
+{
+ "unit_source": "heroku/heroku-mcp-server",
+ "capture_utc": "2026-10-06T09:53:43.837770+00:00",
+ "method": "static source read (no code executed)",
+ "auth": "none",
+ "server_info": {
+  "repo": "heroku/heroku-mcp-server",
+  "commit": "26fe3ce9d857fbec271d04507e35b1067cb6c598 2026-10-02T12:23:04-06:00"
+ },
+ "source_files_count": 50,
+ "source_files": [
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/index.ts",
+   "sha256": "455db9b93171f80e90ef7782ae81271d4916c90b2dd3c472a02149bc6286af46"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/maintenance.spec.ts",
+   "sha256": "8201d582bc100e8be21296f323dd8cb74654a49fa660c93e7cc0d0c0553486c5"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/data.ts",
+   "sha256": "f14fc7e8bfe2bf81c0c76942a06608e88dcc55cd021097d2c20f4a6c4a81b80a"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/pipelines.ts",
+   "sha256": "75d4e86de04647a78b68367d0003cddf30e8ef0fa59788a717bfdbbdb77f3b31"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/teams.spec.ts",
+   "sha256": "4fe836ca63c0cd69bdb8e2fdd6b022bc578db0625a5e3f14217b26025a13c87e"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/ps.ts",
+   "sha256": "56477a8e93fd88b02d506d4f76f7828af35fc1b316223b3735c0a6a168aee5e5"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/data.spec.ts",
+   "sha256": "89e9e6be30fcf6059177f409e821e77a9bc20c35cbc9f54703937bc3cc365f01"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/deploy-to-heroku.spec.ts",
+   "sha256": "d2a1ba99cf8910c5c185c10e3c0c29fe9ae9ec1712e4ede22a9574afef518ae9"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/logs.ts",
+   "sha256": "b707dbf674994c4b98d9ec560f4c3084481909cc4a4ee2743bd4d0183faac939"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/logs.spec.ts",
+   "sha256": "b83f06898fbcbdbd7e4f8884bf85005908099d495333217ced24b753e1eb879d"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/addons.spec.ts",
+   "sha256": "80930cfc28b5fc10a1df24f77a4b0f7cc0a2cb7ed6178586d1b69919495826df"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/apps.ts",
+   "sha256": "7ae99b9a71664cd3707ec45b6734deb3b95ff39f903f82245cfc253a0a7de8a3"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/apps.spec.ts",
+   "sha256": "1c2a0ae8ea552095bdc70eb2083994c1737b2909245b60408084712b5a18f6d4"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/spaces.ts",
+   "sha256": "29f4bdb8c3b97ca0c33680d2627cbd880f341865fe157856b72ca7bae51eec6f"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/deploy-to-heroku.ts",
+   "sha256": "2d5c08de8dd267cb91c175ca3620dbf36d972792c35eb7609376292d38d90a5a"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/teams.ts",
+   "sha256": "fc27534d9e0ec124d6313142a505ca05305653b54e1b38002a4f5f59a31bd48a"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/ai.ts",
+   "sha256": "4c4e0ea2ec0ea50ce61e772696a40fb398efa4a5e30e57991773d1429908dc7d"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/ps.spec.ts",
+   "sha256": "fde5a7aaadfa6ac4aed42e83b10a817f9fed38a52347e8b7ab505fa1e2a319da"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/maintenance.ts",
+   "sha256": "988da3bacc6a4dbafa7061c2ddbc475f1829c316f5f21f45c1042a891aa61a7d"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/spaces.spec.ts",
+   "sha256": "d37a017c9efc1ee7a03da132fab76d20307a29ecbcae041703037c24305281fd"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/addons.ts",
+   "sha256": "7c22a87a3de6c89f1a269b63fcd665b26fa1bbed3d6fbf878067423d31fee946"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/pipelines.spec.ts",
+   "sha256": "56ef728e86197adb54cfed07c9f77f7e28c84480cedf5f1901883099e4d80136"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/tools/ai.spec.ts",
+   "sha256": "2e3548a6d2d75404b1ec758b072e4bd07911bd07445801119f8ac8c3868b4d1a"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/resources/dev-center-resource.spec.ts",
+   "sha256": "9c22b4d7baba8b36b3f2b0e157ef5075c2469d3b8e8af2e4af1e938b606f71d3"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/resources/dev-center-resource.ts",
+   "sha256": "aa55d5a8b75e5974890ab3a78938ae5f3ee2e97075b0f3264346400941e89dbb"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/repl/heroku-cli-repl.ts",
+   "sha256": "b118a94090709dc70d861fd4c2609488d66024b4197ff7b9ddfda13c24264726"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/repl/heroku-cli-repl.spec.ts",
+   "sha256": "3fc65a2bbdaa93c757ba30a1f564f427eb29b61bb1811b6c29a8d25e37b3fcda"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/utils/mcp-tool-response.ts",
+   "sha256": "12aa6a9468055ed6990d37f56c02a825a755e03ba0723f4f784348276043a045"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/utils/mcp-tool-mocks.spechelper.ts",
+   "sha256": "c4247f07d03048e56e766669865b736333e5debe205e01feabcd88f4e035230e"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/utils/mcp-tool-mocks.spec.ts",
+   "sha256": "17232c756ee6bd8c4b027bc3db7b3ae79db9c982818cb97e5ce39c9a05f9316e"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/utils/tarball.ts",
+   "sha256": "26c50cb912b110ddeeea7e808e25e9f563f4bab5948cf7359a898f3702ed475b"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/utils/handle-cli-output.ts",
+   "sha256": "d33ca1acba69121f8f76b1ad4d3cf442add736c11c006e4d14baafac5f8556a3"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/utils/command-builder.ts",
+   "sha256": "424f0889aa502defd715d9ad301e9dc672a86a4eab107b523c0e831ca4f2ccac"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/utils/plugin-detector.ts",
+   "sha256": "ca76a765cb3de8237de33380baa6f6187aaccdcb2f1d1bf7423cdab7d77b6fa3"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/utils/handle-cli-output.spec.ts",
+   "sha256": "705c34ad2a04f97bf5f08565df51ed57e38fe2978484913300405be9d9bbba3c"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/utils/agent-request.schema.json",
+   "sha256": "673caf71930fe88bb7947dfc7f0126d06e0754b36c13b98fe294a79387e0733b"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/utils/read-app-json.ts",
+   "sha256": "44eecae5fe339049df51cf1de234e9d99f07aac63f4aff067e7007e54417e72c"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/utils/generate-request-init.ts",
+   "sha256": "78342080c7d5d7e7b15f59628194f9a27eabe110e388a793505832068a96315e"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/utils/read-app-json.spec.ts",
+   "sha256": "ca9cc88b1623ecd7d75c5c64d8ef193c952d270480ad515ce4eca8d2e493726a"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/utils/tool-commands.ts",
+   "sha256": "ddcef658a740c2bac3e3c8508ba06caf97d3f67e3fb670bd1009f9a3c677dfef"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/utils/plugin-detector.spec.ts",
+   "sha256": "3e8d046847f996d98854441d8be2be69d12a877a4aaeffae307d0b29b0ed62e0"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/utils/app-json.schema.json",
+   "sha256": "ed4dc12342c2e1083f07db9104345837bd6141c610e6a65698932832e177ecd1"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/utils/tarball.spec.ts",
+   "sha256": "8a94aa55961f95de120ff0d517146d6a45797af74d382591a2296d871e0ab5d4"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/utils/command-builder.spec.ts",
+   "sha256": "44afde7229981cb6f49e4380fbc4d44e048a003f81f30be4aa8f27268f677698"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/services/dyno-service.ts",
+   "sha256": "7774c2212b95c60ed3f428549165bf6957f953166601942201c58293f3370933"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/services/app-setup-service.ts",
+   "sha256": "62b70c57f277d66a2e10fa5e3e7be4bbfc6eec271dd7e96924dfbc62c7c83592"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/services/app-service.ts",
+   "sha256": "da1430c0a15a40beb41b57dc97938dd5ef2939b26bbaf18d25d3e50bea3c27fa"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/services/build-service.ts",
+   "sha256": "a1d60b866533af052c16fa5fb1b9f6911d2a55523be76f323d3c211f9ab0d969"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/services/source-service.ts",
+   "sha256": "237016d21505f8098db06a2c3b3013fb056c639ef3332e5a1bef4606388c5cdd"
+  },
+  {
+   "path": "gh/heroku_heroku-mcp-server/src/services/rendezvous.ts",
+   "sha256": "ea2e7bb6c97ebd7b1e0d4c614158fb25a0bf3e9126305b44f12a9bb5605bdb9d"
+  }
+ ],
+ "july_quote_check": [
+  {
+   "july_quote": "- Use app_info for buildpack detection",
+   "july_channel": "tool_description:deploy_one_off_dyno",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Ask for app name if missing. Requires valid app.json via appJson param.",
+   "july_channel": "tool_description:deploy_to_heroku",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Prefer native modules",
+   "july_channel": "tool_description:deploy_one_off_dyno",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Use app_info for buildpack detection",
+   "july_channel": "tool_description:deploy_one_off_dyno",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Use for all deployments. Deploys new/existing apps, with or without teams/spaces, and env vars to Heroku.",
+   "july_channel": "tool_description:deploy_to_heroku",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Use for: viewing teams, checking membership, getting team metadata, and verifying access.",
+   "july_channel": "tool_description:list_teams",
+   "status_now": "exact"
+  }
+ ],
+ "steering_marker_sentences_now": [
+  "'dynoService.create must not run when relativePath is not a safe virtual path'",
+  "it('should create a one-off dyno when sources use only safe virtual paths', async function () {",
+  "it('executes command successfully with app name only', async () => {",
+  "test-app-primary-db is being created in the background.",
+  "'test-app-primary-db'",
+  "'test-app-primary-db',",
+  "z.boolean().optional().describe('List personal account apps only, ignoring default team'),",
+  "a multi-line value routed through a real tool handler must be",
+  "use a relative virtual path with only letters, digits, `.`, `_`, `-`, and `/` between segments; no `..`, no leading `/`, and no shell metacharacters.'",
+  "Must follow schema:",
+  "relative virtual path must use only letters, digits, `.`, `_`, `-`, and `/` between segments; no `..`, no leading `/`, and no shell metacharacters.'",
+  "- Prefer native modules",
+  "Must have write access.",
+  "Must be unique in app'),",
+  "Must be unique across all Heroku add-ons'),",
+  "Commands are sent one per line to the Heroku CLI, so a value must be contained on a single line.`",
+  "Only values are used in the final command.",
+  "<<<ERROR>>>First line",
+  "This file must be in the",
+  "it('quotes flag values that contain spaces (only line breaks are rejected)', () => {",
+  "it('handles commands with only flags', () => {",
+  "it('handles commands with only positional arguments', () => {",
+  "it('can never emit a command containing carriage returns or line feeds', () => {"
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "url": "https://aient.ai/mcp",
+ "capture_utc": "2026-07-29T12:05:48.511494+00:00",
+ "client_info": {
+  "name": "mcp-ethics-audit",
+  "version": "1.0"
+ },
+ "protocol_version": "2025-06-18",
+ "auth": "none (keyless public surface)",
+ "steps": [
+  {
+   "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "initialize",
+    "params": {
+     "protocolVersion": "2025-06-18",
+     "capabilities": {},
+     "clientInfo": {
+      "name": "mcp-ethics-audit",
+      "version": "1.0"
+     }
+    }
+   },
+   "status": 401,
+   "headers": {
+    "cache-control": "public, max-age=0, must-revalidate",
+    "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://avatars.githubusercontent.com https://*.supabase.co https://cdn.aient.ai https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com; font-src 'self'; connect-src 'self' ws: wss: https://*.supabase.co https://api.stripe.com https://r.stripe.com https://hooks.stripe.com https://aient.ai https://ingest.aient.ai https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; frame-src 'self' https://js.stripe.com https://hooks.stripe.com",
+    "content-type": "application/json",
+    "date": "Wed, 29 Jul 2026 12:05:49 GMT",
+    "permissions-policy": "geolocation=(), microphone=(), camera=()",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "server": "Vercel",
+    "strict-transport-security": "max-age=63072000",
+    "www-authenticate": "Bearer error=\"invalid_token\", error_description=\"No authorization provided\", resource_metadata=\"https://aient.ai/.well-known/oauth-protected-resource\"",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-matched-path": "/mcp",
+    "x-vercel-cache": "MISS",
+    "x-vercel-id": "cdg1::arn1::zw4cx-1785326748702-b4127095f6af"
+   },
+   "body_raw": "{\"error\":\"invalid_token\",\"error_description\":\"No authorization provided\"}"
+  }
+ ]
+}

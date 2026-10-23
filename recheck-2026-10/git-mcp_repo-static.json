@@ -1,0 +1,274 @@
+{
+ "unit_source": "idosal/git-mcp",
+ "capture_utc": "2026-10-06T09:53:48.676763+00:00",
+ "method": "static source read (no code executed)",
+ "auth": "none",
+ "server_info": {
+  "repo": "idosal/git-mcp",
+  "commit": "c487a29895dcfcb5b672247e646426a56e2051c1 2026-05-08T17:21:22+03:00"
+ },
+ "source_files_count": 32,
+ "source_files": [
+  {
+   "path": "gh/idosal_git-mcp/src/utils.ts",
+   "sha256": "273622aebd31aacfc360b106ac9cc78185beb4d051412c0bfd12be9c33a7b04f"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/index.ts",
+   "sha256": "6368ae7a9d3c27227aae891a9c6dad157e1b8b8f1aac08cdc844f09565be0e65"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/test/badge.test.ts",
+   "sha256": "e6fab0e17ff00fbbeeefba6b525f20e4674a44b087db5534d934d4ad9c5b949f"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/shared/urlUtils.ts",
+   "sha256": "575f01e3e2802d62197bb47609ba66f0cb317e591a3af8756d174f0d1792f6d3"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/shared/repoData.test.ts",
+   "sha256": "3527908e7734d843304a550bd58b6e59c06236a648ce74aec9b95adb033b9d23"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/shared/repoData.ts",
+   "sha256": "b385d6f2ef68138f719a2228e3d17f92c746b0b0f9485e2a3ce7396d99a7f4a7"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/shared/nameUtils.ts",
+   "sha256": "b988f26c23d36443e5312e7d48d0f0ec66307196d0234274dfc39cdbb60b176a"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/test-setup.ts",
+   "sha256": "40369635092dc4ac06df5c3b7d6dbc69278846bc784cda1d8bbd2c2810ae3032"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/tools/commonTools.test.ts",
+   "sha256": "912c3743d5204446bf77513b4ef98328b10413cff828416ebd702ac97c14156e"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/tools/index.test.ts",
+   "sha256": "1518a0def8b12ed49581514d998a2012edfe24f7cce67414f9d59a37f1801f8a"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/tools/commonTools.ts",
+   "sha256": "7bfb3123795c612b8c06b55917222acf22460e01d9e1ebdc583ee7016bd33126"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/tools/index.ts",
+   "sha256": "d93eb785090f867074684bbff31981075408ec1b72d7d0b84d3454257c2f3a4b"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/tools/repoHandlers/handlers.test.ts",
+   "sha256": "8613c0d231181e7bdd6274fb5e0163c53c4e293ec79f315e43e6713a415d3124"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/tools/repoHandlers/handlers.ts",
+   "sha256": "50fe85ec38668969f1ae203a39aec914aac76208c01f76553a5234cd1b8541a9"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/tools/repoHandlers/DefaultRepoHandler.ts",
+   "sha256": "a22de59434cffd88a7f49a8ee8861496dfb981eb3c169b6b2d25377634467ead"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/tools/repoHandlers/RepoHandler.ts",
+   "sha256": "53fa1a9c59c014a10e2ab5286b90c0cb2b23d966e6c54b9832ba9e384e5aa8d9"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/tools/repoHandlers/GenericRepoHandler.ts",
+   "sha256": "af49295ba4c1708ddfb56ef0b4cee8fa7cb233f0f23ec7e176f46cdebf9c90c7"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/tools/repoHandlers/ThreejsRepoHandler.ts",
+   "sha256": "372fefec1767cd70b81f63c15b8eef5645dfe94659906cf2326e2a751637297d"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/tools/repoHandlers/ReactRouterRepoHandler.ts",
+   "sha256": "4f63c5051bfda4c671add602ea16c25d21dbbc80cb1305a35ed9b62f3354f5ce"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/tools/repoHandlers/test/utils.ts",
+   "sha256": "93ecbe32de7fdb7dd1fb361e1b29c38e0a5c61d7cff542dee0e87ea60e17d496"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/tools/repoHandlers/generic/static-mapping.json",
+   "sha256": "fdd8568ce7101c85ca32e8e7979458ddfe55e14ba51466fe5bfbca92028a78ab"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/tools/repoHandlers/generic/generic.test.ts",
+   "sha256": "76461cb93bc8a547338ad4cde82fd6e281b1ba5f28b94224cef6b558f34c866a"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/tools/repoHandlers/threejs/utils.test.ts",
+   "sha256": "2ae92450dbb1abf74b27d63024e674107362dcaa99d681dcca475e8285d495bf"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/tools/repoHandlers/threejs/utils.ts",
+   "sha256": "c04228fdffaca045d640266972815cec4fc38fc3382ba6558aaaf9b9b39322a2"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/utils/helpers.ts",
+   "sha256": "6b7fe4fc5b2c0e542ae54bb0d6cc261dd174726a62079b0b06625747a2aeaf56"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/utils/r2.ts",
+   "sha256": "2f184dd214347bdaaa9925a2d0a8f20959190b49f0d80a1a2edd9d66beae9b8c"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/utils/github.ts",
+   "sha256": "7f1c336377b06858c08cbac8e4f2239f047b5da4b1386e9d8a19f8ac0e3327f7"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/utils/githubClient.ts",
+   "sha256": "660715a0efbf1622ed09c7dbbe05c0c26efada07f0bbbf5919d06b9c8e8570e1"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/utils/badge.ts",
+   "sha256": "a807d9007f79301021dbc208d7c1e867274300b5aede9bcfd215f7910235e5b0"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/utils/vectorStore.ts",
+   "sha256": "22ffa9d549b089c15743461975e9a50af262ec33cd6291116c7ff92702194b24"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/utils/cache.ts",
+   "sha256": "897443c8a0363fdda49c01422f64f49aab990ea1af8b075c0cb94dda114ff032"
+  },
+  {
+   "path": "gh/idosal_git-mcp/src/api/utils/robotsTxt.ts",
+   "sha256": "192445ffeab71987153b1e7d599f8e87586a77829ae06aab0aa152d8fa007c18"
+  }
+ ],
+ "july_quote_check": [
+  {
+   "july_quote": "Don't use it if you have an owner and repo already. Use this first if only a library name was provided.",
+   "july_channel": "tool_description:match_common_libs_owner_repo_mapping",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Don't use it if you have an owner and repo already. Use this first if only a library name was provided. If found - you can use owner and repo to call other tools.",
+   "july_channel": "tool_description:match_common_libs_owner_repo_mapping",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Fetch entire documentation file from GitHub repository: ${owner}/${repo}. Useful for general questions. Always call this tool first if asked about ${owner}/${repo}.",
+   "july_channel": "tool_description:fetch_<repo>_documentation",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Fetch entire documentation file from the ${owner}/${repo} GitHub Pages. Useful for general questions. Always call this tool first if asked about ${owner}/${repo}.",
+   "july_channel": "tool_description:fetch_<repo>_documentation",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Generic tool to fetch content from any absolute URL, respecting robots.txt rules.",
+   "july_channel": "tool_description:fetch_generic_url_content",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Get the reference docs list. This should be the first step.",
+   "july_channel": "tool_description:get_threejs_reference_docs_list",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Get the reference docs list. This should be the first step. It will return a list of all the reference docs and manuals and their corresponding urls.",
+   "july_channel": "tool_description:get_threejs_reference_docs_list",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Semantically search the repository documentation for the given query. Use this if you need to find information you don't have in the reference docs.",
+   "july_channel": "tool_description:search_threejs_documentation",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Semantically search within the fetched documentation from GitHub repository: ${owner}/${repo}. Useful for specific queries.",
+   "july_channel": "tool_description:search_<repo>_documentation",
+   "status_now": "exact"
+  },
+  {
+   "july_quote": "Useful for general questions. Always call this tool first if asked about ${owner}/${repo}.",
+   "july_channel": "tool_description:fetch_<repo>_documentation",
+   "status_now": "exact"
+  }
+ ],
+ "steering_marker_sentences_now": [
+  "class=\"text-xl font-heading font-bold text-primary hover:text-primary/80 transition-colors\"",
+  "class=\"w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary\"",
+  "class=\"w-full py-3 px-4 bg-primary text-white rounded-md font-medium hover:bg-primary/90 transition-colors\"",
+  "class=\"inline-block py-2 px-4 bg-primary text-white rounded-md font-medium hover:bg-primary/90 transition-colors\"",
+  "import { generateBadgeResponse } from \"./api/utils/badge\";",
+  "if (pathname.startsWith(\"/badge/\")) {",
+  "if (parts.length >= 3 && parts[0] === \"badge\") {",
+  "Always call this tool first if asked about myorg/myrepo.\",",
+  "Use this first if only a library name was provided.",
+  "This should be the first step.",
+  "As a last resort, change repo name to \"repo\"",
+  "Always call this tool first if asked about ${owner}/${repo}.`;",
+  "it(\"should not return the generic handler urls that only look generic \", () => {",
+  "`Please use the ${GET_REFERENCE_DOCS_LIST_TOOL_NAME} tool first to get the list of reference docs and manuals, and then use the ${GET_SPECIFIC_DOCS_CONTENT_TOOL_NAME} tool to get the content of the specific docs or manuals.`,",
+  "\"Access to Anthropic's safety-first language model APIs via Go\",",
+  "\"Access to Anthropic's safety-first language model APIs\",",
+  "\"Seamless multi-primary syncing database with an intuitive HTTP/JSON API, designed for reliability\",",
+  "Focus on essential business logic instead of coding repeatable features!\",",
+  "\"[READ-ONLY] Official Appwrite Node.js SDK 🟢\",",
+  "\"[READ ONLY] Official Appwrite React Native SDK 💙 ⚛︎\",",
+  "\"arklexai/agent-first-organization\",",
+  "\"https://github.com/arklexai/agent-first-organization\",",
+  "\"agent-first-organization\"",
+  "Its primary goal is to allow developers to focus on what is being tested rather than how to setup the test scenario, by making it easier to create object graphs containing test data.\",",
+  "Instead of API.\",",
+  "The first and the best multi-agent framework.",
+  "\"🌄 The Cloud Native Interactive Landscape filters and sorts hundreds of projects and products, and shows details including GitHub stars, funding, first and last commits, contributor counts and headquarters location.\",",
+  "\"React components and TypeScript utilities to help you build top-tier onchain apps.\",",
+  "\"TypeScript-first schema validation with static type inference\",",
+  "This is a read-only mirror of the CRAN R package repository.",
+  "\"EmailJS helps sending emails using client side technologies only.",
+  "First AI Software Company, Towards Natural Language Programming\",",
+  "\"Library for built-in auth\",",
+  "\"Read-only mirror of https://gitlab.gnome.org/GNOME/gtk\",",
+  "\"An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.\",",
+  "\"A shareable Prettier configuration by Harshal Katakiya, with built-in support for Tailwind CSS and a simple CLI setup command for your projects.\",",
+  "\"Pothos GraphQL is library for creating GraphQL schemas in typescript using a strongly typed code first approach\",",
+  "\"🦄 Tailwindcss first-class variant API\",",
+  "\"A suite of libraries for making game development with Three.js and React not only awesome, but so good, it would feel wrong to use anything else.\",",
+  "\"Preline UI is an open-source set of prebuilt UI components based on the utility-first Tailwind CSS framework.\",",
+  "\"Clean PyTorch implementations of imitation and reward learning algorithms\",",
+  "Designed to work instead of or with Celery.\",",
+  "\"Install Kubernetes/K3s only, both Kubernetes/K3s and KubeSphere, and related cloud-native add-ons, it supports all-in-one, multi-node, and HA 🔥 ⎈ 🐳\",",
+  "\"Visualize, collaborate, and evolve the software architecture with always actual and live diagrams from your code\",",
+  "\"Never get surprised by a logging bill again.",
+  "\"Prior to making any Submission(s), you must sign an Adobe Contributor License Agreement, available here at:",
+  "Create web servers with everything you need and deploy them wherever you prefer.\",",
+  "\"React Native utility-first universal design system - powered by Tailwind CSS\",",
+  "\"🌋 React-first components GUI\",",
+  "\"Polkadot-API is a meticulously crafted suite of libraries, each designed to be composable, modular, and aligned with a \\\"light-client first\\\" philosophy.\",",
+  "\"SDK that enables local-first and real-time reactive apps with embedded SQLite for Flutter/Dart clients\",",
+  "Sveltos has built-in support for multi-tenancy.\",",
+  "\"A fast, local first, reactive Database for JavaScript Applications https://rxdb.info/\",",
+  "\"The first real AI developer\",",
+  "\"A modular, primitive-first, python-first PyTorch library for Reinforcement Learning.\",",
+  "\"State propagation and event streams with mandatory ownership and no glitches\",",
+  "\"React Native VoIP Push Notification - Currently iOS only\",",
+  "Combines graph relationships and vector search for enhanced document retrieval, with built-in MCP integration for AI assistant platforms.\",",
+  "\"Source only package that exposes newer .net and C# features to older runtimes.\",",
+  "\"A privacy-first, self-hosted, fully open source personal knowledge management software, written in typescript and golang.\",",
+  "Good first issue.\",",
+  "\"A utility-first CSS framework for rapid UI development.\",",
+  "\"🤖 Fully typesafe Router for React (and friends) w/ built-in caching, 1st class search-param APIs, client-side cache integration and isomorphic rendering.\",",
+  "\"A fully configured FastAPI microservice template with built-in code quality tools, CI/CD, and Docker support.",
+  "\"The financial transactions database designed for mission critical safety and performance.\",",
+  "\"The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.\",",
+  "\" 💾 Unstorage provides an async Key-Value storage API with conventional features like multi driver mounting, watching and working with metadata, dozens of built-in drivers and a tiny core.\",",
+  "\"The only reliable agent framework built on top of the latest OpenAI Assistants API.\",",
+  "\"A C++ header-only HTTP/HTTPS server and client library\",",
+  "\"YugabyteDB - the cloud native distributed SQL database for mission-critical applications.\",",
+  "\"Primary Git Repository for the Zephyr Project.",
+  "[url, repoContext, responseBody.substring(0, 100)], // First 100 chars of error message",
+  "/!\\[.*\\]\\(.*badge.*\\)/.test(line) ||",
+  "(line.includes(\"badge\") || line.includes(\"shield\"))) ||",
+  "(line.includes(\"badge\") || line.includes(\"shield\")))",
+  "/\\]\\(https?:\\/\\/[^)]*badge[^)]*\\)/i.test(text) &&",
+  "namespace, // Use namespace instead of filter",
+  "Date.now() - VECTOR_TTL }, // Only keep recent vectors",
+  "applicableRules = rules[0]; // Use the first rule as default"
+ ]
+}
