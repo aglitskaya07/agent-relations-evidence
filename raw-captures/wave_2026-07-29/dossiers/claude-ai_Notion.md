@@ -1,11 +1,11 @@
-# UNIT: claude-ai:Notion | коннектор claude.ai | captured 2026-07-29 (session ToolSearch)
+# UNIT: claude-ai:Notion | коннектор claude.ai | captured 2026-07-29 (connector tool list)
 
 ## CHANNEL: instructions
-(не доставлены в системный промпт сессии 2026-07-29)
+(коннектор не передает блок инструкций, 2026-07-29)
 
 ## CHANNEL: tool descriptions, connector (20 tools, via ToolSearch)
 
-Примечание экстрактора: описания приведены дословно в том виде, в каком доставлены ToolSearch в сессию; у 10 инструментов описание обрезано самим харнессом на маркере «… [truncated]» — обрезка отмечена в тексте.
+Примечание экстрактора: описания приведены дословно в том виде, в каком их получает агент; у 10 инструментов описание обрезано самим харнессом на маркере «… [truncated]» — обрезка отмечена в тексте.
 
 ### tool: notion-create-attachment
 Create an attachment and upload it to Notion.

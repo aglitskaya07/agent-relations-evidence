@@ -1,6 +1,6 @@
-# UNIT: claude-ai:Figma | коннектор claude.ai | captured 2026-07-29 (session copy + ToolSearch)
+# UNIT: claude-ai:Figma | коннектор claude.ai | captured 2026-07-29 (connector instructions + tool list)
 
-## CHANNEL: instructions, connector (сессионная копия, обрезана харнесом ~2KB; маркер [truncated] — от харнеса)
+## CHANNEL: instructions, connector (копия блока, полученного агентом; обрезан клиентом на ~2KB, маркер [truncated] — от клиента)
 
 The official Figma MCP server. Use this server whenever the user wants to create, generate, edit, implement, or sync any design, UI, screen, component, mockup, or visual — in Figma, FigJam, Figma Make, or Figma Slides — and whenever the user mentions Figma or provides a figma.com URL.
 

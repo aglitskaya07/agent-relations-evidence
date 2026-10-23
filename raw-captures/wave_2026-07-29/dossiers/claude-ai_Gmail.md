@@ -1,7 +1,7 @@
-# UNIT: claude-ai:Gmail | коннектор claude.ai | captured 2026-07-29 (session ToolSearch)
+# UNIT: claude-ai:Gmail | коннектор claude.ai | captured 2026-07-29 (connector tool list)
 
 ## CHANNEL: instructions
-(не доставлены в системный промпт сессии 2026-07-29)
+(коннектор не передает блок инструкций, 2026-07-29)
 
 ## CHANNEL: tool descriptions, connector (16 tools, via ToolSearch)
 
