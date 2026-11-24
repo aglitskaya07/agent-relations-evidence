@@ -65,4 +65,4 @@ The breakdown of the five Firecrawl sentences matched the slide prepared for the
 
 ## Running the scripts
 
-`run_jev.py` reads the API key from the `TYPESAFE_API_KEY` environment variable. Its paths point to the layout of this pack: datasets in [`../data/`](../data/), dossiers in [`../raw-captures/`](../raw-captures/); outputs are written next to the scripts. `compare.py full` runs on the files already in this folder and reproduces `compare_full.json`. Researcher annotations in the outputs are machine-translated into English; nothing else in the outputs was changed.
+`run_jev.py` reads the API key from the `TYPESAFE_API_KEY` environment variable. Its paths point to the layout of this pack: datasets in [`../data/`](../data/), dossiers in [`../raw-captures/`](../raw-captures/); outputs are written next to the scripts. `compare.py full` runs on the files already in this folder and reproduces `compare_full.json`.

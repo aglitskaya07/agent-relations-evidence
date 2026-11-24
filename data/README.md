@@ -45,7 +45,7 @@ Not every file has every field; the pilot was labeled before the main protocol w
 | `verdicts` | Each rater's group plus the techniques found, each with a verbatim `quote` and the `channel` it came from (`instructions` or `tool_description:<tool>`). |
 | `skeptic` | The skeptic's pass on hard findings: per technique `confirmed` or not, a reason, and an `uphold` / `downgrade` recommendation. |
 
-**Language.** Quotes from servers are verbatim. The raters' and skeptic's own annotations (technique names, reasons, notes) are machine-translated into English. The codebook explains every technique: `../codebook/codebook-v1.0.md`.
+Quotes from servers are verbatim. The codebook explains every technique: `../codebook/codebook-v1.0.md`.
 
 Raters and skeptics were language models. See the main README for limitations.
 
