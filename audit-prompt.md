@@ -54,7 +54,7 @@ Keep quotes in the original language.
 ## What helps
 
 1. **Keep on only what you use.** A disconnected server doesn't promote itself and doesn't take up context.
-2. **Write your own skill for every MCP you use a lot.** In its own tests the Firecrawl team found a companion skill the strongest channel for routing the agent (25 of 25 runs on Claude Code, see [`firecrawl-case/`](firecrawl-case/)). A skill you write yourself puts that channel on your side: it decides when the connector is used and how. Example: [apify-actor-scout](https://github.com/aglitskaya07/apify-actor-scout), which picks an Apify Actor and quotes the cost before anything runs.
+2. **Write your own skill for every MCP you use a lot.** In its own tests the Firecrawl team found that a companion skill routes the agent as reliably as anything else they tried (25 of 25 runs on Claude Code, see [`firecrawl-case/`](firecrawl-case/)). A skill you write yourself puts that channel on your side: it decides when the connector is used and how. Example: [apify-actor-scout](https://github.com/aglitskaya07/apify-actor-scout), which picks an Apify Actor and quotes the cost before anything runs.
 3. **Set your own tool priorities in your instructions** (claude.ai profile, project instructions, CLAUDE.md), plus one line about servers that claim priority:
    ```
    For web search: first <tool>, then <tool>, built-in search as fallback.
