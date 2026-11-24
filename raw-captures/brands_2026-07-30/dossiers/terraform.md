@@ -1,12 +1,12 @@
-# UNIT: terraform | HashiCorp Terraform | github hashicorp/terraform-mcp-server | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: terraform | HashiCorp Terraform | github hashicorp/terraform-mcp-server | author type: official | captured 2026-07-29 (static source)
 
 ## SERVER CHECK
 
-Это MCP-сервер. Go, mark3labs/mcp-go. Конструктор: `server.NewMCPServer("terraform-mcp-server", version, opts...)` в `cmd/terraform-mcp-server/main.go:179`, инструкции подаются опцией `server.WithInstructions(instructions)` (main.go:172).
+This is an MCP server. Go, mark3labs/mcp-go. Constructor: `server.NewMCPServer("terraform-mcp-server", version, opts...)` in `cmd/terraform-mcp-server/main.go:179`; instructions are supplied with the `server.WithInstructions(instructions)` option (main.go:172).
 
 ## CHANNEL: instructions (4295 chars)
 
-Источник: `//go:embed instructions.md` (main.go:35-36) → `cmd/terraform-mcp-server/instructions.md`. Дословно:
+Source: `//go:embed instructions.md` (main.go:35-36) → `cmd/terraform-mcp-server/instructions.md`. Verbatim:
 
 ```
 # Terraform MCP Server Tool Hints
@@ -97,13 +97,13 @@ The Terraform MCP server provides tools for generating better Terraform code thr
 
 ## CHANNEL: tool descriptions (coverage=marker-scan+sample)
 
-Найдено 54 определений инструментов (`mcp.NewTool("<name>", mcp.WithDescription(...))`). Ниже приведены ВСЕ 54 с дословными описаниями.
+Found 54 tool definitions (`mcp.NewTool("<name>", mcp.WithDescription(...))`). Below are ALL 54 with verbatim descriptions.
 
-### Marker scan (все описания прогнаны по регексам, 1 совпадение)
+### Marker scan (all descriptions were run through regexes, 1 match)
 
-- `force_unlock_workspace` — совпадение на шаблоне предпочтения: «Force unlocks a Terraform workspace stuck in a lock. Prefer using the action_run tool with "discard" or "cancel" before force-unlocking a workspace.»
+- `force_unlock_workspace` — preference-pattern match: "Force unlocks a Terraform workspace stuck in a lock. Prefer using the action_run tool with "discard" or "cancel" before force-unlocking a workspace."
 
-### Все описания (дословно)
+### All descriptions (verbatim)
 
 #### 1. `get_latest_module_version`  
 `pkg/tools/registry/get_latest_module_version.go`

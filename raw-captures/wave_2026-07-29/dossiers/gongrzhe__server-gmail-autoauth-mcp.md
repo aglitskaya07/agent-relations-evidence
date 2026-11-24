@@ -1,15 +1,15 @@
-# UNIT: @gongrzhe/server-gmail-autoauth-mcp | npm v1.1.11 (published 2025-08-06T01:16:22.211Z) | рамки: npm-top,smithery-top20 | captured 2026-07-29 (static, tarball)
+# UNIT: @gongrzhe/server-gmail-autoauth-mcp | npm v1.1.11 (published 2025-08-06T01:16:22.211Z) | frames: npm-top,smithery-top20 | captured 2026-07-29 (static, tarball)
 
-Тип: подтверждённый MCP-сервер (stdio). `new Server({ name: "gmail", version: "1.0.0", capabilities: { tools: {} } })` в `dist/index.js:256`, транспорт `StdioServerTransport`, SDK `@modelcontextprotocol/sdk`.
+Type: confirmed MCP server (stdio). `new Server({ name: "gmail", version: "1.0.0", capabilities: { tools: {} } })` in `dist/index.js:256`, transport `StdioServerTransport`, SDK `@modelcontextprotocol/sdk`.
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Конструктор Server получает только `name`, `version`, `capabilities` — поля `instructions` нет ни в конструкторе, ни где-либо ещё в пакете (grep по `instructions` дал только импорт-нерелевантные нули; единственное вхождение — отсутствует).
+The Server constructor receives only `name`, `version`, `capabilities` — there is no `instructions` field either in the constructor or anywhere else in the package (grep for `instructions` yielded only import-irrelevant zeros; the only occurrence is absent).
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-19 инструментов, все зарегистрированы статически в одном ListTools-хендлере (`dist/index.js:264-362`). Описания дословно:
+19 tools, all registered statically in one ListTools handler (`dist/index.js:264-362`). Descriptions verbatim:
 
 | # | name | description |
 |---|------|-------------|
@@ -33,10 +33,10 @@
 | 18 | `create_filter_from_template` | Creates a filter using a pre-defined template for common scenarios |
 | 19 | `download_attachment` | Downloads an email attachment to a specified location |
 
-Маркер-скан по steering-регексам (instead of built-in, most powerful, always default, PRECEDENCE, MUST use, primary, prefer, whenever the user и т.д.): 0 совпадений. Описания короткие, нейтральные, функциональные — steering-лексики нет.
+Marker scan for steering regexes (instead of built-in, most powerful, always default, PRECEDENCE, MUST use, primary, prefer, whenever the user, etc.): 0 matches. The descriptions are short, neutral, functional — there is no steering lexicon.
 
-## NOTES (static-анализ)
-- Код НЕ минифицирован: читаемый tsc-выхлоп с комментариями, строки-описания — литералы.
-- Риск динамической сборки строк: низкий. Все descriptions — статические строковые литералы; никаких template literals / конкатенации в ListTools-хендлере.
-- Просмотрено: `package.json`, `dist/index.js` (основной, 51.8 KB, весь серверный код), grep по `dist/filter-manager.js`, `dist/label-manager.js`, `dist/utl.js`, `dist/evals/evals.js` — вспомогательные модули без регистрации инструментов. Всего 6 файлов кода + README/LICENSE.
-- Единственная точка регистрации Server — index.js:256; других Server/McpServer/FastMCP в пакете нет.
+## NOTES (static analysis)
+- Code is NOT minified: readable tsc output with comments; description strings are literals.
+- Risk of dynamic string assembly: low. All descriptions are static string literals; no template literals / concatenation in the ListTools handler.
+- Reviewed: `package.json`, `dist/index.js` (main, 51.8 KB, full server code), grep on `dist/filter-manager.js`, `dist/label-manager.js`, `dist/utl.js`, `dist/evals/evals.js` — helper modules without tool registration. Total 6 code files + README/LICENSE.
+- The only Server registration point is index.js:256; there are no other Server/McpServer/FastMCP in the package.

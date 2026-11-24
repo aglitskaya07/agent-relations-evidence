@@ -1,15 +1,15 @@
-# UNIT: exa | Exa | github exa-labs/exa-mcp-server | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: exa | Exa | github exa-labs/exa-mcp-server | author type: official | captured 2026-07-29 (static source)
 
-Это MCP-сервер. `@modelcontextprotocol/sdk` + `McpServer` в `src/stdio.ts` (stdio-транспорт), плюс HTTP/Vercel-вход `api/mcp.ts` через `createMcpHandler` из `mcp-handler`. Регистрация инструментов — `src/mcp-handler.ts` → `initializeMcpServer()`, реализация каждого инструмента — `src/tools/*.ts` через `server.tool(name, description, schema, hints, handler)`.
+This is an MCP server. `@modelcontextprotocol/sdk` + `McpServer` in `src/stdio.ts` (stdio transport), plus HTTP/Vercel entry `api/mcp.ts` via `createMcpHandler` from `mcp-handler`. Tool registration — `src/mcp-handler.ts` → `initializeMcpServer()`, implementation of each tool — `src/tools/*.ts` via `server.tool(name, description, schema, hints, handler)`.
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Конструктор `new McpServer({...})` в `src/stdio.ts:47-55` передаёт только `name: "exa-search-server"`, `title: "Exa"`, `version: "3.2.1"`, `websiteUrl`, `icons`. `createMcpHandler` в `api/mcp.ts:527-543` передаёт только `serverInfo` (те же поля). Поля `instructions` в объявлении сервера нет ни в одном из двух входов; вхождения слова `instructions` в репозитории относятся к параметру инструмента `deep_researcher_start` и типам в `src/types.ts`.
+The constructor `new McpServer({...})` in `src/stdio.ts:47-55` passes only `name: "exa-search-server"`, `title: "Exa"`, `version: "3.2.1"`, `websiteUrl`, `icons`. `createMcpHandler` in `api/mcp.ts:527-543` passes only `serverInfo` (the same fields). The `instructions` field is not in the server declaration in either of the two entry points; occurrences of the word `instructions` in the repository relate to the `deep_researcher_start` tool parameter and types in `src/types.ts`.
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Всего в реестре `src/toolRegistry.ts` 12 идентификаторов инструментов. По умолчанию `enabled: true` только у `web_search_exa` и `web_fetch_exa`; остальные включаются через `ENABLED_TOOLS`/`TOOLS`. `crawling_exa` — это тот же `registerWebFetchTool` с переименованием, описание идентично `web_fetch_exa`.
+There are 12 tool identifiers in the `src/toolRegistry.ts` registry in total. By default, only `web_search_exa` and `web_fetch_exa` have `enabled: true`; the others are enabled through `ENABLED_TOOLS`/`TOOLS`. `crawling_exa` is the same `registerWebFetchTool` with a rename, and its description is identical to `web_fetch_exa`.
 
 ### 1. web_search_exa
 (src/tools/webSearch.ts:20-31)
@@ -36,7 +36,7 @@ Returns: Search results with optional highlights, summaries, and subpage content
 ```
 
 ### 3. web_fetch_exa
-(src/tools/webFetch.ts:35-40; имя по умолчанию, `toolName` перезаписываемо)
+(src/tools/webFetch.ts:35-40; default name, `toolName` is overridable)
 ```
 Read a webpage's full content as clean markdown. Use after web_search_exa when highlights are insufficient or to read any URL.
 
@@ -45,7 +45,7 @@ Returns: Clean text content and metadata from the page(s).
 ```
 
 ### 4. crawling_exa
-(src/mcp-handler.ts:101-104 — `registerWebFetchTool(server, config, 'crawling_exa')`, описание то же, что у `web_fetch_exa`)
+(src/mcp-handler.ts:101-104 — `registerWebFetchTool(server, config, 'crawling_exa')`, the description is the same as `web_fetch_exa`)
 ```
 Read a webpage's full content as clean markdown. Use after web_search_exa when highlights are insufficient or to read any URL.
 
@@ -125,10 +125,10 @@ Important: Keep calling with the same research ID until status is 'completed'.
 Run an Exa Agent with live progress. New runs always stream. If a run outlives one call window, the tool returns its ID; call agent_run again with runId to keep waiting. Effort defaults to low.
 ```
 
-## ДОПОЛНИТЕЛЬНЫЙ КАНАЛ: prompts + skills
+## ADDITIONAL CHANNEL: prompts + skills
 
-`src/mcp-handler.ts:152-169` регистрирует prompt `web_search_help` («Get help with web search using Exa»), а при включённых agent-инструментах — prompt `agent_research_help` («Get help structuring a multi-step Exa Agent research run.»), тело которого подгружается из файла скилла (`src/utils/agentSkill.ts`, `skills/agent/SKILL.md`). Репозиторий также содержит `skills/search/SKILL.md` с набором reference-файлов и `.claude-plugin/plugin.json` — то есть часть управляющего текста доставляется не через MCP-канал instructions, а как Claude-плагин/скиллы и как prompt-контент.
+`src/mcp-handler.ts:152-169` registers the prompt `web_search_help` ("Get help with web search using Exa"), and when agent tools are enabled — the prompt `agent_research_help` ("Get help structuring a multi-step Exa Agent research run."), whose body is loaded from the skill file (`src/utils/agentSkill.ts`, `skills/agent/SKILL.md`). The repository also contains `skills/search/SKILL.md` with a set of reference files and `.claude-plugin/plugin.json` — that is, part of the control text is delivered not through the MCP `instructions` channel, but as a Claude plugin/skills and as prompt content.
 
-## Метаданные реестра (не MCP-описания, но видимы в `listToolMetadata`)
+## Registry metadata (not MCP descriptions, but visible in `listToolMetadata`)
 
-`src/toolRegistry.ts` хранит для каждого инструмента отдельную человекочитаемую пару name/description (например `web_search_exa` → "Real-time web search using Exa AI"), которая отдаётся служебным листингом инструментов, а не в `tools/list`.
+`src/toolRegistry.ts` stores for each tool a separate human-readable name/description pair (for example `web_search_exa` → "Real-time web search using Exa AI"), which is returned by the service tool listing, not in `tools/list`.

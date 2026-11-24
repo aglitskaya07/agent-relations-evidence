@@ -1,16 +1,16 @@
-# UNIT: awslabs | AWS (core) | github awslabs/mcp/src/core-mcp-server | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: awslabs | AWS (core) | github awslabs/mcp/src/core-mcp-server | author type: official | captured 2026-07-29 (static source)
 
 ## PATH MISSING
 
-Целевая директория юнита `src/core-mcp-server` в снапшоте репозитория отсутствует.
+The target directory of the unit `src/core-mcp-server` is absent in the repository snapshot.
 
-Проверено:
-- Корень снапшота существует: `scratch/brands/src/awslabs/mcp-HEAD` (есть `src/` с ~60 другими серверами: aws-api-mcp-server, cloudwatch-mcp-server, dynamodb-mcp-server и т.д.).
-- `src/core-mcp-server` — не существует (`find` возвращает ошибку "No such file or directory").
-- Грep по всему снапшоту на `core-mcp-server` даёт только упоминания: `README.md` (примеры JSON-конфигов, оставшиеся от старой версии), `docs/migration-core.md`, `.github/CODEOWNERS`, шаблоны issue, `docusaurus/sidebars.ts`, `.secrets.baseline`. Ни одного файла исходников сервера.
-- Грep по `prompt_understanding` (единственный собственный инструмент этого сервера) даёт единственное совпадение — `docs/migration-core.md`, то есть текст описания, а не код.
+Checked:
+- The snapshot root exists: `scratch/brands/src/awslabs/mcp-HEAD` (there is `src/` with ~60 other servers: aws-api-mcp-server, cloudwatch-mcp-server, dynamodb-mcp-server, etc.).
+- `src/core-mcp-server` — does not exist (`find` returns the error "No such file or directory").
+- Grep across the entire snapshot for `core-mcp-server` yields only mentions: `README.md` (JSON config examples left over from the old version), `docs/migration-core.md`, `.github/CODEOWNERS`, issue templates, `docusaurus/sidebars.ts`, `.secrets.baseline`. Not a single server source file.
+- Grep for `prompt_understanding` (the only custom tool of this server) gives a single match — `docs/migration-core.md`, that is, the description text, not code.
 
-Причина, зафиксированная в самом репозитории (`docs/migration-core.md`, дословно):
+Reason recorded in the repository itself (`docs/migration-core.md`, verbatim):
 
 > This guide helps you migrate from `awslabs.core-mcp-server` to configuring individual MCP servers directly in your client.
 
@@ -23,10 +23,10 @@
 
 > The core server's only unique tool, `prompt_understanding`, returns a static Markdown document with AWS architecture guidance. This content can be included directly in your project's CLAUDE.md, `.cursorrules`, or equivalent AI assistant configuration file instead.
 
-Дополнительно (важно для классификации, если юнит будет заменён): по описанию самого репозитория core-mcp-server был прокси/бандлером над другими MCP-серверами с единственным собственным инструментом `prompt_understanding`, то есть по типу это ближе к прокси, чем к содержательному серверу. Но исходников для статической проверки в снапшоте нет, поэтому вердикт — PATH MISSING, а не NOT-A-SERVER.
+Additional note (important for classification, if the unit is replaced): according to the repository description itself, core-mcp-server was a proxy/bundler over other MCP servers with a single in-house tool `prompt_understanding`, so by type it is closer to a proxy than to a substantive server. But there are no sources for static verification in the snapshot, so the verdict is PATH MISSING, not NOT-A-SERVER.
 
 ## CHANNEL: instructions
-(не обнаружены статически — исходников сервера нет в снапшоте)
+(not found statically — the server source is not in the snapshot)
 
 ## CHANNEL: tool descriptions (coverage=none)
-(не обнаружены статически — исходников сервера нет в снапшоте)
+(not found statically — the server source is not in the snapshot)

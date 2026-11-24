@@ -1,11 +1,11 @@
-# UNIT: claude-ai:Notion | коннектор claude.ai | captured 2026-07-29 (connector tool list)
+# UNIT: claude-ai:Notion | claude.ai connector | captured 2026-07-29 (connector tool list)
 
 ## CHANNEL: instructions
-(коннектор не передает блок инструкций, 2026-07-29)
+(the connector does not pass the instruction block, 2026-07-29)
 
 ## CHANNEL: tool descriptions, connector (20 tools, via ToolSearch)
 
-Примечание экстрактора: описания приведены дословно в том виде, в каком их получает агент; у 10 инструментов описание обрезано самим харнессом на маркере «… [truncated]» — обрезка отмечена в тексте.
+Extractor note: the descriptions are given verbatim in the form received by the agent; 10 tools have their description truncated by the harness itself at the “... [truncated]” marker — the truncation is noted in the text.
 
 ### tool: notion-create-attachment
 Create an attachment and upload it to Notion.
@@ -50,7 +50,7 @@ For content targeting, use `selection_with_ellipsis` with ~10 chars from start a
 </example>
 <example description="Reply to discussion">
 {"page_id": "uuid", "discussion_id": "discussion://pageId/blockId/discussionId",
- "markdown": "Reply with [context](https://ex… [ОБРЕЗАНО харнессом]
+ "markdown": "Reply with [context](https://ex… [TRUNCATED BY HARNESS]
 
 ### tool: notion-create-database
 Creates a new Notion database using SQL DDL syntax, or a typed database using Notion's canonical schema for tasks, projects, or skills.
@@ -78,7 +78,7 @@ Type syntax:
 <example description="Minimal">{"schema": "CREATE TABLE (\"Name\" TITLE)"}</example>
 <example description="Tasks">{"database_type": "tasks", "title": "Tasks"}</example>
 <example description="With parent and options">{"parent": {"page_id": "f336d0bc-b841-465b-8045-024475c079dd"}, "title": "Projects", "schema": "CREATE TABLE (\"Name\" TITLE, \"Budget\" NUMBER FORMAT 'dollar', \"Tags\" MULTI_SELECT('eng':blue, 'design':pink), \"Task ID\" UNIQUE_ID PREFIX 'PRJ')"}</example>
-<example description="Self-relation (two-step: create database first, then use its data source ID with update_data_source to add self-relations)">{"title": "Tasks", "schema": "CREATE TABLE (\"Name\" TITLE, \"Parent\" RELATION('ds_id', DUAL 'Children' 'children'), \"Children\" RELATION(… [ОБРЕЗАНО харнессом]
+<example description="Self-relation (two-step: create database first, then use its data source ID with update_data_source to add self-relations)">{"title": "Tasks", "schema": "CREATE TABLE (\"Name\" TITLE, \"Parent\" RELATION('ds_id', DUAL 'Children' 'children'), \"Children\" RELATION(… [TRUNCATED BY HARNESS]
 
 ### tool: notion-create-pages
 ## Overview
@@ -110,7 +110,7 @@ When creating pages in a database:
 - Always include a title property. Data sources always have exactly one title property, but it may not be named "title", so, again, rely on the fetched data source schema.
 
 
-For pages… [ОБРЕЗАНО харнессом]
+For pages… [TRUNCATED BY HARNESS]
 
 ### tool: notion-create-view
 Create a new view on a Notion database.
@@ -143,7 +143,7 @@ passing the URI to the Notion "fetch" tool). Key directives:
 
 
 <example description="Table view on existing database">{"database_id": "abc123", "data_source_id": "def456", "name": "All Tasks", "type": "table"}</example>
-<example description="Board grouped by Status">{"database_id": "abc123", "data_source_id": "def456", "name": "Task Board", "type": "board", "configure": "GROUP BY \"Statu… [ОБРЕЗАНО харнессом]
+<example description="Board grouped by Status">{"database_id": "abc123", "data_source_id": "def456", "name": "Task Board", "type": "board", "configure": "GROUP BY \"Statu… [TRUNCATED BY HARNESS]
 
 ### tool: notion-download-attachment
 Download the contents of a small UTF-8 text attachment created by the Notion MCP `create-attachment` tool.
@@ -174,7 +174,7 @@ Set `include_discussions` to true to see discussion counts and inline discussion
 
 Pass the special id `"self"` to get the connected workspace and user identity instead of an entity. The result includes a `self` object with the workspace id + name and the authenticated user's id, name, and email. Use this to label the connection (e.g. by workspace name) or obtain a stable id for the connected workspace and user.
 
-On MCP and RunTool surfaces, `self` also includes `current_tool_access`: a map from tool names to `available`, `available_with_limit` (calls can be made up to the limit included with the workspace's plan), `… [ОБРЕЗАНО харнессом]
+On MCP and RunTool surfaces, `self` also includes `current_tool_access`: a map from tool names to `available`, `available_with_limit` (calls can be made up to the limit included with the workspace's plan), `… [TRUNCATED by harness]
 
 ### tool: notion-get-comments
 Get comments and discussions from a Notion page.
@@ -227,7 +227,7 @@ Examples:
 
 View mode: Execute a specific database view's query with its filters and sorts. Omit "is_archived" or set it to false for non-archived rows. Set "is_archived": true to apply the view inside the archived partition. When the response has "has_more": true, pass its "next_cursor" as "start_cursor" in a follow-up view-mode request with the same "is_archived" value.
 
-Example: { "data": { "mode": "view", "view_url": "https://www.notion.so/workspac… [ОБРЕЗАНО харнессом]
+Example: { "data": { "mode": "view", "view_url": "https://www.notion.so/workspac… [TRUNCATED BY HARNESS]
 
 ### tool: notion-query-database-view
 Query data from a Notion database view.
@@ -279,7 +279,7 @@ Filterable properties:
 - "last_edited_by" (person) — who last edited the meeting note
 
 
-Combinator filters use "filters" (not "operands"): { "operator… [ОБРЕЗАНО харнессом]
+Combinator filters use "filters" (not "operands"): { "operator… [TRUNCATED BY HARNESS]
 
 ### tool: notion-search
 Search the user's Notion workspace and connected sources (Slack, Google Drive,
@@ -319,7 +319,7 @@ To search within a database: fetch the database first to get its data source URL
 		</example>
 
 		<example description="Teamspace + creator filter">
-		{"query": "project updates", "query_type": "internal", "team… [ОБРЕЗАНО харнессом]
+		{"query": "project updates", "query_type": "internal", "team… [TRUNCATED BY HARNESS]
 
 ### tool: notion-update-data-source
 Update a Notion data source's schema, title, or attributes using SQL DDL statements. Returns Markdown showing updated structure and schema.
@@ -346,7 +346,7 @@ Same type syntax as create_database. Key types:
 <example description="Remove property">{"data_source_id": "f336d0bc-b841-465b-8045-024475c079dd", "statements": "DROP COLUMN \"Old Property\""}</example>
 <example description="Add self-relation">{"data_source_id": "f336d0bc-b841-465b-8045-024475c079dd", "statements": "ADD COLUMN \"Parent\" RELATION('f336d0bc-b841-465b-8045-024475c079dd', DUAL 'Children' 'children'); ADD COLUMN \"Children\" RELATION('f336d0bc-b841-465b-8045-024475c079dd', DUAL 'Parent' 'parent')"}</example>
 <example description="Update title">{"data_source_id": "f336d0bc-b841-465b-8045-024475c079dd", "title": "Project Tracker 2024"}</example>
-<example description="Trash data source">{"dat… [ОБРЕЗАНО харнессом]
+<example description="Trash data source">{"dat… [TRUNCATED BY HARNESS]
 
 ### tool: notion-update-page
 ## Overview
@@ -383,7 +383,7 @@ Notion page content is a string in Notion-flavored Markdown format.
 
 **IMPORTANT**: For the complete Markdown specification, first read the MCP resource `notion://docs/enhanced-markdown-spec` through your MCP client's resource-reading interface, or call the Notion "fetch" tool with this URI if your client does not support reading MCP resources. Do NOT pass this URI to any other URL-fetching tool. Do NOT guess or hallucinate Markdown syntax.
 
-For small edits, send the smallest edit region that captures the intended change. Prefer "update_content" for targeted search-and-replace edits, or "insert_content" when you only need to prepend or append content. Avoid full-page "r… [ОБРЕЗАНО харнессом]
+For small edits, send the smallest edit region that captures the intended change. Prefer "update_content" for targeted search-and-replace edits, or "insert_content" when you only need to prepend or append content. Avoid full-page "r… [TRUNCATED BY HARNESS]
 
 ### tool: notion-update-view
 Update a view's name, filters, sorts, or display configuration.

@@ -1,10 +1,10 @@
-# UNIT: instagram-dm | Instagram DM | github trypeggy/instagram_dm_mcp | тип автора: комьюнити | captured 2026-07-29 (static source)
+# UNIT: instagram-dm | Instagram DM | github trypeggy/instagram_dm_mcp | author type: community | captured 2026-07-29 (static source)
 
 ## SERVER CONFIRMED
 
-Python MCP-сервер на `mcp.server.fastmcp.FastMCP`. Единственный файл сервера: `src/mcp_server.py` (902 строки), 25 инструментов через декоратор `@mcp.tool()`. Транспорт/бэкенд — библиотека `instagrapi` (приватный Instagram API).
+Python MCP server on `mcp.server.fastmcp.FastMCP`. The only server file: `src/mcp_server.py` (902 lines), 25 tools via the `@mcp.tool()` decorator. Transport/backend — the `instagrapi` library (private Instagram API).
 
-Конструктор:
+Constructor:
 ```python
 mcp = FastMCP(
    name="Instagram DMs",
@@ -14,7 +14,7 @@ mcp = FastMCP(
 
 ## CHANNEL: instructions (62 chars)
 
-Определено в `src/mcp_server.py:17-19` как литерал `INSTRUCTIONS`, передаётся в `FastMCP(instructions=...)`. Дословно (включая ведущий и завершающий перевод строки):
+Defined in `src/mcp_server.py:17-19` as the literal `INSTRUCTIONS`, passed to `FastMCP(instructions=...)`. Verbatim (including the leading and trailing newline):
 
 ```
 
@@ -24,7 +24,7 @@ This server is used to send messages to a user on Instagram.
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Все 25 инструментов. Описание = docstring функции (FastMCP берёт docstring как `description`). Приведены дословно.
+All 25 tools. Description = the function docstring (FastMCP takes the docstring as `description`). Given verbatim.
 
 ### 1. send_message
 ```

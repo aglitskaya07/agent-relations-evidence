@@ -1,10 +1,10 @@
-# UNIT: github | GitHub | github github/github-mcp-server | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: github | GitHub | github github/github-mcp-server | author type: official | captured 2026-07-29 (static source)
 
-Подтверждение MCP-сервера: Go-репозиторий, `github.com/modelcontextprotocol/go-sdk/mcp`, `mcp.NewServer(...)` в `pkg/github/server.go` (передаёт `Instructions: inv.Instructions()`), stdio/http-транспорты в `internal/ghmcp/server.go` и `pkg/http/handler.go`. Это полноценный сервер, не SDK/клиент/прокси.
+MCP server confirmation: Go repository, `github.com/modelcontextprotocol/go-sdk/mcp`, `mcp.NewServer(...)` in `pkg/github/server.go` (passes `Instructions: inv.Instructions()`), stdio/http transports in `internal/ghmcp/server.go` and `pkg/http/handler.go`. This is a full server, not an SDK/client/proxy.
 
 ## CHANNEL: instructions (6479 chars)
 
-Строка собирается в `pkg/inventory/instructions.go` (`generateInstructions`) как базовый блок + фрагменты включённых тулсетов, склеенные через " ". Ниже дословно базовый блок и все фрагменты (`pkg/github/toolset_instructions.go`).
+The string is assembled in `pkg/inventory/instructions.go` (`generateInstructions`) as a base block + fragments of enabled toolsets, joined with " ". Below are the literal base block and all fragments (`pkg/github/toolset_instructions.go`).
 
 ### Base (903 chars)
 
@@ -45,7 +45,7 @@ Check 'list_issue_types' first for organizations to use proper issue types. Use 
 PR review workflow: Always use 'pull_request_review_write' with method 'create' to create a pending review, then 'add_comment_to_pending_review' to add comments, and finally 'pull_request_review_write' with method 'submit_pending' to submit the review for complex reviews with line-specific comments.
 ```
 
-Условный довесок (если включён тулсет `repos`):
+Conditional add-on (if the `repos` toolset is enabled):
 
 ```
 Before creating a pull request, search for pull request templates in the repository. Template files are called pull_request_template.md or they're located in '.github/PULL_REQUEST_TEMPLATE' directory. Use the template content to structure the PR description and then call create_pull_request tool.
@@ -138,13 +138,13 @@ Never:
    - Drop 'fields' param on subsequent pages if field values are needed.
 ```
 
-Примечание: при `DISABLE_INSTRUCTIONS=true` инструкции пустые; сборка выполняется только если билдер вызвал `WithServerInstructions()` (вызывается в `internal/ghmcp/server.go:174` и `pkg/http/handler.go:292`).
+Note: when `DISABLE_INSTRUCTIONS=true`, instructions are empty; the build runs only if the builder called `WithServerInstructions()` (called in `internal/ghmcp/server.go:174` and `pkg/http/handler.go:292`).
 
 ## CHANNEL: tool descriptions (coverage=marker-scan+sample)
 
-Всего инструментов: 115 (уникальные имена по снапшотам `pkg/github/__toolsnaps__/*.snap`, сверено с определениями `mcp.Tool{Name/Description}` в `pkg/github/*.go`). Больше 40 → полный маркер-скан всех описаний + репрезентативная выборка.
+A total of 115 tools (unique names from snapshots `pkg/github/__toolsnaps__/*.snap`, checked against `mcp.Tool{Name/Description}` definitions in `pkg/github/*.go`). More than 40 → full marker scan of all descriptions + representative sampling.
 
-### Результаты полного маркер-скана (3 совпадения в 3 инструментах)
+### Results of full marker scan (3 matches in 3 tools)
 
 **assign_copilot_to_issue_with_intent**
 > Assign Copilot to a specific issue in a GitHub repository. Prefer this tool over assign_copilot_to_issue when available.
@@ -155,9 +155,9 @@ Never:
 **search_repositories**
 > Perfect for discovering projects, finding examples, or locating specific repositories across GitHub.
 
-Остальные 112 описаний по маркерам чисты.
+The remaining 112 descriptions are clean by markers.
 
-### 10 репрезентативных полных описаний
+### 10 representative full descriptions
 
 **get_me**
 > Get details of the authenticated GitHub user. Use this when a request is about the user's own profile for GitHub. Or when information is missing to build other tool calls.

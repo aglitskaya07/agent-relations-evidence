@@ -1,6 +1,6 @@
-# UNIT: brave | Brave Search | github brave/brave-search-mcp-server | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: brave | Brave Search | github brave/brave-search-mcp-server | author type: official | captured 2026-07-29 (static source)
 
-Подтверждение MCP-сервера: `src/server.ts` создаёт `new McpServer(...)` из `@modelcontextprotocol/sdk/server/mcp.js`, транспорты stdio/http в `src/protocols/`, регистрация инструментов через `mcpServer.registerTool`. Это полноценный MCP-сервер.
+MCP server confirmation: `src/server.ts` creates `new McpServer(...)` from `@modelcontextprotocol/sdk/server/mcp.js`, stdio/http transports in `src/protocols/`, tool registration via `mcpServer.registerTool`. This is a full-fledged MCP server.
 
 ## CHANNEL: instructions (85 chars)
 
@@ -8,11 +8,11 @@
 Use this server to search the Web for various types of data via the Brave Search API.
 ```
 
-Источник: `src/server.ts:18`, поле `instructions` в опциях конструктора `McpServer`. Строка литеральная, без конкатенации и подстановок.
+Source: `src/server.ts:18`, the `instructions` field in the `McpServer` constructor options. The string is literal, without concatenation or interpolation.
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Всего инструментов: 8. Все включены дословно.
+Total tools: 8. All are included verbatim.
 
 ### 1. brave_web_search
 ```
@@ -54,7 +54,7 @@ Searches for videos using Brave's Video Search API and returns structured video 
 ```
 
 ### 4. brave_image_search
-(единственное описание в репозитории без `.trim()` — передаётся с ведущим переводом строки и отступом)
+(the only description in the repository without `.trim()` — passed with a leading newline and indentation)
 ```
     Performs an image search using the Brave Search API. Helpful for when you need pictures of people, places, things, graphic design ideas, art inspiration, and more. When relaying results in a markdown environment, it may be helpful to include images in the results (e.g., ![image.title](image.properties.url)).
 ```
@@ -127,7 +127,7 @@ Searches Brave's Place Search API. A single call may populate any combination of
         - 'count' caps results (max 50, default 20). 'radius' (meters) biases toward closer results; it does NOT hard-limit the search area.
 ```
 
-## Прочие наблюдения (нейтральные, для контекста канала)
+## Other observations (neutral, for channel context)
 
-- Регистрация инструментов условная: `isToolPermittedByUser(tool.name)` в `src/server.ts` — набор экспонируемых инструментов зависит от конфигурации пользователя (`src/config.ts`), т.е. фактический список может быть подмножеством этих 8.
-- Часть текста, попадающего в контекст модели, живёт не в описаниях инструментов, а в текстах ответов `execute` (например, в `src/tools/local/index.ts` строки о том, что план пользователя не поддерживает local search, и о переходе на общий веб-поиск).
+- Tool registration is conditional: `isToolPermittedByUser(tool.name)` in `src/server.ts` — the set of exposed tools depends on the user configuration (`src/config.ts`), i.e. the actual list may be a subset of these 8.
+- Part of the text that reaches the model context lives not in tool descriptions, but in execute response texts (for example, in `src/tools/local/index.ts` lines saying that the user's plan does not support local search, and about switching to general web search).

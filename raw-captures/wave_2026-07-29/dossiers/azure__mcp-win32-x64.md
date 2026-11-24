@@ -1,11 +1,11 @@
-# UNIT: @azure/mcp-win32-x64 | npm v3.0.0-beta.30 (published 2026-07-28T18:26:14.992Z) | рамки: npm-top | captured 2026-07-29 (static, tarball)
+# UNIT: @azure/mcp-win32-x64 | npm v3.0.0-beta.30 (published 2026-07-28T18:26:14.992Z) | frames: npm-top | captured 2026-07-29 (static, tarball)
 
-## ВЕРДИКТ ПО ТИПУ
-Это MCP-сервер: Azure MCP Server, скомпилированный в нативный Windows-бинарник (`dist/azmcp.exe`, PE32+ x86-64, ~110 МБ, .NET AOT). JS-часть (`index.js`, 2.1 КБ) — только лаунчер, спавнящий exe. Внутри бинарника: `Microsoft.Mcp.Core.Areas.Server.Commands.ServerStartCommand`, `McpRuntime` (CallToolHandler/ListToolsHandler), тул-лоадеры (CommandFactoryToolLoader, NamespaceToolLoader, RegistryToolLoader, ServerToolLoader, SingleProxyToolLoader) и встроенные ресурсы `azure-rules.txt`, `consolidated-tools.json`, `registry.json`. Анализ — статическая экстракция строк (ASCII + UTF-16LE) без исполнения кода пакета.
+## TYPE VERDICT
+This is an MCP server: Azure MCP Server, compiled into a native Windows binary (`dist/azmcp.exe`, PE32+ x86-64, ~110 MB, .NET AOT). The JS part (`index.js`, 2.1 KB) is only a launcher that spawns the exe. Inside the binary: `Microsoft.Mcp.Core.Areas.Server.Commands.ServerStartCommand`, `McpRuntime` (CallToolHandler/ListToolsHandler), tool loaders (CommandFactoryToolLoader, NamespaceToolLoader, RegistryToolLoader, ServerToolLoader, SingleProxyToolLoader), and embedded resources `azure-rules.txt`, `consolidated-tools.json`, `registry.json`. Analysis — static extraction of strings (ASCII + UTF-16LE) without executing package code.
 
 ## CHANNEL: instructions, npm (static, 2332 chars)
 
-Источник: встроенный ресурс `Azure.Mcp.Server.Resources.azure-rules.txt`, подаётся через `ResourceServerInstructionsProvider` → `ServerInstructions` (в бинарнике: `IServerInstructionsProvider`, `ResourceServerInstructionsProvider`, `NullServerInstructionsProvider`, `set_ServerInstructions`). Дословный текст:
+Source: the built-in resource `Azure.Mcp.Server.Resources.azure-rules.txt`, supplied through `ResourceServerInstructionsProvider` → `ServerInstructions` (in the binary: `IServerInstructionsProvider`, `ResourceServerInstructionsProvider`, `NullServerInstructionsProvider`, `set_ServerInstructions`). Verbatim text:
 
 ```
 Azure MCP server usage rules:
@@ -20,68 +20,68 @@ Azure MCP server usage rules:
 - When asked about configuring or installing azure mcp in coding agent for the current repo, invoke your `bestpractices` tool with `resource` set to "coding-agent" and `action` set to "all".BSJB
 ```
 
-Оценка стеринга в instructions: умеренный, доменно-ограниченный. «When handling requests related to Azure, always use your tools»; предписания вызывать `bestpractices`/`get_azure_bestpractices_ai_app` «first before creating any plans, todos or code»; «use your `extension` tools first» для az/azd/func/azqr. Есть сдерживающие оговорки («do not call it otherwise», «Do NOT call it when the user specifies other technology»).
+Assessment of steering in instructions: moderate, domain-limited. "When handling requests related to Azure, always use your tools"; instructions to call `bestpractices`/`get_azure_bestpractices_ai_app` "first before creating any plans, todos or code"; "use your `extension` tools first" for az/azd/func/azqr. There are limiting caveats ("do not call it otherwise", "Do NOT call it when the user specifies other technology").
 
 ## CHANNEL: tool descriptions, npm (static, coverage=marker-scan+sample)
 
-Поверхности экспозиции (сервер многорежимный, все видны статически):
-- `consolidated-tools.json` (встроенный ресурс): **128 инструментов** с name+description+toolMetadata — консолидированный режим.
-- Namespace-режим: ~30 namespace-инструментов (строки вида «X operations - …»).
-- Полный режим: 180+ листовых команд (описания в UTF-16/ASCII строках бинарника).
-- Single-proxy режим: один корневой инструмент "azure" (описание в appsettings.json внутри exe).
-- `registry.json`: описания внешних проксируемых серверов (documentation / azd / foundry / arm).
+Exposure surfaces (the server is multi-mode, all are statically visible):
+- `consolidated-tools.json` (embedded resource): **128 tools** with name+description+toolMetadata — consolidated mode.
+- Namespace mode: ~30 namespace tools (strings of the form "X operations - …").
+- Full mode: 180+ leaf commands (descriptions in UTF-16/ASCII strings of the binary).
+- Single-proxy mode: one root tool "azure" (description in appsettings.json inside the exe).
+- `registry.json`: descriptions of external proxied servers (documentation / azd / foundry / arm).
 
-Инструментов > 40 → полный маркер-скан по всем извлечённым строкам бинарника (~527k ASCII + ~71k UTF-16 строк) и отдельно по 128 описаниям consolidated-tools.json (по ним маркер-хитов: 0).
+Tools > 40 → full marker scan across all extracted binary strings (~527k ASCII + ~71k UTF-16 strings) and separately across 128 descriptions in consolidated-tools.json (marker hits on them: 0).
 
-### Маркер-скан: совпадения в описаниях инструментов/серверов (дословно)
+### Marker scan: matches in tool/server descriptions (verbatim)
 
-1. **Корневой proxy-инструмент "azure"** (appsettings.json, single-tool режим):
+1. **Root proxy tool "azure"** (appsettings.json, single-tool mode):
 > "This server/tool provides real-time, programmatic access to all Azure products, services, and resources, as well as all interactions with the Azure Developer CLI (azd). Use this tool for any Azure control plane or data plane operation, including resource management and automation. To discover available capabilities, call the tool with the "learn" parameter to get a list of top-level tools. To explore further, set "learn" and specify a tool name to retrieve supported commands and their parameters. To execute an action, set the "tool", "command", and convert the user's intent into the "parameters" based on the discovered schema. Always use this tool for any Azure or "azd" related operation requiring up-to-date, dynamic, and interactive capabilities. Always include the "intent" parameter to specify the operation you want to perform."
-Маркеры: `Always use this tool`, «for any … operation».
+Markers: `Always use this tool`, "for any … operation".
 
 2. **registry.json → "documentation" (Microsoft Learn MCP proxy)**:
 > "Search official Microsoft/Azure documentation to find the most relevant and trustworthy content for a user's query. This tool returns up to 10 high-quality content chunks (each max 500 tokens), extracted from Microsoft Learn and other official sources. Each result includes the article title, URL, and a self-contained content excerpt optimized for fast retrieval and reasoning. Always use this tool to quickly ground your answers in accurate, first-party Microsoft/Azure knowledge."
-Маркеры: `Always use this tool`, `trustworthy`.
+Markers: `Always use this tool`, `trustworthy`.
 
 3. **applens (namespace)**:
 > "AppLens diagnostic operations - Primary tool for diagnosing and troubleshooting Azure resource issues. Uses conversational AI-powered diagnostics to detect problems, identify root causes, and recommend remediation steps. This tool should be the first choice when users report errors, performance issues, availability problems, or unexpected Azure resource behavior."
-Маркеры: `Primary tool`, `first choice`.
+Markers: `Primary tool`, `first choice`.
 
-4. **applens leaf (диагностика ресурса)**:
+4. **applens leaf (resource diagnostics)**:
 > "Get diagnostic help from App Lens for Azure application and service issues to identify what's wrong with a service. Ask questions about performance, slowness, failures, errors, application state, availability to receive expert analysis and solutions which can help when performing diagnostics and to address issues about performance and failures. Returns analysis, insights, and recommended solutions. Always use this tool before manually checking metrics or logs when users report performance or functionality issues. Only the resource name and question are required - subscription, resource group, and resource type are optional and used to narrow down results when multiple resources share the same name."
-Маркер: `Always use this tool before` (вытесняет самостоятельную проверку метрик/логов агентом).
+Marker: `Always use this tool before` (displaces the agent's independent checking of metrics/logs).
 
 5. **functionapp codegen**:
 > "Azure Functions code generation commands. ALWAYS use these tools instead of generating Azure Functions code from memory. These tools provide accurate, up-to-date code templates for all supported triggers, bindings, and languages."
-Маркеры: `ALWAYS use … instead of … from memory`.
+Markers: `ALWAYS use … instead of … from memory`.
 
 6. **advisor aggregate (leaf)**:
 > "Aggregate Azure Advisor recommendations server-side and return per-bucket counts plus a true total. This is the CORRECT tool whenever the user asks 'how many', 'top N <something>', 'which <X> has the most', 'breakdown by <field>', 'distribution of', 'count of', or any ranking/comparison question over the recommendation set. Do not try to answer such questions by calling 'list' and counting client-side"
-Маркеры: `whenever the user`, «This is the CORRECT tool», запрет альтернативного пути.
+Markers: `whenever the user`, "This is the CORRECT tool", prohibition of an alternative path.
 
 7. **deploy (namespace)**:
 > "Deploy operations - Generate recommended Azure deployment plans, architecture diagrams, IaC (Bicep/Terraform) rules, and CI/CD pipeline/workflow guidance. Retrieve application logs for azd-deployed apps. Prefer these tools for deployment planning, CI/CD pipeline generation, and architecture visualization with Azure-specific constraints."
-Маркер: `Prefer these tools`.
+Marker: `Prefer these tools`.
 
-8. **bestpractices (namespace)** (пробельные последовательности оригинала сжаты):
+8. **bestpractices (namespace)** (original whitespace sequences compressed):
 > "Azure best practices - Commands return a list of best practices for code generation, operations and deployment when working with Azure services. It should be called for any code generation, deployment or operations involving Azure, Azure Functions, Azure Kubernetes Service (AKS), Azure Container Apps (ACA), Bicep, Terraform, Azure Cache, Redis, CosmosDB, Entra, Azure Active Directory, Azure App Services, or any other Azure technology or programming language. This command set also includes the command to get AI application best practices, which provides specialized guidance for building AI applications, offering recommendations for agents, chatbots, workflows, and other AI-powered features leveraging Microsoft Foundry. When the request involves AI in any capacity, including systems where AI is used as a component, use AI application best practices instead of the general best practices. Call this tool first before creating any plans, todos or code. Make sure to use your azure-prepare, azure-validate, and azure-deploy skills for deployment to azure if they are available. Only call this function when you are confident the user is discussing Azure (including Microsoft Foundry). If this tool needs to be categorized, it belongs to the Get Azure Best Practices category."
-Маркеры: «Call this tool first before creating any plans, todos or code», «for any code generation».
+Markers: "Call this tool first before creating any plans, todos or code", "for any code generation".
 
 9. **monitor activity log (leaf)**:
 > "Always use this tool if user is asking for activity logs for a resource."
-Маркер: `Always use this tool`.
+Marker: `Always use this tool`.
 
-10. **advisor list, параметр filter**:
+10. **advisor list, parameter filter**:
 > "Free-text filter applied to the recommendation problem text (case-insensitive substring match). Use this whenever the user's request includes a topical phrase such as 'related to Microsoft Foundry', 'about encryption', 'mentioning right-size', or 'for Key Vault'. Extract the salient noun(s) from the phrase (e.g., 'Foundry', 'encrypt', 'right-size', 'Key Vault') and pass them here."
-Маркер: `whenever the user` (на уровне параметра).
+Marker: `whenever the user` (at the parameter level).
 
-11. **subscription list (leaf)** — мягкое поведенческое указание:
+11. **subscription list (leaf)** — a soft behavioral cue:
 > "List all Azure subscriptions for the current account. Returns subscriptionId, displayName, state, tenantId, and isDefault for each subscription. The isDefault field indicates the user's default subscription as resolved from the Azure CLI profile (configured via 'az account set') or, if not set there, from the AZURE_SUBSCRIPTION_ID environment variable. When the user has not specified a subscription, prefer the subscription where isDefault is true. If no default can be determined from either source and multiple subscriptions exist, ask the user which subscription to use."
-Маркер: `prefer` (безобидное разрешение неоднозначности).
+Marker: `prefer` (harmless disambiguation permission).
 
-Шум, исключённый из скана описаний: десятки `prefer|must use|takes precedence` в строках сторонних SDK (Cosmos, Npgsql, MSAL, XSLT) и в payload-ресурсах (best-practices тексты, деплой-гайды, Instrumentation/Resources/*.md) — это контент, возвращаемый инструментами, а не их описания.
+Noise excluded from the scan of descriptions: dozens of `prefer|must use|takes precedence` in lines from third-party SDKs (Cosmos, Npgsql, MSAL, XSLT) and in payload resources (best-practices texts, deployment guides, Instrumentation/Resources/*.md) — this is content returned by tools, not their descriptions.
 
-### 8 репрезентативных полных описаний
+### 8 representative full descriptions
 
 **1. get_azure_resilience_management_details (consolidated):**
 > "Get details about Azure Resilience Management resources, including resilience goals (templates, assignments, and their resources), usage plans and enrollments, and recovery plans (plans, resources, and jobs) for Azure service groups."
@@ -107,11 +107,11 @@ Azure MCP server usage rules:
 **8. advisor (namespace):**
 > "Azure Advisor operations - Query Azure Advisor recommendations across subscriptions OR Apply Azure Advisor recommendations to your IaaC files (ARM, Terraform). Use when you need subscription-scoped visibility into Advisor recommendations OR want to apply Advisor recommendations to your IaaC files. Requires Azure subscription context for querying Advisor recommendations."
 
-### Общая оценка стеринга tool descriptions
-Основная масса из 128 consolidated-описаний нейтральна (маркер-скан по ним: 0 совпадений). Стеринг сосредоточен: (а) в корневом proxy-описании single-tool режима («Always use this tool for any Azure…»), (б) в registry-описании Microsoft Learn («Always use this tool to quickly ground your answers»), (в) точечно в applens/bestpractices/functionapp/advisor («Primary tool», «first choice», «ALWAYS … instead of … from memory», «Call this tool first before creating any plans»). Весь стеринг остаётся внутри Azure-домена; кросс-вендорного вытеснения built-in инструментов или чужих серверов не обнаружено.
+### Overall assessment of steering in tool descriptions
+The bulk of the 128 consolidated descriptions is neutral (marker scan across them: 0 matches). Steering is concentrated: (a) in the root proxy description of single-tool mode ("Always use this tool for any Azure…"), (b) in the Microsoft Learn registry description ("Always use this tool to quickly ground your answers"), (c) in targeted applens/bestpractices/functionapp/advisor ("Primary tool", "first choice", "ALWAYS … instead of … from memory", "Call this tool first before creating any plans"). All steering remains within the Azure domain; no cross-vendor displacement of built-in tools or other servers was found.
 
 ## NOTES
-- Код: нативный AOT-бинарник (PE32+, 110 МБ), JS не минифицирован (2 КБ лаунчер); строки извлечены статически (strings + UTF-16LE regex), исполнение не производилось.
-- Риск динамической сборки строк: низкий для описаний (константы/JSON-ресурсы в бинарнике), но есть динамические слои: RegistryToolLoader подтягивает внешние MCP-серверы из registry.json (learn.microsoft.com/api/mcp, azd stdio, mcp.ai.azure.com, mcp.management.azure.com) — их runtime-описания статически не видны; Namespace/ServerToolLoader используют sampling-промпты для intent→command (промпты найдены в строках).
-- Файлов в пакете 70; текстово смотрел package.json, index.js, Azure.Mcp.Tools.AzureMigrate.xml + полную строковую выгрузку azmcp.exe (~598k строк); 66 Instrumentation/*.md — payload-контент инструментов. Извлечены встроенные ресурсы: azure-rules.txt (2332 chars), consolidated-tools.json (128 tools, ~189 KB), registry.json, appsettings.json.
-- Instructions-канал подтверждён по типам (ResourceServerInstructionsProvider → ServerInstructions); фактическую передачу в initialize статически не наблюдал, но иных кандидатов на источник instructions в бинарнике нет.
+- Code: native AOT binary (PE32+, 110 MB), JS is not minified (2 KB launcher); strings were extracted statically (strings + UTF-16LE regex), execution was not performed.
+- Risk of dynamic string assembly: low for descriptions (constants/JSON resources in the binary), but there are dynamic layers: RegistryToolLoader pulls external MCP servers from registry.json (learn.microsoft.com/api/mcp, azd stdio, mcp.ai.azure.com, mcp.management.azure.com) — their runtime descriptions are not statically visible; Namespace/ServerToolLoader use sampling prompts for intent→command (prompts found in strings).
+- There are 70 files in the package; I textually looked at package.json, index.js, Azure.Mcp.Tools.AzureMigrate.xml + the full string dump of azmcp.exe (~598k lines); 66 Instrumentation/*.md are tool payload content. Embedded resources were extracted: azure-rules.txt (2332 chars), consolidated-tools.json (128 tools, ~189 KB), registry.json, appsettings.json.
+- The Instructions channel is confirmed by types (ResourceServerInstructionsProvider → ServerInstructions); I did not statically observe actual passing into initialize, but there are no other candidates for the instructions source in the binary.

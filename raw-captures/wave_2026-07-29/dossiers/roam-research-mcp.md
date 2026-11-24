@@ -1,17 +1,17 @@
-# UNIT: roam-research-mcp | npm v2.22.0 (published 2026-06-13T14:21:43.490Z) | рамки: pulsemcp | captured 2026-07-29 (static, tarball)
+# UNIT: roam-research-mcp | npm v2.22.0 (published 2026-06-13T14:21:43.490Z) | scope: pulsemcp | captured 2026-07-29 (static, tarball)
 
 ## VERDICT: MCP server
 
-Полноценный MCP-сервер (Roam Research): `new Server(...)` из `@modelcontextprotocol/sdk` в `build/server/roam-server.js`, транспорты stdio + Streamable HTTP, обработчики ListTools/CallTool. Не SDK и не клиент.
+A full-fledged MCP server (Roam Research): `new Server(...)` from `@modelcontextprotocol/sdk` in `build/server/roam-server.js`, stdio + Streamable HTTP transports, ListTools/CallTool handlers. Not an SDK and not a client.
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Конструктору `new Server({name, version}, {capabilities})` поле `instructions` не передаётся. Примечание: существует боковой канал — тул `roam_markdown_cheatsheet` возвращает файл `Roam_Markdown_Cheatsheet.md` и ДОКЛЕИВАЕТ к нему содержимое произвольного файла из env `CUSTOM_INSTRUCTIONS_PATH` (tool-handlers.js:120-134). Это инструкции, доставляемые через tool result, а не через initialize.
+The `instructions` field is not passed to the `new Server({name, version}, {capabilities})` constructor. Note: there is a side channel — the `roam_markdown_cheatsheet` tool returns the file `Roam_Markdown_Cheatsheet.md` and APPENDS to it the contents of an arbitrary file from env `CUSTOM_INSTRUCTIONS_PATH` (tool-handlers.js:120-134). These are instructions delivered through the tool result, not through initialize.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-24 инструмента, все описания дословно (из build/tools/schemas.js):
+24 tools, all descriptions verbatim (from build/tools/schemas.js):
 
 ### roam_add_todo
 
@@ -171,10 +171,10 @@ Rename a page by changing its title. Identifies the page by current title or UID
 
 ## MARKER NOTES
 
-Стеринг-паттерны в описаниях (дословно):
+Steering patterns in descriptions (verbatim):
 - roam_create_page: "This is the preferred method for creating a new page with an outline in a single step. Best for: ..."
 - roam_process_batch_actions: "**RATE LIMIT EFFICIENT:** This is the most API-efficient tool for multiple block operations. ... prefer this tool over multiple sequential calls."
-- Повторяющийся императив в 7 описаниях: "IMPORTANT: Before using this tool, ensure that you have loaded into context the 'Roam Markdown Cheatsheet' resource."
+- Repeated imperative in 7 descriptions: "IMPORTANT: Before using this tool, ensure that you have loaded into context the 'Roam Markdown Cheatsheet' resource."
 - roam_markdown_cheatsheet: "**IMPORTANT:** Always load this cheatsheet before creating or updating Roam content."
-- roam_remember (параметр parent_uid): "Takes precedence over heading parameter." — техническое, про параметры, не про конкуренцию с другими серверами.
-Все паттерны направлены внутрь собственного набора тулов (self-routing); внешнего стеринга (принижения built-in инструментов клиента, "instead of web search" и т.п.) не найдено.
+- roam_remember (parameter parent_uid): "Takes precedence over heading parameter." — technical, about parameters, not about competition with other servers.
+All patterns point inward to the toolset itself (self-routing); no external steering (downgrading the client's built-in tools, "instead of web search" etc.) was found.

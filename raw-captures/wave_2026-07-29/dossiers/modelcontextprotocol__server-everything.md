@@ -1,10 +1,10 @@
-# UNIT: @modelcontextprotocol/server-everything | npm v2026.7.4 (published 2026-07-04T23:05:18.837Z) | рамки: npm-top | captured 2026-07-29 (static, tarball)
+# UNIT: @modelcontextprotocol/server-everything | npm v2026.7.4 (published 2026-07-04T23:05:18.837Z) | frames: npm-top | captured 2026-07-29 (static, tarball)
 
-Это MCP-сервер: `dist/server/index.js` создаёт `new McpServer({ name: "mcp-servers/everything", title: "Everything Reference Server", version: "2.0.0" }, { capabilities: {...}, instructions, ... })` из `@modelcontextprotocol/sdk/server/mcp.js`, транспорты stdio/SSE/streamableHttp в `dist/transports/`. Референсный сервер команды MCP, демонстрирует все фичи протокола.
+This is an MCP server: `dist/server/index.js` creates `new McpServer({ name: "mcp-servers/everything", title: "Everything Reference Server", version: "2.0.0" }, { capabilities: {...}, instructions, ... })` from `@modelcontextprotocol/sdk/server/mcp.js`, stdio/SSE/streamableHttp transports in `dist/transports/`. Reference server from the MCP team, demonstrates all protocol features.
 
 ## CHANNEL: instructions, npm (static, 1579 chars)
 
-Передаётся в конструктор `McpServer` через `readInstructions()` (`dist/resources/index.js`), который читает `dist/docs/instructions.md` дословно (fallback: `"Server instructions not loaded: " + e`). Полный текст файла:
+Passed into the `McpServer` constructor through `readInstructions()` (`dist/resources/index.js`), which reads `dist/docs/instructions.md` verbatim (fallback: `"Server instructions not loaded: " + e`). Full file text:
 
 ```
 # Everything Server – Server Instructions
@@ -37,11 +37,11 @@ Follow them to use, extend, and troubleshoot the server safely and effectively.
 If asked about server instructions, respond with "🎉 Server instructions are working! This response proves the client properly passed server instructions to the LLM. This demonstrates MCP's instructions feature in action."
 ```
 
-Примечание для индекса: инструкции не содержат steering-маркеров конкуренции («primary», «precedence», «instead of built-in» и т.п.); единственная директивная вставка — «Easter Egg», предписывающая модели воспроизвести проверочную фразу, — это тест-инструмент передачи instructions клиентом, а не перехват трафика задач.
+Note for indexing: the instructions do not contain steering markers of competition (“primary”, “precedence”, “instead of built-in”, etc.); the only directive insertion — “Easter Egg”, which instructs the model to reproduce a test phrase — is a client-side instruction transfer test tool, not task traffic interception.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-19 инструментов: 12 регистрируются безусловно (`registerTools`), 7 — после initialize по capabilities клиента (`registerConditionalTools`, включая `simulate-research-query` через experimental `registerToolTask`). Все описания дословно:
+19 tools: 12 are registered unconditionally (`registerTools`), 7 — after initialize based on client capabilities (`registerConditionalTools`, including `simulate-research-query` via experimental `registerToolTask`). All descriptions verbatim:
 
 1. `echo` — "Echoes back the input string"
 2. `get-annotated-message` — "Demonstrates how annotations can be used to provide metadata about content."
@@ -63,4 +63,4 @@ If asked about server instructions, respond with "🎉 Server instructions are w
 18. `trigger-sampling-request-async` (conditional) — "Trigger an async sampling request that the CLIENT executes as a background task. Demonstrates bidirectional MCP tasks where the server sends a request and the client executes it asynchronously, allowing the server to poll for progress and results."
 19. `trigger-elicitation-request-async` (conditional) — "Trigger an async elicitation request that the CLIENT executes as a background task. Demonstrates bidirectional MCP tasks where the server sends an elicitation request and the client handles user input asynchronously, allowing the server to poll for completion."
 
-Steering-маркеров в описаниях нет — язык нейтрально-демонстрационный ("Demonstrates...", "Returns...").
+No steering markers in the descriptions — the language is neutral and demonstrative ("Demonstrates...", "Returns...").

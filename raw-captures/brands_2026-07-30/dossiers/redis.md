@@ -1,15 +1,15 @@
-# UNIT: redis | Redis | github redis/mcp-redis | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: redis | Redis | github redis/mcp-redis | author type: official | captured 2026-07-29 (static source)
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Конструктор: `src/common/server.py` — `mcp = FastMCP("Redis MCP Server", dependencies=["redis", "python-dotenv", "numpy", "aiohttp"])`. Параметр `instructions` не передаётся; в `src/main.py` сервер запускается через `mcp.run()` без переопределения. Ни в `server.json`, ни в `gemini-extension.json` поля instructions нет (только `description`, которое не является MCP-каналом instructions).
+Constructor: `src/common/server.py` — `mcp = FastMCP("Redis MCP Server", dependencies=["redis", "python-dotenv", "numpy", "aiohttp"])`. The `instructions` parameter is not passed; in `src/main.py` the server is started via `mcp.run()` without override. There is no instructions field in either `server.json` or `gemini-extension.json` (only `description`, which is not the MCP instructions channel).
 
 ## CHANNEL: tool descriptions (coverage=marker-scan+sample)
 
-Всего инструментов: 53 (>40, поэтому маркер-скан всех описаний + 10 репрезентативных полных).
+Total tools: 53 (>40, therefore marker-scan of all descriptions + 10 representative full ones).
 
-### Полный список имён (файл → имя)
+### Full list of names (file → name)
 
 - `hset` (hash.py)
 - `hget` (hash.py)
@@ -65,15 +65,15 @@
 - `set` (string.py)
 - `get` (string.py)
 
-### Маркер-скан всех 53 описаний
+### Marker scan of all 53 descriptions
 
-Совпадений: **0**. Ни одно описание инструмента не содержит формулировок приоритизации, вытеснения других инструментов, обязательности или самопродвижения по применённым регексам.
+Matches: **0**. No tool description contains formulations of prioritization, displacement of other tools, mandatory use, or self-promotion under the applied regexes.
 
-Ближайшая по духу, но НЕ попавшая под регексы формулировка (для полноты фиксирую дословно, инструмент `search_redis_documents`):
+The closest in spirit, but NOT caught by the regexes, wording (for completeness I record it verbatim, tool `search_redis_documents`):
 
 > This tool exposes updated and curated documentation, and must be invoked every time the user wants to learn more in areas including:
 
-### 10 репрезентативных полных описаний (дословно)
+### 10 representative full descriptions (verbatim)
 
 #### `set_vector_in_hash` (hash.py)
 ```

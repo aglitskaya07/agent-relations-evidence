@@ -1,21 +1,21 @@
-# UNIT: @modelcontextprotocol/server-sequential-thinking | npm v2026.7.4 (published 2026-07-04T23:05:13.130Z) | рамки: npm-top | captured 2026-07-29 (static, tarball)
+# UNIT: @modelcontextprotocol/server-sequential-thinking | npm v2026.7.4 (published 2026-07-04T23:05:13.130Z) | frames: npm-top | captured 2026-07-29 (static, tarball)
 
-## VERDICT: MCP-сервер
+## VERDICT: MCP server
 
-Настоящий MCP-сервер на stdio-транспорте: `dist/index.js` создаёт `new McpServer({ name: "sequential-thinking-server", version: "0.2.0" })`, регистрирует один инструмент через `server.registerTool(...)` и подключает `StdioServerTransport`. Бизнес-логика в `dist/lib.js` (класс `SequentialThinkingServer`). Никакой сетевой активности, файловых операций или исполнения кода — чисто in-memory журнал «мыслей».
+A real MCP server on stdio transport: `dist/index.js` creates `new McpServer({ name: "sequential-thinking-server", version: "0.2.0" })`, registers one tool via `server.registerTool(...)` and connects `StdioServerTransport`. Business logic is in `dist/lib.js` (class `SequentialThinkingServer`). No network activity, file operations, or code execution — purely an in-memory journal of "thoughts".
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Конструктор `McpServer` получает только `{ name, version }` — поля `instructions` нет ни в конструкторе, ни где-либо ещё в коде пакета.
+The `McpServer` constructor receives only `{ name, version }` — there is no `instructions` field either in the constructor or anywhere else in the package code.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-Инструментов: 1 (<= 40, включён полностью).
+Tools: 1 (<= 40, included in full).
 
 ### Tool 1: `sequentialthinking` (title: "Sequential Thinking")
 
-Description (дословно):
+Description (verbatim):
 
 ```
 A detailed tool for dynamic and reflective problem-solving through thoughts.
@@ -74,7 +74,7 @@ You should:
 11. Only set nextThoughtNeeded to false when truly done and a satisfactory answer is reached
 ```
 
-Param descriptions (дословно, из zod `.describe()`):
+Param descriptions (verbatim, from zod `.describe()`):
 - thought: "Your current thinking step"
 - nextThoughtNeeded: "Whether another thought step is needed"
 - thoughtNumber: "Current thought number (numeric value, e.g., 1, 2, 3)"
@@ -87,13 +87,13 @@ Param descriptions (дословно, из zod `.describe()`):
 
 Annotations: readOnlyHint=true, destructiveHint=false, idempotentHint=true, openWorldHint=false.
 
-## STEERING-МАРКЕРЫ
+## STEERING-MARKERS
 
-Маркер-скан по регексам исследования: 0 совпадений. Описание не содержит формулировок приоритета/вытеснения других инструментов ("instead of", "prefer", "precedence", "last resort", "must use" и т.п.). Тон директивный только внутри собственного протокола использования ("You should: ... Provide a single, ideally correct answer") — это инструкции по формату вызовов, а не steering против других инструментов.
+Marker scan for research regexes: 0 matches. The description does not contain priority/displacement formulations for other tools ("instead of", "prefer", "precedence", "last resort", "must use", etc.). The tone is directive only within its own usage protocol ("You should: ... Provide a single, ideally correct answer") — these are call-format instructions, not steering against other tools.
 
 ## NOTES
 
-- Код НЕ минифицирован — читаемый tsc-вывод с комментариями; описание инструмента — один статический template literal, риск динамической сборки строк отсутствует.
-- Просмотрено 4 файла (все файлы пакета): package.json, README.md (наличие), dist/index.js (124 строки), dist/lib.js (79 строк). Покрытие исходников 100%.
-- Расхождение версий: npm-пакет v2026.7.4, но серверу передаётся version "0.2.0" — косметика.
-- yargs числится в dependencies, но в dist-коде не используется.
+- The code is NOT minified — readable tsc output with comments; the tool description is a single static template literal, and there is no risk of dynamic string assembly.
+- Reviewed 4 files (all package files): package.json, README.md (presence), dist/index.js (124 lines), dist/lib.js (79 lines). Source coverage 100%.
+- Version mismatch: npm package v2026.7.4, but version "0.2.0" is passed to the server — cosmetic.
+- yargs is listed in dependencies, but is not used in the dist code.

@@ -1,15 +1,15 @@
-# UNIT: slack | Slack | github modelcontextprotocol/servers-archived/src/slack | тип автора: референсный | captured 2026-07-29 (static source)
+# UNIT: slack | Slack | github modelcontextprotocol/servers-archived/src/slack | author type: reference | captured 2026-07-29 (static source)
 
-Подтверждение MCP-сервера: `src/slack/index.ts` импортирует `Server` из `@modelcontextprotocol/sdk/server/index.js`, поднимает `StdioServerTransport`, регистрирует `ListToolsRequestSchema` и `CallToolRequestSchema`. Это полноценный MCP-сервер.
+Confirmation of the MCP server: `src/slack/index.ts` imports `Server` from `@modelcontextprotocol/sdk/server/index.js`, brings up `StdioServerTransport`, registers `ListToolsRequestSchema` and `CallToolRequestSchema`. This is a full MCP server.
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Конструктор сервера (index.ts:395–405) получает только `{ name: "Slack MCP Server", version: "1.0.0" }` и `{ capabilities: { tools: {} } }`. Поля `instructions` нет; собственного обработчика `initialize` в репозитории нет.
+The server constructor (index.ts:395–405) receives only `{ name: "Slack MCP Server", version: "1.0.0" }` and `{ capabilities: { tools: {} } }`. There is no `instructions` field; there is no custom `initialize` handler in the repository.
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Всего инструментов: 8. Определения — статические литералы `const <name>Tool: Tool = {...}` в `index.ts`, возвращаются списком в обработчике `ListToolsRequestSchema` (строки 556–570).
+Total tools: 8. Definitions — static literals `const <name>Tool: Tool = {...}` in `index.ts`, returned as a list in the `ListToolsRequestSchema` handler (lines 556–570).
 
 1. **slack_list_channels**
 "List public or pre-defined channels in the workspace with pagination"
@@ -35,7 +35,7 @@
 8. **slack_get_user_profile**
 "Get detailed profile information for a specific user"
 
-### Описания параметров (дословно, для полноты канала)
+### Parameter descriptions (verbatim, for completeness of the channel)
 
 - slack_list_channels.limit: "Maximum number of channels to return (default 100, max 200)"
 - slack_list_channels.cursor: "Pagination cursor for next page of results"

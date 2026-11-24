@@ -1,19 +1,19 @@
-# UNIT: discord | Discord | github barryyip0625/mcp-discord | тип автора: комьюнити | captured 2026-07-29 (static source)
+# UNIT: discord | Discord | github barryyip0625/mcp-discord | author type: community | captured 2026-07-29 (static source)
 
-Источник: `brands/src/discord/mcp-discord-HEAD` (TypeScript, MCP SDK). Сервер подтверждён: `new McpServer(...)` в `src/app.ts:24`, `new Server(...)` в `src/server.ts:69`, обработчики `ListToolsRequestSchema` / `CallToolRequestSchema`, stdio + StreamableHTTP транспорты.
+Source: `brands/src/discord/mcp-discord-HEAD` (TypeScript, MCP SDK). Server confirmed: `new McpServer(...)` in `src/app.ts:24`, `new Server(...)` in `src/server.ts:69`, handlers `ListToolsRequestSchema` / `CallToolRequestSchema`, stdio + StreamableHTTP transports.
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Конструктор `McpServer` получает только `{ name: 'discord-mcp-server', version: '1.0.0' }` и `{ capabilities: { tools: {}, logging: {} } }`; конструктор `Server` — `{ name: "MCP-Discord", version: "1.0.0" }` и `{ capabilities: { tools: {} } }`. Поля `instructions` нет ни в одном из них, кастомного обработчика `initialize` в репозитории нет.
+The `McpServer` constructor receives only `{ name: 'discord-mcp-server', version: '1.0.0' }` and `{ capabilities: { tools: {}, logging: {} } }`; the `Server` constructor — `{ name: "MCP-Discord", version: "1.0.0" }` and `{ capabilities: { tools: {} } }`. There is no `instructions` field in any of them, and there is no custom `initialize` handler in the repository.
 
 ## CHANNEL: tool descriptions (coverage=marker-scan+sample, N=43)
 
-Единственный источник описаний — статический массив `toolList` в `src/toolList.ts` (используется обработчиком ListTools в `src/server.ts`). Альтернативная точка входа `src/app.ts` регистрирует те же инструменты через `server.tool(name, t.schema?.description ?? '', ...)`, но zod-схемы в `src/schemas.ts` не содержат `.describe()`/`description`, поэтому там описания оказываются пустыми строками.
+The only source of descriptions is the static array `toolList` in `src/toolList.ts` (used by the ListTools handler in `src/server.ts`). The alternative entry point `src/app.ts` registers the same tools via `server.tool(name, t.schema?.description ?? '', ...)`, but the zod schemas in `src/schemas.ts` do not contain `.describe()`/`description`, so the descriptions there end up as empty strings.
 
-Маркер-скан по всем 43 описаниям: совпадений 0.
+Marker scan across all 43 descriptions: 0 matches.
 
-Ниже все 43 инструмента с дословными описаниями (полный набор, не выборка):
+Below are all 43 tools with verbatim descriptions (the full set, not a sample):
 
 - **discord_create_category** — "Creates a new category in a Discord server."
 - **discord_edit_category** — "Edits an existing Discord category (name and position)."

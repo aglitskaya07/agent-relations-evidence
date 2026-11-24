@@ -1,20 +1,20 @@
-# UNIT: notion | Notion | github makenotion/notion-mcp-server | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: notion | Notion | github makenotion/notion-mcp-server | author type: official | captured 2026-07-29 (static source)
 
 ## SERVER CONFIRMATION
 
-Это MCP-сервер. `src/openapi-mcp-server/mcp/proxy.ts:140` создаёт `new Server({ name, version: '1.0.0' }, { capabilities: { tools: {} } })` из `@modelcontextprotocol/sdk/server/index.js`, регистрирует обработчики `ListToolsRequestSchema` и `CallToolRequestSchema`. Транспорты — stdio и streamable HTTP (`scripts/start-server.ts`). Инструменты генерируются автоматически из OpenAPI-спеки `scripts/notion-openapi.json` (Notion API 2025-09-03, «Data Source Edition») конвертером `OpenAPIToMCPConverter` (`src/openapi-mcp-server/openapi/parser.ts`).
+This is an MCP server. `src/openapi-mcp-server/mcp/proxy.ts:140` creates `new Server({ name, version: '1.0.0' }, { capabilities: { tools: {} } })` from `@modelcontextprotocol/sdk/server/index.js`, registers `ListToolsRequestSchema` and `CallToolRequestSchema` handlers. Transports — stdio and streamable HTTP (`scripts/start-server.ts`). Tools are generated automatically from the OpenAPI spec `scripts/notion-openapi.json` (Notion API 2025-09-03, "Data Source Edition") by the `OpenAPIToMCPConverter` (`src/openapi-mcp-server/openapi/parser.ts`).
 
 ## CHANNEL: instructions
 
-(не обнаружены статически)
+(not found statically)
 
-Единственный вызов конструктора сервера передаёт только `{ name, version }` и `{ capabilities }` — поля `instructions` нет. Grep по `instructions` во всём `src/` и `scripts/` не дал ни одного совпадения. Собственного обработчика `initialize` в репозитории нет — используется дефолтный из SDK.
+The only server-constructor call passes only `{ name, version }` and `{ capabilities }` — there is no `instructions` field. Grep for `instructions` across all of `src/` and `scripts/` found no matches. There is no custom `initialize` handler in the repository — the SDK default is used.
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Всего инструментов: 24.
+Total tools: 24.
 
-Механика формирования (parser.ts:330-343, 452-458): `description = operation.summary || operation.description`, затем при наличии 4xx/5xx-ответов добавляется блок `\nError Responses:\n<code>: <description>`; на финальном шаге ко всей строке приписывается префикс `"Notion | "` (только если `info.title === 'Notion API'`). Имя инструмента — `API-` + `operationId` (proxy.ts:170).
+Formation mechanics (parser.ts:330-343, 452-458): `description = operation.summary || operation.description`, then if there are 4xx/5xx responses a block is added `\nError Responses:\n<code>: <description>`; at the final step a prefix `"Notion | "` is appended to the whole string (only if `info.title === 'Notion API'`). The tool name is `API-` + `operationId` (proxy.ts:170).
 
 ---
 
@@ -195,6 +195,6 @@ Error Responses:
 
 ---
 
-## ДОПОЛНИТЕЛЬНО: аннотации инструментов
+## ADDITIONAL: tool annotations
 
-Помимо description сервер отдаёт `annotations` (proxy.ts:182-187): `title` — человекочитаемое имя, произведённое из operationId; `readOnlyHint: true` для GET-операций, `destructiveHint: true` для всех остальных. Текстовой инструктивной нагрузки в них нет.
+In addition to description the server returns `annotations` (proxy.ts:182-187): `title` is a human-readable name derived from operationId; `readOnlyHint: true` for GET operations, `destructiveHint: true` for all others. There is no textual instructional load in them.

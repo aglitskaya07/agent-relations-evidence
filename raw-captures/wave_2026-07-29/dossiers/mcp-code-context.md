@@ -1,17 +1,17 @@
-# UNIT: mcp-code-context | npm v3.9.1 (published 2026-07-17T21:48:39.927Z) | рамки: pulsemcp | captured 2026-07-29 (static, tarball)
+# UNIT: mcp-code-context | npm v3.9.1 (published 2026-07-17T21:48:39.927Z) | scope: pulsemcp | captured 2026-07-29 (static, tarball)
 
-## VERDICT: MCP-сервер (подтверждено)
+## VERDICT: MCP server (confirmed)
 
-`dist/src/index.js` — тонкий бутстрап stdio-сервера: `new Server({ name: "mcp-code-context", version: "3.9.1" }, { capabilities: { tools: {} } })` из `@modelcontextprotocol/sdk/server/index.js`, `StdioServerTransport`, `ListToolsRequestSchema`-хендлер отдаёт `TOOLS` из `tools/toolDefinitions.js`. Назначение: Tree-sitter (WASM) анализ кода — repo map, чтение/запись символов, AST-трансформации, Ruby/Rails-интеллект.
+`dist/src/index.js` — a thin bootstrap of a stdio server: `new Server({ name: "mcp-code-context", version: "3.9.1" }, { capabilities: { tools: {} } })` from `@modelcontextprotocol/sdk/server/index.js`, `StdioServerTransport`, `ListToolsRequestSchema` handler returns `TOOLS` from `tools/toolDefinitions.js`. Purpose: Tree-sitter (WASM) code analysis — repo map, reading/writing symbols, AST transformations, Ruby/Rails intelligence.
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Конструктор `Server` получает только `{ capabilities: { tools: {} } }` — опции `instructions` нет. Grep по всему `dist/**/*.js` на `instructions` — ноль совпадений в серверном коде. Файлы `INSTRUCTIONS.md` и `llms.txt` в пакете есть, но это документация для человека/индексации, в протокол MCP они не передаются.
+The `Server` constructor receives only `{ capabilities: { tools: {} } }` — there is no `instructions` option. Grep across all `dist/**/*.js` for `instructions` — zero matches in the server code. The files `INSTRUCTIONS.md` and `llms.txt` are present in the package, but they are documentation for humans/indexing and are not transmitted in the MCP protocol.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-Всего 28 инструментов: 18 в `dist/src/tools/toolDefinitionsCore.js` (CORE_TOOLS) + 10 в `dist/src/tools/toolDefinitionsAdmin.js` (ADMIN_TOOLS). Описания дословно:
+There are 28 tools in total: 18 in `dist/src/tools/toolDefinitionsCore.js` (CORE_TOOLS) + 10 in `dist/src/tools/toolDefinitionsAdmin.js` (ADMIN_TOOLS). Descriptions verbatim:
 
 ### CORE_TOOLS (18)
 
@@ -47,13 +47,13 @@
 27. **clear_session_cache** — "Clear cache for current session only"
 28. **list_pending_operations** — "List pending operations for crash recovery"
 
-### Стиринг-маркеры
+### Steering markers
 
-Совпадений с регексами стиринг-маркеров (instead of built-in, most powerful, always default, takes precedence, LAST resort, MUST use и т.д.) — НЕТ. Единственный оттенок самопредпочтения — внутренний, между собственными инструментами: "More efficient than read_file_surgical + analyze_impact separately" (explain_symbol) и "Reduces N round-trips to 1" (batch_read). Претензий на приоритет над встроенными инструментами клиента в описаниях нет.
+No matches with regexes of steering markers (instead of built-in, most powerful, always default, takes precedence, LAST resort, MUST use etc.) — NO. The only shade of self-preference is internal, between own tools: "More efficient than read_file_surgical + analyze_impact separately" (explain_symbol) and "Reduces N round-trips to 1" (batch_read). There are no claims of priority over the client's built-in tools in the descriptions.
 
 ## NOTES
 
-- Код НЕ минифицирован: скомпилированный TypeScript с сохранёнными именами, комментариями и sourcemaps (.js.map + .d.ts в пакете).
-- Риск динамической сборки строк — низкий: TOOLS — статический массив литералов, конкатенация только `[...CORE_TOOLS, ...ADMIN_TOOLS]` в barrel-файле; ListTools отдаёт его напрямую.
-- Просмотрено: полный листинг пакета (206 файлов), вычитаны целиком index.js, toolDefinitions.js, toolDefinitionsCore.js, toolDefinitionsAdmin.js; grep по всем .js в dist на `instructions` и на альтернативные конструкторы серверов (McpServer/FastMCP — отсутствуют).
-- В пакете лежат маркетинговые файлы для человека (HIRE_ME.md, SPONSORS.md, llms.txt, INSTRUCTIONS.md) — в MCP-канал не попадают.
+- Code is NOT minified: compiled TypeScript with preserved names, comments, and sourcemaps (.js.map + .d.ts in the package).
+- Risk of dynamic string assembly — low: TOOLS is a static array of literals, concatenation only `[...CORE_TOOLS, ...ADMIN_TOOLS]` in the barrel file; ListTools returns it directly.
+- Reviewed: full package listing (206 files), fully read index.js, toolDefinitions.js, toolDefinitionsCore.js, toolDefinitionsAdmin.js; grep across all .js in dist for `instructions` and for alternative server constructors (McpServer/FastMCP — absent).
+- The package contains marketing files for a human (HIRE_ME.md, SPONSORS.md, llms.txt, INSTRUCTIONS.md) — they do not enter the MCP channel.

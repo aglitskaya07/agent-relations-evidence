@@ -1,12 +1,12 @@
-# UNIT: hubspot | HubSpot | github shinzo-labs/hubspot-mcp | тип автора: комьюнити | captured 2026-07-29 (static source)
+# UNIT: hubspot | HubSpot | github shinzo-labs/hubspot-mcp | author type: community | captured 2026-07-29 (static source)
 
-Источник: `brands/src/hubspot/hubspot-mcp-HEAD` (TypeScript, единственный файл сервера `src/index.ts`, 2531 строк).
-Подтверждение сервера: `import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js"`, `const server = new McpServer(serverInfo)`, `StdioServerTransport`, плюс `createStatefulServer` от Smithery. Это полноценный MCP-сервер (обёртка HubSpot API `https://api.hubapi.com`).
+Source: `brands/src/hubspot/hubspot-mcp-HEAD` (TypeScript, the only server file `src/index.ts`, 2531 lines).
+Confirmation of the server: `import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js"`, `const server = new McpServer(serverInfo)`, `StdioServerTransport`, plus `createStatefulServer` from Smithery. This is a full MCP server (wrapper over the HubSpot API `https://api.hubapi.com`).
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Конструктору передаётся только:
+Only the following is passed to the constructor:
 ```
 const serverInfo = {
     name: "HubSpot-MCP",
@@ -15,22 +15,22 @@ const serverInfo = {
   }
   const server = new McpServer(serverInfo)
 ```
-Поле `instructions` отсутствует; подстроки `instructions` нет ни в `src/index.ts`, ни в `index.js`, `package.json`, `smithery.yaml`, `README.md`. Обработчик `initialize` вручную не переопределяется.
+The `instructions` field is absent; the `instructions` substring is not present in either `src/index.ts` or `index.js`, `package.json`, `smithery.yaml`, `README.md`. The `initialize` handler is not overridden manually.
 
 ## CHANNEL: tool descriptions (coverage=marker-scan+sample)
 
-Всего инструментов: **112** (все через `server.tool("<name>", "<description>", { zod schema }, handler)`, 112 вхождений `server.tool(` — все 112 распознаны регексом, имена уникальны). Средняя длина описания — 45 символов.
+A total of **112** tools (all via `server.tool("<name>", "<description>", { zod schema }, handler)`, 112 occurrences of `server.tool(` — all 112 recognized by regex, names are unique). Average description length is 45 characters.
 
-### Полный маркер-скан (все 112 описаний)
+### Full marker scan (all 112 descriptions)
 
-Прогон по всем 112 описаниям дал 2 совпадения, и оба — ложные срабатывания на слове «preferences» внутри доменного термина «communication preferences»:
+Across all 112 descriptions, 2 matches were found, and both were false positives on the word “preferences” inside the domain term “communication preferences”:
 
-- `communications_get_preferences` — дословно: «Get communication preferences for a contact»
-- `communications_update_preferences` — дословно: «Update communication preferences for a contact»
+- `communications_get_preferences` — verbatim: "Get communication preferences for a contact"
+- `communications_update_preferences` — verbatim: "Update communication preferences for a contact"
 
-Иных совпадений нет: ни сравнительных/приоритетных формулировок, ни императивов к модели, ни маркетинговых квалификаторов, ни упоминаний вознаграждений/доверия к источникам. Описания — сухие CRUD-формулировки в стиле референса HubSpot API.
+No other matches: neither comparative/prioritizing wording, nor imperatives to the model, nor marketing qualifiers, nor mentions of rewards/trust in sources. Descriptions are dry CRUD-formulations in the style of a HubSpot API reference.
 
-### 10 репрезентативных полных описаний (дословно)
+### 10 representative full descriptions (verbatim)
 
 1. `crm_create_company` — «Create a new company with validated properties»
 2. `crm_create_object` — «Create a new CRM object»
@@ -43,7 +43,7 @@ const serverInfo = {
 9. `communications_get_preferences` — «Get communication preferences for a contact»
 10. `products_batch_update` — «Update a batch of products by internal ID, or unique values specified by the `idProperty` query param.»
 
-### Пять самых длинных описаний (дословно; верхняя граница «плотности» текста в этом сервере)
+### Five longest descriptions (verbatim; upper bound of text "density" in this server)
 
 - `products_list` — «Read a page of products. Control what is returned via the `properties` query param. `after` is the paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.»
 - `products_update` — «Perform a partial update of an Object identified by ID. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.»
@@ -51,7 +51,7 @@ const serverInfo = {
 - `products_batch_update` — «Update a batch of products by internal ID, or unique values specified by the `idProperty` query param.»
 - `products_create` — «Create a product with the given properties and return a copy of the object, including the ID.»
 
-### Полный список всех 112 инструментов (name — description, дословно)
+### Full list of all 112 tools (name — description, verbatim)
 
 - `crm_create_company` — «Create a new company with validated properties»
 - `crm_update_company` — «Update an existing company with validated properties»

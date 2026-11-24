@@ -1,17 +1,17 @@
-# UNIT: @abhaybabbar/retellai-mcp-server | npm v1.0.4 (published 2026-04-09T22:28:23.696Z) | рамки: pulsemcp | captured 2026-07-29 (static, tarball)
+# UNIT: @abhaybabbar/retellai-mcp-server | npm v1.0.4 (published 2026-04-09T22:28:23.696Z) | frames: pulsemcp | captured 2026-07-29 (static, tarball)
 
-## VERDICT: MCP-сервер
+## VERDICT: MCP server
 
-Настоящий MCP-сервер на TypeScript: `src/index.ts` создаёт `new McpServer({ name: "Retell MCP", version: "0.1.0" })` из `@modelcontextprotocol/sdk`, подключает `StdioServerTransport`, регистрирует инструменты через `registerAllTools`. Обёртка над Retell AI API (голосовые агенты/звонки), ключ `RETELL_API_KEY` из env.
+A real TypeScript MCP server: `src/index.ts` creates `new McpServer({ name: "Retell MCP", version: "0.1.0" })` from `@modelcontextprotocol/sdk`, connects `StdioServerTransport`, registers tools via `registerAllTools`. A wrapper over the Retell AI API (voice agents/calls), key `RETELL_API_KEY` from env.
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Конструктору `McpServer` передаются только `name` и `version`; grep по `instructions` в `src/` и `build/` — 0 совпадений.
+Only `name` and `version` are passed to the `McpServer` constructor; grep for `instructions` in `src/` and `build/` — 0 matches.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-24 инструмента, все регистрируются как `server.tool(name, description, schema, handler)`. Описания дословно:
+24 tools, all are registered as `server.tool(name, description, schema, handler)`. Descriptions verbatim:
 
 ### call.ts (6)
 1. `create_phone_call` — "Creates a new phone call"
@@ -49,12 +49,12 @@
 
 ## MARKER SCAN
 
-Ни одно описание не содержит steering-маркеров (instead of / prefer / MUST / primary / precedence / whenever the user и т.д.). Все описания — нейтральные CRUD-однострочники.
+No description contains steering markers (instead of / prefer / MUST / primary / precedence / whenever the user, etc.). All descriptions are neutral CRUD one-liners.
 
 ## NOTES
 
-- Код не минифицирован: в тарболе и src/*.ts, и build/*.js (читаемый tsc-выход); build зеркалит src, число регистраций совпадает (24/24).
-- Риск динамической сборки строк описаний: низкий — все имена и описания заданы строковыми литералами прямо в вызовах `server.tool(...)`.
-- В корне package/ лежит вложенный тарбол предыдущей версии `abhaybabbar-retellai-mcp-server-1.0.3.tgz` (не анализировался как отдельный юнит, не исполнялся).
-- Просмотрено файлов: ~12 текстовых (package.json, README.md, src/index.ts, src/client.ts, src/tools/*.ts ×7, плюс grep по build/ ×9).
-- Расхождение метаданных: package.json version 1.0.4, но в конструктор McpServer зашито version "0.1.0".
+- The code is not minified: the tarball contains both src/*.ts and build/*.js (readable tsc output); build mirrors src, the number of registrations matches (24/24).
+- Risk of dynamic assembly of description strings: low — all names and descriptions are specified as string literals directly in `server.tool(...)` calls.
+- A nested tarball of the previous version `abhaybabbar-retellai-mcp-server-1.0.3.tgz` is in the package/ root (not analyzed as a separate unit, not executed).
+- Reviewed ~12 text files (package.json, README.md, src/index.ts, src/client.ts, src/tools/*.ts ×7, plus grep across build/ ×9).
+- Metadata mismatch: package.json version 1.0.4, but version "0.1.0" is hardcoded into the McpServer constructor.

@@ -1,32 +1,32 @@
-# UNIT: @eslint/mcp | npm v0.3.10 (published 2026-07-27T21:55:12.344Z) | рамки: npm-top,smithery-top20 | captured 2026-07-29 (static, tarball)
+# UNIT: @eslint/mcp | npm v0.3.10 (published 2026-07-27T21:55:12.344Z) | frames: npm-top,smithery-top20 | captured 2026-07-29 (static, tarball)
 
-Верифицированный MCP-сервер: `new McpServer({ name: "ESLint", version: "0.3.10" })` из `@modelcontextprotocol/sdk/server/mcp.js`, stdio-транспорт (`src/mcp-cli.js`), bin в package.json. Официальный пакет ESLint (repo eslint/rewrite, packages/mcp), автор Nicholas C. Zakas.
+Verified MCP server: `new McpServer({ name: "ESLint", version: "0.3.10" })` from `@modelcontextprotocol/sdk/server/mcp.js`, stdio transport (`src/mcp-cli.js`), bin in package.json. Official ESLint package (repo eslint/rewrite, packages/mcp), author Nicholas C. Zakas.
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Конструктору McpServer передаются только `name` и `version` — поля `instructions` нет; кастомного initialize-хендлера нет.
+Only `name` and `version` are passed to the McpServer constructor — there is no `instructions` field; there is no custom initialize handler.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-Всего инструментов: 1.
+A total of 1 tool.
 
 ### lint-files
 > Lint files using ESLint. You must provide a list of absolute file paths to the files you want to lint. The absolute file paths should be in the correct format for your operating system (e.g., forward slashes on Unix-like systems, backslashes on Windows).
 
-inputSchema: `{ filePaths: z.array(z.string().min(1)).nonempty() }` (без `.describe()` — комментарий в коде: Cursor ломается на describe в схеме).
+inputSchema: `{ filePaths: z.array(z.string().min(1)).nonempty() }` (without `.describe()` — comment in code: Cursor breaks on describe in schema).
 
-## NOTE: steering в runtime tool results (не в описании)
+## NOTE: steering in runtime tool results (not in the description)
 
-В хендлере `lint-files` (src/mcp-server.js:49-56) к результатам линтинга приклеиваются два императивных текстовых блока, которые модель получает как содержимое ответа инструмента:
+In the `lint-files` handler (src/mcp-server.js:49-56), two imperative text blocks are appended to the lint results, which the model receives as the tool response content:
 
 > "Here are the results of running ESLint on the provided files. Before doing anything else, you must display the full list to the user:"
 
 > "If the user asked to fix any issues found, proceed in fixing them. If the user did not ask to fix issues found, you must ask the user for confirmation before attempting to fix the issues found."
 
-Это управление поведением агента через канал tool-result, а не через description/instructions. Характер — консервативный/защитный (показать всё пользователю, спрашивать подтверждение перед фиксами), не конкурентно-вытесняющий.
+This is agent behavior management through the tool-result channel, not through description/instructions. The character is conservative/protective (show everything to the user, ask for confirmation before fixes), not competitively displacing.
 
 ## NOTES
-- Код не минифицирован, читаемый исходник с комментариями (src/ поставляется как есть, files: ["src"]).
-- Риск динамической сборки строк: отсутствует — все строки литеральные, никакой конкатенации/шаблонов в описаниях.
-- Просмотрено файлов: 5 из 5 в пакете (package.json, README.md, LICENSE, src/mcp-server.js, src/mcp-cli.js); анализ полный.
+- The code is not minified, readable source with comments (src/ is shipped as is, files: ["src"]).
+- Risk of dynamic string construction: absent — all strings are literals, with no concatenation/templates in descriptions.
+- Reviewed files: 5 of 5 in the package (package.json, README.md, LICENSE, src/mcp-server.js, src/mcp-cli.js); analysis complete.

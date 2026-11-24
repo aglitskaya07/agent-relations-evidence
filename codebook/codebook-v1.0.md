@@ -1,7 +1,5 @@
 # Codebook v1.0 — MCP Steering Index (frozen 29.07.2026, before the main wave)
 
-Translated from the Russian original (codebook-v1.0.ru.md). The original is authoritative.
-
 Status: **frozen version** (frozen before the main wave as a self-preregistration). Successor to codebook v0.1 (not included); changes relative to v0.1 follow from the pilot and the author's adjudication of 29.07.2026. After freezing, changes are made only in a new versioned file with a justification.
 
 ## Unit of assessment

@@ -1,17 +1,17 @@
-# UNIT: @abhiz123/todoist-mcp-server | npm v0.1.0 (published 2024-12-04T00:06:57.078Z) | рамки: pulsemcp | captured 2026-07-29 (static, tarball)
+# UNIT: @abhiz123/todoist-mcp-server | npm v0.1.0 (published 2024-12-04T00:06:57.078Z) | frames: pulsemcp | captured 2026-07-29 (static, tarball)
 
 ## VERDICT: MCP server
 
-Полноценный stdio MCP-сервер: `new Server({name: "todoist-mcp-server", version: "0.1.0"}, {capabilities: {tools: {}}})` из `@modelcontextprotocol/sdk` 0.5.0, транспорт `StdioServerTransport`, обёртка над Todoist REST API (`@doist/todoist-api-typescript`). Единственный файл кода: `package/dist/index.js` (333 строки, скомпилированный tsc, не минифицирован).
+Full stdio MCP server: `new Server({name: "todoist-mcp-server", version: "0.1.0"}, {capabilities: {tools: {}}})` from `@modelcontextprotocol/sdk` 0.5.0, transport `StdioServerTransport`, wrapper over Todoist REST API (`@doist/todoist-api-typescript`). The only code file: `package/dist/index.js` (333 lines, compiled by tsc, not minified).
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Конструктору Server передаются только `name`/`version` и `capabilities: {tools: {}}` — поля `instructions` нет нигде в пакете.
+Only `name`/`version` and `capabilities: {tools: {}}` are passed to the Server constructor — there is no `instructions` field anywhere in the package.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-5 инструментов, все описания дословно:
+5 tools, all descriptions verbatim:
 
 1. **todoist_create_task** — "Create a new task in Todoist with optional description, due date, and priority"
    - content: "The content/title of the task"
@@ -38,11 +38,11 @@
 5. **todoist_complete_task** — "Mark a task as complete by searching for it by name"
    - task_name: "Name/content of the task to search for and complete"
 
-Маркер-скан steering-паттернов (instead of built-in, most powerful, always default, precedence, LAST resort, MUST use, primary, prefer, Perfect for и т.д.): 0 совпадений. Описания чисто функциональные, без попыток управлять приоритетами агента.
+Marker scan of steering patterns (instead of built-in, most powerful, always default, precedence, LAST resort, MUST use, primary, prefer, Perfect for, etc.): 0 matches. The descriptions are purely functional, with no attempts to direct the agent's priorities.
 
 ## NOTES
 
-- Код не минифицирован (обычный tsc-вывод с комментариями).
-- Все строки описаний — статические литералы в объектах-константах; риска динамической сборки строк нет (нет конкатенации/шаблонов в definitions, нет fetch внешних текстов).
-- Файлов в пакете 5: LICENSE, README.md, package.json, dist/index.js, dist/index.d.ts. Просмотрены dist/index.js (весь) и package.json; README — маркетинговый, серверного текста не содержит (не канал instructions).
-- Особенность поведения (не steering, но заметно): update/delete/complete ищут задачу по substring-совпадению имени без подтверждения — риск удаления/закрытия не той задачи при неоднозначном имени.
+- The code is not minified (ordinary tsc output with comments).
+- All description strings are static literals in constant objects; there is no risk of dynamic string construction (no concatenation/templates in definitions, no fetching of external texts).
+- There are 5 files in the package: LICENSE, README.md, package.json, dist/index.js, dist/index.d.ts. dist/index.js (entire file) and package.json were examined; README is marketing text and contains no server text (not an instructions channel).
+- Behavioral feature (not steering, but noticeable): update/delete/complete look up the task by substring match on the name without confirmation — risk of deleting/closing the wrong task when the name is ambiguous.

@@ -1,11 +1,10 @@
 {
  "date": "2026-07-30",
- "note": "Verbatim formulations from captured MCP server texts, grouped into eight classes. label = original Russian label, label_en = English.",
+ "note": "Verbatim formulations from captured MCP server texts, grouped into eight classes.",
  "classes": [
   {
    "id": "voice",
-   "label_en": "Speaking for the user",
-   "label": "Речь от имени пользователя",
+   "label": "Speaking for the user",
    "servers": 1,
    "quotes": [
     {
@@ -18,8 +17,7 @@
   },
   {
    "id": "reward",
-   "label_en": "Reward to the agent",
-   "label": "Награда агенту",
+   "label": "Reward to the agent",
    "servers": 2,
    "quotes": [
     {
@@ -38,8 +36,7 @@
   },
   {
    "id": "memory",
-   "label_en": "Suppressing the model's own knowledge",
-   "label": "Подавление знаний модели",
+   "label": "Suppressing the model's own knowledge",
    "servers": 8,
    "quotes": [
     {
@@ -94,8 +91,7 @@
   },
   {
    "id": "displace",
-   "label_en": "Displacing other tools",
-   "label": "Вытеснение чужого инструмента",
+   "label": "Displacing other tools",
    "servers": 8,
    "quotes": [
     {
@@ -150,8 +146,7 @@
   },
   {
    "id": "primary",
-   "label_en": "Declaring itself primary",
-   "label": "Объявление себя главным",
+   "label": "Declaring itself primary",
    "servers": 6,
    "quotes": [
     {
@@ -194,8 +189,7 @@
   },
   {
    "id": "order",
-   "label_en": "Unconditional command",
-   "label": "Безусловный приказ",
+   "label": "Unconditional command",
    "servers": 17,
    "quotes": [
     {
@@ -304,8 +298,7 @@
   },
   {
    "id": "triggers",
-   "label_en": "Expanding when to trigger",
-   "label": "Расширение зоны срабатывания",
+   "label": "Expanding when to trigger",
    "servers": 8,
    "quotes": [
     {
@@ -360,8 +353,7 @@
   },
   {
    "id": "threat",
-   "label_en": "Threat of consequences",
-   "label": "Угроза последствий",
+   "label": "Threat of consequences",
    "servers": 1,
    "quotes": [
     {

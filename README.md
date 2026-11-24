@@ -1,7 +1,6 @@
 # Agent relations: evidence pack
 
-Data behind the study **«Мелкий шрифт, который читаю не я: как MCP-коннекторы манипулируют нашими агентами»** (*Fine print I don't read: how MCP connectors manipulate our agents*), Nailia Aglitskaya, October 2026.
-Article (Russian): https://nailia.work/agent-relations/
+Data behind the study **Fine print I don't read: how MCP connectors manipulate our agents**, Nailia Aglitskaya, July–October 2026.
 
 When you connect an MCP server to an AI agent, the server sends the agent two texts the user never sees: an `instructions` block and a description for every tool. Both sit next to the system prompt in every session. This pack documents how vendors use that channel to promote themselves to the agent, from plain description to steering and manipulation, and contains everything needed to check the findings.
 
@@ -35,7 +34,7 @@ Full definitions, edge cases and what does *not* count as pressure: [`codebook/c
 
 | Folder | Contents |
 |---|---|
-| [`codebook/`](codebook/) | Labeling codebook v1.0, frozen before the main wave. English translation and Russian original. |
+| [`codebook/`](codebook/) | Labeling codebook v1.0, frozen before the main wave. |
 | [`data/`](data/) | The three labeled datasets and the catalog of formulations, with a field dictionary. |
 | [`raw-captures/`](raw-captures/) | Raw server responses and dossiers with the exact vendor text the raters saw, July 2026. |
 | [`experiment/`](experiment/) | Does the description change the agent's choice? Design and per-run results. |
@@ -43,10 +42,11 @@ Full definitions, edge cases and what does *not* count as pressure: [`codebook/c
 | [`truncation-test/`](truncation-test/) | How much server text reaches the agent in Claude Code; stub server and runs. |
 | [`recheck-2026-10/`](recheck-2026-10/) | October recaptures: which July formulations are still shipping. |
 | [`firecrawl-case/`](firecrawl-case/) | The case that started the study, reconstructed from the vendor's public commit history. |
+| [`audit-prompt.md`](audit-prompt.md) | A prompt to audit the MCP servers connected to your own agent. |
 
 ## On naming servers
 
-The article names no server except Firecrawl: it is about the practice, not about culprits. This pack keeps the names, because without them the captures cannot be checked against live servers. Every text quoted here was sent by the vendor to any client that connected and is reproduced verbatim with its capture date. A group is the result of the method described below, applied to the text on that date, not a judgment about a company. Many texts have changed since; see `recheck-2026-10/`. If you represent a vendor and believe a capture or label is wrong, write to the address below and I will correct or annotate it.
+The write-up of this study names no server except Firecrawl: it is about the practice, not about culprits. This pack keeps the names, because without them the captures cannot be checked against live servers. Every text quoted here was sent by the vendor to any client that connected and is reproduced verbatim with its capture date. A group is the result of the method described below, applied to the text on that date, not a judgment about a company. Many texts have changed since; see `recheck-2026-10/`. If you represent a vendor and believe a capture or label is wrong, write to the address below and I will correct or annotate it.
 
 ## How the labeling worked
 
@@ -81,12 +81,12 @@ printf '%s\n' \
 
 The first response carries `instructions`, the second the tool descriptions. Some servers need an API key in the environment just to start. A step-by-step reproduction for Firecrawl, including the hosted server, is in [`firecrawl-case/`](firecrawl-case/).
 
-To audit the servers connected to your own agent, use the prompt in the "для агента" mode of the article.
+To audit the servers connected to your own agent, paste the prompt from [`audit-prompt.md`](audit-prompt.md) into a fresh chat.
 
 ## License and citation
 
 Text, data and code in this repository: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Quoted server texts belong to their vendors and are reproduced for research and criticism.
 
-> Aglitskaya, N. (2026). *Agent relations: how MCP servers steer AI agents. Evidence pack.* https://nailia.work/agent-relations/
+> Aglitskaya, N. (2026). *Agent relations: how MCP servers steer AI agents. Evidence pack.* https://github.com/aglitskaya07/agent-relations-evidence
 
 Contact: Nailia Aglitskaya · pr.aglickaya@gmail.com

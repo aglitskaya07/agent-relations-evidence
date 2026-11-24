@@ -1,9 +1,9 @@
-# UNIT: server-filesystem@2026.7.10 | npm @modelcontextprotocol/server-filesystem (референс-сервер MCP) | captured 2026-07-29 (static, tarball)
+# UNIT: server-filesystem@2026.7.10 | npm @modelcontextprotocol/server-filesystem (reference MCP server) | captured 2026-07-29 (static, tarball)
 
 ## CHANNEL: instructions, npm (static)
-(см. экстракцию ниже — если в коде нет, раздел будет помечен «не обнаружены»)
+(see extraction below — if there is none in the code, the section will be marked "not found")
 
-Экстракция: instructions НЕ ОБНАРУЖЕНЫ. Конструктор в `dist/index.js` (строки 130–133):
+Extraction: instructions NOT FOUND. Constructor in `dist/index.js` (lines 130–133):
 
 ```js
 const server = new McpServer({
@@ -12,11 +12,11 @@ const server = new McpServer({
 });
 ```
 
-Поле `instructions` не передаётся ни конструктору, ни в ответ initialize. Grep по всем файлам `dist/` на `instructions` — ноль совпадений. Других инструкционных строк/профилей в коде нет.
+The `instructions` field is not passed to the constructor or in the initialize response. Grep across all `dist/` files for `instructions` — zero matches. There are no other instruction strings/profiles in the code.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-Все 14 инструментов зарегистрированы через `server.registerTool(...)` в `dist/index.js`. Описания дословно (в исходнике — конкатенация строковых литералов, склеено):
+All 14 tools are registered via `server.registerTool(...)` in `dist/index.js`. Descriptions verbatim (in the source — concatenation of string literals, joined):
 
 1. **read_file** (title: "Read File (Deprecated)")
    > Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead.
@@ -60,14 +60,14 @@ const server = new McpServer({
 14. **list_allowed_directories** (title: "List Allowed Directories")
     > Returns the list of directories that this server is allowed to access. Subdirectories within these allowed directories are also accessible. Use this to understand which directories and their nested paths are available before trying to access files.
 
-### Наблюдения по steering-маркерам
-- Нет ни одного агрессивного маркера (PRECEDENCE, LAST resort, always default, MUST use, primary interface и т.п.).
-- Мягкие маркеры внутри описаний: «This is more efficient than reading files one by one» (read_multiple_files), «essential for understanding directory structure» (list_directory), «Perfect for setting up…» (create_directory), «perfect for understanding file characteristics» (get_file_info), «Great for finding files» (search_files) — типичная лёгкая реклама пригодности инструмента, без кросс-серверного вытеснения.
-- Повторяющийся ограничитель «Only works within allowed directories» — safety-фрейминг, не steering.
-- Все инструменты имеют MCP annotations (readOnlyHint/destructiveHint/openWorldHint: false).
+### Observations on steering markers
+- There is not a single aggressive marker (PRECEDENCE, LAST resort, always default, MUST use, primary interface, etc.).
+- Soft markers inside descriptions: "This is more efficient than reading files one by one" (read_multiple_files), "essential for understanding directory structure" (list_directory), "Perfect for setting up…" (create_directory), "perfect for understanding file characteristics" (get_file_info), "Great for finding files" (search_files) — typical light advertising of tool suitability, without cross-server displacement.
+- Repeated limiter "Only works within allowed directories" — safety framing, not steering.
+- All tools have MCP annotations (readOnlyHint/destructiveHint/openWorldHint: false).
 
 ## NOTES (static analysis)
-- Код НЕ минифицирован: читаемый tsc-выхлоп с комментариями.
-- Все описания — статические строковые литералы (конкатенация «+»), интерполяции/шаблонов в описаниях нет; риск динамической сборки инструкционных строк — отсутствует.
-- Просмотрены файлы: dist/index.js (полностью), dist/lib.js, dist/path-utils.js, dist/path-validation.js, dist/roots-utils.js (grep на instructions/registerTool — пусто), package.json, README.md не содержит runtime-строк.
-- Расхождение версий: package.json version = 2026.7.10, но в конструкторе сервер объявляет себя как version "0.2.0", name "secure-filesystem-server".
+- Code is NOT minified: readable tsc output with comments.
+- All descriptions are static string literals (concatenation with "+"), there are no interpolations/templates in descriptions; the risk of dynamic assembly of instruction strings is absent.
+- Reviewed files: dist/index.js (in full), dist/lib.js, dist/path-utils.js, dist/path-validation.js, dist/roots-utils.js (grep for instructions/registerTool — empty), package.json, README.md does not contain runtime strings.
+- Version mismatch: package.json version = 2026.7.10, but in the server constructor it declares itself as version "0.2.0", name "secure-filesystem-server".

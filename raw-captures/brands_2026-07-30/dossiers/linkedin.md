@@ -1,15 +1,15 @@
-# UNIT: linkedin | LinkedIn | github stickerdaniel/linkedin-mcp-server | тип автора: комьюнити | captured 2026-07-29 (static source)
+# UNIT: linkedin | LinkedIn | github stickerdaniel/linkedin-mcp-server | author type: community | captured 2026-07-29 (static source)
 
-Это MCP-сервер: Python, FastMCP. Конструктор — `linkedin_mcp_server/server.py:153` (`mcp = FastMCP("mcp-server-linkedin", version=..., lifespan=..., mask_error_details=True, auth=...)`). Инструменты регистрируются декоратором `@mcp.tool(...)` в `linkedin_mcp_server/tools/{person,company,job,messaging,feed,post}.py` и один в `server.py`.
+This is an MCP server: Python, FastMCP. Constructor: `linkedin_mcp_server/server.py:153` (`mcp = FastMCP("mcp-server-linkedin", version=..., lifespan=..., mask_error_details=True, auth=...)`). Tools are registered with the `@mcp.tool(...)` decorator in `linkedin_mcp_server/tools/{person,company,job,messaging,feed,post}.py` and one in `server.py`.
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Параметр `instructions=` конструктору FastMCP не передаётся; единственное вхождение слова «instructions» в репозитории — в CONTRIBUTING.md про setup. Ответ initialize нигде вручную не формируется.
+The `instructions=` parameter is not passed to the FastMCP constructor; the only occurrence of the word "instructions" in the repository is in CONTRIBUTING.md about setup. The initialize response is not manually formed anywhere.
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-19 инструментов, описания = docstring функции (FastMCP берёт docstring как description; `description=` нигде не задан).
+19 tools, descriptions = function docstring (FastMCP takes the docstring as description; `description=` is not set anywhere).
 
 ### close_session
 title: "Close Session"; annotations: {'destructiveHint': True}
@@ -420,8 +420,8 @@ Returns:
     posted date, and reaction/comment counts.
 ```
 
-## Дополнительный канал (не instructions, не tool description)
+## Additional channel (not instructions, not tool description)
 
-`manifest.json` (MCPB-бандл) содержит собственные короткие `tools[].description` и `description`/`long_description` бандла — это метаданные упаковки для каталога клиента, они не совпадают с runtime-описаниями выше. Пример `description` бандла: "MCP server that gives Claude access to LinkedIn profiles, companies, job details, and people search through your own account".
+`manifest.json` (MCPB bundle) contains its own short `tools[].description` and bundle `description`/`long_description` — these are packaging metadata for the client catalog, they do not match the runtime descriptions above. Example bundle `description`: "MCP server that gives Claude access to LinkedIn profiles, companies, job details, and people search through your own account".
 
-`linkedin_mcp_server/update_check.py` + `UpdateNoticeMiddleware` (server.py:171) один раз за процесс добавляют к результату инструмента дополнительный текстовый блок с уведомлением об обновлении — динамически собираемый текст, попадающий в контекст модели.
+`linkedin_mcp_server/update_check.py` + `UpdateNoticeMiddleware` (server.py:171) once per process append an additional text block with an update notice to the tool result — dynamically assembled text that reaches the model context.

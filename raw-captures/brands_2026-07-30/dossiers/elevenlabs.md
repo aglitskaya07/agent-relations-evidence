@@ -1,15 +1,15 @@
-# UNIT: elevenlabs | ElevenLabs | github elevenlabs/elevenlabs-mcp | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: elevenlabs | ElevenLabs | github elevenlabs/elevenlabs-mcp | author type: official | captured 2026-07-29 (static source)
 
-Репозиторий: Python, MCP-сервер на `mcp.server.fastmcp.FastMCP`. Точка входа `elevenlabs_mcp/server.py` (1544 строки), 27 инструментов через декоратор `@mcp.tool(...)`. Это полноценный MCP-сервер (не SDK/клиент/прокси).
+Repository: Python, MCP server on `mcp.server.fastmcp.FastMCP`. Entry point `elevenlabs_mcp/server.py` (1544 lines), 27 tools via the `@mcp.tool(...)` decorator. This is a full MCP server (not an SDK/client/proxy).
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Конструктор вызывается как `mcp = FastMCP("ElevenLabs")` (elevenlabs_mcp/server.py:79) — без параметра `instructions`. Никаких ручных обработчиков `initialize` в репозитории нет.
+The constructor is called as `mcp = FastMCP("ElevenLabs")` (elevenlabs_mcp/server.py:79) — without the `instructions` parameter. There are no manual `initialize` handlers in the repository.
 
-### Смежный канал (не MCP-instructions): ELEVENLABS.md, подключаемый как `contextFileName` в gemini-extension.json
+### Related channel (not MCP-instructions): ELEVENLABS.md, loaded as `contextFileName` in gemini-extension.json
 
-Файл `ELEVENLABS.md` (3807 символов) объявлен в `gemini-extension.json` как `contextFileName`, то есть доставляется агенту как контекст расширения, а не через MCP-канал instructions. Дословно:
+The file `ELEVENLABS.md` (3807 characters) is declared in `gemini-extension.json` as `contextFileName`, that is, it is delivered to the agent as extension context, not through the MCP instructions channel. Verbatim:
 
 ```
 # ElevenLabs Agent Context
@@ -78,7 +78,7 @@ Your process for handling audio requests follows these patterns:
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Всего инструментов: 27 (<= 40, включены все). Описания приведены дословно из исходника; там, где описание — f-string, оставлена исходная запись с подстановкой `{get_output_mode_description(output_mode)}` (значение зависит от env `ELEVENLABS_MCP_OUTPUT_MODE`, см. конец раздела).
+Total tools: 27 (<= 40, all included). Descriptions are given verbatim from the source; where the description is an f-string, the original form with the substitution `{get_output_mode_description(output_mode)}` is preserved (the value depends on env `ELEVENLABS_MCP_OUTPUT_MODE`, see the end of the section).
 
 ### text_to_speech (server.py:255)
 
@@ -507,7 +507,7 @@ f"""Generate background music for one or more video files. {get_output_mode_desc
     """
 ```
 
-### Подстановка в f-string описаниях: `get_output_mode_description(output_mode)` (utils.py:512)
+### Substitution in f-string descriptions: `get_output_mode_description(output_mode)` (utils.py:512)
 
 ```
     if output_mode == "files":

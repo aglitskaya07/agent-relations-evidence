@@ -1,33 +1,33 @@
-# UNIT: firecrawl | Firecrawl | github firecrawl/firecrawl-mcp-server | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: firecrawl | Firecrawl | github firecrawl/firecrawl-mcp-server | author type: official | captured 2026-07-29 (static source)
 
 ## SERVER CONFIRMED
-FastMCP-сервер на TypeScript. `new FastMCP<SessionData>({ ... instructions ... })` в `src/index.ts`; инструменты регистрируются через `server.addTool({...})` в `src/index.ts`, `src/research.ts`, `src/monitor.ts`. Есть legacy-реализация на низкоуровневом `new Server(...)` в `src/legacy/index.md` (архивный markdown-дамп, не собирается).
+FastMCP server in TypeScript. `new FastMCP<SessionData>({ ... instructions ... })` in `src/index.ts`; tools are registered via `server.addTool({...})` in `src/index.ts`, `src/research.ts`, `src/monitor.ts`. There is a legacy implementation on low-level `new Server(...)` in `src/legacy/index.md` (archival markdown dump, not built).
 
-## CHANNEL: instructions (1579 chars суммарно по 3 профилям)
+## CHANNEL: instructions (1579 chars total across 3 profiles)
 
-### FULL_PROFILE_INSTRUCTIONS — index.ts:829 (515 chars), профиль 'full' при наличии account
+### FULL_PROFILE_INSTRUCTIONS — index.ts:829 (515 chars), profile 'full' when account is present
 
 ```
 Firecrawl provides web search, page retrieval, site URL discovery, multi-page collection, structured extraction, monitoring, and asynchronous research. Match the requested operation to the tool boundary: firecrawl_scrape retrieves one supplied page, firecrawl_map enumerates URLs under a site without retrieving their content, and firecrawl_agent starts multi-source research whose result is read with firecrawl_agent_status. Provide only the required inputs and account for stated network or external side effects.
 ```
 
-### KEYLESS_PROFILE_INSTRUCTIONS — index.ts:830 (671 chars), профиль 'full' без аккаунта
+### KEYLESS_PROFILE_INSTRUCTIONS — index.ts:830 (671 chars), profile 'full' without an account
 
 ```
 Without authentication, this endpoint exposes Search, Scrape, and Parse with usage limits. An OAuth connection or Authorization bearer API key exposes account tools; unavailable tools return connection guidance. Firecrawl provides web search, page retrieval, site URL discovery, multi-page collection, structured extraction, monitoring, and asynchronous research. Match the requested operation to the tool boundary: firecrawl_scrape retrieves one supplied page, firecrawl_map enumerates URLs under a site without retrieving their content, and firecrawl_agent starts multi-source research whose result is read with firecrawl_agent_status. Provide only the required inputs.
 ```
 
-### SEARCH_PROFILE_INSTRUCTIONS — index.ts:834 (393 chars), профиль 'search'
+### SEARCH_PROFILE_INSTRUCTIONS — index.ts:834 (393 chars), profile 'search'
 
 ```
 Firecrawl provides web and research search. Use firecrawl_search to find relevant results across the web and specialized indexes. Use the firecrawl_research_* tools to search academic and research literature, expand from anchor papers via the citation graph, read full-text passages from a specific paper, and search public code repositories. All tools are read-only and return ranked results.
 ```
 
-Точки передачи в конструктор: `instructions: account ? FULL_PROFILE_INSTRUCTIONS : KEYLESS_PROFILE_INSTRUCTIONS` (index.ts:853); `instructions: SEARCH_PROFILE_INSTRUCTIONS` (index.ts:882); `instructions: profile.instructions` (index.ts:909, поле типа ServerProfile).
+Transfer points in the constructor: `instructions: account ? FULL_PROFILE_INSTRUCTIONS : KEYLESS_PROFILE_INSTRUCTIONS` (index.ts:853); `instructions: SEARCH_PROFILE_INSTRUCTIONS` (index.ts:882); `instructions: profile.instructions` (index.ts:909, ServerProfile type field).
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-27 регистраций addTool, 26 уникальных имён. `firecrawl_search` регистрируется дважды с РАЗНЫМИ описаниями (основной профиль index.ts:1844 и search-профиль index.ts:2824) — приведены оба. Все описания — статические литералы без интерполяции `${...}`.
+27 registrations addTool, 26 unique names. `firecrawl_search` is registered twice with DIFFERENT descriptions (main profile index.ts:1844 and search profile index.ts:2824) — both are included. All descriptions are static literals without interpolation `${...}`.
 
 ### 1. firecrawl_scrape  _(src/index.ts:1756)_
 

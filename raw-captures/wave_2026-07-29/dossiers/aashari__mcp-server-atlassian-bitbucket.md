@@ -1,15 +1,15 @@
-# UNIT: @aashari/mcp-server-atlassian-bitbucket | npm v3.1.0 (published 2026-02-17T08:38:50.868Z) | рамки: pulsemcp | captured 2026-07-29 (static, tarball)
+# UNIT: @aashari/mcp-server-atlassian-bitbucket | npm v3.1.0 (published 2026-02-17T08:38:50.868Z) | frames: pulsemcp | captured 2026-07-29 (static, tarball)
 
-Подтверждён как MCP-сервер: `dist/index.js` создаёт `new McpServer({ name: PACKAGE_NAME, version: VERSION })` (строки 30–38), поддерживает STDIO и HTTP-транспорт, регистрирует инструменты через `registerTools(server)` из двух модулей: `dist/tools/atlassian.api.tool.js` и `dist/tools/atlassian.repositories.tool.js`.
+Confirmed as an MCP server: `dist/index.js` creates `new McpServer({ name: PACKAGE_NAME, version: VERSION })` (lines 30–38), supports STDIO and HTTP transport, registers tools via `registerTools(server)` from two modules: `dist/tools/atlassian.api.tool.js` and `dist/tools/atlassian.repositories.tool.js`.
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Конструктору `McpServer` передаются только `name` и `version` — поля `instructions` нет ни в одном из трёх мест создания сервера (`createMcpServer` вызывается для STDIO, per-session HTTP и fallback). Grep по `instructions` в dist даёт только комментарий в `formatter.util.js` про пагинацию.
+Only `name` and `version` are passed to the `McpServer` constructor — there is no `instructions` field in any of the three server creation locations (`createMcpServer` is called for STDIO, per-session HTTP, and fallback). Grep for `instructions` in dist returns only a comment in `formatter.util.js` about pagination.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-Всего инструментов: 6. Все описания — статические литералы-константы (BB_*_DESCRIPTION), приведены дословно.
+Total tools: 6. All descriptions are static literal constants (BB_*_DESCRIPTION), given verbatim.
 
 ### bb_get (title: "Bitbucket GET Request", readOnlyHint: true)
 
@@ -159,13 +159,13 @@ Clone a Bitbucket repository to your local filesystem using SSH (preferred) or H
 Provide `repoSlug` and `targetPath` (absolute path). Clones into `targetPath/repoSlug`. SSH keys must be configured; falls back to HTTPS if unavailable.
 ```
 
-## Наблюдения по steering-маркерам
+## Observations on steering markers
 
-Жёстких steering-паттернов («primary interface», «takes precedence», «instead of built-in», «Do NOT answer from memory») нет. Ближайшее к императивам: «ALWAYS use `jq` param to filter response fields. Unfiltered responses are very expensive!» (bb_get) — это нацелено на экономию токенов, а не на перехват трафика у других инструментов. Отмечено: bb_clone исполняет git clone на локальной ФС агента (SSH/HTTPS) — вектор side-effect за пределами API, но описание нейтральное.
+There are no hard steering patterns ("primary interface", "takes precedence", "instead of built-in", "Do NOT answer from memory"). The closest thing to imperatives: "ALWAYS use `jq` param to filter response fields. Unfiltered responses are very expensive!" (bb_get) — this is aimed at saving tokens, not at diverting traffic away from other tools. Noted: bb_clone runs git clone on the agent's local filesystem (SSH/HTTPS) — a side-effect vector outside the API, but the description is neutral.
 
 ## NOTES
 
-- Код НЕ минифицирован: обычный tsc-выход (CommonJS) с комментариями и логированием, читается напрямую.
-- Риск динамической сборки строк описаний: низкий — все 6 описаний это статические template-литералы-константы без интерполяции переменных (кроме нуля подстановок); имя/версия сервера берутся из constants.util.js.
-- Поле instructions отсутствует во всех трёх точках создания McpServer в dist/index.js.
-- Просмотрено: полный листинг пакета (82 файла), прочитаны целиком dist/tools/atlassian.api.tool.js и dist/tools/atlassian.repositories.tool.js, фрагменты dist/index.js, package.json; grep по registerTool/server.tool/instructions по всему dist.
+- Code is NOT minified: ordinary tsc output (CommonJS) with comments and logging, readable directly.
+- Risk of dynamic construction of descriptions: low — all 6 descriptions are static template literals without variable interpolation (except zero substitutions); the server name/version are taken from constants.util.js.
+- The instructions field is absent in all three McpServer creation points in dist/index.js.
+- Reviewed: full package listing (82 files), fully read dist/tools/atlassian.api.tool.js and dist/tools/atlassian.repositories.tool.js, fragments of dist/index.js, package.json; grep for registerTool/server.tool/instructions across all dist.

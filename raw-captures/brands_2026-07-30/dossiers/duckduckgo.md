@@ -1,15 +1,15 @@
-# UNIT: duckduckgo | DuckDuckGo | github nickclyde/duckduckgo-mcp-server | тип автора: комьюнити | captured 2026-07-29 (static source)
+# UNIT: duckduckgo | DuckDuckGo | github nickclyde/duckduckgo-mcp-server | author type: community | captured 2026-07-29 (static source)
 
-Подтверждение: это MCP-сервер. Python, `mcp.server.fastmcp.FastMCP`, транспорты stdio / sse / streamable-http, два инструмента, зарегистрированных декоратором `@mcp.tool()` в `src/duckduckgo_mcp_server/server.py`.
+Confirmation: this is an MCP server. Python, `mcp.server.fastmcp.FastMCP`, transports stdio / sse / streamable-http, two tools registered by the `@mcp.tool()` decorator in `src/duckduckgo_mcp_server/server.py`.
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Конструктор вызывается как `mcp = FastMCP("ddg-search")` (server.py:634) — передано только имя, параметр `instructions` не задан. Строки "instructions" в коде встречаются только внутри описаний инструментов и в SECURITY.md.
+The constructor is called as `mcp = FastMCP("ddg-search")` (server.py:634) — only the name is passed, the `instructions` parameter is not set. The string "instructions" appears in the code only inside tool descriptions and in SECURITY.md.
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Всего инструментов: 2.
+A total of 2 tools.
 
 ### 1. `search` (server.py:721-732)
 ```
@@ -38,14 +38,14 @@ Fetch and extract the main text content from a webpage. Strips out navigation, h
         ctx: MCP context for logging.
 ```
 
-## Прочие текстовые каналы, попадающие в модель
+## Other text channels included in the model
 
-Не описания инструментов, но текст, возвращаемый в тело ответа инструмента `search` при нуле результатов (`format_results_for_llm`, server.py:136-154):
+Not tool descriptions, but text returned in the body of the `search` tool response when there are zero results (`format_results_for_llm`, server.py:136-154):
 
 ```
 No results were found for your search query. This could be due to DuckDuckGo's bot detection or the query returned no matches. Please try rephrasing your search or try again in a few minutes.
 ```
-и опциональная добавка:
+and optional addition:
 ```
  If this persists, DuckDuckGo may be blocking this server's TLS fingerprint; installing the optional browser backend (pip install 'duckduckgo-mcp-server[browser]') enables Chrome TLS impersonation, which typically resolves it.
 ```

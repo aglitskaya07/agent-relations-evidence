@@ -89,9 +89,9 @@ def load_key():
     sys.exit("TYPESAFE_API_KEY environment variable is not set")
 
 
-CYR = re.compile(r"[А-Яа-яЁё]")
-# researcher section headings to skip ("STEERING-МАРКЕРЫ" = "steering markers", matched literally)
-RESEARCHER_HEADERS = {"NOTES", "VERDICT", "NOT-A-SERVER", "SERVER CONFIRMED", "SERVER CHECK", "PATH MISSING", "UNIT", "STEERING-МАРКЕРЫ"}
+CYR = re.compile(r"[\u0400-\u04FF]")
+# researcher section headings to skip
+RESEARCHER_HEADERS = {"NOTES", "VERDICT", "NOT-A-SERVER", "SERVER CONFIRMED", "SERVER CHECK", "PATH MISSING", "UNIT", "STEERING MARKERS"}
 LAT = re.compile(r"[A-Za-z]")
 
 
@@ -117,8 +117,8 @@ def vendor_sentences(path):
             s = line.strip()
             if not s or s.startswith("```") or s.startswith("#"):
                 continue
-            if re.search(r"[А-Яа-яЁё]{4,}", s):
-                continue  # a Russian-language researcher note (no vendor in the sample has Russian text)
+            if re.search(r"[\u0400-\u04FF]{4,}", s):
+                continue  # a researcher note, not vendor text
             s = re.sub(r"^[-*>\d.)\s]+", "", s).replace("**", "").strip(" \"'`")
             for sent in re.split(r"(?<!e\.g\.)(?<!i\.e\.)(?<=[.!?])\s+(?=[A-Za-z\"'`(])", s):
                 sent = sent.strip()

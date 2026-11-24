@@ -1,31 +1,31 @@
-# UNIT: docker-hub | Docker Hub | github docker/hub-mcp | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: docker-hub | Docker Hub | github docker/hub-mcp | author type: official | captured 2026-07-29 (static source)
 
 ## SERVER CONFIRMED
 
-TypeScript. `src/server.ts:41` — `new Server({name:'dockerhub-mcp-server', version:'1.0.0'}, {capabilities:{tools:{}}})`, где `Server` = `McpServer` из `@modelcontextprotocol/sdk/server/mcp.js`. Транспорты: `StdioServerTransport` и `StreamableHTTPServerTransport` (`POST /mcp` через express). Инструменты регистрируются через `asset.RegisterTools()` в четырёх модулях: `src/repos.ts`, `src/accounts.ts`, `src/search.ts`, `src/scout.ts`.
+TypeScript. `src/server.ts:41` — `new Server({name:'dockerhub-mcp-server', version:'1.0.0'}, {capabilities:{tools:{}}})`, where `Server` = `McpServer` from `@modelcontextprotocol/sdk/server/mcp.js`. Transports: `StdioServerTransport` and `StreamableHTTPServerTransport` (`POST /mcp` via express). Tools are registered through `asset.RegisterTools()` in four modules: `src/repos.ts`, `src/accounts.ts`, `src/search.ts`, `src/scout.ts`.
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Второй аргумент конструктора `McpServer` содержит только `capabilities`; поля `instructions` нет. Грепы по `instructions` в `src/` и `package.json` — 0 совпадений. Обработчика `initialize` вручную нет (используется дефолт SDK).
+The second argument to the `McpServer` constructor contains only `capabilities`; there is no `instructions` field. Greps for `instructions` in `src/` and `package.json` return 0 matches. There is no manual `initialize` handler (the SDK default is used).
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-13 инструментов (совпадает с `tools.txt`). Описания приведены дословно из вызовов `this.server.registerTool(...)` — это то, что реально уходит в `tools/list`.
+13 tools (matches `tools.txt`). Descriptions are given verbatim from calls to `this.server.registerTool(...)` — this is what actually goes into `tools/list`.
 
-Важное замечание об источнике: в корне репозитория есть сгенерированный `tools.json`, но он НЕ отражает боевые описания — генератор `src/scripts/toolsList.ts` подставляет `description: tool.title, // Use title instead of description to have less noise in the tools list`. Поэтому в `tools.json` вместо описаний лежат короткие тайтлы. Ниже — описания из исходников; для сравнения дан и тайтл из `tools.json`.
+Important note on the source: there is a generated `tools.json` in the repository root, but it does NOT reflect the production descriptions — the `src/scripts/toolsList.ts` generator substitutes `description: tool.title, // Use title instead of description to have less noise in the tools list`. Therefore `tools.json` contains short titles instead of descriptions. Below are the descriptions from the source files; the title from `tools.json` is also given for comparison.
 
 ### 1. listRepositoriesByNamespace
 `src/repos.ts:237`
 > List paginated repositories by namespace
 
-(в tools.json как description подставлен title: `List Repositories by Organisation (namespace)`; annotations.title: `List Repositories by Namespace`)
+(in tools.json as description, title is substituted: `List Repositories by Organisation (namespace)`; annotations.title: `List Repositories by Namespace`)
 
 ### 2. createRepository
 `src/repos.ts:291`
 > Create a new repository in the given namespace. You MUST ask the user for the repository name and if the repository has to be public or private. Can optionally pass a description.\nIMPORTANT: Before calling this tool, you must ensure you have:\n The repository name (name).
 
-(в исходнике `\n` — экранированные переводы строки внутри одиночной кавычки; tools.json title: `Create a repository in organisation (namespace) or personal namespace`; annotations.title: `Create Repository in namespace`)
+(in the source `\n` are escaped line breaks inside single quotes; tools.json title: `Create a repository in organisation (namespace) or personal namespace`; annotations.title: `Create Repository in namespace`)
 
 ### 3. getRepositoryInfo
 `src/repos.ts:309`

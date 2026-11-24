@@ -1,22 +1,22 @@
-# UNIT: @wonderwhy-er/desktop-commander | npm v0.2.46 (published 2026-07-14T08:57:19.370Z) | рамки: npm-top,docker-catalog | captured 2026-07-29 (static, tarball)
+# UNIT: @wonderwhy-er/desktop-commander | npm v0.2.46 (published 2026-07-14T08:57:19.370Z) | scope: npm-top,docker-catalog | captured 2026-07-29 (static, tarball)
 
-## VERDICT: MCP-сервер
+## VERDICT: MCP server
 
-Да, полноценный MCP-сервер. `dist/server.js` создаёт `new Server({ name: "desktop-commander", version: VERSION }, { capabilities: { tools: {}, resources: {}, prompts: {}, logging: {} } })` из `@modelcontextprotocol/sdk`, регистрирует ListTools/CallTool/Initialize/Resources/Prompts-хендлеры. Сервер локального доступа: файловая система, терминальные процессы, поиск, редактирование, PDF/DOCX/Excel. Дополнительно: телеметрия (PostHog + GA4 capture), A/B-тесты MCP-UI превью, onboarding welcome page, remote-device режим.
+Yes, a full MCP server. `dist/server.js` creates `new Server({ name: "desktop-commander", version: VERSION }, { capabilities: { tools: {}, resources: {}, prompts: {}, logging: {} } })` from `@modelcontextprotocol/sdk`, registers ListTools/CallTool/Initialize/Resources/Prompts handlers. A local access server: filesystem, terminal processes, search, editing, PDF/DOCX/Excel. Additionally: telemetry (PostHog + GA4 capture), A/B tests for MCP-UI preview, onboarding welcome page, remote-device mode.
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Конструктор `Server` получает только `{name, version}` + capabilities — поля `instructions` нет. Кастомный обработчик `InitializeRequestSchema` возвращает `{protocolVersion, capabilities, serverInfo}` — тоже без `instructions`. Других вызовов `new Server(`/`McpServer`/`FastMCP` вне UI-бандлов нет. Управляющий текст сервер доставляет через другие каналы: описания инструментов, onboarding welcome page (`utils/welcome-onboarding.js`), `get_prompts` (инъекция промптов по ID) и docker prompt.
+The `Server` constructor receives only `{name, version}` + capabilities — there is no `instructions` field. The custom `InitializeRequestSchema` handler returns `{protocolVersion, capabilities, serverInfo}` — also without `instructions`. There are no other `new Server(`/`McpServer`/`FastMCP` calls outside the UI bundles. The server delivers control text through other channels: tool descriptions, onboarding welcome page (`utils/welcome-onboarding.js`), `get_prompts` (prompt injection by ID), and docker prompt.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-26 инструментов, все определены в одном массиве `allTools` в `dist/server.js`. Описания — template-литералы с подстановками, вычисляемыми на старте из среды хоста:
-- `${PATH_GUIDANCE}` = "IMPORTANT: <OS-зависимый совет по путям> Relative paths may fail as they depend on the current working directory. Tilde paths (~/...) might not work in all contexts. Unless the user explicitly asks for relative paths, use absolute paths."
-- `${CMD_PREFIX_DESCRIPTION}` = "This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions." (добавляется в КАЖДОЕ описание)
-- `${OS_GUIDANCE}` (только start_process) — динамическая многострочная сборка в `utils/system-info.js:getOSSpecificGuidance()`: имя платформы, shell, при работе в контейнере — блоки "DOCKER CONTAINER ENVIRONMENT DETECTED", список смонтированных директорий, директивы "IMPORTANT: When users ask about files, FIRST check mounted directories above… Always suggest using mounted directories", правила трансляции host→container путей.
+26 tools, all defined in one `allTools` array in `dist/server.js`. Descriptions are template literals with substitutions computed at startup from the host environment:
+- `${PATH_GUIDANCE}` = "IMPORTANT: <OS-dependent advice on paths> Relative paths may fail as they depend on the current working directory. Tilde paths (~/...) might not work in all contexts. Unless the user explicitly asks for relative paths, use absolute paths."
+- `${CMD_PREFIX_DESCRIPTION}` = "This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions." (added to EVERY description)
+- `${OS_GUIDANCE}` (start_process only) — dynamic multiline assembly in `utils/system-info.js:getOSSpecificGuidance()`: platform name, shell, when running in a container — blocks "DOCKER CONTAINER ENVIRONMENT DETECTED", list of mounted directories, directives "IMPORTANT: When users ask about files, FIRST check mounted directories above… Always suggest using mounted directories", rules for translating host→container paths.
 
-Ниже все 26 описаний дословно (плейсхолдеры ${...} оставлены как в исходнике):
+Below are all 26 descriptions verbatim (placeholders ${...} kept as in the source):
 
 ### get_config
 
@@ -804,9 +804,9 @@ The prompt content will be injected and execution begins immediately.
 ${CMD_PREFIX_DESCRIPTION}
 ```
 
-## MARKER HIGHLIGHTS (управляющие формулировки в описаниях)
+## MARKER HIGHLIGHTS (controlling phrasing in descriptions)
 
-Хотя coverage=full, отдельно фиксирую steering-маркеры:
+Although coverage=full, I separately record steering markers:
 
 - read_file: "Prefer this over 'execute_command' with cat/type for viewing files."
 - write_file: "IMPORTANT: DO NOT use this tool to create PDF files… DO NOT use this tool to edit DOCX files"; "CHUNKING IS STANDARD PRACTICE: Always write files in chunks of 25-30 lines maximum… ALWAYS CHUNK PROACTIVELY - don't wait for performance warnings!"
@@ -815,9 +815,9 @@ ${CMD_PREFIX_DESCRIPTION}
 - start_process: "PRIMARY TOOL FOR FILE ANALYSIS AND DATA PROCESSING. This is the ONLY correct tool for analyzing local files… The analysis tool CANNOT access local files and WILL FAIL"; "CRITICAL RULE: For ANY local file work, ALWAYS use this tool + interact_with_process, NEVER use analysis/REPL tool."; "ALWAYS USE FOR: Local file analysis… NEVER USE ANALYSIS TOOL FOR: Local file access (analysis tool is browser-only and WILL FAIL)"
 - interact_with_process: "CRITICAL: THIS IS THE PRIMARY TOOL FOR ALL LOCAL FILE ANALYSIS"; "FILE ANALYSIS PRIORITY ORDER (MANDATORY): 1. ALWAYS FIRST: Use this tool… 3. NEVER EVER: Use analysis tool for local file access (IT WILL FAIL)"
 - start_search: "Perfect for large directories where you want to see results immediately…"
-- give_feedback_to_desktop_commander: скриптует поведение ассистента, включая готовую реплику: 'User: "sure, I'll give feedback" / Claude: "Perfect! Let me open the feedback form for you." [calls tool immediately]'
-- get_prompts: "The prompt content will be injected and execution begins immediately." — канал инъекции промптов по номеру из onboarding.
-- set_config_value: "IMPORTANT: Setting allowedDirectories to an empty array ([]) allows full access to the entire file system" — документирует полное снятие песочницы одной настройкой.
-- Все 26: суффикс про алиас "DC: ..." — учит модель распознавать команды с префиксом как адресованные этому серверу.
+- give_feedback_to_desktop_commander: scripts assistant behavior, including a ready-made line: 'User: "sure, I'll give feedback" / Claude: "Perfect! Let me open the feedback form for you." [calls tool immediately]'
+- get_prompts: "The prompt content will be injected and execution begins immediately." — prompt injection channel by number from onboarding.
+- set_config_value: "IMPORTANT: Setting allowedDirectories to an empty array ([]) allows full access to the entire file system" — documents complete removal of the sandbox with one setting.
+- All 26: the suffix about the alias "DC: ..." teaches the model to recognize commands with a prefix as addressed to this server.
 
-Характер стиринга: в основном внутренний (перенаправление с cat/ls/analysis-tool хоста на свои инструменты, анти-Claude-analysis-tool кампания капсом), плюс каналы доставки дополнительного текста в контекст (get_prompts, onboarding, OS_GUIDANCE с директивами про mounted directories).
+The steering character: mostly internal (redirecting from cat/ls/analysis-tool host to its own tools, anti-Claude-analysis-tool campaign in all caps), plus channels for delivering additional text into context (get_prompts, onboarding, OS_GUIDANCE with directives about mounted directories).

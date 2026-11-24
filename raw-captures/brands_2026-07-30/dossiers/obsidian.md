@@ -1,15 +1,15 @@
-# UNIT: obsidian | Obsidian | github docker/mcp-obsidian | тип автора: комьюнити | captured 2026-07-29 (static source)
+# UNIT: obsidian | Obsidian | github docker/mcp-obsidian | author type: community | captured 2026-07-29 (static source)
 
-Подтверждение MCP-сервера: Python-пакет `mcp_obsidian`, использует `from mcp.server import Server`, создаёт `app = Server("mcp-obsidian")`, регистрирует `@app.list_tools()` / `@app.call_tool()` и запускается через `mcp.server.stdio.stdio_server()` в `src/mcp_obsidian/server.py`. Это полноценный MCP-сервер (stdio), обёртка над Obsidian Local REST API.
+Confirmation of the MCP server: Python package `mcp_obsidian`, uses `from mcp.server import Server`, creates `app = Server("mcp-obsidian")`, registers `@app.list_tools()` / `@app.call_tool()` and runs via `mcp.server.stdio.stdio_server()` in `src/mcp_obsidian/server.py`. This is a full MCP server (stdio), a wrapper over the Obsidian Local REST API.
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Конструктор `Server("mcp-obsidian")` вызывается только с именем; `app.create_initialization_options()` вызывается без аргументов (server.py:88-92). Ни `instructions=`, ни кастомных InitializationOptions в репозитории нет. Единственные вхождения слова «instructions» — в `openapi.yaml` (описание REST-эндпоинта PATCH, ссылка на миграционную документацию), не в MCP-канале.
+The `Server("mcp-obsidian")` constructor is called only with the name; `app.create_initialization_options()` is called without arguments (server.py:88-92). There is neither `instructions=` nor custom InitializationOptions in the repository. The only occurrences of the word "instructions" are in `openapi.yaml` (description of the PATCH REST endpoint, link to migration documentation), not in the MCP channel.
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Всего инструментов: 12. Определения — в `src/mcp_obsidian/tools.py` (классы-наследники `ToolHandler`, метод `get_tool_description()` возвращает `Tool(name=..., description=...)`). Регистрация — в `src/mcp_obsidian/server.py:44-55`.
+Total tools: 12. Definitions — in `src/mcp_obsidian/tools.py` (subclasses of `ToolHandler`, method `get_tool_description()` returns `Tool(name=..., description=...)`). Registration — in `src/mcp_obsidian/server.py:44-55`.
 
 ### 1. obsidian_list_files_in_dir
 ```

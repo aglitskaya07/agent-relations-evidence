@@ -1,18 +1,18 @@
-# UNIT: oxylabs | Oxylabs | github oxylabs/oxylabs-mcp | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: oxylabs | Oxylabs | github oxylabs/oxylabs-mcp | author type: official | captured 2026-07-29 (static source)
 
-Репозиторий — Python MCP-сервер на FastMCP. Точка входа `src/oxylabs_mcp/__init__.py`:
-`mcp = OxylabsMCPServer("oxylabs_mcp")` (подкласс `FastMCP`), два подсервера монтируются:
-`FastMCP("scraper")` (`src/oxylabs_mcp/tools/scraper.py`) и `FastMCP("ai_studio")` (`src/oxylabs_mcp/tools/ai_studio.py`).
-Инструменты фильтруются в `_list_tools_mcp` в зависимости от наличия креденшелов (scraper-набор при отсутствии username/password, AI-набор при отсутствии AI Studio API key).
+The repository is a Python MCP server on FastMCP. Entry point `src/oxylabs_mcp/__init__.py`:
+`mcp = OxylabsMCPServer("oxylabs_mcp")` (a subclass of `FastMCP`), two subservers are mounted:
+`FastMCP("scraper")` (`src/oxylabs_mcp/tools/scraper.py`) and `FastMCP("ai_studio")` (`src/oxylabs_mcp/tools/ai_studio.py`).
+Tools are filtered in `_list_tools_mcp` depending on whether credentials are present (scraper set when username/password are absent, AI set when AI Studio API key is absent).
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Конструкторам `FastMCP` передаётся только имя, параметр `instructions=` отсутствует во всём репозитории; единственные вхождения слова "instructions" — в README (про OAuth) и в e2e-тесте агента. Метаданные `server.json` содержат поле `description`: "Fetch and process content from specified URLs & sources using the Oxylabs Web Scraper API." — это описание пакета в реестре, не серверные instructions.
+Only the name is passed to the `FastMCP` constructors, the `instructions=` parameter is absent throughout the repository; the only occurrences of the word "instructions" are in the README (about OAuth) and in the agent e2e test. The `server.json` metadata contains the field `description`: "Fetch and process content from specified URLs & sources using the Oxylabs Web Scraper API." — this is the package description in the registry, not server instructions.
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Всего 10 инструментов. Описания = docstring функций (FastMCP берёт их как description). Дословно:
+There are 10 tools in total. Descriptions = function docstrings (FastMCP takes them as description). Verbatim:
 
 ### 1. universal_scraper (tools/scraper.py:25)
 ```
@@ -98,12 +98,12 @@ Generate a json schema in openapi format.
 Tool useful for mapping website's URLs.
 ```
 
-## Дополнительно: описания параметров (Field description), содержащие поведенческие указания
+## Additional: parameter descriptions (Field description) containing behavioral instructions
 
 - `ai_crawler.render_javascript`: "Whether to render the HTML of the page using javascript. Much slower, therefore use it only for websites that require javascript to render the page. Unless user asks to use it, first try to crawl the page without it. If results are unsatisfactory, try to use it."
 - `ai_scraper.render_javascript`: "Whether to render the HTML of the page using javascript. Much slower, therefore use it only for websites that require javascript to render the page.Unless user asks to use it, first try to scrape the page without it. If results are unsatisfactory, try to use it."
 - `ai_search.render_javascript`: "Whether to render the HTML of the page using javascript. Much slower, therefore use it only if user asks to use it.First try to search with setting it to False. "
-- `ai_map.render_javascript`: аналогично ai_crawler.
-- `ai_crawler/ai_scraper/ai_browser_agent.output_format`: описания форматов, в т.ч. "Toon(Token-Oriented Object Notation) returns data in Toon format, which is optimized for AI agents."
+- `ai_map.render_javascript`: similar to ai_crawler.
+- `ai_crawler/ai_scraper/ai_browser_agent.output_format`: descriptions of formats, including "Toon(Token-Oriented Object Notation) returns data in Toon format, which is optimized for AI agents."
 
-Все инструменты помечены `ToolAnnotations(readOnlyHint=True)`.
+All tools are marked `ToolAnnotations(readOnlyHint=True)`.

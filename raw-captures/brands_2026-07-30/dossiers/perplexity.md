@@ -1,6 +1,6 @@
-# UNIT: perplexity | Perplexity | github perplexityai/modelcontextprotocol | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: perplexity | Perplexity | github perplexityai/modelcontextprotocol | author type: official | captured 2026-07-29 (static source)
 
-Это MCP-сервер: TypeScript, `new McpServer({name: "ai.perplexity/mcp-server", ...})` в `src/server.ts:541`, четыре `server.registerTool(...)`, транспорты stdio (`src/index.ts`) и HTTP (`src/http.ts`).
+This is an MCP server: TypeScript, `new McpServer({name: "ai.perplexity/mcp-server", ...})` in `src/server.ts:541`, four `server.registerTool(...)`, transports stdio (`src/index.ts`) and HTTP (`src/http.ts`).
 
 ## CHANNEL: instructions (660 chars)
 
@@ -8,14 +8,14 @@ Perplexity AI server for web-grounded search, research, and reasoning, backed by
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Всего инструментов: 4.
+Total tools: 4.
 
 ### perplexity_ask
 title: Ask Perplexity
 
 Answer a question using web-grounded AI (Perplexity Agent API, fast preset). Best for: quick factual questions, summaries, explanations, and general Q&A. Returns a text response with numbered citations. Fastest and cheapest option. Supports filtering by recency (hour/day/week/month/year), domain restrictions, and search context size. For in-depth multi-source research, use perplexity_research instead. For step-by-step reasoning and analysis, use perplexity_reason instead.
 
-(в коде `ASK_PRESET` подставляется конкатенацией; `ASK_PRESET = "fast"`, server.ts:24)
+(in code, `ASK_PRESET` is set by concatenation; `ASK_PRESET = "fast"`, server.ts:24)
 
 ### perplexity_research
 title: Deep Research
@@ -36,7 +36,7 @@ title: Search the Web
 
 Search the web and return a ranked list of results with titles, URLs, snippets, and dates. Best for: finding specific URLs, checking recent news, verifying facts, discovering sources. Returns formatted results (title, URL, snippet, date) with no AI synthesis. Supports recency filters and domain restrictions. For AI-generated answers with citations, use perplexity_ask instead.
 
-## Параметры (описания полей ввода, дословно)
+## Parameters (input field descriptions, verbatim)
 
 - `messages`: "Array of conversation messages"; role: "Role of the message sender"; content: "The content of the message"
 - `search_recency_filter`: "Filter search results by recency. Use 'hour' for very recent news, 'day' for today's updates, 'week' for this week, etc."
@@ -47,4 +47,4 @@ Search the web and return a ranked list of results with titles, URLs, snippets, 
 - `max_tokens_per_page`: "Maximum tokens to extract per webpage (default: 1024)"
 - `country`: "ISO 3166-1 alpha-2 country code for regional results (e.g., 'US', 'GB')"
 
-Аннотации у всех четырёх инструментов: readOnlyHint: true, openWorldHint: true, idempotentHint: false, destructiveHint: false.
+Annotations for all four tools: readOnlyHint: true, openWorldHint: true, idempotentHint: false, destructiveHint: false.

@@ -1,23 +1,23 @@
-# UNIT: heroku | Heroku | github heroku/heroku-mcp-server | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: heroku | Heroku | github heroku/heroku-mcp-server | author type: official | captured 2026-07-29 (static source)
 
 ## SERVER CONFIRMED
 
-TypeScript-репозиторий, реальный MCP-сервер на официальном SDK.
-`src/index.ts`: `import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'`, `new McpServer({ name: 'Heroku MCP Server', version: VERSION }, { capabilities: { tools: { listChanged: true } } })`, транспорт `StdioServerTransport`, точка входа `bin/heroku-mcp-server.mjs` → `dist/index.js`.
-Инструменты — обёртки над Heroku CLI через собственный REPL (`src/repl/heroku-cli-repl.ts`).
+TypeScript repository, a real MCP server on the official SDK.
+`src/index.ts`: `import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'`, `new McpServer({ name: 'Heroku MCP Server', version: VERSION }, { capabilities: { tools: { listChanged: true } } })`, transport `StdioServerTransport`, entry point `bin/heroku-mcp-server.mjs` → `dist/index.js`.
+Tools are wrappers over Heroku CLI through a custom REPL (`src/repl/heroku-cli-repl.ts`).
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Конструктор `McpServer` вызван с двумя аргументами: `{name, version}` и `{capabilities}`. Поля `instructions` нет. Grep по `instructions` во всём `src/`, `bin/`, `manifest.json`, `package.json` — 0 совпадений. Обработчик `initialize` вручную не переопределяется.
+The `McpServer` constructor is called with two arguments: `{name, version}` and `{capabilities}`. There is no `instructions` field. Grep for `instructions` across all `src/`, `bin/`, `manifest.json`, `package.json` — 0 matches. The `initialize` handler is not manually overridden.
 
-Сопутствующее (не instructions-канал): зарегистрирован один ресурс —
-`server.resource('heroku_dev_center', 'https://devcenter.heroku.com/llms.txt', { mimeType: 'text/plain', description: 'This resource provides a summary of Heroku Dev Center articles, and how to use Heroku.' }, ...)` (`src/resources/dev-center-resource.ts`). Тело ресурса подтягивается по сети в рантайме (`fetch` llms.txt), статически не наблюдаемо.
+Related (not an instructions channel): one resource is registered —
+`server.resource('heroku_dev_center', 'https://devcenter.heroku.com/llms.txt', { mimeType: 'text/plain', description: 'This resource provides a summary of Heroku Dev Center articles, and how to use Heroku.' }, ...)` (`src/resources/dev-center-resource.ts`). The resource body is pulled over the network at runtime (`fetch` llms.txt), not statically observable.
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Паттерн регистрации: `server.tool('<name>', '<description>', <zodSchema>.shape, handler)` в `src/tools/*.ts`.
-Всего вызовов `server.tool(`: 37. В `src/index.ts` регистрируются 36 из них (3 AI-инструмента — условно, только если установлен плагин `@heroku/plugin-ai`). 37-й (`pipelines`, экспорт `registerPipelinesTool` в `src/tools/pipelines.ts`) в `index.ts` не вызывается — помечен ниже.
+Registration pattern: `server.tool('<name>', '<description>', <zodSchema>.shape, handler)` in `src/tools/*.ts`.
+There are 37 calls to `server.tool(` in total. `src/index.ts` registers 36 of them (3 AI tools — conditionally, only if the `@heroku/plugin-ai` plugin is installed). The 37th (`pipelines`, export `registerPipelinesTool` in `src/tools/pipelines.ts`) is not called in `index.ts` — marked below.
 
 ### src/tools/apps.ts
 - **list_apps** — `List Heroku apps: owned, collaborator access, team/space filtering`
@@ -67,12 +67,12 @@ TypeScript-репозиторий, реальный MCP-сервер на офи
 - **pipelines_promote** — `Promotes apps between pipeline stages with configurable target applications`
 - **pipelines_list** — `Lists accessible Heroku pipelines with ownership and configuration details`
 - **pipelines_info** — `Displays detailed pipeline configuration, stages, and connected applications`
-- **pipelines** — `Lists and manages Heroku pipelines with configuration visibility` — НЕ РЕГИСТРИРУЕТСЯ: `registerPipelinesTool` не вызывается в `src/index.ts`
+- **pipelines** — `Lists and manages Heroku pipelines with configuration visibility` — NOT REGISTERED: `registerPipelinesTool` is not called in `src/index.ts`
 
 ### src/tools/deploy-to-heroku.ts
-- **deploy_to_heroku** — описание собрано конкатенацией двух литералов прямо в вызове `server.tool`; итоговая строка:
+- **deploy_to_heroku** — the description is assembled by concatenating two literals directly in the `server.tool` call; the final string:
   `Use for all deployments. Deploys new/existing apps, with or without teams/spaces, and env vars to Heroku. Ask for app name if missing. Requires valid app.json via appJson param.`
-- **deploy_one_off_dyno** — описание вынесено в константу `execToolSchemaDescription` (`src/tools/deploy-to-heroku.ts:708`), шаблонная строка без интерполяций, начинается и заканчивается переводом строки. Дословно:
+- **deploy_one_off_dyno** — description is moved into the constant `execToolSchemaDescription` (`src/tools/deploy-to-heroku.ts:708`), a template string without interpolations, starts and ends with a newline. Verbatim:
 
 ~~~
 Run code/commands in Heroku one-off dyno with network and filesystem access.
@@ -109,11 +109,11 @@ Example package.json:
 ```
 ~~~
 
-### src/tools/ai.ts (регистрируются условно: только при установленном плагине `@heroku/plugin-ai`)
+### src/tools/ai.ts (registered conditionally: only when the `@heroku/plugin-ai` plugin is installed)
 - **list_ai_available_models** — `List available AI inference models`
 - **provision_ai_model** — `Provision AI model access for app`
 - **make_ai_inference** — `Make inference request to Heroku AI API`
 
-## ADDITIONAL: manifest.json (DXT-манифест, отдельный от рантайма)
+## ADDITIONAL: manifest.json (DXT manifest, separate from runtime)
 
-`manifest.json` содержит собственный массив `tools` с ПАРАЛЛЕЛЬНЫМ, отличающимся от кода набором описаний (напр. `list_apps` → `List all Heroku apps. Filter by personal, collaborator, team, or space.`). Этот текст в MCP-протокол не попадает — рантайм отдаёт строки из `src/tools/*.ts`. Полей `instructions` / `prompts` в манифесте нет.
+`manifest.json` contains its own `tools` array with a PARALLEL set of descriptions that differs from the code (e.g. `list_apps` → `List all Heroku apps. Filter by personal, collaborator, team, or space.`). This text does not enter the MCP protocol — the runtime returns strings from `src/tools/*.ts`. There are no `instructions` / `prompts` fields in the manifest.

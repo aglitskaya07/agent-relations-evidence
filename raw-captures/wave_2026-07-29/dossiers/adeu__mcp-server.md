@@ -1,20 +1,20 @@
-# UNIT: @adeu/mcp-server | npm v1.30.0 (published 2026-07-24T10:17:31.505Z) | рамки: pulsemcp | captured 2026-07-29 (static, tarball)
+# UNIT: @adeu/mcp-server | npm v1.30.0 (published 2026-07-24T10:17:31.505Z) | frames: pulsemcp | captured 2026-07-29 (static, tarball)
 
-Верификация: настоящий MCP-сервер. `new McpServer({ name: "adeu-redlining-service", version: packageVersion })` + `StdioServerTransport` в `src/index.ts` (и идентично в собранном `dist/index.js`). Назначение: редлайнинг DOCX (tracked changes, комментарии, diff, финализация) на движке `@adeu/core`. 5 инструментов (1 через `registerAppTool` c UI-ресурсом, 4 через `server.registerTool`) + 1 UI-ресурс `ui://adeu/markdown-ui`.
+Verification: a real MCP server. `new McpServer({ name: "adeu-redlining-service", version: packageVersion })` + `StdioServerTransport` in `src/index.ts` (and identically in the built `dist/index.js`). Purpose: redlining DOCX (tracked changes, comments, diff, finalization) on the `@adeu/core` engine. 5 tools (1 via `registerAppTool` with a UI resource, 4 via `server.registerTool`) + 1 UI resource `ui://adeu/markdown-ui`.
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Конструктору `McpServer` передаются только `name` и `version` — поля `instructions` нет ни в `src/index.ts`, ни в `dist/index.js`. Единственные вхождения слова "instructions" в коде — комментарии разработчика.
+Only `name` and `version` are passed to the `McpServer` constructor — there is no `instructions` field in `src/index.ts` or in `dist/index.js`. The only occurrences of the word "instructions" in the code are developer comments.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-Ко ВСЕМ описаниям при регистрации динамически добавляется build-тег: `` [Adeu v${packageVersion}+${gitSha}]`` (обёртки над `registerTool`/`registerAppTool`, src/index.ts:201–227). Значения берутся из env `PACKAGE_VERSION`/`GIT_SHA`, иначе "unknown".
+A build tag is dynamically added to ALL descriptions at registration: `` [Adeu v${packageVersion}+${gitSha}]`` (wrappers around `registerTool`/`registerAppTool`, src/index.ts:201–227). Values are taken from env `PACKAGE_VERSION`/`GIT_SHA`, otherwise "unknown".
 
-Сквозной паттерн: у каждого из 5 инструментов первый параметр — обязательный `reasoning` с description вида «Why do I need to … ? State this reason before any other parameter.» (значение в хендлерах игнорируется: `void reasoning`). Это подталкивание модели к прото-CoT, не межсерверный steering.
+End-to-end pattern: for each of the 5 tools, the first parameter is a required `reasoning` with a description like "Why do I need to … ? State this reason before any other parameter." (the value is ignored in handlers: `void reasoning`). This nudges the model toward proto-CoT, not inter-server steering.
 
 ### 1. read_docx (registerAppTool, UI: ui://adeu/markdown-ui)
-Description (дословно, READ_DOCX_COMMON_DESC + READ_DOCX_TAIL):
+Description (verbatim, READ_DOCX_COMMON_DESC + READ_DOCX_TAIL):
 
 > Reads a DOCX file. Returns text with inline CriticMarkup for Tracked Changes and Comments: {++inserted++}, {--deleted--}, {==highlighted==}{>>comment<<}. Set clean_view=True for the finalized 'Accepted' text without markup.
 >
@@ -26,7 +26,7 @@ Description (дословно, READ_DOCX_COMMON_DESC + READ_DOCX_TAIL):
 > `page`: a positive integer (1-indexed, default 1) or 'all'. Pages are synthetic length-based chunks sized for LLM consumption, NOT printed Word pages. In mode='full', page='all' returns the whole body with no page chrome. With `search_query`, `page` instead restricts matches to that page (default: search all pages).
 
 ### 2. process_document_batch
-Description (дословно, PROCESS_BATCH_COMMON_DESC + PROCESS_BATCH_OPERATIONS_DESC):
+Description (verbatim, PROCESS_BATCH_COMMON_DESC + PROCESS_BATCH_OPERATIONS_DESC):
 
 > Applies a batch of edits and review actions to a DOCX.
 >
@@ -52,12 +52,12 @@ Description (дословно, PROCESS_BATCH_COMMON_DESC + PROCESS_BATCH_OPERATI
 ### 5. finalize_document
 > Prepares a document for external distribution or e-signature. Note: in this zero-dependency environment, protection_mode='encrypt' is unsupported and falls back to a native read-only lock; export_pdf and password are ignored.
 
-## STEERING-ОЦЕНКА
-- Межсерверного/межинструментного steering-языка нет: ни "instead of built-in", ни "primary", ни "precedence", ни "prefer over", ни "LAST resort" и т.п. Все императивы ("always call `read_docx` immediately before…", "Never write CriticMarkup … manually", "start here for large docs") — внутрицикловая координация собственных инструментов сервера, не вытеснение чужих.
-- Единственный не-функциональный элемент — build-тег в конце каждого description и обязательный параметр `reasoning` («State this reason before any other parameter») на всех 5 инструментах.
-- В коде явно закодировано знание о бюджете ~2048 символов на tool description у реальных клиентов (комментарий src/index.ts:176–182) — описания сознательно упакованы под лимит.
+## STEERING-ASSESSMENT
+- There is no inter-server/inter-tool steering language: neither "instead of built-in", nor "primary", nor "precedence", nor "prefer over", nor "LAST resort", etc. All imperatives ("always call `read_docx` immediately before…", "Never write CriticMarkup … manually", "start here for large docs") are within-cycle coordination of the server's own tools, not displacing another tool.
+- The only non-functional element is the build tag at the end of each description and the mandatory `reasoning` parameter ("State this reason before any other parameter") on all 5 tools.
+- The code explicitly encodes knowledge of a budget of about 2048 characters for a tool description in real clients (comment in src/index.ts:176–182) — descriptions are deliberately packed to fit the limit.
 
 ## NOTES
-- Код не минифицирован: и src/*.ts, и dist/index.js (esbuild/tsup-бандл) читаемы, с комментариями; dist сверен с src — сервер/описания совпадают.
-- Динамическая сборка строк: минимальная и наблюдаемая — конкатенация констант описаний + runtime build-тег из env (GIT_SHA/PACKAGE_VERSION). Риск скрытых инъекций в описания низкий.
-- Просмотрено: src/index.ts (полностью, 1143 строки), src/shared.ts, package.json, структура dist/ и грепы по dist/index.js; тесты/фикстуры/ассеты просмотрены по списку. Всего в пакете ~40 файлов, содержательно проанализировано 5.
+- The code is not minified: both src/*.ts and dist/index.js (esbuild/tsup bundle) are readable, with comments; dist was compared with src — server/descriptions match.
+- Dynamic construction of strings: minimal and observable — concatenation of constant descriptions + runtime build tag from env (GIT_SHA/PACKAGE_VERSION). Risk of hidden injections into descriptions is low.
+- Reviewed: src/index.ts (in full, 1143 lines), src/shared.ts, package.json, structure of dist/ and greps over dist/index.js; tests/fixtures/assets were reviewed by list. In total there are ~40 files in the package, 5 were substantively analyzed.

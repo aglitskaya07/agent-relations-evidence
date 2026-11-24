@@ -39,7 +39,7 @@ Set `redactPII` to request redaction of personally identifiable information in t
 
 
 ## CHANNEL: instructions, npm (static)
-Пакет firecrawl-mcp 3.23.0, вход `dist/index.js` (esbuild-бандл, НЕ минифицирован). Конструктору FastMCP передаётся `instructions`, выбираемая в рантайме из трёх статических строк: `account ? FULL_PROFILE_INSTRUCTIONS : KEYLESS_PROFILE_INSTRUCTIONS` (основной профиль) и `SEARCH_PROFILE_INSTRUCTIONS` (search-профиль). Дословно:
+The firecrawl-mcp 3.23.0 package, entry `dist/index.js` (an esbuild bundle, NOT minified). The `instructions` passed to the FastMCP constructor are selected at runtime from three static strings: `account ? FULL_PROFILE_INSTRUCTIONS : KEYLESS_PROFILE_INSTRUCTIONS` (main profile) and `SEARCH_PROFILE_INSTRUCTIONS` (search profile). Verbatim:
 
 ### FULL_PROFILE_INSTRUCTIONS (515 chars)
 
@@ -55,7 +55,7 @@ Set `redactPII` to request redaction of personally identifiable information in t
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-Всего 27 регистраций `.addTool({...})` (26 уникальных имён; `firecrawl_search` регистрируется дважды — в основном и в search-профиле с разными описаниями). Все описания дословно (escape-последовательности шаблонных литералов развёрнуты в рантайм-строку):
+A total of 27 `.addTool({...})` registrations (26 unique names; `firecrawl_search` is registered twice — in the main profile and in the search profile with different descriptions). All descriptions verbatim (escape sequences of template literals expanded into the runtime string):
 
 ### tool: firecrawl_monitor_create
 
@@ -205,5 +205,5 @@ Search web and specialized indexes, returning ranked results. Operators include 
 
 Returns `{ success, data, id, creditsUsed }`, with source arrays in `data`.
 
-### Наблюдения по стирингу (tool descriptions)
-Ни одно описание не содержит маркеров навязывания: нет "instead of built-in", "most powerful", "always default", "prefer", "primary", "PRECEDENCE", "LAST resort", "MUST use", "% faster" и т.п. Описания нейтральные, операционные, честно указывают побочные эффекты ("actions such as form submission can create persistent external side effects", "Browser actions may change the live page"). Кросс-ссылки между инструментами (firecrawl_scrape vs crawl vs map) — маршрутизация внутри собственного набора, не вытеснение чужих инструментов.
+### Observations on steering (tool descriptions)
+No description contains compulsion markers: no "instead of built-in", "most powerful", "always default", "prefer", "primary", "PRECEDENCE", "LAST resort", "MUST use", "% faster" etc. The descriptions are neutral, operational, and honestly state side effects ("actions such as form submission can create persistent external side effects", "Browser actions may change the live page"). Cross-links between tools (firecrawl_scrape vs crawl vs map) are routing within the server’s own set, not displacing another tool.

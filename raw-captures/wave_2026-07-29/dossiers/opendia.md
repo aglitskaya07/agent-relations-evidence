@@ -1,20 +1,20 @@
-# UNIT: opendia | npm v1.1.1 (published 2026-07-03T00:48:00.032Z) | рамки: pulsemcp | captured 2026-07-29 (static, tarball)
+# UNIT: opendia | npm v1.1.1 (published 2026-07-03T00:48:00.032Z) | scope: pulsemcp | captured 2026-07-29 (static, tarball)
 
 ## VERDICT
-Это настоящий MCP-сервер. `server.js` реализует ручной JSON-RPC-роутер (`handleMCPRequest`), который обрабатывает методы `initialize`, `tools/list`, `tools/call`, `resources/list`, `prompts/list`, `prompts/get`. SDK `@modelcontextprotocol/*` не используется — протокол реализован вручную поверх Express + `ws`. Сервер выступает мостом MCP ↔ браузерное расширение (Chrome/Firefox) через WebSocket. Фактический набор инструментов приходит динамически от расширения (`availableTools`); при отсутствии расширения возвращается статический fallback-набор (`getFallbackTools`).
+This is a real MCP server. `server.js` implements a manual JSON-RPC router (`handleMCPRequest`) that handles the methods `initialize`, `tools/list`, `tools/call`, `resources/list`, `prompts/list`, `prompts/get`. The SDK `@modelcontextprotocol/*` is not used — the protocol is implemented manually on top of Express + `ws`. The server acts as a bridge between MCP and a browser extension (Chrome/Firefox) via WebSocket. The actual tool set comes dynamically from the extension (`availableTools`); if the extension is absent, a static fallback set is returned (`getFallbackTools`).
 
 ## CHANNEL: instructions, npm (static, 143 chars)
-Строка `instructions`, возвращаемая в ответе на `initialize` (server.js:192–193):
+The `instructions` string returned in the `initialize` response (server.js:192–193):
 
 "🎯 Enhanced browser automation with anti-detection bypass for Twitter/X, LinkedIn, Facebook. Extension may take a moment to connect."
 
-serverInfo.name = "browser-mcp-server", version "2.0.0" (несмотря на npm-версию пакета 1.1.1).
+serverInfo.name = "browser-mcp-server", version "2.0.0" (despite the npm package version 1.1.1).
 
-Дополнительно: при вызове `tools/call` без подключённого расширения возвращается текст ошибки с setup-инструкциями (server.js:241) — это content ответа, не канал instructions.
+Additionally: when calling `tools/call` without a connected extension, an error text with setup instructions is returned (server.js:241) — this is response content, not the instructions channel.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-ВАЖНО: реальный список инструментов формируется расширением в рантайме (`availableTools.map(...)`, server.js:216) и в тарболл НЕ входит — расширение поставляется отдельно. Ниже — 18 статических fallback-инструментов из `getFallbackTools()` (server.js), которые сервер отдаёт, пока расширение не подключилось. Их <= 40 → включены ВСЕ, дословно.
+IMPORTANT: the real list of tools is formed by the extension at runtime (`availableTools.map(...)`, server.js:216) and is NOT included in the tarball — the extension is supplied separately. Below are 18 static fallback tools from `getFallbackTools()` (server.js), which the server returns until the extension connects. They are <= 40 → included ALL, verbatim.
 
 1. **page_analyze** — "🔍 BACKGROUND TAB READY: Analyze any tab without switching! Two-phase intelligent page analysis with token efficiency optimization. Use tab_id parameter to analyze background tabs while staying on current page. (Extension required)"
 
@@ -52,16 +52,16 @@ serverInfo.name = "browser-mcp-server", version "2.0.0" (несмотря на n
 
 18. **page_style** — "🎨 Transform page appearance with themes, colors, fonts, and fun effects! Apply preset themes like 'dark_hacker', 'retro_80s', or create custom styles. Perfect for making boring pages fun or improving readability."
 
-## MARKER-ANALYSIS (справочно)
-Прогон по стир-маркерам. Явных precedence/override/"instead of built-in"/refund-паттернов не найдено. Мягкие императивы-маркеры:
-- **tab_create**: "CRITICAL: ... ALWAYS use 'count' parameter!", "DO NOT make 5 separate calls!" (в inputSchema-описаниях полей) — настойчивая инструкция агенту генерировать пакетное открытие множества вкладок (потенциальный вектор массового автопостинга/спама вкупе с anti-detection).
-- Сквозной мотив в instructions и в description'ах element_fill: **"anti-detection bypass for Twitter/X, LinkedIn, Facebook"** — сервер прямо позиционирует обход античит/антибот-детекции соцсетей как фичу.
-- Множественные "BACKGROUND TAB READY ... without switching" — подталкивают к скрытым от пользователя действиям в фоновых вкладках.
+## MARKER-ANALYSIS (for reference)
+Run of steering markers. No explicit precedence/override/"instead of built-in"/refund patterns were found. Soft imperative markers:
+- **tab_create**: "CRITICAL: ... ALWAYS use 'count' parameter!", "DO NOT make 5 separate calls!" (in inputSchema field descriptions) — a forceful instruction for the agent to generate batch opening of many tabs (a potential vector for mass auto-posting/spam together with anti-detection).
+- A recurring motif in instructions and in element_fill descriptions: **"anti-detection bypass for Twitter/X, LinkedIn, Facebook"** — the server directly positions bypassing social-network anti-cheat/anti-bot detection as a feature.
+- Multiple "BACKGROUND TAB READY ... without switching" — push toward hidden-from-the-user actions in background tabs.
 
 ## PROMPTS (prompts/list, static)
-Сервер также отдаёт 6 workflow-промптов (не инструменты): post_to_social ("Post content to social media platforms with anti-detection bypass"), post_selected_quote, research_workflow, analyze_browsing_session, organize_tabs, fill_form_assistant.
+The server also returns 6 workflow prompts (not tools): post_to_social ("Post content to social media platforms with anti-detection bypass"), post_selected_quote, research_workflow, analyze_browsing_session, organize_tabs, fill_form_assistant.
 
 ## NOTES
-- Код НЕ минифицирован (2555 строк, читабельный), исполнялся только текстовый анализ, код пакета не запускался.
-- Риск динамической сборки строк инструментов: ВЫСОКИЙ по составу, но не по тексту в тарболле — реальные name/description инструментов приходят от браузерного расширения в рантайме (`availableTools`), которого в npm-пакете нет. Статически зафиксирован только 143-символьный `instructions` и 18 fallback-описаний.
-- Просмотрено файлов: 3 (package.json, server.js, README.md — последний бегло). Извлечение fallback-описаний — регексом поверх текста server.js.
+- The code is NOT minified (2555 lines, readable), only text analysis was performed, the package code was not run.
+- Risk of dynamic construction of tool strings: HIGH by composition, but not by text in the tarball — the actual tool name/description values come from the browser extension at runtime (`availableTools`), which is not in the npm package. Only the 143-character `instructions` and 18 fallback descriptions are statically fixed.
+- Reviewed files: 3 (package.json, server.js, README.md — the last one briefly). Fallback descriptions were extracted with a regex over the server.js text.

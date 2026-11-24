@@ -1,10 +1,10 @@
-# UNIT: @softeria/ms-365-mcp-server | npm v0.135.0 (published 2026-07-29T08:04:34.178Z) | рамки: npm-top | captured 2026-07-29 (static, tarball)
+# UNIT: @softeria/ms-365-mcp-server | npm v0.135.0 (published 2026-07-29T08:04:34.178Z) | scopes: npm-top | captured 2026-07-29 (static, tarball)
 
-## ВЕРДИКТ: MCP-сервер
-Полноценный MCP-сервер: `dist/server.js` создаёт `new McpServer(...)` из `@modelcontextprotocol/sdk/server/mcp.js`, регистрирует инструменты через `server.registerTool`/`server.tool`, работает в stdio и HTTP/OAuth режимах. Экспонирует Microsoft Graph (почта, календарь, Teams, OneDrive/SharePoint, Excel, задачи, presence и т.д.).
+## VERDICT: MCP server
+Full-fledged MCP server: `dist/server.js` creates `new McpServer(...)` from `@modelcontextprotocol/sdk/server/mcp.js`, registers tools via `server.registerTool`/`server.tool`, works in stdio and HTTP/OAuth modes. Exposes Microsoft Graph (mail, calendar, Teams, OneDrive/SharePoint, Excel, tasks, presence, etc.).
 
-## CHANNEL: instructions, npm (static, 1647 chars в дефолтной конфигурации)
-Instructions передаются конструктору `McpServer` (dist/server.js:63–69) через `buildMcpServerInstructions(opts)` из `dist/mcp-instructions.js`. Строка собирается ДИНАМИЧЕСКИ из фиксированных частей в зависимости от опций запуска (readOnly / multiAccount / orgMode / discovery). Базовые 8 частей (1579 chars, соединяются пробелом), дословно:
+## CHANNEL: instructions, npm (static, 1647 chars in the default configuration)
+Instructions are passed to the `McpServer` constructor (dist/server.js:63–69) via `buildMcpServerInstructions(opts)` from `dist/mcp-instructions.js`. The string is built DYNAMICALLY from fixed parts depending on startup options (readOnly / multiAccount / orgMode / discovery). The basic 8 parts (1579 chars, joined by a space), verbatim:
 
 > Microsoft 365 MCP exposes Microsoft Graph through MCP tools. Use each tool name, description, and parameter schema as the source of truth.
 > Microsoft Graph OData: do not combine $filter with $search on the same request. For lists, prefer modest $top (or top) and $select; avoid very large pages unless the user needs them.
@@ -14,32 +14,32 @@ Instructions передаются конструктору `McpServer` (dist/ser
 > Teams chat and channel messages: prefer HTML contentType in the body; plain text is often mangled by Graph.
 > Files / binary content: for large drive/SharePoint file content, prefer get-download-url to resolve a pre-authenticated URL for out-of-band download. Use download-bytes for authenticated byte reads such as mail attachments, profile photos, Teams hosted content, and meeting recordings. In stdio mode, download-bytes-to-file writes those same authenticated bytes straight to a local absolute path instead of returning base64 — the only out-of-band option for large mail attachments and meeting recordings, which get-download-url cannot handle. These tools take relative Microsoft Graph paths, not absolute URLs. For uploads, upload-file-content takes a base64 string body up to 4MB; use create-upload-session above that.
 
-Условные добавки:
+Conditional additions:
 - readOnly: «This server is read-only; write operations are disabled.»
 - multiAccount: «Multiple accounts: pass the account parameter when required (see list-accounts).»
-- НЕ org-mode (дефолт): «Work/school-only tools require starting the server with --org-mode.» → дефолтная строка = 1647 chars.
+- NOT org-mode (default): "Work/school-only tools require starting the server with --org-mode." → default string = 1647 chars.
 - discovery (+532 chars): «DISCOVERY MODE ADD-ON: Graph is reached via search-tools → get-tool-schema → execute-tool (plus auth helpers). Workflow: (1) call search-tools with short natural-language keywords (BM25-ranked); (2) call get-tool-schema(tool_name) to see the parameters, required fields, and enum values; (3) call execute-tool with tool_name exactly as returned and parameters shaped per the schema. Skipping get-tool-schema is the leading cause of Graph 400 errors here. If search-tools returns no matches, retry with shorter or different keywords.»
 
-Оценка: instructions полностью технические/операционные (правила OData, KQL-кавычки, роутинг бинарного контента между собственными инструментами). НЕТ стиринга против built-in инструментов, нет «primary/precedence/last resort», нет требований использовать сервер вместо памяти или веб-поиска.
+Assessment: instructions are fully technical/operational (OData rules, KQL quoting, routing binary content between the server's own tools). NO steering against built-in tools, no "primary/precedence/last resort", no requirements to use the server instead of memory or web search.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=marker-scan+sample)
-Инвентарь: 324 Graph-инструмента (dist/endpoints.json + сгенерированные описания в dist/generated/client.js / client-beta.js) + 4 utility (parse-teams-url, download-bytes, download-bytes-to-file, get-download-url) + 6 auth (login, logout, verify-login, list-accounts, select-account, remove-account) + 3 discovery-mode (search-tools, get-tool-schema, execute-tool) = 337 статически определённых регистраций (не все активны одновременно: discovery-режим заменяет прямую регистрацию Graph-инструментов тремя мета-инструментами; часть инструментов требует --org-mode / stdio).
-Итоговое описание Graph-инструмента = (descriptionOverride ?? описание из OpenAPI-генерации) + "\n\n💡 TIP: <llmTip>"; для beta-эндпоинтов префикс «[beta]». Все 324 имеют реальные описания (0 fallback).
+Inventory: 324 Graph tools (dist/endpoints.json + generated descriptions in dist/generated/client.js / client-beta.js) + 4 utility (parse-teams-url, download-bytes, download-bytes-to-file, get-download-url) + 6 auth (login, logout, verify-login, list-accounts, select-account, remove-account) + 3 discovery-mode (search-tools, get-tool-schema, execute-tool) = 337 statically defined registrations (not all active at once: discovery mode replaces direct registration of Graph tools with three meta-tools; some tools require --org-mode / stdio).
+The final description of the Graph tool = (descriptionOverride ?? description from OpenAPI generation) + "\n\n💡 TIP: <llmTip>"; for beta endpoints the prefix is “[beta]”. All 324 have real descriptions (0 fallback).
 
-### Маркер-скан (полный, по всем 337 описаниям): 30 совпадений, ВСЕ доброкачественные
-- `copilot-retrieve` — маркер `Prefer`: «…unlike search-query/search-onedrive-files/search-sharepoint-sites, which are lexical KQL. Prefer this for paraphrase/intent queries (e.g. resolving an informal project nickname…)» — внутрисерверный роутинг между своими инструментами.
-- `download-bytes` (utility) — маркер `prefer`: «For large drive/SharePoint file content, prefer get-download-url, which returns a pre-authenticated URL to stream bytes out-of-band instead of base64 through the agent context.» — внутрисерверный роутинг.
-- `get-download-url` (utility) — маркер `Prefer this over`: «Prefer this over download-bytes for any file above a few KB or any bulk download.» — внутрисерверный роутинг.
-- `download-bytes-to-file` (utility) — маркер `preferred`: «For OneDrive or SharePoint file content, get-download-url is preferred — it returns a pre-authenticated URL for fully out-of-band download without the server fetching the bytes.» — внутрисерверный роутинг.
-- `list-mail-folder-messages-delta` — маркер `Prefer this over`: «Prefer this over full re-list for polling.» — роутинг на самого себя vs полный перелист, техсовет.
-- `send-chat-message` / `pin-chat-message` — маркер `must use`: «…you must use the list chats method to retrieve the ID of an existing chat before you can…» — цитата документации Microsoft Graph, техническая зависимость.
-- `set-my-presence` — маркер `prefer`: «…if the user also wants to override their *visible* status regardless of activity, prefer set-my-user-preferred-presence.» — внутрисерверный роутинг.
-- `execute-tool` — маркер `prefer`: «For list endpoints, prefer modest $top plus $select.» — техсовет по параметрам.
-- `get-mailbox-settings`, `update-mailbox-settings`, `list-supported-time-zones`, `list-supported-languages`, `set-my-user-preferred-presence`, `clear-my-user-preferred-presence`, `get-meeting-recording-content` — многочисленные срабатывания на `preferred`/`the user has chosen`/`prefer` — все это доменная лексика Outlook/Teams («preferred time zone», «preferred presence»), не стиринг.
+### Marker scan (full, across all 337 descriptions): 30 matches, ALL benign
+- `copilot-retrieve` — `Prefer` marker: "…unlike search-query/search-onedrive-files/search-sharepoint-sites, which are lexical KQL. Prefer this for paraphrase/intent queries (e.g. resolving an informal project nickname…)" — internal server routing between its own tools.
+- `download-bytes` (utility) — `prefer` marker: "For large drive/SharePoint file content, prefer get-download-url, which returns a pre-authenticated URL to stream bytes out-of-band instead of base64 through the agent context." — internal server routing.
+- `get-download-url` (utility) — marker `Prefer this over`: "Prefer this over download-bytes for any file above a few KB or any bulk download." — in-server routing.
+- `download-bytes-to-file` (utility) — `preferred` marker: "For OneDrive or SharePoint file content, get-download-url is preferred — it returns a pre-authenticated URL for fully out-of-band download without the server fetching the bytes." — internal server routing.
+- `list-mail-folder-messages-delta` — marker `Prefer this over`: "Prefer this over full re-list for polling." — routing to itself vs full re-list, technical advice.
+- `send-chat-message` / `pin-chat-message` — marker `must use`: "…you must use the list chats method to retrieve the ID of an existing chat before you can…" — Microsoft Graph documentation quote, technical dependency.
+- `set-my-presence` — marker `prefer`: "…if the user also wants to override their *visible* status regardless of activity, prefer set-my-user-preferred-presence." — in-server routing.
+- `execute-tool` — `prefer` marker: "For list endpoints, prefer modest $top plus $select." — technical advice on parameters.
+- `get-mailbox-settings`, `update-mailbox-settings`, `list-supported-time-zones`, `list-supported-languages`, `set-my-user-preferred-presence`, `clear-my-user-preferred-presence`, `get-meeting-recording-content` — numerous hits on `preferred`/`the user has chosen`/`prefer` — all of this is Outlook/Teams domain lexicon ("preferred time zone", "preferred presence"), not steering.
 
-Вывод скана: ни одного случая стиринга против внешних/встроенных инструментов, самовосхваления, «call immediately», precedence-клауз или экономических приманок. Все «prefer/must» — либо внутрисерверный роутинг между собственными инструментами, либо цитаты официальной документации Microsoft Graph.
+Scan result: no cases of steering against external/built-in tools, self-praise, "call immediately", precedence clauses, or economic bait. All "prefer/must" are either intra-server routing between its own tools or quotes from official Microsoft Graph documentation.
 
-### 8 репрезентативных полных описаний
+### 8 representative full descriptions
 
 **list-mail-messages**
 
@@ -103,7 +103,7 @@ Execute a Microsoft Graph API tool by name. Workflow: search-tools → get-tool-
 ```
 
 ## NOTES
-- Код в dist/ собран tsup, но НЕ минифицирован: читаемые идентификаторы, строки целиком, только escape-последовательности \u2014 и т.п. Src в тарболе частичный (src/endpoints.json + src/generated/*), основной анализ по dist/.
-- Риск динамической сборки строк: НИЗКИЙ и полностью прослежен. Instructions собираются из фиксированных литералов по флагам запуска (все ветки процитированы выше); описания инструментов — конкатенация статических литералов (descriptionOverride/OpenAPI-описание + llmTip + «[beta]»-префикс). Никаких загрузок текста с сети/из env в описания не обнаружено.
-- Просмотрено ~12 файлов детально (server.js, mcp-instructions.js, graph-tools.js, auth-tools.js, endpoints.json, generated/client.js, generated/client-beta.js, package.json и др.) из 64 файлов пакета; экстракция описаний — программно по всем 324 эндпоинтам + 13 служебным инструментам.
-- Особенность: search-tools/BM25-индекс в discovery-режиме ранжирует по name+llmTip+description+path; авторы сознательно «front-load» ключевые слова в описания utility-инструментов (комментарий в коде у download-bytes-to-file) — это оптимизация под собственный поиск, не под хост-агента.
+- Code in dist/ is built with tsup, but NOT minified: readable identifiers, full strings, only escape sequences \u2014 and etc. The src in the tarball is partial (src/endpoints.json + src/generated/*); main analysis is on dist/.
+- Risk of dynamic string assembly: LOW and fully traced. Instructions are assembled from fixed literals based on launch flags (all branches are quoted above); tool descriptions are a concatenation of static literals (descriptionOverride/OpenAPI description + llmTip + "[beta]" prefix). No text loads from the network or env were found in descriptions.
+- Reviewed ~12 files in detail (server.js, mcp-instructions.js, graph-tools.js, auth-tools.js, endpoints.json, generated/client.js, generated/client-beta.js, package.json, etc.) out of 64 package files; extraction of descriptions — programmatically over all 324 endpoints + 13 utility tools.
+- Feature: the search-tools/BM25 index in discovery mode ranks by name+llmTip+description+path; the authors deliberately "front-load" keywords in utility tool descriptions (comment in code for download-bytes-to-file) — this is optimization for its own search, not for the host agent.

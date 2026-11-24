@@ -1,18 +1,18 @@
-# UNIT: atlassian | Atlassian (Jira/Confluence) | github sooperset/mcp-atlassian | тип автора: комьюнити | captured 2026-07-29 (static source)
+# UNIT: atlassian | Atlassian (Jira/Confluence) | github sooperset/mcp-atlassian | author type: community | captured 2026-07-29 (static source)
 
-Это MCP-сервер: Python, FastMCP. Композитный сервер `AtlassianMCP` (src/mcp_atlassian/servers/main.py:885) монтирует два под-сервера: `jira_mcp` (namespace="jira") и `confluence_mcp` (namespace="confluence"). Имена инструментов клиенту отдаются с префиксом неймспейса (jira_*, confluence_*).
+This is an MCP server: Python, FastMCP. The composite server `AtlassianMCP` (src/mcp_atlassian/servers/main.py:885) mounts two sub-servers: `jira_mcp` (namespace="jira") and `confluence_mcp` (namespace="confluence"). Tool names are returned to the client with the namespace prefix (jira_*, confluence_*).
 
 ## CHANNEL: instructions (52 chars + 58 chars)
 
-Корневой сервер `main_mcp = AtlassianMCP(name="Atlassian MCP", lifespan=..., auth=...)` — параметр instructions НЕ задан.
+Root server `main_mcp = AtlassianMCP(name="Atlassian MCP", lifespan=..., auth=...)` — the instructions parameter is NOT set.
 
-Под-сервер Jira (src/mcp_atlassian/servers/jira.py:50-53), instructions (52 chars):
+Jira sub-server (src/mcp_atlassian/servers/jira.py:50-53), instructions (52 chars):
 
 ```
 Provides tools for interacting with Atlassian Jira.
 ```
 
-Под-сервер Confluence (src/mcp_atlassian/servers/confluence.py:182-185), instructions (58 chars):
+Confluence sub-server (src/mcp_atlassian/servers/confluence.py:182-185), instructions (58 chars):
 
 ```
 Provides tools for interacting with Atlassian Confluence.
@@ -20,25 +20,25 @@ Provides tools for interacting with Atlassian Confluence.
 
 ## CHANNEL: tool descriptions (coverage=marker-scan+sample)
 
-Всего инструментов найдено статически: 98 (63 jira + 35 confluence). Определения — декораторы `@jira_mcp.tool(...)` / `@confluence_mcp.tool(...)`; description берётся из docstring функции (параметр description= в декораторах не используется, задаются только tags и annotations{title, readOnlyHint, destructiveHint}).
+Total tools found statically: 98 (63 jira + 35 confluence). Definitions are decorators `@jira_mcp.tool(...)` / `@confluence_mcp.tool(...)`; description is taken from the function docstring (the description= parameter in the decorators is not used; only tags and annotations{title, readOnlyHint, destructiveHint} are set).
 
-### Полный маркер-скан всех 98 описаний
+### Full marker scan of all 98 descriptions
 
-Прогон всех регексов задания (case-insensitive) по полным текстам всех 98 описаний: **0 совпадений**. Дополнительная контрольная grep-проверка по подстрокам prefer / best for / great for / perfect for / essential / precedence / must use / immediately / memory по обоим файлам целиком дала только нейтральные технические вхождения, не относящиеся к описаниям инструментов как рулевые формулировки:
+Ran all task regexes (case-insensitive) across the full text of all 98 descriptions: **0 matches**. An additional control grep check for substrings prefer / best for / great for / perfect for / essential / precedence / must use / immediately / memory across both files in full yielded only neutral technical occurrences not related to tool descriptions as steering wording:
 
-- jira.py:586 (описание параметра fields): "Use '*all' for all fields (including custom fields), or omit for essential fields only."
-- jira.py:1728 (описание параметра): "Never assume what it might be, always ask the user."
-- jira.py:2091 (описание параметра): "thousands of tokens. The issue 'key' is always returned regardless. "
+- jira.py:586 (parameter fields): "Use '*all' for all fields (including custom fields), or omit for essential fields only."
+- jira.py:1728 (parameter description): "Never assume what it might be, always ask the user."
+- jira.py:2091 (parameter description): "thousands of tokens. The issue 'key' is always returned regardless. "
 - jira.py:3339 / jira.py:3427: "Project keys are always returned in uppercase."
 - jira.py:3789: "If true, fail immediately when raiseOnBehalfOf cannot be applied. "
 
-### Полный список имён инструментов
+### Full list of tool names
 
 **jira** (63): jira_get_user_profile, jira_search_assignable_users, jira_get_issue_watchers, jira_add_watcher, jira_remove_watcher, jira_get_issue, jira_search, jira_search_fields, jira_get_field_options, jira_get_project_issues, jira_get_transitions, jira_get_worklog, jira_download_attachments, jira_get_issue_images, jira_get_agile_boards, jira_get_board_issues, jira_get_sprints_from_board, jira_get_sprint_issues, jira_get_link_types, jira_create_issue, jira_batch_create_issues, jira_batch_get_changelogs, jira_update_issue, jira_assign_issue, jira_delete_issue, jira_move_issue, jira_add_comment, jira_edit_comment, jira_add_worklog, jira_link_to_epic, jira_create_issue_link, jira_create_remote_issue_link, jira_remove_issue_link, jira_transition_issue, jira_create_sprint, jira_update_sprint, jira_add_issues_to_sprint, jira_move_issues_to_backlog, jira_get_project_issue_types, jira_get_create_fields, jira_get_project_versions, jira_get_project_components, jira_get_all_projects, jira_search_projects, jira_get_project_fields, jira_get_service_desk_for_project, jira_get_service_desk_queues, jira_get_queue_issues, jira_get_request_types, jira_get_request_type_fields, jira_create_customer_request, jira_create_version, jira_batch_create_versions, jira_update_version, jira_get_issue_proforma_forms, jira_get_proforma_form_details, jira_update_proforma_form_answers, jira_get_issue_dates, jira_get_issue_sla, jira_get_issue_development_info, jira_get_issues_development_info, jira_get_project_epic_hierarchy, jira_get_cross_project_dependencies
 
 **confluence** (35): confluence_search, confluence_get_page, confluence_get_page_children, confluence_get_space_page_tree, confluence_get_comments, confluence_get_labels, confluence_add_label, confluence_create_page, confluence_update_page, confluence_update_page_section, confluence_delete_page, confluence_move_page, confluence_add_comment, confluence_reply_to_comment, confluence_get_inline_comments, confluence_add_inline_comment, confluence_search_user, confluence_get_page_history, confluence_get_page_diff, confluence_get_page_views, confluence_upload_attachment, confluence_upload_attachments, confluence_get_attachments, confluence_download_attachment, confluence_download_content_attachments, confluence_delete_attachment, confluence_get_page_images, confluence_list_page_templates, confluence_get_page_template, confluence_create_page_from_template, confluence_get_page_restrictions, confluence_set_page_restrictions, confluence_copy_page, confluence_check_content_permissions, confluence_get_space_permissions
 
-### 10 репрезентативных полных описаний (дословно)
+### 10 representative full descriptions (verbatim)
 
 #### jira_search
 

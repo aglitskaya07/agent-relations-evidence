@@ -1,17 +1,17 @@
-# UNIT: @azure/mcp | npm v3.0.0-beta.30 (published 2026-07-28T18:30:16.996Z) | рамки: npm-top,smithery-top20 | captured 2026-07-29 (static, tarball)
+# UNIT: @azure/mcp | npm v3.0.0-beta.30 (published 2026-07-28T18:30:16.996Z) | frames: npm-top,smithery-top20 | captured 2026-07-29 (static, tarball)
 
-## VERDICT: server, but binary-wrapper — payload не в tarball
+## VERDICT: server, but binary-wrapper — payload is not in tarball
 
-Это официальный Azure MCP Server (Microsoft, `mcpName: com.microsoft/azure`), т.е. по сути MCP-сервер, НЕ SDK/клиент. Но npm-тарболл `@azure/mcp` — тонкая обёртка-лаунчер (4 файла: `index.js` 3.7 KB, `package.json`, `scripts/post-install-script.js`, `README.md`, LICENSE). `index.js` лишь делает `require('@azure/mcp-<platform>-<arch>')` (шесть optionalDependencies: linux/darwin/win32 × x64/arm64) и вызывает `platformPackage.runExecutable(process.argv.slice(2))`. Реальный сервер — скомпилированный .NET-бинарь в платформенных пакетах, которых в анализируемом источнике нет. При отсутствии платформенного пакета лаунчер сам запускает `npm install <platformPackageName>@<version>` (execSync, с fallback `--no-save --prefer-online`) — supply-chain-примечательное поведение, но не steering.
+This is the official Azure MCP Server (Microsoft, `mcpName: com.microsoft/azure`), i.e. in essence an MCP server, NOT an SDK/client. But the npm tarball `@azure/mcp` is a thin launcher wrapper (4 files: `index.js` 3.7 KB, `package.json`, `scripts/post-install-script.js`, `README.md`, LICENSE). `index.js` only does `require('@azure/mcp-<platform>-<arch>')` (six optionalDependencies: linux/darwin/win32 × x64/arm64) and calls `platformPackage.runExecutable(process.argv.slice(2))`. The real server is a compiled .NET binary in the platform packages, which are not present in the analyzed source. If the platform package is absent, the launcher itself runs `npm install <platformPackageName>@<version>` (execSync, with fallback `--no-save --prefer-online`) — supply-chain-notable behavior, but not steering.
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически) — в тарболле нет ни строки instructions, ни конструктора Server/McpServer: серверная инициализация целиком внутри .NET-бинаря платформенного пакета, вне охвата этого юнита.
+(not found statically) — the tarball contains neither the string instructions nor a Server/McpServer constructor: server initialization is entirely inside the .NET binary of the platform package, outside the scope of this unit.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=none)
-(не извлекаемы статически) — регистраций инструментов (registerTool/addTool/server.tool/схем) в тарболле нет; README заявляет «40+ different Azure services», но сами name+description инструментов зашиты в скомпилированный бинарь. Маркер-скан README.md (35 KB) по всем регексам стирингового словаря — ноль совпадений; README нейтрален (setup-инструкции, таблицы конфигурации клиентов, разделы Permissions and Risk / Data Collection / Compliance).
+(not statically extractable) — there are no tool registrations (registerTool/addTool/server.tool/schema) in the tarball; README claims "40+ different Azure services", but the tool name+description values themselves are embedded in the compiled binary. Marker-scan of README.md (35 KB) against all regexes in the string dictionary — zero matches; README is neutral (setup instructions, client configuration tables, Permissions and Risk / Data Collection / Compliance sections).
 
 ## NOTES
-- Код не минифицирован, читаемый; просмотрено 5 файлов (все файлы пакета).
-- Динамической сборки строк instructions/descriptions в JS нет — их в JS нет вовсе.
-- Для полного покрытия описаний инструментов нужен отдельный юнит по платформенному пакету (например `@azure/mcp-darwin-arm64`) с извлечением строк из .NET-бинаря, либо динамический стенд.
-- Риск-заметка (не steering): auto-install через execSync npm при первом запуске — код тянет и исполняет платформенный пакет той же версии из registry.
+- The code is not minified, readable; 5 files were reviewed (all package files).
+- There is no dynamic construction of strings instructions/descriptions in JS — they are not present in JS at all.
+- For full coverage of tool descriptions, a separate unit is needed for the platform package (for example `@azure/mcp-darwin-arm64`) with extraction of strings from a .NET binary, or a dynamic stand.
+- Risk note (not steering): auto-install via execSync npm on first run — the code fetches and executes the platform package of the same version from the registry.

@@ -1,19 +1,19 @@
-# UNIT: meta-ads | Meta Ads (FB/Instagram) | github pipeboard-co/meta-ads-mcp | тип автора: комьюнити | captured 2026-07-29 (static source)
+# UNIT: meta-ads | Meta Ads (FB/Instagram) | github pipeboard-co/meta-ads-mcp | author type: community | captured 2026-07-29 (static source)
 
 ## SERVER CHECK
 
-Это MCP-сервер. Python-пакет `meta_ads_mcp`, `meta_ads_mcp/core/server.py:3` — `from mcp.server.fastmcp import FastMCP`, `server.py:17` — `mcp_server = FastMCP("meta-ads")`. Регистрируются MCP-ресурсы (`mcp_server.resource(uri="meta-ads://resources")`) и 43 инструмента через декоратор `@mcp_server.tool()` в модулях `meta_ads_mcp/core/*.py`. Транспорты: stdio и Streamable HTTP.
+This is an MCP server. Python package `meta_ads_mcp`, `meta_ads_mcp/core/server.py:3` — `from mcp.server.fastmcp import FastMCP`, `server.py:17` — `mcp_server = FastMCP("meta-ads")`. MCP resources are registered (`mcp_server.resource(uri="meta-ads://resources")`) and 43 tools through the `@mcp_server.tool()` decorator in the `meta_ads_mcp/core/*.py` modules. Transports: stdio and Streamable HTTP.
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Конструктор вызывается только с именем: `FastMCP("meta-ads")` (meta_ads_mcp/core/server.py:17). Ни `instructions=`, ни ручного ответа на `initialize` в репозитории нет. Слово "instructions" встречается только как ключ в JSON-ответах инструментов (например, в `get_login_link`: `"instructions": "Click the link above to authenticate with Meta Ads."`), это payload результата, а не канал server instructions.
+The constructor is called only with the name: `FastMCP("meta-ads")` (meta_ads_mcp/core/server.py:17). There is neither `instructions=` nor a manual response to `initialize` in the repository. The word "instructions" appears only as a key in tool JSON responses (for example, in `get_login_link`: `"instructions": "Click the link above to authenticate with Meta Ads."`), which is result payload, not the server instructions channel.
 
 ## CHANNEL: tool descriptions (coverage=marker-scan+sample)
 
-Всего инструментов: 43 (42 через декоратор `@mcp_server.tool()` + `get_login_link`, регистрируемый условно строкой `get_login_link = mcp_server.tool()(get_login_link)` при `ENABLE_LOGIN_LINK`). Описание = docstring функции (FastMCP берёт description из docstring). Так как > 40, применён полный маркер-скан всех 43 описаний + 12 репрезентативных полных описаний.
+Total tools: 43 (42 via the `@mcp_server.tool()` decorator + `get_login_link`, registered conditionally by the line `get_login_link = mcp_server.tool()(get_login_link)` when `ENABLE_LOGIN_LINK`). Description = the function docstring (FastMCP takes description from the docstring). Since > 40, a full marker-scan of all 43 descriptions was applied + 12 representative full descriptions.
 
-### Полный список инструментов (файл:строка, размер описания)
+### Full list of tools (file:line, description size)
 
 - `get_ad_accounts` — core/accounts.py:44, description 341 chars
 - `get_account_info` — core/accounts.py:78, description 983 chars
@@ -59,26 +59,26 @@
 - `search_geo_locations` — core/targeting.py:515, description 581 chars
 - `get_login_link` — core/authentication.py:42, description 446 chars
 
-### Результат маркер-скана по всем 43 описаниям
+### Result of marker scan across all 43 descriptions
 
-Совпадений: 2. Оба технические, без директивности в отношении выбора инструментов вне сервера.
+Matches: 2. Both are technical, without directives regarding tool choice outside the server.
 
-1. `get_image_by_hash` (core/ads.py:871) — дословно:
+1. `get_image_by_hash` (core/ads.py:871) — verbatim:
 
 ```
 ...image_hash from an existing creative (object_story_spec.link_data.image_hash, asset_feed_spec images[].hash, etc.). To view the image of an existing ad, prefer get_ad_image(ad_id).
 ```
 
-2. `create_ad_creative` (core/ads.py:1712) — дословно:
+2. `create_ad_creative` (core/ads.py:1712) — verbatim:
 
 ```
 The ad set must use optimization_goal=REMINDERS_SET and the placement
                   must be restricted to Instagram feeds/stories.
 ```
 
-Прочих совпадений по скану нет: описания состоят из перечислений аргументов Graph API, ограничений Meta API и примеров вызовов. Единственная маркетинговая формулировка, найденная вручную вне регекс-набора — в `generate_report` (core/reports.py:15): `**This is a premium feature available with Pipeboard Pro.**`; в `get_login_link`: `If using Pipeboard authentication (recommended), set the PIPEBOARD_API_TOKEN environment variable instead (token obtainable via https://pipeboard.co).`; в `duplicate_campaign`/`duplicate_adset`: `Recommended: Use this to run robust experiments.`
+No other matches were found in the scan: the descriptions consist of lists of Graph API arguments, Meta API limitations, and call examples. The only marketing phrasing found manually outside the regex set — in `generate_report` (core/reports.py:15): `**This is a premium feature available with Pipeboard Pro.**`; in `get_login_link`: `If using Pipeboard authentication (recommended), set the PIPEBOARD_API_TOKEN environment variable instead (token obtainable via https://pipeboard.co).`; in `duplicate_campaign`/`duplicate_adset`: `Recommended: Use this to run robust experiments.`
 
-### 12 репрезентативных полных описаний (дословно)
+### 12 representative full descriptions (verbatim)
 
 ### get_ad_accounts  (core/accounts.py:44, 341 chars)
 ```

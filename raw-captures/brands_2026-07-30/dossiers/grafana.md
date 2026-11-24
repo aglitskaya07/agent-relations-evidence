@@ -1,10 +1,10 @@
-# UNIT: grafana | Grafana | github grafana/mcp-grafana | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: grafana | Grafana | github grafana/mcp-grafana | author type: official | captured 2026-07-29 (static source)
 
-Язык: Go (mark3labs/mcp-go). Сервер подтверждён: `server.NewMCPServer("mcp-grafana", ...)` в `cmd/mcp-grafana/main.go:334`, транспорты stdio/sse/http.
+Language: Go (mark3labs/mcp-go). Server confirmed: `server.NewMCPServer("mcp-grafana", ...)` in `cmd/mcp-grafana/main.go:334`, transports stdio/sse/http.
 
 ## CHANNEL: instructions (3095 chars)
 
-Строка передаётся как `server.WithInstructions(instructions)` (`cmd/mcp-grafana/main.go:332-337`); собирается функцией `buildInstructions()` (там же, строки 226-263) из шаблона и карты `categoryDescription` (строки 46-80). Ниже — дословная реконструкция при дефолтных флагах (все категории включены, proxied включён):
+The string is passed as `server.WithInstructions(instructions)` (`cmd/mcp-grafana/main.go:332-337`); it is assembled by the `buildInstructions()` function (there, lines 226-263) from the template and the `categoryDescription` map (lines 46-80). Below is a literal reconstruction with the default flags (all categories enabled, proxied enabled):
 
 ```
 This server provides access to your Grafana instance and the surrounding ecosystem.
@@ -47,24 +47,24 @@ Available Capabilities:
 Timestamp parameters without a timezone offset are interpreted as UTC. Include an offset like '-05:00' or use relative syntax like 'now-1h' to query in a different timezone.
 ```
 
-Дословный шаблон сборки (из кода):
+Literal assembly template (from code):
 
 ```go
 b.WriteString("This server provides access to your Grafana instance and the surrounding ecosystem.\n\n")
 // if len(capabilities) > 0:
-//   "Available Capabilities:\n" + для каждой: "- " + desc + "\n"
+//   "Available Capabilities:\n" + for each: "- " + desc + "\n"
 // else:
 //   "No tool categories are currently enabled.\n"
 b.WriteString("\nTimestamp parameters without a timezone offset are interpreted as UTC. Include an offset like '-05:00' or use relative syntax like 'now-1h' to query in a different timezone.\n")
 ```
 
-Дословная строка для proxied-категории (добавляется вне `toolEntries`, строка 244): `"Proxied Tools: Access tools from external MCP servers (like Tempo) through dynamic discovery."`
+Literal string for the proxied category (added outside `toolEntries`, line 244): `"Proxied Tools: Access tools from external MCP servers (like Tempo) through dynamic discovery."`
 
 ## CHANNEL: tool descriptions (coverage=marker-scan+sample)
 
-Всего статических регистраций через `mcpgrafana.MustTool(name, description, handler, ...)`: **103** (уникальных имён 100 — `alerting_manage_rules`, `grafana_api_request`, `generate_deeplink` имеют по два варианта: read-only и read-write). Регистрация категорий — `tools/*.go`, функции `Add<Category>Tools`. Проксируемые инструменты (`proxied_tools.go`) приходят с внешних MCP-серверов в рантайме и статически не содержат описаний.
+Total static registrations via `mcpgrafana.MustTool(name, description, handler, ...)`: **103** (100 unique names — `alerting_manage_rules`, `grafana_api_request`, `generate_deeplink` each have two variants: read-only and read-write). Category registration — `tools/*.go`, functions `Add<Category>Tools`. Proxied tools (`proxied_tools.go`) come from external MCP servers at runtime and do not statically contain descriptions.
 
-### Полный список инструментов (имя — файл — длина описания)
+### Full list of tools (name — file — description length)
 
 - `list_teams` — tools/admin.go — 113 chars
 - `list_users_by_org` — tools/admin.go — 119 chars
@@ -170,17 +170,17 @@ b.WriteString("\nTimestamp parameters without a timezone offset are interpreted 
 - `list_snowflake_tables` — tools/snowflake.go — 177 chars
 - `describe_snowflake_table` — tools/snowflake.go — 157 chars
 
-### Маркер-скан всех 103 описаний
+### Marker scan of all 103 descriptions
 
-Совпадений: **1**.
+Matches: **1**.
 
-- инструмент `query_loki_logs` (tools/loki.go), совпадение `Prefer`, дословный контекст:
+- tool `query_loki_logs` (tools/loki.go), match `Prefer`, verbatim context:
 
   > ...ing log lines precisely, use a `count_over_time()` metric query with queryType='instant'. Prefer using `query_loki_stats` first to cheaply check whether a stream contains data (avoiding ...
 
-Остальные шаблоны из скан-набора совпадений не дали ни в одном описании.
+The remaining templates from the scan set did not match in any description.
 
-### 10 репрезентативных полных описаний (дословно)
+### 10 representative full descriptions (verbatim)
 
 #### `search_dashboards` (tools/search.go, 139 chars)
 
@@ -278,9 +278,9 @@ When NOT to use:
 Install a Grafana plugin by its plugin ID. If the version is not already confirmed with the user, omit it — the tool will look up the latest version and return it for confirmation before installing.
 ```
 
-### Примечание по вариантам одного имени
+### Note on variants of one name
 
-- `alerting_manage_rules` вариант 1 (tools/alerting.go, 464 chars):
+- `alerting_manage_rules` variant 1 (tools/alerting.go, 464 chars):
 
 ```
 List and inspect Grafana alert rules with filtering capabilities.
@@ -296,7 +296,7 @@ When NOT to use:
 - Modifying or creating alert rules (read-only tool)
 ```
 
-- `alerting_manage_rules` вариант 2 (tools/alerting.go, 461 chars):
+- `alerting_manage_rules` variant 2 (tools/alerting.go, 461 chars):
 
 ```
 Manage Grafana alert rules with full CRUD capabilities and filtering.
@@ -312,25 +312,25 @@ When NOT to use:
 - Checking how alerts are routed to receivers (use alerting_manage_routing)
 ```
 
-- `grafana_api_request` вариант 1 (tools/api.go, 224 chars):
+- `grafana_api_request` variant 1 (tools/api.go, 224 chars):
 
 ```
 Make an authenticated HTTP request to the Grafana API. Similar to 'gh api' for GitHub. Supports any Grafana API endpoint with optional jq-style response filtering. Use this for API endpoints that don't have a dedicated tool.
 ```
 
-- `grafana_api_request` вариант 2 (tools/api.go, 255 chars):
+- `grafana_api_request` variant 2 (tools/api.go, 255 chars):
 
 ```
 Make an authenticated HTTP request to the Grafana API. Similar to 'gh api' for GitHub. Supports any Grafana API endpoint with optional jq-style response filtering. Use this for API endpoints that don't have a dedicated tool. Only GET requests are allowed.
 ```
 
-- `generate_deeplink` вариант 1 (tools/navigation.go, 600 chars):
+- `generate_deeplink` variant 1 (tools/navigation.go, 600 chars):
 
 ```
 Generate deeplink URLs for Grafana resources. Supports dashboards (requires dashboardUid or provisioningPreview), panels (requires dashboardUid or provisioningPreview, plus panelId), and Explore queries (requires datasourceUid and optionally queries). For dashboard and panel links, provisioningPreview points at a dashboard staged on a provisioning repository branch (e.g. a git-sync PR preview). For explore links, the time range and queries are embedded inside the Grafana explore state. Set shorten=true to also attempt a /goto/<uid> short URL; if shortening fails, the full deeplink is returned.
 ```
 
-- `generate_deeplink` вариант 2 (tools/navigation.go, 488 chars):
+- `generate_deeplink` variant 2 (tools/navigation.go, 488 chars):
 
 ```
 Generate deeplink URLs for Grafana resources. Supports dashboards (requires dashboardUid or provisioningPreview), panels (requires dashboardUid or provisioningPreview, plus panelId), and Explore queries (requires datasourceUid and optionally queries). For dashboard and panel links, provisioningPreview points at a dashboard staged on a provisioning repository branch (e.g. a git-sync PR preview). In read-only mode, shorten=true is accepted but ignored and the full deeplink is returned.

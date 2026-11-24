@@ -1,12 +1,12 @@
-# UNIT: postman | Postman | github postmanlabs/postman-mcp-server | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: postman | Postman | github postmanlabs/postman-mcp-server | author type: official | captured 2026-07-29 (static source)
 
 ## SERVER CHECK
 
-MCP-сервер подтверждён: `src/index.ts` создаёт `new McpServer({ name: SERVER_NAME, version: APP_VERSION }, ...)` из `@modelcontextprotocol/sdk`, регистрирует 134 инструмента и MCP-ресурсы; TypeScript, stdio + HTTP.
+MCP server confirmed: `src/index.ts` creates `new McpServer({ name: SERVER_NAME, version: APP_VERSION }, ...)` from `@modelcontextprotocol/sdk`, registers 134 tools and MCP resources; TypeScript, stdio + HTTP.
 
 ## CHANNEL: instructions (195 chars)
 
-Строка передана вторым аргументом конструктора `new McpServer(...)` в `src/index.ts:264-265` (только если файл `src/resources/Instructions.md` успешно прочитан):
+The string is passed as the second argument of the `new McpServer(...)` constructor in `src/index.ts:264-265` (only if the file `src/resources/Instructions.md` was read successfully):
 
 ```
 Before answering any API-related questions, fetch the MCP resource at URI `postman://instructions` using FetchMcpResource from this MCP server, and follow the usage instructions contained within.
@@ -14,7 +14,7 @@ Before answering any API-related questions, fetch the MCP resource at URI `postm
 
 ### Referenced resource: `postman://instructions` (src/resources/Instructions.md, 8370 chars)
 
-Регистрируется как MCP-ресурс в `src/index.ts:494-503`. instructions-строка выше явно предписывает клиенту загрузить и следовать этому файлу, поэтому текст приведён дословно и целиком:
+Registered as an MCP resource in `src/index.ts:494-503`. The instructions string above explicitly tells the client to load and follow this file, so the text is given verbatim and in full:
 
 ```markdown
 # Postman MCP Server — Instructions
@@ -139,26 +139,26 @@ Once the user selects a collection:
 
 ## CHANNEL: tool descriptions (coverage=marker-scan+sample)
 
-Всего инструментов: 134 (> 40), суммарно ~41266 символов описаний. Полный маркер-скан по всем 134 описаниям выполнен; ниже все совпадения и 10 репрезентативных полных описаний.
+A total of 134 tools (> 40), with a total of ~41266 characters of descriptions. A full marker scan across all 134 descriptions was performed; below are all matches and 10 representative full descriptions.
 
-### Полный список имён инструментов
+### Full list of tool names
 
 ```
 addWorkspaceToPrivateNetwork, createCollection, createCollectionComment, createCollectionFolder, createCollectionFork, createCollectionRequest, createCollectionResponse, createEnvironment, createFolderComment, createMock, createMockServerResponse, createMonitor, createRequestComment, createResponseComment, createSpec, createSpecFile, createWorkspace, deleteApiCollectionComment, deleteCollection, deleteCollectionComment, deleteCollectionFolder, deleteCollectionRequest, deleteCollectionResponse, deleteEnvironment, deleteFolderComment, deleteMock, deleteMockServerResponse, deleteMonitor, deleteRequestComment, deleteResponseComment, deleteSpec, deleteSpecFile, deleteWorkspace, duplicateCollection, generateCollection, generateSpecFromCollection, getAllSpecs, getAnalyticsData, getAnalyticsMetadata, getApiDiscoveryInstructions, getAsyncSpecTaskStatus, getAuthenticatedUser, getCodeGenerationInstructions, getCollection, getCollectionComments, getCollectionContext, getCollectionFolder, getCollectionForks, getCollectionRequest, getCollectionResponse, getCollectionTags, getCollectionUpdatesTasks, getCollections, getCollectionsForkedByUser, getDuplicateCollectionTaskStatus, getEnabledTools, getEnvironment, getEnvironmentContext, getEnvironments, getFolderComments, getFolderContext, getGeneratedCollectionSpecs, getInstalledApiMaintenanceInstructions, getMock, getMockServerResponse, getMockServerResponses, getMocks, getMonitor, getMonitorRunResults, getMonitors, getPostmanContextOverview, getRequestCodeContext, getRequestComments, getRequestContext, getResponseComments, getResponseContext, getSourceCollectionStatus, getSpec, getSpecCollections, getSpecDefinition, getSpecFile, getSpecFiles, getStatusOfAnAsyncApiTask, getTaggedEntities, getWorkspace, getWorkspaceContext, getWorkspaceEnvironmentsContext, getWorkspaceGlobalVariables, getWorkspaceTags, getWorkspaces, getWorkspacesContext, listMonitorExecutions, listPrivateNetworkAddRequests, listPrivateNetworkWorkspaces, listRunsForExecution, mergeCollectionFork, patchCollection, patchEnvironment, publishDocumentation, publishMock, pullCollectionChanges, putCollection, putEnvironment, removeWorkspaceFromPrivateNetwork, resolveCommentThread, respondPrivateNetworkAddRequest, runCollection, runMonitor, searchLearningCenter, searchPostmanElements, syncCollectionWithSpec, syncSpecWithCollection, transferCollectionFolders, transferCollectionRequests, transferCollectionResponses, unpublishDocumentation, unpublishMock, updateApiCollectionComment, updateCollectionComment, updateCollectionFolder, updateCollectionRequest, updateCollectionResponse, updateCollectionTags, updateFolderComment, updateMock, updateMockServerResponse, updateMonitor, updateRequestComment, updateResponseComment, updateSpecFile, updateSpecProperties, updateWorkspace, updateWorkspaceGlobalVariables, updateWorkspaceTags
 ```
 
-### Marker scan: совпадений 6
+### Marker scan: 6 matches
 
-- **createMock** — дословно: «…he bare collection ID. - If you only have a \`collectionId\`, resolve the UID first:   1) Prefer GET \`/collections/{collectionId}\` and read \`uid\`, or   2) Construct \`{ownerId}-{coll…»
-- **createMock** — дословно: «…d = me.user.id\` - Use the \`workspace\` query to place the mock in a specific workspace. Prefer explicit workspace scoping.…»
-- **getAnalyticsData** — дословно: «…models_by_usage\`, \`activity_distribution\`, \`peak_activity\`, \`usage_leaderboard\`, \`credit_usage_by_model\`, \`messages_sent\`, \`credit_usage\`, \`agent_mode_sessions\`, \`new_vs_…»
-- **getAnalyticsData** — дословно: «…\`peak_activity\`, \`usage_leaderboard\`, \`credit_usage_by_model\`, \`messages_sent\`, \`credit_usage\`, \`agent_mode_sessions\`, \`new_vs_returning_users\`, \`agent_mode_users\`  The \…»
-- **getMocks** — дословно: «…workspaces.  - Always pass either the \`workspace\` or \`teamId\` query to scope results. Prefer \`workspace\` when known. - If you need team-scoped results, set \`teamId\` from the curr…»
-- **putCollection** — дословно: «…e existing items and creates new items.  - To perform an update asynchronously, use the \`Prefer\` header with the \`respond-async\` value. When performing an async update, this endpoint…»
+- **createMock** — verbatim: "…he bare collection ID. - If you only have a \`collectionId\`, resolve the UID first:   1) Prefer GET \`/collections/{collectionId}\` and read \`uid\`, or   2) Construct \`{ownerId}-{coll…"
+- **createMock** — verbatim: "…d = me.user.id\` - Use the \`workspace\` query to place the mock in a specific workspace. Prefer explicit workspace scoping.…"
+- **getAnalyticsData** — verbatim: "…models_by_usage\`, \`activity_distribution\`, \`peak_activity\`, \`usage_leaderboard\`, \`credit_usage_by_model\`, \`messages_sent\`, \`credit_usage\`, \`agent_mode_sessions\`, \`new_vs_…"
+- **getAnalyticsData** — verbatim: "…\`peak_activity\`, \`usage_leaderboard\`, \`credit_usage_by_model\`, \`messages_sent\`, \`credit_usage\`, \`agent_mode_sessions\`, \`new_vs_returning_users\`, \`agent_mode_users\`  The \…"
+- **getMocks** — verbatim: "…workspaces.  - Always pass either the \`workspace\` or \`teamId\` query to scope results. Prefer \`workspace\` when known. - If you need team-scoped results, set \`teamId\` from the curr…"
+- **putCollection** — literally: "…e existing items and creates new items.  - To perform an update asynchronously, use the \`Prefer\` header with the \`respond-async\` value. When performing an async update, this endpoint…"
 
-Все совпадения носят технический характер (HTTP-заголовок `Prefer`, рекомендация скоупить запрос по workspace, названия метрик биллинга Postman) и не являются директивами перенаправления агента.
+All matches are technical in nature (the `Prefer` HTTP header, the recommendation to scope the request by workspace, Postman billing metric names) and are not directives for rerouting the agent.
 
-### 10 репрезентативных полных описаний
+### 10 representative full descriptions
 
 #### searchPostmanElements
 

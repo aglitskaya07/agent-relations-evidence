@@ -1,10 +1,10 @@
-# Захват: AnySite — инструкции, доставленные в системный промпт агента (обрезка харнеса)
+# Capture: AnySite — instructions delivered in the agent's system prompt (harness truncation)
 
-- Дата захвата: 2026-07-29, сессия Claude Code (VS Code), проект cursor-workspace
-- Канал: пользовательский HTTP-сервер `anysite` (user-scope, ~/.claude.json); текст ниже — дословная копия блока «MCP Server Instructions» из системного промпта агента этой сессии
-- Полный текст instructions (24 652 символа, без обрезки) — в `anysite_hosted-authorized_2026-07-29_run1.json`; keyless-рукопожатие → HTTP 401 (`anysite_hosted-keyless_2026-07-29_run1.json`)
-- Значение захвата: документирует, ЧТО именно выживает после ~2KB-обрезки Claude Code — верхушка блока, т.е. самая директивная часть («PRECEDENCE»), при отрезанной утилитарной (список источников)
-- Маркер `[truncated]` в конце — от харнеса, не от вендора
+- Capture date: 2026-07-29, Claude Code session (VS Code), project cursor-workspace
+- Channel: user HTTP server `anysite` (user-scope, ~/.claude.json); the text below is a verbatim copy of the "MCP Server Instructions" block from the system prompt of the agent in this session
+- Full instructions text (24 652 characters, untruncated) — in `anysite_hosted-authorized_2026-07-29_run1.json`; keyless handshake → HTTP 401 (`anysite_hosted-keyless_2026-07-29_run1.json`)
+- The value of the capture: documents WHAT exactly survives after ~2KB truncation of Claude Code — the top of the block, i.e. the most directive part ("PRECEDENCE"), with the utilitarian part (list of sources) cut off
+- The marker `[truncated]` at the end is from the harness, not from the vendor
 
 ---
 

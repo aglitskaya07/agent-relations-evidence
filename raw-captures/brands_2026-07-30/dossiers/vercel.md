@@ -1,19 +1,19 @@
-# UNIT: vercel | Vercel Next.js DevTools | github vercel/next-devtools-mcp | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: vercel | Vercel Next.js DevTools | github vercel/next-devtools-mcp | author type: official | captured 2026-07-29 (static source)
 
 ## SERVER CONFIRMED
 
-TypeScript MCP-сервер на `@modelcontextprotocol/sdk`. `src/index.ts:44` — `new Server({name: "next-devtools-mcp", version: pkg.version}, {capabilities: {tools: {}}})`, транспорт `StdioServerTransport`, обработчики `ListToolsRequestSchema` / `CallToolRequestSchema`. package.json: `next-devtools-mcp` v0.4.0.
+TypeScript MCP server on `@modelcontextprotocol/sdk`. `src/index.ts:44` — `new Server({name: "next-devtools-mcp", version: pkg.version}, {capabilities: {tools: {}}})`, transport `StdioServerTransport`, handlers `ListToolsRequestSchema` / `CallToolRequestSchema`. package.json: `next-devtools-mcp` v0.4.0.
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Конструктор `Server` получает только `{name, version}` и `{capabilities}` — поля `instructions` нет. Ответ `initialize` не переопределяется (кастомный хендлер отсутствует). В `server.json`, `.mcp.json`, `package.json` слова `instructions` нет.
+The `Server` constructor receives only `{name, version}` and `{capabilities}` — there is no `instructions` field. The `initialize` response is not overridden (the custom handler is absent). In `server.json`, `.mcp.json`, `package.json` there is no word `instructions`.
 
-Примечание: строка `instructions` встречается внутри JSON-ответов хендлеров (`browser-eval.ts`, `nextjs-docs.ts`) — это runtime tool-output, не канал server instructions.
+Note: the string `instructions` appears inside JSON responses from handlers (`browser-eval.ts`, `nextjs-docs.ts`) — this is runtime tool-output, not a server instructions channel.
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Всего инструментов: 4. Определения — через экспортируемый `metadata = { name, description }` в каждом файле `src/tools/*.ts`, агрегируются в массив `const tools = [browserEval, nextjsDocs, nextjsIndex, nextjsCall]` (`src/index.ts:25`) и отдаются в `ListTools` без модификаций.
+Total tools: 4. Definitions are via exported `metadata = { name, description }` in each `src/tools/*.ts` file, aggregated into the `const tools = [browserEval, nextjsDocs, nextjsIndex, nextjsCall]` array (`src/index.ts:25`) and returned in `ListTools` without modifications.
 
 ### 1. `browser_eval`
 (src/tools/browser-eval.ts:26)
@@ -120,15 +120,15 @@ Example usage:
 2. Call 'nextjs_call' with port=3000, toolName="get_errors" to get errors from server on port 3000
 ```
 
-## SUPPLEMENTARY: runtime-injected guidance (не tool description, но попадает в контекст модели)
+## SUPPLEMENTARY: runtime-injected guidance (not a tool description, but enters the model context)
 
-Хендлеры возвращают JSON с полями `instructions` / `ai_instruction`, формируемыми в коде:
+The handlers return JSON with `instructions` / `ai_instruction` fields, generated in code:
 
 - `nextjs-docs.ts:113` — `"Do not rely on training-data knowledge of Next.js APIs — this version may differ. Prefer the bundled docs."`
 - `nextjs_index.ts:148-149` — `ai_instruction: "IMPORTANT: Server auto-discovery may not work on all operating systems or network configurations. Please ask the user: 'What port is your Next.js dev server running on?'. Once you have the port number, call this tool again with the 'port' parameter set to the user-provided port."`
-- `browser-eval.ts:66-74` — набор инструкций по установке и запуску внешнего CLI `agent-browser` (`npm install -g agent-browser`).
+- `browser-eval.ts:66-74` — a set of instructions for installing and running the external CLI `agent-browser` (`npm install -g agent-browser`).
 
-## PARAM DESCRIPTIONS (для полноты)
+## PARAM DESCRIPTIONS (for completeness)
 
 - `browser_eval.task` — "Optional: what you want to do in the browser (e.g. 'open localhost:3000 and check for console errors'). Used only to tailor the guidance."
 - `nextjs_docs.topic` — "Optional: what you're looking for (e.g. 'use cache', 'generateMetadata', 'middleware'). Used only to suggest where to look in the bundled docs."

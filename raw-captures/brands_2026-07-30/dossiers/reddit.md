@@ -1,10 +1,10 @@
-# UNIT: reddit | Reddit | github karanb192/reddit-mcp-buddy | тип автора: комьюнити | captured 2026-07-29 (static source)
+# UNIT: reddit | Reddit | github karanb192/reddit-mcp-buddy | author type: community | captured 2026-07-29 (static source)
 
-Тип: MCP-сервер (TypeScript, @modelcontextprotocol/sdk, `new Server(...)` в `src/mcp-server.ts:183`, stdio + HTTP транспорт). Подтверждено.
+Type: MCP server (TypeScript, @modelcontextprotocol/sdk, `new Server(...)` in `src/mcp-server.ts:183`, stdio + HTTP transport). Confirmed.
 
 ## CHANNEL: instructions (1082 chars)
 
-Источник: `src/mcp-server.ts:194-211`, второй аргумент конструктора `new Server(...)`, поле `instructions`. Шаблонный литерал с двумя интерполяциями (`${rateLimit}`, `${cacheTTL / 60000}`) — приведён дословно, включая плейсхолдеры.
+Source: `src/mcp-server.ts:194-211`, second argument of the constructor `new Server(...)`, field `instructions`. Template literal with two interpolations (`${rateLimit}`, `${cacheTTL / 60000}`) — reproduced verbatim, including placeholders.
 
 ```
 Reddit content browser and analyzer. Access posts, comments, and user data from Reddit.
@@ -27,7 +27,7 @@ COMMON QUERIES:
 Rate limits: ${rateLimit} requests/minute. Cache TTL: ${cacheTTL / 60000} minutes.
 ```
 
-Рядом в коде комментарий автора (`src/mcp-server.ts:192-193`), не часть канала:
+Nearby in the code is the author's comment (`src/mcp-server.ts:192-193`), not part of the channel:
 ```
 // Guidance the client shows the model. This must be `instructions` —
 // a `description` field on serverInfo is dropped by the protocol.
@@ -35,7 +35,7 @@ Rate limits: ${rateLimit} requests/minute. Cache TTL: ${cacheTTL / 60000} minute
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Источник: `src/mcp-server.ts:217-248`, массив `const toolDefinitions: Tool[]`. Всего 5 инструментов, все включены дословно. Все помечены `annotations: { readOnlyHint: true }`.
+Source: `src/mcp-server.ts:217-248`, the `const toolDefinitions: Tool[]` array. 5 tools total, all included verbatim. All are marked `annotations: { readOnlyHint: true }`.
 
 ### 1. browse_subreddit
 ```
@@ -62,9 +62,9 @@ Analyze a Reddit user's posting history, karma, and activity patterns. Returns p
 Get explanations of Reddit terms, slang, and culture. Returns definition, origin, usage, and examples.
 ```
 
-## CHANNEL: parameter descriptions (дополнительно, не входит в подсчёт)
+## CHANNEL: parameter descriptions (additional, not counted)
 
-Схемы Zod в `src/tools/index.ts:26-76`; `.describe()` идёт в inputSchema через `zodSchemaToMCPInputSchema`. Дословные примеры директивных формулировок в параметрах:
+The Zod schemas in `src/tools/index.ts:26-76`; `.describe()` goes into inputSchema via `zodSchemaToMCPInputSchema`. Literal examples of directive wording in the parameters:
 
 - `browse_subreddit.limit` — `Default 25, range (1-100). Change ONLY IF user specifies.`
 - `search_reddit.limit` — `Default 25, range (1-100). Override ONLY IF user requests.`

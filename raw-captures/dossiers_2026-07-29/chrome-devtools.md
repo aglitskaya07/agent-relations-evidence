@@ -1,9 +1,9 @@
 # UNIT: chrome-devtools-mcp@1.6.0 | npm (Google) | captured 2026-07-29 (static, tarball)
 
 ## CHANNEL: instructions, npm (static)
-(см. экстракцию ниже — если в коде нет, раздел будет помечен «не обнаружены»)
+(see extraction below — if there is none in the code, the section will be marked "not found")
 
-**Экстракция: инструкции НЕ обнаружены.** В `build/src/index.js` сервер создаётся как:
+**Extraction: instructions NOT found.** In `build/src/index.js` the server is created as:
 
 ```js
 const server = new McpServer({
@@ -13,29 +13,29 @@ const server = new McpServer({
 }, { capabilities: { logging: {} } });
 ```
 
-Поле `instructions` конструктору не передаётся; все прочие вхождения `instructions` в коде — внутренности бандла MCP SDK (`build/src/third_party/index.js`) и строки Lighthouse-локализации, не относящиеся к серверу.
+The `instructions` field is not passed to the constructor; all other occurrences of `instructions` in the code are internals of the MCP SDK bundle (`build/src/third_party/index.js`) and Lighthouse localization strings that are not related to the server.
 
-**Дополнительный инструкционный канал (не MCP-handshake):** пакет включает каталог `skills/` с шестью агентскими скиллами (`chrome-devtools`, `chrome-devtools-cli`, `debug-optimize-lcp`, `memory-leak-debugging`, `a11y-debugging`, `troubleshooting`) — SKILL.md-файлы с инструкциями для агента. Они не передаются через MCP `initialize`, но попадают агенту, если клиент подхватывает skills из пакета.
+**Additional instruction channel (not MCP-handshake):** the package includes a `skills/` directory with six agent skills (`chrome-devtools`, `chrome-devtools-cli`, `debug-optimize-lcp`, `memory-leak-debugging`, `a11y-debugging`, `troubleshooting`) — SKILL.md files with instructions for the agent. They are not passed through MCP `initialize`, but are delivered to the agent if the client picks up skills from the package.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=marker-scan+sample)
 
-Всего инструментов: **55** (каталог `build/src/tools/`: console, emulation, extensions, input, lighthouse, memory, network, pages, performance, screencast, screenshot, script, snapshot, thirdPartyDeveloper, webmcp + slim-профиль `slim/tools.js` с 3 упрощёнными инструментами screenshot/navigate/evaluate).
+A total of **55** tools (catalog `build/src/tools/`: console, emulation, extensions, input, lighthouse, memory, network, pages, performance, screencast, screenshot, script, snapshot, thirdPartyDeveloper, webmcp + slim profile `slim/tools.js` with 3 simplified screenshot/navigate/evaluate tools).
 
-### Маркер-скан (регексы steering-маркеров по ВСЕМ 55 описаниям)
+### Marker scan (regexes for steering markers across ALL 55 descriptions)
 
-Совпадений: 2 (оба — маркер `prefer`, внутренняя self-preference между инструментами того же сервера, не вытеснение чужих инструментов).
+Matches: 2 (both are the marker `prefer`, internal self-preference between tools of the same server, not displacing another tool).
 
-1. **fill_form** (`input.js`), маркер `prefer`:
+1. **fill_form** (`input.js`), marker `prefer`:
 > Fill out multiple form elements (inputs, selects, checkboxes, radios) at once. ALWAYS prefer this tool over multiple individual 'fill' or 'click' calls when interacting with forms. It is significantly faster, more reliable, and reduces turn count. Example: Fill username, password, and check "Remember Me" in one call.
 
-2. **take_snapshot** (`snapshot.js`), маркер `Prefer`:
+2. **take_snapshot** (`snapshot.js`), marker `Prefer`:
 > Take a text snapshot of the currently selected page based on the a11y tree. The snapshot lists page elements along with a unique
 > identifier (uid). Always use the latest snapshot. Prefer taking a snapshot over taking a screenshot. The snapshot indicates the element selected
 > in the DevTools Elements panel (if any).
 
-Прочие маркеры (instead of built-in, most powerful, PRECEDENCE, LAST resort, primary, MUST use, whenever the user, refund/credit/reward и т.д.) — совпадений нет.
+Other markers (instead of built-in, most powerful, PRECEDENCE, LAST resort, primary, MUST use, whenever the user, refund/credit/reward, etc.) — no matches.
 
-### 8 репрезентативных полных описаний (дословно)
+### 8 representative full descriptions (verbatim)
 
 **click** (`input.js`):
 > Clicks on the provided element
@@ -61,11 +61,11 @@ const server = new McpServer({
 **execute_webmcp_tool** (`webmcp.js`):
 > Executes a WebMCP tool exposed by the page.
 
-### Динамическая сборка описаний
+### Dynamic assembly of descriptions
 
-5 описаний — шаблонные литералы с интерполяцией (`list_console_messages`, `get_console_message`, `lighthouse_audit`, `list_pages`, `evaluate_script`). Интерполяции ограничены: условные добавки по CLI-флагу `categoryExtensions` и подстановка имён соседних инструментов. Внешних/сетевых источников текста описаний нет. Отдельный случай: `execute_webmcp_tool` / `execute_3p_developer_tool` исполняют инструменты, объявленные самой веб-страницей — их описания приходят из страницы в рантайме и статически не фиксируются (потенциальный runtime-канал стороннего текста).
+5 descriptions — template literals with interpolation (`list_console_messages`, `get_console_message`, `lighthouse_audit`, `list_pages`, `evaluate_script`). Interpolations are limited to: conditional additions based on the CLI flag `categoryExtensions` and substitution of neighboring tool names. There are no external/network sources for the description text. Separate case: `execute_webmcp_tool` / `execute_3p_developer_tool` execute tools declared by the web page itself — their descriptions come from the page at runtime and are not fixed statically (a potential runtime channel for third-party text).
 
 ## NOTES
-- Код НЕ минифицирован: читаемый скомпилированный TypeScript (ES modules, комментарии лицензий сохранены). Исключение — `build/src/third_party/*` (бандлы MCP SDK и Lighthouse, конкатенированные, но тоже не однострочно минифицированные).
-- Риск динамической сборки строк: низкий для собственных описаний (только CLI-флаги и cross-ссылки на имена инструментов); отдельно отмечен runtime-канал webmcp/3p-developer tools, где описания приходят из открытой страницы.
-- Просмотрено: 366 файлов в пакете, из них текстово проанализированы все 19 файлов `build/src/tools/**` (grep+regex по всем), `build/src/index.js` полностью, grep по всему `build/` (348 файлов) на `instructions`/`new McpServer`/`registerTool`; каталог `skills/` (6 SKILL.md) учтён как побочный канал.
+- Code is NOT minified: readable compiled TypeScript (ES modules, license comments preserved). Exception: `build/src/third_party/*` (MCP SDK and Lighthouse bundles, concatenated, but also not one-line minified).
+- Risk of dynamic string assembly: low for its own descriptions (only CLI flags and cross-links to tool names); separately noted is the runtime channel webmcp/3p-developer tools, where descriptions come from an open page.
+- Reviewed: 366 files in the package, of which all 19 files `build/src/tools/**` were text-analyzed (grep+regex across all), `build/src/index.js` in full, grep across all `build/` (348 files) for `instructions`/`new McpServer`/`registerTool`; the `skills/` directory (6 SKILL.md) was counted as a side channel.

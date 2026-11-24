@@ -1,15 +1,15 @@
-# UNIT: @n8n/mcp-browser | npm v0.15.0 (published 2026-07-21T07:28:25.906Z) | рамки: npm-top | captured 2026-07-29 (static, tarball)
+# UNIT: @n8n/mcp-browser | npm v0.15.0 (published 2026-07-21T07:28:25.906Z) | scopes: npm-top | captured 2026-07-29 (static, tarball)
 
-Тип: настоящий MCP-сервер (dist/server.js: `new McpServer({ name: 'n8n-browser', version: '1.0.0' })`, stdio + StreamableHTTP транспорты; также экспортируется как библиотека `createBrowserTools`). Браузерная автоматизация от n8n поверх Playwright/agent-browser, подключается к реальному Chrome пользователя через расширение «n8n AI Browser Bridge».
+Type: a real MCP server (dist/server.js: `new McpServer({ name: 'n8n-browser', version: '1.0.0' })`, stdio + StreamableHTTP transports; also exported as the `createBrowserTools` library). n8n browser automation on top of Playwright/agent-browser, connects to the user's real Chrome through the "n8n AI Browser Bridge" extension.
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Конструктору `McpServer` передаются только `name` и `version` — поля `instructions` нет ни в server.js, ни где-либо ещё в dist (grep по "instructions" находит только текст про установку Brave в browser-discovery.js).
+Only `name` and `version` are passed to the `McpServer` constructor — there is no `instructions` field in `server.js` or anywhere else in dist (grep for "instructions" finds only text about installing Brave in browser-discovery.js).
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-31 инструмент (session 2, tabs 4, navigation 4, interaction 9, inspection 7, wait 1, state 2, credential 2). Все описания дословно:
+31 tools (session 2, tabs 4, navigation 4, interaction 9, inspection 7, wait 1, state 2, credential 2). All descriptions verbatim:
 
 1. **browser_connect** — `Connect to the user's browser for web automation. Optionally specify a Chromium-based browser (chrome, brave, edge, chromium). Requires the n8n AI Browser Bridge extension to be installed. Must be called before using any other browser tools.`
 2. **browser_disconnect** — `Disconnect from the browser and release all resources.`
@@ -42,16 +42,16 @@
 29. **browser_storage** — `Get, set, or clear localStorage or sessionStorage.`
 30. **browser_capture_secret** — `Read a secret value from a DOM element (identified by a snapshot ref) and store it in the session buffer. The value is never returned to the LLM. Use browser_create_credential to assemble buffered secrets into a credential.`
 31. **browser_create_credential** — `Assemble secrets captured with browser_capture_secret into a new n8n credential. Literal fields go in ` `` `data` `` `; fields that must come from the buffer go in ` `` `resolveData` `` ` (leaf values are buffer field names). The buffer is cleared after success unless clear=false.`
-### Steering-маркеры в описаниях (мягкие, внутрипакетные)
-- `primary` — browser_snapshot: «Use this tool as your primary way to observe the page» (направляет между СВОИМИ инструментами, не против внешних).
+### Steering markers in descriptions (soft, within-package)
+- `primary` — browser_snapshot: "Use this tool as your primary way to observe the page" (directs between ITS OWN tools, not against external ones).
 - `Prefer this over` / `Prefer` — browser_snapshot («Prefer this over browser_screenshot»), browser_screenshot («Prefer browser_snapshot for most tasks — it is smaller, faster»), browser_content («Prefer browser_snapshot for element discovery»), click/type/select/drag/hover («ref … (preferred)»).
 - `Always` — browser_select: «Always use this for native select elements instead of clicks».
-- `Must be called before` — browser_connect: «Must be called before using any other browser tools» (техническое требование сессии).
-- Внешне-агрессивных маркеров (instead of built-in, takes precedence, LAST resort, Do NOT answer from memory, ignore previous и т.п.) — НЕТ.
+- `Must be called before` — browser_connect: "Must be called before using any other browser tools" (technical session requirement).
+- There are no externally aggressive markers (instead of built-in, takes precedence, LAST resort, Do NOT answer from memory, ignore previous, etc.) — NO.
 
 ## NOTES
-- Код НЕ минифицирован: чистый tsc-вывод с source maps и .d.ts, читается свободно.
-- Риск динамической сборки строк: низкий. Описания — статические литералы (в session.js — конкатенация соседних литералов, восстановлена дословно). Динамики в описаниях нет.
-- Просмотрено ~18 файлов: package.json, README.md, dist/server.js, dist/tools/{index, tabs, navigation, interaction, inspection, wait, state, session, credential, helpers}.js + grep по всему dist.
-- Особенность безопасности: пара browser_capture_secret / browser_create_credential — сервер декларирует, что секреты со страницы буферизуются вне контекста LLM и собираются в n8n-credential; плюс модули redaction/ и sensitivity/ (редакция чувствительных данных в снапшотах).
-- HTTP-транспорт по умолчанию bearer-token + loopback-only + отклонение Origin — заметно аккуратнее среднего по выборке.
+- Code is NOT minified: plain tsc output with source maps and .d.ts, reads freely.
+- Risk of dynamic string assembly: low. Descriptions are static literals (in session.js — concatenation of adjacent literals, reconstructed verbatim). There is no dynamic behavior in descriptions.
+- Reviewed ~18 files: package.json, README.md, dist/server.js, dist/tools/{index, tabs, navigation, interaction, inspection, wait, state, session, credential, helpers}.js + grep across all dist.
+- Security feature: browser_capture_secret / browser_create_credential pair — the server declares that secrets from the page are buffered outside the LLM context and assembled into n8n-credential; plus the redaction/ and sensitivity/ modules (redaction of sensitive data in snapshots).
+- HTTP transport by default bearer-token + loopback-only + Origin rejection — noticeably more careful than average in the sample.

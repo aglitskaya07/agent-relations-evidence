@@ -1,16 +1,16 @@
-# UNIT: @1mcp/agent | npm v0.34.4 (published 2026-07-21T16:16:20.606Z) | рамки: pulsemcp,smithery-top20 | captured 2026-07-29 (static, tarball)
+# UNIT: @1mcp/agent | npm v0.34.4 (published 2026-07-21T16:16:20.606Z) | frames: pulsemcp,smithery-top20 | captured 2026-07-29 (static, tarball)
 
-## ТИП: MCP-агрегатор/прокси, НО с собственным серверным кодом MCP
+## TYPE: MCP aggregator/proxy, BUT with its own MCP server code
 
-Это 1MCP — unified proxy, который сам поднимает `new Server(...)` из `@modelcontextprotocol/sdk` на каждую входящую сессию (`build/core/server/connectionManager.js:180`), агрегирует downstream-серверы и добавляет собственные внутренние инструменты (mcp_install, mcp_search, tool_invoke и т.д.). Квалифицирован как сервер, не как NOT-A-SERVER.
+This is 1MCP — unified proxy, which itself spins up `new Server(...)` from `@modelcontextprotocol/sdk` for each incoming session (`build/core/server/connectionManager.js:180`), aggregates downstream servers, and adds its own internal tools (mcp_install, mcp_search, tool_invoke, etc.). Qualified as a server, not as NOT-A-SERVER.
 
 ## CHANNEL: instructions, npm (static, ~3900 chars template)
 
-Строка `instructions` собирается ДИНАМИЧЕСКИ на каждую сессию: `InstructionAggregator.getFilteredInstructions()` рендерит Handlebars-шаблон и результат передаётся в конструктор `new Server(this.serverConfig, { ...capabilities, instructions: filteredInstructions })` (`connectionManager.js:175-180`). Инструкции downstream-серверов оборачиваются в XML-теги `<server-name>...</server-name>` и вставляются внутрь. Пользователь может задать customTemplate; при его падении в LLM уходит notice:
+The `instructions` string is assembled DYNAMICALLY for each session: `InstructionAggregator.getFilteredInstructions()` renders a Handlebars template and the result is passed to the constructor `new Server(this.serverConfig, { ...capabilities, instructions: filteredInstructions })` (`connectionManager.js:175-180`). Instructions from downstream servers are wrapped in XML tags `<server-name>...</server-name>` and inserted inside. The user can set customTemplate; if it fails, the LLM receives notice:
 
 > `⚠️ IMPORTANT: The user's custom instruction template failed to render due to an error: "<msg>". Please inform the user that their custom template configuration has an issue and the default template is being used instead. They should check their template syntax.`
 
-Статический скелет — DEFAULT_INSTRUCTION_TEMPLATE (`build/core/instructions/templateTypes.js:31-168`), дословно (Handlebars):
+Static skeleton — DEFAULT_INSTRUCTION_TEMPLATE (`build/core/instructions/templateTypes.js:31-168`), verbatim (Handlebars):
 
 ```
 # {{title}}
@@ -157,7 +157,7 @@ Default title: `1MCP - Model Context Protocol Proxy`; default toolPattern: `{ser
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-Собственные (внутренние) инструменты — 17 шт. Проксируемые инструменты downstream-серверов — динамические, их описания пробрасываются от upstream и в пакете отсутствуют.
+Own (internal) tools — 17 items. Proxied downstream-server tools — dynamic, their descriptions are passed through from upstream and are absent in the package.
 
 ### Discovery (build/core/capabilities/internal/discoveryTools.js)
 1. **mcp_search** — `Search for MCP servers in the registry`
@@ -184,9 +184,9 @@ Default title: `1MCP - Model Context Protocol Proxy`; default toolPattern: `{ser
 16. **tool_schema** — `Get the full schema for a specific tool including input validation rules`
 17. **tool_invoke** — `Execute any tool on any MCP server with proper argument validation`
 
-Маркер-скан по регексам steering-паттернов: в описаниях внутренних инструментов совпадений НЕТ (нейтральные). Единственные steering-подобные элементы — в instructions-канале: (а) императив «Please inform the user…» при падении custom template; (б) сама архитектура: инструкции чужих серверов транслируются клиенту дословно внутри `<server-name>`-тегов, т.е. 1MCP — усилитель steering-контента upstream-серверов.
+Marker scan for steering regexes: no matches in the descriptions of internal tools (neutral). The only steering-like elements are in the instructions channel: (a) the imperative "Please inform the user…" when the custom template fails; (b) the architecture itself: instructions from other servers are passed through to the client verbatim inside `<server-name>` tags, i.e. 1MCP is an amplifier of upstream servers' steering content.
 
 ## NOTES
-- Код не минифицирован: обычный tsc-вывод с .d.ts и sourcemaps, читается свободно. 340 JS-файлов в build/; детально просмотрено ~10 ключевых (server.js, connectionManager.js, instructionAggregator.js, templateTypes.js, 4 файла internal-tools, toolSchemas.js, discovery.js schemas).
-- Риск динамической сборки строк: ВЫСОКИЙ по дизайну — итоговые instructions рендерятся Handlebars-шаблоном в рантайме и включают произвольные instructions downstream-серверов и пользовательский customTemplate (до 1MB). Статически зафиксирован только скелет.
-- Описания собственных инструментов — статические литералы, динамики нет. Проксируемые инструменты переименовываются по паттерну `{server}_1mcp_{tool}`, описания upstream не модифицируются (по просмотренному коду).
+- The code is not minified: ordinary tsc output with .d.ts and sourcemaps, readable without issue. 340 JS files in build/; about 10 key ones were reviewed in detail (server.js, connectionManager.js, instructionAggregator.js, templateTypes.js, 4 internal-tools files, toolSchemas.js, discovery.js schemas).
+- Risk of dynamic construction of strings: HIGH by design — the final instructions are rendered by a Handlebars template at runtime and include arbitrary instructions from downstream servers and the user's customTemplate (up to 1MB). Only the skeleton is statically fixed.
+- Descriptions of own tools are static literals; there is no dynamic behavior. Proxied tools are renamed by the pattern `{server}_1mcp_{tool}`, and upstream descriptions are not modified (based on the code reviewed).

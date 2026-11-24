@@ -1,21 +1,21 @@
-# UNIT: mcp-server-actor-critic-thinking | npm v1.0.0 (published 2025-05-26T07:26:45.192Z) | рамки: pulsemcp | captured 2026-07-29 (static, tarball)
+# UNIT: mcp-server-actor-critic-thinking | npm v1.0.0 (published 2025-05-26T07:26:45.192Z) | scope: pulsemcp | captured 2026-07-29 (static, tarball)
 
-## VERDICT: MCP-сервер
+## VERDICT: MCP server
 
-Да, это MCP-сервер: `dist/index.js` создаёт `new Server({name: "actor-critic-thinking-server", version: "0.2.0"}, {capabilities: {tools: {}}})` из `@modelcontextprotocol/sdk` 0.5.0, подключает `StdioServerTransport`, регистрирует хендлеры `ListToolsRequestSchema` / `CallToolRequestSchema`. Один инструмент. Bin-энтрипоинт: `dist/index.js`.
+Yes, this is an MCP server: `dist/index.js` creates `new Server({name: "actor-critic-thinking-server", version: "0.2.0"}, {capabilities: {tools: {}}})` from `@modelcontextprotocol/sdk` 0.5.0, attaches `StdioServerTransport`, registers `ListToolsRequestSchema` / `CallToolRequestSchema` handlers. One tool. Bin entry point: `dist/index.js`.
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Конструктору `Server` передаются только `name` и `version` — поля `instructions` нет ни в конструкторе, ни где-либо ещё в коде (SDK 0.5.0 это поле и не поддерживал в текущем виде).
+Only `name` and `version` are passed to the `Server` constructor — there is no `instructions` field either in the constructor or anywhere else in the code (SDK 0.5.0 did not support this field in its current form).
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-Инструментов: 1 (<= 40, включён полностью).
+Tools: 1 (<= 40, included in full).
 
 ### 1. `actor-critic-thinking`
 
-Description (дословно):
+Description (verbatim):
 
 ```
 A sophisticated tool for dual-perspective performance analysis through actor-critic methodology.
@@ -66,7 +66,7 @@ You should:
 7. Only set nextRoundNeeded to false when analysis is complete
 ```
 
-Параметры (описания из inputSchema, дословно):
+Parameters (descriptions from inputSchema, verbatim):
 - `content` (string, required): "Your current analysis content from the specified role perspective"
 - `role` (string enum actor|critic, required): "The perspective role: 'actor' for empathetic/creative viewpoint, 'critic' for analytical/evaluative viewpoint"
 - `nextRoundNeeded` (boolean, required): "Whether another round of actor-critic dialogue is needed"
@@ -75,12 +75,12 @@ You should:
 
 ## MARKER SIGNALS
 
-Из стирингового регекс-списка совпадений нет (нет "instead of built-in", "takes precedence", "MUST use", "primary tool" и т.п.). Тон описания — рекламно-инструктивный ("A sophisticated tool", императивный блок "You should: 1…7", "Only set nextRoundNeeded to false when analysis is complete"), но это self-scoped guidance по использованию самого инструмента, не вытеснение других инструментов и не steering против built-ins.
+There are no matches from the string regex list (no "instead of built-in", "takes precedence", "MUST use", "primary tool" etc.). The description tone is promotional-instructional ("A sophisticated tool", imperative block "You should: 1…7", "Only set nextRoundNeeded to false when analysis is complete"), but this is self-scoped guidance for using the tool itself, not displacing other tools and not steering against built-ins.
 
 ## NOTES (static analysis)
 
-- Код НЕ минифицирован: tsc-выхлоп с sourcemap и .d.ts, читается полностью.
-- Риск динамической сборки строк: нулевой — description задан одним литеральным template string, конструктор Server получает объектный литерал.
-- Никакой сети/файловой системы/exec: единственный side effect — pretty-print мысли в stderr через chalk. Состояние (thoughtHistory) держится в памяти процесса.
-- Просмотрено файлов: 4 из 6 (package.json, dist/index.js целиком, README.md и карты/декларации по списку; index.js.map и index.d.ts — генерируемые артефакты того же кода).
-- Клон паттерна sequential-thinking от Anthropic (структура кода почти идентична reference-серверу), автор Aquarius Wing. Версия в package.json 1.0.0, но в конструкторе Server — "0.2.0" (расхождение метаданных).
+- The code is NOT minified: tsc output with sourcemap and .d.ts, fully readable.
+- Risk of dynamic string assembly: zero — description is set as a single literal template string, the Server constructor receives an object literal.
+- No network/filesystem/exec: the only side effect is pretty-printing thoughts to stderr via chalk. State (thoughtHistory) is kept in process memory.
+- Reviewed files: 4 of 6 (package.json, dist/index.js in full, README.md and maps/declarations as listed; index.js.map and index.d.ts are generated artifacts of the same code).
+- A clone of Anthropic's sequential-thinking pattern (the code structure is almost identical to the reference server), by Aquarius Wing. Version in package.json is 1.0.0, but in the Server constructor — "0.2.0" (metadata mismatch).

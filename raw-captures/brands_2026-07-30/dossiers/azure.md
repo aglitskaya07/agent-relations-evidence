@@ -1,18 +1,18 @@
-# UNIT: azure | Azure | github microsoft/mcp | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: azure | Azure | github microsoft/mcp | author type: official | captured 2026-07-29 (static source)
 
-Репозиторий — .NET/C# монорепо с несколькими MCP-серверами (`servers/Azure.Mcp.Server`, `servers/Fabric.Mcp.Server`, `servers/Template.Mcp.Server`) и 60+ областями инструментов в `tools/Azure.Mcp.Tools.*`. Досье покрывает Azure.Mcp.Server.
+The repository is a .NET/C# monorepo with multiple MCP servers (`servers/Azure.Mcp.Server`, `servers/Fabric.Mcp.Server`, `servers/Template.Mcp.Server`) and 60+ tool areas in `tools/Azure.Mcp.Tools.*`. The dossier covers Azure.Mcp.Server.
 
 ## CHANNEL: instructions (2327 chars)
 
-Регистрация: `servers/Azure.Mcp.Server/src/Program.cs:364-365`
+Registration: `servers/Azure.Mcp.Server/src/Program.cs:364-365`
 ```
 services.AddSingleton<IServerInstructionsProvider>(
     new ResourceServerInstructionsProvider(thisAssembly, $"azure-rules.txt"));
 ```
-Значение уходит в `mcpServerOptions.ServerInstructions` (`core/Microsoft.Mcp.Core/src/Areas/Server/Commands/ServiceCollectionExtensions.cs:241`).
-Источник текста: `servers/Azure.Mcp.Server/src/Resources/azure-rules.txt` (embedded resource).
+The value goes into `mcpServerOptions.ServerInstructions` (`core/Microsoft.Mcp.Core/src/Areas/Server/Commands/ServiceCollectionExtensions.cs:241`).
+Source text: `servers/Azure.Mcp.Server/src/Resources/azure-rules.txt` (embedded resource).
 
-Дословно:
+Literally:
 
 ```
 Azure MCP server usage rules:
@@ -27,35 +27,35 @@ Azure MCP server usage rules:
 - When asked about configuring or installing azure mcp in coding agent for the current repo, invoke your `bestpractices` tool with `resource` set to "coding-agent" and `action` set to "all".
 ```
 
-Примечание: для Fabric.Mcp.Server и Template.Mcp.Server зарегистрирован `NullServerInstructionsProvider` (instructions = null).
+Note: `NullServerInstructionsProvider` is registered for Fabric.Mcp.Server and Template.Mcp.Server (instructions = null).
 
 ## CHANNEL: tool descriptions (coverage=marker-scan+sample)
 
-Объём инвентаря (статически):
-- 343 описания команд в атрибутах `[CommandMetadata(... Description = """...""")]` по 60 областям (`tools/Azure.Mcp.Tools.*`, `core/Azure.Mcp.Core`, `core/Microsoft.Mcp.Core`), Fabric/Template исключены.
-- 128 описаний «консолидированных» инструментов в `servers/Azure.Mcp.Server/src/Resources/consolidated-tools.json` (`consolidated_tools[].name/.description`) — это то, что видит клиент в consolidated-режиме; каждый маппится на список команд (`mappedToolList`).
-- Итого просканировано 471 описание.
+Inventory size (static):
+- 343 command descriptions in attributes `[CommandMetadata(... Description = """...""")]` across 60 areas (`tools/Azure.Mcp.Tools.*`, `core/Azure.Mcp.Core`, `core/Microsoft.Mcp.Core`), Fabric/Template excluded.
+- 128 descriptions of "consolidated" tools in `servers/Azure.Mcp.Server/src/Resources/consolidated-tools.json` (`consolidated_tools[].name/.description`) — this is what the client sees in consolidated mode; each one maps to a list of commands (`mappedToolList`).
+- A total of 471 descriptions were scanned.
 
-### Результат полного маркер-скана (471 описание)
+### Result of full marker scan (471 descriptions)
 
-Совпадений всего: 4.
+Total matches: 4.
 
-`prefer` — 1 совпадение:
+`prefer` — 1 match:
 - `Azure.Mcp.Core::subscription list` (`core/Azure.Mcp.Core/src/Areas/Subscription/Commands/SubscriptionListCommand.cs`): "When the user has not specified a subscription, prefer the subscription where isDefault is true. If no default can be determined from either source and multiple subscriptions exist, ask the user which subscription to use."
 
-`essential for` — 3 совпадения:
+`essential for` — 3 matches:
 - `Azure.Mcp.Tools.FoundryExtensions::schema`: "The schema information is essential for understanding how the index is structured and how data is indexed and searchable."
 - `Azure.Mcp.Tools.MySql::get` (server config): "operational characteristics essential for database administration and optimization."
 - `Azure.Mcp.Tools.MySql::get` (table schema): "constraints, indexes, and relationships, essential for understanding table structure and supporting application development."
 
-Дополнительно (вне списка регексов, но по смыслу — директивы приоритета внутри описаний; фиксирую дословно, т.к. это тот же класс сигнала):
+Additional note (outside the regex list, but by meaning — priority directives inside descriptions; I am recording it verbatim because it is the same signal class):
 - `Azure.Mcp.Tools.AppLens::diagnose`: "Always use this tool before manually checking metrics or logs when users report performance or functionality issues."
 - `Azure.Mcp.Tools.AzureBestPractices::ai_app`: "When the request involves code generation of AI components or AI applications in any capacity, use this command instead of calling the general code generation best practices command."
-- `Azure.Mcp.Tools.Extension::generate` и `::install`: "This tool incorporates CLI knowledge beyond what you know."
+- `Azure.Mcp.Tools.Extension::generate` and `::install`: "This tool incorporates CLI knowledge beyond what you know."
 
-### Динамически добавляемые фрагменты описаний
+### Dynamically added description fragments
 
-1. Суффикс роутера, приклеивается к описанию каждого namespace-инструмента (`core/Microsoft.Mcp.Core/src/Areas/Server/Commands/ToolLoading/NamespaceToolLoader.cs:137`, аналогично `ServerToolLoader.cs:82`):
+1. Router suffix, appended to the description of each namespace tool (`core/Microsoft.Mcp.Core/src/Areas/Server/Commands/ToolLoading/NamespaceToolLoader.cs:137`, similarly `ServerToolLoader.cs:82`):
 ```
 This tool is a hierarchical MCP command router.
 Sub commands are routed to MCP servers that require specific fields inside the "parameters" object.
@@ -63,14 +63,14 @@ To invoke a command, set "command" and wrap its args in "parameters".
 Set "learn=true" to discover available sub commands.
 ```
 
-2. Описание единственного прокси-инструмента в single-proxy режиме берётся из конфигурации (`SingleProxyToolLoader.cs:29,99` ← `servers/Azure.Mcp.Server/src/appsettings.json`, ключ `Description`):
+2. The description of the only proxy tool in single-proxy mode is taken from the configuration (`SingleProxyToolLoader.cs:29,99` ← `servers/Azure.Mcp.Server/src/appsettings.json`, key `Description`):
 ```
 This server/tool provides real-time, programmatic access to all Azure products, services, and resources, as well as all interactions with the Azure Developer CLI (azd). Use this tool for any Azure control plane or data plane operation, including resource management and automation. To discover available capabilities, call the tool with the "learn" parameter to get a list of top-level tools. To explore further, set "learn" and specify a tool name to retrieve supported commands and their parameters. To execute an action, set the "tool", "command", and convert the user's intent into the "parameters" based on the discovered schema. Always use this tool for any Azure or "azd" related operation requiring up-to-date, dynamic, and interactive capabilities. Always include the "intent" parameter to specify the operation you want to perform.
 ```
 
-3. Для sensitive-операций добавляется параметр с описанием "Approve or reject this sensitive operation." (`BaseToolLoader.cs:270`).
+3. For sensitive operations, a parameter is added with the description "Approve or reject this sensitive operation." (`BaseToolLoader.cs:270`).
 
-### 10 репрезентативных полных описаний (дословно)
+### 10 representative full descriptions (verbatim)
 
 1. `bestpractices get` — `tools/Azure.Mcp.Tools.AzureBestPractices/src/Commands/BestPracticesCommand.cs`
 ```
@@ -147,7 +147,7 @@ Service name format: case-insensitive; hyphens, underscores, spaces, and name va
 Comprehensive Azure database management tool for MySQL, PostgreSQL, SQL Database, SQL Server, and Cosmos DB. List and query databases, retrieve server configurations and parameters, explore table schemas, execute database queries, manage Cosmos DB containers and items, list and view detailed information about SQL servers, and view database server details across all Azure database services.
 ```
 
-Дополнительно, для калибровки «нейтрального» тона консолидированного слоя:
+Additionally, for calibrating the "neutral" tone of the consolidated layer:
 ```
 get_azure_subscriptions_and_resource_groups: Get information about Azure subscriptions, resource groups, and resources within resource groups that the user has access to.
 get_azure_app_resource_details: Get details about Azure application platform services, such as Azure Functions.

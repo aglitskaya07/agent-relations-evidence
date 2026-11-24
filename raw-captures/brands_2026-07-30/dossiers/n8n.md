@@ -1,17 +1,17 @@
-# UNIT: n8n | n8n | github czlonkowski/n8n-mcp | тип автора: комьюнити | captured 2026-07-29 (static source)
+# UNIT: n8n | n8n | github czlonkowski/n8n-mcp | author type: community | captured 2026-07-29 (static source)
 
-Подтверждение сервера: да, MCP-сервер. `src/mcp/server.ts:250` — `this.server = new Server({ name: 'n8n-documentation-mcp', version: PROJECT_VERSION, ... }, { capabilities: { tools: {}, resources: {} } })` из `@modelcontextprotocol/sdk`; транспорты stdio (`src/mcp/stdio-wrapper.ts`) и HTTP (`src/http-server.ts`, `src/http-server-single-session.ts`).
+Server confirmation: yes, an MCP server. `src/mcp/server.ts:250` — `this.server = new Server({ name: 'n8n-documentation-mcp', version: PROJECT_VERSION, ... }, { capabilities: { tools: {}, resources: {} } })` from `@modelcontextprotocol/sdk`; stdio (`src/mcp/stdio-wrapper.ts`) and HTTP (`src/http-server.ts`, `src/http-server-single-session.ts`) transports.
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Конструктор `new Server(...)` получает только `name`/`version`/`icons`/`websiteUrl` и `capabilities`; поля `instructions` нет. Ручной обработчик `InitializeRequestSchema` (`src/mcp/server.ts:758-803`) возвращает ответ ровно из `protocolVersion`, `capabilities`, `serverInfo` — без `instructions`. То же в HTTP-путях (`src/http-server.ts:397-411`, `src/http-server-single-session.ts:~1098`).
+The constructor `new Server(...)` receives only `name`/`version`/`icons`/`websiteUrl` and `capabilities`; there is no `instructions` field. The manual `InitializeRequestSchema` handler (`src/mcp/server.ts:758-803`) returns a response exactly from `protocolVersion`, `capabilities`, `serverInfo` — without `instructions`. The same is true in the HTTP paths (`src/http-server.ts:397-411`, `src/http-server-single-session.ts:~1098`).
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Всего 24 инструмента: 7 документационных (`src/mcp/tools.ts`, массив `n8nDocumentationToolsFinal`) + 17 управляющих (`src/mcp/tools-n8n-manager.ts`, массив `n8nManagementTools`, добавляются, если сконфигурирован n8n API / включён multi-tenant).
+There are 24 tools in total: 7 documentation (`src/mcp/tools.ts`, array `n8nDocumentationToolsFinal`) + 17 management (`src/mcp/tools-n8n-manager.ts`, array `n8nManagementTools`, added if the n8n API is configured / multi-tenant is enabled).
 
-### Документационные инструменты (src/mcp/tools.ts)
+### Documentation tools (src/mcp/tools.ts)
 
 **tools_documentation**
 Get documentation for n8n MCP tools. Call without parameters for quick start guide. Use topic parameter to get documentation for specific tools. Use depth='full' for comprehensive documentation.
@@ -34,7 +34,7 @@ Search templates with multiple modes. Use searchMode='keyword' for text search, 
 **validate_workflow**
 Full workflow validation: structure, connections, expressions, AI tools. Returns errors/warnings/fixes. Essential before deploy.
 
-### Управляющие инструменты (src/mcp/tools-n8n-manager.ts)
+### Management tools (src/mcp/tools-n8n-manager.ts)
 
 **n8n_create_workflow**
 Create workflow. Requires: name, nodes[], connections{}. Created inactive. Returns workflow with ID.
@@ -93,9 +93,9 @@ Manage n8n credentials. Actions: list, get, create, update, delete, getSchema. U
 **n8n_audit_instance**
 Security audit of n8n instance. Combines n8n's built-in audit API (credentials, database, nodes, instance, filesystem risks) with deep workflow scanning (hardcoded secrets via 50+ regex patterns, unauthenticated webhooks, error handling gaps, data retention risks). Returns actionable markdown report with remediation steps using n8n_manage_credentials and n8n_update_partial_workflow.
 
-### Альтернативный набор описаний (клиент-зависимая подмена)
+### Alternative set of descriptions (client-dependent substitution)
 
-`src/mcp/tools-n8n-friendly.ts` содержит карту `n8nFriendlyDescriptions` — сокращённые описания тех же инструментов, применяемые через `makeToolsN8nFriendly` (импортируется в `src/mcp/server.ts:19`), когда клиентом выступает n8n AI Agent. Примеры дословно:
+`src/mcp/tools-n8n-friendly.ts` contains the map `n8nFriendlyDescriptions` — shortened descriptions of the same tools, used through `makeToolsN8nFriendly` (imported in `src/mcp/server.ts:19`), when the client is n8n AI Agent. Examples verbatim:
 
 - validate_node: Validate n8n node config. Pass nodeType (string) and config (object). Use mode="full" for comprehensive validation, mode="minimal" for quick check. Example: {"nodeType": "nodes-base.slack", "config": {"resource": "channel", "operation": "create"}}
 - search_nodes: Search nodes. Pass query (string). Example: {"query": "webhook"}

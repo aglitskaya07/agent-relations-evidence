@@ -1,44 +1,44 @@
-# UNIT: desktop-cmd | Desktop Commander | github wonderwhy-er/DesktopCommanderMCP | тип автора: комьюнити | captured 2026-07-29 (static source)
+# UNIT: desktop-cmd | Desktop Commander | github wonderwhy-er/DesktopCommanderMCP | author type: community | captured 2026-07-29 (static source)
 
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-`src/server.ts:98` — `new Server({name:"desktop-commander", version:VERSION}, {capabilities:{tools:{},resources:{},prompts:{},logging:{}}})`: второй аргумент содержит только capabilities, поля `instructions` нет. Кастомный `InitializeRequestSchema`-хендлер (`src/server.ts:209-276`) возвращает `{protocolVersion, capabilities, serverInfo}` — без `instructions`.
+`src/server.ts:98` — `new Server({name:"desktop-commander", version:VERSION}, {capabilities:{tools:{},resources:{},prompts:{},logging:{}}})`: the second argument contains only capabilities, there is no `instructions` field. The custom `InitializeRequestSchema` handler (`src/server.ts:209-276`) returns `{protocolVersion, capabilities, serverInfo}` — without `instructions`.
 
-### Общие фрагменты, подставляемые в КАЖДОЕ/многие описания (шаблонные литералы)
+### Shared fragments inserted into EVERY/many descriptions (template literals)
 
-`CMD_PREFIX_DESCRIPTION` (src/server.ts:25) — добавляется в конец описания всех 24 инструментов:
+`CMD_PREFIX_DESCRIPTION` (src/server.ts:25) — is appended to the end of the description of all 24 tools:
 
 ```
 This command can be referenced as "DC: ..." or "use Desktop Commander to ..." in your instructions.
 ```
 
-`PATH_GUIDANCE` (src/server.ts:23) — подставляется в файловые/процессные инструменты:
+`PATH_GUIDANCE` (src/server.ts:23) — is substituted into file/process tools:
 
 ```
 IMPORTANT: ${getPathGuidance(SYSTEM_INFO)} Relative paths may fail as they depend on the current working directory. Tilde paths (~/...) might not work in all contexts. Unless the user explicitly asks for relative paths, use absolute paths.
 ```
 
-где `getPathGuidance` (src/utils/system-info.ts:813) возвращает во время выполнения:
+where `getPathGuidance` (src/utils/system-info.ts:813) returns at runtime:
 
 ```
 Always use absolute paths for reliability. Paths are automatically normalized regardless of slash direction.
 ```
-плюс (если сервер в контейнере с маунтами):
+plus (if the server is in a container with mounts):
 ```
 🐳 ${containerLabel}: Prefer paths within mounted directories: ${mountPoints}.
 When users ask about file locations, check these mounted paths first.
 ```
 
-`OS_GUIDANCE` (src/server.ts:21, тело — src/utils/system-info.ts:631) подставляется в `start_process`, собирается динамически, начинается с:
+`OS_GUIDANCE` (src/server.ts:21, body — src/utils/system-info.ts:631) is substituted into `start_process`, assembled dynamically, begins with:
 
 ```
 Running on ${platformName}. Default shell: ${defaultShell}.
 ```
 
 
-## CHANNEL: tool descriptions (coverage=full, 26 инструментов)
+## CHANNEL: tool descriptions (coverage=full, 26 tools)
 
 ### get_config
 

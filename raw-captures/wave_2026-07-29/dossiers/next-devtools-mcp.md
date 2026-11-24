@@ -1,15 +1,15 @@
-# UNIT: next-devtools-mcp | npm v0.4.0 (published 2026-06-24T22:47:58.059Z) | рамки: npm-top,docker-catalog | captured 2026-07-29 (static, tarball)
+# UNIT: next-devtools-mcp | npm v0.4.0 (published 2026-06-24T22:47:58.059Z) | scope: npm-top,docker-catalog | captured 2026-07-29 (static, tarball)
 
-Подтверждён как MCP-сервер: `dist/index.js` — `new Server({name: "next-devtools-mcp", version}, {capabilities: {tools: {}}})` из `@modelcontextprotocol/sdk`, транспорт StdioServerTransport, обработчики ListTools/CallTool. Издатель: vercel (repo github.com/vercel/next-devtools-mcp).
+Confirmed as an MCP server: `dist/index.js` — `new Server({name: "next-devtools-mcp", version}, {capabilities: {tools: {}}})` from `@modelcontextprotocol/sdk`, StdioServerTransport, ListTools/CallTool handlers. Publisher: vercel (repo github.com/vercel/next-devtools-mcp).
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Конструктору Server передаются только `capabilities: { tools: {} }` — поля `instructions` нет ни в конструкторе, ни в initialize-ответе.
+Only `capabilities: { tools: {} }` are passed to the Server constructor — there is no `instructions` field either in the constructor or in the initialize response.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-4 инструмента, все описания дословно.
+4 tools, all descriptions verbatim.
 
 ### 1. browser_eval (dist/tools/browser-eval.js)
 ```
@@ -19,7 +19,7 @@ This tool does NOT drive the browser itself. It points you at `agent-browser` �
 
 Call this when you need to open pages, click, type, screenshot, or capture console errors in a real browser.
 ```
-Примечание: handler возвращает агенту runtime-инструкции установить и запускать сторонний CLI (`npm install -g agent-browser`, `agent-browser install`, `agent-browser skills get core --full`) — steering через результат вызова, не только через описание.
+Note: the handler returns runtime instructions to the agent to install and run a third-party CLI (`npm install -g agent-browser`, `agent-browser install`, `agent-browser skills get core --full`) — steering via the call result, not only via the description.
 
 ### 2. nextjs_docs (dist/tools/nextjs-docs.js)
 ```
@@ -29,7 +29,7 @@ This tool does NOT fetch documentation. Next.js 16+ ships its full docs inside t
 
 Call this before answering Next.js questions or writing Next.js code. Then read the relevant guide from the path it returns. If the project is on an older Next.js, it will tell you how to upgrade.
 ```
-Runtime-выдача handler'а содержит: "Do not rely on training-data knowledge of Next.js APIs — this version may differ. Prefer the bundled docs." и для старых версий — призыв к апгрейду `npx @next/codemod@latest upgrade latest`.
+Runtime output of the handler contains: "Do not rely on training-data knowledge of Next.js APIs — this version may differ. Prefer the bundled docs." and, for older versions, a prompt to upgrade `npx @next/codemod@latest upgrade latest`.
 
 ### 3. nextjs_index (dist/tools/nextjs_index.js)
 ```
@@ -80,7 +80,7 @@ If the MCP endpoint is not available:
 2. Verify the dev server is running (npm run dev)
 3. Check that the dev server started successfully without errors
 ```
-Runtime-выдача при пустом авто-discovery содержит поле `ai_instruction`: "IMPORTANT: Server auto-discovery may not work on all operating systems or network configurations. Please ask the user: 'What port is your Next.js dev server running on?'. Once you have the port number, call this tool again with the 'port' parameter set to the user-provided port."
+Runtime output for empty auto-discovery contains the `ai_instruction` field: "IMPORTANT: Server auto-discovery may not work on all operating systems or network configurations. Please ask the user: 'What port is your Next.js dev server running on?'. Once you have the port number, call this tool again with the 'port' parameter set to the user-provided port."
 
 ### 4. nextjs_call (dist/tools/nextjs_call.js)
 ```
@@ -111,14 +111,14 @@ Example usage:
 2. Call 'nextjs_call' with port=3000, toolName="get_errors" to get errors from server on port 3000
 ```
 
-## Маркер-наблюдения (steering-паттерны)
-- nextjs_index: "Before implementing ANY changes", "Use this as FIRST CHOICE for searching the currently running app. If not found, fallback to static codebase search tools", "query the runtime FIRST" — приоритизация себя над встроенными инструментами поиска по коду агента.
-- browser_eval: позиционирование "faster and more capable than proxying automation through MCP" + runtime-инструкции установить сторонний глобальный npm-пакет (agent-browser) и его Chrome.
-- nextjs-docs (runtime): "Do not rely on training-data knowledge of Next.js APIs" — совпадает по духу с маркером "Do NOT answer from memory", но локализован до Next.js-домена, легитимен.
-- Повторяющийся призыв запускать `npx @next/codemod@latest upgrade latest` (апгрейд проекта пользователя) в трёх местах.
-- Телеметрия: каждый вызов инструмента пишет событие NEXT_MCP_TOOL_USAGE, при shutdown спавнится detached-процесс flush-events.js (отправка в Vercel telemetry).
+## Observation marker (steering patterns)
+- nextjs_index: "Before implementing ANY changes", "Use this as FIRST CHOICE for searching the currently running app. If not found, fallback to static codebase search tools", "query the runtime FIRST" — prioritizing itself over the agent's built-in code search tools.
+- browser_eval: positioning "faster and more capable than proxying automation through MCP" + runtime instructions to install a third-party global npm package (agent-browser) and its Chrome.
+- nextjs-docs (runtime): "Do not rely on training-data knowledge of Next.js APIs" — matches in spirit the marker "Do NOT answer from memory", but is localized to the Next.js domain and legitimate.
+- Repeated call to run `npx @next/codemod@latest upgrade latest` (upgrade of the user's project) in three places.
+- Telemetry: every tool call writes a NEXT_MCP_TOOL_USAGE event; on shutdown a detached flush-events.js process is spawned (sending to Vercel telemetry).
 
 ## NOTES
-- Код НЕ минифицирован (tsc-вывод, читаемый, с комментариями).
-- Все описания — статические template-литералы в `metadata.description`; риск динамической сборки строк описаний низкий. Но существенная часть steering-текста живёт в runtime-ответах handler'ов (JSON с полями instructions/ai_instruction/hint) — статическое досье их покрывает, они процитированы выше.
-- Просмотрено: все 15 .js файлов dist (index.js, 4 tools, 2 _internal, 8 telemetry) + package.json + README.md; .d.ts — по диагонали.
+- The code is NOT minified (tsc output, readable, with comments).
+- All descriptions are static template literals in `metadata.description`; the risk of dynamic assembly of description strings is low. But a substantial part of the steering text lives in runtime handler responses (JSON with fields instructions/ai_instruction/hint) — the static dossier covers them, they are quoted above.
+- Reviewed: all 15 .js files in dist (index.js, 4 tools, 2 _internal, 8 telemetry) + package.json + README.md; .d.ts — diagonally.

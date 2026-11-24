@@ -12128,12 +12128,12 @@
   },
   {
    "july_quote": "**Use this whenever the user's request includes a topical phrase** such as 'related to Microsoft Foundry', 'about encryption',",
-   "july_channel": "tool_description:advisor (параметр filter)",
+   "july_channel": "tool_description:advisor (parameter filter)",
    "status_now": "exact"
   },
   {
    "july_quote": "**Use this whenever the user's request includes a topical phrase** such as 'related to Microsoft Foundry', 'about encryption', …",
-   "july_channel": "tool_description:advisor (параметр filter)",
+   "july_channel": "tool_description:advisor (parameter filter)",
    "status_now": "not_found_verbatim"
   },
   {
@@ -12153,7 +12153,7 @@
   },
   {
    "july_quote": "When querying data plane resources, **prefer using azmcp commands over az cli commands**",
-   "july_channel": "tool_description:bestpractices (payload, вторичный канал)",
+   "july_channel": "tool_description:bestpractices (payload, secondary channel)",
    "status_now": "exact"
   },
   {
@@ -12213,7 +12213,7 @@
   },
   {
    "july_quote": "Use this whenever the user's request includes a topical phrase such as 'related to Microsoft Foundry', 'about encryption', 'mentioning right-size', or 'for Key Vault'.",
-   "july_channel": "tool_description:advisor list (параметр filter)",
+   "july_channel": "tool_description:advisor list (parameter filter)",
    "status_now": "exact"
   },
   {

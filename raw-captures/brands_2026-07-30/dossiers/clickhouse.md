@@ -1,13 +1,13 @@
-# UNIT: clickhouse | ClickHouse | github ClickHouse/mcp-clickhouse | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: clickhouse | ClickHouse | github ClickHouse/mcp-clickhouse | author type: official | captured 2026-07-29 (static source)
 
 ## SERVER CONFIRMED
-Python-репозиторий, MCP-сервер на FastMCP. Конструктор: `mcp_clickhouse/mcp_server.py:132` — `mcp = FastMCP(name=MCP_SERVER_NAME, instructions=CLICKHOUSE_SERVER_INSTRUCTIONS, **_resolve_auth(get_mcp_config()))`. Регистрация инструментов через `mcp.add_tool(Tool.from_function(...))` в конце того же файла (строки 938–955).
+Python repository, MCP server on FastMCP. Constructor: `mcp_clickhouse/mcp_server.py:132` — `mcp = FastMCP(name=MCP_SERVER_NAME, instructions=CLICKHOUSE_SERVER_INSTRUCTIONS, **_resolve_auth(get_mcp_config()))`. Tool registration via `mcp.add_tool(Tool.from_function(...))` at the end of the same file (lines 938–955).
 
 ## CHANNEL: instructions (278 chars)
 
-Источник: `mcp_clickhouse/skills_advisor.py:3` — константа `CLICKHOUSE_SERVER_INSTRUCTIONS`, передаётся в `FastMCP(instructions=...)`.
+Source: `mcp_clickhouse/skills_advisor.py:3` — constant `CLICKHOUSE_SERVER_INSTRUCTIONS`, passed to `FastMCP(instructions=...)`.
 
-Дословно:
+Literally:
 
 ```
 When working on ClickHouse-related coding, schema design, SQL/query optimization,
@@ -20,17 +20,17 @@ npx -y skills add clickhouse/agent-skills --all
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Всего 4 определения инструментов (3 регистрируются при `CLICKHOUSE_ENABLED=true`, 1 — при включённом chDB).
+There are 4 tool definitions in total (3 are registered when `CLICKHOUSE_ENABLED=true`, 1 — when chDB is enabled).
 
 ### 1. `list_databases`
-Регистрация: `mcp.add_tool(Tool.from_function(list_databases))` (mcp_server.py:939). Описание берётся из docstring функции (`mcp_server.py:196`):
+Registration: `mcp.add_tool(Tool.from_function(list_databases))` (mcp_server.py:939). The description is taken from the function docstring (`mcp_server.py:196`):
 
 ```
 List available ClickHouse databases
 ```
 
 ### 2. `list_tables`
-Регистрация: `mcp.add_tool(Tool.from_function(list_tables))` (mcp_server.py:940). Описание = docstring функции (`mcp_server.py:345–363`), дословно:
+Registration: `mcp.add_tool(Tool.from_function(list_tables))` (mcp_server.py:940). Description = function docstring (`mcp_server.py:345–363`), verbatim:
 
 ```
 List available ClickHouse tables in a database, including schema, comment,
@@ -54,20 +54,20 @@ Returns:
 ```
 
 ### 3. `run_query`
-Регистрация: `mcp_server.py:941–951`, явный параметр `description`:
+Registration: `mcp_server.py:941–951`, explicit `description` parameter:
 
 ```
 Execute SQL queries in ClickHouse. Queries run in read-only mode by default. Set CLICKHOUSE_ALLOW_WRITE_ACCESS=true to allow DDL and DML operations. Set CLICKHOUSE_ALLOW_DROP=true to additionally allow destructive operations (DROP, TRUNCATE).
 ```
 
-(в коде строка собрана из трёх конкатенированных литералов в скобках)
+(in code, the string is assembled from three concatenated literals in parentheses)
 
-### 4. `run_chdb_select_query` (условная регистрация, только при `CHDB_ENABLED`)
-Регистрация: `mcp_server.py:922–928`, явный параметр `description`:
+### 4. `run_chdb_select_query` (conditional registration, only when `CHDB_ENABLED`)
+Registration: `mcp_server.py:922–928`, explicit `description` parameter:
 
 ```
 Run SQL in chDB, an in-process ClickHouse engine
 ```
 
-## PROMPTS (для контекста, не tool description)
+## PROMPTS (for context, not tool description)
 `chdb_initial_prompt` (`mcp_server.py:929–934`), description: `This prompt helps users understand how to interact and perform common operations in chDB`

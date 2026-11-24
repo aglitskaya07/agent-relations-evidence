@@ -2,7 +2,7 @@
 
 ## CHANNEL: instructions, hosted
 
-(отсутствует — сервер не передаёт блок instructions)
+(absent — the server does not pass an instructions block)
 
 ## CHANNEL: tool descriptions, hosted (11 tools)
 

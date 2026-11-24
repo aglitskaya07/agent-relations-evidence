@@ -1,15 +1,15 @@
-# UNIT: touchdesigner-mcp-server | npm v1.5.0 (published 2026-07-11T03:22:00.223Z) | рамки: pulsemcp | captured 2026-07-29 (static, tarball)
+# UNIT: touchdesigner-mcp-server | npm v1.5.0 (published 2026-07-11T03:22:00.223Z) | scope: pulsemcp | captured 2026-07-29 (static, tarball)
 
 ## VERDICT: MCP server (confirmed)
-`dist/server/touchDesignerServer.js` создаёт `new McpServer({ name: "TouchDesigner", version: MCP_SERVER_VERSION }, { capabilities: { logging: {}, prompts: {}, tools: {} } })` из `@modelcontextprotocol/sdk/server/mcp.js`; регистрирует tools и prompts; транспорты stdio/HTTP в `dist/transport/`. Это полноценный локальный MCP-сервер, проксирующий команды в TouchDesigner через его WebServer DAT API.
+`dist/server/touchDesignerServer.js` creates `new McpServer({ name: "TouchDesigner", version: MCP_SERVER_VERSION }, { capabilities: { logging: {}, prompts: {}, tools: {} } })` from `@modelcontextprotocol/sdk/server/mcp.js`; registers tools and prompts; stdio/HTTP transports in `dist/transport/`. This is a full local MCP server, proxying commands into TouchDesigner through its WebServer DAT API.
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Конструктору `McpServer` передаются только `name`, `version` и `capabilities` — поля `instructions` нет ни в конструкторе, ни где-либо ещё в dist (grep по "instructions" даёт только сообщения об ошибках подключения с ссылкой на README).
+Only `name`, `version`, and `capabilities` are passed to the `McpServer` constructor — there is no `instructions` field either in the constructor or anywhere else in dist (grep for "instructions" returns only connection error messages with a link to README).
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
-14 инструментов: 13 из таблицы `TOOL_DEFINITIONS` (`dist/features/tools/toolDefinitions.js`) + мета-инструмент `describe_td_tools` (`dist/features/tools/handlers/tdTools.js`). Регистрация: `server.tool(definition.name, definition.description, schema, handler)` — описание передаётся дословно, без динамической досборки.
+14 tools: 13 from the `TOOL_DEFINITIONS` table (`dist/features/tools/toolDefinitions.js`) + meta-tool `describe_td_tools` (`dist/features/tools/handlers/tdTools.js`). Registration: `server.tool(definition.name, definition.description, schema, handler)` — the description is passed verbatim, without dynamic reassembly.
 
 1. **get_td_info** — "Get server information from TouchDesigner"
 2. **execute_python_script** — "Execute a Python script in TouchDesigner (detailLevel=minimal|summary|detailed, responseFormat=json|yaml|markdown)"
@@ -26,14 +26,14 @@
 13. **get_top_image** — "Capture the current output of a TOP node as an image so it can be viewed directly (maxSize optionally downscales the longer side)"
 14. **describe_td_tools** — "Generate a filesystem-oriented manifest of available TouchDesigner tools"
 
-### Steering-маркеры
-Ни одно описание не содержит маркеров навязывания (нет "instead of", "primary", "prefer", "MUST use", "takes precedence", "Best for", superlatives). Описания сухие, функциональные. Единственный внешний текст — `errorComment: "Check reference resources: https://docs.derivative.ca/Python_Classes_and_Modules"`, добавляется только в сообщения об ошибках, не в описания.
+### Steering markers
+No description contains compulsion markers (no "instead of", "primary", "prefer", "MUST use", "takes precedence", "Best for", superlatives). The descriptions are dry, functional. The only external text is `errorComment: "Check reference resources: https://docs.derivative.ca/Python_Classes_and_Modules"`, added only in error messages, not in descriptions.
 
-## CHANNEL: prompts, npm (static) — доп. наблюдение
-Зарегистрированы 3 MCP-prompt'а (`Check node errors`, `Node connection`, `Search node`) в `dist/features/prompts/handlers/td_prompts.js` — пользовательские prompt-шаблоны, вызываются явно клиентом, steering-риска в стиле «скрытых инструкций серверу» не несут (не проверялись построчно на маркеры, но это opt-in канал).
+## CHANNEL: prompts, npm (static) — additional observation
+3 MCP prompts are registered (`Check node errors`, `Node connection`, `Search node`) in `dist/features/prompts/handlers/td_prompts.js` — user prompt templates, called explicitly by the client, and they do not carry steering risk in the style of "hidden instructions to the server" (not checked line by line for markers, but this is an opt-in channel).
 
 ## NOTES
-- Код НЕ минифицирован: tsc-выхлоп с сохранёнными комментариями и JSDoc, читается как исходник.
-- Риск динамической сборки строк описаний: низкий. Описания — литералы в TOOL_DEFINITIONS; единственная конкатенация — REFERENCE_COMMENT (URL документации) и то только в error-путь.
-- Просмотрено: ~101 файл в пакете (полный листинг), построчно прочитаны 5 ключевых (touchDesignerServer.js, toolDefinitions.js, register.js, tdTools.js, constants.js) + grep по всему dist на "instructions".
-- capability `prompts` заявлена; `resources` не регистрируются.
+- The code is NOT minified: tsc output with preserved comments and JSDoc, reads like source.
+- Risk of dynamic construction of descriptions: low. Descriptions are literals in TOOL_DEFINITIONS; the only concatenation is REFERENCE_COMMENT (documentation URL) and even that only in the error path.
+- Reviewed: ~101 files in the package (full listing), read line by line 5 key ones (touchDesignerServer.js, toolDefinitions.js, register.js, tdTools.js, constants.js) + grep across all dist for "instructions".
+- capability `prompts` is declared; `resources` are not registered.

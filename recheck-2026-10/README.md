@@ -9,7 +9,7 @@
 
 The July quotes were compared against these captures. The servers were not relabeled with the codebook. Some hosted servers did not answer without a key.
 
-What the article reports from this recheck:
+Summary of this recheck:
 
 - Firecrawl: 0 of 13 July formulations still present.
 - One developer server narrowed "ALWAYS call when writing code" to "ALWAYS call when writing serverless or [name] code"; overall 10 of 25 formulations still present.

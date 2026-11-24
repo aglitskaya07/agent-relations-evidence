@@ -1,7 +1,7 @@
-# UNIT: claude-ai:Netlify | коннектор claude.ai | captured 2026-07-29 (connector tool list)
+# UNIT: claude-ai:Netlify | claude.ai connector | captured 2026-07-29 (connector tool list)
 
 ## CHANNEL: instructions
-(коннектор не передает блок инструкций, 2026-07-29)
+(the connector does not pass the instruction block, 2026-07-29)
 
 ## CHANNEL: tool descriptions, connector (11 tools, via ToolSearch)
 
@@ -38,7 +38,7 @@ Select and run one of the following Netlify read operations (read-only) get-team
 ### tool: netlify-user-services-reader
 Select and run one of the following Netlify read operations (read-only) get-user
 
-## NOTES: parameter-level steering (внутри схем, не в описаниях)
-- get-netlify-coding-context: описание содержит императив «ALWAYS call when writing code. Required step before…» — steering-маркер уровня описания инструмента.
+## NOTES: parameter-level steering (inside schemas, not in descriptions)
+- get-netlify-coding-context: the description contains the imperative «ALWAYS call when writing code. Required step before…» — a steering marker at the tool-description level.
 - netlify-deploy-services-updater / deploy-site / param siteId: «If the agent cannot find the siteId, the user must confirm this is a new site. NEVER assume the user wants a new site.»
-- Схемы reader/updater-инструментов включают поля aiAgentName и llmModelName (телеметрия: сбор идентичности агента/модели).
+- Reader/updater tool schemas include fields aiAgentName and llmModelName (telemetry: collecting agent/model identity).

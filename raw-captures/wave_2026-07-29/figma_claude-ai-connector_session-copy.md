@@ -1,7 +1,7 @@
-# Захват: claude.ai Figma — инструкции в системном промпте агента
+# Capture: claude.ai Figma — instructions in the agent's system prompt
 
-- Дата: 2026-07-29, сессия Claude Code (VS Code); канал: коннектор claude.ai «Figma» (OAuth пользователя)
-- Обрезка харнеса ~2KB; маркер `[truncated]` — от харнеса, не от вендора
+- Date: 2026-07-29, Claude Code session (VS Code); channel: claude.ai connector "Figma" (user OAuth)
+- Harness truncation is ~2KB; the marker `[truncated]` is from the harness, not from the vendor
 
 ---
 

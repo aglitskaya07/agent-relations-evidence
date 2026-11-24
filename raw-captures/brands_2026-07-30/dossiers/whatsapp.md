@@ -1,15 +1,15 @@
-# UNIT: whatsapp | WhatsApp | github lharries/whatsapp-mcp | тип автора: комьюнити | captured 2026-07-29 (static source)
+# UNIT: whatsapp | WhatsApp | github lharries/whatsapp-mcp | author type: community | captured 2026-07-29 (static source)
 
-Подтверждение: это MCP-сервер. `whatsapp-mcp-server/main.py:2,19` — `from mcp.server.fastmcp import FastMCP`; `mcp = FastMCP("whatsapp")`; запуск `mcp.run(transport='stdio')`. Второй компонент репозитория (`whatsapp-bridge/main.go`) — Go-мост к whatsmeow с REST API, не MCP.
+Confirmation: this is an MCP server. `whatsapp-mcp-server/main.py:2,19` — `from mcp.server.fastmcp import FastMCP`; `mcp = FastMCP("whatsapp")`; launch `mcp.run(transport='stdio')`. The second component of the repository (`whatsapp-bridge/main.go`) is a Go bridge to whatsmeow with a REST API, not MCP.
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Конструктор вызван как `FastMCP("whatsapp")` — только имя, без параметра `instructions`. Слово `instructions` в исходниках сервера, моста и README не встречается.
+The constructor is called as `FastMCP("whatsapp")` — only the name, without the `instructions` parameter. The word `instructions` does not appear in the server sources, bridge, or README.
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Всего 12 инструментов, все зарегистрированы через декоратор `@mcp.tool()` в `whatsapp-mcp-server/main.py`. Описание = docstring функции (дословно ниже, включая блоки Args/Returns).
+There are 12 tools in total, all registered through the `@mcp.tool()` decorator in `whatsapp-mcp-server/main.py`. Description = function docstring (verbatim below, including the Args/Returns blocks).
 
 ### 1. search_contacts
 ```

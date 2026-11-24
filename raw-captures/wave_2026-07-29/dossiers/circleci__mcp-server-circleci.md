@@ -1,13 +1,13 @@
-# UNIT: @circleci/mcp-server-circleci | npm v0.19.0 (published 2026-07-19T18:15:30.165Z) | рамки: npm-top | captured 2026-07-29 (static, tarball)
+# UNIT: @circleci/mcp-server-circleci | npm v0.19.0 (published 2026-07-19T18:15:30.165Z) | frames: npm-top | captured 2026-07-29 (static, tarball)
 
-## SERVER: подтверждён
-MCP-сервер на `@modelcontextprotocol/sdk` — `dist/index.js` строит `new McpServer({ name: 'mcp-server-circleci', version: '1.0.0' }, { capabilities: { tools: {}, resources: {} } })`, регистрирует 13 инструментов через `server.tool(...)`, транспорты stdio и unified HTTP+SSE. Есть OpenTelemetry-обёртка над хендлерами (телеметрия по вызовам инструментов).
+## SERVER: confirmed
+MCP server on `@modelcontextprotocol/sdk` — `dist/index.js` builds `new McpServer({ name: 'mcp-server-circleci', version: '1.0.0' }, { capabilities: { tools: {}, resources: {} } })`, registers 13 tools via `server.tool(...)`, transports stdio and unified HTTP+SSE. There is an OpenTelemetry wrapper around handlers (telemetry for tool calls).
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически) — конструктору McpServer передаются только name/version и capabilities; поле `instructions` нигде в dist/ не задаётся (единственное вхождение слова — фраза «Tool output instructions:» внутри описания config_helper).
+(not found statically) — only name/version and capabilities are passed to the McpServer constructor; the `instructions` field is not set anywhere in dist/ (the only occurrence of the word is the phrase "Tool output instructions:" inside the config_helper description).
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
-Всего инструментов: 13. Описания дословно из `dist/tools/*/tool.js` (шаблонная подстановка `${option1DescriptionBranchRequired}` развёрнута из `dist/tools/shared/constants.js`).
+A total of 13 tools. Descriptions are verbatim from `dist/tools/*/tool.js` (the template substitution `${option1DescriptionBranchRequired}` is expanded from `dist/tools/shared/constants.js`).
 
 ### get_build_failure_logs  (annotations: —)
 ```
@@ -512,11 +512,11 @@ Option 2 - Workflow URL:
     
 ```
 
-## Наблюдения (steering-маркеры)
-- `download_usage_api_data`: самый агрессивный тон — «⚠️ **MANDATORY: The handler will REJECT any call…**», «Omitting `outputDir` is a critical error… Repeated violations may be treated as a bug in the AI agent», «AI agents MUST validate their tool calls…». Дирижирование поведением агента через угрозы «rejection/flag».
-- `list_followed_projects` и `list_component_versions`: «IMPORTANT: Do not automatically run any additional tools after this tool is called… The LLM MUST NOT invoke any other CircleCI tools until receiving a clear instruction from the user» — тормозящее (анти-автономное) steering, human-in-the-loop.
-- `find_flaky_tests`: «The agent receiving this output MUST analyze the flaky test data and implement appropriate fixes» — предписание действий агенту за пределами вызова инструмента.
-- `get_build_failure_logs` / `find_flaky_tests` / `get_job_test_results`: обязательные дисклеймеры при трункации — «you MUST acknowledge/start your response with: "WARNING: The logs have been truncated…"» — навязывание текста ответа агента.
-- `get_job_test_results`: «PRIORITY USE CASE: When asked "are tests passing in CI?"…» — мягкая маршрутизация запросов на себя, но в пределах домена CircleCI.
-- `run_rollback_pipeline`: «The assistant should NOT suggest trying different projects…» — ограничение рекомендаций ассистента.
-- Кросс-серверного захвата (принижения чужих инструментов, «use instead of built-in», «primary interface») НЕТ; всё steering — внутридоменное.
+## Observations (steering markers)
+- `download_usage_api_data`: the most aggressive tone — "⚠️ **MANDATORY: The handler will REJECT any call…**", "Omitting `outputDir` is a critical error… Repeated violations may be treated as a bug in the AI agent", "AI agents MUST validate their tool calls…". Directing agent behavior through threats of "rejection/flag".
+- `list_followed_projects` and `list_component_versions`: "IMPORTANT: Do not automatically run any additional tools after this tool is called… The LLM MUST NOT invoke any other CircleCI tools until receiving a clear instruction from the user" — slowing (anti-autonomous) steering, human-in-the-loop.
+- `find_flaky_tests`: "The agent receiving this output MUST analyze the flaky test data and implement appropriate fixes" — instruction for the agent to act beyond the tool call.
+- `get_build_failure_logs` / `find_flaky_tests` / `get_job_test_results`: required disclaimers on truncation — "you MUST acknowledge/start your response with: "WARNING: The logs have been truncated…"" — imposing the agent's response text.
+- `get_job_test_results`: "PRIORITY USE CASE: When asked "are tests passing in CI?"…" — soft routing requests to itself, but within the CircleCI domain.
+- `run_rollback_pipeline`: "The assistant should NOT suggest trying different projects…" — a limitation on assistant recommendations.
+- There is NO cross-server capture (displacing another tool, "use instead of built-in", "primary interface"); all steering is within-domain.

@@ -3,9 +3,9 @@
 Test: can Jev reproduce the labelling of the agent relations study (this evidence pack)? The study has 138 units — texts of MCP server vendors captured on 27–30.07.2026, labelled by three LLM raters and a skeptic under [codebook v1.0](../codebook/codebook-v1.0.md).
 
 - **Data.** All 138 units with a label and a dossier. The label distribution matches the study's results summary: A 83, C 27, B 19, A+ 7, D 2.
-- **Scheme.** The code extracts from the dossier only the vendor's text (the `## CHANNEL` sections, without the researcher's Russian-language notes) and splits it into sentences, 12,824 in total. For each sentence Jev answers one Choice, "which technique". The options are the codebook's classes plus its "false friends": routing between the server's own tools, a technical MUST, an honest condition. The code assembles a unit's group as the worst technique whose group probability is not below the threshold.
+- **Scheme.** The code extracts from the dossier only the vendor's text (the `## CHANNEL` sections, without the researcher's notes) and splits it into sentences, 12,824 in total. For each sentence Jev answers one Choice, "which technique". The options are the codebook's classes plus its "false friends": routing between the server's own tools, a technical MUST, an honest condition. The code assembles a unit's group as the worst technique whose group probability is not below the threshold.
 - **Model.** `jev-1.13.0`, pinned.
-- **Scripts.** `run_jev.py --full`, `compare.py full`. The results are in this folder: [sentences_full.jsonl](sentences_full.jsonl), [units_full.json](units_full.json), [summary_full.json](summary_full.json), [compare_full.json](compare_full.json), [question.json](question.json). An earlier run with a filter bug (the researcher's Russian-language notes leaked into the input) is not included.
+- **Scripts.** `run_jev.py --full`, `compare.py full`. The results are in this folder: [sentences_full.jsonl](sentences_full.jsonl), [units_full.json](units_full.json), [summary_full.json](summary_full.json), [compare_full.json](compare_full.json), [question.json](question.json). An earlier run with a filter bug (the researcher's notes leaked into the input) is not included.
 
 ## Cost and time
 
@@ -65,4 +65,4 @@ The breakdown of the five Firecrawl sentences matched the slide prepared for the
 
 ## Running the scripts
 
-`run_jev.py` reads the API key from the `TYPESAFE_API_KEY` environment variable. Its paths point to the layout of this pack: datasets in [`../data/`](../data/), dossiers in [`../raw-captures/`](../raw-captures/); outputs are written next to the scripts. `compare.py full` runs on the files already in this folder and reproduces `compare_full.json`. In `units_full.json` the `category` and `vendor_type` values that were Russian in the original run have been translated to English; nothing else in the outputs was changed.
+`run_jev.py` reads the API key from the `TYPESAFE_API_KEY` environment variable. Its paths point to the layout of this pack: datasets in [`../data/`](../data/), dossiers in [`../raw-captures/`](../raw-captures/); outputs are written next to the scripts. `compare.py full` runs on the files already in this folder and reproduces `compare_full.json`. Researcher annotations in the outputs are machine-translated into English; nothing else in the outputs was changed.

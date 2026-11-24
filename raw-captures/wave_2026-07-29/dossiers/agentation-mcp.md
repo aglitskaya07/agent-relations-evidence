@@ -1,15 +1,15 @@
-# UNIT: agentation-mcp | npm v1.2.0 (published 2026-02-15T20:37:04.456Z) | рамки: npm-top | captured 2026-07-29 (static, tarball)
+# UNIT: agentation-mcp | npm v1.2.0 (published 2026-02-15T20:37:04.456Z) | scope: npm-top | captured 2026-07-29 (static, tarball)
 
-Верифицированный MCP-сервер: stdio-сервер (`new Server({name: "agentation", version: "0.0.1"}, {capabilities: {tools: {}}})` + `StdioServerTransport`, dist/index.mjs:1434-1458) и дополнительный Streamable HTTP-вариант (`createMcpSession`, dist/index.mjs:1704-1723). Зависимость `@modelcontextprotocol/sdk`. Назначение: визуальный фидбек (аннотации в браузере) для AI coding agents; SQLite/in-memory store, webhooks.
+Verified MCP server: stdio server (`new Server({name: "agentation", version: "0.0.1"}, {capabilities: {tools: {}}})` + `StdioServerTransport`, dist/index.mjs:1434-1458) and an additional Streamable HTTP variant (`createMcpSession`, dist/index.mjs:1704-1723). Dependency `@modelcontextprotocol/sdk`. Purpose: visual feedback (annotations in the browser) for AI coding agents; SQLite/in-memory store, webhooks.
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Оба конструктора Server получают только `{name, version}` и `{capabilities: {tools: {}}}` — поле `instructions` нигде не передаётся; grep по слову `instructions` во всех трёх бандлах (cli.js, index.js, index.mjs) даёт 0 совпадений.
+Both Server constructors receive only `{name, version}` and `{capabilities: {tools: {}}}` — the `instructions` field is never passed anywhere; grep for the word `instructions` across all three bundles (cli.js, index.js, index.mjs) yields 0 matches.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-Статический массив `TOOLS` (dist/index.mjs:982-1119), отдаётся как есть в ListTools обоими транспортами. 9 инструментов, все дословно:
+Static array `TOOLS` (dist/index.mjs:982-1119), returned as is in ListTools by both transports. 9 tools, all verbatim:
 
 1. **agentation_list_sessions** — "List all active annotation sessions"
 2. **agentation_get_session** — "Get a session with all its annotations"
@@ -21,10 +21,10 @@
 8. **agentation_reply** — "Add a reply to an annotation's thread. Use this to ask clarifying questions or provide updates to the human."
 9. **agentation_watch_annotations** — "Block until new annotations appear, then collect a batch and return them. Triggers automatically when annotations are created — the user just annotates in the browser and the agent picks them up. After detecting the first new annotation, waits for a batch window to collect more before returning. Use in a loop for hands-free processing. After addressing each annotation, call agentation_resolve with the annotation ID and a summary of what you did. Only resolve annotations the user accepted — if the user rejects your change, leave the annotation open."
 
-Стиринг-маркеры: мягкие поведенческие директивы в №9 ("Use in a loop for hands-free processing", "After addressing each annotation, call agentation_resolve…", "Only resolve annotations the user accepted") и шаблон "Use this to/when/after" в №3-8 — рабочий workflow-гайд, не кросс-инструментное вытеснение конкурентов; маркеров типа "instead of built-in / takes precedence / MUST use" нет.
+Steering markers: soft behavioral directives in No. 9 ("Use in a loop for hands-free processing", "After addressing each annotation, call agentation_resolve…", "Only resolve annotations the user accepted") and the "Use this to/when/after" pattern in No. 3-8 — a workflow guide, not cross-tool displacement of competitors; there are no markers like "instead of built-in / takes precedence / MUST use".
 
 ## NOTES
-- Код — бандл tsup, читаемый (не минифицирован); sourcemaps приложены.
-- TOOLS — статический литерал; сборки динамических строк описаний нет, риск динамики низкий. Описания в cli.js и index.mjs побайтно совпадают (diff по извлечённым description — идентичны).
-- Просмотрено: package.json, README.md (заголовочно), dist/cli.js, dist/index.js, dist/index.mjs (~256 KB текста; .d.ts и .map — по касательной).
-- Расхождение версий: package.json v1.2.0, но в конструкторе Server захардкожено version "0.0.1".
+- The code is a tsup bundle, readable (not minified); sourcemaps are included.
+- TOOLS — a static literal; there is no dynamic construction of description strings, dynamic risk is low. The descriptions in cli.js and index.mjs match byte for byte (diff on the extracted description — identical).
+- Reviewed: package.json, README.md (heading), dist/cli.js, dist/index.js, dist/index.mjs (~256 KB of text; .d.ts and .map — tangentially).
+- Version mismatch: package.json v1.2.0, but in the Server constructor version "0.0.1" is hardcoded.

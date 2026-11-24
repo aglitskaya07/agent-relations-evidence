@@ -1,20 +1,20 @@
-# UNIT: agentloopkit | npm v1.2.0 (published 2026-07-14T12:35:47.577Z) | рамки: pulsemcp | captured 2026-07-29 (static, tarball)
+# UNIT: agentloopkit | npm v1.2.0 (published 2026-07-14T12:35:47.577Z) | scope: pulsemcp | captured 2026-07-29 (static, tarball)
 
-## VERDICT: MCP-сервер (встроенный в CLI-пакет)
+## VERDICT: MCP server (built into the CLI package)
 
-Пакет — прежде всего CLI-тулкит («drop-in engineering loop for software agents», bin: `agentloop`/`agentloopkit`), но содержит полноценный stdio MCP-сервер: `dist/cli/index.js` содержит `startAgentLoopMcpServer` (`// src/mcp/server.ts`), `new Server(...)` из `@modelcontextprotocol/sdk` с обработчиками `ListToolsRequestSchema`/`CallToolRequestSchema`. Есть `server.json` (MCP registry manifest, `io.github.abhiyoheswaran1/agentloopkit`, transport stdio). Сервер read-only, работает поверх локальных артефактов `.agentloop/` в репозитории.
+Package — primarily a CLI toolkit ("drop-in engineering loop for software agents", bin: `agentloop`/`agentloopkit`), but contains a full stdio MCP server: `dist/cli/index.js` contains `startAgentLoopMcpServer` (`// src/mcp/server.ts`), `new Server(...)` from `@modelcontextprotocol/sdk` with handlers for `ListToolsRequestSchema`/`CallToolRequestSchema`. There is `server.json` (MCP registry manifest, `io.github.abhiyoheswaran1/agentloopkit`, transport stdio). The server is read-only, works on top of local artifacts `.agentloop/` in the repository.
 
 ## CHANNEL: instructions, npm (static, 530 chars)
 
-Передаётся конструктору `Server` (dist/cli/index.js, строка 16552):
+Passed into the `Server` constructor (dist/cli/index.js, line 16552):
 
 > Read-only AgentLoopKit server. Exposes local task contracts, policies, policy template status, verification reports, ship reports, artifact inventory metadata, run ledger summaries and details, file intent matches, maintainer reviewability checks, gate status, handoffs, status, next action, start briefings, context budgets, context handle inventories, context packs, and context source-handle expansion. It does not run verification commands, read env file contents, call external APIs, upload files, or mutate repository files.
 
-Оценка стиринга: нейтрально-описательная, без императивов в адрес модели, без «primary/precedence/always use». Честно декларирует ограничения (не читает env, не мутирует файлы).
+Assessment of steering: neutrally descriptive, without imperatives addressed to the model, without "primary/precedence/always use". It honestly declares limitations (does not read env, does not mutate files).
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-23 инструмента; `listMcpTools()` возвращает статический массив `tools` (строка 16217: `return [...tools];`), динамической генерации нет. Все описания дословно:
+23 tools; `listMcpTools()` returns the static array `tools` (line 16217: `return [...tools];`), there is no dynamic generation. All descriptions verbatim:
 
 | # | name | description |
 |---|------|-------------|
@@ -42,11 +42,11 @@
 | 22 | agentloop_list_handoffs | List recent local reviewer handoff summaries. |
 | 23 | agentloop_latest_handoff | Read the latest local reviewer handoff summary Markdown content. |
 
-Маркер-скан по стиринговым регексам: 0 совпадений в описаниях инструментов. Все описания — сухие «Read/List …», без сравнительных или командных формулировок.
+Marker scan for steering regexes: 0 matches in the tool descriptions. All descriptions are dry "Read/List …", without comparative or imperative formulations.
 
 ## NOTES
 
-- Код в dist — tsup-бандл, НЕ минифицирован (читаемые имена, комментарии с путями исходников), есть sourcemaps.
-- Риск динамической сборки строк: низкий. instructions — один литерал в конструкторе; tools — статический массив объектных литералов; несколько описаний параметров используют template-литералы только для числовых дефолтов (`Defaults to ${FILE_INTENT_DEFAULT_SCAN_LIMIT}`).
-- Пакет также ставит на диск агентские инструкции-шаблоны (`dist/templates/agents/*.md` для claude-code/cursor/codex и др., политики, гейты, AGENTS.md) — это отдельный канал влияния через файлы в репозитории пользователя, а не через MCP-протокол; в этом досье не разбирался построчно.
-- Файлов просмотрено: package.json, server.json, dist/cli/index.js (целевые срезы: конструктор сервера, блок tools ~15930–16230, listMcpTools), листинг дерева (~70+ файлов, в основном md-шаблоны).
+- Code in dist is a tsup bundle, NOT minified (readable names, comments with source paths), sourcemaps are present.
+- Risk of dynamic string assembly: low. instructions — one literal in the constructor; tools — a static array of object literals; several parameter descriptions use template literals only for numeric defaults (`Defaults to ${FILE_INTENT_DEFAULT_SCAN_LIMIT}`).
+- The package also writes agent instruction templates to disk (`dist/templates/agents/*.md` for claude-code/cursor/codex and others, policies, gates, AGENTS.md) — this is a separate influence channel through files in the user's repository, not through the MCP protocol; in this dossier it was not analyzed line by line.
+- Files reviewed: package.json, server.json, dist/cli/index.js (target slices: server constructor, tools block ~15930–16230, listMcpTools), tree listing (~70+ files, mostly md templates).

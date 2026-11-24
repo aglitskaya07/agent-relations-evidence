@@ -1,15 +1,15 @@
-# UNIT: neon | Neon | github neondatabase/mcp-server-neon | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: neon | Neon | github neondatabase/mcp-server-neon | author type: official | captured 2026-07-29 (static source)
 
-Подтверждение MCP-сервера: `mcp/server/index.ts` создаёт `new McpServer` из `@modelcontextprotocol/sdk/server/mcp.js` и регистрирует инструменты через `server.tool(...)`; второй путь регистрации — `app/api/[transport]/route.ts` (`server.registerTool(...)`, Next.js remote-транспорт + docs-only режим). Это MCP-сервер.
+MCP server confirmation: `mcp/server/index.ts` creates `new McpServer` from `@modelcontextprotocol/sdk/server/mcp.js` and registers tools via `server.tool(...)`; the second registration path is `app/api/[transport]/route.ts` (`server.registerTool(...)`, Next.js remote transport + docs-only mode). This is an MCP server.
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Конструктор `new McpServer({name:'mcp-server-neon', version: pkg.version}, {capabilities:{tools:{}}})` — поля `instructions` нет; ни в `[transport]/route.ts`, ни в `mcp/resources.ts` строка instructions не задаётся, initialize-ответ не переопределяется.
+The constructor `new McpServer({name:'mcp-server-neon', version: pkg.version}, {capabilities:{tools:{}}})` — there is no `instructions` field; neither in `[transport]/route.ts` nor in `mcp/resources.ts` is the instructions string set, and the initialize response is not overridden.
 
 ## CHANNEL: tool descriptions (coverage=full, 34 tools)
 
-Единый источник — `mcp/tools/definitions.ts` (массив `NEON_TOOLS`). Описания даны дословно; escape-последовательность \` из template literal раскрыта в обычный backtick, `${NEON_DEFAULT_DATABASE_NAME}` = `neondb` (mcp/constants.ts).
+The single source is `mcp/tools/definitions.ts` (the `NEON_TOOLS` array). Descriptions are given verbatim; the escape sequence \` from the template literal is expanded into a normal backtick, `${NEON_DEFAULT_DATABASE_NAME}` = `neondb` (mcp/constants.ts).
 
 ### list_projects
 ```
@@ -935,12 +935,12 @@ List the distinct values of a log field (e.g. all service_name or severity_text 
   </important_notes>
 ```
 
-## Динамические добавки к описаниям (не часть исходной строки)
+## Dynamic additions to descriptions (not part of the source string)
 
-`mcp/tools/grant-filter.ts` (`getAvailableTools`) при активных ограничениях доступа приклеивает к КАЖДОМУ описанию суффикс:
+`mcp/tools/grant-filter.ts` (`getAvailableTools`) when access restrictions are active appends a suffix to EACH description:
 
 ```
 \n\n<notice>\n${notices.join('\n\n')}\n</notice>
 ```
 
-Сам текст notices собирается в `getAccessControlNotices` в том же файле (зависит от grant/read-only), плюс `getAccessControlWarnings` добавляет предупреждения с префиксом ⚠️ в контент каждого ответа инструмента (`mcp/server/index.ts`).
+The notices text itself is assembled in `getAccessControlNotices` in the same file (depends on grant/read-only), plus `getAccessControlWarnings` adds warnings with the ⚠️ prefix to the content of each tool response (`mcp/server/index.ts`).

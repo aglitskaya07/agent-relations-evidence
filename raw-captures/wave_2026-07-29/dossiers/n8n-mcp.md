@@ -1,19 +1,19 @@
-# UNIT: n8n-mcp | npm v2.67.1 (published 2026-07-29T11:54:59.730Z) | рамки: npm-top,docker-catalog | captured 2026-07-29 (static, tarball)
+# UNIT: n8n-mcp | npm v2.67.1 (published 2026-07-29T11:54:59.730Z) | scope: npm-top,docker-catalog | captured 2026-07-29 (static, tarball)
 
-## VERDICT: MCP-сервер
+## VERDICT: MCP server
 
-Полноценный MCP-сервер (stdio + http-варианты). Сервер конструируется в `dist/mcp/server.js`:
+A full-featured MCP server (stdio + http variants). The server is constructed in `dist/mcp/server.js`:
 `new Server({ name: 'n8n-documentation-mcp', version, icons, websiteUrl: "https://n8n-mcp.com" }, { capabilities: { tools: {}, resources: {} } })`.
-Есть собственные обработчики Initialize/ListTools, реестры UI-приложений и skill-ресурсов (`UIAppRegistry`, `SkillResourceRegistry`).
+There are custom Initialize/ListTools handlers, UI app registries, and skill resources (`UIAppRegistry`, `SkillResourceRegistry`).
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Поле `instructions` не передаётся ни в конструктор `Server`, ни в кастомный ответ на `initialize` (server.js строит ответ вручную: только protocolVersion, capabilities, serverInfo). Grep по `instructions` в dist даёт только внутренние тексты tool-docs.
+The `instructions` field is not passed either to the `Server` constructor or to the custom `initialize` response (server.js builds the response manually: only protocolVersion, capabilities, serverInfo). Grep for `instructions` in dist gives only internal tool-docs text.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-24 инструмента: 7 документационных (`dist/mcp/tools.js`, экспорт `n8nDocumentationToolsFinal`) + 17 management (`dist/mcp/tools-n8n-manager.js`, экспорт `n8nManagementTools`; включаются только при сконфигурированном n8n API или multi-tenant). Все описания дословно:
+24 tools: 7 documentation (`dist/mcp/tools.js`, export `n8nDocumentationToolsFinal`) + 17 management (`dist/mcp/tools-n8n-manager.js`, export `n8nManagementTools`; enabled only when an n8n API or multi-tenant is configured). All descriptions verbatim:
 
 ### Documentation tools (dist/mcp/tools.js)
 
@@ -97,14 +97,14 @@
 **n8n_audit_instance**
 > Security audit of n8n instance. Combines n8n's built-in audit API (credentials, database, nodes, instance, filesystem risks) with deep workflow scanning (hardcoded secrets via 50+ regex patterns, unauthenticated webhooks, error handling gaps, data retention risks). Returns actionable markdown report with remediation steps using n8n_manage_credentials and n8n_update_partial_workflow.
 
-## STEERING-НАБЛЮДЕНИЯ
+## STEERING-OBSERVATIONS
 
-- Маркерных формул давления («instead of built-in», «primary», «PRECEDENCE», «MUST use», «The user has installed» и т.п.) в описаниях НЕТ. Единственные слабые оценочные слова: «Essential before deploy» (validate_workflow) и перекрёстные ссылки между собственными инструментами (autofix → manage_credentials/update_partial) — внутренняя навигация, не вытеснение чужих инструментов.
-- Динамическая подмена описаний: при клиенте с именем, содержащим «n8n» или «langchain», описания заменяются на укороченные «n8n-friendly» варианты из `dist/mcp/tools-n8n-friendly.js` (7 переопределений, тоже нейтральные, процитированы частично в анализе). Т.е. текст, который видит агент, зависит от clientInfo, но обе версии статически зашиты в пакет.
-- Management-инструменты скрываются из listTools без n8n API конфига — состав списка условный, но описания статичны.
+- There are NO marker pressure formulas ("instead of built-in", "primary", "PRECEDENCE", "MUST use", "The user has installed", etc.) in the descriptions. The only weak evaluative words are: "Essential before deploy" (validate_workflow) and cross-references between their own tools (autofix → manage_credentials/update_partial) — internal navigation, not displacing another tool.
+- Dynamic description substitution: for a client with a name containing "n8n" or "langchain", descriptions are replaced with shortened "n8n-friendly" variants from `dist/mcp/tools-n8n-friendly.js` (7 overrides, also neutral, partially quoted in the analysis). That is, the text the agent sees depends on clientInfo, but both versions are statically embedded in the package.
+- Management tools are hidden from listTools without n8n API config — the list composition is conditional, but the descriptions are static.
 
 ## NOTES
 
-- Код — компилированный TypeScript (CommonJS), НЕ минифицирован, читается свободно; source maps приложены.
-- Описания инструментов — статические литералы (строки/template literals без интерполяции), риск динамической сборки строк низкий; единственная динамика — выбор между двумя статическими наборами описаний по clientInfo.
-- Просмотрено: структура пакета (874 файла, 216 .js без map), детально — dist/mcp/server.js, tools.js, tools-n8n-manager.js, tools-n8n-friendly.js, package.json/README поверхностно; плюс grep по всему dist на instructions/Server-конструкторы.
+- The code is compiled TypeScript (CommonJS), NOT minified, reads freely; source maps are included.
+- Tool descriptions are static literals (strings/template literals without interpolation), the risk of dynamic string assembly is low; the only dynamic part is choosing between two static sets of descriptions based on clientInfo.
+- Reviewed: package structure (874 files, 216 .js without map), in detail — dist/mcp/server.js, tools.js, tools-n8n-manager.js, tools-n8n-friendly.js, package.json/README superficially; plus grep across all dist for instructions/Server constructors.

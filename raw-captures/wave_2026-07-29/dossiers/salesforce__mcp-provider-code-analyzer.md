@@ -1,17 +1,17 @@
-# UNIT: @salesforce/mcp-provider-code-analyzer | npm v0.9.0 (published 2026-05-21T17:46:08.416Z) | рамки: npm-top | captured 2026-07-29 (static, tarball)
+# UNIT: @salesforce/mcp-provider-code-analyzer | npm v0.9.0 (published 2026-05-21T17:46:08.416Z) | scopes: npm-top | captured 2026-07-29 (static, tarball)
 
-## ТИП ПАКЕТА
+## PACKAGE TYPE
 
-Не самостоятельный MCP-сервер, а **provider-плагин** для хостового Salesforce MCP-сервера: `CodeAnalyzerMcpProvider extends McpProvider` из `@salesforce/mcp-provider-api`, метод `provideTools(services)` возвращает 6 инстансов `McpTool`. В пакете нет ни `new Server(...)`, ни `new McpServer(...)`, ни транспорта — тулы регистрирует хост (`@salesforce/mcp`, repo `salesforcecli/mcp`). package.json: «(For Internal Use Only) Provides MCP Tools for Salesforce Code Analyzer to a MCP Server». Поскольку пакет несёт реальные MCP tool-описания, попадающие в контекст модели через хост-сервер, канал tool descriptions задокументирован полностью; канал instructions пакету структурно недоступен.
+Not a standalone MCP server, but a **provider plugin** for the host Salesforce MCP server: `CodeAnalyzerMcpProvider extends McpProvider` from `@salesforce/mcp-provider-api`, method `provideTools(services)` returns 6 instances of `McpTool`. The package has neither `new Server(...)`, nor `new McpServer(...)`, nor a transport — the tools are registered by the host (`@salesforce/mcp`, repo `salesforcecli/mcp`). package.json: "(For Internal Use Only) Provides MCP Tools for Salesforce Code Analyzer to a MCP Server". Since the package carries real MCP tool descriptions that enter the model context through the host server, the tool descriptions channel is fully documented; the instructions channel is structurally unavailable to the package.
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Grep по `instructions|serverInfo|new McpServer|new Server(` по всему dist/ — 0 совпадений: пакет не конструирует сервер и не передаёт instructions.
+Grep for `instructions|serverInfo|new McpServer|new Server(` across dist/ — 0 matches: the package does not construct a server and does not pass instructions.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-Зарегистрировано 6 тулов (provider.js); 7-й (`create_regex_rule`) закомментирован и НЕ регистрируется. Описания — статические template literals; интерполяции только константные: `${CodeAnalyzerRunMcpTool.NAME}` → `run_code_analyzer`, `${DEFAULT_TOPN_POLICY_LIMIT}` → `10` (dist/policies.js:1). Ниже — дословно, с подстановкой этих констант.
+6 tools are registered (provider.js); the 7th (`create_regex_rule`) is commented out and NOT registered. Descriptions are static template literals; interpolations are only constant: `${CodeAnalyzerRunMcpTool.NAME}` → `run_code_analyzer`, `${DEFAULT_TOPN_POLICY_LIMIT}` → `10` (dist/policies.js:1). Below is the verbatim text, with these constants substituted.
 
 ### 1. run_code_analyzer
 
@@ -118,7 +118,7 @@ Examples (natural language → selector/topN):
 - "Top 5 in files under src/app" → selector: "file=src/app", topN: 5
 ```
 
-### 5. get_ast_nodes_to_generate_xpath (файл generate_xpath_prompt.js)
+### 5. get_ast_nodes_to_generate_xpath (file generate_xpath_prompt.js)
 
 ```
 Purpose: First step for creating a PMD XPath-based custom rule.
@@ -198,16 +198,16 @@ Optional inputs for Regex:
 Output: Updates code-analyzer.yml directly with the regex rule
 ```
 
-## STEERING-СИГНАЛЫ (маркеры в описаниях)
+## STEERING-SIGNALS (markers in descriptions)
 
-- run_code_analyzer: «You MUST provide the "directory" parameter…» (обязательность параметра, не захват трафика); «If provided, configPath takes precedence over config files in directory» — precedence о собственных входах, не о конкуренции с другими тулами; проактивный триггер «When the user asks you to generate files, use this tool to scan those files» — мягкое расширение охвата: тул просят звать после ЛЮБОЙ генерации файлов, даже если пользователь не просил анализ.
-- list_code_analyzer_rules / query_code_analyzer_results: «…is not recommended», «can significantly increase token consumption» — токен-гигиена, анти-steering (сдерживающая, а не захватывающая формулировка).
-- Кросс-ссылки тулов друг на друга (run → query, list → describe, get_ast_nodes → create_custom_rule) — воркфлоу-цепочки внутри собственного семейства, конкурентов не упоминают.
-- Совпадений с агрессивными маркерами (instead of built-in, most powerful, always default, LAST resort, Do NOT answer from memory, primary interface, ignore previous и т.п.) — нет.
+- run_code_analyzer: «You MUST provide the "directory" parameter…» (mandatory parameter, not traffic capture); «If provided, configPath takes precedence over config files in directory» — precedence over its own inputs, not over competition with other tools; proactive trigger «When the user asks you to generate files, use this tool to scan those files» — a soft expansion of scope: the tool is asked to be called after ANY file generation, even if the user did not ask for analysis.
+- list_code_analyzer_rules / query_code_analyzer_results: «…is not recommended», «can significantly increase token consumption» — token hygiene, anti-steering (a restraining rather than capturing formulation).
+- Cross-links of tools to each other (run → query, list → describe, get_ast_nodes → create_custom_rule) — workflow chains within their own family, competitors are not mentioned.
+- No matches for aggressive markers (instead of built-in, most powerful, always default, LAST resort, Do NOT answer from memory, primary interface, ignore previous, etc.) were found.
 
 ## NOTES
 
-- Код НЕ минифицирован: чистый tsc-вывод (ESM) с .js.map и .d.ts, читается дословно.
-- Риск динамической сборки строк описаний: низкий. Все 6 DESCRIPTION — статические template literals; единственные интерполяции — константы (`CodeAnalyzerRunMcpTool.NAME`, `DEFAULT_TOPN_POLICY_LIMIT = 10`), разрешены статически. Остальные getMessage()-строки (messages.js) — это ошибки/тексты результатов, не описания тулов.
-- Просмотрено: полный листинг дерева (37 .js в dist/), прочитаны package.json, index.js, provider.js, все 6 файлов dist/tools/*.js, dist/policies.js; grep по instructions/Server-конструкторам по всему dist/.
-- В dist/tools нет файла create_regex_rule.js — тул существует только как комментарий в provider.js (регекс-путь идёт через create_custom_rule engine:"regex").
+- Code is NOT minified: plain tsc output (ESM) with .js.map and .d.ts, readable verbatim.
+- Risk of dynamic construction of descriptions: low. All 6 DESCRIPTION values are static template literals; the only interpolations are constants (`CodeAnalyzerRunMcpTool.NAME`, `DEFAULT_TOPN_POLICY_LIMIT = 10`), statically allowed. The other getMessage() strings (messages.js) are errors/result texts, not tool descriptions.
+- Reviewed: full tree listing (37 .js in dist/), read package.json, index.js, provider.js, all 6 dist/tools/*.js files, dist/policies.js; grep for instructions/Server constructors across all dist/.
+- In dist/tools there is no create_regex_rule.js file — the tool exists only as a comment in provider.js (the regex path goes through create_custom_rule engine:"regex").

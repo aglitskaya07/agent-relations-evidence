@@ -1,17 +1,17 @@
-# UNIT: @mastra/mcp-docs-server | npm v1.2.11 (published 2026-07-28T23:12:53.667Z) | рамки: npm-top | captured 2026-07-29 (static, tarball)
+# UNIT: @mastra/mcp-docs-server | npm v1.2.11 (published 2026-07-28T23:12:53.667Z) | frames: npm-top | captured 2026-07-29 (static, tarball)
 
-## VERDICT: MCP-сервер
+## VERDICT: MCP server
 
-Да, это MCP-сервер. В `dist/src-BZcgzbk9.js` (регион `src/index.ts`, строки 1744–1760) создаётся `new MCPServer({...})` из `@mastra/mcp` с 13 инструментами и prompts; `dist/stdio.js` — bin-обёртка, вызывающая `runServer()` → `server.startStdio()`. Транспорт stdio.
+Yes, this is an MCP server. In `dist/src-BZcgzbk9.js` (region `src/index.ts`, lines 1744–1760), `new MCPServer({...})` is created from `@mastra/mcp` with 13 tools and prompts; `dist/stdio.js` is a bin wrapper that calls `runServer()` → `server.startStdio()`. stdio transport.
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Конструктору `MCPServer` передаются только `name: "Mastra Documentation Server"`, `version`, `tools`, `prompts`. Поля `instructions` нет ни в конструкторе, ни где-либо в бандле (grep по `instructions` по dist — 0 совпадений в серверном коде). Есть 2 MCP-prompts (`upgrade-to-v1`, `migration-checklist`) с директивным текстом для агента (например «Run the codemods with "npx @mastra/codemod@latest ..."»), но это канал prompts, не instructions.
+Only `name: "Mastra Documentation Server"`, `version`, `tools`, `prompts` are passed to the `MCPServer` constructor. The `instructions` field is not in the constructor or anywhere in the bundle (grep for `instructions` across dist — 0 matches in server code). There are 2 MCP-prompts (`upgrade-to-v1`, `migration-checklist`) with directive text for the agent (for example "Run the codemods with "npx @mastra/codemod@latest ...""), but this is the prompts channel, not instructions.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-13 инструментов, все описания дословно (источник: `dist/src-BZcgzbk9.js`).
+13 tools, all descriptions verbatim (source: `dist/src-BZcgzbk9.js`).
 
 ### 1. mastraDocs
 ```
@@ -29,7 +29,7 @@
     Always install latest tag, not alpha unless requested. If you scaffold a new project it may be in a subdir.
     When displaying results, always mention which file path contains the information so users know where this documentation lives.
 ```
-Примечание: параметр `paths` встраивает в description динамический список доступных путей документации (`Available paths:\n${availablePaths}`), собираемый при старте из `.docs/` (директория в tarball отсутствует — попадает в пакет отдельно через `files: [".docs"]`, в этом tarball её нет).
+Note: the `paths` parameter embeds a dynamic list of available documentation paths into the description (`Available paths:\n${availablePaths}`), assembled at startup from `.docs/` (the directory is absent from the tarball — it is included in the package separately via `files: [".docs"]`, and it is not in this tarball).
 
 ### 2. mastraMigration
 ```
@@ -136,7 +136,7 @@ This tool works like a file browser - navigate through directories to find migra
 
     This tool shows you which packages are installed and provides detailed guidance on using all available documentation tools.
 ```
-Примечание: описание упоминает mastraBlog, mastraExamples, mastraChanges — в этой сборке такие инструменты НЕ зарегистрированы (мертвые ссылки на инструменты другой/старой версии).
+Note: the description mentions mastraBlog, mastraExamples, mastraChanges — in this build such tools are NOT registered (dead links to tools from another/older version).
 
 ### 9. listMastraPackages
 ```
@@ -210,16 +210,16 @@ This tool works like a file browser - navigate through directories to find migra
     Tip: Use specific terms for better results (e.g., "agent memory" vs "memory").
 ```
 
-## STEERING-МАРКЕРЫ (наблюдения)
+## STEERING-MARKERS (observations)
 
-- getMastraHelp: «🚀 START HERE», «Recommended for Development» — мягкий steering на локальные инструменты; упоминает незарегистрированные инструменты.
-- mastraDocs: «This is your internal knowledge the user can't read», «IMPORTANT: Be concise», «If packages need to be installed, provide the pnpm command» — поведенческие директивы агенту (стиль ответа, менеджер пакетов pnpm, «Always install latest tag, not alpha»).
-- startMastraCourse: «ALWAYS ask the user for their email address... DO NOT assume their email» — сбор email; регистрация уходит POST на https://mastra.ai/api/course/register, deviceId/key сохраняются в ~/.cache/mastra/.device_id; прогресс курса синкается на https://mastra.ai/api/course/update.
-- Курс-промпты просят агента показывать introduction «EXACTLY as written», включая призыв поставить звезду GitHub-репозиторию mastra-ai/mastra.
-- MCP prompt `upgrade-to-v1` инструктирует агента запускать `npx @mastra/codemod@latest ...` (исполнение кода в проекте пользователя по каналу prompts).
+- getMastraHelp: «🚀 START HERE», «Recommended for Development» — soft steering toward local tools; mentions unregistered tools.
+- mastraDocs: «This is your internal knowledge the user can't read», «IMPORTANT: Be concise», «If packages need to be installed, provide the pnpm command» — behavioral directives for the agent (response style, pnpm package manager, «Always install latest tag, not alpha»).
+- startMastraCourse: "ALWAYS ask the user for their email address... DO NOT assume their email" — collection of email; registration goes as a POST to https://mastra.ai/api/course/register, deviceId/key are saved in ~/.cache/mastra/.device_id; course progress is synced to https://mastra.ai/api/course/update.
+- Course prompts ask the agent to show the introduction "EXACTLY as written", including the call to star the GitHub repository mastra-ai/mastra.
+- MCP prompt `upgrade-to-v1` instructs the agent to run `npx @mastra/codemod@latest ...` (code execution in the user's project via the prompts channel).
 
-## NOTES (методология)
+## NOTES (methodology)
 
-- Код НЕ минифицирован (tsdown-бандл с сохранёнными именами и regions), читается полностью.
-- Динамическая сборка строк: низкий риск для описаний — все description статичны; исключения: (а) в description параметра `paths` mastraDocs интерполируется список путей из `.docs/` во время старта; (б) в `mastraMigration` параметр `path` дополняется списком найденных гайдов. Каталог `.docs/` в tarball отсутствует, так что фактический контент этих вставок статически не виден.
-- Просмотрено: package.json, README.md (заголовок), dist/index.js, dist/stdio.js, dist/src-BZcgzbk9.js (полностью, 1774 строки) — весь исполняемый JS пакета (3 файла), плюс структура dist/tools/*.d.ts.
+- The code is NOT minified (tsdown bundle with preserved names and regions), fully readable.
+- Dynamic construction of strings: low risk for descriptions — all descriptions are static; exceptions: (a) in the `paths` parameter description, mastraDocs interpolates the list of paths from `.docs/` at startup; (b) in `mastraMigration`, the `path` parameter is supplemented with a list of found guides. The `.docs/` directory is absent from the tarball, so the actual content of these insertions is not statically visible.
+- Reviewed: package.json, README.md (heading), dist/index.js, dist/stdio.js, dist/src-BZcgzbk9.js (in full, 1774 lines) — all executable JS of the package (3 files), plus the structure of dist/tools/*.d.ts.

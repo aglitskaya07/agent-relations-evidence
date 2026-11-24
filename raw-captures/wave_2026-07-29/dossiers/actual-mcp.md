@@ -1,20 +1,20 @@
-# UNIT: actual-mcp | npm v1.12.0 (published 2026-07-27T11:23:59.338Z) | рамки: pulsemcp | captured 2026-07-29 (static, tarball)
+# UNIT: actual-mcp | npm v1.12.0 (published 2026-07-27T11:23:59.338Z) | scope: pulsemcp | captured 2026-07-29 (static, tarball)
 
-## VERDICT: MCP-сервер
+## VERDICT: MCP server
 
-Полноценный MCP-сервер для Actual Budget (personal finance). `build/server.js` создаёт `new Server({ name: 'Actual Budget', version: '1.0.0' }, { capabilities: { resources, tools, prompts, logging } })` из `@modelcontextprotocol/sdk`, регистрирует resources/tools/prompts. Write-инструменты включаются флагом `enableWrite` (иначе только 8 read-инструментов).
+A full-featured MCP server for Actual Budget (personal finance). `build/server.js` creates `new Server({ name: 'Actual Budget', version: '1.0.0' }, { capabilities: { resources, tools, prompts, logging } })` from `@modelcontextprotocol/sdk`, and registers resources/tools/prompts. Write tools are enabled by the `enableWrite` flag (otherwise only 8 read tools).
 
 ## CHANNEL: instructions, npm (static)
 
-(не обнаружены статически)
+(not found statically)
 
-Конструктору `Server` передаются только `name`/`version` и capabilities — поля `instructions` нет. Grep по `instructions` во всём `build/` (без .map) — 0 совпадений.
+Only `name`/`version` and capabilities are passed to the `Server` constructor — there is no `instructions` field. Grep for `instructions` throughout `build/` (without .map) — 0 matches.
 
-Примечание: сервер имеет prompts-канал (`build/prompts.js`) с тремя промптами (`financial-insights`, `budget-review`, `actual-cleanup`) — это user-invoked промпты, не auto-injected instructions. Содержат директивные формулировки для модели, например из `financial-insights`: «IMPORTANT: Any transactions in the "Investment & Savings" category group should be treated as POSITIVE savings, not as spending. […] Do NOT recommend reducing these amounts unless they're clearly unsustainable». Тон — доменная разметка задачи, не steering между инструментами/провайдерами.
+Note: the server has a prompts channel (`build/prompts.js`) with three prompts (`financial-insights`, `budget-review`, `actual-cleanup`) — these are user-invoked prompts, not auto-injected instructions. They contain directive phrasing for the model, for example from `financial-insights`: «IMPORTANT: Any transactions in the "Investment & Savings" category group should be treated as POSITIVE savings, not as spending. […] Do NOT recommend reducing these amounts unless they're clearly unsustainable». The tone is domain task labeling, not steering between tools/providers.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-Всего 25 инструментов (8 read + 17 write, write за флагом `enableWrite`). Все описания дословно:
+There are 25 tools in total (8 read + 17 write, write behind the `enableWrite` flag). All descriptions verbatim:
 
 ### Read tools
 | name | description |
@@ -49,11 +49,11 @@
 | import-transactions | Import a list of transactions into an account using reconciliation logic. Deduplicates via imported_id to prevent duplicates on repeated imports. Supports dry-run mode to preview changes without persisting them. |
 | run-bank-sync | Run bank synchronization (GoCardless/SimpleFIN) to download latest transactions. Provide accountId for a specific account, use "onbudget"/"offbudget" for groups, or omit to sync all linked accounts. |
 
-Маркер-скан steering-регексов по всем 25 описаниям: 0 совпадений. Описания чисто функциональные, без приоритезации над другими инструментами, суперлативов, «primary/precedence/last resort» и т.п.
+Marker scan of steering regexes across all 25 descriptions: 0 matches. The descriptions are purely functional, with no prioritization over other tools, superlatives, "primary/precedence/last resort", etc.
 
 ## NOTES
 
-- Код НЕ минифицирован — читаемый tsc-вывод с sourcemaps и .d.ts, статический анализ надёжен.
-- Риск динамической сборки строк: низкий. Описания — литералы (у import-transactions и run-bank-sync — конкатенация литералов `'…' + '…'`, собрано вручную дословно). Единственная динамика — интерполяция дат в prompt-текстах (`${start}`, `${end}`, `${months}`), на steering не влияет.
-- Просмотрено: 75 JS-файлов в пакете; вручную прочитаны server.js, tools/index.js, prompts.js, package.json; python-regex поверх всех 25 tools/*/index.js; grep `instructions` по всему build/.
-- Списки tools/prompts статические (массивы `readTools`/`writeTools`/`promptsSchema`), рантайм-мутации списков не обнаружены.
+- The code is NOT minified — readable tsc output with sourcemaps and .d.ts, static analysis is reliable.
+- Risk of dynamic string assembly: low. Descriptions are literals (for import-transactions and run-bank-sync — concatenation of literals `'…' + '…'`, assembled manually verbatim). The only dynamics are date interpolation in prompt texts (`${start}`, `${end}`, `${months}`), does not affect steering.
+- Reviewed: 75 JS files in the package; manually read server.js, tools/index.js, prompts.js, package.json; python regex across all 25 tools/*/index.js; grep `instructions` across all build/.
+- The tools/prompts lists are static (arrays `readTools`/`writeTools`/`promptsSchema`); no runtime mutations of the lists were found.

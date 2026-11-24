@@ -1,6 +1,6 @@
-# UNIT: nexus-mcp | npm v3.4.0 (published 2026-02-28T23:37:40.470Z) | рамки: pulsemcp | captured 2026-07-29 (static, tarball)
+# UNIT: nexus-mcp | npm v3.4.0 (published 2026-02-28T23:37:40.470Z) | scope: pulsemcp | captured 2026-07-29 (static, tarball)
 
-Это MCP-сервер: `dist/index.js` создаёт `new Server({name: 'nexus', ...})` из `@modelcontextprotocol/sdk`, регистрирует ListTools/CallTool/ListResources/ReadResource, stdio-транспорт. Один инструмент (`search`) — обёртка над OpenRouter (Perplexity Sonar / Grok).
+This is an MCP server: `dist/index.js` creates `new Server({name: 'nexus', ...})` from `@modelcontextprotocol/sdk`, registers ListTools/CallTool/ListResources/ReadResource, stdio transport. One tool (`search`) is a wrapper over OpenRouter (Perplexity Sonar / Grok).
 
 ## CHANNEL: instructions, npm (static, 737 chars)
 
@@ -26,22 +26,22 @@ RESOURCES:
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-Инструментов: 1 (единственный `tools.push` в ListTools-хендлере, `dist/index.js:117-164`).
+Tools: 1 (the only `tools.push` in the ListTools handler, `dist/index.js:117-164`).
 
 ### search
 > Nexus AI-powered search using Perplexity and Grok models via OpenRouter. Perplexity models (sonar, sonar-pro, sonar-reasoning-pro, sonar-deep-research) search the web for current information. Grok 4 provides responses from training data without real-time search.
 
-Описания параметров (дословно):
+Parameter descriptions (verbatim):
 - `query`: "The search query to process (required, 1-2000 characters)"
 - `model`: "Model to use for search. Options: sonar (fast Q&A, 30s timeout), sonar-pro (multi-step queries, 60s timeout), sonar-reasoning-pro (chain-of-thought reasoning, 120s timeout), sonar-deep-research (exhaustive research reports, 300s timeout), grok-4 (training-data knowledge, 60s timeout). Premium models (sonar-pro and above, including grok-4) have higher API costs."
 - `maxTokens`: "Maximum number of tokens in the response (1-4000)"
 - `temperature`: "Controls randomness in the response (0-2)"
 - `timeout`: "Override the model-specific default timeout in milliseconds (5000-600000). Use this to extend or reduce the wait time for API responses."
 
-Маркер-скан по steering-регексам: совпадений нет — ни в instructions, ни в описании инструмента нет формулировок приоритета/вытеснения ("instead of built-in", "primary", "precedence", "MUST use" и т.п.). Нейтральный фактический тон.
+Marker scan for steering regexes: no matches — neither in instructions nor in the tool description are there priority/displacement formulations ("instead of built-in", "primary", "precedence", "MUST use", etc.). Neutral factual tone.
 
 ## NOTES
 
-- Код не минифицирован: tsc-компиляция с сохранением имён и комментариев, есть .js.map и .d.ts.
-- Риск динамической сборки строк: низкий. instructions — статичный template literal без интерполяций; описание инструмента — статичный литерал; единственная динамика — условное включение `search` в список, если задан OPENROUTER_API_KEY.
-- Просмотрено: package.json, README не читался целиком, dist/index.js (полностью в релевантной части), grep по всем 30 .js-файлам dist на Server/McpServer/setRequestHandler/instructions/tools.push.
+- The code is not minified: tsc compilation with names and comments preserved, .js.map and .d.ts are present.
+- Risk of dynamic string assembly: low. instructions — a static template literal with no interpolations; tool description — a static literal; the only dynamic part is the conditional inclusion of `search` in the list if OPENROUTER_API_KEY is set.
+- Reviewed: package.json, README was not read in full, dist/index.js (fully in the relevant part), grep across all 30 .js files in dist for Server/McpServer/setRequestHandler/instructions/tools.push.

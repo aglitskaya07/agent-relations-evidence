@@ -1,7 +1,7 @@
-# UNIT: claude-ai:Zoom_for_Claude | коннектор claude.ai | captured 2026-07-29 (connector tool list)
+# UNIT: claude-ai:Zoom_for_Claude | claude.ai connector | captured 2026-07-29 (connector tool list)
 
 ## CHANNEL: instructions
-(коннектор не передает блок инструкций, 2026-07-29)
+(the connector does not pass the instruction block, 2026-07-29)
 
 ## CHANNEL: tool descriptions, connector (9 tools, via ToolSearch)
 
@@ -76,7 +76,7 @@ Only the meeting host or participants explicitly granted access by the host can 
 
 ## Usage Notes
 
-- Cloud recordings may show `processing: true` while… [обрезано механизмом ToolSearch]
+- Cloud recordings may show `processing: true` while… [cropped by ToolSearch mechanism]
 
 ### tool: get_recording_resource
 **Description:**
@@ -110,7 +110,7 @@ Fields are omitted if no data exists for that type.
 
 **Usage Notes:**
 
-- Recording durati… [обрезано механизмом ToolSearch]
+- Recording durati… [truncated by ToolSearch mechanism]
 
 ### tool: hub_create_file_from_content
 ## Tool Description
@@ -232,7 +232,7 @@ Returns `{ "data": [...] }` where each item is discriminated by `entity_type`:
 ## Usage Notes
 
 - All `from`/`to` values accept ISO 8601 UTC only. Interpret time references in the user's timezone, convert to UTC, then format as ISO 8601. Relative expressions (e.g. "yesterday", "last week") follow the same local → UTC → ISO 8601 pipeline.
-- When the user mentio… [обрезано механизмом ToolSearch]
+- When the user mentio… [truncated by ToolSearch mechanism]
 
 ### tool: create_new_file_with_markdown
 ## Tool Description
@@ -283,4 +283,4 @@ Returns a JSON object containing:
 - Prefer `meeting_uuid` over `meeting_number` for downstream tool calls — it identifies the exact meeting instance.
 - For "recent" or "today" queries, set `from` to the start of the current day in UTC rather than using the default 7-day window.
 - For upcoming/future meeting queries, set `from` to the current time.
-- The user's time… [обрезано механизмом ToolSearch]
+- The user's time… [truncated by ToolSearch mechanism]

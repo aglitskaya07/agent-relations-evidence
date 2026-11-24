@@ -1,34 +1,34 @@
-# UNIT: @claude-flow/mcp | npm v3.0.0-alpha.9 (published 2026-05-09T18:31:20.248Z) | рамки: npm-top,smithery-top20 | captured 2026-07-29 (static, tarball)
+# UNIT: @claude-flow/mcp | npm v3.0.0-alpha.9 (published 2026-05-09T18:31:20.248Z) | frames: npm-top,smithery-top20 | captured 2026-07-29 (static, tarball)
 
-## VERDICT: server-framework (library) с встроенным серверным кодом MCP
+## VERDICT: server-framework (library) with built-in MCP server code
 
-Пакет — standalone-реализация MCP-сервера (часть claude-flow v3, ruvnet): полный серверный код (initialize/tools/resources/prompts/tasks, транспорты stdio/HTTP/WebSocket) в `src/server.ts` (1131 строка) + tool-registry. Это НЕ клиент и НЕ прокси, но и не готовый продуктовый сервер: в package.json нет `bin`, пакет предназначен для встраивания (`quickStart` + `registerTool(defineTool(...))` из README). Прикладные инструменты определяет хост-приложение; сам пакет регистрирует только 4 встроенных system-инструмента (`registerBuiltInTools()`, src/server.ts:1033). Классифицирован как сервер (серверный код есть), с оговоркой «framework».
+Package — standalone implementation of an MCP server (part of claude-flow v3, ruvnet): full server code (initialize/tools/resources/prompts/tasks, stdio/HTTP/WebSocket transports) in `src/server.ts` (1131 lines) + tool-registry. This is NOT a client and NOT a proxy, but also not a ready-made production server: package.json has no `bin`, the package is intended for embedding (`quickStart` + `registerTool(defineTool(...))` from README). Application tools are defined by the host application; the package itself registers only 4 built-in system tools (`registerBuiltInTools()`, src/server.ts:1033). Classified as a server (server code exists), with the caveat "framework".
 
 ## CHANNEL: instructions, npm (static, 50 chars)
 
-Передаётся в результате `initialize` (src/server.ts:492, идентично в dist/server.js:370):
+Passed in the result of `initialize` (src/server.ts:492, identical in dist/server.js:370):
 
 ```
 Claude-Flow MCP Server V3 ready for tool execution
 ```
 
-Нейтральная строка-статус, никакого steering-содержания (нет приоритетов, «primary», принуждения к использованию).
+A neutral status line, no steering content whatsoever (no priorities, no "primary", no coercion to use).
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-Встроенных инструментов: 4 (src/server.ts:1033–1090; dist/server.js совпадает). Все описания дословно:
+Built-in tools: 4 (src/server.ts:1033–1090; dist/server.js matches). All descriptions verbatim:
 
 1. **system/info** — `Get system information`
 2. **system/health** — `Get system health status`
 3. **system/metrics** — `Get server metrics`
 4. **tools/list-detailed** — `List all registered tools with details`
-   - параметр `category`: `Filter by category`
+   - parameter `category`: `Filter by category`
 
-Маркеров манипуляции (precedence/primary/instead of/MUST use и т.п.) в описаниях нет — все четыре описания предельно нейтральные, по 3–6 слов.
+There are no manipulation markers (precedence/primary/instead of/MUST use, etc.) in the descriptions — all four descriptions are extremely neutral, 3–6 words each.
 
 ## NOTES
 
-- Код не минифицирован: в tarball и `src/*.ts` (исходники), и `dist/*.js` (tsc-транспиляция с sourcemaps); src и dist сверены, расхождений по instructions/описаниям нет.
-- Риск динамической сборки строк: низкий. instructions — статический литерал; описания встроенных инструментов — статические литералы. Динамика есть только в том смысле, что прикладные инструменты регистрируются хост-кодом извне пакета (framework by design) — их описания вне рамок этого tarball.
-- Просмотрено: структура из 318 файлов, целиком/фрагментами прочитаны package.json, README.md, src/server.ts (ключевые блоки), grep по всему src/ и dist/ на instructions/registerTool/description (~30 файлов затронуто grep-ом).
-- Побочное наблюдение: в tarball также лежат `.claude/` (settings.json, commands, helpers-скрипты) и CLAUDE.md — материал для канала «files in package», вне заявленных здесь каналов.
+- The code is not minified: the tarball contains both `src/*.ts` (sources) and `dist/*.js` (tsc transpilation with sourcemaps); src and dist were compared, no discrepancies in instructions/descriptions were found.
+- Risk of dynamic string assembly: low. instructions — a static literal; built-in tool descriptions — static literals. The only dynamic aspect is that application tools are registered by host code from outside the package (framework by design) — their descriptions are outside the scope of this tarball.
+- Reviewed: structure of 318 files, package.json, README.md, src/server.ts (key blocks) read in full/fragmentary form, grep across all src/ and dist/ for instructions/registerTool/description (~30 files affected by grep).
+- Side observation: the tarball also contains `.claude/` (settings.json, commands, helpers scripts) and CLAUDE.md — material for the "files in package" channel, outside the channels claimed here.

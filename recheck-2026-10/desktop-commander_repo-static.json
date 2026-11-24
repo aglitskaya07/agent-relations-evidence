@@ -580,7 +580,7 @@
   },
   {
    "july_quote": "This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
-   "july_channel": "tool_description:CMD_PREFIX_DESCRIPTION (все 24 инструмента)",
+   "july_channel": "tool_description:CMD_PREFIX_DESCRIPTION (all 24 tools)",
    "status_now": "exact"
   },
   {

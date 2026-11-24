@@ -1,25 +1,25 @@
-# UNIT: projscan | npm v5.0.3 (published 2026-07-19T21:27:29.947Z) | рамки: pulsemcp | captured 2026-07-29 (static, tarball)
+# UNIT: projscan | npm v5.0.3 (published 2026-07-19T21:27:29.947Z) | scope: pulsemcp | captured 2026-07-29 (static, tarball)
 
-Тип: подтверждённый MCP-сервер (stdio) + CLI. Не SDK/прокси. Собственная JSON-RPC-реализация протокола MCP (без @modelcontextprotocol/sdk): `dist/mcp/server.js` → `serverHandlers.js` (initialize / tools/list / tools/call / prompts / resources), поддержка протоколов 2025-03-26 и 2024-11-05. "Local code intelligence for agent-assisted engineering" — анализ репозитория (AST, git churn, зависимости, координация параллельных агентов).
+Type: confirmed MCP server (stdio) + CLI. Not SDK/proxy. Own JSON-RPC implementation of the MCP protocol (without @modelcontextprotocol/sdk): `dist/mcp/server.js` → `serverHandlers.js` (initialize / tools/list / tools/call / prompts / resources), support for protocols 2025-03-26 and 2024-11-05. "Local code intelligence for agent-assisted engineering" — repository analysis (AST, git churn, dependencies, coordination of parallel agents).
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Initialize-ответ собирается в `dist/mcp/serverHandlers.js` (handleInitialize) и содержит только `protocolVersion`, `serverInfo: { name: 'projscan', version }` и `capabilities` (tools/prompts/resources/logging + experimental fileChanged при watch). Поля `instructions` нет нигде в dist (grep по всем .js: единственные вхождения слова — текст рекомендации про README в analyzers/architectureCheck.js и внутренний ключ core/feedback.js, к initialize отношения не имеют).
+The Initialize response is assembled in `dist/mcp/serverHandlers.js` (handleInitialize) and contains only `protocolVersion`, `serverInfo: { name: 'projscan', version }`, and `capabilities` (tools/prompts/resources/logging + experimental fileChanged when watch). The `instructions` field is nowhere in dist (grep across all .js: the only occurrences of the word are the README recommendation text in analyzers/architectureCheck.js and the internal key core/feedback.js, and they are unrelated to initialize).
 
 ## CHANNEL: tool descriptions, npm (static, coverage=marker-scan+sample)
 
-51 инструмент (tool-manifest.json `toolCount: 51`; сверен с исходниками `dist/mcp/tools/*.js` — имена и описания совпадают дословно, расхождений 0).
+51 tools (tool-manifest.json `toolCount: 51`; checked against the source files `dist/mcp/tools/*.js` — names and descriptions match verbatim, 0 discrepancies).
 
-### Маркер-скан
-Полный прогон всех регекс-маркеров стирингового индекса (instead of built-in, most powerful, always default, call this immediately, Best for:, prefer/Prefer this over, faster and cheaper, N% faster, PRECEDENCE/takes precedence, LAST resort, Do NOT answer from memory, even when you think you know, even if isn't named, The user has installed/chosen, primary tool/provider/interface, refund/credit/reward, MUST use/run, ignore other/previous, whenever the user, Assume appropriate/legitimate, Perfect for/Great for/essential for, trusted sources, never means leave) по всем 51 top-level описаниям манифеста И дополнительно по всем `dist/mcp/tools/*.js` (включая описания параметров) и `dist/mcp/prompts.js`:
+### Marker scan
+Full pass over all regex markers of the string index (instead of built-in, most powerful, always default, call this immediately, Best for:, prefer/Prefer this over, faster and cheaper, N% faster, PRECEDENCE/takes precedence, LAST resort, Do NOT answer from memory, even when you think you know, even if isn't named, The user has installed/chosen, primary tool/provider/interface, refund/credit/reward, MUST use/run, ignore other/previous, whenever the user, Assume appropriate/legitimate, Perfect for/Great for/essential for, trusted sources, never means leave) across all 51 top-level manifest descriptions AND additionally across all `dist/mcp/tools/*.js` (including parameter descriptions) and `dist/mcp/prompts.js`:
 
-**0 совпадений.** Стиринговых маркеров не обнаружено. Описания фактологические, скоуп сформулирован внутрь собственного продукта ("Use this after projscan_hotspots…", "Use when an agent is asked 'is this PR safe to merge?'"), без вытеснения встроенных инструментов клиента или чужих серверов.
+**0 matches.** No string markers were found. The descriptions are factual, with the scope formulated inside the product itself ("Use this after projscan_hotspots…", "Use when an agent is asked 'is this PR safe to merge?'"), without displacing the client's built-in tools or other servers.
 
-### Полный список инструментов (имена)
+### Full list of tools (names)
 projscan_analyze, projscan_doctor, projscan_hotspots, projscan_file, projscan_structure, projscan_dependencies, projscan_outdated, projscan_audit, projscan_upgrade, projscan_coverage, projscan_semantic_graph, projscan_coupling, projscan_workspaces, projscan_pr_diff, projscan_review, projscan_fix_suggest, projscan_explain_issue, projscan_impact, projscan_search, projscan_session, projscan_memory, projscan_workspace_graph, projscan_apply_fix, projscan_taint, projscan_dataflow, projscan_cost_summary, projscan_review_watch, projscan_plugin, projscan_preflight, projscan_workplan, projscan_release_train, projscan_bug_hunt, projscan_evidence_pack, projscan_regression_plan, projscan_agent_brief, projscan_quality_scorecard, projscan_assess, projscan_simulate, projscan_prove, projscan_passport, projscan_proof_broker, projscan_review_gate, projscan_adoption, projscan_start, projscan_understand, projscan_collision, projscan_claim, projscan_merge_risk, projscan_route, projscan_coordinate, projscan_coordinate_watch
 
-### 8 репрезентативных полных описаний (дословно)
+### 8 representative full descriptions (verbatim)
 
 **projscan_analyze**
 > Run a full projscan analysis of the project: languages, frameworks, dependencies, issues, and health score. Use this to understand a codebase before making changes.
@@ -46,7 +46,7 @@ projscan_analyze, projscan_doctor, projscan_hotspots, projscan_file, projscan_st
 > First-60-seconds repo orientation for agents and developers. Composes setup diagnostics, workplan, quality scorecard, adoption gaps, top risks, and next commands into one read-only workflow recommendation.
 
 ## NOTES
-- Код НЕ минифицирован: чистый tsc-вывод с комментариями и sourcemaps, читается напрямую.
-- Риск динамической сборки строк описаний: низкий. Все description — статические литералы в `dist/mcp/tools/*.js`; единственная конкатенация — `deprecationDescriptionPrefix()` в toolDefinitions.js (префикс о деприкации, не стиринг). Манифест `dist/tool-manifest.json` генерируется на билде и на 100% совпадает с кодом.
-- Prompts/resources каналы существуют (prompts.js, resources.js) — прогнаны теми же маркерами, 0 совпадений.
-- Просмотрено: ~55 файлов прицельно (package.json, mcp/server*, все 46 tools/*.js, toolDefinitions, prompts, манифест) + grep-скан всего dist (в пакете 2366 файлов, включая .map/доки/картинки).
+- Code is NOT minified: plain tsc output with comments and sourcemaps, readable directly.
+- Risk of dynamic construction of descriptions: low. All descriptions are static literals in `dist/mcp/tools/*.js`; the only concatenation is `deprecationDescriptionPrefix()` in toolDefinitions.js (a deprecation prefix, not a string). The `dist/tool-manifest.json` manifest is generated at build time and matches the code 100%.
+- Prompts/resources channels exist (prompts.js, resources.js) — run through the same markers, 0 matches.
+- Reviewed: ~55 files selectively (package.json, mcp/server*, all 46 tools/*.js, toolDefinitions, prompts, manifest) + grep scan of all dist (the package has 2366 files, including .map/docs/images).

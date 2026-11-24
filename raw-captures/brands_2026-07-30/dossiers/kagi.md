@@ -1,23 +1,23 @@
-# UNIT: kagi | Kagi Search | github kagisearch/kagimcp | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: kagi | Kagi Search | github kagisearch/kagimcp | author type: official | captured 2026-07-29 (static source)
 
-Подтверждено: это MCP-сервер. `src/kagimcp/server.py` создаёт `mcp = FastMCP("kagimcp", auth=_KagiKeyPassthroughVerifier())`, регистрирует инструменты через `@mcp.tool()`, запускается в stdio или streamable-http (`mcp.run(...)`).
+Confirmed: this is an MCP server. `src/kagimcp/server.py` creates `mcp = FastMCP("kagimcp", auth=_KagiKeyPassthroughVerifier())`, registers tools via `@mcp.tool()`, runs in stdio or streamable-http (`mcp.run(...)`).
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Конструктор `FastMCP("kagimcp", auth=...)` вызывается без параметра `instructions`; в репозитории нет ни одного упоминания `instructions` в коде (единственное совпадение — слово в прозе README про установку).
+The constructor `FastMCP("kagimcp", auth=...)` is called without the `instructions` parameter; there is not a single mention of `instructions` in the repository code (the only match is the word in README prose about installation).
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Всего инструментов: 2.
+A total of 2 tools.
 
 ### 1. `kagi_search_fetch`
 
-Описание (docstring):
+Description (docstring):
 
 > Fetch web results for a query using the Kagi Search API. Use for general search and when the user explicitly tells you to 'fetch' results/information. Results are numbered so that a user may refer to a result by a specific number.
 
-Описания параметров (дословно):
+Parameter descriptions (verbatim):
 
 - `query`: "A concise, keyword-focused search query. Include essential context for standalone use."
 - `workflow`: "Type of results to return. Use 'news' for current events and recent reporting, 'videos' for video content (e.g. tutorials, talks), 'podcasts' for audio shows, 'images' for image results, or the default 'search' for general web results. Note that 'search' may return a mix of categories (web, news, videos, images) in one response, like a typical SERP; the other workflows return only their single category."
@@ -33,15 +33,15 @@
 
 ### 2. `kagi_extract`
 
-Описание (docstring):
+Description (docstring):
 
 > Extract the content of a web page as markdown using the Kagi Extract API. Use this to read the full content of a page when needed.
 
-Описания параметров (дословно):
+Parameter descriptions (verbatim):
 
 - `url`: "The HTTPS URL of the page to extract content from."
 
-## Прочие статические наблюдения
+## Other static observations
 
-- Оператор развёртывания может скрыть часть параметров `kagi_search_fetch` от модели через env `KAGI_HIDDEN_PARAMS` (`ToolTransform` / `ArgTransformConfig(hide=True)`) — это меняет видимую модели схему, но не текст описаний инструментов.
-- Имена и описания инструментов заданы литералами в исходнике; динамической сборки строк описаний нет.
+- The deployment operator can hide part of the `kagi_search_fetch` parameters from the model via env `KAGI_HIDDEN_PARAMS` (`ToolTransform` / `ArgTransformConfig(hide=True)`) — this changes the schema visible to the model, but not the text of tool descriptions.
+- Tool names and descriptions are given as literals in the source; there is no dynamic assembly of description strings.

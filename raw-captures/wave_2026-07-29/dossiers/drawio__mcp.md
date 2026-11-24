@@ -1,15 +1,15 @@
-# UNIT: @drawio/mcp | npm v1.5.0 (published 2026-07-19T14:03:11.138Z) | рамки: npm-top,smithery-top20 | captured 2026-07-29 (static, tarball)
+# UNIT: @drawio/mcp | npm v1.5.0 (published 2026-07-19T14:03:11.138Z) | frames: npm-top,smithery-top20 | captured 2026-07-29 (static, tarball)
 
-## VERDICT: MCP-сервер
+## VERDICT: MCP server
 
-Полноценный MCP stdio-сервер: `src/index.js` создаёт `new Server({name: "drawio-mcp", version}, {capabilities: {tools: {}}})` из `@modelcontextprotocol/sdk`, регистрирует обработчики ListTools/CallTool и подключает `StdioServerTransport`. bin: `drawio-mcp -> ./src/index.js`. Издатель — jgraph (официальный draw.io).
+A full-featured MCP stdio server: `src/index.js` creates `new Server({name: "drawio-mcp", version}, {capabilities: {tools: {}}})` from `@modelcontextprotocol/sdk`, registers ListTools/CallTool handlers, and connects `StdioServerTransport`. bin: `drawio-mcp -> ./src/index.js`. Publisher is jgraph (official draw.io).
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически) — конструктору Server передаются только `name`/`version` и `capabilities: {tools: {}}`; поля `instructions` нет нигде в пакете (grep по всем файлам src/ и package.json — ноль вхождений).
+(not found statically) — only `name`/`version` and `capabilities: {tools: {}}` are passed to the Server constructor; there is no `instructions` field anywhere in the package (grep across all src/ files and package.json — zero occurrences).
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-7 инструментов. Описания собираются статически в `src/index.js`, но два из них (`open_drawio_xml`, `open_drawio_mermaid`) на старте процесса конкатенируются с содержимым локальных markdown-файлов (`src/xml-reference.md`, ~33.4 KB; `src/mermaid-reference.md`, ~12.8 KB). Ниже — итоговый текст описаний дословно, включая приклеенные референсы.
+7 tools. Descriptions are assembled statically in `src/index.js`, but two of them (`open_drawio_xml`, `open_drawio_mermaid`) at process startup are concatenated with the contents of local markdown files (`src/xml-reference.md`, ~33.4 KB; `src/mermaid-reference.md`, ~12.8 KB). Below is the final text of the descriptions verbatim, including the attached references.
 
 ### tool: open_drawio_xml (33380 chars)
 
@@ -1015,16 +1015,16 @@ Replaces the content of one page (diagram) in a local .drawio file with new mxGr
 Search the draw.io shape library by keywords. Returns matching shapes with their exact style strings, dimensions, and titles. Covers ~10,000 built-in stencils (cloud architecture, network topology, P&ID, electrical, Cisco, Kubernetes, BPMN) and, when those are sparse, supplements results with the draw.io icon service (brand/product logos and general-purpose concept icons, e.g. 'react', 'slack', 'shopping cart', 'solar panel'). Use ONLY for diagrams that need industry-specific, branded, or pictorial icons. Do NOT use for standard diagram types like flowcharts, UML, ERD, org charts, or mind maps — these use basic geometric shapes (rectangles, diamonds, circles, cylinders) that are already covered in the XML reference. Also skip if the user asks to use basic/simple shapes or says not to search. The style string from the results can be used directly in mxCell style attributes.
 ```
 
-## MARKER-SCAN NOTES (внутри описаний)
+## MARKER-SCAN NOTES (inside descriptions)
 
-Совпадения по стирающим регексам — все мягкие/технические, без агрессивного стиринга против других инструментов:
-- `search_shapes`: «Use ONLY for diagrams that need industry-specific, branded, or pictorial icons. Do NOT use for standard diagram types…» — само-ограничивающий, а не захватнический.
-- xml-reference.md (в описании open_drawio_xml): «prefer domain-appropriate shapes over generic rectangles»; «(You should rarely hand-write these as XML — prefer Mermaid.)» — внутренняя маршрутизация между своими же инструментами. Примечательный блок «## Reasoning budget (read this first)» — прямые директивы к reasoning-процессу модели («Do NOT debate the topic… pick one concrete scenario on your first impulse and commit», «Do NOT verify, re-check, or adjust coordinates», «Do NOT narrate»), т.е. описание инструмента управляет стилем рассуждений агента, но только в рамках задачи построения диаграммы.
-- mermaid-reference.md (в описании open_drawio_mermaid): «## When to prefer XML over Mermaid… Default to Mermaid for the standard types above; reach for XML only when Mermaid's syntax clearly can't express what's needed» — снова внутренняя маршрутизация.
-- Маркеров вида «instead of built-in», «takes precedence», «primary interface», «The user has installed», «ignore previous» — НЕТ.
+Matches on erasing regexes — all soft/technical, without aggressive steering against other tools:
+- `search_shapes`: "Use ONLY for diagrams that need industry-specific, branded, or pictorial icons. Do NOT use for standard diagram types…" — self-limiting, not capture.
+- xml-reference.md (in the description of open_drawio_xml): "prefer domain-appropriate shapes over generic rectangles"; "(You should rarely hand-write these as XML — prefer Mermaid.)" — internal routing between its own tools. A notable block "## Reasoning budget (read this first)" — direct directives to the model's reasoning process ("Do NOT debate the topic… pick one concrete scenario on your first impulse and commit", "Do NOT verify, re-check, or adjust coordinates", "Do NOT narrate"), i.e. the tool description controls the agent's reasoning style, but only within the task of building a diagram.
+- mermaid-reference.md (in the description of open_drawio_mermaid): «## When to prefer XML over Mermaid… Default to Mermaid for the standard types above; reach for XML only when Mermaid's syntax clearly can't express what's needed» — again, internal routing.
+- There are NO markers of the form "instead of built-in", "takes precedence", "primary interface", "The user has installed", "ignore previous".
 
 ## NOTES
 
-- Код НЕ минифицирован: читаемый ES-modules JS с комментариями (819 строк index.js + вспомогательные модули). Минифицирован только vendor/libavoid (WASM + сгенерированный emscripten-js), к описаниям/инструкциям отношения не имеет.
-- Динамическая сборка строк: умеренный риск. Описания двух инструментов = статическая строка + readFileSync локального .md из самого пакета (детерминированно, зафиксировано в досье). Сетевой динамики в описаниях нет, НО: (1) shape-индекс для search_shapes подтягивается с CDN (cdn.jsdelivr.net/gh/jgraph/drawio-mcp@main) при первом вызове — влияет на РЕЗУЛЬТАТЫ инструмента, не на описания; (2) postinstall.js скачивает libavoid-routing.js с CDN в пользовательский кэш, а runtime «eval-validates» скачанный код — вектор исполнения удалённого кода из main-ветки репо, вне канала стиринга, но заслуживает пометки в общем риск-профиле.
-- Просмотрено файлов: 9 текстовых (package.json, README.md, все 7 файлов src/ включая оба .md-референса) + оглавление vendor/libavoid; grep-скан по всем.
+- Code is NOT minified: readable ES-modules JS with comments (819 lines index.js + helper modules). Only vendor/libavoid is minified (WASM + generated emscripten-js), which has no relation to descriptions/instructions.
+- Dynamic construction of strings: moderate risk. Descriptions of two tools = a static string + readFileSync of a local .md from the package itself (deterministic, recorded in the dossier). There is no network dynamism in descriptions, BUT: (1) the shape index for search_shapes is pulled from a CDN (cdn.jsdelivr.net/gh/jgraph/drawio-mcp@main) on first call — this affects the tool RESULTS, not the descriptions; (2) postinstall.js downloads libavoid-routing.js from a CDN into the user cache, and at runtime it "eval-validates" the downloaded code — a remote-code-execution vector from the repo's main branch, outside the steering channel, but worth noting in the overall risk profile.
+- Reviewed 9 text files (package.json, README.md, all 7 files src/ including both .md references) + table of contents for vendor/libavoid; grep scan across all.

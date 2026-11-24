@@ -1,15 +1,15 @@
-# UNIT: chrome-mcp | Chrome MCP | github hangwin/mcp-chrome | тип автора: комьюнити | captured 2026-07-29 (static source)
+# UNIT: chrome-mcp | Chrome MCP | github hangwin/mcp-chrome | author type: community | captured 2026-07-29 (static source)
 
-Подтверждение MCP-сервера: `app/native-server/src/mcp/mcp-server.ts` — `new Server({name:'ChromeMcpServer',version:'1.0.0'},{capabilities:{tools:{}}})` из `@modelcontextprotocol/sdk/server/index.js`; stdio-вариант в `app/native-server/src/mcp/mcp-server-stdio.ts` (`StdioChromeMcpServer`). Обработчики `ListToolsRequestSchema` / `CallToolRequestSchema` в `app/native-server/src/mcp/register-tools.ts`, каталог инструментов — `packages/shared/src/tools.ts` (`TOOL_SCHEMAS`).
+Confirmation of the MCP server: `app/native-server/src/mcp/mcp-server.ts` — `new Server({name:'ChromeMcpServer',version:'1.0.0'},{capabilities:{tools:{}}})` from `@modelcontextprotocol/sdk/server/index.js`; stdio variant in `app/native-server/src/mcp/mcp-server-stdio.ts` (`StdioChromeMcpServer`). Handlers `ListToolsRequestSchema` / `CallToolRequestSchema` in `app/native-server/src/mcp/register-tools.ts`, tool catalog — `packages/shared/src/tools.ts` (`TOOL_SCHEMAS`).
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Ни один из двух конструкторов `new Server(...)` не передаёт поле `instructions`; в опциях только `capabilities`. Ответ `initialize` не переопределяется вручную (используется дефолт SDK).
+Neither of the two constructors `new Server(...)` passes the `instructions` field; the options contain only `capabilities`. The `initialize` response is not overridden manually (the SDK default is used).
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Всего инструментов в статическом каталоге `TOOL_SCHEMAS`: 27. Плюс динамические инструменты `flow.<slug>`, чьи name/description приходят в рантайме из расширения (`rr_list_published_flows`), статически недоступны.
+The total number of tools in the static catalog `TOOL_SCHEMAS`: 27. Plus dynamic tools `flow.<slug>`, whose name/description arrive at runtime from the extension (`rr_list_published_flows`), are not statically available.
 
 ### get_windows_and_tabs
 
@@ -119,4 +119,4 @@ Handle JavaScript dialogs (alert/confirm/prompt) via CDP
 
 Record browser tab activity as an animated GIF.\n\nModes:\n- Fixed FPS mode (action="start"): Captures frames at regular intervals. Good for animations/videos.\n- Auto-capture mode (action="auto_start"): Captures frames automatically when chrome_computer or chrome_navigate actions succeed. Better for interaction recordings with natural pacing.\n\nUse "stop" to end recording and save the GIF.
 
-Примечание к цитированию: описания приведены дословно как строковые литералы в исходнике; последовательности `\n` в тексте — это escape-последовательности TypeScript-строк, в рантайме становятся переводами строк.
+Note on quoting: the descriptions are given verbatim as string literals in the source; the `\n` sequences in the text are TypeScript string escape sequences, and at runtime they become line breaks.

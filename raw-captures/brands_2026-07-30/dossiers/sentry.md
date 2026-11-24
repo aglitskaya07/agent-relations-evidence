@@ -1,29 +1,29 @@
-# UNIT: sentry | Sentry | github getsentry/sentry-mcp | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: sentry | Sentry | github getsentry/sentry-mcp | author type: official | captured 2026-07-29 (static source)
 
-Репозиторий: TypeScript-монорепо (pnpm workspaces). Сервер собирается в `packages/mcp-core/src/server.ts` (`buildServer` -> `new ModernMcpServer(serverInfo)` / `new LegacyMcpServer(serverInfo)`), транспорты в `packages/mcp-server/src/transports/`. Это MCP-сервер.
+Repository: TypeScript monorepo (pnpm workspaces). The server is assembled in `packages/mcp-core/src/server.ts` (`buildServer` -> `new ModernMcpServer(serverInfo)` / `new LegacyMcpServer(serverInfo)`), transports in `packages/mcp-server/src/transports/`. This is an MCP server.
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-`serverInfo` содержит только `name` (MCP_SERVER_NAME) и `version` (LIB_VERSION); поля `instructions` нет. Поиск `instructions:` по всем .ts/.tsx/.js даёт 0 совпадений; все прочие вхождения слова `instructions` — это React-компоненты страниц установки в `packages/mcp-cloudflare` и локальные переменные форматирования вывода инструментов.
+`serverInfo` contains only `name` (MCP_SERVER_NAME) and `version` (LIB_VERSION); there is no `instructions` field. Searching for `instructions:` across all .ts/.tsx/.js gives 0 matches; all other occurrences of the word `instructions` are React components of installation pages in `packages/mcp-cloudflare` and local variables for formatting tool output.
 
 ## CHANNEL: tool descriptions (coverage=marker-scan+sample)
 
-Всего инструментов в каноническом манифесте `packages/mcp-core/src/toolDefinitions.json`: **48** (>40, поэтому маркер-скан + выборка).
+The total number of tools in the canonical manifest `packages/mcp-core/src/toolDefinitions.json`: **48** (>40, so marker scan + sampling).
 
-Полный список имён: `add_issue_note`, `add_team_to_project`, `analyze_issue_with_seer`, `create_dsn`, `create_project`, `create_team`, `execute_sentry_tool`, `find_alert_rules`, `find_dashboards`, `find_dsns`, `find_monitors`, `find_organizations`, `find_projects`, `find_releases`, `find_teams`, `get_ai_conversation_details`, `get_alert_rule`, `get_dashboard_details`, `get_doc`, `get_event_attachment`, `get_event_stacktrace`, `get_issue_activity`, `get_issue_breadcrumbs`, `get_issue_details`, `get_issue_tag_values`, `get_issue_user_reports`, `get_latest_base_snapshot`, `get_monitor_details`, `get_profile`, `get_profile_details`, `get_release_details`, `get_replay_details`, `get_sentry_resource`, `get_snapshot`, `get_snapshot_image`, `get_span_details`, `get_trace_details`, `remove_team_from_project`, `search_ai_conversations`, `search_docs`, `search_events`, `search_issue_events`, `search_issues`, `search_sentry_tools`, `update_dsn`, `update_issue`, `update_project`, `whoami`
+Full list of names: `add_issue_note`, `add_team_to_project`, `analyze_issue_with_seer`, `create_dsn`, `create_project`, `create_team`, `execute_sentry_tool`, `find_alert_rules`, `find_dashboards`, `find_dsns`, `find_monitors`, `find_organizations`, `find_projects`, `find_releases`, `find_teams`, `get_ai_conversation_details`, `get_alert_rule`, `get_dashboard_details`, `get_doc`, `get_event_attachment`, `get_event_stacktrace`, `get_issue_activity`, `get_issue_breadcrumbs`, `get_issue_details`, `get_issue_tag_values`, `get_issue_user_reports`, `get_latest_base_snapshot`, `get_monitor_details`, `get_profile`, `get_profile_details`, `get_release_details`, `get_replay_details`, `get_sentry_resource`, `get_snapshot`, `get_snapshot_image`, `get_span_details`, `get_trace_details`, `remove_team_from_project`, `search_ai_conversations`, `search_docs`, `search_events`, `search_issue_events`, `search_issues`, `search_sentry_tools`, `update_dsn`, `update_issue`, `update_project`, `whoami`
 
-### Маркер-скан (полный проход по всем 48 описаниям)
-Совпадений: **1**.
+### Marker scan (full pass over all 48 descriptions)
+Matches: **1**.
 
-**`get_latest_base_snapshot`** — дословно:
+**`get_latest_base_snapshot`** — verbatim:
 
 > This is the primary tool for retrieving app screenshots — not search_events or search_issues.
 
-Все прочие регексы из скан-набора дали 0 совпадений. Контрольная проверка частот по сырому тексту всех описаний (42 089 символов): `prefer`/`Prefer` — 0, `MUST`/`always`/`Always`/`never`/`Never`/`immediately`/`Best` — 0, `must` — 2 (оба про предусловия API: «The team must already be assigned to the project», «Both `rateLimitWindow` ... must be provided together»), `primary` — 1 (цитата выше), `instead` — 3 (все — маршрутизация между собственными инструментами Sentry).
+All other regexes from the scan set produced 0 matches. Control frequency check on the raw text of all descriptions (42 089 characters): `prefer`/`Prefer` — 0, `MUST`/`always`/`Always`/`never`/`Never`/`immediately`/`Best` — 0, `must` — 2 (both about API preconditions: "The team must already be assigned to the project", "Both `rateLimitWindow` ... must be provided together"), `primary` — 1 (quote above), `instead` — 3 (all are routing between Sentry's own tools).
 
-### Внутрисерверная маршрутизация (не в скан-наборе, но фиксирую дословно)
-По трём вхождениям `instead` и блокам `DO NOT USE` — все указания разграничивают собственные инструменты сервера, без упоминания внешних инструментов или встроенных возможностей клиента:
+### Intra-server routing (not in the scan set, but recording verbatim)
+Across the three occurrences of `instead` and the `DO NOT USE` blocks — all instructions delimit the server's own tools, with no mention of external tools or built-in client capabilities:
 
 - `analyze_issue_with_seer`: "- Seer Autofix does not support metric alert issues (issueCategory: metric); use get_issue_details and search_events instead"
 - `create_dsn`: "DO NOT USE for new projects (use create_project instead)"
@@ -32,7 +32,7 @@
 - `get_sentry_resource`: "Conversations are NOT issues — do not use search_issues for conversation queries."
 - `add_issue_note`: "- Do not use this for private scratch notes, secrets, credentials, or unapproved content."
 
-### 10 репрезентативных полных описаний (дословно)
+### 10 representative full descriptions (verbatim)
 
 #### `search_events` (2037 chars)
 

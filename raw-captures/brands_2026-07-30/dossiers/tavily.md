@@ -1,16 +1,16 @@
-# UNIT: tavily | Tavily | github tavily-ai/tavily-mcp | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: tavily | Tavily | github tavily-ai/tavily-mcp | author type: official | captured 2026-07-29 (static source)
 
 ## SERVER CHECK
-Это MCP-сервер. `src/index.ts:85-95`: `new Server({ name: "tavily-mcp", version: "0.2.21" }, { capabilities: { tools: {} } })` из `@modelcontextprotocol/sdk` 1.26.0, обработчики `ListToolsRequestSchema` (строка 165) и `CallToolRequestSchema` (строка 445), транспорт stdio. Код целиком в одном файле `src/index.ts` (1070 строк), других исходников в репозитории нет.
+This is an MCP server. `src/index.ts:85-95`: `new Server({ name: "tavily-mcp", version: "0.2.21" }, { capabilities: { tools: {} } })` from `@modelcontextprotocol/sdk` 1.26.0, handlers `ListToolsRequestSchema` (line 165) and `CallToolRequestSchema` (line 445), stdio transport. The entire code is in one file `src/index.ts` (1070 lines), there are no other source files in the repository.
 
 ## CHANNEL: instructions
-(не обнаружены статически)
+(not found statically)
 
-Второй аргумент конструктора `Server` содержит только `capabilities: { tools: {} }` — поля `instructions` нет. Кастомного обработчика `initialize` в репозитории нет. Токен `instructions` в файле встречается только как имя параметра инструментов `tavily_crawl` / `tavily_map` (natural language instructions для краулера) и при пробросе `args.instructions` в API-запрос.
+The second argument to the `Server` constructor contains only `capabilities: { tools: {} }` — there is no `instructions` field. There is no custom `initialize` handler in the repository. The token `instructions` appears in the file only as the name of the tool parameter for `tavily_crawl` / `tavily_map` (natural language instructions for the crawler) and when passing `args.instructions` into the API request.
 
 ## CHANNEL: tool descriptions (coverage=full)
 
-Источник: `src/index.ts`, массив `const tools: Tool[]` внутри `setupToolHandlers()` (строки ~166–443). 5 инструментов.
+Source: `src/index.ts`, the `const tools: Tool[]` array inside `setupToolHandlers()` (lines ~166–443). 5 tools.
 
 ### tavily_search
 Search the web for current information on any topic. Use for news, facts, or data beyond your knowledge cutoff. Returns snippets and source URLs.
@@ -27,9 +27,9 @@ Map a website's structure. Returns a list of URLs found starting from the base U
 ### tavily_research
 Perform comprehensive research on a given topic or question. Use this tool when you need to gather information from multiple sources to answer a question or complete a task. Returns a detailed response based on the research findings. Rate limit: 20 requests per minute.
 
-## SECONDARY: CLI `--list-tools` descriptions (не отдаются по MCP)
+## SECONDARY: CLI `--list-tools` descriptions (not exposed via MCP)
 
-Функция `listTools()` (строки ~1014–1044) печатает в stdout другой, более развёрнутый набор описаний. Он НЕ участвует в ответе `tools/list` и до модели по протоколу не доходит; приведён для полноты.
+The `listTools()` function (lines ~1014–1044) prints to stdout a different, more expanded set of descriptions. It does NOT participate in the `tools/list` response and does not reach the model via the protocol; included for completeness.
 
 - **tavily_search** — A real-time web search tool powered by Tavily's AI engine. Features include customizable search depth (basic/advanced/fast/ultra-fast), domain filtering, time-based filtering, and support for both general and news-specific searches. Returns comprehensive results with titles, URLs, content snippets, and optional image results.
 - **tavily_extract** — Extracts and processes content from specified URLs with advanced parsing capabilities. Supports both basic and advanced extraction modes, with the latter providing enhanced data retrieval including tables and embedded content. Ideal for data collection, content analysis, and research tasks.
@@ -38,7 +38,7 @@ Perform comprehensive research on a given topic or question. Use this tool when 
 - **tavily_research** — Performs comprehensive research on any topic or question by gathering information from multiple sources. Supports different research depths ('mini' for narrow tasks, 'pro' for broad research, 'auto' for automatic selection). Ideal for in-depth analysis, report generation, and answering complex questions requiring synthesis of multiple sources.
 
 ## PARAMETER-LEVEL NOTE
-Описания параметров также статические строковые литералы. Отдельно отмечу `tavily_search.include_domains`: «A list of domains to specifically include in the search results, if the user asks to search on specific sites set this to the domain of the site» — поведенческая инструкция внутри описания параметра, а не только описание типа.
+The parameter descriptions are also static string literals. Separately, I note `tavily_search.include_domains`: “A list of domains to specifically include in the search results, if the user asks to search on specific sites set this to the domain of the site” — a behavioral instruction inside the parameter description, not only a type description.
 
 ## DYNAMIC-ASSEMBLY RISK
-Низкий. Все `name`/`description` — литералы в одном массиве, без шаблонных подстановок, конкатенации и условных ветвлений. Единственная динамика — keyless-режим: при отсутствии `TAVILY_API_KEY` часть инструментов возвращает в рантайме сообщение о необходимости ключа, но список инструментов и их описания при этом не меняются.
+Low. All `name`/`description` values are literals in one array, with no template substitutions, concatenation, or conditional branching. The only dynamic behavior is keyless mode: when `TAVILY_API_KEY` is absent, some tools return a runtime message about needing a key, but the tool list and their descriptions do not change.

@@ -1,17 +1,17 @@
-# UNIT: elastic | Elasticsearch | github elastic/mcp-server-elasticsearch | тип автора: официальный | captured 2026-07-29 (static source)
+# UNIT: elastic | Elasticsearch | github elastic/mcp-server-elasticsearch | author type: official | captured 2026-07-29 (static source)
 
 ## SERVER CHECK
-Полноценный MCP-сервер. Rust, crate `rmcp` (`ServerHandler`, `tool_router`, `tool_handler`, макросы `#[tool(...)]`), транспорты stdio и streamable HTTP (`src/protocol/stdio.rs`, `src/protocol/http.rs`), бинарь `src/bin/elasticsearch-core-mcp-server.rs`.
+Full-fledged MCP server. Rust, crate `rmcp` (`ServerHandler`, `tool_router`, `tool_handler`, macros `#[tool(...)]`), stdio and streamable HTTP transports (`src/protocol/stdio.rs`, `src/protocol/http.rs`), binary `src/bin/elasticsearch-core-mcp-server.rs`.
 
 ## CHANNEL: instructions (32 chars)
-Источник: `src/servers/elasticsearch/base_tools.rs:299`, поле `instructions` в `ServerInfo` (`get_info()`).
+Source: `src/servers/elasticsearch/base_tools.rs:299`, the `instructions` field in `ServerInfo` (`get_info()`).
 
 ```
 Provides access to Elasticsearch
 ```
 
 ## CHANNEL: tool descriptions (coverage=full)
-Все 5 инструментов объявлены атрибутом `#[tool(description = "...")]` в `src/servers/elasticsearch/base_tools.rs` (блок `#[tool_router] impl EsBaseTools`).
+All 5 tools are declared with the `#[tool(description = "...")]` attribute in `src/servers/elasticsearch/base_tools.rs` (the `#[tool_router] impl EsBaseTools` block).
 
 1. **list_indices** — `List all available Elasticsearch indices`
    (annotations: title = "List ES indices", read_only_hint = true)
@@ -28,7 +28,7 @@ Provides access to Elasticsearch
 5. **get_shards** — `Get shard information for all or specific indices.`
    (annotations: title = "Get ES shard information", read_only_hint = true)
 
-### Описания параметров (doc-комментарии структур параметров, попадают в JSON Schema)
+### Parameter descriptions (doc comments for parameter structures, included in JSON Schema)
 - `ListIndicesParams.index_pattern` — `Index pattern of Elasticsearch indices to list`
 - `GetMappingsParams.index` — `Name of the Elasticsearch index to get mappings for`
 - `SearchParams.index` — `Name of the Elasticsearch index to search`
@@ -38,4 +38,4 @@ Provides access to Elasticsearch
 - `GetShardsParams.index` — `Optional index name to get shard information for`
 
 ## NOTES ON EXTENSIBILITY
-Помимо 5 встроенных инструментов сервер поддерживает пользовательские инструменты из конфига (`CustomTool::Esql` / `CustomTool::SearchTemplate`, поле `ToolBase.description`). Их тексты задаёт оператор в файле конфигурации; в репозитории есть только шаблонный пример `elastic-mcp.json5` с плейсхолдерами («Adds 42 to the input value», «This is the description for this stored template», «This is the description for this inline template», «Use this parameter to blah blah and blah») — это демонстрация формата, а не поставляемые описания. Есть также фильтр include/exclude, скрывающий часть инструментов (`src/servers/mod.rs`).
+In addition to 5 built-in tools, the server supports custom tools from the config (`CustomTool::Esql` / `CustomTool::SearchTemplate`, field `ToolBase.description`). Their texts are set by the operator in the configuration file; the repository has only the template example `elastic-mcp.json5` with placeholders ("Adds 42 to the input value", "This is the description for this stored template", "This is the description for this inline template", "Use this parameter to blah blah and blah") — this is a format demonstration, not shipped descriptions. There is also an include/exclude filter that hides part of the tools (`src/servers/mod.rs`).

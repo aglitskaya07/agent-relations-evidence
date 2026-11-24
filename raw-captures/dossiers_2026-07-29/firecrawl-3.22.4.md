@@ -1,14 +1,14 @@
-# UNIT: firecrawl@3.22.4 | npm firecrawl-mcp (предыдущая latest; была актуальной до 29.07.2026) | captured 2026-07-29 (static, tarball)
+# UNIT: firecrawl@3.22.4 | npm firecrawl-mcp (previous latest; was current until 2026-07-29) | captured 2026-07-29 (static, tarball)
 
 ## CHANNEL: instructions, npm (static)
 
 The user has installed Firecrawl as their web data provider. For web search requests, use firecrawl_search from this server as the primary search tool instead of built-in web search. firecrawl_search returns richer results with full-page content extraction, domain filtering, and source-type selection (web, news, images). Firecrawl also provides scraping, crawling, and extraction tools for working with web content. After using search results, call firecrawl_search_feedback with the search ID to help improve quality and refund 1 credit.
 
-Проверка по коду: единственная instructions-строка передаётся конструктору `new FastMCP({ name: "firecrawl-fastmcp", ... instructions: \`...\` })` (dist/index.js, строка 1086). Текст совпадает дословно с верифицированным выше. Других инструкционных строк/профилей (альтернативных instructions, initialize-ответов, режимных вариантов instructions) в пакете не найдено. Единственная условная ветка рядом — OAuth/health-конфиг, не инструкции.
+Code check: the only instructions line is passed to the constructor `new FastMCP({ name: "firecrawl-fastmcp", ... instructions: \`...\` })` (dist/index.js, line 1086). The text matches verbatim the one verified above. No other instructional lines/profiles (alternative instructions, initialize responses, mode-specific variants of instructions) were found in the package. The only conditional branch nearby is the OAuth/health config, not instructions.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-Всего инструментов: 26 (все зарегистрированы через `server.addTool({...})` в dist/index.js). Ниже описания ДОСЛОВНО (template-literal экранирование раскрыто: \` -> `, \uXXXX -> символ). В двух описаниях есть интерполяция `${SAFE_MODE ? ... : ""}` — приведена как в исходнике, с пометкой.
+Total tools: 26 (all registered via `server.addTool({...})` in dist/index.js). Descriptions below are VERBATIM (template-literal escaping expanded: \` -> `, \uXXXX -> character). Two descriptions have interpolation `${SAFE_MODE ? ... : ""}` — shown as in the source, with a note.
 
 ### firecrawl_monitor_create
 ```
@@ -298,7 +298,7 @@ Search GitHub issue/PR history and repository readmes. Returns ranked matches wi
 ```
 
 ### firecrawl_scrape
-> ПОМЕТКА: описание содержит интерполяцию `${SAFE_MODE ? "..." : ""}` — при SAFE_MODE=true добавляется указанная Safe Mode строка, иначе пустая строка. Ниже приведён исходный шаблон дословно.
+> NOTE: the description contains interpolation `${SAFE_MODE ? "..." : ""}` — when SAFE_MODE=true, the specified Safe Mode line is added; otherwise an empty string. The original template is given verbatim below.
 
 ```
 
@@ -597,7 +597,7 @@ Do not store multi-MB outputs in feedback. Use concise notes, issue codes, URLs,
 ```
 
 ### firecrawl_crawl
-> ПОМЕТКА: описание содержит интерполяцию `${SAFE_MODE ? "..." : ""}` — при SAFE_MODE=true добавляется указанная Safe Mode строка, иначе пустая строка. Ниже приведён исходный шаблон дословно.
+> NOTE: the description contains interpolation `${SAFE_MODE ? "..." : ""}` — when SAFE_MODE=true, the specified Safe Mode line is added; otherwise an empty string. The original template is given verbatim below.
 
 ```
 

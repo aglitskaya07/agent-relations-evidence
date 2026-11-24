@@ -1,29 +1,29 @@
-# UNIT: @sentry/mcp-server | npm v0.37.0 (published 2026-07-02T19:17:32.538Z) | рамки: npm-top | captured 2026-07-29 (static, tarball)
+# UNIT: @sentry/mcp-server | npm v0.37.0 (published 2026-07-02T19:17:32.538Z) | scopes: npm-top | captured 2026-07-29 (static, tarball)
 
-## VERDICT: MCP-сервер — да
-Пакет собирает и запускает MCP-сервер: `new McpServer({ name: MCP_SERVER_NAME, version: LIB_VERSION }, { jsonSchemaValidator })` в `buildServer()` (dist/index.js:43179), регистрация инструментов через `server.registerTool(...)` (dist/index.js:43237), stdio-транспорт в dist/transports/stdio.js. bin: `sentry-mcp` → ./dist/index.js. Зависимость `@modelcontextprotocol/sdk ^1.26.0`.
+## VERDICT: MCP server — yes
+The package builds and runs an MCP server: `new McpServer({ name: MCP_SERVER_NAME, version: LIB_VERSION }, { jsonSchemaValidator })` in `buildServer()` (dist/index.js:43179), tool registration via `server.registerTool(...)` (dist/index.js:43237), stdio transport in dist/transports/stdio.js. bin: `sentry-mcp` → ./dist/index.js. Dependency `@modelcontextprotocol/sdk ^1.26.0`.
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
-Конструктору McpServer передаются только `name` и `version` — поля `instructions` нет ни в ESM (dist/index.js:43179-43182), ни в CJS-сборке (dist/index.cjs:43178). Других мест конструирования сервера в пакете нет.
+(not found statically)
+Only `name` and `version` are passed to the McpServer constructor — there is no `instructions` field either in ESM (dist/index.js:43179-43182) or in the CJS build (dist/index.cjs:43178). There are no other server construction points in the package.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=marker-scan+sample)
-Всего инструментов в реестре: 45 (43 через `var *_default = defineTool({...})` + 2 фабричных: `search_sentry_tools` = createSearchToolsTool, `execute_sentry_tool` = createExecuteTool; dist/index.js:43104-43109). Реально регистрируется подмножество: фильтрация по grantedSkills/constraints/capabilities/surface policy (`getAvailableTools`, dist/index.js:13059); в agent-mode регистрируется только `use_sentry`.
+Total tools in the registry: 45 (43 via `var *_default = defineTool({...})` + 2 factory ones: `search_sentry_tools` = createSearchToolsTool, `execute_sentry_tool` = createExecuteTool; dist/index.js:43104-43109). In practice, a subset is registered: filtering by grantedSkills/constraints/capabilities/surface policy (`getAvailableTools`, dist/index.js:13059); in agent-mode only `use_sentry` is registered.
 
-Полный список имён (45):
+Full list of names (45):
 
 `add_issue_note`, `analyze_issue_with_seer`, `create_dsn`, `create_project`, `create_team`, `execute_sentry_tool`, `find_alert_rules`, `find_dashboards`, `find_dsns`, `find_monitors`, `find_organizations`, `find_projects`, `find_releases`, `find_teams`, `get_ai_conversation_details`, `get_alert_rule`, `get_dashboard_details`, `get_doc`, `get_event_attachment`, `get_event_stacktrace`, `get_issue_activity`, `get_issue_details`, `get_issue_tag_values`, `get_issue_user_reports`, `get_latest_base_snapshot`, `get_monitor_details`, `get_profile`, `get_profile_details`, `get_release_details`, `get_replay_details`, `get_sentry_resource`, `get_snapshot`, `get_snapshot_image`, `get_trace_details`, `search_ai_conversations`, `search_docs`, `search_events`, `search_issue_events`, `search_issues`, `search_sentry_tools`, `update_dsn`, `update_issue`, `update_project`, `use_sentry`, `whoami`
 
-### Marker-scan (полный прогон по всем 45 описаниям)
-Прогнаны все регексы протокола (с поправкой на пробелы: `.* ` → `[^\n]*`). Совпадений: **1**.
+### Marker-scan (full run over all 45 descriptions)
+Ran all protocol regexes (with a whitespace adjustment: `.* ` → `[^\n]*`). Matches: **1**.
 
 - **get_latest_base_snapshot** — /primary[^\n.]*(tool|provider|interface)/:
   > "This is the primary tool for retrieving app screenshots — not search_events or search_issues."
-  Контекст: внутренняя маршрутизация между инструментами того же сервера, не перехват у built-in инструментов клиента.
+  Context: internal routing between tools of the same server, not interception of built-in client tools.
 
-Ложных срабатываний на остальные маркеры нет: нет "instead of built-in", "always default", "LAST resort", "takes precedence", "MUST use", "The user has installed", "refund/credit/reward", "Do NOT answer from memory" и пр. Директивная лексика в описаниях ("DO NOT USE for...", "use X instead") — во всех случаях кросс-ссылки между инструментами самого Sentry MCP (напр. search_issues: "DO NOT USE FOR COUNTS/AGGREGATIONS → use search_events"; create_dsn: "DO NOT USE for new projects (use create_project instead)"). Единственная близкая к steering формулировка вне маркеров — в `use_sentry`: "If user asks to 'use Sentry' for something, they always mean to call this tool" — но триггер обусловлен явным упоминанием Sentry пользователем.
+There are no false positives on the other markers: no "instead of built-in", "always default", "LAST resort", "takes precedence", "MUST use", "The user has installed", "refund/credit/reward", "Do NOT answer from memory" etc. Directive wording in descriptions ("DO NOT USE for...", "use X instead") is, in all cases, cross-references between tools of Sentry MCP itself (e.g. search_issues: "DO NOT USE FOR COUNTS/AGGREGATIONS → use search_events"; create_dsn: "DO NOT USE for new projects (use create_project instead)"). The only formulation close to steering outside the markers is in `use_sentry`: "If user asks to 'use Sentry' for something, they always mean to call this tool" — but the trigger is caused by the user's explicit mention of Sentry.
 
-### 8 репрезентативных полных описаний
+### 8 representative full descriptions
 
 #### whoami
 ```
@@ -279,7 +279,7 @@ add_issue_note(issueUrl='https://my-organization.sentry.io/issues/PROJECT-123/',
 </hints>
 ```
 
-#### search_sentry_tools (фабричный, дословно)
+#### search_sentry_tools (factory, verbatim)
 ```
 Search the available Sentry MCP tool catalog by name and description.
 
@@ -292,7 +292,7 @@ Use this tool when you need to:
 
 <examples>
 ```
-(усечено: примеры вызовов)
+(truncated: call examples)
 ```
 <hints>
 - Results only include tools available in the current session.
@@ -304,7 +304,7 @@ Use this tool when you need to:
 ```
 
 ## NOTES
-- Код НЕ минифицирован (tsdown-бандл с сохранёнными именами и JSDoc), текстовый анализ надёжен.
-- Динамическая сборка описаний: умеренный риск. 4 инструмента имеют description-функции (`search_docs`, `get_sentry_resource`, `get_snapshot` + resolveToolDescription для всех) — текст собирается из статически видимых литералов, варьируется только вставка `formatToolCallInstruction` (форма ссылки на соседний инструмент в зависимости от experimentalMode/доступности) и списки поддерживаемых ресурсов. Ещё ~3 описания содержат template-вставки констант (лимиты результатов). Скрытых/загружаемых извне строк описаний не обнаружено.
-- `use_sentry` поднимает вложенный embedded-агент (createMCPClient + useSentryAgent) поверх in-memory transport — steering-поверхность второго порядка (промпт агента в том же бандле, статически виден).
-- Просмотрено: package.json + dist/index.js (43,6k строк, основной бандл), dist/index.cjs (сверка конструктора), dist/transports/stdio.js; всего в пакете 160 файлов, остальное — .map/.d.ts/auth-чанки без описаний инструментов.
+- The code is NOT minified (tsdown bundle with preserved names and JSDoc), text analysis is reliable.
+- Dynamic construction of descriptions: moderate risk. 4 tools have description functions (`search_docs`, `get_sentry_resource`, `get_snapshot` + resolveToolDescription for all) — the text is assembled from statically visible literals, varying only by insertion of `formatToolCallInstruction` (the form of a link to a neighboring tool depending on experimentalMode/availability) and lists of supported resources. Another ~3 descriptions contain template insertions of constants (result limits). No hidden/externally loaded description strings were found.
+- `use_sentry` brings up a nested embedded agent (createMCPClient + useSentryAgent) on top of in-memory transport — a second-order steering surface (the agent prompt is in the same bundle, statically visible).
+- Reviewed: package.json + dist/index.js (43.6k lines, main bundle), dist/index.cjs (constructor check), dist/transports/stdio.js; 160 files total in the package, the rest are .map/.d.ts/auth chunks without tool descriptions.

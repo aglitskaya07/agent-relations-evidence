@@ -1,9 +1,9 @@
-# Захват: claude.ai Apify — инструкции, доставленные в системный промпт агента
+# Capture: claude.ai Apify — instructions delivered in the agent's system prompt
 
-- Дата захвата: 2026-07-29, сессия Claude Code (VS Code), проект cursor-workspace
-- Канал: коннектор claude.ai «Apify», авторизован OAuth-аккаунтом пользователя; текст ниже — дословная копия блока «MCP Server Instructions» из системного промпта агента этой сессии
-- Публичная поверхность: keyless-рукопожатие `https://mcp.apify.com` → HTTP 401 (см. `apify_hosted-keyless_2026-07-29_run1.json`)
-- Ограничение: Claude Code подрезает серверные instructions (~2 000 символов); маркер `[truncated]` в конце — от харнеса, не от вендора. Полная длина блока по прежнему замеру (пилот 02, 27.07.2026): ~2 000 символов.
+- Capture date: 2026-07-29, Claude Code session (VS Code), project cursor-workspace
+- Channel: claude.ai connector "Apify", authorized by the user's OAuth account; the text below is a verbatim copy of the "MCP Server Instructions" block from the system prompt of the agent in this session
+- Public surface: keyless handshake `https://mcp.apify.com` → HTTP 401 (see `apify_hosted-keyless_2026-07-29_run1.json`)
+- Limitation: Claude Code truncates server instructions (~2 000 characters); the marker `[truncated]` at the end is from the harness, not from the vendor. Full length of the block by the previous measurement (pilot 02, 27.07.2026): ~2 000 characters.
 
 ---
 

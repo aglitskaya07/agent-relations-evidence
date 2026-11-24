@@ -1,18 +1,18 @@
-# UNIT: @notionhq/notion-mcp-server | npm v2.5.1 (published 2026-07-25T16:20:34.018Z) | рамки: npm-top | captured 2026-07-29 (static, tarball)
+# UNIT: @notionhq/notion-mcp-server | npm v2.5.1 (published 2026-07-25T16:20:34.018Z) | scopes: npm-top | captured 2026-07-29 (static, tarball)
 
-## VERDICT: MCP-сервер (да)
+## VERDICT: MCP server (yes)
 
-Подлинный MCP-сервер: `src/openapi-mcp-server/mcp/proxy.ts` создаёт `new Server({ name: 'Notion API', version: '1.0.0' }, { capabilities: { tools: {} } })` из `@modelcontextprotocol/sdk` и регистрирует хендлеры `ListToolsRequestSchema` / `CallToolRequestSchema`. Архитектура — OpenAPI→MCP прокси: инструменты генерируются из `scripts/notion-openapi.json` конвертером `OpenAPIToMCPConverter` (`src/openapi-mcp-server/openapi/parser.ts`). Транспорты stdio и streamable-HTTP (`scripts/start-server.ts`).
+True MCP server: `src/openapi-mcp-server/mcp/proxy.ts` creates `new Server({ name: 'Notion API', version: '1.0.0' }, { capabilities: { tools: {} } })` from `@modelcontextprotocol/sdk` and registers `ListToolsRequestSchema` / `CallToolRequestSchema` handlers. Architecture: OpenAPI→MCP proxy: tools are generated from `scripts/notion-openapi.json` by the `OpenAPIToMCPConverter` (`src/openapi-mcp-server/openapi/parser.ts`). Transports stdio and streamable-HTTP (`scripts/start-server.ts`).
 
 ## CHANNEL: instructions, npm (static)
 
-(не обнаружены статически)
+(not found statically)
 
-Конструктор `Server` получает только `{ name, version }` и `{ capabilities: { tools: {} } }` — поле `instructions` не передаётся нигде в `src/`. В бандле `bin/cli.mjs` строка `instructions&&{instructions:this._instructions}` — это generic-пламбинг MCP SDK, а не значение от Notion.
+The `Server` constructor receives only `{ name, version }` and `{ capabilities: { tools: {} } }` — the `instructions` field is not passed anywhere in `src/`. In the `bin/cli.mjs` bundle, the string `instructions&&{instructions:this._instructions}` is generic MCP SDK plumbing, not a value from Notion.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-24 инструмента (все). Имя = `API-<operationId>` (обрезка до 64 симв. в `truncateToolName`). Описание собирается в `parser.ts`: `"Notion | " + (summary || description)` + приложенный блок `Error Responses:` из 4xx/5xx-ответов спеки. Ниже — итоговые описания дословно (как их увидит клиент в tools/list).
+24 tools (all). Name = `API-<operationId>` (truncated to 64 chars in `truncateToolName`). The description is assembled in `parser.ts`: `"Notion | " + (summary || description)` + an appended `Error Responses:` block from the spec's 4xx/5xx responses. Below are the final descriptions verbatim (as the client will see them in tools/list).
 
 ### API-get-user
 ```
@@ -111,7 +111,7 @@ Notion | Retrieve comments
 Error Responses:
 - 400: Bad request
 ```
-(поле `description` спеки, не попадает в итог, т.к. summary приоритетнее: "Retrieves a list of un-resolved [Comment objects](ref:comment-object) from a page or block.")
+(the spec `description` field, not included in the final result because summary has priority: "Retrieves a list of un-resolved [Comment objects](ref:comment-object) from a page or block.")
 
 ### API-create-a-comment
 ```
@@ -202,12 +202,12 @@ Error Responses:
 
 ## MARKER NOTES
 
-Steering-маркеры практически отсутствуют. Единственное near-hit: "Prefer `replace_content` … or `update_content` for targeted find-and-replace edits" в spec-description update-page-markdown — но это внутренняя рекомендация по параметрам своего же инструмента, не вытеснение чужих инструментов; к тому же поле description этого оп-объекта в итоговый description НЕ попадает (summary имеет приоритет в `parser.ts:330`). Нет "instead of built-in", "takes precedence", "MUST use", "primary interface" и т.п. Annotations: GET → readOnlyHint, остальное → destructiveHint (нейтрально-честная разметка).
+Steering markers are practically absent. The only near-hit: "Prefer `replace_content` … or `update_content` for targeted find-and-replace edits" in spec-description update-page-markdown — but this is an internal recommendation about parameters of its own tool, not the displacing of other tools; moreover, the description field of this op object does NOT make it into the final description (summary has priority in `parser.ts:330`). There is no "instead of built-in", "takes precedence", "MUST use", "primary interface", etc. Annotations: GET → readOnlyHint, everything else → destructiveHint (neutral-honest labeling).
 
 ## METHOD / OPSEC
 
-Статический анализ, код не исполнялся. Источник описаний — `scripts/notion-openapi.json` (24 операции), логика сборки — `src/openapi-mcp-server/openapi/parser.ts` (getDescription: префикс "Notion | " при title=="Notion API"; error responses дописываются) и `src/openapi-mcp-server/mcp/proxy.ts` (имя `API-x`, truncate 64, annotations).
+Static analysis, code was not executed. The source of descriptions is `scripts/notion-openapi.json` (24 operations), the build logic is `src/openapi-mcp-server/openapi/parser.ts` (getDescription: prefix "Notion | " when title=="Notion API"; error responses are appended) and `src/openapi-mcp-server/mcp/proxy.ts` (name `API-x`, truncate 64, annotations).
 
-- Минификация: `src/` — читаемый TypeScript; `bin/cli.mjs` (~1.4 MB) — минифицированный esbuild-бандл того же кода + SDK/zod. Анализ вёлся по src, бандл проверен grep'ом на "instructions".
-- Риск динамической сборки строк: низко-средний. Описания собираются динамически из OpenAPI-файла (конкатенация префикса + error responses), но входной JSON лежит в пакете и статичен; CLI позволяет подсунуть другой spec-файл (`--spec-path`?/позиционный путь в init-server), тогда набор инструментов и тексты меняются. Base URL спеки можно переопределить (`baseUrl` в initProxy).
-- Просмотрено файлов: ~10 текстовых (init-server.ts, proxy.ts, parser.ts, start-server.ts (grep), notion-openapi.json, package.json, cli.mjs (grep), README (по диагонали)); всего в пакете 51 файл, из них 5 — png-картинки документации.
+- Minification: `src/` — readable TypeScript; `bin/cli.mjs` (~1.4 MB) — a minified esbuild bundle of the same code + SDK/zod. Analysis was done on src, the bundle was checked with grep for "instructions".
+- Risk of dynamic string assembly: low-medium. Descriptions are assembled dynamically from an OpenAPI file (prefix concatenation + error responses), but the input JSON is inside the package and static; the CLI allows supplying a different spec file (`--spec-path`?/positional path in init-server), then the tool set and texts change. The spec base URL can be overridden (`baseUrl` in initProxy).
+- Reviewed ~10 text files (init-server.ts, proxy.ts, parser.ts, start-server.ts (grep), notion-openapi.json, package.json, cli.mjs (grep), README (skimming)); 51 files total in the package, of which 5 are png documentation images.

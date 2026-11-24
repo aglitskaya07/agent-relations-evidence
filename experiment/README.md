@@ -1,6 +1,6 @@
 # Experiment: does steering text in a tool description change agent behavior
 
-Date: 29.07.2026. Protocols: [v1_results.json](v1_results.json) and [v2_results.json](v2_results.json) — all 96 runs with their justifications. (The agents' `reason` fields in both files are in the original Russian.)
+Date: 29.07.2026. Protocols: [v1_results.json](v1_results.json) and [v2_results.json](v2_results.json) — all 96 runs with their justifications. The agents' `reason` fields are machine-translated into English.
 
 ## Why
 

@@ -1,12 +1,12 @@
-# UNIT: @sap-ux/fiori-mcp-server | npm v1.11.2 (published 2026-07-28T07:55:19.281Z) | рамки: npm-top | captured 2026-07-29 (static, tarball)
+# UNIT: @sap-ux/fiori-mcp-server | npm v1.11.2 (published 2026-07-28T07:55:19.281Z) | scopes: npm-top | captured 2026-07-29 (static, tarball)
 
-## VERDICT: MCP-сервер (подтверждено)
+## VERDICT: MCP server (confirmed)
 
-Настоящий stdio MCP-сервер: `bin: fiori-mcp → dist/index.js`, бандл esbuild с вшитым `@modelcontextprotocol/sdk` 1.29.0, собственный обработчик initialize возвращает `serverInfo:{name:"fiori-mcp"}` + строку instructions; статический массив из 10 инструментов, отдаётся через tools/list (grep: `tools/list` ×9, `tools/call` ×7, `registerTool`/`server.tool(` — 0, регистрация через сырые request handlers). Издатель — SAP (monorepo open-ux-tools). Также содержит embeddings-базу документации (`dist/data/embeddings/`) и ONNX/WASM-рантайм для локального семантического поиска (`search_docs`), keyring-прибилды и телеметрию (`jZ.sendTelemetry` на initialize).
+A real stdio MCP server: `bin: fiori-mcp → dist/index.js`, an esbuild bundle with embedded `@modelcontextprotocol/sdk` 1.29.0, a custom initialize handler returns `serverInfo:{name:"fiori-mcp"}` + an instructions string; a static array of 10 tools, exposed via tools/list (grep: `tools/list` ×9, `tools/call` ×7, `registerTool`/`server.tool(` — 0, registration via raw request handlers). Publisher — SAP (monorepo open-ux-tools). It also contains a documentation embeddings database (`dist/data/embeddings/`) and an ONNX/WASM runtime for local semantic search (`search_docs`), keyring build artifacts and telemetry (`jZ.sendTelemetry` on initialize).
 
 ## CHANNEL: instructions, npm (static, 2767 chars)
 
-Передаётся в ответе initialize (поле `instructions`), дословно:
+Passed in the initialize response (field `instructions`), verbatim:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -77,11 +77,11 @@ Never skip steps or guess functionalityIds. Never use a functionalityId as a too
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
-Наблюдения по стирингу в instructions: агрессивный императивный тон («STOP», «NO EXCEPTIONS», угрозы провала), но весь стиринг направлен внутрь собственного сервера (дисциплина схем и порядок шагов). Примечательно: instructions дважды отсылают агента к ЧУЖИМ MCP-серверам («Service Center MCP», «CDS MCP») — редкий паттерн кооперативного, а не захватнического стиринга.
+Observations on steering in instructions: aggressive imperative tone ("STOP", "NO EXCEPTIONS", threats of failure), but all steering is directed inward at its own server (discipline of schemas and sequence of steps). Notably: the instructions twice refer the agent to OTHER MCP servers ("Service Center MCP", "CDS MCP") — a rare pattern of cooperative, not capture-oriented, steering.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-10 инструментов (все, дословно). Найденные вхождения `{name:"winston"...}` и `{name:"ejs"...}` — это package.json забандленных зависимостей, не инструменты.
+10 tools (all, verbatim). The found occurrences `{name:"winston"...}` and `{name:"ejs"...}` are package.json of bundled dependencies, not tools.
 
 ### 1. search_docs
 ```
@@ -214,14 +214,14 @@ Creates (generates) a new SAP Fiori UI application within an existing CAP projec
                     You MUST provide the exact parameter information obtained from get_functionality_details (Step 2).
 ```
 
-### 10. (маркер-заметки по стирингу в описаниях)
-- Плотность MUST/ALWAYS/NEVER очень высокая (десятки вхождений), но все директивы — про дисциплину внутри собственного воркфлоу, не про вытеснение встроенных инструментов агента.
-- `search_docs`: «You MUST use this tool if you're unsure about Fiori APIs» — единственная директива, претендующая на замещение знаний модели (мягкая, доменно-ограниченная).
-- Анти-захват: list_sap_systems и download_odata_service_metadata явно уступают приоритет стороннему «Service Center MCP» («ALWAYS use the Service Center MCP tool ... first», «This tool is a fallback»), generate_fiori_app_cap требует чужой «CDS MCP». Сервер сам понижает себя в иерархии — противоположность паттернам «PRECEDENCE/primary interface».
-- Безопасность: дважды «Do not ask for credentials directly / Never ask for credentials directly».
+### 10. (marker notes on stiring in descriptions)
+- The density of MUST/ALWAYS/NEVER is very high (dozens of occurrences), but all directives are about discipline inside its own workflow, not about displacing the agent's built-in tools.
+- `search_docs`: "You MUST use this tool if you're unsure about Fiori APIs" — the only directive that claims to replace model knowledge (soft, domain-limited).
+- Anti-capture: list_sap_systems and download_odata_service_metadata explicitly yield priority to the third-party "Service Center MCP" ("ALWAYS use the Service Center MCP tool ... first", "This tool is a fallback"), generate_fiori_app_cap requires a third-party "CDS MCP". The server itself lowers itself in the hierarchy — the opposite of "PRECEDENCE/primary interface" patterns.
+- Security: twice "Do not ask for credentials directly / Never ask for credentials directly".
 
 ## NOTES
-- Код: единый esbuild-бандл dist/index.js, 9.45 MB, 4715 строк, минифицирован (переменные вида `Bio`, `Iyt`), но все строки инструментов и instructions лежат литералами (template literals) — статическая экстракция полная.
-- Риск динамической сборки строк: низкий для tools/instructions (статический массив у позиции ~9.40M, instructions — литерал в initialize-хендлере). Однако `list_functionality` возвращает ДИНАМИЧЕСКИЙ список «functionalities» (генерируется из @sap/ux-specification по конкретному проекту) — это второй, не пойманный статикой канал текста, который агент читает как инструкции (functionality-описания). Также в бандле — локальная embeddings-база доков (records.jsonl/embeddings.bin): контент search_docs-выдачи статикой не оценивался.
-- Телеметрия: на initialize отправляется telemetry (mcpClientName/Version) через @sap-ux/telemetry (Application Insights код в бандле).
-- Файлов просмотрено: package.json, README.md (бегло), dist/index.js (regex-скан целиком), листинг дерева (~23 файла в пакете). Код пакета НЕ исполнялся.
+- Code: a single esbuild bundle dist/index.js, 9.45 MB, 4715 lines, minified (variables like `Bio`, `Iyt`), but all tool strings and instructions are present as literals (template literals) — static extraction is complete.
+- Risk of dynamic string assembly: low for tools/instructions (static array at position ~9.40M, instructions are a literal in the initialize handler). However, `list_functionality` returns a DYNAMIC list of "functionalities" (generated from @sap/ux-specification for the specific project) — this is a second text channel, not caught by static analysis, which the agent reads as instructions (functionality descriptions). Also in the bundle there is a local docs embeddings base (records.jsonl/embeddings.bin): the content of search_docs output was not statically assessed.
+- Telemetry: on initialize, telemetry (mcpClientName/Version) is sent through @sap-ux/telemetry (Application Insights code in the bundle).
+- Files examined: package.json, README.md (briefly), dist/index.js (regex scan in full), directory tree listing (~23 files in the package). The package code was NOT executed.

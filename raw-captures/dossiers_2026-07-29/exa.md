@@ -2,7 +2,7 @@
 
 ## CHANNEL: instructions, hosted
 
-(отсутствует — сервер не передаёт блок instructions)
+(absent — the server does not pass an instructions block)
 
 ## CHANNEL: tool descriptions, hosted (2 tools)
 
@@ -27,13 +27,13 @@ Returns: Clean text content and metadata from the page(s).
 
 
 ## CHANNEL: instructions, npm (static)
-(не обнаружены статически)
+(not found statically)
 
-Сервер создаётся как `new McpServer({name:"exa-search-server",title:"Exa",version:"3.2.1"})` — без поля `instructions` в обоих бандлах (`smithery/stdio/index.cjs`, `smithery/shttp/index.cjs`). Все вхождения `instructions` в коде — это либо внутренности MCP SDK (`this._instructions`), либо параметр `instructions` инструмента `deep_researcher_start`, либо MIME-таблица.
+The server is created as `new McpServer({name:"exa-search-server",title:"Exa",version:"3.2.1"})` — without an `instructions` field in both bundles (`smithery/stdio/index.cjs`, `smithery/shttp/index.cjs`). All occurrences of `instructions` in the code are either internal MCP SDK contents (`this._instructions`), or the `instructions` parameter of the `deep_researcher_start` tool, or the MIME table.
 
 ## CHANNEL: tool descriptions, npm (static, coverage=full)
 
-10 инструментов в обоих бандлах (stdio и shttp идентичны по составу). Описания дословно:
+10 tools in both bundles (stdio and shttp are identical in composition). Descriptions verbatim:
 
 ### web_search_exa
 ```
@@ -124,8 +124,8 @@ Returns: A synthesized answer with citations, plus individual search results wit
 Note: Requires an Exa API key. 'deep' mode takes 4-12s, 'deep-reasoning' takes 12-50s.
 ```
 
-### Заметки экстракции (static, npm 3.2.1)
-- Код минифицирован (esbuild-бандлы ~1.0 МБ stdio / ~2.4 МБ shttp), исходников TS в пакете нет — только `smithery/stdio/index.cjs` и `smithery/shttp/index.cjs`.
-- Описания — статические литералы (template literals без интерполяции), риск динамической сборки строк описаний низкий.
-- Имена двух инструментов переопределяемы конфигом: регистрация вида `.tool(r||"web_search_exa", ...)` и `.tool(r||"web_fetch_exa", ...)` — имя может быть подменено на этапе конфигурации, описание при этом остаётся тем же.
-- Steering-маркеры в описаниях: направляющие цепочки между собственными инструментами («use web_search_exa instead», «follow up with web_fetch_exa», «Use after web_search_exa») и deprecation-редиректы; маркеров вытеснения чужих инструментов («instead of built-in», «takes precedence», «always default» и т.п.) не обнаружено.
+### Extraction notes (static, npm 3.2.1)
+- Code is minified (esbuild bundles ~1.0 MB stdio / ~2.4 MB shttp), there are no TS sources in the package — only `smithery/stdio/index.cjs` and `smithery/shttp/index.cjs`.
+- Descriptions are static literals (template literals without interpolation), so the risk of dynamic construction of description strings is low.
+- The names of two tools are overridable via config: registration of the form `.tool(r||"web_search_exa", ...)` and `.tool(r||"web_fetch_exa", ...)` — the name can be substituted at the configuration stage, while the description remains the same.
+- Steering markers in descriptions: guiding chains between own tools ("use web_search_exa instead", "follow up with web_fetch_exa", "Use after web_search_exa") and deprecation redirects; no markers of displacing another tool ("instead of built-in", "takes precedence", "always default" etc.) were found.

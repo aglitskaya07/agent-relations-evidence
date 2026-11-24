@@ -45,10 +45,10 @@ Not every file has every field; the pilot was labeled before the main protocol w
 | `verdicts` | Each rater's group plus the techniques found, each with a verbatim `quote` and the `channel` it came from (`instructions` or `tool_description:<tool>`). |
 | `skeptic` | The skeptic's pass on hard findings: per technique `confirmed` or not, a reason, and an `uphold` / `downgrade` recommendation. |
 
-**Language.** Quotes from servers are verbatim English. The raters' and skeptic's own annotations (technique names, reasons, notes) were written in Russian and are kept as recorded, untranslated, so the data stays raw. The codebook explains every technique in English: `../codebook/codebook-v1.0.md`.
+**Language.** Quotes from servers are verbatim. The raters' and skeptic's own annotations (technique names, reasons, notes) are machine-translated into English. The codebook explains every technique: `../codebook/codebook-v1.0.md`.
 
 Raters and skeptics were language models. See the main README for limitations.
 
 ## Formulations catalog
 
-`formulations-catalog-2026-07-30.json` groups the hard formulations into eight classes, with one representative verbatim quote per server and class (51 quotes in total). `label_en` is the English class name, `label` the original Russian one. Every quote was machine-checked against the captured dossiers. The full set of findings is in the `verdicts` of the three datasets.
+`formulations-catalog-2026-07-30.json` groups the hard formulations into eight classes, with one representative verbatim quote per server and class (51 quotes in total). `label` is the class name. Every quote was machine-checked against the captured dossiers. The full set of findings is in the `verdicts` of the three datasets.
